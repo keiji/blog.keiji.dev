@@ -126,9 +126,9 @@ Toco not working on Windows #20975
     E/tflite: Failed to build graph for NNAPI
 
 
-　ありがたいことに（本当にありがたいことに）、`tensorflow-lite 1.11.0`からエラーの内容がきちんと表示されるようになりました。この場合、`NN API`はrank ``のTensorをサポートしていないとエラーが出ています。
+　ありがたいことに（本当にありがたいことに）、`tensorflow-lite 1.11.0`からエラーの内容がきちんと表示されるようになりました。この場合、`NN API`はrank `0`のTensorをサポートしていないとエラーが出ています。
 
-　ランク``のTensorはスカラー型を意味します。
+　ランク`0`のTensorはスカラー型を意味します。
 
 ### 量子化モデルの制約
 

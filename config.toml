@@ -1,0 +1,22 @@
+baseurl = 'https://blog.keiji.io/'
+name = 'めがねをかけるんだ'
+title = 'めがねをかけるんだ'
+description = 'Don&#039;t take your glasses off.'
+canonifyurls = true
+hasCJKLanguage = true
+languageCode = "ja"
+author = "Keiji ARIYAMA"
+copyright = "Keiji ARIYAMA All rights reserved."
+googleanalytics = "UA-62351683-1"
+theme = "hugo_theme_beg"
+
+[params]
+  logo = "/images/logo.jpg"
+  dateformat = "2006-01-02"
+  typesquareCode = "ZwBLIZTRHGg="
+  custom_css = ["css/default.css", "css/typesquare.css"]
+
+[[menu.main]]
+    name = "Profile"
+    weight = 1
+    url = "/profile/"
