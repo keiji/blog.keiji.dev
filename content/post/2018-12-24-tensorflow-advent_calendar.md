@@ -395,7 +395,7 @@ TensorFlow Lite & TensorFlow Compatibility Guide
 
 　この記事は[TensorFlow Advent Calendar 2018][1]の24日目の記事です。
 
-　25日目の記事は`None`さんによる「`None`」です。どんな内容になるんでしょうか。とても楽しみです！
+　25日目の記事は「natsutan」さんによる「[GCPでTPU動かしました][14]」です。
 
  [1]: https://qiita.com/advent-calendar/2018/tensorflow
  [2]: https://qiita.com/AtuNuka/items/6966efeddceb96012819
@@ -410,3 +410,4 @@ TensorFlow Lite & TensorFlow Compatibility Guide
  [11]: https://www.tensorflow.org/lite/tf_ops_compatibility#unsupported_operations
  [12]: https://github.com/googlecodelabs/tensorflow-for-poets-2
  [13]: https://booth.pm/ja/items/1043447
+ [14]: http://natsutan.hatenablog.com/entry/2018/12/25/120450
