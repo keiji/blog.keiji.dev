@@ -17,8 +17,9 @@ jobs:
           persist-credentials: false
       - name: Setup
         run: |
-          git submodule sync --recursive
-      - name: Build Site
+          git submodule init
+          git submodule update
+      - name: Build Site'
         uses: chabad360/hugo-actions@v2
         with:
           buildPath: ./public
