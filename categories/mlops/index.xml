@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MLOps on めがねをかけるんだ</title>
-    <link>https://blog.keiji.io/categories/mlops/</link>
+    <link>https://blog.keiji.dev/categories/mlops/</link>
     <description>Recent content in MLOps on めがねをかけるんだ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Keiji ARIYAMA All rights reserved.</copyright>
-    <lastBuildDate>Fri, 12 Apr 2019 10:00:10 +0900</lastBuildDate><atom:link href="https://blog.keiji.io/categories/mlops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Apr 2019 10:00:10 +0900</lastBuildDate><atom:link href="https://blog.keiji.dev/categories/mlops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>技術書典6でMLOps本「巡りあえないConcourse」を頒布します</title>
-      <link>https://blog.keiji.io/2019/04/techbookfest6.html</link>
+      <link>https://blog.keiji.dev/2019/04/techbookfest6.html</link>
       <pubDate>Fri, 12 Apr 2019 10:00:10 +0900</pubDate>
       
-      <guid>https://blog.keiji.io/2019/04/techbookfest6.html</guid>
+      <guid>https://blog.keiji.dev/2019/04/techbookfest6.html</guid>
       <description>&lt;p&gt;　4月14日、池袋サンシャインシティにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf06/circle/38380004&#34;&gt;技術書典6&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。&lt;/p&gt;
 &lt;p&gt;　「めがねをかけるんだ」では、TensorFlowを使って3年間ひとりで取り組んできた「MLOps」を題材にした冊子を頒布いたします。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.keiji.io/images/concourse.png&#34; alt=&#34;tfbook6&#34; title=&#34;巡りあえないConcourse&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/concourse.png&#34; alt=&#34;tfbook6&#34; title=&#34;巡りあえないConcourse&#34;&gt;&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DE0 on めがねをかけるんだ</title>
-    <link>https://blog.keiji.io/categories/de0/</link>
+    <link>https://blog.keiji.dev/categories/de0/</link>
     <description>Recent content in DE0 on めがねをかけるんだ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Keiji ARIYAMA All rights reserved.</copyright>
-    <lastBuildDate>Tue, 22 Jan 2013 16:31:00 +0000</lastBuildDate><atom:link href="https://blog.keiji.io/categories/de0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Jan 2013 16:31:00 +0000</lastBuildDate><atom:link href="https://blog.keiji.dev/categories/de0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DE0メモ – シミュレーター(ModelSim)</title>
-      <link>https://blog.keiji.io/2013/01/de0simulator.html</link>
+      <link>https://blog.keiji.dev/2013/01/de0simulator.html</link>
       <pubDate>Tue, 22 Jan 2013 16:31:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/01/de0simulator.html</guid>
+      <guid>https://blog.keiji.dev/2013/01/de0simulator.html</guid>
       <description>&lt;p&gt;前回の『&lt;a href=&#34;https://blog.keiji.dev/2013/01/de0.html&#34; target=&#34;_blank&#34;&gt;DE0メモ&lt;/a&gt;』で、&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;その他、シミュレータなどでいろいろ検証したりもあるようですが、僕はまだその段階にありません。&lt;/p&gt;
@@ -27,10 +27,10 @@
     
     <item>
       <title>DE0メモ</title>
-      <link>https://blog.keiji.io/2013/01/de0.html</link>
+      <link>https://blog.keiji.dev/2013/01/de0.html</link>
       <pubDate>Tue, 08 Jan 2013 10:16:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/01/de0.html</guid>
+      <guid>https://blog.keiji.dev/2013/01/de0.html</guid>
       <description>&lt;div&gt;
   FPGAボードのDE0をちょこちょこ触ったメモ。
 &lt;/div&gt;

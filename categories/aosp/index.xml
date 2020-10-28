@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AOSP on めがねをかけるんだ</title>
-    <link>https://blog.keiji.io/categories/aosp/</link>
+    <link>https://blog.keiji.dev/categories/aosp/</link>
     <description>Recent content in AOSP on めがねをかけるんだ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Keiji ARIYAMA All rights reserved.</copyright>
-    <lastBuildDate>Tue, 19 Feb 2013 19:18:51 +0000</lastBuildDate><atom:link href="https://blog.keiji.io/categories/aosp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Feb 2013 19:18:51 +0000</lastBuildDate><atom:link href="https://blog.keiji.dev/categories/aosp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>フィードバックとモチベーション</title>
-      <link>https://blog.keiji.io/2013/02/feedback_motivation.html</link>
+      <link>https://blog.keiji.dev/2013/02/feedback_motivation.html</link>
       <pubDate>Tue, 19 Feb 2013 19:18:51 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/02/feedback_motivation.html</guid>
+      <guid>https://blog.keiji.dev/2013/02/feedback_motivation.html</guid>
       <description>&lt;p&gt;昨日、知り合いが、&lt;a href=&#34;https://blog.keiji.dev/2013/02/newdraw9patchtool.html&#34;&gt;新しい”Draw 9-Patch Tool”&lt;/a&gt;に関するフィードバックを、Twitterを通じてくれたのだけど、やりとりする上で、なんだかとても苛ついていたのを、自分でも不思議に思っていました。&lt;/p&gt;
 &lt;div align=&#34;center&#34;&gt;
   &lt;blockquote class=&#34;twitter-tweet&#34;&gt;
@@ -34,10 +34,10 @@
     
     <item>
       <title>新しい&#34;Draw 9-patch Tool&#34;を公開しました。</title>
-      <link>https://blog.keiji.io/2013/02/newdraw9patchtool.html</link>
+      <link>https://blog.keiji.dev/2013/02/newdraw9patchtool.html</link>
       <pubDate>Sun, 10 Feb 2013 08:22:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/02/newdraw9patchtool.html</guid>
+      <guid>https://blog.keiji.dev/2013/02/newdraw9patchtool.html</guid>
       <description>&lt;p&gt;最近、「有山さんはもう&lt;strong&gt;Makers&lt;/strong&gt;の方に行っちゃったんだね。Androidはもうやってないんだよね」「いやいや、もちろんやってますよ。&lt;strong&gt;Android&lt;/strong&gt;」と言う会話があったので。&lt;/p&gt;
 &lt;p&gt;Android SDKに同梱されている”&lt;strong&gt;Draw 9-patch Tool&lt;/strong&gt;“を、SWTをベースにリライトして、Eclipseのプラグインにしたので公開します。&lt;/p&gt;
 &lt;div style=&#34;text-align: center;&#34;&gt;
@@ -72,10 +72,10 @@
     
     <item>
       <title>AOSPで１度投稿したパッチを修正する（nobranch編）</title>
-      <link>https://blog.keiji.io/2013/01/aospnobranch.html</link>
+      <link>https://blog.keiji.dev/2013/01/aospnobranch.html</link>
       <pubDate>Tue, 15 Jan 2013 13:47:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/01/aospnobranch.html</guid>
+      <guid>https://blog.keiji.dev/2013/01/aospnobranch.html</guid>
       <description>&lt;p&gt;この連休で&lt;a href=&#34;https://android-review.googlesource.com/#/&#34; target=&#34;_blank&#34;&gt;Android Open Source Project&lt;/a&gt;にいくつかパッチを投稿したのですが、そのときに、ちょっと詰まったのでメモ。&lt;/p&gt;</description>
     </item>
     

@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ADK on めがねをかけるんだ</title>
-    <link>https://blog.keiji.io/categories/adk/</link>
+    <link>https://blog.keiji.dev/categories/adk/</link>
     <description>Recent content in ADK on めがねをかけるんだ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Keiji ARIYAMA All rights reserved.</copyright>
-    <lastBuildDate>Sun, 20 Jan 2013 16:31:00 +0000</lastBuildDate><atom:link href="https://blog.keiji.io/categories/adk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Jan 2013 16:31:00 +0000</lastBuildDate><atom:link href="https://blog.keiji.dev/categories/adk/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ADKハンズオンを開催しました</title>
-      <link>https://blog.keiji.io/2013/01/adk_21.html</link>
+      <link>https://blog.keiji.dev/2013/01/adk_21.html</link>
       <pubDate>Sun, 20 Jan 2013 16:31:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/01/adk_21.html</guid>
+      <guid>https://blog.keiji.dev/2013/01/adk_21.html</guid>
       <description>&lt;p&gt;１月１９日（土）に、&lt;a href=&#34;https://blog.keiji.dev/2013/01/adk.html&#34; target=&#34;_blank&#34;&gt;ADKハンズオン&lt;/a&gt;を開催しました。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>1/19 ADKハンズオンを開催します</title>
-      <link>https://blog.keiji.io/2013/01/adk.html</link>
+      <link>https://blog.keiji.dev/2013/01/adk.html</link>
       <pubDate>Tue, 08 Jan 2013 15:00:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/01/adk.html</guid>
+      <guid>https://blog.keiji.dev/2013/01/adk.html</guid>
       <description>1月19日（土）、大阪府門真市にて、Android端末と接続するADK(Accessory Development Kit)のハンズオンを開催します。 ADKと言えば</description>
     </item>
     

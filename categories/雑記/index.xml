@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>雑記 on めがねをかけるんだ</title>
-    <link>https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98/</link>
+    <link>https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/</link>
     <description>Recent content in 雑記 on めがねをかけるんだ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Keiji ARIYAMA All rights reserved.</copyright>
-    <lastBuildDate>Thu, 26 Apr 2018 05:11:06 +0000</lastBuildDate><atom:link href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Apr 2018 05:11:06 +0000</lastBuildDate><atom:link href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>技術書典4に参加してきました</title>
-      <link>https://blog.keiji.io/2018/04/look_back_techbookfest4.html</link>
+      <link>https://blog.keiji.dev/2018/04/look_back_techbookfest4.html</link>
       <pubDate>Thu, 26 Apr 2018 05:11:06 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2018/04/look_back_techbookfest4.html</guid>
+      <guid>https://blog.keiji.dev/2018/04/look_back_techbookfest4.html</guid>
       <description>&lt;p&gt;　4月22日、秋葉原UDX アキバ・スクエアにて開催された「&lt;a href=&#34;https://techbookfest.org/event/tbf04/circle/21060002&#34; target=&#34;_blank&#34;&gt;技術書典4&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加してきました。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2018/04/IMG_20180422_103336.jpg&#34; alt=&#34;&#34; width=&#34;390&#34; height=&#34;520&#34; class=&#34;aligncenter size-full wp-image-1696&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;　この記事は「技術書典4」の振り返りの記事になります。&lt;/p&gt;</description>
@@ -21,10 +21,10 @@
     
     <item>
       <title>技術書典4で「本当はおそろしい商業出版！？」を頒布します</title>
-      <link>https://blog.keiji.io/2018/04/techbookfest4-2.html</link>
+      <link>https://blog.keiji.dev/2018/04/techbookfest4-2.html</link>
       <pubDate>Wed, 18 Apr 2018 10:55:23 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2018/04/techbookfest4-2.html</guid>
+      <guid>https://blog.keiji.dev/2018/04/techbookfest4-2.html</guid>
       <description>&lt;p&gt;4月22日、秋葉原UDX アキバ・スクエアにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf04/circle/21060002&#34; target=&#34;_blank&#34;&gt;技術書典4&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。&lt;/p&gt;
 &lt;p&gt;「めがねをかけるんだ」では、筆者が技術書の商業出版に関わる中で経験した様々なエピソードを通じて、知見や反省点をまとめた本「本当はおそろしい商業出版！？」を頒布します。&lt;/p&gt;
 &lt;p&gt;&lt;img class=&#34;aligncenter size-full&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2018/04/shogyo.png&#34; alt=&#34;tfbook4&#34;  width=&#34;50%&#34; height=&#34;50%&#34; /&gt;&lt;/p&gt;
@@ -58,10 +58,10 @@
     
     <item>
       <title>ココが辛いよ！ TensorFlow</title>
-      <link>https://blog.keiji.io/2017/12/tf_advent_calendar.html</link>
+      <link>https://blog.keiji.dev/2017/12/tf_advent_calendar.html</link>
       <pubDate>Wed, 13 Dec 2017 00:52:09 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2017/12/tf_advent_calendar.html</guid>
+      <guid>https://blog.keiji.dev/2017/12/tf_advent_calendar.html</guid>
       <description>&lt;h2 id=&#34;この投稿はtensorflow-advent-calendar1の12日目の記事です&#34;&gt;この投稿は、&lt;a href=&#34;https://qiita.com/advent-calendar/2017/tensorflow&#34;&gt;TensorFlow Advent Calendar&lt;/a&gt;の12日目の記事です。&lt;/h2&gt;
 &lt;p&gt;みなさん。TensorFlow使ってますか？&lt;/p&gt;
 &lt;p&gt;ぼくはと言えば、気がつけば毎日なにがしかのTensorFlowのコードを書いています。&lt;/p&gt;
@@ -72,10 +72,10 @@
     
     <item>
       <title>Anaconda3 for macでdlibがインストールできない</title>
-      <link>https://blog.keiji.io/2017/02/install_failed_dlib_with_anaconda3-for-mac.html</link>
+      <link>https://blog.keiji.dev/2017/02/install_failed_dlib_with_anaconda3-for-mac.html</link>
       <pubDate>Mon, 06 Feb 2017 12:46:19 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2017/02/install_failed_dlib_with_anaconda3-for-mac.html</guid>
+      <guid>https://blog.keiji.dev/2017/02/install_failed_dlib_with_anaconda3-for-mac.html</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;macOS Sierra – 10.12.3&lt;/li&gt;
 &lt;li&gt;Anaconda3 for OS X Python 3.6 version – 4.3.0&lt;/li&gt;
@@ -87,10 +87,10 @@
     
     <item>
       <title>さよならMac</title>
-      <link>https://blog.keiji.io/2017/01/demodori.html</link>
+      <link>https://blog.keiji.dev/2017/01/demodori.html</link>
       <pubDate>Mon, 30 Jan 2017 10:28:47 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2017/01/demodori.html</guid>
+      <guid>https://blog.keiji.dev/2017/01/demodori.html</guid>
       <description>&lt;p&gt;　ぼくは有山圭二。Macユーザーだ。&lt;/p&gt;
 &lt;p&gt;　MacBook AirでMacに入門し、すぐにMacBook Proへ。以降、ずっとMacを使い続けてきた。&lt;/p&gt;
 &lt;p&gt;　iOSアプリを開発する関係でMacから離れられなかったわけじゃない。ぼくの本業はAndroidアプリの開発だ。Androidアプリの開発環境はmacOSに加えて、Windows、Linuxでも動作する。実際、Macの前はUbuntuを使っていた。&lt;/p&gt;
@@ -101,10 +101,10 @@
     
     <item>
       <title>TLDR: 「フリーランス残酷物語 Advent Calendar」 8日目</title>
-      <link>https://blog.keiji.io/2016/12/free_zankoku.html</link>
+      <link>https://blog.keiji.dev/2016/12/free_zankoku.html</link>
       <pubDate>Wed, 07 Dec 2016 15:00:15 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2016/12/free_zankoku.html</guid>
+      <guid>https://blog.keiji.dev/2016/12/free_zankoku.html</guid>
       <description>&lt;p&gt;　この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2016/free_zankoku&#34;&gt;フリーランス残酷物語 Advent Calendar 2016&lt;/a&gt;」 8日目の記事です。&lt;/p&gt;
 &lt;p&gt;「フリーランス（以下略）」と言うことで、&lt;strong&gt;法人に所属している筆者は対象ではないよ&lt;/strong&gt;と言う向きもあるかと思いますが、どうかご安心ください。&lt;/p&gt;
 &lt;p&gt;　僕の所属している会社「&lt;a href=&#34;https://www.c-lis.co.jp&#34;&gt;有限会社シーリス&lt;/a&gt;」は今年で設立12年になりますが社員は僕一人だけ。営業、開発、その他事務仕事をすべて一人で担当している状態は、実質フリーランスと言ってもいいでしょう。&lt;/p&gt;
@@ -115,10 +115,10 @@
     
     <item>
       <title>さよならAmazonコミュニティ</title>
-      <link>https://blog.keiji.io/2016/10/tf_book_kindle_sale.html</link>
+      <link>https://blog.keiji.dev/2016/10/tf_book_kindle_sale.html</link>
       <pubDate>Mon, 03 Oct 2016 04:02:50 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2016/10/tf_book_kindle_sale.html</guid>
+      <guid>https://blog.keiji.dev/2016/10/tf_book_kindle_sale.html</guid>
       <description>&lt;p&gt;僕は、自著のAmazonレビューには、コメントを付けるようにしています。&lt;/p&gt;
 &lt;p&gt;これは、2014年に発売した最初の単著「&lt;a href=&#34;http://amzn.to/2d7nnD5&#34;&gt;Android Studioではじめる簡単Androidアプリ開発&lt;/a&gt;」の時からずっと続けてきました。&lt;/p&gt;
 &lt;p&gt;コメントを付けるのに際しては、次のような方針でやっています。&lt;/p&gt;
@@ -143,19 +143,19 @@
     
     <item>
       <title>Brilliant but cruel</title>
-      <link>https://blog.keiji.io/2016/09/brilliant_but_cruel.html</link>
+      <link>https://blog.keiji.dev/2016/09/brilliant_but_cruel.html</link>
       <pubDate>Sat, 17 Sep 2016 03:37:25 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2016/09/brilliant_but_cruel.html</guid>
+      <guid>https://blog.keiji.dev/2016/09/brilliant_but_cruel.html</guid>
       <description>苛立ち、腹を立てて「こんなのはダメだ」と言いたくなったとき。僕はそれらを批判し、否定するネガティブなエントリを投稿する前に、「自分ならこうす</description>
     </item>
     
     <item>
       <title>矩形切り出しツール「Region Cropper」を公開しました</title>
-      <link>https://blog.keiji.io/2016/09/about_region_cropper.html</link>
+      <link>https://blog.keiji.dev/2016/09/about_region_cropper.html</link>
       <pubDate>Thu, 15 Sep 2016 07:17:36 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2016/09/about_region_cropper.html</guid>
+      <guid>https://blog.keiji.dev/2016/09/about_region_cropper.html</guid>
       <description>&lt;p&gt;時間を見つけてはTensorFlow関係のあれこれをちまちま続けています。&lt;/p&gt;
 &lt;p&gt;先日は「&lt;a href=&#34;https://www.pasonatech.co.jp/skill_up/event/naniwa_tech.jsp&#34;&gt;なにわTECH道&lt;/a&gt;」で、TensorFlowを使ったイラスト顔検出について発表しました。&lt;/p&gt;
 &lt;h2 id=&#34;データセットの作成&#34;&gt;データセットの作成&lt;/h2&gt;
@@ -175,10 +175,10 @@
     
     <item>
       <title>【続】技術書典に参加したら出版社から販売することになった</title>
-      <link>https://blog.keiji.io/2016/07/tensorflow_book_ird.html</link>
+      <link>https://blog.keiji.dev/2016/07/tensorflow_book_ird.html</link>
       <pubDate>Sat, 23 Jul 2016 08:59:31 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2016/07/tensorflow_book_ird.html</guid>
+      <guid>https://blog.keiji.dev/2016/07/tensorflow_book_ird.html</guid>
       <description>&lt;p&gt;先月25日の「&lt;a href=&#34;https://techbookfest.github.io/&#34;&gt;技術書典&lt;/a&gt;」で頒布した「TensorFlowはじめました」は現在、&lt;a href=&#34;http://amzn.to/2a0UrR5&#34;&gt;Amazonにて予約を受付けています&lt;/a&gt;。&lt;/p&gt;
 &lt;div id=&#34;attachment_1351&#34; style=&#34;max-width: 1361px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
   &lt;a href=&#34;http://www.amazon.co.jp/gp/product/4802090889/ref=as_li_ss_il?ie=UTF8&amp;#038;camp=247&amp;#038;creative=7399&amp;#038;creativeASIN=4802090889&amp;#038;linkCode=as2&amp;#038;tag=keijiariyama-22&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2016/07/13692115_1158315580886274_420079092_o.jpg&#34; alt=&#34;Next Publishing版表紙&#34; width=&#34;50%&#34; height=&#34;50%&#34; class=&#34;aligncenter size-full wp-image-1351&#34; /&gt;&lt;/a&gt;
@@ -221,10 +221,10 @@
     
     <item>
       <title>技術書典でTensorFlowの本を頒布します</title>
-      <link>https://blog.keiji.io/2016/06/techbookfest.html</link>
+      <link>https://blog.keiji.dev/2016/06/techbookfest.html</link>
       <pubDate>Sun, 19 Jun 2016 13:40:10 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2016/06/techbookfest.html</guid>
+      <guid>https://blog.keiji.dev/2016/06/techbookfest.html</guid>
       <description>&lt;p&gt;このエントリには続報があります。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://blog.keiji.dev/2016/07/remark_techbookfest.html&#34;&gt;技術書典に参加したら出版社から販売することになった&lt;/a&gt;&lt;/li&gt;
@@ -259,10 +259,10 @@
     
     <item>
       <title>壊れかけのXperia Z3 Tablet Compactに止めを刺した話</title>
-      <link>https://blog.keiji.io/2016/04/rip_my_xperia_z3_tablet_compact.html</link>
+      <link>https://blog.keiji.dev/2016/04/rip_my_xperia_z3_tablet_compact.html</link>
       <pubDate>Fri, 01 Apr 2016 07:20:15 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2016/04/rip_my_xperia_z3_tablet_compact.html</guid>
+      <guid>https://blog.keiji.dev/2016/04/rip_my_xperia_z3_tablet_compact.html</guid>
       <description>&lt;p&gt;　昨年の後半のことでしょうか。Xperia Z3 Tablet Compactを落としてしまい、前面ガラスが破損してしまいました。&lt;/p&gt;
 &lt;div id=&#34;attachment_1155&#34; style=&#34;max-width: 2170px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
   &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_201258.jpg&#34; rel=&#34;attachment wp-att-1155&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_201258.jpg&#34; alt=&#34;赤枠で囲った部分が破損箇所&#34; width=&#34;50%&#34; height=&#34;50%&#34; class=&#34;size-full wp-image-1155&#34; /&gt;&lt;/a&gt;
@@ -274,19 +274,19 @@
     
     <item>
       <title>ABC 2016 Springで発表しました</title>
-      <link>https://blog.keiji.io/2016/03/abc-2016-spring.html</link>
+      <link>https://blog.keiji.dev/2016/03/abc-2016-spring.html</link>
       <pubDate>Sun, 13 Mar 2016 18:21:58 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2016/03/abc-2016-spring.html</guid>
+      <guid>https://blog.keiji.dev/2016/03/abc-2016-spring.html</guid>
       <description>3月12日に開催されたイベントAndroid Bazaar and Conference 2016 Spring で発表しました。 タイトルは『Google TensorFlowとAndroidが繋がる未</description>
     </item>
     
     <item>
       <title>みんなのコミック</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-25.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-25.html</link>
       <pubDate>Thu, 24 Dec 2015 15:00:33 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-25.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-25.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;　この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の25日目の記事です。&lt;/p&gt;
 &lt;p&gt;　12月1日から24日まで、Webコミック配信サービス「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんなのコミック&lt;/a&gt;」に関する技術的な内容にフォーカスを当てて記事を書いてきました。&lt;/p&gt;
@@ -298,10 +298,10 @@
     
     <item>
       <title>続: Fragment使う人に最低限、知っておいて欲しいこと</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-24.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-24.html</link>
       <pubDate>Wed, 23 Dec 2015 15:00:37 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-24.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-24.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の24日目の記事です。&lt;/p&gt;
 &lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;
@@ -311,10 +311,10 @@
     
     <item>
       <title>みんコミに遊びに行ってきました</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-23.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-23.html</link>
       <pubDate>Tue, 22 Dec 2015 16:48:21 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-23.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-23.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の23日目の記事です。&lt;/p&gt;
 &lt;div id=&#34;attachment_1047&#34; style=&#34;max-width: 676px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
@@ -327,10 +327,10 @@
     
     <item>
       <title>アプリのナビゲーション（下タブについて）</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-22.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-22.html</link>
       <pubDate>Mon, 21 Dec 2015 15:00:26 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-22.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-22.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の22日目の記事です。&lt;/p&gt;
 &lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;
@@ -339,10 +339,10 @@
     
     <item>
       <title>ScaleGestureとScroll</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-21.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-21.html</link>
       <pubDate>Sun, 20 Dec 2015 15:35:37 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-21.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-21.html</guid>
       <description>&lt;p&gt;［12/22追記: &lt;code&gt;requestDisallowInterceptTouchEvent&lt;/code&gt;のハンドリングについては、onTouchEvent内で処理するより、&lt;code&gt;onScroll&lt;/code&gt;メソッド内で処理する方が適切だと考えています］&lt;/p&gt;
 &lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の21日目の記事です。&lt;/p&gt;
@@ -352,10 +352,10 @@
     
     <item>
       <title>SurfaceViewを使ってはいけない</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-20.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-20.html</link>
       <pubDate>Sat, 19 Dec 2015 15:00:52 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-20.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-20.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の20日目の記事です。&lt;/p&gt;
 &lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;
@@ -364,10 +364,10 @@
     
     <item>
       <title>ZoomとかFocusとか聞くと眼鏡っ娘しか想起しない</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-19.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-19.html</link>
       <pubDate>Fri, 18 Dec 2015 15:00:47 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-19.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-19.html</guid>
       <description>&lt;p&gt;[12/20追記: ズームサンプルが正常に動作しない不具合を修正しました]&lt;/p&gt;
 &lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の19日目の記事です。&lt;/p&gt;
@@ -377,10 +377,10 @@
     
     <item>
       <title>Scrollerのススメ</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-18.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-18.html</link>
       <pubDate>Thu, 17 Dec 2015 16:00:28 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-18.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-18.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の18日目の記事です。&lt;/p&gt;
 &lt;p&gt;すみません。根雪れい（@neyuki_rei）さんの「おかあさん(10)と僕。」を読んでいたらアドベントカレンダーの更新が遅れてしまいました。&lt;/p&gt;
@@ -403,10 +403,10 @@
     
     <item>
       <title>バリバリバリデーションエラー</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-17.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-17.html</link>
       <pubDate>Wed, 16 Dec 2015 14:45:33 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-17.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-17.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の１７日目の記事です。&lt;/p&gt;
 &lt;p&gt;※ 12月18日追記&lt;/p&gt;
@@ -424,10 +424,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>！！ーバクーシ　！転反</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-16.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-16.html</link>
       <pubDate>Tue, 15 Dec 2015 15:00:06 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-16.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-16.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の１６日目の記事です。&lt;/p&gt;
 &lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;
@@ -436,10 +436,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>スプラッシュスクリーンのキャンセル</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-15.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-15.html</link>
       <pubDate>Mon, 14 Dec 2015 15:00:29 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-15.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-15.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の１５日目の記事です。&lt;/p&gt;
 &lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;
@@ -448,10 +448,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>軽すぎる退会処理</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-14.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-14.html</link>
       <pubDate>Sun, 13 Dec 2015 15:00:24 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-14.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-14.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の１４日目の記事です。&lt;/p&gt;
 &lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;
@@ -460,10 +460,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>作品の更新と取得のタイミング</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-13.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-13.html</link>
       <pubDate>Sat, 12 Dec 2015 15:00:19 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-13.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-13.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の１３日目の記事です。&lt;/p&gt;
 &lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン&lt;s&gt;1.0.2&lt;/s&gt; 1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;
@@ -473,10 +473,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>Android版「みんコミ」アプリのアップデート状況</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-12.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-12.html</link>
       <pubDate>Fri, 11 Dec 2015 15:00:23 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-12.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-12.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の１２日目の記事です。&lt;/p&gt;
 &lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン&lt;s&gt;1.0.2&lt;/s&gt; 1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;
@@ -485,10 +485,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>端末を真っ直ぐに持ってください</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-11.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-11.html</link>
       <pubDate>Thu, 10 Dec 2015 15:00:18 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-11.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-11.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の１１日目の記事です。&lt;/p&gt;
 &lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.2）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;
@@ -497,20 +497,20 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>http://お問い合わせ</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-10.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-10.html</link>
       <pubDate>Wed, 09 Dec 2015 15:00:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-10.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-10.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の１０日目の記事です。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>便利なIntent</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-9.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-9.html</link>
       <pubDate>Tue, 08 Dec 2015 15:00:27 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-9.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-9.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の９日目の記事です。&lt;/p&gt;
 &lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.2）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;
@@ -519,10 +519,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>画像の縦横比 〜 ImageViewの辛みを添えて</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-8.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-8.html</link>
       <pubDate>Mon, 07 Dec 2015 15:00:10 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-8.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-8.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の８日目の記事です。&lt;/p&gt;
 &lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.2）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;
@@ -531,10 +531,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>閉鎖世界 – iOS</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-7.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-7.html</link>
       <pubDate>Sun, 06 Dec 2015 15:00:05 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-7.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-7.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の７日目の記事です。&lt;/p&gt;
 &lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のiOSアプリ（バージョン1.0.0）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「iTunes App Atore」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;
@@ -543,10 +543,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>「もう一度押すとアプリが終了します」とは。</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-6.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-6.html</link>
       <pubDate>Sat, 05 Dec 2015 15:00:36 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-6.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-6.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の６日目の記事です。&lt;/p&gt;
 &lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.1）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;
@@ -555,10 +555,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>設定画面のあれやこれや</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-5.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-5.html</link>
       <pubDate>Fri, 04 Dec 2015 15:00:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-5.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-5.html</guid>
       <description>&lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の５日目の記事です。&lt;/p&gt;
 &lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.1）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;amp;hl=ja&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;aligncenter size-full wp-image-672&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
@@ -566,10 +566,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>キャンセルしますか「ＯＫ・キャンセル」</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-4.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-4.html</link>
       <pubDate>Thu, 03 Dec 2015 15:00:01 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-4.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-4.html</guid>
       <description>&lt;p&gt;「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」４日目を担当する有山圭二です。&lt;/p&gt;
 &lt;p&gt;本記事は「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.1）をベースに執筆しています。&lt;/p&gt;
 &lt;p&gt;アプリは、「Google Play Store」からインストールできます。さっそくインストールしてみましょう。&lt;/p&gt;
@@ -578,10 +578,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>アプリの素材と解像度</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-3.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-3.html</link>
       <pubDate>Wed, 02 Dec 2015 15:00:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-3.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-3.html</guid>
       <description>&lt;p&gt;「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」３日目を担当する有山圭二です。 ３日目はアプリに表示する画像素材についてです。&lt;/p&gt;
 &lt;p&gt;本記事で話題にする「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリは、「Google Play Store」からインストールできます。さっそくインストールしてみましょう。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;amp;hl=ja&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;aligncenter size-full wp-image-672&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
@@ -590,10 +590,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>アプリのパーミッション 〜 M comes after L</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-2.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-2.html</link>
       <pubDate>Tue, 01 Dec 2015 15:00:19 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-2.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-2.html</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;※ 2015/12/24追記: バージョン1.0.3で、GET_ACCOUNTSパーミッションが取り除かれているのを確認しました。&lt;/p&gt;
 &lt;hr&gt;
@@ -604,10 +604,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>みんコミ Advent Calendarはじめます</title>
-      <link>https://blog.keiji.io/2015/12/mincomi-adventcalendar-1.html</link>
+      <link>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-1.html</link>
       <pubDate>Mon, 30 Nov 2015 15:00:36 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/12/mincomi-adventcalendar-1.html</guid>
+      <guid>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-1.html</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;2015/12/01 14:48: Fix typo.&lt;/p&gt;
 &lt;hr&gt;
@@ -648,29 +648,29 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>ABCD 2015 Kanazawa / Realm meetup #9 に参加しました</title>
-      <link>https://blog.keiji.io/2015/11/abcd_and_realm.html</link>
+      <link>https://blog.keiji.dev/2015/11/abcd_and_realm.html</link>
       <pubDate>Fri, 27 Nov 2015 19:36:02 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/11/abcd_and_realm.html</guid>
+      <guid>https://blog.keiji.dev/2015/11/abcd_and_realm.html</guid>
       <description>&lt;p&gt;11月22-23日にABCD 2015 Kanazawaで、25日にはRealm Meetupで発表してきました。&lt;/p&gt;
 &lt;p&gt;本来はエントリを分けた方が良いのかもしれませんが、日にちが近く、また一般化した技術と今まさに勢いづいて普及を続けている技術の差を考えると面白かったのでまとめてます。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Let’s EncryptでHTTPS化したけれど</title>
-      <link>https://blog.keiji.io/2015/11/lets-encrypt.html</link>
+      <link>https://blog.keiji.dev/2015/11/lets-encrypt.html</link>
       <pubDate>Thu, 12 Nov 2015 05:50:15 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/11/lets-encrypt.html</guid>
+      <guid>https://blog.keiji.dev/2015/11/lets-encrypt.html</guid>
       <description>Let’s Encryptのクローズドベータ。このドメインでもインビテーションをもらっていたのでさっそくHTTPS化したわけですが、HTTPS</description>
     </item>
     
     <item>
       <title>レビューポエム “関数型プログラミングに目覚めた! IQ145の女子高校生の先輩から受けた特訓5日間” を読んで</title>
-      <link>https://blog.keiji.io/2015/04/iq145.html</link>
+      <link>https://blog.keiji.dev/2015/04/iq145.html</link>
       <pubDate>Sun, 26 Apr 2015 19:49:17 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/04/iq145.html</guid>
+      <guid>https://blog.keiji.dev/2015/04/iq145.html</guid>
       <description>&lt;p&gt;大阪天満橋のジュンク堂書店で購入しました。本当は立ち読みですませる気だったんですが、買わないでレビューはフェアではないかなと思い……今は後悔しています。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2015/04/iq145.jpg&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2015/04/iq145-225x300.jpg&#34; alt=&#34;iq145&#34; width=&#34;225&#34; height=&#34;300&#34; class=&#34;aligncenter size-medium wp-image-536&#34; srcset=&#34;https://blog.keiji.dev/wp-content/uploads/2015/04/iq145-225x300.jpg 225w, https://blog.keiji.dev/wp-content/uploads/2015/04/iq145.jpg 600w&#34; sizes=&#34;(max-width: 225px) 100vw, 225px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;僕はプログラミングをしてご飯を食べていますが、関数型プログラミングの領分はまったく未経験です。&lt;/p&gt;
@@ -679,10 +679,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>Moto 360 のディスプレイ焼き付きを防ぐアプリを作った話</title>
-      <link>https://blog.keiji.io/2014/09/prevent_lcd_ghosting_for_moto360.html</link>
+      <link>https://blog.keiji.dev/2014/09/prevent_lcd_ghosting_for_moto360.html</link>
       <pubDate>Wed, 24 Sep 2014 13:43:47 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2014/09/prevent_lcd_ghosting_for_moto360.html</guid>
+      <guid>https://blog.keiji.dev/2014/09/prevent_lcd_ghosting_for_moto360.html</guid>
       <description>&lt;p&gt;Google I/Oのお土産として配布されたMotorolaのAndroid Wear端末「Moto 360」が、先日ようやく届いたんですが。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605.jpg&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-300x198.jpg&#34; alt=&#34;Moto 360&#34; width=&#34;300&#34; height=&#34;198&#34; class=&#34;aligncenter size-medium wp-image-441&#34; srcset=&#34;https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-300x198.jpg 300w, https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-1024x678.jpg 1024w, https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-624x413.jpg 624w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;このMoto 360、充電中に必ず時計表示になるんだけど、そのせいで液晶が焼き付くという不具合が起きているらしいです。&lt;/p&gt;
@@ -694,10 +694,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>神は７日目に進捗を確認した</title>
-      <link>https://blog.keiji.io/2013/12/progress.html</link>
+      <link>https://blog.keiji.dev/2013/12/progress.html</link>
       <pubDate>Tue, 17 Dec 2013 11:25:11 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/12/progress.html</guid>
+      <guid>https://blog.keiji.dev/2013/12/progress.html</guid>
       <description>&lt;p&gt;このエントリは、&lt;a href=&#34;http://connpass.com/event/3954/&#34; target=&#34;_blank&#34;&gt;進捗Advent Calendar&lt;/a&gt;の17日目です。&lt;/p&gt;
 &lt;h2 id=&#34;進捗ダメです&#34;&gt;進捗ダメです&lt;/h2&gt;
 &lt;p&gt;年末に向けてペースを上げていますが、やってもやっても終わりません。 よく考えれば前回の記事が「&lt;a href=&#34;https://blog.keiji.dev/2013/05/googleio.html&#34; target=&#34;_blank&#34;&gt;Google I/O 2013に参加します。&lt;/a&gt;」だったので、ブログでしか僕を知らない人は、僕はI/Oに行ったままだったんですね。&lt;/p&gt;
@@ -706,38 +706,38 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>Google I/O 2013に参加します。</title>
-      <link>https://blog.keiji.io/2013/05/googleio.html</link>
+      <link>https://blog.keiji.dev/2013/05/googleio.html</link>
       <pubDate>Wed, 08 May 2013 05:41:07 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/05/googleio.html</guid>
+      <guid>https://blog.keiji.dev/2013/05/googleio.html</guid>
       <description>&lt;p&gt;今年もGoogle I/Oに参加します。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2013/05/IMG_20120625_144131.jpg&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2013/05/IMG_20120625_144131-300x225.jpg&#34; alt=&#34;IMG_20120625_144131&#34; width=&#34;300&#34; height=&#34;225&#34; class=&#34;aligncenter size-medium wp-image-311&#34; srcset=&#34;https://blog.keiji.dev/wp-content/uploads/2013/05/IMG_20120625_144131-300x225.jpg 300w, https://blog.keiji.dev/wp-content/uploads/2013/05/IMG_20120625_144131-1024x768.jpg 1024w, https://blog.keiji.dev/wp-content/uploads/2013/05/IMG_20120625_144131-624x468.jpg 624w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>とあるカードの不正利用</title>
-      <link>https://blog.keiji.io/2013/04/air_heroine.html</link>
+      <link>https://blog.keiji.dev/2013/04/air_heroine.html</link>
       <pubDate>Fri, 05 Apr 2013 06:57:30 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/04/air_heroine.html</guid>
+      <guid>https://blog.keiji.dev/2013/04/air_heroine.html</guid>
       <description>&lt;p&gt;今日、とあるクレジットカード会社のセキュリティ管理部というところから電話がかかってきて「&lt;strong&gt;今日の真夜中に△△△△で○万円、□□□□で○○万円の決済をネット経由でしましたか？&lt;/strong&gt;」と、言うんです。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>エイプリルフールは終了しました</title>
-      <link>https://blog.keiji.io/2013/04/01.html</link>
+      <link>https://blog.keiji.dev/2013/04/01.html</link>
       <pubDate>Mon, 01 Apr 2013 14:59:46 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/04/01.html</guid>
+      <guid>https://blog.keiji.dev/2013/04/01.html</guid>
       <description>2013年度も、よろしくお願いいたします。</description>
     </item>
     
     <item>
       <title>転職することにしました</title>
-      <link>https://blog.keiji.io/2013/04/aprilfool.html</link>
+      <link>https://blog.keiji.dev/2013/04/aprilfool.html</link>
       <pubDate>Sun, 31 Mar 2013 17:03:04 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/04/aprilfool.html</guid>
+      <guid>https://blog.keiji.dev/2013/04/aprilfool.html</guid>
       <description>&lt;p&gt;突然のお知らせで恐縮ですが、このたび、転職をする決意をしましたのでお知らせします。&lt;/p&gt;
 &lt;p&gt;昨今、やはりAndroidアプリの受託開発だけではなかなか厳しくなっています。いろいろ自分の立ち位置を考え抜いた末、そもそもITの業界から離れようと決心しました。&lt;/p&gt;
 &lt;p&gt;新しい職では、一からノウハウを獲得して、世界に貢献したいと思います。&lt;/p&gt;
@@ -746,20 +746,20 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>なごやこわい 2013 Spring</title>
-      <link>https://blog.keiji.io/2013/02/nagoya-2013-spring.html</link>
+      <link>https://blog.keiji.dev/2013/02/nagoya-2013-spring.html</link>
       <pubDate>Wed, 20 Feb 2013 17:37:30 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/02/nagoya-2013-spring.html</guid>
+      <guid>https://blog.keiji.dev/2013/02/nagoya-2013-spring.html</guid>
       <description>&lt;p&gt;なごやこわい。&lt;/p&gt;
 &lt;p&gt;東京出張の前の日に、&lt;a href=&#34;http://www.zusaar.com/event/512004&#34;&gt;名古屋でAndroidの勉強会&lt;/a&gt;をやるというので、ちょっと寄ることにしたんだけど、なごやは相変わらずこわいところだった。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>フィードバックとモチベーション</title>
-      <link>https://blog.keiji.io/2013/02/feedback_motivation.html</link>
+      <link>https://blog.keiji.dev/2013/02/feedback_motivation.html</link>
       <pubDate>Tue, 19 Feb 2013 19:18:51 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/02/feedback_motivation.html</guid>
+      <guid>https://blog.keiji.dev/2013/02/feedback_motivation.html</guid>
       <description>&lt;p&gt;昨日、知り合いが、&lt;a href=&#34;https://blog.keiji.dev/2013/02/newdraw9patchtool.html&#34;&gt;新しい”Draw 9-Patch Tool”&lt;/a&gt;に関するフィードバックを、Twitterを通じてくれたのだけど、やりとりする上で、なんだかとても苛ついていたのを、自分でも不思議に思っていました。&lt;/p&gt;
 &lt;div align=&#34;center&#34;&gt;
   &lt;blockquote class=&#34;twitter-tweet&#34;&gt;
@@ -780,10 +780,10 @@ Twitter、Facebookを利用した、ログインにつきましては正常に�
     
     <item>
       <title>スペシャリストによって基準を満たしていないことが確認されたブログ</title>
-      <link>https://blog.keiji.io/2013/02/blog-post_970.html</link>
+      <link>https://blog.keiji.dev/2013/02/blog-post_970.html</link>
       <pubDate>Wed, 13 Feb 2013 08:35:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/02/blog-post_970.html</guid>
+      <guid>https://blog.keiji.dev/2013/02/blog-post_970.html</guid>
       <description>&lt;div&gt;
   &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-13-at-5.20.35-PM.png&#34;&gt;&lt;img class=&#34;size-full wp-image-49 aligncenter&#34; alt=&#34;Screen Shot 2013-02-13 at 5.20.35 PM&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-13-at-5.20.35-PM.png&#34; width=&#34;563&#34; height=&#34;77&#34; /&gt;&lt;/a&gt;
 &lt;/div&gt;

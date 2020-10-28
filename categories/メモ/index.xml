@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>メモ on めがねをかけるんだ</title>
-    <link>https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2/</link>
+    <link>https://blog.keiji.dev/categories/%E3%83%A1%E3%83%A2/</link>
     <description>Recent content in メモ on めがねをかけるんだ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Keiji ARIYAMA All rights reserved.</copyright>
-    <lastBuildDate>Sat, 21 Oct 2017 02:40:22 +0000</lastBuildDate><atom:link href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Oct 2017 02:40:22 +0000</lastBuildDate><atom:link href="https://blog.keiji.dev/categories/%E3%83%A1%E3%83%A2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>「ソーシャルアプリプラットフォーム構築技法」を２章まで読んだ</title>
-      <link>https://blog.keiji.io/2017/10/yoichiro.html</link>
+      <link>https://blog.keiji.dev/2017/10/yoichiro.html</link>
       <pubDate>Sat, 21 Oct 2017 02:40:22 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2017/10/yoichiro.html</guid>
+      <guid>https://blog.keiji.dev/2017/10/yoichiro.html</guid>
       <description>&lt;p&gt;　田中洋一郎さんの「&lt;a href=&#34;https://www.amazon.co.jp/dp/4774193321/&#34;&gt;ソーシャルアプリプラットフォーム構築技法&lt;/a&gt;」の見本誌をいただきました。&lt;/p&gt;
 &lt;p&gt;　感想は全部読み終えてからと思ったのですが、かなり内容の濃い本なので全部読み終えるにはずいぶんかかりそうで、２章まで読み終えた段階でエントリにしておきます。&lt;/p&gt;
 &lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;#038;bc1=000000&amp;#038;IS2=1&amp;#038;bg1=FFFFFF&amp;#038;fc1=000000&amp;#038;lc1=0000FF&amp;#038;t=keijiariyama-22&amp;#038;o=9&amp;#038;p=8&amp;#038;l=as4&amp;#038;m=amazon&amp;#038;f=ifr&amp;#038;ref=as_ss_li_til&amp;#038;asins=4774193321&amp;#038;linkId=9624f1b0e164f799fbe511d2772ee2ee&#34;&gt;&lt;/iframe&gt;</description>
@@ -21,10 +21,10 @@
     
     <item>
       <title>Anaconda3 for macでdlibがインストールできない</title>
-      <link>https://blog.keiji.io/2017/02/install_failed_dlib_with_anaconda3-for-mac.html</link>
+      <link>https://blog.keiji.dev/2017/02/install_failed_dlib_with_anaconda3-for-mac.html</link>
       <pubDate>Mon, 06 Feb 2017 12:46:19 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2017/02/install_failed_dlib_with_anaconda3-for-mac.html</guid>
+      <guid>https://blog.keiji.dev/2017/02/install_failed_dlib_with_anaconda3-for-mac.html</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;macOS Sierra – 10.12.3&lt;/li&gt;
 &lt;li&gt;Anaconda3 for OS X Python 3.6 version – 4.3.0&lt;/li&gt;
@@ -36,10 +36,10 @@
     
     <item>
       <title>壊れかけのXperia Z3 Tablet Compactに止めを刺した話</title>
-      <link>https://blog.keiji.io/2016/04/rip_my_xperia_z3_tablet_compact.html</link>
+      <link>https://blog.keiji.dev/2016/04/rip_my_xperia_z3_tablet_compact.html</link>
       <pubDate>Fri, 01 Apr 2016 07:20:15 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2016/04/rip_my_xperia_z3_tablet_compact.html</guid>
+      <guid>https://blog.keiji.dev/2016/04/rip_my_xperia_z3_tablet_compact.html</guid>
       <description>&lt;p&gt;　昨年の後半のことでしょうか。Xperia Z3 Tablet Compactを落としてしまい、前面ガラスが破損してしまいました。&lt;/p&gt;
 &lt;div id=&#34;attachment_1155&#34; style=&#34;max-width: 2170px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
   &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_201258.jpg&#34; rel=&#34;attachment wp-att-1155&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_201258.jpg&#34; alt=&#34;赤枠で囲った部分が破損箇所&#34; width=&#34;50%&#34; height=&#34;50%&#34; class=&#34;size-full wp-image-1155&#34; /&gt;&lt;/a&gt;
@@ -51,28 +51,28 @@
     
     <item>
       <title>Circle CIで新しいバージョンのbuildToolsが見えなかった話</title>
-      <link>https://blog.keiji.io/2015/11/update_build_tools_version.html</link>
+      <link>https://blog.keiji.dev/2015/11/update_build_tools_version.html</link>
       <pubDate>Wed, 25 Nov 2015 08:34:21 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/11/update_build_tools_version.html</guid>
+      <guid>https://blog.keiji.dev/2015/11/update_build_tools_version.html</guid>
       <description>Circle CIでビルドしているプロジェクトのBuildToolsのバージョンを23.0.2にしたところ、android update sdkに、「そんなバージョン</description>
     </item>
     
     <item>
       <title>Let’s EncryptでHTTPS化したけれど</title>
-      <link>https://blog.keiji.io/2015/11/lets-encrypt.html</link>
+      <link>https://blog.keiji.dev/2015/11/lets-encrypt.html</link>
       <pubDate>Thu, 12 Nov 2015 05:50:15 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2015/11/lets-encrypt.html</guid>
+      <guid>https://blog.keiji.dev/2015/11/lets-encrypt.html</guid>
       <description>Let’s Encryptのクローズドベータ。このドメインでもインビテーションをもらっていたのでさっそくHTTPS化したわけですが、HTTPS</description>
     </item>
     
     <item>
       <title>Moto 360 のディスプレイ焼き付きを防ぐアプリを作った話</title>
-      <link>https://blog.keiji.io/2014/09/prevent_lcd_ghosting_for_moto360.html</link>
+      <link>https://blog.keiji.dev/2014/09/prevent_lcd_ghosting_for_moto360.html</link>
       <pubDate>Wed, 24 Sep 2014 13:43:47 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2014/09/prevent_lcd_ghosting_for_moto360.html</guid>
+      <guid>https://blog.keiji.dev/2014/09/prevent_lcd_ghosting_for_moto360.html</guid>
       <description>&lt;p&gt;Google I/Oのお土産として配布されたMotorolaのAndroid Wear端末「Moto 360」が、先日ようやく届いたんですが。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605.jpg&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-300x198.jpg&#34; alt=&#34;Moto 360&#34; width=&#34;300&#34; height=&#34;198&#34; class=&#34;aligncenter size-medium wp-image-441&#34; srcset=&#34;https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-300x198.jpg 300w, https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-1024x678.jpg 1024w, https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-624x413.jpg 624w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;このMoto 360、充電中に必ず時計表示になるんだけど、そのせいで液晶が焼き付くという不具合が起きているらしいです。&lt;/p&gt;
@@ -84,10 +84,10 @@
     
     <item>
       <title>Fragment使う人に最低限、知っておいて欲しいこと</title>
-      <link>https://blog.keiji.io/2014/02/about_fragment.html</link>
+      <link>https://blog.keiji.dev/2014/02/about_fragment.html</link>
       <pubDate>Tue, 04 Feb 2014 09:32:17 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2014/02/about_fragment.html</guid>
+      <guid>https://blog.keiji.dev/2014/02/about_fragment.html</guid>
       <description>&lt;hr&gt;
 &lt;p&gt;※ 2015/12/24追記: この記事は古くなっています。最新の情報は&lt;a href=&#34;https://blog.keiji.dev/2015/12/mincomi-adventcalendar-24.html&#34;&gt;こちら&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -99,10 +99,10 @@
     
     <item>
       <title>TypeSquareのクラウドフォント</title>
-      <link>https://blog.keiji.io/2013/05/typesquare.html</link>
+      <link>https://blog.keiji.dev/2013/05/typesquare.html</link>
       <pubDate>Thu, 09 May 2013 06:26:13 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/05/typesquare.html</guid>
+      <guid>https://blog.keiji.dev/2013/05/typesquare.html</guid>
       <description>&lt;p&gt;モリサワ社が提供している&lt;a href=&#34;https://typesquare.com&#34;&gt;クラウドフォント&lt;/a&gt;を導入しました。今、皆さんが見ているこの文字は、クラウドフォントが出力した字体です。&lt;/p&gt;
 &lt;p&gt;クラウドフォントを導入するきっかけは&lt;a href=&#34;http://www.c-lis.co.jp&#34;&gt;会社のサイト&lt;/a&gt;。何年か前に作成して以来、ほとんど放置していたのだけど、Google I/Oの前に思い切って更新することにしました。&lt;/p&gt;
 &lt;p&gt;新しいサイトのデザインは、標準テンプレートのデザインほぼそのままで、内容も最小限です。&lt;/p&gt;
@@ -112,19 +112,19 @@
     
     <item>
       <title>VPNの”切断中”が終わらない</title>
-      <link>https://blog.keiji.io/2013/02/forever-vpn-disconnecting.html</link>
+      <link>https://blog.keiji.dev/2013/02/forever-vpn-disconnecting.html</link>
       <pubDate>Mon, 18 Feb 2013 14:55:39 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/02/forever-vpn-disconnecting.html</guid>
+      <guid>https://blog.keiji.dev/2013/02/forever-vpn-disconnecting.html</guid>
       <description>MacのVPN接続で、切断時にいつまでも”Disconnecting”が表示され続ける現象の解決策。 sudo killall -9 pppd Macでトラブルに遭遇したら、と</description>
     </item>
     
     <item>
       <title>完結: Adobe Creative Cloud 年間プラン解約 最短ルート攻略</title>
-      <link>https://blog.keiji.io/2013/02/adobe-creative-cloud_8.html</link>
+      <link>https://blog.keiji.dev/2013/02/adobe-creative-cloud_8.html</link>
       <pubDate>Fri, 08 Feb 2013 10:07:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/02/adobe-creative-cloud_8.html</guid>
+      <guid>https://blog.keiji.dev/2013/02/adobe-creative-cloud_8.html</guid>
       <description>&lt;p&gt;前回、&lt;a href=&#34;https://blog.keiji.dev/2013/02/adobe-creative-cloud.html&#34; target=&#34;_blank&#34;&gt;Adobe Creative Cloud 年間プラン解約 最短ルート攻略&lt;/a&gt;を公開した直後に、アドビカスタマーサポートからメールが届きました。&lt;/p&gt;
 &lt;blockquote style=&#34;border: solid 1px #333333;&#34;&gt;
   &lt;div style=&#34;text-align: left;&#34;&gt;
@@ -164,10 +164,10 @@
     
     <item>
       <title>Adobe Creative Cloud 年間プラン解約 最短ルート攻略</title>
-      <link>https://blog.keiji.io/2013/02/adobe-creative-cloud.html</link>
+      <link>https://blog.keiji.dev/2013/02/adobe-creative-cloud.html</link>
       <pubDate>Fri, 08 Feb 2013 08:28:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/02/adobe-creative-cloud.html</guid>
+      <guid>https://blog.keiji.dev/2013/02/adobe-creative-cloud.html</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
 &lt;p&gt;昨年５月から”Adobe Creative Cloud”を契約していたのですが、月に１，２回しか使うこともなく９ヶ月が過ぎようとしています。&lt;/p&gt;
 &lt;p&gt;使っているのは、PhotoshopとIllustrator、あとAdobe Acrobatなんですが、使い道と言えば、Photoshopは、せいぜい&lt;strong&gt;画像にモザイクをかける程度&lt;/strong&gt;です。&lt;/p&gt;
@@ -191,19 +191,19 @@
     
     <item>
       <title>Archive Utilityがフリーズ</title>
-      <link>https://blog.keiji.io/2013/02/archive-utility.html</link>
+      <link>https://blog.keiji.dev/2013/02/archive-utility.html</link>
       <pubDate>Wed, 06 Feb 2013 07:55:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/02/archive-utility.html</guid>
+      <guid>https://blog.keiji.dev/2013/02/archive-utility.html</guid>
       <description>Macのアーカイブユーティリティで、ZIPを展開しようとすると無応答になってしまう現象の解決策。 sudo killall -KILL appleeventsd 月に何度も遭遇する不具合ではないけど</description>
     </item>
     
     <item>
       <title>DE0メモ – シミュレーター(ModelSim)</title>
-      <link>https://blog.keiji.io/2013/01/de0simulator.html</link>
+      <link>https://blog.keiji.dev/2013/01/de0simulator.html</link>
       <pubDate>Tue, 22 Jan 2013 16:31:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/01/de0simulator.html</guid>
+      <guid>https://blog.keiji.dev/2013/01/de0simulator.html</guid>
       <description>&lt;p&gt;前回の『&lt;a href=&#34;https://blog.keiji.dev/2013/01/de0.html&#34; target=&#34;_blank&#34;&gt;DE0メモ&lt;/a&gt;』で、&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;その他、シミュレータなどでいろいろ検証したりもあるようですが、僕はまだその段階にありません。&lt;/p&gt;
@@ -217,19 +217,19 @@
     
     <item>
       <title>AOSPで１度投稿したパッチを修正する（nobranch編）</title>
-      <link>https://blog.keiji.io/2013/01/aospnobranch.html</link>
+      <link>https://blog.keiji.dev/2013/01/aospnobranch.html</link>
       <pubDate>Tue, 15 Jan 2013 13:47:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/01/aospnobranch.html</guid>
+      <guid>https://blog.keiji.dev/2013/01/aospnobranch.html</guid>
       <description>&lt;p&gt;この連休で&lt;a href=&#34;https://android-review.googlesource.com/#/&#34; target=&#34;_blank&#34;&gt;Android Open Source Project&lt;/a&gt;にいくつかパッチを投稿したのですが、そのときに、ちょっと詰まったのでメモ。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>DE0メモ</title>
-      <link>https://blog.keiji.io/2013/01/de0.html</link>
+      <link>https://blog.keiji.dev/2013/01/de0.html</link>
       <pubDate>Tue, 08 Jan 2013 10:16:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/01/de0.html</guid>
+      <guid>https://blog.keiji.dev/2013/01/de0.html</guid>
       <description>&lt;div&gt;
   FPGAボードのDE0をちょこちょこ触ったメモ。
 &lt;/div&gt;
@@ -242,10 +242,10 @@
     
     <item>
       <title>正月に読んだ本とか</title>
-      <link>https://blog.keiji.io/2013/01/blog-post_5212.html</link>
+      <link>https://blog.keiji.dev/2013/01/blog-post_5212.html</link>
       <pubDate>Fri, 04 Jan 2013 18:19:00 +0000</pubDate>
       
-      <guid>https://blog.keiji.io/2013/01/blog-post_5212.html</guid>
+      <guid>https://blog.keiji.dev/2013/01/blog-post_5212.html</guid>
       <description>&lt;p&gt;正月の３日間、本を読んだり、DVDばかり見て過ごしたまとめ。&lt;/p&gt;</description>
     </item>
     
