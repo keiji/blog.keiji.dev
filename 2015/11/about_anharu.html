@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+
+<meta name="google-site-verification" content="jLy-Sg3FFmjHr0ri0Rlq0Dd7CNY-Qx-eGpL5wk7gGYs" />
+<link rel="canonical" href="https://blog.keiji.io/2015/11/about_anharu.html">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Webサイトを作った話 - めがねをかけるんだ</title>
+    
+<meta name="description" content="&lt;p&gt;新しいWebサイトを作りました。&lt;/p&gt;&lt;div align=&#34;center&#34;&gt;  &lt;a href=&#34;https://anharu.keiji.io&#34;&gt;はじめてのAndroidアプリ開発レッスン&lt;br /&gt; &lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2015/11/Android_Studio_icon.png&#34; alt=&#34;Android_Studio_icon&#34; width=&#34;25%&#34; height=&#34;25%&#34; class=&#34;aligncenter size-full wp-image-595&#34; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;p&gt;以前、技術評論社より&lt;a href=&#34;http://gihyo.jp/book/2014/978-4-7741-6998-9&#34;&gt;Androidアプリ開発の初心者本&lt;/a&gt;を出版したのですが、その本のAmazonレビューに「Javaのことをまったく解説していないのでこれだけではわかりません。初心者向きではない」というような指摘が多かったことから「やりましょう」とばかりに取り組んだこの企画。 実は、９月の&lt;a href=&#34;http://www.zusaar.com/event/15227003&#34;&gt;名古屋つ部&lt;/a&gt;ではちらりと発表していたのですが、ようやくのお目見えとなりました。&lt;/p&gt;&lt;p&gt;公開が遅くなった理由？&lt;/p&gt;&lt;p&gt;Android Studioのアップデートに聞いて下さい！&lt;/p&gt;&lt;p&gt;今回もまたサイト掲載のコミックとイラストは&lt;a href=&#34;https://twitter.com/neyuki_rei&#34;&gt;根雪れい&lt;/a&gt;さんにお願いしました。 &lt;a href=&#34;http://www.mincomi.jp/&#34;&gt;みんコミ&lt;/a&gt;の新連載準備でお忙しい中、最高の眼鏡っ娘を生み出していただき、本当にありがとうございます！&lt;/p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;  &lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;    &gt;RT 有山さんの「はじめてのAndroidアプリ開発レッスン」に絵とマンガを描きましたよ（描くにあたってメガネ外さないでとしか要求されなかった…  &lt;/p&gt;  &lt;p&gt;    — 根雪れい.ティア不参加です… (@neyuki_rei)  &lt;/p&gt;  &lt;p&gt;    &lt;a href=&#34;https://twitter.com/neyuki_rei/status/662623560578412544&#34;&gt;November 6, 2015&lt;/a&gt;  &lt;/p&gt;&lt;/blockquote&gt;">
+
+<meta property="og:title" content="Webサイトを作った話 - めがねをかけるんだ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.keiji.io/2015/11/about_anharu.html">
+<meta property="og:image" content="https://blog.keiji.io/images/default.png">
+<meta property="og:site_name" content="めがねをかけるんだ">
+<meta property="og:description" content="&lt;p&gt;新しいWebサイトを作りました。&lt;/p&gt;&lt;div align=&#34;center&#34;&gt;  &lt;a href=&#34;https://anharu.keiji.io&#34;&gt;はじめてのAndroidアプリ開発レッスン&lt;br /&gt; &lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2015/11/Android_Studio_icon.png&#34; alt=&#34;Android_Studio_icon&#34; width=&#34;25%&#34; height=&#34;25%&#34; class=&#34;aligncenter size-full wp-image-595&#34; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;p&gt;以前、技術評論社より&lt;a href=&#34;http://gihyo.jp/book/2014/978-4-7741-6998-9&#34;&gt;Androidアプリ開発の初心者本&lt;/a&gt;を出版したのですが、その本のAmazonレビューに「Javaのことをまったく解説していないのでこれだけではわかりません。初心者向きではない」というような指摘が多かったことから「やりましょう」とばかりに取り組んだこの企画。 実は、９月の&lt;a href=&#34;http://www.zusaar.com/event/15227003&#34;&gt;名古屋つ部&lt;/a&gt;ではちらりと発表していたのですが、ようやくのお目見えとなりました。&lt;/p&gt;&lt;p&gt;公開が遅くなった理由？&lt;/p&gt;&lt;p&gt;Android Studioのアップデートに聞いて下さい！&lt;/p&gt;&lt;p&gt;今回もまたサイト掲載のコミックとイラストは&lt;a href=&#34;https://twitter.com/neyuki_rei&#34;&gt;根雪れい&lt;/a&gt;さんにお願いしました。 &lt;a href=&#34;http://www.mincomi.jp/&#34;&gt;みんコミ&lt;/a&gt;の新連載準備でお忙しい中、最高の眼鏡っ娘を生み出していただき、本当にありがとうございます！&lt;/p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;  &lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;    &gt;RT 有山さんの「はじめてのAndroidアプリ開発レッスン」に絵とマンガを描きましたよ（描くにあたってメガネ外さないでとしか要求されなかった…  &lt;/p&gt;  &lt;p&gt;    — 根雪れい.ティア不参加です… (@neyuki_rei)  &lt;/p&gt;  &lt;p&gt;    &lt;a href=&#34;https://twitter.com/neyuki_rei/status/662623560578412544&#34;&gt;November 6, 2015&lt;/a&gt;  &lt;/p&gt;&lt;/blockquote&gt;">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="めがねをかけるんだ">
+<meta name="twitter:url" content="https://blog.keiji.io/2015/11/about_anharu.html">
+<meta name="twitter:title" content="Webサイトを作った話 - めがねをかけるんだ">
+<meta name="twitter:description" content="&lt;p&gt;新しいWebサイトを作りました。&lt;/p&gt;&lt;div align=&#34;center&#34;&gt;  &lt;a href=&#34;https://anharu.keiji.io&#34;&gt;はじめてのAndroidアプリ開発レッスン&lt;br /&gt; &lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2015/11/Android_Studio_icon.png&#34; alt=&#34;Android_Studio_icon&#34; width=&#34;25%&#34; height=&#34;25%&#34; class=&#34;aligncenter size-full wp-image-595&#34; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;p&gt;以前、技術評論社より&lt;a href=&#34;http://gihyo.jp/book/2014/978-4-7741-6998-9&#34;&gt;Androidアプリ開発の初心者本&lt;/a&gt;を出版したのですが、その本のAmazonレビューに「Javaのことをまったく解説していないのでこれだけではわかりません。初心者向きではない」というような指摘が多かったことから「やりましょう」とばかりに取り組んだこの企画。 実は、９月の&lt;a href=&#34;http://www.zusaar.com/event/15227003&#34;&gt;名古屋つ部&lt;/a&gt;ではちらりと発表していたのですが、ようやくのお目見えとなりました。&lt;/p&gt;&lt;p&gt;公開が遅くなった理由？&lt;/p&gt;&lt;p&gt;Android Studioのアップデートに聞いて下さい！&lt;/p&gt;&lt;p&gt;今回もまたサイト掲載のコミックとイラストは&lt;a href=&#34;https://twitter.com/neyuki_rei&#34;&gt;根雪れい&lt;/a&gt;さんにお願いしました。 &lt;a href=&#34;http://www.mincomi.jp/&#34;&gt;みんコミ&lt;/a&gt;の新連載準備でお忙しい中、最高の眼鏡っ娘を生み出していただき、本当にありがとうございます！&lt;/p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;en&#34;&gt;  &lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;    &gt;RT 有山さんの「はじめてのAndroidアプリ開発レッスン」に絵とマンガを描きましたよ（描くにあたってメガネ外さないでとしか要求されなかった…  &lt;/p&gt;  &lt;p&gt;    — 根雪れい.ティア不参加です… (@neyuki_rei)  &lt;/p&gt;  &lt;p&gt;    &lt;a href=&#34;https://twitter.com/neyuki_rei/status/662623560578412544&#34;&gt;November 6, 2015&lt;/a&gt;  &lt;/p&gt;&lt;/blockquote&gt;">
+<meta name="twitter:image" content="https://blog.keiji.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.keiji.io\/"
+    },
+    "headline": "Webサイトを作った話 - めがねをかけるんだ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.keiji.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2015-11-10T06:49:06JST",
+    "dateModified": "2015-11-10T06:49:06JST",
+    "author": {
+      "@type": "Person",
+      "name": "めがねをかけるんだ"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "めがねをかけるんだ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.keiji.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "\u003cp\u003e新しいWebサイトを作りました。\u003c\/p\u003e\n\u003cdiv align=\u0022center\u0022\u003e\n  \u003ca href=\u0022https:\/\/anharu.keiji.io\u0022\u003eはじめてのAndroidアプリ開発レッスン\u003cbr \/\u003e \u003cimg src=\u0022https:\/\/blog.keiji.dev\/wp-content\/uploads\/2015\/11\/Android_Studio_icon.png\u0022 alt=\u0022Android_Studio_icon\u0022 width=\u002225%\u0022 height=\u002225%\u0022 class=\u0022aligncenter size-full wp-image-595\u0022 \/\u003e \u003c\/a\u003e\n\u003c\/div\u003e\n\u003cp\u003e以前、技術評論社より\u003ca href=\u0022http:\/\/gihyo.jp\/book\/2014\/978-4-7741-6998-9\u0022\u003eAndroidアプリ開発の初心者本\u003c\/a\u003eを出版したのですが、その本のAmazonレビューに「Javaのことをまったく解説していないのでこれだけではわかりません。初心者向きではない」というような指摘が多かったことから「やりましょう」とばかりに取り組んだこの企画。 実は、９月の\u003ca href=\u0022http:\/\/www.zusaar.com\/event\/15227003\u0022\u003e名古屋つ部\u003c\/a\u003eではちらりと発表していたのですが、ようやくのお目見えとなりました。\u003c\/p\u003e\n\u003cp\u003e公開が遅くなった理由？\u003c\/p\u003e\n\u003cp\u003eAndroid Studioのアップデートに聞いて下さい！\u003c\/p\u003e\n\u003cp\u003e今回もまたサイト掲載のコミックとイラストは\u003ca href=\u0022https:\/\/twitter.com\/neyuki_rei\u0022\u003e根雪れい\u003c\/a\u003eさんにお願いしました。 \u003ca href=\u0022http:\/\/www.mincomi.jp\/\u0022\u003eみんコミ\u003c\/a\u003eの新連載準備でお忙しい中、最高の眼鏡っ娘を生み出していただき、本当にありがとうございます！\u003c\/p\u003e\n\u003cblockquote class=\u0022twitter-tweet\u0022 lang=\u0022en\u0022\u003e\n  \u003cp lang=\u0022ja\u0022 dir=\u0022ltr\u0022\u003e\n    \u003eRT 有山さんの「はじめてのAndroidアプリ開発レッスン」に絵とマンガを描きましたよ（描くにあたってメガネ外さないでとしか要求されなかった…\n  \u003c\/p\u003e\n  \u003cp\u003e\n    — 根雪れい.ティア不参加です… (@neyuki_rei)\n  \u003c\/p\u003e\n  \u003cp\u003e\n    \u003ca href=\u0022https:\/\/twitter.com\/neyuki_rei\/status\/662623560578412544\u0022\u003eNovember 6, 2015\u003c\/a\u003e\n  \u003c\/p\u003e\n\u003c\/blockquote\u003e"
+  }
+</script>
+
+
+    <link href="https://blog.keiji.io/css/styles.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/default.css">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/typesquare.css">
+    
+
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-62351683-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://blog.keiji.io/">めがねをかけるんだ</a>
+          </div>
+
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="https://blog.keiji.io/profile/">Profile</a></li>
+              
+              
+            </ul>
+            
+          </div>
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://blog.keiji.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.keiji.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">Webサイトを作った話</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-11-10T06:49:06JST">2015-11-10</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.keiji.io/post/">post</a></li>
+      
+    </ul>
+
+    <h1 class="title">Webサイトを作った話</h1>
+  </header>
+
+  
+
+  <div class="article-body"><p>新しいWebサイトを作りました。</p>
+<div align="center">
+  <a href="https://anharu.keiji.io">はじめてのAndroidアプリ開発レッスン<br /> <img src="https://blog.keiji.dev/wp-content/uploads/2015/11/Android_Studio_icon.png" alt="Android_Studio_icon" width="25%" height="25%" class="aligncenter size-full wp-image-595" /> </a>
+</div>
+<p>以前、技術評論社より<a href="http://gihyo.jp/book/2014/978-4-7741-6998-9">Androidアプリ開発の初心者本</a>を出版したのですが、その本のAmazonレビューに「Javaのことをまったく解説していないのでこれだけではわかりません。初心者向きではない」というような指摘が多かったことから「やりましょう」とばかりに取り組んだこの企画。 実は、９月の<a href="http://www.zusaar.com/event/15227003">名古屋つ部</a>ではちらりと発表していたのですが、ようやくのお目見えとなりました。</p>
+<p>公開が遅くなった理由？</p>
+<p>Android Studioのアップデートに聞いて下さい！</p>
+<p>今回もまたサイト掲載のコミックとイラストは<a href="https://twitter.com/neyuki_rei">根雪れい</a>さんにお願いしました。 <a href="http://www.mincomi.jp/">みんコミ</a>の新連載準備でお忙しい中、最高の眼鏡っ娘を生み出していただき、本当にありがとうございます！</p>
+<blockquote class="twitter-tweet" lang="en">
+  <p lang="ja" dir="ltr">
+    >RT 有山さんの「はじめてのAndroidアプリ開発レッスン」に絵とマンガを描きましたよ（描くにあたってメガネ外さないでとしか要求されなかった…
+  </p>
+  <p>
+    — 根雪れい.ティア不参加です… (@neyuki_rei)
+  </p>
+  <p>
+    <a href="https://twitter.com/neyuki_rei/status/662623560578412544">November 6, 2015</a>
+  </p>
+</blockquote>
+<hr>
+<h2 id="使っている技術">使っている技術</h2>
+<p>僕はAndroidアプリ開発がメインの仕事なので、Webについてはリアルタイムではフォローしてないのですが、大体1年に一回くらいはサイトとかサービスを作っていたりします。</p>
+<p>以前は、Amazonの価格の変化をチェックするサービス<a href="https://i.keiji.io/">有山家の買い物メモ</a>とか作りました。</p>
+<p>たまにWebの世界に触れると、技術やトレンドが変化していて面白いんですね。 数ヶ月ぶりに見る、みのもんたの顔が全然違って見えるのと同じ現象です。</p>
+<p>なので、今回のサイト構築にあたっても、なるべく面白そうな技術やプラットフォームを採用するようにしました。</p>
+<h3 id="hugo">Hugo</h3>
+<p><a href="https://blog.keiji.dev/wp-content/uploads/2015/11/hugo.png"><img src="https://blog.keiji.dev/wp-content/uploads/2015/11/hugo.png" alt="hugo" width="25%" height="25%" class="aligncenter size-full wp-image-590" /></a></p>
+<p>サイトの構築にはHugoを採用しました。 HugoはSteve Franci氏がオープンソースで開発している”Static Website Engine”です。Markdownとテーマ・テンプレートから静的なHTMLを出力します。</p>
+<p>同じSWEとしてはJekyllや<s>Octpass</s>Octopressが有名ですが、HugoはGolangで開発されているので変換のスピードが高速という利点があります。</p>
+<p>今回はコンテンツサイトということもあり、さくっとWordPressで作るかなとも思いました。しかし、最近アップデートのためだけにコントロールパネル開いてる気がするし、記事に少しでもアクセスが集中するとサーバーが死んじゃうくらい重くなるし、もうWordPressはこりごりだ！</p>
+<p>ということでHugoにしました。 （正確には、CMSを使わない決定をしたというのが正しいでしょう）</p>
+<p>それだとJekyllでいいんじゃない？　という話になるのですが、Jekyllはgemの依存パッケージがガンガンはいりそうなので、コンパクトにまとまっているHugoを選びました。あと、使ったことがある人が少なそうだったので、楽しそうだなと思ったのも理由の一つですね。</p>
+<p>結果的には大変苦労をしました。</p>
+<p>その辺りのアレコレについては、また機会があれば詳しくお話しできればと思います。</p>
+<h3 id="material-design-lite">Material Design Lite</h3>
+<hr>
+<p>「世の中は<a href="http://www.google.com/design/spec/material-design/introduction.html">マテリアルデザイン</a>ですって。奥さん」</p>
+<p>「そうは言っても一からあんなデザインを作ろうなんて、正気の沙汰じゃないよな。AndroidだとDesign Support Libraryがあるけど、Webではなにかないの？」</p>
+<p>「Polymer?」</p>
+<p>「Polymer、アイツはダメだ！ デザインを適用したいだけにしては重量級が過ぎる！」</p>
+<p>「そこでMaterial Design Liteですよ！」</p>
+<hr>
+<p>ということで<a href="http://www.getmdl.io/">Material Design Lite</a>です。</p>
+<p>MDL(Material Design Lite)は、Googleが開発しているデザインライブリ（こう言う言い方は大丈夫なんでしょうか）です。</p>
+<p>MDLを使えばCSSのクラス指定をするだけでマテリアルデザインっぽい見た目と動きのサイトが結構、簡単に作れます。</p>
+<p>サンプルも充実していて、 <a href="https://anharu.keiji.io">はじめてのAndroidアプリ開発レッスン</a>のデザインは、ほとんどがサンプルを組み合わせて出来ています。</p>
+<p>MDLはとても便利です。しかしMDLのクラスの命名規約として採用されている<a href="https://en.bem.info/">BEM</a>は、人類が習得するにはまだ精神レベルが足りてないと思いました。</p>
+<h3 id="typesquare">TypeSquare</h3>
+<p>TypeSquareはモリサワが提供しているWebフォント配信サービスです。 最近だとAdobeのTypekitにモリサワフォントが追加されたと話題になりましたがTypeSquareなら元から使い放題です。</p>
+<p>ただ、たくさんのフォントが使えるのと、実際にたくさんのフォントを違和感なく組み合わせるのは別の話で、この辺りはまだ試行錯誤中です。</p>
+<p>モリサワさんにおかれましては「フォント活用術」みたいな講習をやってもらえれば是非とも受けたいと思っているのでご検討の程よろしくお願いいたします。</p>
+<h3 id="let8217s-encrypt">Let’s Encrypt</h3>
+<p>SSL証明書は<a href="https://letsencrypt.org/">Let’s Encrypt</a>のクローズドベータプログラムで取得しました。</p>
+<p>ＰＣにインストールしたクライアントソフトを使って生成したトークンを、サーバー側でアクセス可能な状態にしてサーバー所有を認証します。</p>
+<p>SSL証明書を取得できたのでnginxのSPDYを有効にしてあります。</p>
+<h3 id="その他">その他</h3>
+<p>その他、オープンソースソフトウェアについては”Open Source License”をご覧ください。</p>
+<h2 id="おわりに">おわりに</h2>
+<p>せっかくサイト作ったんだから、３回は続けたいなぁと思っています。</p>
+<p>あと、<a href="http://gihyo.jp/book/2014/978-4-7741-6998-9">書籍</a>の方は絶賛改訂作業中です。</p>
+<p>改訂版は来年の１月上旬頃発売予定なので、そちらの方もよろしくお願いいたします。</p></div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://blog.keiji.io/categories/android/">Android</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+        
+          <a href="https://blog.keiji.io/2020/08/mangaview.html" class="list-group-item">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html" class="list-group-item">ELEGOO MARSの出力精度の改善</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/04/techbookfest6.html" class="list-group-item">技術書典6でMLOps本「巡りあえないConcourse」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html" class="list-group-item">Gehirn RS2 Plusに引っ越しした</a>
+        
+      
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html" class="list-group-item">いまNN API（TensorFlow Lite）は使えるのか</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/look_back_techbookfest4.html" class="list-group-item">技術書典4に参加してきました</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-2.html" class="list-group-item">技術書典4で「本当はおそろしい商業出版！？」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-1.html" class="list-group-item">技術書典4でML Ops（TensorFlow）の本を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/01/meganeco_playground.html" class="list-group-item">機械学習のモデルを試せるサイトを作った話</a>
+        
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98" class="list-group-item">雑記</a>
+      
+      <a href="https://blog.keiji.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="list-group-item">イベント</a>
+      
+      <a href="https://blog.keiji.io/categories/tensorflow" class="list-group-item">tensorflow</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2" class="list-group-item">メモ</a>
+      
+      <a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C" class="list-group-item">習作</a>
+      
+      <a href="https://blog.keiji.io/categories/aosp" class="list-group-item">aosp</a>
+      
+      <a href="https://blog.keiji.io/categories/adk" class="list-group-item">adk</a>
+      
+      <a href="https://blog.keiji.io/categories/de0" class="list-group-item">de0</a>
+      
+      <a href="https://blog.keiji.io/categories/fpga" class="list-group-item">fpga</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>Keiji ARIYAMA All rights reserved.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p>Original <a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> theme is designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ZwBLIZTRHGg%3d&fadein=500" charset="utf-8"></script>
+  </body>
+</html>

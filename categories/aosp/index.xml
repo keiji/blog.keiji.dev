@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AOSP on めがねをかけるんだ</title>
+    <link>https://blog.keiji.io/categories/aosp/</link>
+    <description>Recent content in AOSP on めがねをかけるんだ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>Keiji ARIYAMA All rights reserved.</copyright>
+    <lastBuildDate>Tue, 19 Feb 2013 19:18:51 +0000</lastBuildDate><atom:link href="https://blog.keiji.io/categories/aosp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>フィードバックとモチベーション</title>
+      <link>https://blog.keiji.io/2013/02/feedback_motivation.html</link>
+      <pubDate>Tue, 19 Feb 2013 19:18:51 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2013/02/feedback_motivation.html</guid>
+      <description>&lt;p&gt;昨日、知り合いが、&lt;a href=&#34;https://blog.keiji.dev/2013/02/newdraw9patchtool.html&#34;&gt;新しい”Draw 9-Patch Tool”&lt;/a&gt;に関するフィードバックを、Twitterを通じてくれたのだけど、やりとりする上で、なんだかとても苛ついていたのを、自分でも不思議に思っていました。&lt;/p&gt;
+&lt;div align=&#34;center&#34;&gt;
+  &lt;blockquote class=&#34;twitter-tweet&#34;&gt;
+    &lt;p&gt;
+      Windowsうざい
+    &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;
+  &amp;amp;mdash; Keiji Ariyama (@keiji_ariyama) &amp;lt;a href=&amp;quot;https://twitter.com/keiji_ariyama/status/303789291740475392&amp;quot;&amp;gt;February 19, 2013&amp;lt;/a&amp;gt;
+&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/blockquote&gt;
+  &lt;p&gt;
+    &lt;/div&gt; 
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;
+  &amp;amp;nbsp;&amp;lt;br /&amp;gt; あれからしばらく考えて、何となく自分の中で納得ができたので、まとめておこうと思います。&amp;lt;br /&amp;gt; 
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>新しい&#34;Draw 9-patch Tool&#34;を公開しました。</title>
+      <link>https://blog.keiji.io/2013/02/newdraw9patchtool.html</link>
+      <pubDate>Sun, 10 Feb 2013 08:22:00 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2013/02/newdraw9patchtool.html</guid>
+      <description>&lt;p&gt;最近、「有山さんはもう&lt;strong&gt;Makers&lt;/strong&gt;の方に行っちゃったんだね。Androidはもうやってないんだよね」「いやいや、もちろんやってますよ。&lt;strong&gt;Android&lt;/strong&gt;」と言う会話があったので。&lt;/p&gt;
+&lt;p&gt;Android SDKに同梱されている”&lt;strong&gt;Draw 9-patch Tool&lt;/strong&gt;“を、SWTをベースにリライトして、Eclipseのプラグインにしたので公開します。&lt;/p&gt;
+&lt;div style=&#34;text-align: center;&#34;&gt;
+  &lt;p&gt;
+    &lt;span style=&#34;text-decoration: underline;&#34;&gt;このプラグインを使えば、開発者は、Eclipseの中だけで9-patch画像の作成や編集が出来ます。&lt;/span&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;div&gt;
+  &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg&#34;&gt;&lt;img class=&#34;wp-image-53 aligncenter&#34; alt=&#34;Screen Shot 2013-02-10 at 3.43.04 PM&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg&#34; width=&#34;442&#34; height=&#34;260&#34; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;p&gt;これまでは、Facebook/Twitter/Google+で、知り合い向けに公開していたのですが、もう少し公開範囲を広げることにしました。&lt;/p&gt;
+&lt;p&gt;&lt;em id=&#34;__mceDel&#34;&gt;開発してまだ日が浅いので、Windows/Mac/Linuxの違い、Eclipseのバージョンの違いなどによって、不具合がある可能性があります。&lt;br /&gt; 不具合を見つけた方は、是非ともフィードバックしてください。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;フィードバックは、&lt;a href=&#34;http://www.facebook.com/keiji.ariyama&#34; target=&#34;_blank&#34;&gt;Facebook&lt;/a&gt;/Twitter/&lt;a href=&#34;https://plus.google.com/101075618639637989227?authuser=0&#34; target=&#34;_blank&#34;&gt;Google+&lt;/a&gt;、その他どんな手段でも構いません。宜しくお願いいたします。&lt;/p&gt;
+&lt;h2 id=&#34;ダウンロード利用方法&#34;&gt;ダウンロード＆利用方法&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;draw9patch tool for Eclipse plugin &lt;span&gt;(MD5: 09b952ceea11d9d59984ad5d004b422d)&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/keiji/draw9patch2/blob/master/bin/Draw9PatchPlugin.zip&#34;&gt;https://github.com/keiji/draw9patch2/blob/master/bin/Draw9PatchPlugin.zip&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;zipを展開して、pluginsの中の”Draw9PatchEditor_*.jar”を、お使いのEclipseのpluginsディレクトリにコピーして下さい（Eclipseの再起動が必要です）。&lt;/p&gt;
+&lt;p&gt;Eclipseの再起動後、パッケージエクスプローラーから、pngファイル(&lt;em&gt;e.g. “res/drawable-hdpi/ic_launcher.png”&lt;/em&gt;)をダブルクリックすると、”Draw 9-patch Tool”が起動します。&lt;/p&gt;
+&lt;table cellspacing=&#34;0&#34; cellpadding=&#34;0&#34; align=&#34;center&#34;&gt;
+  &lt;tr&gt;
+    &lt;td&gt;
+      &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg&#34;&gt;&lt;img class=&#34;wp-image-60 aligncenter&#34; alt=&#34;Screen Shot 2013-02-10 at 4.00.32 PM&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg&#34; width=&#34;450&#34; height=&#34;273&#34; /&gt;&lt;/a&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;
+      &lt;span&gt;この画像中のモザイクは、&lt;br /&gt; Pixelmatorで処理しました。&lt;/span&gt;
+    &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</description>
+    </item>
+    
+    <item>
+      <title>AOSPで１度投稿したパッチを修正する（nobranch編）</title>
+      <link>https://blog.keiji.io/2013/01/aospnobranch.html</link>
+      <pubDate>Tue, 15 Jan 2013 13:47:00 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2013/01/aospnobranch.html</guid>
+      <description>&lt;p&gt;この連休で&lt;a href=&#34;https://android-review.googlesource.com/#/&#34; target=&#34;_blank&#34;&gt;Android Open Source Project&lt;/a&gt;にいくつかパッチを投稿したのですが、そのときに、ちょっと詰まったのでメモ。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

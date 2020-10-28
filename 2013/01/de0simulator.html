@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+
+<meta name="google-site-verification" content="jLy-Sg3FFmjHr0ri0Rlq0Dd7CNY-Qx-eGpL5wk7gGYs" />
+<link rel="canonical" href="https://blog.keiji.io/2013/01/de0simulator.html">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>DE0メモ – シミュレーター(ModelSim) - めがねをかけるんだ</title>
+    
+<meta name="description" content="&lt;p&gt;前回の『&lt;a href=&#34;https://blog.keiji.dev/2013/01/de0.html&#34; target=&#34;_blank&#34;&gt;DE0メモ&lt;/a&gt;』で、&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;その他、シミュレータなどでいろいろ検証したりもあるようですが、僕はまだその段階にありません。&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;と、書いたのですが、&lt;/p&gt;&lt;p&gt;**「普通はシミュレータの方が先だよ」**との意見を戴きました。&lt;/p&gt;&lt;p&gt;また、DE0を使って実験をしていると、なんだかよくわからない挙動をするときがあるんですね。そういう時に中をひょいと覗けないのは、思いのほか辛いものです。&lt;/p&gt;&lt;p&gt;さらに、DE0を持ち歩いているわけではないので、ちょっと試したいときにはシミュレーターが使えれば、ある程度の実験は出来るでしょう。&lt;/p&gt;&lt;p&gt;そんなわけで、使ってみました。シミュレーター。&lt;/p&gt;">
+
+<meta property="og:title" content="DE0メモ – シミュレーター(ModelSim) - めがねをかけるんだ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.keiji.io/2013/01/de0simulator.html">
+<meta property="og:image" content="https://blog.keiji.io/images/default.png">
+<meta property="og:site_name" content="めがねをかけるんだ">
+<meta property="og:description" content="&lt;p&gt;前回の『&lt;a href=&#34;https://blog.keiji.dev/2013/01/de0.html&#34; target=&#34;_blank&#34;&gt;DE0メモ&lt;/a&gt;』で、&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;その他、シミュレータなどでいろいろ検証したりもあるようですが、僕はまだその段階にありません。&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;と、書いたのですが、&lt;/p&gt;&lt;p&gt;**「普通はシミュレータの方が先だよ」**との意見を戴きました。&lt;/p&gt;&lt;p&gt;また、DE0を使って実験をしていると、なんだかよくわからない挙動をするときがあるんですね。そういう時に中をひょいと覗けないのは、思いのほか辛いものです。&lt;/p&gt;&lt;p&gt;さらに、DE0を持ち歩いているわけではないので、ちょっと試したいときにはシミュレーターが使えれば、ある程度の実験は出来るでしょう。&lt;/p&gt;&lt;p&gt;そんなわけで、使ってみました。シミュレーター。&lt;/p&gt;">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="めがねをかけるんだ">
+<meta name="twitter:url" content="https://blog.keiji.io/2013/01/de0simulator.html">
+<meta name="twitter:title" content="DE0メモ – シミュレーター(ModelSim) - めがねをかけるんだ">
+<meta name="twitter:description" content="&lt;p&gt;前回の『&lt;a href=&#34;https://blog.keiji.dev/2013/01/de0.html&#34; target=&#34;_blank&#34;&gt;DE0メモ&lt;/a&gt;』で、&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;その他、シミュレータなどでいろいろ検証したりもあるようですが、僕はまだその段階にありません。&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;と、書いたのですが、&lt;/p&gt;&lt;p&gt;**「普通はシミュレータの方が先だよ」**との意見を戴きました。&lt;/p&gt;&lt;p&gt;また、DE0を使って実験をしていると、なんだかよくわからない挙動をするときがあるんですね。そういう時に中をひょいと覗けないのは、思いのほか辛いものです。&lt;/p&gt;&lt;p&gt;さらに、DE0を持ち歩いているわけではないので、ちょっと試したいときにはシミュレーターが使えれば、ある程度の実験は出来るでしょう。&lt;/p&gt;&lt;p&gt;そんなわけで、使ってみました。シミュレーター。&lt;/p&gt;">
+<meta name="twitter:image" content="https://blog.keiji.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.keiji.io\/"
+    },
+    "headline": "DE0メモ – シミュレーター(ModelSim) - めがねをかけるんだ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.keiji.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2013-01-22T16:31:00JST",
+    "dateModified": "2013-01-22T16:31:00JST",
+    "author": {
+      "@type": "Person",
+      "name": "めがねをかけるんだ"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "めがねをかけるんだ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.keiji.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "\u003cp\u003e前回の『\u003ca href=\u0022https:\/\/blog.keiji.dev\/2013\/01\/de0.html\u0022 target=\u0022_blank\u0022\u003eDE0メモ\u003c\/a\u003e』で、\u003c\/p\u003e\n\u003cblockquote\u003e\n\u003cp\u003eその他、シミュレータなどでいろいろ検証したりもあるようですが、僕はまだその段階にありません。\u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003cp\u003eと、書いたのですが、\u003c\/p\u003e\n\u003cp\u003e**「普通はシミュレータの方が先だよ」**との意見を戴きました。\u003c\/p\u003e\n\u003cp\u003eまた、DE0を使って実験をしていると、なんだかよくわからない挙動をするときがあるんですね。そういう時に中をひょいと覗けないのは、思いのほか辛いものです。\u003c\/p\u003e\n\u003cp\u003eさらに、DE0を持ち歩いているわけではないので、ちょっと試したいときにはシミュレーターが使えれば、ある程度の実験は出来るでしょう。\u003c\/p\u003e\n\u003cp\u003eそんなわけで、使ってみました。シミュレーター。\u003c\/p\u003e"
+  }
+</script>
+
+
+    <link href="https://blog.keiji.io/css/styles.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/default.css">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/typesquare.css">
+    
+
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-62351683-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://blog.keiji.io/">めがねをかけるんだ</a>
+          </div>
+
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="https://blog.keiji.io/profile/">Profile</a></li>
+              
+              
+            </ul>
+            
+          </div>
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://blog.keiji.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.keiji.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">DE0メモ – シミュレーター(ModelSim)</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2013-01-22T16:31:00JST">2013-01-22</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.keiji.io/post/">post</a></li>
+      
+    </ul>
+
+    <h1 class="title">DE0メモ – シミュレーター(ModelSim)</h1>
+  </header>
+
+  
+
+  <div class="article-body"><p>前回の『<a href="https://blog.keiji.dev/2013/01/de0.html" target="_blank">DE0メモ</a>』で、</p>
+<blockquote>
+<p>その他、シミュレータなどでいろいろ検証したりもあるようですが、僕はまだその段階にありません。</p>
+</blockquote>
+<p>と、書いたのですが、</p>
+<p>**「普通はシミュレータの方が先だよ」**との意見を戴きました。</p>
+<p>また、DE0を使って実験をしていると、なんだかよくわからない挙動をするときがあるんですね。そういう時に中をひょいと覗けないのは、思いのほか辛いものです。</p>
+<p>さらに、DE0を持ち歩いているわけではないので、ちょっと試したいときにはシミュレーターが使えれば、ある程度の実験は出来るでしょう。</p>
+<p>そんなわけで、使ってみました。シミュレーター。</p>
+<p>使用したのは、「<strong>ModelSim ALTERA STARTER EDITION 10.1b</strong>」です。Quatus IIとは別にインストールする必要がありますが、無償で配布されているのでダウンロードしてくるだけです。</p>
+<h2 id="quartus-ii">Quartus II</h2>
+<p>シミュレーターを使う前にまず、Quartus IIでVerilog HDLの簡単なモジュールを書いて、実際にDE0で動かしてみます。</p>
+<div>
+  <pre>module ToggleLed(btn, led);
+<p>input btn;
+output led;
+reg state = 1&rsquo;b0;</p>
+<p>assign led = state;</p>
+<p>always @(negedge btn) begin
+state = !state;
+end</p>
+<p>endmodule</pre></p>
+</div>
+<p>ピンアサインは、</p>
+<table>
+  <tr>
+    <td>
+      btn:
+    </td>
+<pre><code>&lt;td&gt;
+  F1 (BUTTON2)
+&lt;/td&gt;
+</code></pre>
+  </tr>
+  <tr>
+    <td>
+      led:
+    </td>
+<pre><code>&lt;td&gt;
+  J1 (LED0)
+&lt;/td&gt;
+</code></pre>
+  </tr>
+</table>
+<p>これをDE0に書き込むと、タクトスイッチ(BUTTON2)を1回押すと、LED0が点灯、もう一度押すと消灯します。<strong>今回、チャタリング防止は組み込んでいません。</strong></p>
+<div>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/01/Photo-22-01-13-08-20-47-0.jpg"><img class="aligncenter  wp-image-159" alt="Photo-22-01-13-08-20-47-0" src="https://blog.keiji.dev/wp-content/uploads/2013/01/Photo-22-01-13-08-20-47-0.jpg" width="576" height="432" /></a>
+</div>
+<h2 id="modelsim">ModelSim</h2>
+<p>実機での確認が終わったら、いよいよModelSimを起動して、新しいテスト・プロジェクトを作成します。</p>
+<div>
+  Quartus IIで記述したVerilog HDLファイルをインポートします。<br /> （インポートしたファイルの編集は、ModelSimでも出来ます。）
+</div>
+<div>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/01/Parallels-Picture.jpg"><img class="aligncenter  wp-image-160" alt="Parallels Picture" src="https://blog.keiji.dev/wp-content/uploads/2013/01/Parallels-Picture.jpg" width="576" height="360" /></a>
+</div>
+<div>
+</div>
+<div>
+</div>
+<h3 id="テストベンチの記述">テスト・ベンチの記述</h3>
+<p>テスト・ベンチは、<span>ToggleLedモジュールを記述したファイルにそのまま</span>記述できます。どのモジュールをテストするのかをあとから指定するので、名前は関係ないようです。</p>
+<div>
+  <pre>module ToggleLedTest();
+<p>reg btn = 1&rsquo;b0;
+wire led;</p>
+<p>reg [3:0] i;</p>
+<p>ToggleLed toggleLed(btn, led);</p>
+<p>initial begin
+$monitor(&ldquo;button:%b, led:%b&rdquo;, btn, led);
+for(i=0; i &lt; 15; i=i+1) begin
+#1
+btn = !btn;
+end
+end
+endmodule</pre></p>
+</div>
+<h3 id="シミュレーションの実行">シミュレーションの実行</h3>
+<p>テスト・ベンチを追記したVerilog HDLをコンパイルして、”Start Simulation”を実行すると、どのモジュールをテストするのか指定する画面になるので、ここでテスト・ベンチのモジュール名（ToggleLedTest）を選択します。</p>
+<p>最後に、”Run” -&gt; “Run -all”を実行すれば、シミュレーターは、テストベンチを実行して、monitorで指定している内容をコンソール(transcript)に出力します。</p>
+<div>
+  <span># button:0, led:1</span><br /> <span># button:1, led:1</span><br /> <span># button:0, led:0</span><br /> <span># button:1, led:0</span><br /> <span># button:0, led:1</span><br /> <span># button:1, led:1</span><br /> <span># button:0, led:0</span><br /> <span># button:1, led:0</span><br /> <span># button:0, led:1</span><br /> <span># button:1, led:1</span><br /> <span># button:0, led:0</span><br /> <span># button:1, led:0</span><br /> <span># button:0, led:1</span><br /> <span># button:1, led:1</span><br /> <span># button:0, led:0</span><br /> <span># button:1, led:0</span>
+</div>
+<p> </p>
+<p><strong>しかし、これは期待している結果ではありません。</strong></p>
+<p>この結果では、テストを開始した最初の時点で、ledが1(HIGH)になっています。ボタンを最初に押すまでは0であることを想定しています（実際、DE0の動作もそうなっています）。</p>
+<p>よくよく見てみると、テスト・ベンチに記述している<strong>btnの初期値が1’b0</strong>になっています（<strong>DE0のタクトスイッチは押していない状態が1で、押した状態が0</strong>）。</p>
+<p>btnの初期値を1’b1に修正して、再度シミュレーションを実行すると、</p>
+<div>
+  <span># button:1, led:0</span><br /> <span># button:0, led:1</span><br /> <span># button:1, led:1</span><br /> <span># button:0, led:0</span><br /> <span># button:1, led:0</span><br /> <span># button:0, led:1</span><br /> <span># button:1, led:1</span><br /> <span># button:0, led:0</span><br /> <span># button:1, led:0</span><br /> <span># button:0, led:1</span><br /> <span># button:1, led:1</span><br /> <span># button:0, led:0</span><br /> <span># button:1, led:0</span><br /> <span># button:0, led:1</span><br /> <span># button:1, led:1</span><br /> <span># button:0, led:0</span>
+</div>
+<p> </p>
+<p>期待したとおりの動作となりました。</p>
+<h3 id="波形の観察">波形の観察</h3>
+<p>あらかじめ指定した各レジスタや入出力の波形を表示する機能もあります。</p>
+<p>これで、挙動がおかしいときにも、内部の状態を視覚的に確認することが出来そうです。</p>
+<div>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/01/Screen-Shot-2013-01-23-at-1.12.31-AM.png"><img class="aligncenter  wp-image-161" alt="Screen Shot 2013-01-23 at 1.12.31 AM" src="https://blog.keiji.dev/wp-content/uploads/2013/01/Screen-Shot-2013-01-23-at-1.12.31-AM.png" width="545" height="231" /></a>
+</div></div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://blog.keiji.io/categories/de0/">DE0</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/fpga/">FPGA</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2/">メモ</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+        
+          <a href="https://blog.keiji.io/2020/08/mangaview.html" class="list-group-item">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html" class="list-group-item">ELEGOO MARSの出力精度の改善</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/04/techbookfest6.html" class="list-group-item">技術書典6でMLOps本「巡りあえないConcourse」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html" class="list-group-item">Gehirn RS2 Plusに引っ越しした</a>
+        
+      
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html" class="list-group-item">いまNN API（TensorFlow Lite）は使えるのか</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/look_back_techbookfest4.html" class="list-group-item">技術書典4に参加してきました</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-2.html" class="list-group-item">技術書典4で「本当はおそろしい商業出版！？」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-1.html" class="list-group-item">技術書典4でML Ops（TensorFlow）の本を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/01/meganeco_playground.html" class="list-group-item">機械学習のモデルを試せるサイトを作った話</a>
+        
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98" class="list-group-item">雑記</a>
+      
+      <a href="https://blog.keiji.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="list-group-item">イベント</a>
+      
+      <a href="https://blog.keiji.io/categories/tensorflow" class="list-group-item">tensorflow</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2" class="list-group-item">メモ</a>
+      
+      <a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C" class="list-group-item">習作</a>
+      
+      <a href="https://blog.keiji.io/categories/aosp" class="list-group-item">aosp</a>
+      
+      <a href="https://blog.keiji.io/categories/adk" class="list-group-item">adk</a>
+      
+      <a href="https://blog.keiji.io/categories/de0" class="list-group-item">de0</a>
+      
+      <a href="https://blog.keiji.io/categories/fpga" class="list-group-item">fpga</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>Keiji ARIYAMA All rights reserved.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p>Original <a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> theme is designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ZwBLIZTRHGg%3d&fadein=500" charset="utf-8"></script>
+  </body>
+</html>

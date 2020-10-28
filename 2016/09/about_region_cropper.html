@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+
+<meta name="google-site-verification" content="jLy-Sg3FFmjHr0ri0Rlq0Dd7CNY-Qx-eGpL5wk7gGYs" />
+<link rel="canonical" href="https://blog.keiji.io/2016/09/about_region_cropper.html">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>矩形切り出しツール「Region Cropper」を公開しました - めがねをかけるんだ</title>
+    
+<meta name="description" content="&lt;p&gt;時間を見つけてはTensorFlow関係のあれこれをちまちま続けています。&lt;/p&gt;&lt;p&gt;先日は「&lt;a href=&#34;https://www.pasonatech.co.jp/skill_up/event/naniwa_tech.jsp&#34;&gt;なにわTECH道&lt;/a&gt;」で、TensorFlowを使ったイラスト顔検出について発表しました。&lt;/p&gt;&lt;h2 id=&#34;データセットの作成&#34;&gt;データセットの作成&lt;/h2&gt;&lt;p&gt;これまで、機械学習に使う画像（データセット）の作成にはMacの「プレビュー」を使っていました。&lt;/p&gt;&lt;p&gt;１枚ずつ画像を読み込んでクロッピング（トリミング）していたのですが、１枚の画像に複数の顔があるときや、あとで領域を微調整（特に領域を拡大）したいときが面倒でした。&lt;/p&gt;&lt;p&gt;良さそうなツールがないか、少しばかり探してみたのですが、僕の思い描くような操作性のものがありませんでした。&lt;/p&gt;&lt;p&gt;なければ作れば良い。&lt;/p&gt;&lt;p&gt;そんなわけで、自分で画像の切り出しツールツール「Region Cropper」を開発しました。&lt;/p&gt;&lt;p&gt;１人で使うのももったいないので、GitHubで公開します。&lt;/p&gt;&lt;h2 id=&#34;region-cropper&#34;&gt;Region Cropper&lt;/h2&gt;&lt;p&gt;GitHub: &lt;a href=&#34;https://github.com/keiji/region_cropper&#34;&gt;https://github.com/keiji/region_cropper&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2016/09/set_region.png&#34; alt=&#34;set_region&#34; width=&#34;2048&#34; height=&#34;1580&#34; class=&#34;aligncenter size-full wp-image-1383&#34; /&gt;&lt;/p&gt;&lt;p&gt;GUIのフレームワークに、使い慣れたSwingではなくJava FXを使いました。&lt;/p&gt;&lt;p&gt;そのため、Java 8のUpdate40以降でしかきちんと動きません。&lt;/p&gt;&lt;p&gt;以下、Region CropperのREADME.mdから。&lt;/p&gt;">
+
+<meta property="og:title" content="矩形切り出しツール「Region Cropper」を公開しました - めがねをかけるんだ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.keiji.io/2016/09/about_region_cropper.html">
+<meta property="og:image" content="https://blog.keiji.io/images/default.png">
+<meta property="og:site_name" content="めがねをかけるんだ">
+<meta property="og:description" content="&lt;p&gt;時間を見つけてはTensorFlow関係のあれこれをちまちま続けています。&lt;/p&gt;&lt;p&gt;先日は「&lt;a href=&#34;https://www.pasonatech.co.jp/skill_up/event/naniwa_tech.jsp&#34;&gt;なにわTECH道&lt;/a&gt;」で、TensorFlowを使ったイラスト顔検出について発表しました。&lt;/p&gt;&lt;h2 id=&#34;データセットの作成&#34;&gt;データセットの作成&lt;/h2&gt;&lt;p&gt;これまで、機械学習に使う画像（データセット）の作成にはMacの「プレビュー」を使っていました。&lt;/p&gt;&lt;p&gt;１枚ずつ画像を読み込んでクロッピング（トリミング）していたのですが、１枚の画像に複数の顔があるときや、あとで領域を微調整（特に領域を拡大）したいときが面倒でした。&lt;/p&gt;&lt;p&gt;良さそうなツールがないか、少しばかり探してみたのですが、僕の思い描くような操作性のものがありませんでした。&lt;/p&gt;&lt;p&gt;なければ作れば良い。&lt;/p&gt;&lt;p&gt;そんなわけで、自分で画像の切り出しツールツール「Region Cropper」を開発しました。&lt;/p&gt;&lt;p&gt;１人で使うのももったいないので、GitHubで公開します。&lt;/p&gt;&lt;h2 id=&#34;region-cropper&#34;&gt;Region Cropper&lt;/h2&gt;&lt;p&gt;GitHub: &lt;a href=&#34;https://github.com/keiji/region_cropper&#34;&gt;https://github.com/keiji/region_cropper&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2016/09/set_region.png&#34; alt=&#34;set_region&#34; width=&#34;2048&#34; height=&#34;1580&#34; class=&#34;aligncenter size-full wp-image-1383&#34; /&gt;&lt;/p&gt;&lt;p&gt;GUIのフレームワークに、使い慣れたSwingではなくJava FXを使いました。&lt;/p&gt;&lt;p&gt;そのため、Java 8のUpdate40以降でしかきちんと動きません。&lt;/p&gt;&lt;p&gt;以下、Region CropperのREADME.mdから。&lt;/p&gt;">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="めがねをかけるんだ">
+<meta name="twitter:url" content="https://blog.keiji.io/2016/09/about_region_cropper.html">
+<meta name="twitter:title" content="矩形切り出しツール「Region Cropper」を公開しました - めがねをかけるんだ">
+<meta name="twitter:description" content="&lt;p&gt;時間を見つけてはTensorFlow関係のあれこれをちまちま続けています。&lt;/p&gt;&lt;p&gt;先日は「&lt;a href=&#34;https://www.pasonatech.co.jp/skill_up/event/naniwa_tech.jsp&#34;&gt;なにわTECH道&lt;/a&gt;」で、TensorFlowを使ったイラスト顔検出について発表しました。&lt;/p&gt;&lt;h2 id=&#34;データセットの作成&#34;&gt;データセットの作成&lt;/h2&gt;&lt;p&gt;これまで、機械学習に使う画像（データセット）の作成にはMacの「プレビュー」を使っていました。&lt;/p&gt;&lt;p&gt;１枚ずつ画像を読み込んでクロッピング（トリミング）していたのですが、１枚の画像に複数の顔があるときや、あとで領域を微調整（特に領域を拡大）したいときが面倒でした。&lt;/p&gt;&lt;p&gt;良さそうなツールがないか、少しばかり探してみたのですが、僕の思い描くような操作性のものがありませんでした。&lt;/p&gt;&lt;p&gt;なければ作れば良い。&lt;/p&gt;&lt;p&gt;そんなわけで、自分で画像の切り出しツールツール「Region Cropper」を開発しました。&lt;/p&gt;&lt;p&gt;１人で使うのももったいないので、GitHubで公開します。&lt;/p&gt;&lt;h2 id=&#34;region-cropper&#34;&gt;Region Cropper&lt;/h2&gt;&lt;p&gt;GitHub: &lt;a href=&#34;https://github.com/keiji/region_cropper&#34;&gt;https://github.com/keiji/region_cropper&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2016/09/set_region.png&#34; alt=&#34;set_region&#34; width=&#34;2048&#34; height=&#34;1580&#34; class=&#34;aligncenter size-full wp-image-1383&#34; /&gt;&lt;/p&gt;&lt;p&gt;GUIのフレームワークに、使い慣れたSwingではなくJava FXを使いました。&lt;/p&gt;&lt;p&gt;そのため、Java 8のUpdate40以降でしかきちんと動きません。&lt;/p&gt;&lt;p&gt;以下、Region CropperのREADME.mdから。&lt;/p&gt;">
+<meta name="twitter:image" content="https://blog.keiji.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.keiji.io\/"
+    },
+    "headline": "矩形切り出しツール「Region Cropper」を公開しました - めがねをかけるんだ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.keiji.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2016-09-15T07:17:36JST",
+    "dateModified": "2016-09-15T07:17:36JST",
+    "author": {
+      "@type": "Person",
+      "name": "めがねをかけるんだ"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "めがねをかけるんだ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.keiji.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "\u003cp\u003e時間を見つけてはTensorFlow関係のあれこれをちまちま続けています。\u003c\/p\u003e\n\u003cp\u003e先日は「\u003ca href=\u0022https:\/\/www.pasonatech.co.jp\/skill_up\/event\/naniwa_tech.jsp\u0022\u003eなにわTECH道\u003c\/a\u003e」で、TensorFlowを使ったイラスト顔検出について発表しました。\u003c\/p\u003e\n\u003ch2 id=\u0022データセットの作成\u0022\u003eデータセットの作成\u003c\/h2\u003e\n\u003cp\u003eこれまで、機械学習に使う画像（データセット）の作成にはMacの「プレビュー」を使っていました。\u003c\/p\u003e\n\u003cp\u003e１枚ずつ画像を読み込んでクロッピング（トリミング）していたのですが、１枚の画像に複数の顔があるときや、あとで領域を微調整（特に領域を拡大）したいときが面倒でした。\u003c\/p\u003e\n\u003cp\u003e良さそうなツールがないか、少しばかり探してみたのですが、僕の思い描くような操作性のものがありませんでした。\u003c\/p\u003e\n\u003cp\u003eなければ作れば良い。\u003c\/p\u003e\n\u003cp\u003eそんなわけで、自分で画像の切り出しツールツール「Region Cropper」を開発しました。\u003c\/p\u003e\n\u003cp\u003e１人で使うのももったいないので、GitHubで公開します。\u003c\/p\u003e\n\u003ch2 id=\u0022region-cropper\u0022\u003eRegion Cropper\u003c\/h2\u003e\n\u003cp\u003eGitHub: \u003ca href=\u0022https:\/\/github.com\/keiji\/region_cropper\u0022\u003ehttps:\/\/github.com\/keiji\/region_cropper\u003c\/a\u003e\u003c\/p\u003e\n\u003cp\u003e\u003cimg src=\u0022https:\/\/blog.keiji.dev\/wp-content\/uploads\/2016\/09\/set_region.png\u0022 alt=\u0022set_region\u0022 width=\u00222048\u0022 height=\u00221580\u0022 class=\u0022aligncenter size-full wp-image-1383\u0022 \/\u003e\u003c\/p\u003e\n\u003cp\u003eGUIのフレームワークに、使い慣れたSwingではなくJava FXを使いました。\u003c\/p\u003e\n\u003cp\u003eそのため、Java 8のUpdate40以降でしかきちんと動きません。\u003c\/p\u003e\n\u003cp\u003e以下、Region CropperのREADME.mdから。\u003c\/p\u003e"
+  }
+</script>
+
+
+    <link href="https://blog.keiji.io/css/styles.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/default.css">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/typesquare.css">
+    
+
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-62351683-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://blog.keiji.io/">めがねをかけるんだ</a>
+          </div>
+
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="https://blog.keiji.io/profile/">Profile</a></li>
+              
+              
+            </ul>
+            
+          </div>
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://blog.keiji.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.keiji.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">矩形切り出しツール「Region Cropper」を公開しました</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2016-09-15T07:17:36JST">2016-09-15</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.keiji.io/post/">post</a></li>
+      
+    </ul>
+
+    <h1 class="title">矩形切り出しツール「Region Cropper」を公開しました</h1>
+  </header>
+
+  
+
+  <div class="article-body"><p>時間を見つけてはTensorFlow関係のあれこれをちまちま続けています。</p>
+<p>先日は「<a href="https://www.pasonatech.co.jp/skill_up/event/naniwa_tech.jsp">なにわTECH道</a>」で、TensorFlowを使ったイラスト顔検出について発表しました。</p>
+<h2 id="データセットの作成">データセットの作成</h2>
+<p>これまで、機械学習に使う画像（データセット）の作成にはMacの「プレビュー」を使っていました。</p>
+<p>１枚ずつ画像を読み込んでクロッピング（トリミング）していたのですが、１枚の画像に複数の顔があるときや、あとで領域を微調整（特に領域を拡大）したいときが面倒でした。</p>
+<p>良さそうなツールがないか、少しばかり探してみたのですが、僕の思い描くような操作性のものがありませんでした。</p>
+<p>なければ作れば良い。</p>
+<p>そんなわけで、自分で画像の切り出しツールツール「Region Cropper」を開発しました。</p>
+<p>１人で使うのももったいないので、GitHubで公開します。</p>
+<h2 id="region-cropper">Region Cropper</h2>
+<p>GitHub: <a href="https://github.com/keiji/region_cropper">https://github.com/keiji/region_cropper</a></p>
+<p><img src="https://blog.keiji.dev/wp-content/uploads/2016/09/set_region.png" alt="set_region" width="2048" height="1580" class="aligncenter size-full wp-image-1383" /></p>
+<p>GUIのフレームワークに、使い慣れたSwingではなくJava FXを使いました。</p>
+<p>そのため、Java 8のUpdate40以降でしかきちんと動きません。</p>
+<p>以下、Region CropperのREADME.mdから。</p>
+<hr>
+<h1 id="region-cropper-1">Region Cropper</h1>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Java &gt; 1.8.0_40</li>
+</ul>
+<h2 id="download">Download</h2>
+<p>Binary(Zip): <a href="https://github.com/keiji/region_cropper">https://github.com/keiji/region_cropper</a></p>
+<h2 id="使い方usage">使い方（Usage）</h2>
+<pre><code>$ java -jar region_cropper_main.jar
+</code></pre>
+<h3 id="処理するディレクトリの選択select-directory">処理するディレクトリの選択（Select Directory）</h3>
+<p><img src="https://blog.keiji.dev/wp-content/uploads/2016/09/select_directory.png" alt="select_directory" width="1424" height="896" class="aligncenter size-full wp-image-1382" /></p>
+<h3 id="領域の追加add">領域の追加（Add)</h3>
+<p>ドラッグ&amp;ドロップで領域を設定します。</p>
+<h3 id="領域の選択select">領域の選択（Select)</h3>
+<p>現在選択中の領域は赤枠で示されます。</p>
+<p><img src="https://blog.keiji.dev/wp-content/uploads/2016/09/set_region.png" alt="set_region" width="2048" height="1580" class="aligncenter size-full wp-image-1383" /></p>
+<p>スペース（Space）キーを押すと、選択中の領域以外の場所がグレーアウトされます。</p>
+<p><img src="https://blog.keiji.dev/wp-content/uploads/2016/09/focus_region.png" alt="focus_region" width="2048" height="1580" class="aligncenter size-full wp-image-1384" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">キー</th>
+<th style="text-align:left">動作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Enter</td>
+<td style="text-align:left">次の領域へ移動。最後の領域であれば次のファイルを表示</td>
+</tr>
+<tr>
+<td style="text-align:left">Shift + Enter</td>
+<td style="text-align:left">前の領域へ移動。最初の領域であれば前のファイルを表示</td>
+</tr>
+<tr>
+<td style="text-align:left">Tab</td>
+<td style="text-align:left">次の領域へ移動</td>
+</tr>
+<tr>
+<td style="text-align:left">Shift + Tab</td>
+<td style="text-align:left">前の領域へ移動</td>
+</tr>
+<tr>
+<td style="text-align:left">End</td>
+<td style="text-align:left">次のファイルを表示</td>
+</tr>
+<tr>
+<td style="text-align:left">Home</td>
+<td style="text-align:left">前のファイルを表示</td>
+</tr>
+</tbody>
+</table>
+<h3 id="領域の編集edit">領域の編集（Edit）</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">キー</th>
+<th style="text-align:left">動作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">方向(←↑→↓)</td>
+<td style="text-align:left">領域を移動</td>
+</tr>
+<tr>
+<td style="text-align:left">Alt または Option + 方向(←↑→↓)</td>
+<td style="text-align:left">領域を「拡大（Expand）」</td>
+</tr>
+<tr>
+<td style="text-align:left">Windows または Command + 方向(←↑→↓)</td>
+<td style="text-align:left">領域を「縮小（Shrink）」</td>
+</tr>
+<tr>
+<td style="text-align:left">削除（Delete）</td>
+<td style="text-align:left">領域を「削除（Delete）」</td>
+</tr>
+</tbody>
+</table>
+<p>Shift を押すと、変化量が小さくなり微調整できます。</p>
+<h3 id="ラベルの設定label">ラベルの設定（Label）</h3>
+<p>数字キーの「0〜9」を押すと、選択した領域にラベルを設定します。</p>
+<p>追加した領域のラベルは、標準で 1 が設定されています。</p>
+<p><img src="https://blog.keiji.dev/wp-content/uploads/2016/09/set_label.png" alt="set_label" width="2048" height="1580" class="aligncenter size-full wp-image-1387" /></p>
+<p>また、ラベル 0 は負例として特別な意味を持ちます。</p>
+<p>負例に設定した領域は、編集や削除ができません。</p>
+<h3 id="領域の切り出しcrop">領域の切り出し（Crop）</h3>
+<p>領域の切り出しには「Quick crop」と「Crop to…」の２つの方法があります。</p>
+<p><img src="https://blog.keiji.dev/wp-content/uploads/2016/09/menu_crop.png" alt="menu_crop" width="639" height="327" class="aligncenter size-full wp-image-1386" /></p>
+<p>「Quick crop」を選択すると、設定している領域を、処理中の画像と同じディレクトリに切り出します。</p>
+<p>出力先のディレクトリを設定したい場合は「Crop to…」を選択します。</p>
+<pre><code>[出力先のディレクトリ]/label-[ラベル]/[画像名]-[領域番号].png
+</code></pre></div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://blog.keiji.io/categories/tensorflow/">TensorFlow</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C/">習作</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98/">雑記</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+        
+          <a href="https://blog.keiji.io/2020/08/mangaview.html" class="list-group-item">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html" class="list-group-item">ELEGOO MARSの出力精度の改善</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/04/techbookfest6.html" class="list-group-item">技術書典6でMLOps本「巡りあえないConcourse」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html" class="list-group-item">Gehirn RS2 Plusに引っ越しした</a>
+        
+      
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html" class="list-group-item">いまNN API（TensorFlow Lite）は使えるのか</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/look_back_techbookfest4.html" class="list-group-item">技術書典4に参加してきました</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-2.html" class="list-group-item">技術書典4で「本当はおそろしい商業出版！？」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-1.html" class="list-group-item">技術書典4でML Ops（TensorFlow）の本を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/01/meganeco_playground.html" class="list-group-item">機械学習のモデルを試せるサイトを作った話</a>
+        
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98" class="list-group-item">雑記</a>
+      
+      <a href="https://blog.keiji.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="list-group-item">イベント</a>
+      
+      <a href="https://blog.keiji.io/categories/tensorflow" class="list-group-item">tensorflow</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2" class="list-group-item">メモ</a>
+      
+      <a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C" class="list-group-item">習作</a>
+      
+      <a href="https://blog.keiji.io/categories/aosp" class="list-group-item">aosp</a>
+      
+      <a href="https://blog.keiji.io/categories/adk" class="list-group-item">adk</a>
+      
+      <a href="https://blog.keiji.io/categories/de0" class="list-group-item">de0</a>
+      
+      <a href="https://blog.keiji.io/categories/fpga" class="list-group-item">fpga</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>Keiji ARIYAMA All rights reserved.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p>Original <a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> theme is designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ZwBLIZTRHGg%3d&fadein=500" charset="utf-8"></script>
+  </body>
+</html>

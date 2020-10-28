@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+
+<meta name="google-site-verification" content="jLy-Sg3FFmjHr0ri0Rlq0Dd7CNY-Qx-eGpL5wk7gGYs" />
+<link rel="canonical" href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>ELEGOO MARSの出力精度の改善 - めがねをかけるんだ</title>
+    
+<meta name="description" content="&lt;p&gt;　あけましておめでとうございます。御社の原稿、いまがんばって書いてます！&lt;/p&gt;&lt;p&gt;　さて、昨年末のことになりますが、光造形３Dプリンター「ELEGOO MARS」を購入しました。&lt;/p&gt;&lt;p&gt;&lt;img src=&#34;/images/mars/mars_z-axis-12.jpg&#34; alt=&#34;ELEGOO MARS&#34;&gt;&lt;/p&gt;&lt;p&gt;　ぼくは物作りの仕事をしているわけではないのですが、前々から3Dプリンターには憧れていて、ちょっと壊れた部品を自分でモデリングして出力できたら格好いいだろうなとか考えていました（Daddy Cool!）。&lt;/p&gt;&lt;p&gt;「ELEGOO MARS」は、ぼくの手に入れたはじめての3Dプリンタです。&lt;/p&gt;&lt;p&gt;「ELEGOO MARS」を買ってからは&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1201721035004841985&#34;&gt;サンプルデータの出力に失敗したり&lt;/a&gt;、&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1201722040887234560&#34;&gt;出力に失敗してFEPフィルムを傷めてしまったり&lt;/a&gt;、&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1202101585280548864&#34;&gt;サンプルデータの出力に成功したり&lt;/a&gt;、&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1208651347089690624&#34;&gt;FUSION 360でモデリングした漏斗をひたすら出力したり&lt;/a&gt;していたのですが、いくつか出力していくうちに、出力されるものの高さが、設計よりも低くなるとこに&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1206886901094875142&#34;&gt;気づきました&lt;/a&gt;。&lt;/p&gt;&lt;p&gt;　出力した造形物を観察すると、だいたいボトムレイヤー（ベースに張り付けるために露光時間を長くする強固なレイヤー）より上の数層が広がったり潰れたりして、高さが失われているようです。&lt;/p&gt;&lt;p&gt;&lt;img src=&#34;/images/mars/mars_z-axis-8.jpg&#34; alt=&#34;ELEGOO MARS&#34;&gt;&lt;/p&gt;&lt;p&gt;　一番お手軽な解決策はスライサーで出力物を持ち上げてサポートを付けることで潰れる部分に出力物が重ならないようにすることでしょう。実際、Twitterでもクリエイト工房（&lt;a href=&#34;https://twitter.com/create_works&#34;&gt;@create_works&lt;/a&gt;）さんから同様の&lt;a href=&#34;https://twitter.com/create_works/status/1207265472833474560&#34;&gt;アドバイス&lt;/a&gt;をもらいました。&lt;/p&gt;&lt;p&gt;　そうは言っても、3Dプリンターをこれと言った目的もなく買ってしまった僕です。手段を目的にするのは当然の流れです。解決のためにいろいろやって、ようやくある程度の精度を出せるようになったので、同じ現象で悩んでいる人のためにブログに知見をまとめておきます。&lt;/p&gt;">
+
+<meta property="og:title" content="ELEGOO MARSの出力精度の改善 - めがねをかけるんだ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.keiji.io/2020/01/elegoo-mars_presision.html">
+<meta property="og:image" content="https://blog.keiji.io/images/default.png">
+<meta property="og:site_name" content="めがねをかけるんだ">
+<meta property="og:description" content="&lt;p&gt;　あけましておめでとうございます。御社の原稿、いまがんばって書いてます！&lt;/p&gt;&lt;p&gt;　さて、昨年末のことになりますが、光造形３Dプリンター「ELEGOO MARS」を購入しました。&lt;/p&gt;&lt;p&gt;&lt;img src=&#34;/images/mars/mars_z-axis-12.jpg&#34; alt=&#34;ELEGOO MARS&#34;&gt;&lt;/p&gt;&lt;p&gt;　ぼくは物作りの仕事をしているわけではないのですが、前々から3Dプリンターには憧れていて、ちょっと壊れた部品を自分でモデリングして出力できたら格好いいだろうなとか考えていました（Daddy Cool!）。&lt;/p&gt;&lt;p&gt;「ELEGOO MARS」は、ぼくの手に入れたはじめての3Dプリンタです。&lt;/p&gt;&lt;p&gt;「ELEGOO MARS」を買ってからは&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1201721035004841985&#34;&gt;サンプルデータの出力に失敗したり&lt;/a&gt;、&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1201722040887234560&#34;&gt;出力に失敗してFEPフィルムを傷めてしまったり&lt;/a&gt;、&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1202101585280548864&#34;&gt;サンプルデータの出力に成功したり&lt;/a&gt;、&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1208651347089690624&#34;&gt;FUSION 360でモデリングした漏斗をひたすら出力したり&lt;/a&gt;していたのですが、いくつか出力していくうちに、出力されるものの高さが、設計よりも低くなるとこに&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1206886901094875142&#34;&gt;気づきました&lt;/a&gt;。&lt;/p&gt;&lt;p&gt;　出力した造形物を観察すると、だいたいボトムレイヤー（ベースに張り付けるために露光時間を長くする強固なレイヤー）より上の数層が広がったり潰れたりして、高さが失われているようです。&lt;/p&gt;&lt;p&gt;&lt;img src=&#34;/images/mars/mars_z-axis-8.jpg&#34; alt=&#34;ELEGOO MARS&#34;&gt;&lt;/p&gt;&lt;p&gt;　一番お手軽な解決策はスライサーで出力物を持ち上げてサポートを付けることで潰れる部分に出力物が重ならないようにすることでしょう。実際、Twitterでもクリエイト工房（&lt;a href=&#34;https://twitter.com/create_works&#34;&gt;@create_works&lt;/a&gt;）さんから同様の&lt;a href=&#34;https://twitter.com/create_works/status/1207265472833474560&#34;&gt;アドバイス&lt;/a&gt;をもらいました。&lt;/p&gt;&lt;p&gt;　そうは言っても、3Dプリンターをこれと言った目的もなく買ってしまった僕です。手段を目的にするのは当然の流れです。解決のためにいろいろやって、ようやくある程度の精度を出せるようになったので、同じ現象で悩んでいる人のためにブログに知見をまとめておきます。&lt;/p&gt;">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="めがねをかけるんだ">
+<meta name="twitter:url" content="https://blog.keiji.io/2020/01/elegoo-mars_presision.html">
+<meta name="twitter:title" content="ELEGOO MARSの出力精度の改善 - めがねをかけるんだ">
+<meta name="twitter:description" content="&lt;p&gt;　あけましておめでとうございます。御社の原稿、いまがんばって書いてます！&lt;/p&gt;&lt;p&gt;　さて、昨年末のことになりますが、光造形３Dプリンター「ELEGOO MARS」を購入しました。&lt;/p&gt;&lt;p&gt;&lt;img src=&#34;/images/mars/mars_z-axis-12.jpg&#34; alt=&#34;ELEGOO MARS&#34;&gt;&lt;/p&gt;&lt;p&gt;　ぼくは物作りの仕事をしているわけではないのですが、前々から3Dプリンターには憧れていて、ちょっと壊れた部品を自分でモデリングして出力できたら格好いいだろうなとか考えていました（Daddy Cool!）。&lt;/p&gt;&lt;p&gt;「ELEGOO MARS」は、ぼくの手に入れたはじめての3Dプリンタです。&lt;/p&gt;&lt;p&gt;「ELEGOO MARS」を買ってからは&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1201721035004841985&#34;&gt;サンプルデータの出力に失敗したり&lt;/a&gt;、&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1201722040887234560&#34;&gt;出力に失敗してFEPフィルムを傷めてしまったり&lt;/a&gt;、&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1202101585280548864&#34;&gt;サンプルデータの出力に成功したり&lt;/a&gt;、&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1208651347089690624&#34;&gt;FUSION 360でモデリングした漏斗をひたすら出力したり&lt;/a&gt;していたのですが、いくつか出力していくうちに、出力されるものの高さが、設計よりも低くなるとこに&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1206886901094875142&#34;&gt;気づきました&lt;/a&gt;。&lt;/p&gt;&lt;p&gt;　出力した造形物を観察すると、だいたいボトムレイヤー（ベースに張り付けるために露光時間を長くする強固なレイヤー）より上の数層が広がったり潰れたりして、高さが失われているようです。&lt;/p&gt;&lt;p&gt;&lt;img src=&#34;/images/mars/mars_z-axis-8.jpg&#34; alt=&#34;ELEGOO MARS&#34;&gt;&lt;/p&gt;&lt;p&gt;　一番お手軽な解決策はスライサーで出力物を持ち上げてサポートを付けることで潰れる部分に出力物が重ならないようにすることでしょう。実際、Twitterでもクリエイト工房（&lt;a href=&#34;https://twitter.com/create_works&#34;&gt;@create_works&lt;/a&gt;）さんから同様の&lt;a href=&#34;https://twitter.com/create_works/status/1207265472833474560&#34;&gt;アドバイス&lt;/a&gt;をもらいました。&lt;/p&gt;&lt;p&gt;　そうは言っても、3Dプリンターをこれと言った目的もなく買ってしまった僕です。手段を目的にするのは当然の流れです。解決のためにいろいろやって、ようやくある程度の精度を出せるようになったので、同じ現象で悩んでいる人のためにブログに知見をまとめておきます。&lt;/p&gt;">
+<meta name="twitter:image" content="https://blog.keiji.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.keiji.io\/"
+    },
+    "headline": "ELEGOO MARSの出力精度の改善 - めがねをかけるんだ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.keiji.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2020-01-04T18:00:10JST",
+    "dateModified": "2020-01-04T18:00:10JST",
+    "author": {
+      "@type": "Person",
+      "name": "めがねをかけるんだ"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "めがねをかけるんだ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.keiji.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "\u003cp\u003e　あけましておめでとうございます。御社の原稿、いまがんばって書いてます！\u003c\/p\u003e\n\u003cp\u003e　さて、昨年末のことになりますが、光造形３Dプリンター「ELEGOO MARS」を購入しました。\u003c\/p\u003e\n\u003cp\u003e\u003cimg src=\u0022\/images\/mars\/mars_z-axis-12.jpg\u0022 alt=\u0022ELEGOO MARS\u0022\u003e\u003c\/p\u003e\n\u003cp\u003e　ぼくは物作りの仕事をしているわけではないのですが、前々から3Dプリンターには憧れていて、ちょっと壊れた部品を自分でモデリングして出力できたら格好いいだろうなとか考えていました（Daddy Cool!）。\u003c\/p\u003e\n\u003cp\u003e「ELEGOO MARS」は、ぼくの手に入れたはじめての3Dプリンタです。\u003c\/p\u003e\n\u003cp\u003e「ELEGOO MARS」を買ってからは\u003ca href=\u0022https:\/\/twitter.com\/keiji_ariyama\/status\/1201721035004841985\u0022\u003eサンプルデータの出力に失敗したり\u003c\/a\u003e、\u003ca href=\u0022https:\/\/twitter.com\/keiji_ariyama\/status\/1201722040887234560\u0022\u003e出力に失敗してFEPフィルムを傷めてしまったり\u003c\/a\u003e、\u003ca href=\u0022https:\/\/twitter.com\/keiji_ariyama\/status\/1202101585280548864\u0022\u003eサンプルデータの出力に成功したり\u003c\/a\u003e、\u003ca href=\u0022https:\/\/twitter.com\/keiji_ariyama\/status\/1208651347089690624\u0022\u003eFUSION 360でモデリングした漏斗をひたすら出力したり\u003c\/a\u003eしていたのですが、いくつか出力していくうちに、出力されるものの高さが、設計よりも低くなるとこに\u003ca href=\u0022https:\/\/twitter.com\/keiji_ariyama\/status\/1206886901094875142\u0022\u003e気づきました\u003c\/a\u003e。\u003c\/p\u003e\n\u003cp\u003e　出力した造形物を観察すると、だいたいボトムレイヤー（ベースに張り付けるために露光時間を長くする強固なレイヤー）より上の数層が広がったり潰れたりして、高さが失われているようです。\u003c\/p\u003e\n\u003cp\u003e\u003cimg src=\u0022\/images\/mars\/mars_z-axis-8.jpg\u0022 alt=\u0022ELEGOO MARS\u0022\u003e\u003c\/p\u003e\n\u003cp\u003e　一番お手軽な解決策はスライサーで出力物を持ち上げてサポートを付けることで潰れる部分に出力物が重ならないようにすることでしょう。\n実際、Twitterでもクリエイト工房（\u003ca href=\u0022https:\/\/twitter.com\/create_works\u0022\u003e@create_works\u003c\/a\u003e）さんから同様の\u003ca href=\u0022https:\/\/twitter.com\/create_works\/status\/1207265472833474560\u0022\u003eアドバイス\u003c\/a\u003eをもらいました。\u003c\/p\u003e\n\u003cp\u003e　そうは言っても、3Dプリンターをこれと言った目的もなく買ってしまった僕です。手段を目的にするのは当然の流れです。\n解決のためにいろいろやって、ようやくある程度の精度を出せるようになったので、同じ現象で悩んでいる人のためにブログに知見をまとめておきます。\u003c\/p\u003e"
+  }
+</script>
+
+
+    <link href="https://blog.keiji.io/css/styles.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/default.css">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/typesquare.css">
+    
+
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-62351683-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://blog.keiji.io/">めがねをかけるんだ</a>
+          </div>
+
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="https://blog.keiji.io/profile/">Profile</a></li>
+              
+              
+            </ul>
+            
+          </div>
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://blog.keiji.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.keiji.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">ELEGOO MARSの出力精度の改善</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2020-01-04T18:00:10JST">2020-01-04</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.keiji.io/post/">post</a></li>
+      
+    </ul>
+
+    <h1 class="title">ELEGOO MARSの出力精度の改善</h1>
+  </header>
+
+  
+
+  <div class="article-body"><p>　あけましておめでとうございます。御社の原稿、いまがんばって書いてます！</p>
+<p>　さて、昨年末のことになりますが、光造形３Dプリンター「ELEGOO MARS」を購入しました。</p>
+<p><img src="https://blog.keiji.io/images/mars/mars_z-axis-12.jpg" alt="ELEGOO MARS"></p>
+<p>　ぼくは物作りの仕事をしているわけではないのですが、前々から3Dプリンターには憧れていて、ちょっと壊れた部品を自分でモデリングして出力できたら格好いいだろうなとか考えていました（Daddy Cool!）。</p>
+<p>「ELEGOO MARS」は、ぼくの手に入れたはじめての3Dプリンタです。</p>
+<p>「ELEGOO MARS」を買ってからは<a href="https://twitter.com/keiji_ariyama/status/1201721035004841985">サンプルデータの出力に失敗したり</a>、<a href="https://twitter.com/keiji_ariyama/status/1201722040887234560">出力に失敗してFEPフィルムを傷めてしまったり</a>、<a href="https://twitter.com/keiji_ariyama/status/1202101585280548864">サンプルデータの出力に成功したり</a>、<a href="https://twitter.com/keiji_ariyama/status/1208651347089690624">FUSION 360でモデリングした漏斗をひたすら出力したり</a>していたのですが、いくつか出力していくうちに、出力されるものの高さが、設計よりも低くなるとこに<a href="https://twitter.com/keiji_ariyama/status/1206886901094875142">気づきました</a>。</p>
+<p>　出力した造形物を観察すると、だいたいボトムレイヤー（ベースに張り付けるために露光時間を長くする強固なレイヤー）より上の数層が広がったり潰れたりして、高さが失われているようです。</p>
+<p><img src="https://blog.keiji.io/images/mars/mars_z-axis-8.jpg" alt="ELEGOO MARS"></p>
+<p>　一番お手軽な解決策はスライサーで出力物を持ち上げてサポートを付けることで潰れる部分に出力物が重ならないようにすることでしょう。
+実際、Twitterでもクリエイト工房（<a href="https://twitter.com/create_works">@create_works</a>）さんから同様の<a href="https://twitter.com/create_works/status/1207265472833474560">アドバイス</a>をもらいました。</p>
+<p>　そうは言っても、3Dプリンターをこれと言った目的もなく買ってしまった僕です。手段を目的にするのは当然の流れです。
+解決のためにいろいろやって、ようやくある程度の精度を出せるようになったので、同じ現象で悩んでいる人のためにブログに知見をまとめておきます。</p>
+<h2 id="z-axis-backlash-problem">Z-axis backlash problem</h2>
+<p>　調べていくと、ELEGOO MARSには「Z-axis backlash problem」と呼ばれる問題があり（注1）、Z軸方向（高さ）の精度が低下する場合があることが分かりました。</p>
+<p>「Z-axis backlash  problem」は、Z軸方向にあるbacklash（遊び）が原因で、出力物のZ軸方向の精度が安定しない問題で、Jan Mrázek氏のブログに詳しく書かれています。</p>
+<ul>
+<li><a href="https://blog.honzamrazek.cz/2019/09/testing-the-precision-of-elegoo-mars-volume-5-whats-wrong-with-the-z-axis-and-how-to-fix-it-finally/">Testing the precision of Elegoo Mars – Volume 5: What’s wrong with the Z-axis and how to fix it? (finally)</a></li>
+</ul>
+<p>注1: 「Z-axis backlash problem」は、ELEGOO MARS以外の3Dプリンタにもあるようですが、筆者はELEGOO MARSしか所有していないため、このような書き方をしています。</p>
+<h2 id="解決のためにしたこと">解決のためにしたこと</h2>
+<p>　Mrázek氏のブログには3つの解決策が提示されています。本稿での解決策は最初の&quot;Dirty&amp;Cheap&quot;に最も近い方法です。
+ただし、ブログの内容をそのまま実行するのではなく、ELEGOO MARS改善用の部品（Samuraiburger作）がThingVerseで公開されているので出力して取り付けます。</p>
+<ul>
+<li><a href="https://www.thingiverse.com/thing:3970464">Elegoo Mars Fix for missing layers</a></li>
+</ul>
+<p>　アーカイブには3つの部品が含まれています。
+モーターハウジング内のスペーサー（mars_motor_spacer_8-19-1.1.stl）、モーターの取り付け用スペーサー（mars_motor_mount_3mm.stl）、そして出力テスト用のステップモデル（Steptest.stl）です。</p>
+<p><img src="https://blog.keiji.io/images/mars/thingverse.png" alt="ELEGOO MARS"></p>
+<h3 id="部品の精度に注意">部品の精度に注意</h3>
+<p>　部品は出力・二次硬化後、サイズを厳密に計測をしてください。
+特にモーターハウジング内のスペーサーはサイズがシビアです。
+外周19mm、内周8mm。厚さは最薄部で1.1mm、最厚部1.6mmになっているか確認して、もし誤差が大きければスライサーの倍率を調整します。</p>
+<p>　筆者の場合、精度問題を抱えるプリンターで部品を印刷せねばならず、この点で苦労しました。
+露光時間の長いベースレイヤーはどうしても少し広がるので、出力後、外周部をヤスリで削って調整しました。</p>
+<p><img src="https://blog.keiji.io/images/mars/mars_z-axis-13.jpg" alt="ELEGOO MARS"></p>
+<h2 id="モーターハウジングの分解とスペーサーの挿入そして保証はなくなる">モーターハウジングの分解とスペーサーの挿入（そして保証はなくなる）</h2>
+<p>　まずはじめにモーターを取り外します。
+ビルドベースをシャフトから抜き取り、小さな金具とバネも取り外しておきます（これを終えずに分解を始めてしまうと後でシャフトを手で回すことになって大変なので、事前の取り外しを忘れないようにしてください）。</p>
+<p>　次に、後ろ側のパネルを付属の六角ドライバーを使って開きます。
+おそらく、この行為でメーカーの製品保証は無効になりますので、覚悟を持って作業をします。</p>
+<p>　ケースからモーターを取り外します。モーターのコネクタを外して、ケース上部の2本のネジを取り外します。シャフトごとモーターを抜き取ります。</p>
+<p>　モーター下部にある4本のネジを外します。
+ハウジングの上部を外すと、Mrázek氏のブログで触れられていたベアリングと波ワッシャーが確認できます。</p>
+<p><img src="https://blog.keiji.io/images/mars/mars_z-axis-1.jpg" alt="ELEGOO MARS"></p>
+<p>　ここに出力したモーターハウジング内スペーサーを挿入します。上から「スペーサー・波ワッシャー・ベアリング」の順になるように取り付けます。スペーサーがたわんだり、浮いたりしていないか十分に確認してください。筆者の場合、スペーサーの精度や取り付けが甘いときに、今度はX/Y軸がぶれて出力物が安定しなくなることがありました。</p>
+<p>　取り付けが終わったら、ハウジングを組み立てます。</p>
+<h3 id="ネジを締め付ける強さ">ネジを締め付ける強さ</h3>
+<p>　ハウジングの下部4本のネジを力一杯締めないように注意してください。</p>
+<p>　波ワッシャーだけでテンションを与えていたところに1.1mm-1.6mmのスペーサーを入れたので、内部のテンションは高くなっています。
+遊びを無くすためにはきっちり締めた方が良いと思いがちですが、あまり締めすぎると内部のテンションが高くなりすぎて、今度はモーターの回転を阻害してしまいます。
+筆者の場合、1mmの高さを出したいところ0.8mmしかでなくなったりと別の問題か起きました。</p>
+<p>　Mrázek氏のブログには「tightened motor body screws carefully to slightly tension the ball bearings」と記載されているに留まり、どの程度の強さで締めればいいのか、当て推量でやるしかありません。</p>
+<p>　筆者の場合、たまたまトルクドライバーを持っていたので、締め付けトルクを「35cN・m」に設定して締め付けを行った結果、問題なく動作しています
+（ハウジングのカバーはきっちり閉まっているが、通常のドライバーを使うと「まだかなり回せる」ぐらいの締め付けです）。</p>
+<h2 id="サイレントブロックの取り外しスペーサーに入れ替え">サイレントブロックの取り外し（スペーサーに入れ替え）</h2>
+<p>　モーターハウジングの上部に取り付けられているサイレントブロックを取り外して、スペーサーに入れ替えます。
+サイレントブロックのようにモーターにネジ止めはせず、そのままケースに戻して、上からの2本のネジでスペーサーを挟む形でモーターを取り付けます。</p>
+<p>　ゴムを2枚の金属板で挟んだ形をしているサイレントブロックは、指で押してもまったく変形しません。
+これが「Z-axis backlash problem」の原因になっているとはにわかには信じがたいのですが、しかし実際、取り外して効果がありました。</p>
+<p><img src="https://blog.keiji.io/images/mars/mars_z-axis-5.jpg" alt="ELEGOO MARS"></p>
+<h2 id="改善後">改善後</h2>
+<p>　改善後の出力は、次のとおりです。</p>
+<p><img src="https://blog.keiji.io/images/mars/mars_z-axis-6.jpg" alt="ELEGOO MARS"></p>
+<p>　綺麗な階段が出力されています。下層が潰れているところはありません。
+今回の改善で「Z-axis backlash problem」は解消されたと言っても良いと思います。</p>
+<p>　一方で、精度が完璧かと言えばそうではありません。
+その証拠に、画像にある出力は、最初の段こそ1mmちょうどですが、最上段の大きさは9.75mm（本来なら10mm）と、依然として誤差は存在します。</p>
+<p>　これらの誤差については「Z-axis backlash problem」とは無関係で、おそらく他の原因によるものだと筆者は考えています。
+露光時間が長過ぎたか、短か過ぎたか。あるいは35cN・mでは締め付けトルクが大きすぎて、モーターの動きが完璧でない可能性もあります。</p>
+<p>　ELEGOO MARSの誤差について、今後も調査していきたいという気持ちもありますが、いい加減テストピース以外も出力しないと、せっかく買った水洗いレジン（お高い）がテストだけで終わってしまうので、精度の改善はこのぐらいにして、今年は次のフェーズに進もうと思います。</p>
+<h2 id="おわりに">おわりに</h2>
+<p>　繰り返しになりますが、「ELEGOO MARS」は、筆者が手に入れたはじめての3Dプリンターです。</p>
+<p>　実際に使ってみて実感したのは「世の中の工業製品すごい」と言うことです。
+ネジの1本、ワッシャー1つ、ほとんど誤差のないものが数十円程度で手に入るというのは、とても素晴らしいことですね！</p>
+<p>　と、身も蓋もない話をしてしまいましたが、それでも「世の中に存在しない。けど、ぼくはちょっと欲しいもの」は確実にあります。せっかく手に入れた3Dプリンターです。しばらくはモデルをこねこねして遊びたいと思います。</p></div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C/">習作</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+        
+          <a href="https://blog.keiji.io/2020/08/mangaview.html" class="list-group-item">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html" class="list-group-item">ELEGOO MARSの出力精度の改善</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/04/techbookfest6.html" class="list-group-item">技術書典6でMLOps本「巡りあえないConcourse」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html" class="list-group-item">Gehirn RS2 Plusに引っ越しした</a>
+        
+      
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html" class="list-group-item">いまNN API（TensorFlow Lite）は使えるのか</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/look_back_techbookfest4.html" class="list-group-item">技術書典4に参加してきました</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-2.html" class="list-group-item">技術書典4で「本当はおそろしい商業出版！？」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-1.html" class="list-group-item">技術書典4でML Ops（TensorFlow）の本を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/01/meganeco_playground.html" class="list-group-item">機械学習のモデルを試せるサイトを作った話</a>
+        
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98" class="list-group-item">雑記</a>
+      
+      <a href="https://blog.keiji.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="list-group-item">イベント</a>
+      
+      <a href="https://blog.keiji.io/categories/tensorflow" class="list-group-item">tensorflow</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2" class="list-group-item">メモ</a>
+      
+      <a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C" class="list-group-item">習作</a>
+      
+      <a href="https://blog.keiji.io/categories/aosp" class="list-group-item">aosp</a>
+      
+      <a href="https://blog.keiji.io/categories/adk" class="list-group-item">adk</a>
+      
+      <a href="https://blog.keiji.io/categories/de0" class="list-group-item">de0</a>
+      
+      <a href="https://blog.keiji.io/categories/fpga" class="list-group-item">fpga</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>Keiji ARIYAMA All rights reserved.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p>Original <a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> theme is designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ZwBLIZTRHGg%3d&fadein=500" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+
+<meta name="google-site-verification" content="jLy-Sg3FFmjHr0ri0Rlq0Dd7CNY-Qx-eGpL5wk7gGYs" />
+<link rel="canonical" href="https://blog.keiji.io/2017/10/yoichiro.html">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>「ソーシャルアプリプラットフォーム構築技法」を２章まで読んだ - めがねをかけるんだ</title>
+    
+<meta name="description" content="&lt;p&gt;　田中洋一郎さんの「&lt;a href=&#34;https://www.amazon.co.jp/dp/4774193321/&#34;&gt;ソーシャルアプリプラットフォーム構築技法&lt;/a&gt;」の見本誌をいただきました。&lt;/p&gt;&lt;p&gt;　感想は全部読み終えてからと思ったのですが、かなり内容の濃い本なので全部読み終えるにはずいぶんかかりそうで、２章まで読み終えた段階でエントリにしておきます。&lt;/p&gt;&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;#038;bc1=000000&amp;#038;IS2=1&amp;#038;bg1=FFFFFF&amp;#038;fc1=000000&amp;#038;lc1=0000FF&amp;#038;t=keijiariyama-22&amp;#038;o=9&amp;#038;p=8&amp;#038;l=as4&amp;#038;m=amazon&amp;#038;f=ifr&amp;#038;ref=as_ss_li_til&amp;#038;asins=4774193321&amp;#038;linkId=9624f1b0e164f799fbe511d2772ee2ee&#34;&gt;&lt;/iframe&gt;">
+
+<meta property="og:title" content="「ソーシャルアプリプラットフォーム構築技法」を２章まで読んだ - めがねをかけるんだ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.keiji.io/2017/10/yoichiro.html">
+<meta property="og:image" content="https://blog.keiji.io/images/default.png">
+<meta property="og:site_name" content="めがねをかけるんだ">
+<meta property="og:description" content="&lt;p&gt;　田中洋一郎さんの「&lt;a href=&#34;https://www.amazon.co.jp/dp/4774193321/&#34;&gt;ソーシャルアプリプラットフォーム構築技法&lt;/a&gt;」の見本誌をいただきました。&lt;/p&gt;&lt;p&gt;　感想は全部読み終えてからと思ったのですが、かなり内容の濃い本なので全部読み終えるにはずいぶんかかりそうで、２章まで読み終えた段階でエントリにしておきます。&lt;/p&gt;&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;#038;bc1=000000&amp;#038;IS2=1&amp;#038;bg1=FFFFFF&amp;#038;fc1=000000&amp;#038;lc1=0000FF&amp;#038;t=keijiariyama-22&amp;#038;o=9&amp;#038;p=8&amp;#038;l=as4&amp;#038;m=amazon&amp;#038;f=ifr&amp;#038;ref=as_ss_li_til&amp;#038;asins=4774193321&amp;#038;linkId=9624f1b0e164f799fbe511d2772ee2ee&#34;&gt;&lt;/iframe&gt;">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="めがねをかけるんだ">
+<meta name="twitter:url" content="https://blog.keiji.io/2017/10/yoichiro.html">
+<meta name="twitter:title" content="「ソーシャルアプリプラットフォーム構築技法」を２章まで読んだ - めがねをかけるんだ">
+<meta name="twitter:description" content="&lt;p&gt;　田中洋一郎さんの「&lt;a href=&#34;https://www.amazon.co.jp/dp/4774193321/&#34;&gt;ソーシャルアプリプラットフォーム構築技法&lt;/a&gt;」の見本誌をいただきました。&lt;/p&gt;&lt;p&gt;　感想は全部読み終えてからと思ったのですが、かなり内容の濃い本なので全部読み終えるにはずいぶんかかりそうで、２章まで読み終えた段階でエントリにしておきます。&lt;/p&gt;&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;#038;bc1=000000&amp;#038;IS2=1&amp;#038;bg1=FFFFFF&amp;#038;fc1=000000&amp;#038;lc1=0000FF&amp;#038;t=keijiariyama-22&amp;#038;o=9&amp;#038;p=8&amp;#038;l=as4&amp;#038;m=amazon&amp;#038;f=ifr&amp;#038;ref=as_ss_li_til&amp;#038;asins=4774193321&amp;#038;linkId=9624f1b0e164f799fbe511d2772ee2ee&#34;&gt;&lt;/iframe&gt;">
+<meta name="twitter:image" content="https://blog.keiji.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.keiji.io\/"
+    },
+    "headline": "「ソーシャルアプリプラットフォーム構築技法」を２章まで読んだ - めがねをかけるんだ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.keiji.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2017-10-21T02:40:22JST",
+    "dateModified": "2017-10-21T02:40:22JST",
+    "author": {
+      "@type": "Person",
+      "name": "めがねをかけるんだ"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "めがねをかけるんだ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.keiji.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "\u003cp\u003e　田中洋一郎さんの「\u003ca href=\u0022https:\/\/www.amazon.co.jp\/dp\/4774193321\/\u0022\u003eソーシャルアプリプラットフォーム構築技法\u003c\/a\u003e」の見本誌をいただきました。\u003c\/p\u003e\n\u003cp\u003e　感想は全部読み終えてからと思ったのですが、かなり内容の濃い本なので全部読み終えるにはずいぶんかかりそうで、２章まで読み終えた段階でエントリにしておきます。\u003c\/p\u003e\n\u003ciframe style=\u0022width:120px;height:240px;\u0022 marginwidth=\u00220\u0022 marginheight=\u00220\u0022 scrolling=\u0022no\u0022 frameborder=\u00220\u0022 src=\u0022\/\/rcm-fe.amazon-adsystem.com\/e\/cm?lt1=_blank\u0026#038;bc1=000000\u0026#038;IS2=1\u0026#038;bg1=FFFFFF\u0026#038;fc1=000000\u0026#038;lc1=0000FF\u0026#038;t=keijiariyama-22\u0026#038;o=9\u0026#038;p=8\u0026#038;l=as4\u0026#038;m=amazon\u0026#038;f=ifr\u0026#038;ref=as_ss_li_til\u0026#038;asins=4774193321\u0026#038;linkId=9624f1b0e164f799fbe511d2772ee2ee\u0022\u003e\u003c\/iframe\u003e"
+  }
+</script>
+
+
+    <link href="https://blog.keiji.io/css/styles.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/default.css">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/typesquare.css">
+    
+
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-62351683-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://blog.keiji.io/">めがねをかけるんだ</a>
+          </div>
+
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="https://blog.keiji.io/profile/">Profile</a></li>
+              
+              
+            </ul>
+            
+          </div>
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://blog.keiji.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.keiji.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">「ソーシャルアプリプラットフォーム構築技法」を２章まで読んだ</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-10-21T02:40:22JST">2017-10-21</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.keiji.io/post/">post</a></li>
+      
+    </ul>
+
+    <h1 class="title">「ソーシャルアプリプラットフォーム構築技法」を２章まで読んだ</h1>
+  </header>
+
+  
+
+  <div class="article-body"><p>　田中洋一郎さんの「<a href="https://www.amazon.co.jp/dp/4774193321/">ソーシャルアプリプラットフォーム構築技法</a>」の見本誌をいただきました。</p>
+<p>　感想は全部読み終えてからと思ったのですが、かなり内容の濃い本なので全部読み終えるにはずいぶんかかりそうで、２章まで読み終えた段階でエントリにしておきます。</p>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=keijiariyama-22&#038;o=9&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=as_ss_li_til&#038;asins=4774193321&#038;linkId=9624f1b0e164f799fbe511d2772ee2ee"></iframe>
+<h3 id="ビジネス側の解説も厚い">ビジネス側の解説も厚い</h3>
+<p>　予備知識無しで読み始めたので最初、この本は、なんらかのオープンソースソフトウェアを利用したソーシャルアプリの実装方法を詳細に解説した本だろうと考えていました。</p>
+<p>　洋一郎さんはこれまでmixiやLINEでプラットフォーム構築の第一線におり、プライベートでもChromeアプリ開発に積極的に取り組んでいる生粋の開発者というイメージだったからです。</p>
+<p>　その期待は、いい意味で裏切られました。</p>
+<p>　本には、なぜプラットフォームを作るのか。その動機という非常にプリミティブな要素に加えて、プラットフォームを構成するプレーヤー（プラットフォーム提供者・アプリケーション開発者・ユーザー）がそれぞれどう関わってくるのか。</p>
+<p>　彼らのメリットは何か。お金の流れなどにも紙幅が割かれています。</p>
+<p>　プラットフォーム提供者の目的は何か。ユーザーから託された情報を守るだけではなく活用して（そこに伴うジレンマを向き合いながら）、どういう意図を持って事業を遂行していくか。</p>
+<p>　ぼくも以前、とあるプラットフォーム構築に関わり、Android SDKの設計と実装を担当したことがあります。その際、プラットフォーム側の決定になんどか「？」を浮かべることがありましたが、この本を読んでいれば、もっとスムースに意図を理解できたと思います。</p>
+<h3 id="具体的な手法やノウハウの開示">具体的な手法やノウハウの開示</h3>
+<p>　プラットフォームの仕様の策定手順は、非常に参考になりました。</p>
+<p>　セキュリティやプライバシーでは技術的に守るだけでなく、規約やガイドラインと言ったビジネス方面で保護することも触れられています。</p>
+<p>　エンジニアの中には「技術的にできる場合はやってしまう人もいるだろう」と、ビジネス上の制約の実効性を軽視する嫌いもありますが、開発の最前線に身を置きながらも、エンジニアリング以外にも深い周辺知識を持ち、バランス感覚をもって運用できる。洋一郎さんの違う一面を見られてきた気がしています。</p>
+<p>　一つ、わがままを言うとすれば、もっと具体的な社名やサービス名を出した実例が欲しかったなと思います。</p>
+<p>「これは筆者がmixiにいたときに直面した課題ですが……」のような切口があると、よりリアルに感じられるだろうと思いました（※ ２章までの感想です）。</p>
+<p>　それがとても難しいことであることは承知していますし、会社やサービスの名前こそ出ていなくても、洋一郎さんがこれまで経験してきことが、この1冊に凝縮されていることは間違いありません。</p>
+<h3 id="まとめ">まとめ</h3>
+<p>　プラットフォーム構築は非常に大きく、やり直しが非常に難しい開発です。作ってから（作り始めてから）答え合わせしても手遅れです。</p>
+<p>　ソーシャルプラットフォームの構築や、ソーシャルプラットフォームと連携したアプリの開発に関わることがありそうな人には、大いにお勧めします。</p>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&#038;bc1=000000&#038;IS2=1&#038;bg1=FFFFFF&#038;fc1=000000&#038;lc1=0000FF&#038;t=keijiariyama-22&#038;o=9&#038;p=8&#038;l=as4&#038;m=amazon&#038;f=ifr&#038;ref=as_ss_li_til&#038;asins=4774193321&#038;linkId=9624f1b0e164f799fbe511d2772ee2ee"></iframe></div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2/">メモ</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+        
+          <a href="https://blog.keiji.io/2020/08/mangaview.html" class="list-group-item">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html" class="list-group-item">ELEGOO MARSの出力精度の改善</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/04/techbookfest6.html" class="list-group-item">技術書典6でMLOps本「巡りあえないConcourse」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html" class="list-group-item">Gehirn RS2 Plusに引っ越しした</a>
+        
+      
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html" class="list-group-item">いまNN API（TensorFlow Lite）は使えるのか</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/look_back_techbookfest4.html" class="list-group-item">技術書典4に参加してきました</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-2.html" class="list-group-item">技術書典4で「本当はおそろしい商業出版！？」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-1.html" class="list-group-item">技術書典4でML Ops（TensorFlow）の本を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/01/meganeco_playground.html" class="list-group-item">機械学習のモデルを試せるサイトを作った話</a>
+        
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98" class="list-group-item">雑記</a>
+      
+      <a href="https://blog.keiji.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="list-group-item">イベント</a>
+      
+      <a href="https://blog.keiji.io/categories/tensorflow" class="list-group-item">tensorflow</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2" class="list-group-item">メモ</a>
+      
+      <a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C" class="list-group-item">習作</a>
+      
+      <a href="https://blog.keiji.io/categories/aosp" class="list-group-item">aosp</a>
+      
+      <a href="https://blog.keiji.io/categories/adk" class="list-group-item">adk</a>
+      
+      <a href="https://blog.keiji.io/categories/de0" class="list-group-item">de0</a>
+      
+      <a href="https://blog.keiji.io/categories/fpga" class="list-group-item">fpga</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>Keiji ARIYAMA All rights reserved.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p>Original <a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> theme is designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ZwBLIZTRHGg%3d&fadein=500" charset="utf-8"></script>
+  </body>
+</html>

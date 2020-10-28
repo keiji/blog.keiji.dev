@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+
+<meta name="google-site-verification" content="jLy-Sg3FFmjHr0ri0Rlq0Dd7CNY-Qx-eGpL5wk7gGYs" />
+<link rel="canonical" href="https://blog.keiji.io/2015/12/c89.html">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>コミックマーケット 89で「Android Studio 完全移行ガイド」を頒布します - めがねをかけるんだ</title>
+    
+<meta name="description" content="&lt;p&gt;この度、サークル「めがねをかけるんだ」として、有山圭二個人がコミックマーケットに参加させていただくことになりました。&lt;/p&gt;&lt;p&gt;「めがねをかけるんだ」では、ADTの開発サポート終了に伴い、ADTのワークスペース（プロジェクト）をAndroid Studioに移行するためのノウハウをまとめた冊子を頒布いたします。&lt;/p&gt;&lt;p&gt;［2015/12/15: 委託先サークルに「O2 Project」を追加しました！］&lt;/p&gt;">
+
+<meta property="og:title" content="コミックマーケット 89で「Android Studio 完全移行ガイド」を頒布します - めがねをかけるんだ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.keiji.io/2015/12/c89.html">
+<meta property="og:image" content="https://blog.keiji.io/images/default.png">
+<meta property="og:site_name" content="めがねをかけるんだ">
+<meta property="og:description" content="&lt;p&gt;この度、サークル「めがねをかけるんだ」として、有山圭二個人がコミックマーケットに参加させていただくことになりました。&lt;/p&gt;&lt;p&gt;「めがねをかけるんだ」では、ADTの開発サポート終了に伴い、ADTのワークスペース（プロジェクト）をAndroid Studioに移行するためのノウハウをまとめた冊子を頒布いたします。&lt;/p&gt;&lt;p&gt;［2015/12/15: 委託先サークルに「O2 Project」を追加しました！］&lt;/p&gt;">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="めがねをかけるんだ">
+<meta name="twitter:url" content="https://blog.keiji.io/2015/12/c89.html">
+<meta name="twitter:title" content="コミックマーケット 89で「Android Studio 完全移行ガイド」を頒布します - めがねをかけるんだ">
+<meta name="twitter:description" content="&lt;p&gt;この度、サークル「めがねをかけるんだ」として、有山圭二個人がコミックマーケットに参加させていただくことになりました。&lt;/p&gt;&lt;p&gt;「めがねをかけるんだ」では、ADTの開発サポート終了に伴い、ADTのワークスペース（プロジェクト）をAndroid Studioに移行するためのノウハウをまとめた冊子を頒布いたします。&lt;/p&gt;&lt;p&gt;［2015/12/15: 委託先サークルに「O2 Project」を追加しました！］&lt;/p&gt;">
+<meta name="twitter:image" content="https://blog.keiji.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.keiji.io\/"
+    },
+    "headline": "コミックマーケット 89で「Android Studio 完全移行ガイド」を頒布します - めがねをかけるんだ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.keiji.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2015-12-18T13:41:15JST",
+    "dateModified": "2015-12-18T13:41:15JST",
+    "author": {
+      "@type": "Person",
+      "name": "めがねをかけるんだ"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "めがねをかけるんだ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.keiji.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "\u003cp\u003eこの度、サークル「めがねをかけるんだ」として、有山圭二個人がコミックマーケットに参加させていただくことになりました。\u003c\/p\u003e\n\u003cp\u003e「めがねをかけるんだ」では、ADTの開発サポート終了に伴い、ADTのワークスペース（プロジェクト）をAndroid Studioに移行するためのノウハウをまとめた冊子を頒布いたします。\u003c\/p\u003e\n\u003cp\u003e［2015\/12\/15: 委託先サークルに「O2 Project」を追加しました！］\u003c\/p\u003e"
+  }
+</script>
+
+
+    <link href="https://blog.keiji.io/css/styles.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/default.css">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/typesquare.css">
+    
+
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-62351683-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://blog.keiji.io/">めがねをかけるんだ</a>
+          </div>
+
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="https://blog.keiji.io/profile/">Profile</a></li>
+              
+              
+            </ul>
+            
+          </div>
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://blog.keiji.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.keiji.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">コミックマーケット 89で「Android Studio 完全移行ガイド」を頒布します</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-12-18T13:41:15JST">2015-12-18</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.keiji.io/post/">post</a></li>
+      
+    </ul>
+
+    <h1 class="title">コミックマーケット 89で「Android Studio 完全移行ガイド」を頒布します</h1>
+  </header>
+
+  
+
+  <div class="article-body"><p>この度、サークル「めがねをかけるんだ」として、有山圭二個人がコミックマーケットに参加させていただくことになりました。</p>
+<p>「めがねをかけるんだ」では、ADTの開発サポート終了に伴い、ADTのワークスペース（プロジェクト）をAndroid Studioに移行するためのノウハウをまとめた冊子を頒布いたします。</p>
+<p>［2015/12/15: 委託先サークルに「O2 Project」を追加しました！］</p>
+<h2 id="なぜ参加するの">なぜ参加するの？</h2>
+<p><a href="https://blog.keiji.dev/2015/12/c87.html">昨年</a>も本を作ったし、今年も作ろうかと。</p>
+<p>あと、昨年書いた「Android Studioではじめる簡単Androidアプリ開発」が改訂される運びとなりました。</p>
+<p><a href="http://www.amazon.co.jp/dp/4774178594/"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/android_studio_2nd.png" alt="android_studio_2nd" width="50%" height="50%" class="aligncenter size-full wp-image-958" /></a></p>
+<p>来年１月７日頃発売予定で、<a href="http://www.amazon.co.jp/dp/4774178594/">Amazonでの予約受付</a>が始まっています。</p>
+<p>書籍はAndroid Studio 1.5に向けて執筆していますが、ご存じの通り発売前に2.0系がCanaryチャンネルで公開されているので、今からドキドキです。</p>
+<h2 id="どんな本なの">どんな本なの？</h2>
+<p>ADTのワークスペース（プロジェクト）をAndroid Studioに移行する「道しるべ」になることを目標に執筆しました。また、既存のAntなどのビルドシステムの資産（設定）をGradleで活かすにはどうするか、ユースケース毎にまとめています。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">タイトル</th>
+<th style="text-align:left">Android Studio 完全移行ガイド</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ページ数</td>
+<td style="text-align:left">40p</td>
+</tr>
+<tr>
+<td style="text-align:left">価格</td>
+<td style="text-align:left">無料（お一人様一冊まで）</td>
+</tr>
+<tr>
+<td style="text-align:left">発行</td>
+<td style="text-align:left">有山圭二個人サークル「めがねをかけるんだ」</td>
+</tr>
+</tbody>
+</table>
+<h2 id="目次">目次</h2>
+<ul>
+<li>Android Studioへの移行
+<ul>
+<li>ADTのプロジェクトインポート機能について</li>
+<li>手動での移行（準備編）</li>
+<li>手動での移行（実践編）
+<ul>
+<li>新規プロジェクトの作成</li>
+<li>モジュールの作成</li>
+<li>ライブラリの移行</li>
+<li>リソースの移行</li>
+<li>アセットの移行</li>
+<li>Javaソースコードの移行</li>
+<li>テストコードの移行</li>
+<li>AndroidManifest.xmlの移行</li>
+<li>NDKの移行</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Gradle Cookbook
+<ul>
+<li>ビルドによって含めるソースコードやリソースを入れ替えたい</li>
+<li>ビルドによってアプリケーションの情報を変えたい</li>
+<li>外部コマンドの結果をビルドに反映したい</li>
+<li>新しいBuild Typeを追加したい</li>
+<li>ビルドによって定数の内容を変えたい</li>
+<li>Lintのエラーでリリースビルドを中止したくない</li>
+<li>署名のキーストアに関する情報をバージョン管理に含めたくない</li>
+</ul>
+</li>
+</ul>
+<h2 id="どんな表紙なの">どんな表紙なの？</h2>
+<p><a href="https://blog.keiji.dev/wp-content/uploads/2015/12/c89_farewell_adt.png"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/c89_farewell_adt.png" alt="c89_farewell_adt" width="50%" height="50%" class="aligncenter size-full wp-image-954" /></a></p>
+<p>表紙・裏表紙イラストは、現在、「<a href="https://www.mincomi.jp/">みんなのコミック</a>」で「おかあさん(10)と僕。」を連載中の根雪れい（<a href="https://twitter.com/neyuki_rei/" target="_blank">@neyuki_rei</a>）さんによるものです。</p>
+<h2 id="どこで手に入るの">どこで手に入るの？</h2>
+<p>コミックマーケット 89の３日目、12月31日（木曜日）に、有山圭二の個人サークル「めがねをかけるんだ」として参加します。</p>
+<p>「めがねをかけるんだ」は、コミケットでの配置がありません。そのため、当選した技術系サークルのご厚意で頒布に協力していただけることになっています。</p>
+<p>頒布に協力していただけるサークルは以下の通りです。</p>
+<ul>
+<li><a href="http://techbooster.github.io/c89/">TechBooster</a>3日目 東シ-58a</li>
+<li><a href="http://c.o2p.jp/c89/">O2 Project</a>3日目 東ム-39b</li>
+</ul>
+<p>変更などがあった場合、逐次このページをアップデートしてお知らせします。</p></div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://blog.keiji.io/categories/android/">Android</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/">イベント</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+        
+          <a href="https://blog.keiji.io/2020/08/mangaview.html" class="list-group-item">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html" class="list-group-item">ELEGOO MARSの出力精度の改善</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/04/techbookfest6.html" class="list-group-item">技術書典6でMLOps本「巡りあえないConcourse」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html" class="list-group-item">Gehirn RS2 Plusに引っ越しした</a>
+        
+      
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html" class="list-group-item">いまNN API（TensorFlow Lite）は使えるのか</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/look_back_techbookfest4.html" class="list-group-item">技術書典4に参加してきました</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-2.html" class="list-group-item">技術書典4で「本当はおそろしい商業出版！？」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-1.html" class="list-group-item">技術書典4でML Ops（TensorFlow）の本を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/01/meganeco_playground.html" class="list-group-item">機械学習のモデルを試せるサイトを作った話</a>
+        
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98" class="list-group-item">雑記</a>
+      
+      <a href="https://blog.keiji.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="list-group-item">イベント</a>
+      
+      <a href="https://blog.keiji.io/categories/tensorflow" class="list-group-item">tensorflow</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2" class="list-group-item">メモ</a>
+      
+      <a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C" class="list-group-item">習作</a>
+      
+      <a href="https://blog.keiji.io/categories/aosp" class="list-group-item">aosp</a>
+      
+      <a href="https://blog.keiji.io/categories/adk" class="list-group-item">adk</a>
+      
+      <a href="https://blog.keiji.io/categories/de0" class="list-group-item">de0</a>
+      
+      <a href="https://blog.keiji.io/categories/fpga" class="list-group-item">fpga</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>Keiji ARIYAMA All rights reserved.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p>Original <a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> theme is designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ZwBLIZTRHGg%3d&fadein=500" charset="utf-8"></script>
+  </body>
+</html>

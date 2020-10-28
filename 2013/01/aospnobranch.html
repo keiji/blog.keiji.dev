@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+
+<meta name="google-site-verification" content="jLy-Sg3FFmjHr0ri0Rlq0Dd7CNY-Qx-eGpL5wk7gGYs" />
+<link rel="canonical" href="https://blog.keiji.io/2013/01/aospnobranch.html">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>AOSPで１度投稿したパッチを修正する（nobranch編） - めがねをかけるんだ</title>
+    
+<meta name="description" content="&lt;p&gt;この連休で&lt;a href=&#34;https://android-review.googlesource.com/#/&#34; target=&#34;_blank&#34;&gt;Android Open Source Project&lt;/a&gt;にいくつかパッチを投稿したのですが、そのときに、ちょっと詰まったのでメモ。&lt;/p&gt;">
+
+<meta property="og:title" content="AOSPで１度投稿したパッチを修正する（nobranch編） - めがねをかけるんだ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.keiji.io/2013/01/aospnobranch.html">
+<meta property="og:image" content="https://blog.keiji.io/images/default.png">
+<meta property="og:site_name" content="めがねをかけるんだ">
+<meta property="og:description" content="&lt;p&gt;この連休で&lt;a href=&#34;https://android-review.googlesource.com/#/&#34; target=&#34;_blank&#34;&gt;Android Open Source Project&lt;/a&gt;にいくつかパッチを投稿したのですが、そのときに、ちょっと詰まったのでメモ。&lt;/p&gt;">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="めがねをかけるんだ">
+<meta name="twitter:url" content="https://blog.keiji.io/2013/01/aospnobranch.html">
+<meta name="twitter:title" content="AOSPで１度投稿したパッチを修正する（nobranch編） - めがねをかけるんだ">
+<meta name="twitter:description" content="&lt;p&gt;この連休で&lt;a href=&#34;https://android-review.googlesource.com/#/&#34; target=&#34;_blank&#34;&gt;Android Open Source Project&lt;/a&gt;にいくつかパッチを投稿したのですが、そのときに、ちょっと詰まったのでメモ。&lt;/p&gt;">
+<meta name="twitter:image" content="https://blog.keiji.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.keiji.io\/"
+    },
+    "headline": "AOSPで１度投稿したパッチを修正する（nobranch編） - めがねをかけるんだ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.keiji.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2013-01-15T13:47:00JST",
+    "dateModified": "2013-01-15T13:47:00JST",
+    "author": {
+      "@type": "Person",
+      "name": "めがねをかけるんだ"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "めがねをかけるんだ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.keiji.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "\u003cp\u003eこの連休で\u003ca href=\u0022https:\/\/android-review.googlesource.com\/#\/\u0022 target=\u0022_blank\u0022\u003eAndroid Open Source Project\u003c\/a\u003eにいくつかパッチを投稿したのですが、そのときに、ちょっと詰まったのでメモ。\u003c\/p\u003e"
+  }
+</script>
+
+
+    <link href="https://blog.keiji.io/css/styles.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/default.css">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/typesquare.css">
+    
+
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-62351683-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://blog.keiji.io/">めがねをかけるんだ</a>
+          </div>
+
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="https://blog.keiji.io/profile/">Profile</a></li>
+              
+              
+            </ul>
+            
+          </div>
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://blog.keiji.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.keiji.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">AOSPで１度投稿したパッチを修正する（nobranch編）</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2013-01-15T13:47:00JST">2013-01-15</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.keiji.io/post/">post</a></li>
+      
+    </ul>
+
+    <h1 class="title">AOSPで１度投稿したパッチを修正する（nobranch編）</h1>
+  </header>
+
+  
+
+  <div class="article-body"><p>この連休で<a href="https://android-review.googlesource.com/#/" target="_blank">Android Open Source Project</a>にいくつかパッチを投稿したのですが、そのときに、ちょっと詰まったのでメモ。</p>
+<div>
+  <p>
+    AOSPにパッチを投げるには、
+  </p>
+  <ul>
+    <li>
+      トピックブランチを作成
+    </li>
+    <li>
+      変更をローカルにコミット
+    </li>
+    <li>
+      repo upload
+    </li>
+  </ul>
+  <p>
+    と言う手順でやります。詳細は<b>&#8220;<a href="http://visible-true.blogspot.jp/2012/12/aaptresaosprepo-upload.html" target="_blank">visible true</a>&#8220;</b>に良くまとまっているので、参考にしてください。
+  </p>
+  <p>
+    そして、一度投稿したパッチを修正するときは、最初に作ったトピックブランチをチェックアウトして、&#8221;git commit &#8211;amend&#8221;でコミットを修正してから、もう一度&#8221;repo upload&#8221;するわけですが、今回は、<b>パッチを投稿したときのトピックブランチが失われた状態</b>だったのです。
+  </p>
+  <p>
+    そのパッチを最初に投稿したのは半年以上前で、そのときは4.1が出たての頃でした。それから時は流れ、再び修正することになったのですが。。。
+  </p>
+  <p>
+    いろいろ試行錯誤をしましたが、下記の手順で修正できました。
+  </p>
+  <p>
+    ベストプラクティスではないかもしれませんが、参考までに。
+  </p>
+  <div style="border: solid 1px #666666; padding: 1em;">
+    > git fetch https://android.googlesource.com/platform/sdk refs/changes/30/49630/3 && git checkout FETCH_HEAD<br /> > git checkout -b [BRANCH_NAME]<br /> > git add [FILE_NAME]<br /> > git commit &#8211;amend<br /> > git branch &#8211;set-upstream [BRANCH_NAME] aosp/master<br /> > repo upload
+  </div>
+  <p>
+    &nbsp;
+  </p>
+  <p>
+    一行目のgit fetchは、AOSPのreviewサーバーに表示されているcheckout（画像下部、赤線内）をそのまま実行します。
+  </p>
+  <div>
+    <a href="https://blog.keiji.dev/wp-content/uploads/2013/01/Screen-Shot-2013-01-15-at-10.01.18-PM.jpg"><img class="aligncenter  wp-image-86" alt="Screen Shot 2013-01-15 at 10.01.18 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/01/Screen-Shot-2013-01-15-at-10.01.18-PM.jpg" width="461" height="293" /></a>
+  </div>
+  <p>
+    すると、該当の修正をチェックアウトした状態になります。
+  </p>
+  <p>
+    その際、一旦branchが外れて(no branch)になるので、もう一度、トピックブランチを作り直します。以後、修正はこのブランチ内で行います。
+  </p>
+  <p>
+    ファイルを修正して、git addで取り込み、直前のコミットを修正(amend)します。
+  </p>
+  <p>
+    そして、ここがハマったところなのですが、<b>トピックブランチのupstreamを、手動で設定しなくてはなりません。</b>これをしないと、repo uploadをしたときに、投稿できるブランチがないと言われてしまいます。
+  </p>
+  <p>
+    upstreamを設定したら、あとは通常通りrepo uploadでパッチを投稿できます。投稿したパッチは、AOSPのreviewサーバーの既存のエントリを上書きする形で表示されます。
+  </p>
+</div></div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://blog.keiji.io/categories/android/">Android</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/aosp/">AOSP</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2/">メモ</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+        
+          <a href="https://blog.keiji.io/2020/08/mangaview.html" class="list-group-item">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html" class="list-group-item">ELEGOO MARSの出力精度の改善</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/04/techbookfest6.html" class="list-group-item">技術書典6でMLOps本「巡りあえないConcourse」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html" class="list-group-item">Gehirn RS2 Plusに引っ越しした</a>
+        
+      
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html" class="list-group-item">いまNN API（TensorFlow Lite）は使えるのか</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/look_back_techbookfest4.html" class="list-group-item">技術書典4に参加してきました</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-2.html" class="list-group-item">技術書典4で「本当はおそろしい商業出版！？」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-1.html" class="list-group-item">技術書典4でML Ops（TensorFlow）の本を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/01/meganeco_playground.html" class="list-group-item">機械学習のモデルを試せるサイトを作った話</a>
+        
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98" class="list-group-item">雑記</a>
+      
+      <a href="https://blog.keiji.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="list-group-item">イベント</a>
+      
+      <a href="https://blog.keiji.io/categories/tensorflow" class="list-group-item">tensorflow</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2" class="list-group-item">メモ</a>
+      
+      <a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C" class="list-group-item">習作</a>
+      
+      <a href="https://blog.keiji.io/categories/aosp" class="list-group-item">aosp</a>
+      
+      <a href="https://blog.keiji.io/categories/adk" class="list-group-item">adk</a>
+      
+      <a href="https://blog.keiji.io/categories/de0" class="list-group-item">de0</a>
+      
+      <a href="https://blog.keiji.io/categories/fpga" class="list-group-item">fpga</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>Keiji ARIYAMA All rights reserved.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p>Original <a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> theme is designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ZwBLIZTRHGg%3d&fadein=500" charset="utf-8"></script>
+  </body>
+</html>

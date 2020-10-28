@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TensorFlow on めがねをかけるんだ</title>
+    <link>https://blog.keiji.io/categories/tensorflow/</link>
+    <description>Recent content in TensorFlow on めがねをかけるんだ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>Keiji ARIYAMA All rights reserved.</copyright>
+    <lastBuildDate>Fri, 12 Apr 2019 10:00:10 +0900</lastBuildDate><atom:link href="https://blog.keiji.io/categories/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>技術書典6でMLOps本「巡りあえないConcourse」を頒布します</title>
+      <link>https://blog.keiji.io/2019/04/techbookfest6.html</link>
+      <pubDate>Fri, 12 Apr 2019 10:00:10 +0900</pubDate>
+      
+      <guid>https://blog.keiji.io/2019/04/techbookfest6.html</guid>
+      <description>&lt;p&gt;　4月14日、池袋サンシャインシティにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf06/circle/38380004&#34;&gt;技術書典6&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。&lt;/p&gt;
+&lt;p&gt;　「めがねをかけるんだ」では、TensorFlowを使って3年間ひとりで取り組んできた「MLOps」を題材にした冊子を頒布いたします。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.io/images/concourse.png&#34; alt=&#34;tfbook6&#34; title=&#34;巡りあえないConcourse&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;巡りあえないConcourse&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;B5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;52p（本文墨刷）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1,000円&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+    </item>
+    
+    <item>
+      <title>いまNN API（TensorFlow Lite）は使えるのか</title>
+      <link>https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html</link>
+      <pubDate>Mon, 24 Dec 2018 05:30:34 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html</guid>
+      <description>&lt;p&gt;　この記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2018/tensorflow&#34;&gt;TensorFlow Advent Calendar 2018&lt;/a&gt;の24日目の記事です。&lt;/p&gt;
+&lt;p&gt;　23日目の記事は、AtuNukaさんによる「&lt;a href=&#34;https://qiita.com/AtuNuka/items/6966efeddceb96012819&#34;&gt;Design Documentから見たTensorFlow 2.0の変更点&lt;/a&gt;」でした。&lt;/p&gt;
+&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;　あいかわらず趣味でTensorFlowを使っていて、最近はAndroidで動作させるTensorFlow Liteまわりを重点的に取り組んでいます。&lt;/p&gt;
+&lt;p&gt;　アドベントカレンダーの22日目の記事、足立氏（カブク社）による「&lt;a href=&#34;https://www.kabuku.co.jp/developers/how-is-tflite-useful&#34;&gt;いまMLKitカスタムモデル（TF Lite）は使えるのか&lt;/a&gt;」に書かれているように、TensorFlowのモデルをAndroid端末で動かすことに関しては「使える」レベルになってきていると筆者も思います。&lt;/p&gt;
+&lt;p&gt;　そこで今日は、TensorFlow LiteのモデルをAndroidアプリに組み込んで動作させるとき、NN APIを使うように設定すると「動かない」という話をします。&lt;/p&gt;
+&lt;p&gt;「使えるレベルになってきている」と、言った直後にこんなことを言ってごめんね。&lt;/p&gt;
+&lt;p&gt;　でも、本当です。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>技術書典4に参加してきました</title>
+      <link>https://blog.keiji.io/2018/04/look_back_techbookfest4.html</link>
+      <pubDate>Thu, 26 Apr 2018 05:11:06 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2018/04/look_back_techbookfest4.html</guid>
+      <description>&lt;p&gt;　4月22日、秋葉原UDX アキバ・スクエアにて開催された「&lt;a href=&#34;https://techbookfest.org/event/tbf04/circle/21060002&#34; target=&#34;_blank&#34;&gt;技術書典4&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加してきました。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2018/04/IMG_20180422_103336.jpg&#34; alt=&#34;&#34; width=&#34;390&#34; height=&#34;520&#34; class=&#34;aligncenter size-full wp-image-1696&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;　この記事は「技術書典4」の振り返りの記事になります。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>技術書典4でML Ops（TensorFlow）の本を頒布します</title>
+      <link>https://blog.keiji.io/2018/04/techbookfest4-1.html</link>
+      <pubDate>Wed, 18 Apr 2018 10:35:10 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2018/04/techbookfest4-1.html</guid>
+      <description>&lt;p&gt;4月22日、秋葉原UDX アキバ・スクエアにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf04/circle/21060002&#34; target=&#34;_blank&#34;&gt;技術書典4&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。&lt;/p&gt;
+&lt;p&gt;「めがねをかけるんだ」では、TensorFlowを使って2年間ひとりで取り組んできた「ML Ops」の活動記録を題材にした冊子を頒布いたします。&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#34;aligncenter size-full&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2018/04/76e3081c96d22431ff3554bf7affdafe.jpg&#34; alt=&#34;tfbook4&#34;  width=&#34;50%&#34; height=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;茶色いトイプーは食べ物じゃないっ！&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;B5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;52p（本文墨刷）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1,000円&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+    </item>
+    
+    <item>
+      <title>機械学習のモデルを試せるサイトを作った話</title>
+      <link>https://blog.keiji.io/2019/01/meganeco_playground.html</link>
+      <pubDate>Thu, 11 Jan 2018 00:00:00 +0900</pubDate>
+      
+      <guid>https://blog.keiji.io/2019/01/meganeco_playground.html</guid>
+      <description>三年前から個人的に構築している趣味の画像収集システム「MeganeCo」で利用している機械学習モデルを試せるサイトを公開しました。 MeganeCo Playground 画像を</description>
+    </item>
+    
+    <item>
+      <title>ココが辛いよ！ TensorFlow</title>
+      <link>https://blog.keiji.io/2017/12/tf_advent_calendar.html</link>
+      <pubDate>Wed, 13 Dec 2017 00:52:09 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2017/12/tf_advent_calendar.html</guid>
+      <description>&lt;h2 id=&#34;この投稿はtensorflow-advent-calendar1の12日目の記事です&#34;&gt;この投稿は、&lt;a href=&#34;https://qiita.com/advent-calendar/2017/tensorflow&#34;&gt;TensorFlow Advent Calendar&lt;/a&gt;の12日目の記事です。&lt;/h2&gt;
+&lt;p&gt;みなさん。TensorFlow使ってますか？&lt;/p&gt;
+&lt;p&gt;ぼくはと言えば、気がつけば毎日なにがしかのTensorFlowのコードを書いています。&lt;/p&gt;
+&lt;p&gt;TensorFlowが発表されてからすぐに使い始めて早二年、さまざまな機械学習向けのフレームワークが登場する中、TensorFlowは高い人気を保っていますね。&lt;/p&gt;
+&lt;p&gt;さて今回の記事は、そんな人気のTensorFlowを使っていて、ぼくが「つらい」と感じる（感じた）ことを書きます。&lt;/p&gt;
+&lt;p&gt;同じ気持ちの方には共感していただき、「こうすればもっと便利に使えるのに」という方法を知っている方が居られたら是非教えていただきたいと考えています。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>技術書典3でTensorFlowの本を頒布します。</title>
+      <link>https://blog.keiji.io/2017/10/techbookfest3.html</link>
+      <pubDate>Tue, 17 Oct 2017 11:18:06 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2017/10/techbookfest3.html</guid>
+      <description>&lt;p&gt;10月22日、秋葉原UDX アキバ・スクエアにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf03/circle/5686003050217472&#34; target=&#34;_blank&#34;&gt;技術書典３&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。&lt;/p&gt;
+&lt;p&gt;「めがねをかけるんだ」では、TensorFlowで物体検出を題材にした冊子を頒布いたします。&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#34;aligncenter size-full&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2017/10/tfbook3-hyo1.png&#34; alt=&#34;tfbook3&#34; width=&#34;50%&#34; height=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;TensorFlowはじめました Object Detection ー 物体検出&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;68p（本文墨刷）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1,000円&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+    </item>
+    
+    <item>
+      <title>技術書典２に参加したら出版社から(ry</title>
+      <link>https://blog.keiji.io/2017/06/tensorflow_book2_ird.html</link>
+      <pubDate>Thu, 08 Jun 2017 05:32:41 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2017/06/tensorflow_book2_ird.html</guid>
+      <description>&lt;p&gt;4月9日の&lt;a href=&#34;https://techbookfest.org/event/tbf02&#34;&gt;技術書典2&lt;/a&gt;、雨が降る中、辛抱強く並んでくださった一般参加者の皆さん、事故が起こらないように尽力してくださったスタッフの皆さん、本当にお疲れ様でした。&lt;/p&gt;
+&lt;p&gt;「&lt;a href=&#34;https://techbookfest.org/event/tbf02&#34;&gt;技術書典2&lt;/a&gt;」で頒布した「TensorFlowはじめました Super Resolution − 超解像」は現在、&lt;a href=&#34;http://amzn.to/2rDJwm4&#34;&gt;Amazonほかにて販売中です&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2017/06/18675290_1470970782954084_694244058_o.jpg&#34; alt=&#34;18675290_1470970782954084_694244058_o&#34; width=&#34;50%&#34; height=&#34;50%&#34; class=&#34;aligncenter size-full wp-image-1589&#34; /&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;TensorFlowはじめました2 Super Resolution − 超解像&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;B5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ページ&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;82ページ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;価格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1,620円（Print On Demand）, 1,080円（電子書籍版）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;インプレスR&amp;amp;D&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+    </item>
+    
+    <item>
+      <title>技術書典2でTensorFlowの本を頒布します</title>
+      <link>https://blog.keiji.io/2017/04/techbookfest2.html</link>
+      <pubDate>Sat, 01 Apr 2017 15:00:28 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2017/04/techbookfest2.html</guid>
+      <description>&lt;p&gt;4月9日、秋葉原UDX アキバ・スクエアにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf02/circle/5705718560718848&#34; target=&#34;_blank&#34;&gt;技術書典2&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。&lt;/p&gt;
+&lt;p&gt;「めがねをかけるんだ」では、TensorFlowで超解像を題材にした冊子を頒布いたします。&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#34;aligncenter size-full wp-image-1557&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2017/04/techbookfest2.png&#34; alt=&#34;techbookfest2&#34; width=&#34;50%&#34; height=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;TensorFlowはじめました Super Resolution ー 超解像&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;68p（本文墨刷）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1,000円&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+    </item>
+    
+    <item>
+      <title>「さくらの高火力」でTensorFlow</title>
+      <link>https://blog.keiji.io/2016/12/tensorflow_advent_calendar.html</link>
+      <pubDate>Mon, 12 Dec 2016 06:53:45 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2016/12/tensorflow_advent_calendar.html</guid>
+      <description>&lt;p&gt;このエントリは「&lt;a href=&#34;http://qiita.com/advent-calendar/2016/tensorflow&#34;&gt;TensorFlow Advent Calendar&lt;/a&gt;」の12日目の記事です。&lt;/p&gt;
+&lt;p&gt;これまで僕は、モデルの訓練には「GeForce GTX960」を積んだデスクトップマシンを使ってきました。&lt;/p&gt;
+&lt;p&gt;この「GeForce GTX960」は、GPUだけあってちゃんと使えばCPUより格段に速いのですが、最高の性能というわけではありません。&lt;/p&gt;
+&lt;p&gt;機械学習に取り組む中で、科学技術計算などを行う汎用目的(General Purpose)GPUや、複数のGPUで計算を並列化する「マルチGPU」に憧れがないと言えば嘘になります。&lt;/p&gt;
+&lt;p&gt;しかし、GPUの１枚の価格や電気代、排熱の処理を考えると現実的でないと言う結論に落ち着いていました。&lt;/p&gt;
+&lt;p&gt;今回、さくらインターネットの&lt;a href=&#34;https://www.sakura.ad.jp/koukaryoku/&#34;&gt;高火力コンピューティング&lt;/a&gt;が試用できたので、やってみたことをまとめます。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>矩形切り出しツール「Region Cropper」を公開しました</title>
+      <link>https://blog.keiji.io/2016/09/about_region_cropper.html</link>
+      <pubDate>Thu, 15 Sep 2016 07:17:36 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2016/09/about_region_cropper.html</guid>
+      <description>&lt;p&gt;時間を見つけてはTensorFlow関係のあれこれをちまちま続けています。&lt;/p&gt;
+&lt;p&gt;先日は「&lt;a href=&#34;https://www.pasonatech.co.jp/skill_up/event/naniwa_tech.jsp&#34;&gt;なにわTECH道&lt;/a&gt;」で、TensorFlowを使ったイラスト顔検出について発表しました。&lt;/p&gt;
+&lt;h2 id=&#34;データセットの作成&#34;&gt;データセットの作成&lt;/h2&gt;
+&lt;p&gt;これまで、機械学習に使う画像（データセット）の作成にはMacの「プレビュー」を使っていました。&lt;/p&gt;
+&lt;p&gt;１枚ずつ画像を読み込んでクロッピング（トリミング）していたのですが、１枚の画像に複数の顔があるときや、あとで領域を微調整（特に領域を拡大）したいときが面倒でした。&lt;/p&gt;
+&lt;p&gt;良さそうなツールがないか、少しばかり探してみたのですが、僕の思い描くような操作性のものがありませんでした。&lt;/p&gt;
+&lt;p&gt;なければ作れば良い。&lt;/p&gt;
+&lt;p&gt;そんなわけで、自分で画像の切り出しツールツール「Region Cropper」を開発しました。&lt;/p&gt;
+&lt;p&gt;１人で使うのももったいないので、GitHubで公開します。&lt;/p&gt;
+&lt;h2 id=&#34;region-cropper&#34;&gt;Region Cropper&lt;/h2&gt;
+&lt;p&gt;GitHub: &lt;a href=&#34;https://github.com/keiji/region_cropper&#34;&gt;https://github.com/keiji/region_cropper&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2016/09/set_region.png&#34; alt=&#34;set_region&#34; width=&#34;2048&#34; height=&#34;1580&#34; class=&#34;aligncenter size-full wp-image-1383&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;GUIのフレームワークに、使い慣れたSwingではなくJava FXを使いました。&lt;/p&gt;
+&lt;p&gt;そのため、Java 8のUpdate40以降でしかきちんと動きません。&lt;/p&gt;
+&lt;p&gt;以下、Region CropperのREADME.mdから。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>【続】技術書典に参加したら出版社から販売することになった</title>
+      <link>https://blog.keiji.io/2016/07/tensorflow_book_ird.html</link>
+      <pubDate>Sat, 23 Jul 2016 08:59:31 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2016/07/tensorflow_book_ird.html</guid>
+      <description>&lt;p&gt;先月25日の「&lt;a href=&#34;https://techbookfest.github.io/&#34;&gt;技術書典&lt;/a&gt;」で頒布した「TensorFlowはじめました」は現在、&lt;a href=&#34;http://amzn.to/2a0UrR5&#34;&gt;Amazonにて予約を受付けています&lt;/a&gt;。&lt;/p&gt;
+&lt;div id=&#34;attachment_1351&#34; style=&#34;max-width: 1361px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
+  &lt;a href=&#34;http://www.amazon.co.jp/gp/product/4802090889/ref=as_li_ss_il?ie=UTF8&amp;#038;camp=247&amp;#038;creative=7399&amp;#038;creativeASIN=4802090889&amp;#038;linkCode=as2&amp;#038;tag=keijiariyama-22&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2016/07/13692115_1158315580886274_420079092_o.jpg&#34; alt=&#34;Next Publishing版表紙&#34; width=&#34;50%&#34; height=&#34;50%&#34; class=&#34;aligncenter size-full wp-image-1351&#34; /&gt;&lt;/a&gt;
+  &lt;p class=&#34;wp-caption-text&#34;&gt;
+    有山 圭二 の TensorFlowはじめました　実践！最新Googleマシンラーニング (NextPublishing) を Amazon でチェック！
+  &lt;/p&gt;
+&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;TensorFlowはじめました 実践！最新Googleマシンラーニング&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;del&gt;A5&lt;/del&gt; → B5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ページ&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;64ページ&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;価格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1,620円（Print On Demand）, 1,080円（電子書籍版）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;インプレスR&amp;amp;D&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;変更点&#34;&gt;変更点&lt;/h3&gt;
+&lt;p&gt;これまでお知らせしていた内容からの大きな変更点に『判型』があります。&lt;/p&gt;
+&lt;p&gt;前回はA5とお伝えしていたのですが、A5では横幅が足りずプログラムリストが読みにくくなってしまうため、同人誌版と同じB5版に変更しました。&lt;/p&gt;
+&lt;p&gt;また、Kindleをはじめとする電子書籍（EPUB）版は固定レイアウトではなくリフローでの提供になります。&lt;/p&gt;
+&lt;p&gt;そのため、お使いになる端末や、設定する文字の大きさによっては読みにくくなる場合がありますのでご注意ください。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>技術書典に参加したら出版社から販売することになった</title>
+      <link>https://blog.keiji.io/2016/07/remark_techbookfest.html</link>
+      <pubDate>Thu, 07 Jul 2016 10:00:44 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2016/07/remark_techbookfest.html</guid>
+      <description>&lt;p&gt;このエントリには続報があります。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.keiji.dev/2016/07/tensorflow_book_ird.html&#34;&gt;【続】技術書典に参加したら出版社から販売することになった&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;再販情報&#34;&gt;再販情報&lt;/h2&gt;
+&lt;p&gt;技術書典で頒布した「TensorFlowはじめました」について、このたび、インプレスR&amp;amp;D社さんからPOD(Print On Demand)と電子書籍（リフロー）として販売できる運びとなりました。&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#34;aligncenter size-full wp-image-1319&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2016/07/tensorflow_ird.jpg&#34; alt=&#34;tensorflow_ird&#34; width=&#34;50%&#34; height=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;TensorFlowはじめました 実践！最新Googleマシンラーニング&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;A5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;形式&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;POD, 電子書籍（リフロー）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;インプレスR&amp;amp;D&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;POD(Print On Demand)または電子書籍での販売になります。一般書店では手に入りませんのでご注意ください。&lt;/p&gt;
+&lt;p&gt;また、具体的なページ数や販売価格などは現在調整中です。&lt;/p&gt;
+&lt;p&gt;今月中に予約が開始できるよう進めていますので、続報をお待ちください。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;以下、6月25日に秋葉原で開催された「&lt;a href=&#34;https://techbookfest.github.io/&#34;&gt;技術書典&lt;/a&gt;」の感想エントリです。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>技術書典でTensorFlowの本を頒布します</title>
+      <link>https://blog.keiji.io/2016/06/techbookfest.html</link>
+      <pubDate>Sun, 19 Jun 2016 13:40:10 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2016/06/techbookfest.html</guid>
+      <description>&lt;p&gt;このエントリには続報があります。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.keiji.dev/2016/07/remark_techbookfest.html&#34;&gt;技術書典に参加したら出版社から販売することになった&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.keiji.dev/2016/07/tensorflow_book_ird.html&#34;&gt;【続】技術書典に参加したら出版社から販売することになった&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;６月25日に秋葉原通運会館にて開催される「&lt;a href=&#34;https://techbookfest.org/#A-28&#34; target=&#34;_blank&#34;&gt;技術書典&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。&lt;/p&gt;
+&lt;p&gt;「めがねをかけるんだ」では、最近取り組んでいるTensorFlowに関する冊子を頒布いたします。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2016/06/tf-book.png&#34; alt=&#34;tf-book&#34; width=&#34;50%&#34; height=&#34;50%&#34; class=&#34;aligncenter size-full wp-image-1281&#34; /&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;TensorFlowはじめました CIFAR-10奮闘記&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;64p（本文墨刷）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1,000円&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+    </item>
+    
+    <item>
+      <title>【WIP】TensorFlowのExerciseをがんばっている</title>
+      <link>https://blog.keiji.io/2016/05/wip_trying_cifar10_exercise.html</link>
+      <pubDate>Sun, 15 May 2016 20:15:23 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2016/05/wip_trying_cifar10_exercise.html</guid>
+      <description>&lt;p&gt;　僕はいま、&lt;a href=&#34;https://events.google.com/io2016/&#34; target=&#34;_blank&#34;&gt;Google I/O 2016&lt;/a&gt;参加で渡米するにあたり、時差ボケ予防のために徹夜でこの記事を書いています。&lt;/p&gt;
+&lt;h3 id=&#34;概要忙しい人向け&#34;&gt;概要（忙しい人向け）&lt;/h3&gt;
+&lt;p&gt;　TensorFlowのチュートリアルにある課題（エクササイズ）に挑戦した。Softmaxの適用については比較的簡単だったが、Fully connected層をLocally connected層に変える課題については難航し、解決していない。&lt;/p&gt;
+&lt;p&gt;　Locally connected層は、重み共有をしない畳み込み層である（&lt;a href=&#34;https://code.google.com/p/cuda-convnet/wiki/LayerParams#Locally-connected_layer_with_unshared_weights&#34; target=&#34;_blank&#34;&gt;cuda-convnet&lt;/a&gt;）。&lt;/p&gt;
+&lt;p&gt;そこで、チュートリアルのモデルのFully connected層をConvolution層に置き換えたところ、学習が正常に行われなくなった。&lt;/p&gt;
+&lt;p&gt;　TensorBoardを通じてモデルの状態を確認したところ、conv2層で勾配消失が起きていることがわかった。さらに調査を続けると、conv2層のweightsの初期値がcuda-convnetに記載されている値と異なっており、修正することで正常に学習できるようになった（数値の食い違いが意図的なものかは不明だが、修正を&lt;a href=&#34;https://github.com/tensorflow/tensorflow/pull/2374&#34; target=&#34;_blank&#34;&gt;Pull Request&lt;/a&gt;している）。&lt;/p&gt;
+&lt;p&gt;　「重み共有（Shared weights/Tied weights）」をしないというLocally connectedの条件をTensorFlowでどのように実現するかは現時点でわかっていない。&lt;code&gt;depthwise_conv2d&lt;/code&gt;について検討したが、上手くいかないと判断している（出力フィルタの枚数を減らすことができないため）。&lt;/p&gt;
+&lt;p&gt;　エクササイズについては、今後も調査を続けていく。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>TensorFlowでGPUが使えない</title>
+      <link>https://blog.keiji.io/2016/05/cuda_error_no_device.html</link>
+      <pubDate>Fri, 06 May 2016 09:27:03 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2016/05/cuda_error_no_device.html</guid>
+      <description>&lt;h2 id=&#34;あわせて読みたい&#34;&gt;あわせて読みたい&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.kabuku.co.jp/developers/errors-with-tensorflow-on-gpu&#34;&gt;TensorFlow on DockerでGPUを使えるようにする方法 | 株式会社カブク&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.muo.jp/2016/05/nvidia-docker-tensorflow.html&#34;&gt;NVIDIA Dockerで簡単にGPU対応のTensorFlow入りコンテナを作る方法 | muo-notes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;概要&#34;&gt;概要&lt;/h2&gt;
+&lt;p&gt;　GPUマシンでTensorFlowを実行する際、CUDAもcuDNNも正常にセットアップできているのに、TensorFlowがGPUを認識しない（&lt;code&gt;CUDA_ERROR_NO_DEVICE&lt;/code&gt;や&lt;code&gt;No GPU devices available on machine.&lt;/code&gt;が表示される）場合、正しいディスプレイカード・ドライバがインストールされていない可能性があります。&lt;/p&gt;
+&lt;p&gt;　筆者の環境では、既存のドライバーをアンインストール（&lt;tt&gt;sudo apt-get remove &amp;ndash;purge nvidia*&lt;/tt&gt;）して、&lt;a href=&#34;http://www.nvidia.co.jp/Download/index.aspx?lang=jp&#34; target=&#34;_blank&#34;&gt;NVIDIAのサイト&lt;/a&gt;からドライバーをダウンロード・インストールすることでGPUを認識するようになりました。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

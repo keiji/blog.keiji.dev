@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+
+<meta name="google-site-verification" content="jLy-Sg3FFmjHr0ri0Rlq0Dd7CNY-Qx-eGpL5wk7gGYs" />
+<link rel="canonical" href="https://blog.keiji.io/2017/06/tensorflow_book2_ird.html">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>技術書典２に参加したら出版社から(ry - めがねをかけるんだ</title>
+    
+<meta name="description" content="&lt;p&gt;4月9日の&lt;a href=&#34;https://techbookfest.org/event/tbf02&#34;&gt;技術書典2&lt;/a&gt;、雨が降る中、辛抱強く並んでくださった一般参加者の皆さん、事故が起こらないように尽力してくださったスタッフの皆さん、本当にお疲れ様でした。&lt;/p&gt;&lt;p&gt;「&lt;a href=&#34;https://techbookfest.org/event/tbf02&#34;&gt;技術書典2&lt;/a&gt;」で頒布した「TensorFlowはじめました Super Resolution − 超解像」は現在、&lt;a href=&#34;http://amzn.to/2rDJwm4&#34;&gt;Amazonほかにて販売中です&lt;/a&gt;。&lt;/p&gt;&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2017/06/18675290_1470970782954084_694244058_o.jpg&#34; alt=&#34;18675290_1470970782954084_694244058_o&#34; width=&#34;50%&#34; height=&#34;50%&#34; class=&#34;aligncenter size-full wp-image-1589&#34; /&gt;&lt;/p&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;&lt;th style=&#34;text-align:left&#34;&gt;TensorFlowはじめました2 Super Resolution − 超解像&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;&lt;td style=&#34;text-align:left&#34;&gt;B5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;text-align:left&#34;&gt;ページ&lt;/td&gt;&lt;td style=&#34;text-align:left&#34;&gt;82ページ&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;text-align:left&#34;&gt;価格&lt;/td&gt;&lt;td style=&#34;text-align:left&#34;&gt;1,620円（Print On Demand）, 1,080円（電子書籍版）&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;&lt;td style=&#34;text-align:left&#34;&gt;インプレスR&amp;amp;D&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;">
+
+<meta property="og:title" content="技術書典２に参加したら出版社から(ry - めがねをかけるんだ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.keiji.io/2017/06/tensorflow_book2_ird.html">
+<meta property="og:image" content="https://blog.keiji.io/images/default.png">
+<meta property="og:site_name" content="めがねをかけるんだ">
+<meta property="og:description" content="&lt;p&gt;4月9日の&lt;a href=&#34;https://techbookfest.org/event/tbf02&#34;&gt;技術書典2&lt;/a&gt;、雨が降る中、辛抱強く並んでくださった一般参加者の皆さん、事故が起こらないように尽力してくださったスタッフの皆さん、本当にお疲れ様でした。&lt;/p&gt;&lt;p&gt;「&lt;a href=&#34;https://techbookfest.org/event/tbf02&#34;&gt;技術書典2&lt;/a&gt;」で頒布した「TensorFlowはじめました Super Resolution − 超解像」は現在、&lt;a href=&#34;http://amzn.to/2rDJwm4&#34;&gt;Amazonほかにて販売中です&lt;/a&gt;。&lt;/p&gt;&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2017/06/18675290_1470970782954084_694244058_o.jpg&#34; alt=&#34;18675290_1470970782954084_694244058_o&#34; width=&#34;50%&#34; height=&#34;50%&#34; class=&#34;aligncenter size-full wp-image-1589&#34; /&gt;&lt;/p&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;&lt;th style=&#34;text-align:left&#34;&gt;TensorFlowはじめました2 Super Resolution − 超解像&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;&lt;td style=&#34;text-align:left&#34;&gt;B5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;text-align:left&#34;&gt;ページ&lt;/td&gt;&lt;td style=&#34;text-align:left&#34;&gt;82ページ&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;text-align:left&#34;&gt;価格&lt;/td&gt;&lt;td style=&#34;text-align:left&#34;&gt;1,620円（Print On Demand）, 1,080円（電子書籍版）&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;&lt;td style=&#34;text-align:left&#34;&gt;インプレスR&amp;amp;D&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="めがねをかけるんだ">
+<meta name="twitter:url" content="https://blog.keiji.io/2017/06/tensorflow_book2_ird.html">
+<meta name="twitter:title" content="技術書典２に参加したら出版社から(ry - めがねをかけるんだ">
+<meta name="twitter:description" content="&lt;p&gt;4月9日の&lt;a href=&#34;https://techbookfest.org/event/tbf02&#34;&gt;技術書典2&lt;/a&gt;、雨が降る中、辛抱強く並んでくださった一般参加者の皆さん、事故が起こらないように尽力してくださったスタッフの皆さん、本当にお疲れ様でした。&lt;/p&gt;&lt;p&gt;「&lt;a href=&#34;https://techbookfest.org/event/tbf02&#34;&gt;技術書典2&lt;/a&gt;」で頒布した「TensorFlowはじめました Super Resolution − 超解像」は現在、&lt;a href=&#34;http://amzn.to/2rDJwm4&#34;&gt;Amazonほかにて販売中です&lt;/a&gt;。&lt;/p&gt;&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2017/06/18675290_1470970782954084_694244058_o.jpg&#34; alt=&#34;18675290_1470970782954084_694244058_o&#34; width=&#34;50%&#34; height=&#34;50%&#34; class=&#34;aligncenter size-full wp-image-1589&#34; /&gt;&lt;/p&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;&lt;th style=&#34;text-align:left&#34;&gt;TensorFlowはじめました2 Super Resolution − 超解像&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;&lt;td style=&#34;text-align:left&#34;&gt;B5&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;text-align:left&#34;&gt;ページ&lt;/td&gt;&lt;td style=&#34;text-align:left&#34;&gt;82ページ&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;text-align:left&#34;&gt;価格&lt;/td&gt;&lt;td style=&#34;text-align:left&#34;&gt;1,620円（Print On Demand）, 1,080円（電子書籍版）&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;&lt;td style=&#34;text-align:left&#34;&gt;インプレスR&amp;amp;D&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;">
+<meta name="twitter:image" content="https://blog.keiji.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.keiji.io\/"
+    },
+    "headline": "技術書典２に参加したら出版社から(ry - めがねをかけるんだ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.keiji.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2017-06-08T05:32:41JST",
+    "dateModified": "2017-06-08T05:32:41JST",
+    "author": {
+      "@type": "Person",
+      "name": "めがねをかけるんだ"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "めがねをかけるんだ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.keiji.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "\u003cp\u003e4月9日の\u003ca href=\u0022https:\/\/techbookfest.org\/event\/tbf02\u0022\u003e技術書典2\u003c\/a\u003e、雨が降る中、辛抱強く並んでくださった一般参加者の皆さん、事故が起こらないように尽力してくださったスタッフの皆さん、本当にお疲れ様でした。\u003c\/p\u003e\n\u003cp\u003e「\u003ca href=\u0022https:\/\/techbookfest.org\/event\/tbf02\u0022\u003e技術書典2\u003c\/a\u003e」で頒布した「TensorFlowはじめました Super Resolution − 超解像」は現在、\u003ca href=\u0022http:\/\/amzn.to\/2rDJwm4\u0022\u003eAmazonほかにて販売中です\u003c\/a\u003e。\u003c\/p\u003e\n\u003cp\u003e\u003cimg src=\u0022https:\/\/blog.keiji.dev\/wp-content\/uploads\/2017\/06\/18675290_1470970782954084_694244058_o.jpg\u0022 alt=\u002218675290_1470970782954084_694244058_o\u0022 width=\u002250%\u0022 height=\u002250%\u0022 class=\u0022aligncenter size-full wp-image-1589\u0022 \/\u003e\u003c\/p\u003e\n\u003ctable\u003e\n\u003cthead\u003e\n\u003ctr\u003e\n\u003cth style=\u0022text-align:left\u0022\u003eタイトル\u003c\/th\u003e\n\u003cth style=\u0022text-align:left\u0022\u003eTensorFlowはじめました2 Super Resolution − 超解像\u003c\/th\u003e\n\u003c\/tr\u003e\n\u003c\/thead\u003e\n\u003ctbody\u003e\n\u003ctr\u003e\n\u003ctd style=\u0022text-align:left\u0022\u003e判型\u003c\/td\u003e\n\u003ctd style=\u0022text-align:left\u0022\u003eB5\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\u0022text-align:left\u0022\u003eページ\u003c\/td\u003e\n\u003ctd style=\u0022text-align:left\u0022\u003e82ページ\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\u0022text-align:left\u0022\u003e価格\u003c\/td\u003e\n\u003ctd style=\u0022text-align:left\u0022\u003e1,620円（Print On Demand）, 1,080円（電子書籍版）\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003ctr\u003e\n\u003ctd style=\u0022text-align:left\u0022\u003e発行\u003c\/td\u003e\n\u003ctd style=\u0022text-align:left\u0022\u003eインプレスR\u0026amp;D\u003c\/td\u003e\n\u003c\/tr\u003e\n\u003c\/tbody\u003e\n\u003c\/table\u003e"
+  }
+</script>
+
+
+    <link href="https://blog.keiji.io/css/styles.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/default.css">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/typesquare.css">
+    
+
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-62351683-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://blog.keiji.io/">めがねをかけるんだ</a>
+          </div>
+
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="https://blog.keiji.io/profile/">Profile</a></li>
+              
+              
+            </ul>
+            
+          </div>
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://blog.keiji.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.keiji.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">技術書典２に参加したら出版社から(ry</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-06-08T05:32:41JST">2017-06-08</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.keiji.io/post/">post</a></li>
+      
+    </ul>
+
+    <h1 class="title">技術書典２に参加したら出版社から(ry</h1>
+  </header>
+
+  
+
+  <div class="article-body"><p>4月9日の<a href="https://techbookfest.org/event/tbf02">技術書典2</a>、雨が降る中、辛抱強く並んでくださった一般参加者の皆さん、事故が起こらないように尽力してくださったスタッフの皆さん、本当にお疲れ様でした。</p>
+<p>「<a href="https://techbookfest.org/event/tbf02">技術書典2</a>」で頒布した「TensorFlowはじめました Super Resolution − 超解像」は現在、<a href="http://amzn.to/2rDJwm4">Amazonほかにて販売中です</a>。</p>
+<p><img src="https://blog.keiji.dev/wp-content/uploads/2017/06/18675290_1470970782954084_694244058_o.jpg" alt="18675290_1470970782954084_694244058_o" width="50%" height="50%" class="aligncenter size-full wp-image-1589" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">タイトル</th>
+<th style="text-align:left">TensorFlowはじめました2 Super Resolution − 超解像</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">判型</td>
+<td style="text-align:left">B5</td>
+</tr>
+<tr>
+<td style="text-align:left">ページ</td>
+<td style="text-align:left">82ページ</td>
+</tr>
+<tr>
+<td style="text-align:left">価格</td>
+<td style="text-align:left">1,620円（Print On Demand）, 1,080円（電子書籍版）</td>
+</tr>
+<tr>
+<td style="text-align:left">発行</td>
+<td style="text-align:left">インプレスR&amp;D</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://blog.keiji.dev/2016/07/tensorflow_book_ird.html">前回</a>に引き続きインプレスR&amp;Dさんによる書籍化です。</p>
+<p>今回、非常にスムーズに編集が進みました。</p>
+<p>これは、ぼくがどうこうしたからではなく、編集さんがRe:VIEWに慣れてきたというのが大きいです。ただ、Pythonのコードはインデントがずれるともう動きません。ここだけは紙面に収まるように、ぼくが頑張って調整しました。</p>
+<h2 id="同人誌版との違い">同人誌版との違い</h2>
+<p>あと、同人誌版は本文墨刷でしたが、（電子書籍はもとより）Amazon PODはカラー印刷ができると言うことなので、後半はカラー（RGB ３チャンネル）画像をサンプルにしたものに差し替えています。</p>
+<p>同人誌版を手に入れたという人も、安心してお買い求めください！</p>
+<h3 id="販売チャンネル">販売チャンネル</h3>
+<p>POD(Print On Demand)または電子書籍での販売になります。一般書店では手に入りませんのでご注意ください（三省堂本店にはPrint On Demandの機材があるため、POD版の発売以降であれば店頭での購入が可能です）。</p>
+<ul>
+<li>EPUB版
+<ul>
+<li><a href="http://amzn.to/2rDJwm4">Amazon Kindle</a></li>
+<li><a href="https://books.google.co.jp/books/about/TensorFlow%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%92_%E6%A9%9F%E6%A2%B0.html?id=egMlDwAAQBAJ&amp;redir_esc=y">Books on Google Play</a></li>
+<li><a href="https://bookstore.yahoo.co.jp/shoshi-779055/">Yahooブックストア</a></li>
+<li><a href="https://itunes.apple.com/jp/book/tensorflow%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F2-%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E3%81%A7%E8%B6%85%E8%A7%A3%E5%83%8F-super-resolution/id1240582039?mt=11">iBooks</a></li>
+<li><a href="http://books.rakuten.co.jp/rk/f33204ceb3de3543900fd1364715eb6a/">楽天Kobo</a></li>
+<li><a href="https://ebookstore.sony.jp/item/LT000078010000663393/">Reader Store</a></li>
+<li><a href="https://booklive.jp/product/index/title_id/388257/vol_no/002">BookLive</a></li>
+<li><a href="https://honto.jp/ebook/pd_28519004.html">honto</a></li>
+<li><a href="https://www.kinokuniya.co.jp/f/dsg-08-EK-0436788">Kinoppy</a></li>
+<li><a href="https://bookwalker.jp/de32b7b073-b63e-46ab-9ac6-1f5e82e7227e/">BookWalker</a></li>
+</ul>
+</li>
+<li>書籍（POD）版
+<ul>
+<li><a href="http://amzn.to/2rDJwm4">Amazon</a></li>
+<li>三省堂本店</li>
+</ul>
+</li>
+<li>PDF版
+<ul>
+<li><a href="https://tatsu-zine.com/books/tensorflow-hajimemashita2">達人出版会</a></li>
+</ul>
+</li>
+</ul></div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://blog.keiji.io/categories/tensorflow/">TensorFlow</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/">イベント</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+        
+          <a href="https://blog.keiji.io/2020/08/mangaview.html" class="list-group-item">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html" class="list-group-item">ELEGOO MARSの出力精度の改善</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/04/techbookfest6.html" class="list-group-item">技術書典6でMLOps本「巡りあえないConcourse」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html" class="list-group-item">Gehirn RS2 Plusに引っ越しした</a>
+        
+      
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html" class="list-group-item">いまNN API（TensorFlow Lite）は使えるのか</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/look_back_techbookfest4.html" class="list-group-item">技術書典4に参加してきました</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-2.html" class="list-group-item">技術書典4で「本当はおそろしい商業出版！？」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-1.html" class="list-group-item">技術書典4でML Ops（TensorFlow）の本を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/01/meganeco_playground.html" class="list-group-item">機械学習のモデルを試せるサイトを作った話</a>
+        
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98" class="list-group-item">雑記</a>
+      
+      <a href="https://blog.keiji.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="list-group-item">イベント</a>
+      
+      <a href="https://blog.keiji.io/categories/tensorflow" class="list-group-item">tensorflow</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2" class="list-group-item">メモ</a>
+      
+      <a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C" class="list-group-item">習作</a>
+      
+      <a href="https://blog.keiji.io/categories/aosp" class="list-group-item">aosp</a>
+      
+      <a href="https://blog.keiji.io/categories/adk" class="list-group-item">adk</a>
+      
+      <a href="https://blog.keiji.io/categories/de0" class="list-group-item">de0</a>
+      
+      <a href="https://blog.keiji.io/categories/fpga" class="list-group-item">fpga</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>Keiji ARIYAMA All rights reserved.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p>Original <a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> theme is designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ZwBLIZTRHGg%3d&fadein=500" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+
+<meta name="google-site-verification" content="jLy-Sg3FFmjHr0ri0Rlq0Dd7CNY-Qx-eGpL5wk7gGYs" />
+<link rel="canonical" href="https://blog.keiji.io/2013/02/newdraw9patchtool.html">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>新しい&#34;Draw 9-patch Tool&#34;を公開しました。 - めがねをかけるんだ</title>
+    
+<meta name="description" content="&lt;p&gt;最近、「有山さんはもう&lt;strong&gt;Makers&lt;/strong&gt;の方に行っちゃったんだね。Androidはもうやってないんだよね」「いやいや、もちろんやってますよ。&lt;strong&gt;Android&lt;/strong&gt;」と言う会話があったので。&lt;/p&gt;&lt;p&gt;Android SDKに同梱されている”&lt;strong&gt;Draw 9-patch Tool&lt;/strong&gt;“を、SWTをベースにリライトして、Eclipseのプラグインにしたので公開します。&lt;/p&gt;&lt;div style=&#34;text-align: center;&#34;&gt;  &lt;p&gt;    &lt;span style=&#34;text-decoration: underline;&#34;&gt;このプラグインを使えば、開発者は、Eclipseの中だけで9-patch画像の作成や編集が出来ます。&lt;/span&gt;  &lt;/p&gt;&lt;/div&gt;&lt;div&gt;  &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg&#34;&gt;&lt;img class=&#34;wp-image-53 aligncenter&#34; alt=&#34;Screen Shot 2013-02-10 at 3.43.04 PM&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg&#34; width=&#34;442&#34; height=&#34;260&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;p&gt;これまでは、Facebook/Twitter/Google&#43;で、知り合い向けに公開していたのですが、もう少し公開範囲を広げることにしました。&lt;/p&gt;&lt;p&gt;&lt;em id=&#34;__mceDel&#34;&gt;開発してまだ日が浅いので、Windows/Mac/Linuxの違い、Eclipseのバージョンの違いなどによって、不具合がある可能性があります。&lt;br /&gt; 不具合を見つけた方は、是非ともフィードバックしてください。&lt;/em&gt;&lt;/p&gt;&lt;p&gt;フィードバックは、&lt;a href=&#34;http://www.facebook.com/keiji.ariyama&#34; target=&#34;_blank&#34;&gt;Facebook&lt;/a&gt;/Twitter/&lt;a href=&#34;https://plus.google.com/101075618639637989227?authuser=0&#34; target=&#34;_blank&#34;&gt;Google&#43;&lt;/a&gt;、その他どんな手段でも構いません。宜しくお願いいたします。&lt;/p&gt;&lt;h2 id=&#34;ダウンロード利用方法&#34;&gt;ダウンロード＆利用方法&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;draw9patch tool for Eclipse plugin &lt;span&gt;(MD5: 09b952ceea11d9d59984ad5d004b422d)&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/keiji/draw9patch2/blob/master/bin/Draw9PatchPlugin.zip&#34;&gt;https://github.com/keiji/draw9patch2/blob/master/bin/Draw9PatchPlugin.zip&lt;/a&gt;&lt;/p&gt;&lt;p&gt;zipを展開して、pluginsの中の”Draw9PatchEditor_*.jar”を、お使いのEclipseのpluginsディレクトリにコピーして下さい（Eclipseの再起動が必要です）。&lt;/p&gt;&lt;p&gt;Eclipseの再起動後、パッケージエクスプローラーから、pngファイル(&lt;em&gt;e.g. “res/drawable-hdpi/ic_launcher.png”&lt;/em&gt;)をダブルクリックすると、”Draw 9-patch Tool”が起動します。&lt;/p&gt;&lt;table cellspacing=&#34;0&#34; cellpadding=&#34;0&#34; align=&#34;center&#34;&gt;  &lt;tr&gt;    &lt;td&gt;      &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg&#34;&gt;&lt;img class=&#34;wp-image-60 aligncenter&#34; alt=&#34;Screen Shot 2013-02-10 at 4.00.32 PM&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg&#34; width=&#34;450&#34; height=&#34;273&#34; /&gt;&lt;/a&gt;    &lt;/td&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td style=&#34;text-align: center;&#34;&gt;      &lt;span&gt;この画像中のモザイクは、&lt;br /&gt; Pixelmatorで処理しました。&lt;/span&gt;    &lt;/td&gt;  &lt;/tr&gt;&lt;/table&gt;">
+
+<meta property="og:title" content="新しい&#34;Draw 9-patch Tool&#34;を公開しました。 - めがねをかけるんだ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.keiji.io/2013/02/newdraw9patchtool.html">
+<meta property="og:image" content="https://blog.keiji.io/images/default.png">
+<meta property="og:site_name" content="めがねをかけるんだ">
+<meta property="og:description" content="&lt;p&gt;最近、「有山さんはもう&lt;strong&gt;Makers&lt;/strong&gt;の方に行っちゃったんだね。Androidはもうやってないんだよね」「いやいや、もちろんやってますよ。&lt;strong&gt;Android&lt;/strong&gt;」と言う会話があったので。&lt;/p&gt;&lt;p&gt;Android SDKに同梱されている”&lt;strong&gt;Draw 9-patch Tool&lt;/strong&gt;“を、SWTをベースにリライトして、Eclipseのプラグインにしたので公開します。&lt;/p&gt;&lt;div style=&#34;text-align: center;&#34;&gt;  &lt;p&gt;    &lt;span style=&#34;text-decoration: underline;&#34;&gt;このプラグインを使えば、開発者は、Eclipseの中だけで9-patch画像の作成や編集が出来ます。&lt;/span&gt;  &lt;/p&gt;&lt;/div&gt;&lt;div&gt;  &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg&#34;&gt;&lt;img class=&#34;wp-image-53 aligncenter&#34; alt=&#34;Screen Shot 2013-02-10 at 3.43.04 PM&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg&#34; width=&#34;442&#34; height=&#34;260&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;p&gt;これまでは、Facebook/Twitter/Google&#43;で、知り合い向けに公開していたのですが、もう少し公開範囲を広げることにしました。&lt;/p&gt;&lt;p&gt;&lt;em id=&#34;__mceDel&#34;&gt;開発してまだ日が浅いので、Windows/Mac/Linuxの違い、Eclipseのバージョンの違いなどによって、不具合がある可能性があります。&lt;br /&gt; 不具合を見つけた方は、是非ともフィードバックしてください。&lt;/em&gt;&lt;/p&gt;&lt;p&gt;フィードバックは、&lt;a href=&#34;http://www.facebook.com/keiji.ariyama&#34; target=&#34;_blank&#34;&gt;Facebook&lt;/a&gt;/Twitter/&lt;a href=&#34;https://plus.google.com/101075618639637989227?authuser=0&#34; target=&#34;_blank&#34;&gt;Google&#43;&lt;/a&gt;、その他どんな手段でも構いません。宜しくお願いいたします。&lt;/p&gt;&lt;h2 id=&#34;ダウンロード利用方法&#34;&gt;ダウンロード＆利用方法&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;draw9patch tool for Eclipse plugin &lt;span&gt;(MD5: 09b952ceea11d9d59984ad5d004b422d)&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/keiji/draw9patch2/blob/master/bin/Draw9PatchPlugin.zip&#34;&gt;https://github.com/keiji/draw9patch2/blob/master/bin/Draw9PatchPlugin.zip&lt;/a&gt;&lt;/p&gt;&lt;p&gt;zipを展開して、pluginsの中の”Draw9PatchEditor_*.jar”を、お使いのEclipseのpluginsディレクトリにコピーして下さい（Eclipseの再起動が必要です）。&lt;/p&gt;&lt;p&gt;Eclipseの再起動後、パッケージエクスプローラーから、pngファイル(&lt;em&gt;e.g. “res/drawable-hdpi/ic_launcher.png”&lt;/em&gt;)をダブルクリックすると、”Draw 9-patch Tool”が起動します。&lt;/p&gt;&lt;table cellspacing=&#34;0&#34; cellpadding=&#34;0&#34; align=&#34;center&#34;&gt;  &lt;tr&gt;    &lt;td&gt;      &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg&#34;&gt;&lt;img class=&#34;wp-image-60 aligncenter&#34; alt=&#34;Screen Shot 2013-02-10 at 4.00.32 PM&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg&#34; width=&#34;450&#34; height=&#34;273&#34; /&gt;&lt;/a&gt;    &lt;/td&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td style=&#34;text-align: center;&#34;&gt;      &lt;span&gt;この画像中のモザイクは、&lt;br /&gt; Pixelmatorで処理しました。&lt;/span&gt;    &lt;/td&gt;  &lt;/tr&gt;&lt;/table&gt;">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="めがねをかけるんだ">
+<meta name="twitter:url" content="https://blog.keiji.io/2013/02/newdraw9patchtool.html">
+<meta name="twitter:title" content="新しい&#34;Draw 9-patch Tool&#34;を公開しました。 - めがねをかけるんだ">
+<meta name="twitter:description" content="&lt;p&gt;最近、「有山さんはもう&lt;strong&gt;Makers&lt;/strong&gt;の方に行っちゃったんだね。Androidはもうやってないんだよね」「いやいや、もちろんやってますよ。&lt;strong&gt;Android&lt;/strong&gt;」と言う会話があったので。&lt;/p&gt;&lt;p&gt;Android SDKに同梱されている”&lt;strong&gt;Draw 9-patch Tool&lt;/strong&gt;“を、SWTをベースにリライトして、Eclipseのプラグインにしたので公開します。&lt;/p&gt;&lt;div style=&#34;text-align: center;&#34;&gt;  &lt;p&gt;    &lt;span style=&#34;text-decoration: underline;&#34;&gt;このプラグインを使えば、開発者は、Eclipseの中だけで9-patch画像の作成や編集が出来ます。&lt;/span&gt;  &lt;/p&gt;&lt;/div&gt;&lt;div&gt;  &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg&#34;&gt;&lt;img class=&#34;wp-image-53 aligncenter&#34; alt=&#34;Screen Shot 2013-02-10 at 3.43.04 PM&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg&#34; width=&#34;442&#34; height=&#34;260&#34; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;p&gt;これまでは、Facebook/Twitter/Google&#43;で、知り合い向けに公開していたのですが、もう少し公開範囲を広げることにしました。&lt;/p&gt;&lt;p&gt;&lt;em id=&#34;__mceDel&#34;&gt;開発してまだ日が浅いので、Windows/Mac/Linuxの違い、Eclipseのバージョンの違いなどによって、不具合がある可能性があります。&lt;br /&gt; 不具合を見つけた方は、是非ともフィードバックしてください。&lt;/em&gt;&lt;/p&gt;&lt;p&gt;フィードバックは、&lt;a href=&#34;http://www.facebook.com/keiji.ariyama&#34; target=&#34;_blank&#34;&gt;Facebook&lt;/a&gt;/Twitter/&lt;a href=&#34;https://plus.google.com/101075618639637989227?authuser=0&#34; target=&#34;_blank&#34;&gt;Google&#43;&lt;/a&gt;、その他どんな手段でも構いません。宜しくお願いいたします。&lt;/p&gt;&lt;h2 id=&#34;ダウンロード利用方法&#34;&gt;ダウンロード＆利用方法&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;draw9patch tool for Eclipse plugin &lt;span&gt;(MD5: 09b952ceea11d9d59984ad5d004b422d)&lt;/span&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/keiji/draw9patch2/blob/master/bin/Draw9PatchPlugin.zip&#34;&gt;https://github.com/keiji/draw9patch2/blob/master/bin/Draw9PatchPlugin.zip&lt;/a&gt;&lt;/p&gt;&lt;p&gt;zipを展開して、pluginsの中の”Draw9PatchEditor_*.jar”を、お使いのEclipseのpluginsディレクトリにコピーして下さい（Eclipseの再起動が必要です）。&lt;/p&gt;&lt;p&gt;Eclipseの再起動後、パッケージエクスプローラーから、pngファイル(&lt;em&gt;e.g. “res/drawable-hdpi/ic_launcher.png”&lt;/em&gt;)をダブルクリックすると、”Draw 9-patch Tool”が起動します。&lt;/p&gt;&lt;table cellspacing=&#34;0&#34; cellpadding=&#34;0&#34; align=&#34;center&#34;&gt;  &lt;tr&gt;    &lt;td&gt;      &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg&#34;&gt;&lt;img class=&#34;wp-image-60 aligncenter&#34; alt=&#34;Screen Shot 2013-02-10 at 4.00.32 PM&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg&#34; width=&#34;450&#34; height=&#34;273&#34; /&gt;&lt;/a&gt;    &lt;/td&gt;  &lt;/tr&gt;  &lt;tr&gt;    &lt;td style=&#34;text-align: center;&#34;&gt;      &lt;span&gt;この画像中のモザイクは、&lt;br /&gt; Pixelmatorで処理しました。&lt;/span&gt;    &lt;/td&gt;  &lt;/tr&gt;&lt;/table&gt;">
+<meta name="twitter:image" content="https://blog.keiji.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.keiji.io\/"
+    },
+    "headline": "新しい\u0022Draw 9-patch Tool\u0022を公開しました。 - めがねをかけるんだ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.keiji.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2013-02-10T08:22:00JST",
+    "dateModified": "2013-02-10T08:22:00JST",
+    "author": {
+      "@type": "Person",
+      "name": "めがねをかけるんだ"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "めがねをかけるんだ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.keiji.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "\u003cp\u003e最近、「有山さんはもう\u003cstrong\u003eMakers\u003c\/strong\u003eの方に行っちゃったんだね。Androidはもうやってないんだよね」「いやいや、もちろんやってますよ。\u003cstrong\u003eAndroid\u003c\/strong\u003e」と言う会話があったので。\u003c\/p\u003e\n\u003cp\u003eAndroid SDKに同梱されている”\u003cstrong\u003eDraw 9-patch Tool\u003c\/strong\u003e“を、SWTをベースにリライトして、Eclipseのプラグインにしたので公開します。\u003c\/p\u003e\n\u003cdiv style=\u0022text-align: center;\u0022\u003e\n  \u003cp\u003e\n    \u003cspan style=\u0022text-decoration: underline;\u0022\u003eこのプラグインを使えば、開発者は、Eclipseの中だけで9-patch画像の作成や編集が出来ます。\u003c\/span\u003e\n  \u003c\/p\u003e\n\u003c\/div\u003e\n\u003cdiv\u003e\n  \u003ca href=\u0022https:\/\/blog.keiji.dev\/wp-content\/uploads\/2013\/02\/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg\u0022\u003e\u003cimg class=\u0022wp-image-53 aligncenter\u0022 alt=\u0022Screen Shot 2013-02-10 at 3.43.04 PM\u0022 src=\u0022https:\/\/blog.keiji.dev\/wp-content\/uploads\/2013\/02\/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg\u0022 width=\u0022442\u0022 height=\u0022260\u0022 \/\u003e\u003c\/a\u003e\n\u003c\/div\u003e\n\u003cp\u003eこれまでは、Facebook\/Twitter\/Google\u002bで、知り合い向けに公開していたのですが、もう少し公開範囲を広げることにしました。\u003c\/p\u003e\n\u003cp\u003e\u003cem id=\u0022__mceDel\u0022\u003e開発してまだ日が浅いので、Windows\/Mac\/Linuxの違い、Eclipseのバージョンの違いなどによって、不具合がある可能性があります。\u003cbr \/\u003e 不具合を見つけた方は、是非ともフィードバックしてください。\u003c\/em\u003e\u003c\/p\u003e\n\u003cp\u003eフィードバックは、\u003ca href=\u0022http:\/\/www.facebook.com\/keiji.ariyama\u0022 target=\u0022_blank\u0022\u003eFacebook\u003c\/a\u003e\/Twitter\/\u003ca href=\u0022https:\/\/plus.google.com\/101075618639637989227?authuser=0\u0022 target=\u0022_blank\u0022\u003eGoogle\u002b\u003c\/a\u003e、その他どんな手段でも構いません。宜しくお願いいたします。\u003c\/p\u003e\n\u003ch2 id=\u0022ダウンロード利用方法\u0022\u003eダウンロード＆利用方法\u003c\/h2\u003e\n\u003cp\u003e\u003cstrong\u003edraw9patch tool for Eclipse plugin \u003cspan\u003e(MD5: 09b952ceea11d9d59984ad5d004b422d)\u003c\/span\u003e\u003c\/strong\u003e\u003c\/p\u003e\n\u003cp\u003e\u003ca href=\u0022https:\/\/github.com\/keiji\/draw9patch2\/blob\/master\/bin\/Draw9PatchPlugin.zip\u0022\u003ehttps:\/\/github.com\/keiji\/draw9patch2\/blob\/master\/bin\/Draw9PatchPlugin.zip\u003c\/a\u003e\u003c\/p\u003e\n\u003cp\u003ezipを展開して、pluginsの中の”Draw9PatchEditor_*.jar”を、お使いのEclipseのpluginsディレクトリにコピーして下さい（Eclipseの再起動が必要です）。\u003c\/p\u003e\n\u003cp\u003eEclipseの再起動後、パッケージエクスプローラーから、pngファイル(\u003cem\u003ee.g. “res\/drawable-hdpi\/ic_launcher.png”\u003c\/em\u003e)をダブルクリックすると、”Draw 9-patch Tool”が起動します。\u003c\/p\u003e\n\u003ctable cellspacing=\u00220\u0022 cellpadding=\u00220\u0022 align=\u0022center\u0022\u003e\n  \u003ctr\u003e\n    \u003ctd\u003e\n      \u003ca href=\u0022https:\/\/blog.keiji.dev\/wp-content\/uploads\/2013\/02\/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg\u0022\u003e\u003cimg class=\u0022wp-image-60 aligncenter\u0022 alt=\u0022Screen Shot 2013-02-10 at 4.00.32 PM\u0022 src=\u0022https:\/\/blog.keiji.dev\/wp-content\/uploads\/2013\/02\/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg\u0022 width=\u0022450\u0022 height=\u0022273\u0022 \/\u003e\u003c\/a\u003e\n    \u003c\/td\u003e\n  \u003c\/tr\u003e\n  \u003ctr\u003e\n    \u003ctd style=\u0022text-align: center;\u0022\u003e\n      \u003cspan\u003eこの画像中のモザイクは、\u003cbr \/\u003e Pixelmatorで処理しました。\u003c\/span\u003e\n    \u003c\/td\u003e\n  \u003c\/tr\u003e\n\u003c\/table\u003e"
+  }
+</script>
+
+
+    <link href="https://blog.keiji.io/css/styles.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/default.css">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/typesquare.css">
+    
+
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-62351683-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://blog.keiji.io/">めがねをかけるんだ</a>
+          </div>
+
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="https://blog.keiji.io/profile/">Profile</a></li>
+              
+              
+            </ul>
+            
+          </div>
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://blog.keiji.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.keiji.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">新しい&#34;Draw 9-patch Tool&#34;を公開しました。</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2013-02-10T08:22:00JST">2013-02-10</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.keiji.io/post/">post</a></li>
+      
+    </ul>
+
+    <h1 class="title">新しい&#34;Draw 9-patch Tool&#34;を公開しました。</h1>
+  </header>
+
+  
+
+  <div class="article-body"><p>最近、「有山さんはもう<strong>Makers</strong>の方に行っちゃったんだね。Androidはもうやってないんだよね」「いやいや、もちろんやってますよ。<strong>Android</strong>」と言う会話があったので。</p>
+<p>Android SDKに同梱されている”<strong>Draw 9-patch Tool</strong>“を、SWTをベースにリライトして、Eclipseのプラグインにしたので公開します。</p>
+<div style="text-align: center;">
+  <p>
+    <span style="text-decoration: underline;">このプラグインを使えば、開発者は、Eclipseの中だけで9-patch画像の作成や編集が出来ます。</span>
+  </p>
+</div>
+<div>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg"><img class="wp-image-53 aligncenter" alt="Screen Shot 2013-02-10 at 3.43.04 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg" width="442" height="260" /></a>
+</div>
+<p>これまでは、Facebook/Twitter/Google+で、知り合い向けに公開していたのですが、もう少し公開範囲を広げることにしました。</p>
+<p><em id="__mceDel">開発してまだ日が浅いので、Windows/Mac/Linuxの違い、Eclipseのバージョンの違いなどによって、不具合がある可能性があります。<br /> 不具合を見つけた方は、是非ともフィードバックしてください。</em></p>
+<p>フィードバックは、<a href="http://www.facebook.com/keiji.ariyama" target="_blank">Facebook</a>/Twitter/<a href="https://plus.google.com/101075618639637989227?authuser=0" target="_blank">Google+</a>、その他どんな手段でも構いません。宜しくお願いいたします。</p>
+<h2 id="ダウンロード利用方法">ダウンロード＆利用方法</h2>
+<p><strong>draw9patch tool for Eclipse plugin <span>(MD5: 09b952ceea11d9d59984ad5d004b422d)</span></strong></p>
+<p><a href="https://github.com/keiji/draw9patch2/blob/master/bin/Draw9PatchPlugin.zip">https://github.com/keiji/draw9patch2/blob/master/bin/Draw9PatchPlugin.zip</a></p>
+<p>zipを展開して、pluginsの中の”Draw9PatchEditor_*.jar”を、お使いのEclipseのpluginsディレクトリにコピーして下さい（Eclipseの再起動が必要です）。</p>
+<p>Eclipseの再起動後、パッケージエクスプローラーから、pngファイル(<em>e.g. “res/drawable-hdpi/ic_launcher.png”</em>)をダブルクリックすると、”Draw 9-patch Tool”が起動します。</p>
+<table cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg"><img class="wp-image-60 aligncenter" alt="Screen Shot 2013-02-10 at 4.00.32 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg" width="450" height="273" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">
+      <span>この画像中のモザイクは、<br /> Pixelmatorで処理しました。</span>
+    </td>
+  </tr>
+</table>
+<h2 id="9-patchとは">9-patchとは？</h2>
+<p>皆さんご存じの通り、Androidは、様々な解像度の端末にアプリを配信することになります。したがって、アプリで表示する画像は、解像度を決めうちで作ることは推奨されていません（参考: <strong><a href="http://developer.android.com/tools/help/draw9patch.html" target="_blank">Android Developers: Draw 9-patch</a>)</strong></p>
+<p>しかし、小さな画像を拡大して表示するときに、全体を引き延ばすと、画像自体がぼやけてしまいます。</p>
+<div>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.53.34-PM.png"><img class="aligncenter  wp-image-61" alt="Screen Shot 2013-02-10 at 3.53.34 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.53.34-PM.png" width="139" height="316" /></a>
+</div>
+<p>そのため、引き延ばす範囲をあらかじめ設定しておくと、Androidは、指定した範囲を引き延ばして表示します。</p>
+<p>この、引き延ばす範囲を指定する作業を「パッチを当てる」と、言い、”Draw 9-patch Tool”はそのためにあります。</p>
+<div>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.47.17-PM.jpg"><img class="aligncenter  wp-image-62" alt="Screen Shot 2013-02-10 at 3.47.17 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.47.17-PM.jpg" width="346" height="203" /></a>
+</div>
+<p>また、画像の上に文字を表示する場合など、どの部分に文字を載せたいのか（パディング）を設定することも出来ます（右側青色部分）。</p>
+<p>パッチとパディングは、画像の一番外側に黒いドットを置いて設定します。</p>
+<p>パッチをパディングを設定したファイルは、実体はpng画像のデータです。拡張子を”.9.png”とすることで、Androidは、その画像が”9-patched”であると認識します。</p>
+<h2 id="現在のdraw-9-patch-tool">現在のDraw 9-patch Tool</h2>
+<p>現在、Android SDKに同梱のDraw 9-patchツールは、スタンドアローンのアプリケーションとして動作します。</p>
+<div>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.48.51-PM.jpg"><img class="aligncenter  wp-image-63" alt="Screen Shot 2013-02-10 at 3.48.51 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.48.51-PM.jpg" width="346" height="203" /></a>
+</div>
+<p>AWT&amp;Swingベースで開発されており、現在のEclipseプラグイン”ADT(Android Development Tools)”には取り込まれていません。そのため、開発者は、Eclipseだけで作業を完結することが出来ませんでした。</p>
+<p>また、このツールには、いくつかの不具合が報告されていますが、Android登場から6年間、ほとんど改善されていません。</p>
+<table cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.34.01-PM.jpg"><img class="aligncenter  wp-image-64" alt="Screen Shot 2013-02-10 at 3.34.01 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.34.01-PM.jpg" width="346" height="203" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">
+      不具合の1つ。<br /> 画像の読み込み直後に中央に表示されない
+    </td>
+  </tr>
+</table>
+<p>僕もいくつか不具合修正のパッチを作成して、AOSP(Android Open Source Project)にサブミットしたことがあります。</p>
+<p>しかし、現在の設計は、クラスの分割が十分でなく、またテストケースが用意されていないために大きな変更に踏み切れず。根本的な解決には至りませんでした。</p>
+<p>Google I/Oで、開発ツールの担当であるTor Norbyeと、Xavier Ducrohetに会ったときに、”<strong>Draw 9-patch toolは誰がメンテナンスしているの？</strong>“と、聞いたことがあります。</p>
+<p>その答えは、”<strong>Nobody knows…</strong>“でした。</p>
+<h2 id="新しいdraw-9-patch-tool">新しいDraw 9-patch Tool</h2>
+<p>今回、新しい”Draw 9-patch Tool”は、SWT(Standard Widget Toolkit)ベースで開発しています。</p>
+<div>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.54-PM.png"><img class="aligncenter  wp-image-65" alt="Screen Shot 2013-02-10 at 3.43.54 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.54-PM.png" width="346" height="202" /></a>
+</div>
+<p>これまで と同様、スタンドアローンで動作するのに加えて、SWTベースなので、Eclipseのプラグインにも比較的容易に移植できました。</p>
+<table cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM-1.jpg"><img class="aligncenter  wp-image-66" alt="Screen Shot 2013-02-10 at 4.00.32 PM (1)" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM-1.jpg" width="346" height="210" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">
+      <span>この画像中のモザイクは、<br /> Pixelmatorで処理しました。</span>
+    </td>
+  </tr>
+</table>
+<p>プラグイン化することで、開発者は、Eclipseの中だけでパッチやパディングを設定した画像の作成や編集をすることが出来ます。</p>
+<p>現在の”Draw 9-patch Tool”の不具合は、知りうる限り、全て修正してあります。</p>
+<p>また、クラス分割の徹底と、JUnitのテストケースを用意することで、コード変更への強度を高めました。</p>
+<p>新しいDraw 9-patchのコードは、現在、AOSPへサブミットしてレビュー待ちの状態です。これがもしAOSPに取り込まれれば、正式なAndroid開発ツールとして、開発者の皆さんのお手元に届くかもしれません。</p>
+<p>しかし、繰り返しになりますが、開発してまだ日が浅いツールなので、Windows/Mac/Linuxの違い、Eclipseのバージョンの違いなどによって、不具合がある可能性があります。</p>
+<p>不具合を見つけた方は、是非ともフィードバックしてください。</p>
+<p>フィードバックは、<a href="http://www.facebook.com/keiji.ariyama" target="_blank">Facebook</a>/Twitter/<a href="https://plus.google.com/101075618639637989227?authuser=0" target="_blank">Google+</a>、その他どんな手段でも構いません。宜しくお願いいたします。</p>
+<div>
+</div></div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://blog.keiji.io/categories/android/">Android</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/aosp/">AOSP</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C/">習作</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+        
+          <a href="https://blog.keiji.io/2020/08/mangaview.html" class="list-group-item">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html" class="list-group-item">ELEGOO MARSの出力精度の改善</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/04/techbookfest6.html" class="list-group-item">技術書典6でMLOps本「巡りあえないConcourse」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html" class="list-group-item">Gehirn RS2 Plusに引っ越しした</a>
+        
+      
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html" class="list-group-item">いまNN API（TensorFlow Lite）は使えるのか</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/look_back_techbookfest4.html" class="list-group-item">技術書典4に参加してきました</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-2.html" class="list-group-item">技術書典4で「本当はおそろしい商業出版！？」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-1.html" class="list-group-item">技術書典4でML Ops（TensorFlow）の本を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/01/meganeco_playground.html" class="list-group-item">機械学習のモデルを試せるサイトを作った話</a>
+        
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98" class="list-group-item">雑記</a>
+      
+      <a href="https://blog.keiji.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="list-group-item">イベント</a>
+      
+      <a href="https://blog.keiji.io/categories/tensorflow" class="list-group-item">tensorflow</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2" class="list-group-item">メモ</a>
+      
+      <a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C" class="list-group-item">習作</a>
+      
+      <a href="https://blog.keiji.io/categories/aosp" class="list-group-item">aosp</a>
+      
+      <a href="https://blog.keiji.io/categories/adk" class="list-group-item">adk</a>
+      
+      <a href="https://blog.keiji.io/categories/de0" class="list-group-item">de0</a>
+      
+      <a href="https://blog.keiji.io/categories/fpga" class="list-group-item">fpga</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>Keiji ARIYAMA All rights reserved.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p>Original <a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> theme is designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ZwBLIZTRHGg%3d&fadein=500" charset="utf-8"></script>
+  </body>
+</html>

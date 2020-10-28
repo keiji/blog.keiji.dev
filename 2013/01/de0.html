@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+
+<meta name="google-site-verification" content="jLy-Sg3FFmjHr0ri0Rlq0Dd7CNY-Qx-eGpL5wk7gGYs" />
+<link rel="canonical" href="https://blog.keiji.io/2013/01/de0.html">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>DE0メモ - めがねをかけるんだ</title>
+    
+<meta name="description" content="&lt;div&gt;  FPGAボードのDE0をちょこちょこ触ったメモ。&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;  &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2013/01/734246_10200296379321712_433891549_n.jpg&#34;&gt;&lt;img class=&#34;aligncenter  wp-image-91&#34; alt=&#34;734246_10200296379321712_433891549_n&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2013/01/734246_10200296379321712_433891549_n.jpg&#34; width=&#34;403&#34; height=&#34;302&#34; /&gt;&lt;/a&gt;&lt;/div&gt;">
+
+<meta property="og:title" content="DE0メモ - めがねをかけるんだ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.keiji.io/2013/01/de0.html">
+<meta property="og:image" content="https://blog.keiji.io/images/default.png">
+<meta property="og:site_name" content="めがねをかけるんだ">
+<meta property="og:description" content="&lt;div&gt;  FPGAボードのDE0をちょこちょこ触ったメモ。&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;  &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2013/01/734246_10200296379321712_433891549_n.jpg&#34;&gt;&lt;img class=&#34;aligncenter  wp-image-91&#34; alt=&#34;734246_10200296379321712_433891549_n&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2013/01/734246_10200296379321712_433891549_n.jpg&#34; width=&#34;403&#34; height=&#34;302&#34; /&gt;&lt;/a&gt;&lt;/div&gt;">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="めがねをかけるんだ">
+<meta name="twitter:url" content="https://blog.keiji.io/2013/01/de0.html">
+<meta name="twitter:title" content="DE0メモ - めがねをかけるんだ">
+<meta name="twitter:description" content="&lt;div&gt;  FPGAボードのDE0をちょこちょこ触ったメモ。&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;  &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2013/01/734246_10200296379321712_433891549_n.jpg&#34;&gt;&lt;img class=&#34;aligncenter  wp-image-91&#34; alt=&#34;734246_10200296379321712_433891549_n&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2013/01/734246_10200296379321712_433891549_n.jpg&#34; width=&#34;403&#34; height=&#34;302&#34; /&gt;&lt;/a&gt;&lt;/div&gt;">
+<meta name="twitter:image" content="https://blog.keiji.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.keiji.io\/"
+    },
+    "headline": "DE0メモ - めがねをかけるんだ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.keiji.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2013-01-08T10:16:00JST",
+    "dateModified": "2013-01-08T10:16:00JST",
+    "author": {
+      "@type": "Person",
+      "name": "めがねをかけるんだ"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "めがねをかけるんだ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.keiji.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "\u003cdiv\u003e\n  FPGAボードのDE0をちょこちょこ触ったメモ。\n\u003c\/div\u003e\n\u003cdiv\u003e\n\u003c\/div\u003e\n\u003cdiv\u003e\n  \u003ca href=\u0022https:\/\/blog.keiji.dev\/wp-content\/uploads\/2013\/01\/734246_10200296379321712_433891549_n.jpg\u0022\u003e\u003cimg class=\u0022aligncenter  wp-image-91\u0022 alt=\u0022734246_10200296379321712_433891549_n\u0022 src=\u0022https:\/\/blog.keiji.dev\/wp-content\/uploads\/2013\/01\/734246_10200296379321712_433891549_n.jpg\u0022 width=\u0022403\u0022 height=\u0022302\u0022 \/\u003e\u003c\/a\u003e\n\u003c\/div\u003e"
+  }
+</script>
+
+
+    <link href="https://blog.keiji.io/css/styles.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/default.css">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/typesquare.css">
+    
+
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-62351683-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://blog.keiji.io/">めがねをかけるんだ</a>
+          </div>
+
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="https://blog.keiji.io/profile/">Profile</a></li>
+              
+              
+            </ul>
+            
+          </div>
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://blog.keiji.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.keiji.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">DE0メモ</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2013-01-08T10:16:00JST">2013-01-08</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.keiji.io/post/">post</a></li>
+      
+    </ul>
+
+    <h1 class="title">DE0メモ</h1>
+  </header>
+
+  
+
+  <div class="article-body"><div>
+  FPGAボードのDE0をちょこちょこ触ったメモ。
+</div>
+<div>
+</div>
+<div>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/01/734246_10200296379321712_433891549_n.jpg"><img class="aligncenter  wp-image-91" alt="734246_10200296379321712_433891549_n" src="https://blog.keiji.dev/wp-content/uploads/2013/01/734246_10200296379321712_433891549_n.jpg" width="403" height="302" /></a>
+</div>
+<h2 id="fpgaとは">FPGAとは</h2>
+<div>
+  Field Programmable Gate Arrayの略で、プログラム可能な大規模集積回路です。
+</div>
+<div>
+  DE0は、ALTERA社のFPGA Cyclone IIIを搭載したボードで、USBで接続したPCからプログラムを書き込むことが出来ます。
+</div>
+<h2 id="ピンがいっぱい">ピンがいっぱい</h2>
+<div>
+  DE0に載っているFPGAには、たくさんたくさんピンがあります。その数は、Arduinoの比ではありません。
+</div>
+<div>
+</div>
+<div>
+  DE0は、FPGAが載っている”ボード”です。なので、たくさんのピンが、それぞれどこかに繋がっていたり、繋がっていなかったりします。
+</div>
+<div>
+  例えば、一番右側のLEDはJ1と言うピンが繋がっています。ここに&#8221;１ビットを出力&#8221;すると、LEDが光ります。また、一番右側のディップスイッチにはJ6と言うピンが繋がっています。このスイッチのON/OFFを読み取ることが出来ます。
+</div>
+<div>
+</div>
+<div>
+  とてもたくさんピンがあるので、覚えられるか不安になりましたが、やってみると、そもそも覚える必要はないと解りました。
+</div>
+<div>
+  DE0ではJ1ピンはLEDですが、他のボードでは別の所に繋がっているかもしれないからです。考えてみれば当然ですね。
+</div>
+<div>
+</div>
+<div>
+  プログラム(Verilog HDL)側では、ピンを論理名(&#8220;led0&#8243;とか)で扱い、あとから論理名と物理的なピンを関連づける&#8221;Pin Planner&#8221;という行程があります。
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/01/Untitled.png"><img class="aligncenter  wp-image-90" alt="Untitled" src="https://blog.keiji.dev/wp-content/uploads/2013/01/Untitled.png" width="534" height="71" /></a>
+</div>
+<div>
+</div>
+<div>
+</div>
+<h2 id="開発環境">開発環境</h2>
+<div>
+  Quartus IIは、DE0に付属の開発環境です。
+</div>
+<div>
+  DE0に付属しているのはバージョン9.0ですが、今は12.1と言う新しいバージョンが出ています。Web Editionと有償版がありますが、僕は迷わずWeb Editionを使っています。
+</div>
+<div>
+</div>
+<div>
+  Quartus IIは、WindowsとLinuxに対応しています。残念ながらMac OSには対応していません。
+</div>
+<div>
+  なので僕は、Parallels上のWindows 8にインストールしました（なぜWindows 8かと言えば、Windows 7などのライセンスは、他のマシンにインストールして出払っているからです）。
+</div>
+<div>
+</div>
+<div>
+  いきなり最新のOSということで、多少の不安はありましたが、Windows 8上でも動作しました。ただ、Quartus 12.1をいきなりインストールしてもJTAG関係のライブラリでエラーが発生してDE0にプログラムを書き込むことが出来ませんでした。
+</div>
+<div>
+</div>
+<div>
+  Quartus 9.0をインストールしてから、12.1をインストールすると、きちんと動作するようになりました。その後は、12.1からでも書き込みが出来ています。
+</div>
+<h2 id="プログラムから書き込みまで">プログラムから書き込みまで</h2>
+<div>
+  DE0で開発をするには、Quartus II上で
+</div>
+<div>
+</div>
+<div>
+  ・Verilog HDLを記述
+</div>
+<div>
+  ・&#8221;Start Analysis & Elaboration&#8221;を実行（文法チェックなどここでしている？）
+</div>
+<div>
+  ・&#8221;Pin planner&#8221;ツールでピン配置を関連づけ
+</div>
+<div>
+  ・&#8221;Start compile&#8221;実行（結構、時間がかかる）
+</div>
+<div>
+  ・&#8221;Programmer&#8221;ツールでDE0に書き込み
+</div>
+<div>
+</div>
+<div>
+  と言う流れです。その他、シミュレータなどでいろいろ検証したりもあるようですが、僕はまだその段階にありません。
+</div>
+<h2 id="verilog-hdl">Verilog HDL</h2>
+<div>
+  Verilog HDLで、どういう動作をするのかをプログラムします。この言語、文法自体は高級言語に近いのですが、普通のコンピュータのプログラムとはかなり勝手が違います。
+</div>
+<div>
+</div>
+<div>
+  これは電子回路の世界では常識かもしれませんが、FPGAを扱う上では、「<b>クロックが全てであり、王様</b>」です。
+</div>
+<div>
+</div>
+<div>
+  スイッチなどの入力の変化を検知する以外に何らかの動作をさせたいのであれば、<b>クロックの立ち上がりと立ち下がりにどんな動作をするのかを書いていきます。</b>
+</div>
+<div>
+</div>
+<div>
+  <b>10msごとに実行しろとか言っても、FPGAは理解しません。</b>そもそも、そんな命令は用意されていません。
+</div>
+<div>
+</div>
+<div>
+  彼らはクロックを基準に動作します。なので、基本のクロックをなんかいろいろして、10msのクロックみたいなものを作り出さなくてはなりません。
+</div>
+<div>
+  （時計用のクロックを搭載して、それを基準に時間が解るものもあるようですが、少なくとも、DE0には搭載されていないようです）
+</div>
+<div>
+</div>
+<div>
+  ただ、クロックが王様で、良いこともあります。
+</div>
+<div>
+  クロックを基準に動作すると言うことは、複数の回路を同時に動かすことが出来ると言うことです。
+</div>
+<div>
+  なので、FPGAの中にそれぞれ独立した複数の処理モジュールを作って、クロックの号令一下、並列で動かすことも可能です。多分。。。
+</div>
+<div>
+</div>
+<div>
+  <div>
+    いろいろ書きましたが、Verilog HDLは使い始めたばかりなので、まだよくわかっていません。
+  </div>
+  <div>
+  </div>
+  <div>
+    ちょっと間違うと、期待した動作にならず、また、全く関係ない部分のLEDが中途半端に光ったりして焦ります。ひたすらコンパイルと書き込みを繰り返している様は、まるで生まれたての子馬のようです。
+  </div>
+</div>
+<h2 id="結局fpgaは何に使えるのか">結局、FPGAは何に使えるのか。</h2>
+<div>
+  僕にはまだわからない。と言うのが正直なところです（遊び始めたばかりだし）。
+</div>
+<div>
+</div>
+<div>
+  ただ、FPGA自体は別に新しい技術というわけではないと思います。僕が記憶してる中でも、やねうらおさんがFPGAについて触れていました。Androidが登場した直後ですね。
+</div>
+<div>
+</div>
+<p> </p>
+<div>
+  <a href="http://d.hatena.ne.jp/yaneurao/20080225" target="_blank">FPGAで作るコンピュータ将棋</a>
+</div>
+<div>
+</div>
+<div>
+  新しい技術やプラットフォームの登場と言うよりも、チップの価格が下がったとか、DE0のような取り扱いの簡単なボードが登場してきたのが、注目を浴びるきっかけでしょうか。僕が始めた「動機も安いから・手に入りやすいから・USBで書き込みできるから」ですし。
+</div>
+<div>
+</div>
+<div>
+  あと、最近Facebookで話題になっていた kazunori_279さんのエントリも興味深いです。
+</div>
+<p> </p>
+<div>
+  <a href="http://d.hatena.ne.jp/kazunori_279/20130107/1357521548" target="_blank">文字通り「ネットワークがコンピューター」な金融HFTでのFPGAの使われ方</a>
+</div>
+<div>
+</div>
+<div>
+  NICのFPGAをカスタマイズして、本来の目的以外の処理をさせようという試みです。僕は、HFT(High Frequency Trading)には不明ですが、情報がコンピュータに届く前、NICの段階で、アプリケーションレベルで何かしてしまうと言うのは新しい発想だと思います。
+</div>
+<div>
+</div>
+<div>
+  このように実際に使われているのを見ると、少しイメージがわいてきますね。
+</div></div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://blog.keiji.io/categories/de0/">DE0</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/fpga/">FPGA</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2/">メモ</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+        
+          <a href="https://blog.keiji.io/2020/08/mangaview.html" class="list-group-item">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html" class="list-group-item">ELEGOO MARSの出力精度の改善</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/04/techbookfest6.html" class="list-group-item">技術書典6でMLOps本「巡りあえないConcourse」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html" class="list-group-item">Gehirn RS2 Plusに引っ越しした</a>
+        
+      
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html" class="list-group-item">いまNN API（TensorFlow Lite）は使えるのか</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/look_back_techbookfest4.html" class="list-group-item">技術書典4に参加してきました</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-2.html" class="list-group-item">技術書典4で「本当はおそろしい商業出版！？」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-1.html" class="list-group-item">技術書典4でML Ops（TensorFlow）の本を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/01/meganeco_playground.html" class="list-group-item">機械学習のモデルを試せるサイトを作った話</a>
+        
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98" class="list-group-item">雑記</a>
+      
+      <a href="https://blog.keiji.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="list-group-item">イベント</a>
+      
+      <a href="https://blog.keiji.io/categories/tensorflow" class="list-group-item">tensorflow</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2" class="list-group-item">メモ</a>
+      
+      <a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C" class="list-group-item">習作</a>
+      
+      <a href="https://blog.keiji.io/categories/aosp" class="list-group-item">aosp</a>
+      
+      <a href="https://blog.keiji.io/categories/adk" class="list-group-item">adk</a>
+      
+      <a href="https://blog.keiji.io/categories/de0" class="list-group-item">de0</a>
+      
+      <a href="https://blog.keiji.io/categories/fpga" class="list-group-item">fpga</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>Keiji ARIYAMA All rights reserved.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p>Original <a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> theme is designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ZwBLIZTRHGg%3d&fadein=500" charset="utf-8"></script>
+  </body>
+</html>

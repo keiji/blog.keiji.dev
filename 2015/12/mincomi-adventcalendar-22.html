@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+
+<meta name="google-site-verification" content="jLy-Sg3FFmjHr0ri0Rlq0Dd7CNY-Qx-eGpL5wk7gGYs" />
+<link rel="canonical" href="https://blog.keiji.io/2015/12/mincomi-adventcalendar-22.html">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>アプリのナビゲーション（下タブについて） - めがねをかけるんだ</title>
+    
+<meta name="description" content="&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;&lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の22日目の記事です。&lt;/p&gt;&lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;amp;hl=ja&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;aligncenter size-full wp-image-672&#34; /&gt;&lt;/a&gt;&lt;/p&gt;">
+
+<meta property="og:title" content="アプリのナビゲーション（下タブについて） - めがねをかけるんだ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.keiji.io/2015/12/mincomi-adventcalendar-22.html">
+<meta property="og:image" content="https://blog.keiji.io/images/default.png">
+<meta property="og:site_name" content="めがねをかけるんだ">
+<meta property="og:description" content="&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;&lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の22日目の記事です。&lt;/p&gt;&lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;amp;hl=ja&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;aligncenter size-full wp-image-672&#34; /&gt;&lt;/a&gt;&lt;/p&gt;">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="めがねをかけるんだ">
+<meta name="twitter:url" content="https://blog.keiji.io/2015/12/mincomi-adventcalendar-22.html">
+<meta name="twitter:title" content="アプリのナビゲーション（下タブについて） - めがねをかけるんだ">
+<meta name="twitter:description" content="&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;&lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の22日目の記事です。&lt;/p&gt;&lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;amp;hl=ja&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;aligncenter size-full wp-image-672&#34; /&gt;&lt;/a&gt;&lt;/p&gt;">
+<meta name="twitter:image" content="https://blog.keiji.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.keiji.io\/"
+    },
+    "headline": "アプリのナビゲーション（下タブについて） - めがねをかけるんだ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.keiji.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2015-12-21T15:00:26JST",
+    "dateModified": "2015-12-21T15:00:26JST",
+    "author": {
+      "@type": "Person",
+      "name": "めがねをかけるんだ"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "めがねをかけるんだ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.keiji.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "\u003ch2 id=\u0022はじめに\u0022\u003eはじめに\u003c\/h2\u003e\n\u003cp\u003eこの記事は「\u003ca href=\u0022http:\/\/qiita.com\/advent-calendar\/2015\/mincomi\u0022\u003eみんコミ Advent Calendar\u003c\/a\u003e」の22日目の記事です。\u003c\/p\u003e\n\u003cp\u003e「\u003ca href=\u0022https:\/\/www.mincomi.jp\u0022\u003eみんコミ\u003c\/a\u003e」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。\u003c\/p\u003e\n\u003cp\u003e\u003ca href=\u0022https:\/\/play.google.com\/store\/apps\/details?id=jp.ebookjapan.mincomi\u0026amp;hl=ja\u0022\u003e\u003cimg src=\u0022https:\/\/blog.keiji.dev\/wp-content\/uploads\/2015\/12\/en_generic_rgb_wo_60.png\u0022 alt=\u0022en_generic_rgb_wo_60\u0022 width=\u0022172\u0022 height=\u002260\u0022 class=\u0022aligncenter size-full wp-image-672\u0022 \/\u003e\u003c\/a\u003e\u003c\/p\u003e"
+  }
+</script>
+
+
+    <link href="https://blog.keiji.io/css/styles.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/default.css">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/typesquare.css">
+    
+
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-62351683-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://blog.keiji.io/">めがねをかけるんだ</a>
+          </div>
+
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="https://blog.keiji.io/profile/">Profile</a></li>
+              
+              
+            </ul>
+            
+          </div>
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://blog.keiji.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.keiji.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">アプリのナビゲーション（下タブについて）</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-12-21T15:00:26JST">2015-12-21</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.keiji.io/post/">post</a></li>
+      
+    </ul>
+
+    <h1 class="title">アプリのナビゲーション（下タブについて）</h1>
+  </header>
+
+  
+
+  <div class="article-body"><h2 id="はじめに">はじめに</h2>
+<p>この記事は「<a href="http://qiita.com/advent-calendar/2015/mincomi">みんコミ Advent Calendar</a>」の22日目の記事です。</p>
+<p>「<a href="https://www.mincomi.jp">みんコミ</a>」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。</p>
+<p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" /></a></p>
+<hr>
+<p>「みんコミ」アプリは、基本的に画面の下にあるタブ（下タブ）で画面を切り替えます（ランキング画面などでは上タブが現れることがあります）。</p>
+<p>iOSでは一般的なこのナビゲーションですが、Androidでは下タブによる画面の切り替えは推奨されていません。</p>
+<p><a href="http://developer.android.com/intl/ja/design/patterns/pure-android.html">Don’t use bottom tab bars</a></p>
+<p>Androidの場合、下端にはナビゲーションバーがあるので、誤操作の原因になりやすいというのが理由だと僕は考えています。</p>
+<div id="attachment_1028" style="max-width: 730px" class="wp-caption aligncenter">
+  <a href="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-223002.png"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-223002.png" alt="ナビゲーションバー" width="360" height="47" class="size-full wp-image-1028" /></a>
+  <p class="wp-caption-text">
+    ナビゲーションバー
+  </p>
+</div>
+<p>Androidでは、上部に表示されている「ActionBar(ToolBar)」を使います。</p>
+<p>厳密に言うと、Androidでも画面の下端に拡張する「Split ActionBar」という仕組みがあるのですが、メニューの配置を柔軟にできないので滅多に使いません（僕は使ったことはありません）。</p>
+<p>「みんコミ」アプリに話を戻しましょう。</p>
+<p>こう言う場合、最上段にActionBarを置いて、その下にタブを表示、残りの領域をコンテンツ表示領域……というのが定石だと思いますが……正直、「みんコミ」アプリの場合は定石をそのまま当てはめるのは難しいところだと思います。</p>
+<p>現在の「みんコミ」アプリのホーム画面は、最上部にViewPagerで構築された作品の「バナー」があり、その下に作品が並ぶという構造です。</p>
+<p>この場合、一番見せたいのは「コンテンツ」であって、タブでもなければActionBar(ToolBar)でもありません。</p>
+<p>折衷案として、コンテンツを一番上に置いたまま上タブを実現するUIを作ってみました（動画です）。</p>
+<div style="width: 360px;" class="wp-video">
+  <!--[if lt IE 9]><![endif]--><video class="wp-video-shortcode" id="video-738-1" width="360" height="640" preload="metadata" controls="controls"><source type="video/mp4" src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-205953.mp4?_=1" />
+<p><a href="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-205953.mp4"><a href="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-205953.mp4">https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-205953.mp4</a></a></video></p>
+</div>
+<p><a href="http://android-developers.blogspot.jp/2015/05/android-design-support-library.html">Design Support Library</a>を使っていて、最初はバナーが表示されていますが、下にスクロールすると視差効果（パララックス）とともにバナーが隠れていきます。</p>
+<p>そしてバナーが隠れきった後も、タブは一番上に固定されるので画面の切り替えができます。</p>
+<p>このUIのXMLは次の通りです。</p>
+<pre><code class="xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;android.support.design.widget.CoordinatorLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"&gt;
+
+    &lt;android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_backdrop_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"&gt;
+
+        &lt;android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="64dp"
+            app:expandedTitleMarginStart="48dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"&gt;
+
+            &lt;RelativeLayout
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"&gt;
+
+                &lt;android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="206dip"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp"/&gt;
+
+                &lt;LinearLayout
+                    android:id="@+id/pagecontrol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/viewpager"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"/&gt;
+
+            &lt;/RelativeLayout&gt;
+
+        &lt;/android.support.design.widget.CollapsingToolbarLayout&gt;
+
+        &lt;android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            app:layout_collapseMode="pin"/&gt;
+
+    &lt;/android.support.design.widget.AppBarLayout&gt;
+
+    &lt;android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"&gt;
+
+        &lt;LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="24dp"&gt;
+
+            &lt;SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="50"
+                android:progress="10"
+                android:progressDrawable="@drawable/seekbar"/&gt;
+
+            &lt;View
+                android:layout_width="match_parent"
+                android:layout_height="2400dp"/&gt;
+        &lt;/LinearLayout&gt;
+
+    &lt;/android.support.v4.widget.NestedScrollView&gt;
+
+
+&lt;/android.support.design.widget.CoordinatorLayout&gt;
+</code></pre>
+<p>また、下タブを選択した上で、今度はアクションバー(ToolBar)を残すというUIも試しに作成しました。</p>
+<div style="width: 360px;" class="wp-video">
+  <video class="wp-video-shortcode" id="video-738-2" width="360" height="640" preload="metadata" controls="controls"><source type="video/mp4" src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-213530.mp4?_=2" /><a href="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-213530.mp4">https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-213530.mp4</a></video>
+</div>
+<p>同じくDesign Support Libraryを使っています。</p>
+<p>アクションバーが残るので、例えば「その他」のタブをオーバーフローメニューの中に移動することで、タブ操作を簡素化することもできると思います。</p>
+<p>ただし、ViewPagerの高さとToolBarの位置関係の設定が難しく、まだまだ調整が必要ですね。</p>
+<pre><code class="xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;RelativeLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"&gt;
+
+    &lt;android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        app:layout_collapseMode="pin"/&gt;
+
+    &lt;android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tabs"&gt;
+
+        &lt;android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_backdrop_height"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"&gt;
+
+            &lt;android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginEnd="8dp"
+                app:expandedTitleMarginStart="16dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"&gt;
+
+                &lt;RelativeLayout
+                    android:id="@+id/backdrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:fitsSystemWindows="true"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax"&gt;
+
+                    &lt;android.support.v4.view.ViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="wrap_content"
+                        android:layout_height="206dp"
+                        android:layout_marginBottom="16dp"
+                        android:paddingTop="16dp"/&gt;
+
+                    &lt;LinearLayout
+                        android:id="@+id/pagecontrol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/viewpager"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:paddingBottom="16dp"/&gt;
+
+                &lt;/RelativeLayout&gt;
+
+                &lt;android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/&gt;
+
+            &lt;/android.support.design.widget.CollapsingToolbarLayout&gt;
+
+        &lt;/android.support.design.widget.AppBarLayout&gt;
+
+        &lt;android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"&gt;
+
+            &lt;LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="24dp"&gt;
+
+                &lt;SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="50"
+                    android:progress="10"
+                    android:progressDrawable="@drawable/seekbar"/&gt;
+
+                &lt;View
+                    android:layout_width="match_parent"
+                    android:layout_height="2400dp"/&gt;
+            &lt;/LinearLayout&gt;
+
+        &lt;/android.support.v4.widget.NestedScrollView&gt;
+
+    &lt;/android.support.design.widget.CoordinatorLayout&gt;
+
+&lt;/RelativeLayout&gt;
+</code></pre>
+<p>サンプル（activity_main.xml, activity_bottom_tabs.xml）を含めたコードを<a href="https://github.com/keiji/adventcalendar_2015_mincomi">GitHub</a>に置いておきます。参考になれば幸いです。</p>
+<p><a href="https://github.com/keiji/adventcalendar_2015_mincomi">https://github.com/keiji/adventcalendar_2015_mincomi</a></p>
+<h3 id="実装参考">実装参考</h3>
+<ul>
+<li><a href="https://github.com/chrisbanes/cheesesquare">https://github.com/chrisbanes/cheesesquare</a></li>
+</ul>
+<hr>
+<pre><code>「有山圭二」は「みんなのコミック」及び運営の「株式会社イーブックイニシアティブジャパン」とは一切関係がありません。
+また、本アドベントカレンダーの内容はあくまで参加者個人の見解です。
+「みんなのコミック」の評価を目的とするものではありませんので、ご了承下さい。
+</code></pre>
+<hr>
+<p><a href="https://www.mincomi.jp">みんコミ</a>といえば、僕が普段からお世話になっている根雪れい（@neyuki_rei）さんも連載していますね！</p>
+<blockquote class="twitter-tweet" lang="en">
+  <p lang="ja" dir="ltr">
+    おかあさん(10)と僕。という10歳のおかあさんマンガが2話まで読めますよー…読んでくださいませ～　<a href="https://t.co/UfxCfaOYRZ">https://t.co/UfxCfaOYRZ</a> <a href="https://t.co/M7ioKciVZX">pic.twitter.com/M7ioKciVZX</a>
+  </p>
+  <p>
+    &mdash; 根雪れい.おかあさん(10)と僕。連載中 (@neyuki_rei) <a href="https://twitter.com/neyuki_rei/status/678186480552968192">December 19, 2015</a>
+  </p>
+</blockquote>
+<p>根雪さんの作品の更新は来年になるので、</p>
+<blockquote class="twitter-tweet" lang="en">
+  <p lang="ja" dir="ltr">
+    「みんなのコミック」にて連載始まってるそうです。よろしくね。&#10;<a href="https://t.co/sdujA9PMHk">https://t.co/sdujA9PMHk</a>&#10;<a href="https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F?src=hash">#みんコミ</a> <a href="https://t.co/722yl8oFve">pic.twitter.com/722yl8oFve</a>
+  </p>
+  <p>
+    &mdash; 牡丹ぼたもち (@not_ohagi) <a href="https://twitter.com/not_ohagi/status/666224783634202624">November 16, 2015</a>
+  </p>
+</blockquote>
+<p>ほんわかしたお嬢様ストーリーかと思って読み始めたら……これって実はシュールコメディなんじゃないでしょうか（いや、そう思うのは僕の心が汚れているせいかもしれませんが）。</p>
+<p>１話の最初のコマから両サイドをチョコファウンテン、正面の置かれたホールケーキに向かっている主人公が登場します。朝食のシーンだそうです。</p>
+<p>お嬢様だけあって黒塗りの高級車で通学しますが、なんとこの車、食べられるそうです。</p>
+<p>意味がわかりません。</p>
+<p>「今日は11月11日。花ちゃんの誕生日パーティの日です。今日は早めに帰りたいです」</p>
+<p>「いいでしゅねー そうしましょー」</p>
+<p>この作品にツッコミ役は不在です。先ほどの会話は生徒と教師の会話です。</p>
+<p>一応、イベントがあればキャラクターからのリアクションはありますが、次の瞬間には「当たり前のこと」として処理されています。</p>
+<p>また、憎まれ役とは言え、女子が嘔吐しているシーンが描かれ、そのたびに「聖水です」「美容液です」と注釈が付きます。</p>
+<p>内容は相当おかしいんですが、ひたすら可愛い絵が、それを普通と思わせる世界観を支えています。</p>
+<p>どう話が転がっていくのか、正直、まったく先が読めません。。。</p>
+<p>あ、担任の先生が眼鏡っ娘でした。</p>
+<p>40歳だろうが可愛ければ関係ありませんね。</p>
+<hr>
+<p>それでは明日23日の担当は、「こどもちぇんじ」二話の最後のページでは正直どん引きしてしまった「有山圭二」さんです。</p>
+<p>よろしくお願いします。</p></div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://blog.keiji.io/categories/android/">Android</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98/">雑記</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+        
+          <a href="https://blog.keiji.io/2020/08/mangaview.html" class="list-group-item">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html" class="list-group-item">ELEGOO MARSの出力精度の改善</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/04/techbookfest6.html" class="list-group-item">技術書典6でMLOps本「巡りあえないConcourse」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html" class="list-group-item">Gehirn RS2 Plusに引っ越しした</a>
+        
+      
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html" class="list-group-item">いまNN API（TensorFlow Lite）は使えるのか</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/look_back_techbookfest4.html" class="list-group-item">技術書典4に参加してきました</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-2.html" class="list-group-item">技術書典4で「本当はおそろしい商業出版！？」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-1.html" class="list-group-item">技術書典4でML Ops（TensorFlow）の本を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/01/meganeco_playground.html" class="list-group-item">機械学習のモデルを試せるサイトを作った話</a>
+        
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98" class="list-group-item">雑記</a>
+      
+      <a href="https://blog.keiji.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="list-group-item">イベント</a>
+      
+      <a href="https://blog.keiji.io/categories/tensorflow" class="list-group-item">tensorflow</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2" class="list-group-item">メモ</a>
+      
+      <a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C" class="list-group-item">習作</a>
+      
+      <a href="https://blog.keiji.io/categories/aosp" class="list-group-item">aosp</a>
+      
+      <a href="https://blog.keiji.io/categories/adk" class="list-group-item">adk</a>
+      
+      <a href="https://blog.keiji.io/categories/de0" class="list-group-item">de0</a>
+      
+      <a href="https://blog.keiji.io/categories/fpga" class="list-group-item">fpga</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>Keiji ARIYAMA All rights reserved.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p>Original <a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> theme is designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ZwBLIZTRHGg%3d&fadein=500" charset="utf-8"></script>
+  </body>
+</html>

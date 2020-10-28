@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+
+<meta name="google-site-verification" content="jLy-Sg3FFmjHr0ri0Rlq0Dd7CNY-Qx-eGpL5wk7gGYs" />
+<link rel="canonical" href="https://blog.keiji.io/2017/02/install_failed_dlib_with_anaconda3-for-mac.html">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Anaconda3 for macでdlibがインストールできない - めがねをかけるんだ</title>
+    
+<meta name="description" content="&lt;ul&gt;&lt;li&gt;macOS Sierra – 10.12.3&lt;/li&gt;&lt;li&gt;Anaconda3 for OS X Python 3.6 version – 4.3.0&lt;/li&gt;&lt;li&gt;Boost – 1.63.0&lt;/li&gt;&lt;li&gt;dlib – 19.1.0&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;　MacBook Proを新規セットアップ中、&lt;code&gt;pip&lt;/code&gt;で&lt;code&gt;dlib&lt;/code&gt;をインストールするときにエラーが発生した。&lt;/p&gt;">
+
+<meta property="og:title" content="Anaconda3 for macでdlibがインストールできない - めがねをかけるんだ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.keiji.io/2017/02/install_failed_dlib_with_anaconda3-for-mac.html">
+<meta property="og:image" content="https://blog.keiji.io/images/default.png">
+<meta property="og:site_name" content="めがねをかけるんだ">
+<meta property="og:description" content="&lt;ul&gt;&lt;li&gt;macOS Sierra – 10.12.3&lt;/li&gt;&lt;li&gt;Anaconda3 for OS X Python 3.6 version – 4.3.0&lt;/li&gt;&lt;li&gt;Boost – 1.63.0&lt;/li&gt;&lt;li&gt;dlib – 19.1.0&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;　MacBook Proを新規セットアップ中、&lt;code&gt;pip&lt;/code&gt;で&lt;code&gt;dlib&lt;/code&gt;をインストールするときにエラーが発生した。&lt;/p&gt;">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="めがねをかけるんだ">
+<meta name="twitter:url" content="https://blog.keiji.io/2017/02/install_failed_dlib_with_anaconda3-for-mac.html">
+<meta name="twitter:title" content="Anaconda3 for macでdlibがインストールできない - めがねをかけるんだ">
+<meta name="twitter:description" content="&lt;ul&gt;&lt;li&gt;macOS Sierra – 10.12.3&lt;/li&gt;&lt;li&gt;Anaconda3 for OS X Python 3.6 version – 4.3.0&lt;/li&gt;&lt;li&gt;Boost – 1.63.0&lt;/li&gt;&lt;li&gt;dlib – 19.1.0&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;　MacBook Proを新規セットアップ中、&lt;code&gt;pip&lt;/code&gt;で&lt;code&gt;dlib&lt;/code&gt;をインストールするときにエラーが発生した。&lt;/p&gt;">
+<meta name="twitter:image" content="https://blog.keiji.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.keiji.io\/"
+    },
+    "headline": "Anaconda3 for macでdlibがインストールできない - めがねをかけるんだ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.keiji.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2017-02-06T12:46:19JST",
+    "dateModified": "2017-02-06T12:46:19JST",
+    "author": {
+      "@type": "Person",
+      "name": "めがねをかけるんだ"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "めがねをかけるんだ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.keiji.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "\u003cul\u003e\n\u003cli\u003emacOS Sierra – 10.12.3\u003c\/li\u003e\n\u003cli\u003eAnaconda3 for OS X Python 3.6 version – 4.3.0\u003c\/li\u003e\n\u003cli\u003eBoost – 1.63.0\u003c\/li\u003e\n\u003cli\u003edlib – 19.1.0\u003c\/li\u003e\n\u003c\/ul\u003e\n\u003cp\u003e　MacBook Proを新規セットアップ中、\u003ccode\u003epip\u003c\/code\u003eで\u003ccode\u003edlib\u003c\/code\u003eをインストールするときにエラーが発生した。\u003c\/p\u003e"
+  }
+</script>
+
+
+    <link href="https://blog.keiji.io/css/styles.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/default.css">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/typesquare.css">
+    
+
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-62351683-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://blog.keiji.io/">めがねをかけるんだ</a>
+          </div>
+
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="https://blog.keiji.io/profile/">Profile</a></li>
+              
+              
+            </ul>
+            
+          </div>
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://blog.keiji.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.keiji.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">Anaconda3 for macでdlibがインストールできない</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-02-06T12:46:19JST">2017-02-06</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.keiji.io/post/">post</a></li>
+      
+    </ul>
+
+    <h1 class="title">Anaconda3 for macでdlibがインストールできない</h1>
+  </header>
+
+  
+
+  <div class="article-body"><ul>
+<li>macOS Sierra – 10.12.3</li>
+<li>Anaconda3 for OS X Python 3.6 version – 4.3.0</li>
+<li>Boost – 1.63.0</li>
+<li>dlib – 19.1.0</li>
+</ul>
+<p>　MacBook Proを新規セットアップ中、<code>pip</code>で<code>dlib</code>をインストールするときにエラーが発生した。</p>
+<p>最初は、brewでインストールした<code>Boost（1.63.0）</code>のバージョンが違っているのかと思ったのだけれど、要するに、Python 3.6に関連したdylib(macOSのダイナミックライブラリ)が見つからないと言うことらしい。</p>
+<pre><code>$ pip install dlib
+
+...
+
+make[2]: *** No rule to make target `/Users/keiji_ariyama/anaconda3/lib/libpython3.6.dylib', needed by `dlib.so'.  Stop.
+make[1]: *** [CMakeFiles/dlib_.dir/all] Error 2
+make: *** [all] Error 2
+error: cmake build failed!
+
+----------------------------------------
+Command &quot;/Users/keiji_ariyama/anaconda3/bin/python -u -c &quot;import setuptools, tokenize;__file__='/private/var/folders/6n/.../T/pip-build-h7f8bau7/dlib/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))&quot; install --record /var/folders/6n/.../T/pip-dnhybqp0-record/install-record.txt --single-version-externally-managed --compile&quot; failed with error code 1 in /private/var/folders/6n/.../T/pip-build-h7f8bau7/dlib/
+</code></pre>
+<p>　ファイルシステムを検索してみると、確かにAnaconda3に<code>libpython3.6.dylib</code>というファイルは含まれていない。あったのは<code>libpython3.6m.dylib</code>。</p>
+<pre><code>$ ln -s libpython3.6m.dylib libpython3.6.dylib
+</code></pre>
+<p>　と、シンボリックリンクを張ることで解決した。</p>
+<pre><code>$ pip install dlib
+Collecting dlib
+  Using cached dlib-19.1.0.tar.gz
+Building wheels for collected packages: dlib
+  Running setup.py bdist_wheel for dlib ... done
+  Stored in directory: /Users/keiji_ariyama/Library/Caches/pip/wheels/b8/dc/75/...
+Successfully built dlib
+Installing collected packages: dlib
+Successfully installed dlib-19.1.0</code></pre></div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2/">メモ</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98/">雑記</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+        
+          <a href="https://blog.keiji.io/2020/08/mangaview.html" class="list-group-item">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html" class="list-group-item">ELEGOO MARSの出力精度の改善</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/04/techbookfest6.html" class="list-group-item">技術書典6でMLOps本「巡りあえないConcourse」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html" class="list-group-item">Gehirn RS2 Plusに引っ越しした</a>
+        
+      
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html" class="list-group-item">いまNN API（TensorFlow Lite）は使えるのか</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/look_back_techbookfest4.html" class="list-group-item">技術書典4に参加してきました</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-2.html" class="list-group-item">技術書典4で「本当はおそろしい商業出版！？」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-1.html" class="list-group-item">技術書典4でML Ops（TensorFlow）の本を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/01/meganeco_playground.html" class="list-group-item">機械学習のモデルを試せるサイトを作った話</a>
+        
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98" class="list-group-item">雑記</a>
+      
+      <a href="https://blog.keiji.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="list-group-item">イベント</a>
+      
+      <a href="https://blog.keiji.io/categories/tensorflow" class="list-group-item">tensorflow</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2" class="list-group-item">メモ</a>
+      
+      <a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C" class="list-group-item">習作</a>
+      
+      <a href="https://blog.keiji.io/categories/aosp" class="list-group-item">aosp</a>
+      
+      <a href="https://blog.keiji.io/categories/adk" class="list-group-item">adk</a>
+      
+      <a href="https://blog.keiji.io/categories/de0" class="list-group-item">de0</a>
+      
+      <a href="https://blog.keiji.io/categories/fpga" class="list-group-item">fpga</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>Keiji ARIYAMA All rights reserved.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p>Original <a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> theme is designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ZwBLIZTRHGg%3d&fadein=500" charset="utf-8"></script>
+  </body>
+</html>

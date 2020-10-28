@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+
+<meta name="google-site-verification" content="jLy-Sg3FFmjHr0ri0Rlq0Dd7CNY-Qx-eGpL5wk7gGYs" />
+<link rel="canonical" href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Gehirn RS2 Plusに引っ越しした - めがねをかけるんだ</title>
+    
+<meta name="description" content="&lt;p&gt;　タイトルの通り、このブログを含めたいくつかのサイトを&lt;a href=&#34;https://www.gehirn.jp/rs2plus/&#34;&gt;Gehirn RS2 Plus&lt;/a&gt;に引っ越しました。同時にStatic Site Generator（静的サイトジェネレーター) &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;を使って静的サイト化しています。&lt;/p&gt;">
+
+<meta property="og:title" content="Gehirn RS2 Plusに引っ越しした - めがねをかけるんだ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html">
+<meta property="og:image" content="https://blog.keiji.io/images/default.png">
+<meta property="og:site_name" content="めがねをかけるんだ">
+<meta property="og:description" content="&lt;p&gt;　タイトルの通り、このブログを含めたいくつかのサイトを&lt;a href=&#34;https://www.gehirn.jp/rs2plus/&#34;&gt;Gehirn RS2 Plus&lt;/a&gt;に引っ越しました。同時にStatic Site Generator（静的サイトジェネレーター) &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;を使って静的サイト化しています。&lt;/p&gt;">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="めがねをかけるんだ">
+<meta name="twitter:url" content="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html">
+<meta name="twitter:title" content="Gehirn RS2 Plusに引っ越しした - めがねをかけるんだ">
+<meta name="twitter:description" content="&lt;p&gt;　タイトルの通り、このブログを含めたいくつかのサイトを&lt;a href=&#34;https://www.gehirn.jp/rs2plus/&#34;&gt;Gehirn RS2 Plus&lt;/a&gt;に引っ越しました。同時にStatic Site Generator（静的サイトジェネレーター) &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;を使って静的サイト化しています。&lt;/p&gt;">
+<meta name="twitter:image" content="https://blog.keiji.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.keiji.io\/"
+    },
+    "headline": "Gehirn RS2 Plusに引っ越しした - めがねをかけるんだ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.keiji.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2018-12-31T00:00:00JST",
+    "dateModified": "2018-12-31T00:00:00JST",
+    "author": {
+      "@type": "Person",
+      "name": "めがねをかけるんだ"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "めがねをかけるんだ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.keiji.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "\u003cp\u003e　タイトルの通り、このブログを含めたいくつかのサイトを\u003ca href=\u0022https:\/\/www.gehirn.jp\/rs2plus\/\u0022\u003eGehirn RS2 Plus\u003c\/a\u003eに引っ越しました。同時にStatic Site Generator（静的サイトジェネレーター) \u003ca href=\u0022https:\/\/gohugo.io\/\u0022\u003eHugo\u003c\/a\u003eを使って静的サイト化しています。\u003c\/p\u003e"
+  }
+</script>
+
+
+    <link href="https://blog.keiji.io/css/styles.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/default.css">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/typesquare.css">
+    
+
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-62351683-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://blog.keiji.io/">めがねをかけるんだ</a>
+          </div>
+
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="https://blog.keiji.io/profile/">Profile</a></li>
+              
+              
+            </ul>
+            
+          </div>
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://blog.keiji.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.keiji.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">Gehirn RS2 Plusに引っ越しした</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2018-12-31T00:00:00JST">2018-12-31</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.keiji.io/post/">post</a></li>
+      
+    </ul>
+
+    <h1 class="title">Gehirn RS2 Plusに引っ越しした</h1>
+  </header>
+
+  
+
+  <div class="article-body"><p>　タイトルの通り、このブログを含めたいくつかのサイトを<a href="https://www.gehirn.jp/rs2plus/">Gehirn RS2 Plus</a>に引っ越しました。同時にStatic Site Generator（静的サイトジェネレーター) <a href="https://gohugo.io/">Hugo</a>を使って静的サイト化しています。</p>
+<p>これまでは、「さくらのVPS」にインストールしたWordPress上で管理していました。
+さくらのVPSを使うと、システムのすべてを自分で管理することになり、セキュリティアップデートなどのメンテナンスもすべて自分でやる必要がありました（もちろん、それは利点でもあります）。</p>
+<p>　加えてWordPressは、最初にセットアップして以降、数度の更新を経て、初期にインストールしたプラグインが動いたり動かなかったりしていました。最初の頃にがんばってカスタムしたテーマも、今ではどこをどう変えたのか覚えていませんでした。</p>
+<h2 id="gehirn-rs2-plusとは">Gehirn RS2 Plusとは</h2>
+<p>　Gehirn RS2 Plus（以下、「RS2 Plus」）は、ゲヒルン株式会社が運営するホスティングサービスです。</p>
+<p>　いまではVPSやクラウドなど、サーバーを利用するときに管理者権限が付いてくるサービスが一般的ですが、前述の通り、それらは自分でメンテナンスをする必要があります。</p>
+<p>　一方、RS2 Plusは、利用するサーバーの管理者権限がないため、できることに限りはあるものの、代わりにシステムの保守運用はすべてゲヒルン株式会社がやってくれます。</p>
+<p>　実は、RS2 Plusを利用するのは今回がはじめてではありません。
+もともとは<a href="https://techbookfest.org/">技術書典5</a>で頒布する<a href="https://booth.pm/ja/items/1043447">電子書籍</a>の配信システムを構築するのに使い始めました。</p>
+<p>　配信システムは、電子書籍の購入者がQRコードのURLにアクセスすると、URLに含まれているコードがデータベースにあるかを確認して、存在すればPDFを配信するという簡単な仕組みです。
+サーバー上ではMySQLのデータベースと、データベースに接続するサーバーソフトウェア（Python+Flaskで開発）が動作しています。サーバーソフトウェアは、WSGIプロトコルでフロントエンドと通信します。</p>
+<p>　静的サイトの配置はもっと簡単で、HTMLや画像などのリソース群を、RS2 Plusの管理画面に表示されるディレクトリにアップロードするだけです。</p>
+<p>　なお、ぼくが利用しているのはスタンダードプランですが、各プランは利用するサーバーのスペックが違うだけで管理画面の使い勝手は同じという認識です。</p>
+<h2 id="良かった点">良かった点</h2>
+<p>　RS2 Plusを使って良かったことをつらつらと書いていきます。</p>
+<h3 id="システムアップデートが不要">システムアップデートが不要</h3>
+<p>　定期的にSSHでログインして<code>sudo apt-get upgrade</code>をする必要がありません。</p>
+<p>　前述のとおり、システム周りはすべてRS2 Plusが面倒を見てくれるので、常にセキュアな状態であることが期待できます。
+（WordPressなどをインストールすれば当然そちらの管理は必要になりますが、今回は静的サイト化したのでその必要もありません）</p>
+<h3 id="設定ファイルの書き換えが原則不要">設定ファイルの書き換えが原則不要</h3>
+<p>　Apacheやnginxの設定ファイルを書き換える必要がありません。アドバンスモードに切り替えれば独自の設定ファイルも設定できますが、<strong>独自ドメインのサイトをHTTPS強制で公開する</strong> くらいのことなら通常の管理画面から行えます。</p>
+<h3 id="データベースの作成も管理画面から">データベースの作成も管理画面から</h3>
+<p>　MySQLデータベースを作成はWeb画面から行います。</p>
+<p>　ぼくはAndroidアプリの開発者なので、MySQLであっても、PostgreSQLであっても、データベースを作成するという作業を実行する頻度は高くありません。作成後のユーザー追加や認証の設定周りはいつも忘れて調べ直しているので、管理画面からお手軽にできるならその方がありがたいです。</p>
+<h3 id="感じるセキュリティ観">感じるセキュリティ観</h3>
+<p>　運営がセキュリティで有名なゲヒルン株式会社だけあって、ところどころ「らしい」と感じる部分があります。</p>
+<p>　管理画面へのサインインに2FA（Two-factor authentication: 2要素認証）が必須だったり、データベースのパスワードが表示されるのは作成時の一度きり（変更のみ可）だったり。
+「安全に運用するならこうあるべき」というメッセージが感じられて、使っていて勉強になります。</p>
+<figure>
+    <img src="images/gehirn-signin.png"/> 
+</figure>
+<figure>
+    <img src="images/gehirn-db_password.png"/> 
+</figure>
+<h2 id="苦労した点">苦労した点</h2>
+<p>　RS2 Plusを使って苦労した点も、もちろんあります。</p>
+<h3 id="lets-encrypt対応">Let&rsquo;s Encrypt対応</h3>
+<p>　HTTPS化するにあたり、証明書をLet&rsquo;s Encryptで発行しようとしたところ、標準ツールの<code>certbot</code>が、管理者権限を要求するので使えませんでした。</p>
+<p>　管理者権限が要らないサードパーティのツールもあるようですが、ぼくの場合サーバー側で証明書を発行するのを諦めて、手元のコンピューターで<code>certbot</code>を使い、DNS認証（DNSに指定された内容のTXTレコードを追加する）で証明書を発行しました。</p>
+<p><a href="https://qiita.com/aquiq/items/db4eb8c7106f109819f0">Qiita - Let&rsquo;s EncryptのSSL証明書をDNS認証で発行してみた。（DNSはお名前.com）</a></p>
+<p>　もともとRS2 Plusの標準設定では、サーバー証明書は管理画面に入力する必要があります。サーバーで受けとってもローカルで受けとっても、その先で必要な操作（管理画面への入力）は同じです。</p>
+<figure>
+    <img src="images/rs2_plus_tls_certificate_file.png"/> 
+</figure>
+<p>　とは言え、管理画面への入力作業は自動化が難しいので、３ヶ月毎の<code>renew</code>に一抹の不安が残ります。</p>
+<p>　Let&rsquo;s Encryptのサポートについては、11月に大阪で開催された<a href="https://connpass.com/event/105611/">イベント</a>で質問したところ「ゲヒルン株式会社は認証局でもあるので、ゲヒルンが証明書を発行していくことも考えている」という話があったので、今後に期待しています。</p>
+<figure>
+    <img src="images/gehirn_ca.png"/> 
+</figure>
+<h3 id="8265-バリデーションエラー">8265 バリデーションエラー</h3>
+<p>　Let&rsquo;s Encryptから取得した証明書を管理画面に入力すると、確定時に「 <strong>8265 バリデーションエラー</strong> 」と表示されて設定できない現象に遭遇しました。</p>
+<figure>
+    <img src="images/8265_validation_error.png"/> 
+</figure>
+<p>　結論から言うと、Let&rsquo;s Encryptで取得した秘密鍵は、そのままではRS2 Plusの管理画面に貼り付けることができません。次のコマンドで変換する必要があります。</p>
+<blockquote>
+<p>$ openssl rsa -in privkey.pem -out rsaprivkey.pem</p>
+</blockquote>
+<p>　いろいろ試しても状況が変わらず、途方に暮れてサポートセンターに問い合わせたところ、先のコマンドを教えてもらいました。その節は本当にありがとうございました。</p>
+<h3 id="https強制">HTTPS強制</h3>
+<p>　サーバー証明書の設定が完了して、無事HTTPSで接続できるようになりました。
+しかし、そのままではHTTPにも応答してしまいます。</p>
+<p>　「HTTPS 強制」で検索すると「nginxの設定で<code>301</code>を返す」という手法が紹介されているので、設定をアドバンスモードにして<code>nginx.conf</code>に設定してみましたが上手く動作しません。</p>
+<p>「困ったな。まぁ、HTTPSでつながってるんだからいいかー」と思いつつ、Twitter（Twitterはやっていない）でつぶやいたところ、<a href="https://twitter.com/isidai">isidai</a>さんからリプライをもらいました。</p>
+<blockquote class="twitter-tweet" data-lang="en"><p lang="ja" dir="ltr">マニュアルに書かれています。<br><br>Strict-Transport-Security を 無効以外 に設定した場合、すべての HTTP アクセスは自動的に HTTPS にリダイレクトされます。<a href="https://t.co/Sz8YSE8ZZ3">https://t.co/Sz8YSE8ZZ3</a></p>&mdash; isidai (@isidai) <a href="https://twitter.com/isidai/status/1079421766148091904?ref_src=twsrc%5Etfw">December 30, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>　<code>Strict-Transport-Security</code>の存在を今日まで知りませんでした……。
+教えてくださって本当にありがとうございます！</p>
+<h2 id="まとめ">まとめ</h2>
+<p>　年越しも目前に「よしサイトを静的化して引っ越すぞ！」と決めてから１日で移行を終えました。</p>
+<p>　Hugoは以前にも使ったことがあったので、WordPressからのエクスポートと調整には時間はかかりませんでした。
+また移行にあたって「元サイトのデザインを復元することは諦める」という英断をしました。結果、それっぽいテーマをほとんどカスタムせずに導入しています。
+CSSを無限にいじくるより、<a href="https://typesquare.com/ja/">TypeSquare</a>で綺麗なフォントを表示する方が、ぼくは嬉しい。</p>
+<p>　なお、今回の移行で空いた「さくらのVPS」は、root権限を活かして違う役割を担ってもらう予定です。</p>
+<p>　それではみなさん、良いお年をお迎えください。</p></div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C/">習作</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+        
+          <a href="https://blog.keiji.io/2020/08/mangaview.html" class="list-group-item">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html" class="list-group-item">ELEGOO MARSの出力精度の改善</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/04/techbookfest6.html" class="list-group-item">技術書典6でMLOps本「巡りあえないConcourse」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html" class="list-group-item">Gehirn RS2 Plusに引っ越しした</a>
+        
+      
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html" class="list-group-item">いまNN API（TensorFlow Lite）は使えるのか</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/look_back_techbookfest4.html" class="list-group-item">技術書典4に参加してきました</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-2.html" class="list-group-item">技術書典4で「本当はおそろしい商業出版！？」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-1.html" class="list-group-item">技術書典4でML Ops（TensorFlow）の本を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/01/meganeco_playground.html" class="list-group-item">機械学習のモデルを試せるサイトを作った話</a>
+        
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98" class="list-group-item">雑記</a>
+      
+      <a href="https://blog.keiji.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="list-group-item">イベント</a>
+      
+      <a href="https://blog.keiji.io/categories/tensorflow" class="list-group-item">tensorflow</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2" class="list-group-item">メモ</a>
+      
+      <a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C" class="list-group-item">習作</a>
+      
+      <a href="https://blog.keiji.io/categories/aosp" class="list-group-item">aosp</a>
+      
+      <a href="https://blog.keiji.io/categories/adk" class="list-group-item">adk</a>
+      
+      <a href="https://blog.keiji.io/categories/de0" class="list-group-item">de0</a>
+      
+      <a href="https://blog.keiji.io/categories/fpga" class="list-group-item">fpga</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>Keiji ARIYAMA All rights reserved.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p>Original <a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> theme is designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ZwBLIZTRHGg%3d&fadein=500" charset="utf-8"></script>
+  </body>
+</html>

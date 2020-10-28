@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+
+<meta name="google-site-verification" content="jLy-Sg3FFmjHr0ri0Rlq0Dd7CNY-Qx-eGpL5wk7gGYs" />
+<link rel="canonical" href="https://blog.keiji.io/2017/12/tf_advent_calendar.html">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>ココが辛いよ！ TensorFlow - めがねをかけるんだ</title>
+    
+<meta name="description" content="&lt;h2 id=&#34;この投稿はtensorflow-advent-calendar1の12日目の記事です&#34;&gt;この投稿は、&lt;a href=&#34;https://qiita.com/advent-calendar/2017/tensorflow&#34;&gt;TensorFlow Advent Calendar&lt;/a&gt;の12日目の記事です。&lt;/h2&gt;&lt;p&gt;みなさん。TensorFlow使ってますか？&lt;/p&gt;&lt;p&gt;ぼくはと言えば、気がつけば毎日なにがしかのTensorFlowのコードを書いています。&lt;/p&gt;&lt;p&gt;TensorFlowが発表されてからすぐに使い始めて早二年、さまざまな機械学習向けのフレームワークが登場する中、TensorFlowは高い人気を保っていますね。&lt;/p&gt;&lt;p&gt;さて今回の記事は、そんな人気のTensorFlowを使っていて、ぼくが「つらい」と感じる（感じた）ことを書きます。&lt;/p&gt;&lt;p&gt;同じ気持ちの方には共感していただき、「こうすればもっと便利に使えるのに」という方法を知っている方が居られたら是非教えていただきたいと考えています。&lt;/p&gt;">
+
+<meta property="og:title" content="ココが辛いよ！ TensorFlow - めがねをかけるんだ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.keiji.io/2017/12/tf_advent_calendar.html">
+<meta property="og:image" content="https://blog.keiji.io/images/default.png">
+<meta property="og:site_name" content="めがねをかけるんだ">
+<meta property="og:description" content="&lt;h2 id=&#34;この投稿はtensorflow-advent-calendar1の12日目の記事です&#34;&gt;この投稿は、&lt;a href=&#34;https://qiita.com/advent-calendar/2017/tensorflow&#34;&gt;TensorFlow Advent Calendar&lt;/a&gt;の12日目の記事です。&lt;/h2&gt;&lt;p&gt;みなさん。TensorFlow使ってますか？&lt;/p&gt;&lt;p&gt;ぼくはと言えば、気がつけば毎日なにがしかのTensorFlowのコードを書いています。&lt;/p&gt;&lt;p&gt;TensorFlowが発表されてからすぐに使い始めて早二年、さまざまな機械学習向けのフレームワークが登場する中、TensorFlowは高い人気を保っていますね。&lt;/p&gt;&lt;p&gt;さて今回の記事は、そんな人気のTensorFlowを使っていて、ぼくが「つらい」と感じる（感じた）ことを書きます。&lt;/p&gt;&lt;p&gt;同じ気持ちの方には共感していただき、「こうすればもっと便利に使えるのに」という方法を知っている方が居られたら是非教えていただきたいと考えています。&lt;/p&gt;">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="めがねをかけるんだ">
+<meta name="twitter:url" content="https://blog.keiji.io/2017/12/tf_advent_calendar.html">
+<meta name="twitter:title" content="ココが辛いよ！ TensorFlow - めがねをかけるんだ">
+<meta name="twitter:description" content="&lt;h2 id=&#34;この投稿はtensorflow-advent-calendar1の12日目の記事です&#34;&gt;この投稿は、&lt;a href=&#34;https://qiita.com/advent-calendar/2017/tensorflow&#34;&gt;TensorFlow Advent Calendar&lt;/a&gt;の12日目の記事です。&lt;/h2&gt;&lt;p&gt;みなさん。TensorFlow使ってますか？&lt;/p&gt;&lt;p&gt;ぼくはと言えば、気がつけば毎日なにがしかのTensorFlowのコードを書いています。&lt;/p&gt;&lt;p&gt;TensorFlowが発表されてからすぐに使い始めて早二年、さまざまな機械学習向けのフレームワークが登場する中、TensorFlowは高い人気を保っていますね。&lt;/p&gt;&lt;p&gt;さて今回の記事は、そんな人気のTensorFlowを使っていて、ぼくが「つらい」と感じる（感じた）ことを書きます。&lt;/p&gt;&lt;p&gt;同じ気持ちの方には共感していただき、「こうすればもっと便利に使えるのに」という方法を知っている方が居られたら是非教えていただきたいと考えています。&lt;/p&gt;">
+<meta name="twitter:image" content="https://blog.keiji.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.keiji.io\/"
+    },
+    "headline": "ココが辛いよ！ TensorFlow - めがねをかけるんだ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.keiji.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2017-12-13T00:52:09JST",
+    "dateModified": "2017-12-13T00:52:09JST",
+    "author": {
+      "@type": "Person",
+      "name": "めがねをかけるんだ"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "めがねをかけるんだ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.keiji.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "\u003ch2 id=\u0022この投稿はtensorflow-advent-calendar1の12日目の記事です\u0022\u003eこの投稿は、\u003ca href=\u0022https:\/\/qiita.com\/advent-calendar\/2017\/tensorflow\u0022\u003eTensorFlow Advent Calendar\u003c\/a\u003eの12日目の記事です。\u003c\/h2\u003e\n\u003cp\u003eみなさん。TensorFlow使ってますか？\u003c\/p\u003e\n\u003cp\u003eぼくはと言えば、気がつけば毎日なにがしかのTensorFlowのコードを書いています。\u003c\/p\u003e\n\u003cp\u003eTensorFlowが発表されてからすぐに使い始めて早二年、さまざまな機械学習向けのフレームワークが登場する中、TensorFlowは高い人気を保っていますね。\u003c\/p\u003e\n\u003cp\u003eさて今回の記事は、そんな人気のTensorFlowを使っていて、ぼくが「つらい」と感じる（感じた）ことを書きます。\u003c\/p\u003e\n\u003cp\u003e同じ気持ちの方には共感していただき、「こうすればもっと便利に使えるのに」という方法を知っている方が居られたら是非教えていただきたいと考えています。\u003c\/p\u003e"
+  }
+</script>
+
+
+    <link href="https://blog.keiji.io/css/styles.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/default.css">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/typesquare.css">
+    
+
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-62351683-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://blog.keiji.io/">めがねをかけるんだ</a>
+          </div>
+
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="https://blog.keiji.io/profile/">Profile</a></li>
+              
+              
+            </ul>
+            
+          </div>
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://blog.keiji.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.keiji.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">ココが辛いよ！ TensorFlow</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2017-12-13T00:52:09JST">2017-12-13</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.keiji.io/post/">post</a></li>
+      
+    </ul>
+
+    <h1 class="title">ココが辛いよ！ TensorFlow</h1>
+  </header>
+
+  
+
+  <div class="article-body"><h2 id="この投稿はtensorflow-advent-calendar1の12日目の記事です">この投稿は、<a href="https://qiita.com/advent-calendar/2017/tensorflow">TensorFlow Advent Calendar</a>の12日目の記事です。</h2>
+<p>みなさん。TensorFlow使ってますか？</p>
+<p>ぼくはと言えば、気がつけば毎日なにがしかのTensorFlowのコードを書いています。</p>
+<p>TensorFlowが発表されてからすぐに使い始めて早二年、さまざまな機械学習向けのフレームワークが登場する中、TensorFlowは高い人気を保っていますね。</p>
+<p>さて今回の記事は、そんな人気のTensorFlowを使っていて、ぼくが「つらい」と感じる（感じた）ことを書きます。</p>
+<p>同じ気持ちの方には共感していただき、「こうすればもっと便利に使えるのに」という方法を知っている方が居られたら是非教えていただきたいと考えています。</p>
+<h2 id="多すぎる選択肢">多すぎる選択肢</h2>
+<p>TensorFlowにはさまざまなAPIが用意されています。</p>
+<p>たとえば畳み込み層であれば<code>tf.nn.conv2d</code>がもっとも基本的なオペレーションとして挙げることができますが、プリミティブすぎて最近はあまり使っていません。</p>
+<p>他にも<code>tf.layers</code>モジュールの<code>tf.layers.conv2d</code>があります。</p>
+<p><code>tf.layers.conv2d</code>の引数は、つぎの通りです。</p>
+<pre><code class="py">conv2d(
+    inputs,
+    filters,
+    kernel_size,
+    strides=(1, 1),
+    padding='valid',
+    data_format='channels_last',
+    dilation_rate=(1, 1),
+    activation=None,
+    use_bias=True,
+    kernel_initializer=None,
+    bias_initializer=tf.zeros_initializer(),
+    kernel_regularizer=None,
+    bias_regularizer=None,
+    activity_regularizer=None,
+    kernel_constraint=None,
+    bias_constraint=None,
+    trainable=True,
+    name=None,
+    reuse=None
+)
+</code></pre>
+<p>さらに<code>tf.contrib.layers</code>モジュールにも<code>tf.contrib.layers.conv2d</code>があります。</p>
+<p>結局のところ、どれを使えばいいのでしょう？</p>
+<p><a href="https://www.tensorflow.org/api_docs/python/tf/contrib">tf.contrib</a>は本来は変更されたり、消えるかもしれない。将来的にTensorFlowに取り込まれるかもしれないという実験的なコードという位置づけになっています。</p>
+<p>では、今は安定版である<code>tf.layers.conv2d</code>を使っておいて、将来、contribが外れたときに対応すれば……と思うのですが、<code>tf.contrib.layers.conv2d</code>からcontribを外すと、ただの<code>tf.layers.conv2d</code>になるので、名前が衝突してしまい、既存のコードに影響が出ます。</p>
+<p>現在の<code>tf.contrib.layers.conv2d</code>の引数を見てみましょう。</p>
+<pre><code>conv2d(
+    inputs,
+    num_outputs,
+    kernel_size,
+    stride=1,
+    padding='SAME',
+    data_format=None,
+    rate=1,
+    activation_fn=tf.nn.relu,
+    normalizer_fn=None,
+    normalizer_params=None,
+    weights_initializer=initializers.xavier_initializer(),
+    weights_regularizer=None,
+    biases_initializer=tf.zeros_initializer(),
+    biases_regularizer=None,
+    reuse=None,
+    variables_collections=None,
+    outputs_collections=None,
+    trainable=True,
+    scope=None
+)
+</code></pre>
+<p>活性化関数の指定が<code>activation_fn</code>となっています。これでは<code>contrib</code>が外れた瞬間にbreaking changeが発生しそうです。</p>
+<p>また、活性化関数のデフォルト値も<code>tf.layers.conv2d</code>は<code>None</code>ですが、<code>tf.contrib.layers.conv2d</code>は<code>relu</code>がデフォルトです。</p>
+<p>将来のことを考えると、contribが外れるタイミングで<code>tf.contrib.layers.conv2d</code>の方を現行のAPIに寄せるのが妥当と思います。そうなると今<code>tf.contrib.layers.conv2d</code>を使ったところは書き直す必要が出てますが、<code>contrib</code>は、それがあり得ると説明があるので、しょうがないと言えばしょうがないのでしょう。</p>
+<p>そんなわけで、現時点では<code>tf.contrib.layers.conv2d</code>は怖くて使えないので、<code>tf.layers.conv2d</code>を使っておこうと思っていたら、TensorFlow 1.4.0で<code>tf.layers.Conv2D</code>クラスが追加されていました。</p>
+<p>コンストラクタを見ると引数やデフォルト値は<code>tf.contrib.layers.conv2d</code>に合わせてあるようですが、これは標準のAPIとして提供する必要はあるのでしょうか……？</p>
+<p>このようなことが方々であります。</p>
+<p>全結合層の名前も<code>tf.layers.dense</code>だったり<code>tf.contrib.layers.fully_connected</code>だったりと（こちらは名前が違っているのでまだ救いがありますが）、関わっている人たちが自分が慣れている名前や引数をめいめい追加しているだけなんじゃないかと思えてきます。</p>
+<p>また、TensorFlowは、Python 2系と3系をサポートしています。</p>
+<p>サポートするのは良いのですが、その影響でTensorFlowを利用したサンプルコードがPython 2系に向けたものしか用意されていないときがあります。</p>
+<p><a href="https://github.com/tensorflow/magenta">Project Magenta</a>など先進的な取り組みも、コードを見に行くとPython 2.7系でしか動かないと書かれています。</p>
+<p>個人的には仕事以外でPython 2を使うことはしたくないので「あーあ」と思いながら画面を閉じます。</p>
+<p>直近の事例では、TensorFlow ServingのPython APIがPython 2向けにしか提供されていないということがありました。</p>
+<p>なぜPython 2の方が優先されて実装されるのかより、Python 2しか対応していないなら、それならそうとドキュメントに書いておいて欲しいわけです。</p>
+<p><a href="https://www.tensorflow.org/serving/setup">https://www.tensorflow.org/serving/setup</a></p>
+<p><img src="https://blog.keiji.dev/wp-content/uploads/2017/12/Screen-Shot-2017-12-13-at-8.49.08.png" alt="Screen Shot 2017-12-13 at 8.49.08" width="1706" height="372" class="aligncenter size-full wp-image-1645" /></p>
+<p>apt-getでTensorFlow Serving　Serverをインストールして、TensorFlow Serving向けにモデルを出力したりといろいろした後に、pipでPython用のクライアントAPIをインストールしようとしたら「バージョンが違うよ」と表示されるのは、あまりにも残酷な仕打ちです。</p>
+<p>そんなわけで、PRを送ってみるなどしました。</p>
+<p><a href="https://github.com/tensorflow/serving/pull/685">https://github.com/tensorflow/serving/pull/685</a></p>
+<p>この一行で救われる原稿があります。</p>
+<hr>
+<p>そんなわけで、<a href="https://qiita.com/advent-calendar/2017/tensorflow">TensorFlow Advent Calendar</a> 12日目の記事は終わりです。</p>
+<p>明日の担当はLewuatheさんです。</p></div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://blog.keiji.io/categories/tensorflow/">TensorFlow</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98/">雑記</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+        
+          <a href="https://blog.keiji.io/2020/08/mangaview.html" class="list-group-item">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html" class="list-group-item">ELEGOO MARSの出力精度の改善</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/04/techbookfest6.html" class="list-group-item">技術書典6でMLOps本「巡りあえないConcourse」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html" class="list-group-item">Gehirn RS2 Plusに引っ越しした</a>
+        
+      
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html" class="list-group-item">いまNN API（TensorFlow Lite）は使えるのか</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/look_back_techbookfest4.html" class="list-group-item">技術書典4に参加してきました</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-2.html" class="list-group-item">技術書典4で「本当はおそろしい商業出版！？」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-1.html" class="list-group-item">技術書典4でML Ops（TensorFlow）の本を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/01/meganeco_playground.html" class="list-group-item">機械学習のモデルを試せるサイトを作った話</a>
+        
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98" class="list-group-item">雑記</a>
+      
+      <a href="https://blog.keiji.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="list-group-item">イベント</a>
+      
+      <a href="https://blog.keiji.io/categories/tensorflow" class="list-group-item">tensorflow</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2" class="list-group-item">メモ</a>
+      
+      <a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C" class="list-group-item">習作</a>
+      
+      <a href="https://blog.keiji.io/categories/aosp" class="list-group-item">aosp</a>
+      
+      <a href="https://blog.keiji.io/categories/adk" class="list-group-item">adk</a>
+      
+      <a href="https://blog.keiji.io/categories/de0" class="list-group-item">de0</a>
+      
+      <a href="https://blog.keiji.io/categories/fpga" class="list-group-item">fpga</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>Keiji ARIYAMA All rights reserved.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p>Original <a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> theme is designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ZwBLIZTRHGg%3d&fadein=500" charset="utf-8"></script>
+  </body>
+</html>

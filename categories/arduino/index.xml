@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Arduino on めがねをかけるんだ</title>
+    <link>https://blog.keiji.io/categories/arduino/</link>
+    <description>Recent content in Arduino on めがねをかけるんだ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <copyright>Keiji ARIYAMA All rights reserved.</copyright>
+    <lastBuildDate>Wed, 23 Jan 2013 15:09:00 +0000</lastBuildDate><atom:link href="https://blog.keiji.io/categories/arduino/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>雨の日のArduino – UNO</title>
+      <link>https://blog.keiji.io/2013/01/arduino-uno.html</link>
+      <pubDate>Wed, 23 Jan 2013 15:09:00 +0000</pubDate>
+      
+      <guid>https://blog.keiji.io/2013/01/arduino-uno.html</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;僕の会社が入居しているビルは、主要道路に面している、いわゆる表店（おもてだな）にあります。&lt;/p&gt;
+&lt;p&gt;また、駅からもそれほど離れておらず、比較的良い立地と言えるでしょう。&lt;/p&gt;
+&lt;p&gt;僕はここを気に入っていて、かれこれ６年程、ここでお仕事をしているのですが、もちろん、不満がないわけではありません。今回はそんな話です。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

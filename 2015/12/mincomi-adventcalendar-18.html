@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="generator" content="Hugo 0.76.5" />
+
+
+
+<meta name="google-site-verification" content="jLy-Sg3FFmjHr0ri0Rlq0Dd7CNY-Qx-eGpL5wk7gGYs" />
+<link rel="canonical" href="https://blog.keiji.io/2015/12/mincomi-adventcalendar-18.html">
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+    <title>Scrollerのススメ - めがねをかけるんだ</title>
+    
+<meta name="description" content="&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;&lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の18日目の記事です。&lt;/p&gt;&lt;p&gt;すみません。根雪れい（@neyuki_rei）さんの「おかあさん(10)と僕。」を読んでいたらアドベントカレンダーの更新が遅れてしまいました。&lt;/p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;  &lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;    10歳になったおかあさんと僕の生活をマンガにしましたよ～。見てくださいね ！　&lt;a href=&#34;https://t.co/UfxCfaOYRZ&#34;&gt;https://t.co/UfxCfaOYRZ&lt;/a&gt;　 &lt;a href=&#34;https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F?src=hash&#34;&gt;#みんコミ&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF?src=hash&#34;&gt;#みんなのコミック&lt;/a&gt; &lt;a href=&#34;https://t.co/2nHBnFus4n&#34;&gt;pic.twitter.com/2nHBnFus4n&lt;/a&gt;  &lt;/p&gt;  &lt;p&gt;    — 根雪れい.おかあさん(10)と僕。連載中 (@neyuki_rei)  &lt;/p&gt;  &lt;p&gt;    &lt;a href=&#34;https://twitter.com/neyuki_rei/status/664369017038110720&#34;&gt;2015, 11月 11&lt;/a&gt;  &lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;いやはや。まさかのお風呂回に驚きました。布団の柄とかが微妙に凝っていて細部を見ていくと楽しいです。&lt;/p&gt;&lt;p&gt;さて、アドベントカレンダー本編です。&lt;/p&gt;&lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;amp;hl=ja&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;aligncenter size-full wp-image-672&#34; /&gt;&lt;/a&gt;&lt;/p&gt;">
+
+<meta property="og:title" content="Scrollerのススメ - めがねをかけるんだ">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blog.keiji.io/2015/12/mincomi-adventcalendar-18.html">
+<meta property="og:image" content="https://blog.keiji.io/images/default.png">
+<meta property="og:site_name" content="めがねをかけるんだ">
+<meta property="og:description" content="&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;&lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の18日目の記事です。&lt;/p&gt;&lt;p&gt;すみません。根雪れい（@neyuki_rei）さんの「おかあさん(10)と僕。」を読んでいたらアドベントカレンダーの更新が遅れてしまいました。&lt;/p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;  &lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;    10歳になったおかあさんと僕の生活をマンガにしましたよ～。見てくださいね ！　&lt;a href=&#34;https://t.co/UfxCfaOYRZ&#34;&gt;https://t.co/UfxCfaOYRZ&lt;/a&gt;　 &lt;a href=&#34;https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F?src=hash&#34;&gt;#みんコミ&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF?src=hash&#34;&gt;#みんなのコミック&lt;/a&gt; &lt;a href=&#34;https://t.co/2nHBnFus4n&#34;&gt;pic.twitter.com/2nHBnFus4n&lt;/a&gt;  &lt;/p&gt;  &lt;p&gt;    — 根雪れい.おかあさん(10)と僕。連載中 (@neyuki_rei)  &lt;/p&gt;  &lt;p&gt;    &lt;a href=&#34;https://twitter.com/neyuki_rei/status/664369017038110720&#34;&gt;2015, 11月 11&lt;/a&gt;  &lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;いやはや。まさかのお風呂回に驚きました。布団の柄とかが微妙に凝っていて細部を見ていくと楽しいです。&lt;/p&gt;&lt;p&gt;さて、アドベントカレンダー本編です。&lt;/p&gt;&lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;amp;hl=ja&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;aligncenter size-full wp-image-672&#34; /&gt;&lt;/a&gt;&lt;/p&gt;">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="めがねをかけるんだ">
+<meta name="twitter:url" content="https://blog.keiji.io/2015/12/mincomi-adventcalendar-18.html">
+<meta name="twitter:title" content="Scrollerのススメ - めがねをかけるんだ">
+<meta name="twitter:description" content="&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;&lt;p&gt;この記事は「&lt;a href=&#34;http://qiita.com/advent-calendar/2015/mincomi&#34;&gt;みんコミ Advent Calendar&lt;/a&gt;」の18日目の記事です。&lt;/p&gt;&lt;p&gt;すみません。根雪れい（@neyuki_rei）さんの「おかあさん(10)と僕。」を読んでいたらアドベントカレンダーの更新が遅れてしまいました。&lt;/p&gt;&lt;blockquote class=&#34;twitter-tweet&#34; lang=&#34;ja&#34;&gt;  &lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;    10歳になったおかあさんと僕の生活をマンガにしましたよ～。見てくださいね ！　&lt;a href=&#34;https://t.co/UfxCfaOYRZ&#34;&gt;https://t.co/UfxCfaOYRZ&lt;/a&gt;　 &lt;a href=&#34;https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F?src=hash&#34;&gt;#みんコミ&lt;/a&gt; &lt;a href=&#34;https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF?src=hash&#34;&gt;#みんなのコミック&lt;/a&gt; &lt;a href=&#34;https://t.co/2nHBnFus4n&#34;&gt;pic.twitter.com/2nHBnFus4n&lt;/a&gt;  &lt;/p&gt;  &lt;p&gt;    — 根雪れい.おかあさん(10)と僕。連載中 (@neyuki_rei)  &lt;/p&gt;  &lt;p&gt;    &lt;a href=&#34;https://twitter.com/neyuki_rei/status/664369017038110720&#34;&gt;2015, 11月 11&lt;/a&gt;  &lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;いやはや。まさかのお風呂回に驚きました。布団の柄とかが微妙に凝っていて細部を見ていくと楽しいです。&lt;/p&gt;&lt;p&gt;さて、アドベントカレンダー本編です。&lt;/p&gt;&lt;p&gt;「&lt;a href=&#34;https://www.mincomi.jp&#34;&gt;みんコミ&lt;/a&gt;」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。&lt;/p&gt;&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;amp;hl=ja&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png&#34; alt=&#34;en_generic_rgb_wo_60&#34; width=&#34;172&#34; height=&#34;60&#34; class=&#34;aligncenter size-full wp-image-672&#34; /&gt;&lt;/a&gt;&lt;/p&gt;">
+<meta name="twitter:image" content="https://blog.keiji.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/blog.keiji.io\/"
+    },
+    "headline": "Scrollerのススメ - めがねをかけるんだ",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/blog.keiji.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2015-12-17T16:00:28JST",
+    "dateModified": "2015-12-17T16:00:28JST",
+    "author": {
+      "@type": "Person",
+      "name": "めがねをかけるんだ"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "めがねをかけるんだ",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/blog.keiji.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "\u003ch2 id=\u0022はじめに\u0022\u003eはじめに\u003c\/h2\u003e\n\u003cp\u003eこの記事は「\u003ca href=\u0022http:\/\/qiita.com\/advent-calendar\/2015\/mincomi\u0022\u003eみんコミ Advent Calendar\u003c\/a\u003e」の18日目の記事です。\u003c\/p\u003e\n\u003cp\u003eすみません。根雪れい（@neyuki_rei）さんの「おかあさん(10)と僕。」を読んでいたらアドベントカレンダーの更新が遅れてしまいました。\u003c\/p\u003e\n\u003cblockquote class=\u0022twitter-tweet\u0022 lang=\u0022ja\u0022\u003e\n  \u003cp lang=\u0022ja\u0022 dir=\u0022ltr\u0022\u003e\n    10歳になったおかあさんと僕の生活をマンガにしましたよ～。見てくださいね ！　\u003ca href=\u0022https:\/\/t.co\/UfxCfaOYRZ\u0022\u003ehttps:\/\/t.co\/UfxCfaOYRZ\u003c\/a\u003e　 \u003ca href=\u0022https:\/\/twitter.com\/hashtag\/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F?src=hash\u0022\u003e#みんコミ\u003c\/a\u003e \u003ca href=\u0022https:\/\/twitter.com\/hashtag\/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF?src=hash\u0022\u003e#みんなのコミック\u003c\/a\u003e \u003ca href=\u0022https:\/\/t.co\/2nHBnFus4n\u0022\u003epic.twitter.com\/2nHBnFus4n\u003c\/a\u003e\n  \u003c\/p\u003e\n  \u003cp\u003e\n    — 根雪れい.おかあさん(10)と僕。連載中 (@neyuki_rei)\n  \u003c\/p\u003e\n  \u003cp\u003e\n    \u003ca href=\u0022https:\/\/twitter.com\/neyuki_rei\/status\/664369017038110720\u0022\u003e2015, 11月 11\u003c\/a\u003e\n  \u003c\/p\u003e\n\u003c\/blockquote\u003e\n\u003cp\u003eいやはや。まさかのお風呂回に驚きました。布団の柄とかが微妙に凝っていて細部を見ていくと楽しいです。\u003c\/p\u003e\n\u003cp\u003eさて、アドベントカレンダー本編です。\u003c\/p\u003e\n\u003cp\u003e「\u003ca href=\u0022https:\/\/www.mincomi.jp\u0022\u003eみんコミ\u003c\/a\u003e」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。\u003c\/p\u003e\n\u003cp\u003e\u003ca href=\u0022https:\/\/play.google.com\/store\/apps\/details?id=jp.ebookjapan.mincomi\u0026amp;hl=ja\u0022\u003e\u003cimg src=\u0022https:\/\/blog.keiji.dev\/wp-content\/uploads\/2015\/12\/en_generic_rgb_wo_60.png\u0022 alt=\u0022en_generic_rgb_wo_60\u0022 width=\u0022172\u0022 height=\u002260\u0022 class=\u0022aligncenter size-full wp-image-672\u0022 \/\u003e\u003c\/a\u003e\u003c\/p\u003e"
+  }
+</script>
+
+
+    <link href="https://blog.keiji.io/css/styles.css" rel="stylesheet">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/default.css">
+    
+        <link rel="stylesheet" href="https://blog.keiji.io/css/typesquare.css">
+    
+
+  </head>
+
+  <body>
+    
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-62351683-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+
+    <header class="l-header">
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://blog.keiji.io/">めがねをかけるんだ</a>
+          </div>
+
+          
+          <div id="navbar" class="collapse navbar-collapse">
+            
+            <ul class="nav navbar-nav navbar-right">
+              
+              
+              <li><a href="https://blog.keiji.io/profile/">Profile</a></li>
+              
+              
+            </ul>
+            
+          </div>
+          
+
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        
+<div class="row">
+  <div class="col-md-8">
+
+    <nav class="p-crumb">
+      <ol class="breadcrumb">
+        <li><a href="https://blog.keiji.io/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://blog.keiji.io/post/" itemprop="url"><span itemprop="title">post</span></a></li>
+        
+        <li class="active">Scrollerのススメ</li>
+      </ol>
+    </nav>
+
+    <article class="single">
+  <header>
+    <ul class="p-facts">
+      <li><i class="fa fa-calendar" aria-hidden="true"></i><time datetime="2015-12-17T16:00:28JST">2015-12-17</time></li>
+      <li><i class="fa fa-bookmark" aria-hidden="true"></i><a href="https://blog.keiji.io/post/">post</a></li>
+      
+    </ul>
+
+    <h1 class="title">Scrollerのススメ</h1>
+  </header>
+
+  
+
+  <div class="article-body"><h2 id="はじめに">はじめに</h2>
+<p>この記事は「<a href="http://qiita.com/advent-calendar/2015/mincomi">みんコミ Advent Calendar</a>」の18日目の記事です。</p>
+<p>すみません。根雪れい（@neyuki_rei）さんの「おかあさん(10)と僕。」を読んでいたらアドベントカレンダーの更新が遅れてしまいました。</p>
+<blockquote class="twitter-tweet" lang="ja">
+  <p lang="ja" dir="ltr">
+    10歳になったおかあさんと僕の生活をマンガにしましたよ～。見てくださいね ！　<a href="https://t.co/UfxCfaOYRZ">https://t.co/UfxCfaOYRZ</a>　 <a href="https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F?src=hash">#みんコミ</a> <a href="https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF?src=hash">#みんなのコミック</a> <a href="https://t.co/2nHBnFus4n">pic.twitter.com/2nHBnFus4n</a>
+  </p>
+  <p>
+    — 根雪れい.おかあさん(10)と僕。連載中 (@neyuki_rei)
+  </p>
+  <p>
+    <a href="https://twitter.com/neyuki_rei/status/664369017038110720">2015, 11月 11</a>
+  </p>
+</blockquote>
+<p>いやはや。まさかのお風呂回に驚きました。布団の柄とかが微妙に凝っていて細部を見ていくと楽しいです。</p>
+<p>さて、アドベントカレンダー本編です。</p>
+<p>「<a href="https://www.mincomi.jp">みんコミ</a>」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。</p>
+<p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" /></a></p>
+<hr>
+<p>「みんコミ」アプリのコミックビューアー。</p>
+<p>僕はたいていタブレット（Nexus 9、Xperia Z3 Tablet Compact）で読んでいます（Nexus 5Xは画面が小さいので……）。</p>
+<p>しかし、今日（正確には昨日）Nexus 5Xで作品を読んでいて、拡大した状態で勢いよくフリックしてもスクロールが加速しないことに気づきました。</p>
+<p>個人的にはぴゅんと表示が跳んで欲しいと思います。</p>
+<p>この処理は<code>Scroller</code>を使うと比較的簡単に実装できます。</p>
+<p>サンプルプロジェクトを<a href="https://github.com/keiji/adventcalendar_2015_mincomi">GitHub</a>に置いておきます。</p>
+<p><a href="https://github.com/keiji/adventcalendar_2015_mincomi">https://github.com/keiji/adventcalendar_2015_mincomi</a></p>
+<p>サンプル「スクロールサンプル(ScrollerActivity)」では、赤い■をフリックすると移動するようにプログラムしています。</p>
+<p><a href="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-18-004150.png"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-18-004150.png" alt="device-2015-12-18-004150" width="50%" height="50%" class="aligncenter size-full wp-image-940" /></a></p>
+<p>まず、GestureDetectorでflingジェスチャーを取得します。</p>
+<p>使い方は簡単です。GestureDetectorのインスタンスにonTouchが受け取るMotionEventを渡すだけで、onTouchEventの状況から判定して所定のジェスチャーのコールバック（今回の場合はonFling）が呼びます</p>
+<pre><code class="java">&lt;br />public class ScrollerView extends View {
+    private static final String TAG = ScrollerView.class.getSimpleName();
+
+    private static final int SIZE = 100;
+    private static final Paint PAINT = new Paint();
+
+    static {
+        PAINT.setColor(Color.RED);
+    }
+
+    private Rect mRect;
+
+    private final GestureDetectorCompat mGestureDetector;
+
+    public ScrollerView(Context context) {
+        super(context);
+
+        mGestureDetector = new GestureDetectorCompat(context, mOnGestureListener);
+
+        setFocusable(true);
+    }
+
+    GestureDetector.OnGestureListener mOnGestureListener = new GestureDetector.OnGestureListener() {
+        @Override
+        public boolean onDown(MotionEvent e) {
+            return true;
+        }
+
+        @Override
+        public void onShowPress(MotionEvent e) {
+
+        }
+
+        @Override
+        public boolean onSingleTapUp(MotionEvent e) {
+            return true;
+        }
+
+        @Override
+        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+            return true;
+        }
+
+        @Override
+        public void onLongPress(MotionEvent e) {
+
+        }
+
+        @Override
+        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+            return true;
+        }
+    };
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        Log.d(TAG, "onTouchEvent " + event.getAction());
+
+        boolean handled = mGestureDetector.onTouchEvent(event);
+        if (handled) {
+            return true;
+        }
+
+        return super.onTouchEvent(event);
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+
+        if (mRect == null) {
+            mRect = new Rect(0, 0, SIZE, SIZE);
+            int left = (canvas.getWidth() - SIZE) / 2;
+            int top = (canvas.getHeight() - SIZE) / 2;
+            mRect.offset(left, top);
+        }
+
+        canvas.drawRect(mRect, PAINT);
+    }
+}
+</code></pre>
+<p>サンプルでは、Compatibility Libraryに含まれているGestureDetectorCompatを使用しています。</p>
+<p>簡単と言っても、OnGestureListenerの各メソッドの戻り値には気をつけて下さい。Android Studioで自動生成するとデフォルトで各メソッドは<code>false</code>を返しますが、そのままではACTION_DOWN以外のイベントを受け取れません（当然、ジェスチャも受け取れません）。</p>
+<p>適宜<code>true</code>を返すようにしましょう。</p>
+<p>つぎは<code>Scroller</code>です。</p>
+<p>インスタンス化し、onFlingで受け取った各種の値をそのままflingメソッドに渡します。これで、flingが始まってからの時間に応じて自動的にスクロール量を計算してくれます。</p>
+<p>なおGoogleは、OverScrollerを使用するように推奨しています。</p>
+<pre><code class="java">&lt;br />public class ScrollerView extends View {
+    private static final String TAG = ScrollerView.class.getSimpleName();
+
+    private static final int SIZE = 100;
+    private static final Paint PAINT = new Paint();
+
+    static {
+        PAINT.setColor(Color.RED);
+    }
+
+    private Rect mRect;
+
+    private final OverScroller mScroller;
+    private final GestureDetectorCompat mGestureDetector;
+
+    public ScrollerView(Context context) {
+        super(context);
+
+        mScroller = new OverScroller(context);
+        mGestureDetector = new GestureDetectorCompat(context, mOnGestureListener);
+
+        setFocusable(true);
+    }
+
+    GestureDetector.OnGestureListener mOnGestureListener = new GestureDetector.OnGestureListener() {
+        @Override
+        public boolean onDown(MotionEvent e) {
+            return true;
+        }
+
+        @Override
+        public void onShowPress(MotionEvent e) {
+
+        }
+
+        @Override
+        public boolean onSingleTapUp(MotionEvent e) {
+            return true;
+        }
+
+        @Override
+        public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+            return true;
+        }
+
+        @Override
+        public void onLongPress(MotionEvent e) {
+
+        }
+
+        @Override
+        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+
+            mScroller.fling(mRect.centerX(), mRect.centerY(),
+                    Math.round(velocityX), Math.round(velocityY),
+                    0, getWidth() - SIZE, 0, getHeight() - SIZE,
+                    SIZE / 2, SIZE / 2);
+
+            ViewCompat.postInvalidateOnAnimation(ScrollerView.this);
+
+            return true;
+        }
+    };
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        Log.d(TAG, "onTouchEvent " + event.getAction());
+
+        boolean handled = mGestureDetector.onTouchEvent(event);
+        if (handled) {
+            return true;
+        }
+
+        return super.onTouchEvent(event);
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+
+        if (mRect == null) {
+            mRect = new Rect(0, 0, SIZE, SIZE);
+            int left = (canvas.getWidth() - SIZE) / 2;
+            int top = (canvas.getHeight() - SIZE) / 2;
+            mRect.offset(left, top);
+        }
+
+        canvas.drawRect(mRect, PAINT);
+    }
+
+    @Override
+    public void computeScroll() {
+        super.computeScroll();
+
+        if (mScroller.computeScrollOffset()) {
+            mRect.offsetTo(mScroller.getCurrX(), mScroller.getCurrY());
+
+            ViewCompat.postInvalidateOnAnimation(this);
+        }
+    }
+}
+</code></pre>
+<p><code>fling</code>から<code>ViewCompat.postInvalidateOnAnimation(this);</code>を実行すると<code>computeScroll()</code>が呼び出されます。</p>
+<p><code>mScroller.computeScrollOffset()</code>でスクロールの状態を計算し、（flingが続いていれば）その結果を<code>Rect</code>の位置として設定しています（ここで得られる値は、Scrollerのflingメソッドに与えた値を基にした絶対座標です）。</p>
+<p><code>mScroller.computeScrollOffset()</code>がtrueである限り<code>postInvalidateOnAnimation</code>と<code>computeScroll</code>の連鎖が続き、やがてScrollerが完了すると移動も止まります。</p>
+<p>なお、OverScrollerはその名の通り、最後の値を設定すればオーバースクロールを有効にして、バウンスさせることができます。例では赤い■のサイズの半分の量だけオーバースクロールさせるように設定しています。</p>
+<p>あらためて、実装例をGitHubに置いておきます。</p>
+<p>サンプルプロジェクトを<a href="https://github.com/keiji/adventcalendar_2015_mincomi">GitHub</a>に置いておきます。</p>
+<p><a href="https://github.com/keiji/adventcalendar_2015_mincomi">https://github.com/keiji/adventcalendar_2015_mincomi</a></p>
+<h3 id="実装参照">実装参照</h3>
+<ul>
+<li><a href="http://developer.android.com/intl/ja/training/gestures/detector.html">http://developer.android.com/intl/ja/training/gestures/detector.html</a></li>
+<li><a href="http://developer.android.com/intl/ja/training/gestures/scroll.html">http://developer.android.com/intl/ja/training/gestures/scroll.html</a></li>
+</ul>
+<hr>
+<pre><code>「有山圭二」は「みんなのコミック」及び運営の「株式会社イーブックイニシアティブジャパン」とは一切関係がありません。
+また、本アドベントカレンダーの内容はあくまで参加者個人の見解です。
+「みんなのコミック」の評価を目的とするものではありませんので、ご了承下さい。
+</code></pre>
+<hr>
+<p>それでは明日19日の担当は、この記事を書くに当たってGestureDetectorCompatの存在を知ったけど、Compat系のクラスには嫌な思い出しかないという「有山圭二」さんです。</p>
+<p>よろしくお願いします。</p></div>
+
+  <footer class="article-footer">
+    
+    
+    
+    <section class="bordered">
+      <header>
+        <div class="panel-title">CATEGORIES</div>
+      </header>
+      <div>
+        <ul class="p-terms">
+          
+          <li><a href="https://blog.keiji.io/categories/android/">Android</a></li>
+          
+          <li><a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98/">雑記</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+    
+  </div>
+
+  <div class="col-md-4">
+    
+<aside class="l-sidebar">
+
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">LATESTS</div>
+    </div>
+    <div class="list-group">
+      
+        
+          <a href="https://blog.keiji.io/2020/08/mangaview.html" class="list-group-item">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2020/01/elegoo-mars_presision.html" class="list-group-item">ELEGOO MARSの出力精度の改善</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/04/techbookfest6.html" class="list-group-item">技術書典6でMLOps本「巡りあえないConcourse」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/move_to_gehirn_rs2_plus.html" class="list-group-item">Gehirn RS2 Plusに引っ越しした</a>
+        
+      
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/12/tensorflow-advent_calendar.html" class="list-group-item">いまNN API（TensorFlow Lite）は使えるのか</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/look_back_techbookfest4.html" class="list-group-item">技術書典4に参加してきました</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-2.html" class="list-group-item">技術書典4で「本当はおそろしい商業出版！？」を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2018/04/techbookfest4-1.html" class="list-group-item">技術書典4でML Ops（TensorFlow）の本を頒布します</a>
+        
+      
+        
+          <a href="https://blog.keiji.io/2019/01/meganeco_playground.html" class="list-group-item">機械学習のモデルを試せるサイトを作った話</a>
+        
+      
+    </div>
+  </section>
+
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">CATEGORY</div>
+    </div>
+    <div class="list-group">
+      
+      <a href="https://blog.keiji.io/categories/%E9%9B%91%E8%A8%98" class="list-group-item">雑記</a>
+      
+      <a href="https://blog.keiji.io/categories/android" class="list-group-item">android</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88" class="list-group-item">イベント</a>
+      
+      <a href="https://blog.keiji.io/categories/tensorflow" class="list-group-item">tensorflow</a>
+      
+      <a href="https://blog.keiji.io/categories/%E3%83%A1%E3%83%A2" class="list-group-item">メモ</a>
+      
+      <a href="https://blog.keiji.io/categories/%E7%BF%92%E4%BD%9C" class="list-group-item">習作</a>
+      
+      <a href="https://blog.keiji.io/categories/aosp" class="list-group-item">aosp</a>
+      
+      <a href="https://blog.keiji.io/categories/adk" class="list-group-item">adk</a>
+      
+      <a href="https://blog.keiji.io/categories/de0" class="list-group-item">de0</a>
+      
+      <a href="https://blog.keiji.io/categories/fpga" class="list-group-item">fpga</a>
+      
+    </div>
+  </section>
+  
+  <section class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">TAG</div>
+    </div>
+    <div class="list-group">
+      
+    </div>
+  </section>
+  
+
+</aside>
+
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="container">
+        <p>Keiji ARIYAMA All rights reserved.</p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p>Original <a href="https://github.com/dim0627/hugo_theme_beg">Beg</a> theme is designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ZwBLIZTRHGg%3d&fadein=500" charset="utf-8"></script>
+  </body>
+</html>
