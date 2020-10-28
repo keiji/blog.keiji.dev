@@ -118,4 +118,4 @@ categories:
       &nbsp;
     </p>
 
- [1]: http://blog.keiji.io/2013/02/newdraw9patchtool.html
+ [1]: https://blog.keiji.io/2013/02/newdraw9patchtool.html

@@ -96,7 +96,7 @@ categories:
   <a href="http://blog.c-lis.co.jp/wp-content/uploads/2013/01/Photo-23-01-13-02-10-48-0.jpg"><img class="aligncenter  wp-image-77" alt="Photo-23-01-13-02-10-48-0" src="http://blog.c-lis.co.jp/wp-content/uploads/2013/01/Photo-23-01-13-02-10-48-0.jpg" width="389" height="518" /></a>
 </div>
 
-本当は、温度センサもつけて、温度もとりたかったのですが、手持ちのサーミスタは、先日の<a href="http://blog.keiji.io/2013/01/adk_21.html" target="_blank">ADKハンズオン</a>で配布して品切れなので、今回は省略です。
+本当は、温度センサもつけて、温度もとりたかったのですが、手持ちのサーミスタは、先日の<a href="https://blog.keiji.io/2013/01/adk_21.html" target="_blank">ADKハンズオン</a>で配布して品切れなので、今回は省略です。
 
 <div>
 </div>

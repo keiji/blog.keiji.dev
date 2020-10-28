@@ -11,7 +11,7 @@ categories:
 新しいWebサイトを作りました。
 
 <div align="center">
-  <a href="https://anharu.keiji.io">はじめてのAndroidアプリ開発レッスン<br /> <img src="http://blog.keiji.io/wp-content/uploads/2015/11/Android_Studio_icon.png" alt="Android_Studio_icon" width="25%" height="25%" class="aligncenter size-full wp-image-595" /> </a>
+  <a href="https://anharu.keiji.io">はじめてのAndroidアプリ開発レッスン<br /> <img src="https://blog.keiji.io/wp-content/uploads/2015/11/Android_Studio_icon.png" alt="Android_Studio_icon" width="25%" height="25%" class="aligncenter size-full wp-image-595" /> </a>
 </div>
 
 以前、技術評論社より[Androidアプリ開発の初心者本][1]を出版したのですが、その本のAmazonレビューに「Javaのことをまったく解説していないのでこれだけではわかりません。初心者向きではない」というような指摘が多かったことから「やりましょう」とばかりに取り組んだこの企画。 実は、９月の[名古屋つ部][2]ではちらりと発表していたのですが、ようやくのお目見えとなりました。
@@ -52,7 +52,7 @@ Android Studioのアップデートに聞いて下さい！
 
 ### Hugo
 
-[<img src="http://blog.keiji.io/wp-content/uploads/2015/11/hugo.png" alt="hugo" width="25%" height="25%" class="aligncenter size-full wp-image-590" />][6]
+[<img src="https://blog.keiji.io/wp-content/uploads/2015/11/hugo.png" alt="hugo" width="25%" height="25%" class="aligncenter size-full wp-image-590" />][6]
 
 サイトの構築にはHugoを採用しました。 HugoはSteve Franci氏がオープンソースで開発している&#8221;Static Website Engine&#8221;です。Markdownとテーマ・テンプレートから静的なHTMLを出力します。
 
@@ -127,7 +127,7 @@ SSL証明書を取得できたのでnginxのSPDYを有効にしてあります�
  [3]: https://twitter.com/neyuki_rei
  [4]: http://www.mincomi.jp/
  [5]: https://i.keiji.io/
- [6]: http://blog.keiji.io/wp-content/uploads/2015/11/hugo.png
+ [6]: https://blog.keiji.io/wp-content/uploads/2015/11/hugo.png
  [7]: http://www.google.com/design/spec/material-design/introduction.html
  [8]: http://www.getmdl.io/
  [9]: https://anharu.keiji.io

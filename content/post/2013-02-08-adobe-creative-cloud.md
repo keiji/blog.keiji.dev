@@ -45,7 +45,7 @@ Illustratorは、Macのトラックパッドではパスを書きづらいので
 </p>
 
 <p style="text-align: center;">
-  <span style="font-size: large;"><strong><a href="http://blog.keiji.io/2013/02/adobe-creative-cloud_8.html" target="_blank">この記事には続報があります</a></strong></span>
+  <span style="font-size: large;"><strong><a href="https://blog.keiji.io/2013/02/adobe-creative-cloud_8.html" target="_blank">この記事には続報があります</a></strong></span>
 </p>
 
 <!--more-->
@@ -53,7 +53,7 @@ Illustratorは、Macのトラックパッドではパスを書きづらいので
 ## &#8220;サブスクリプションとサービス&#8221;
 
 <p style="text-align: center;">
-  <a href="http://blog.keiji.io/wp-content/uploads/2013/02/adobe05.png"><img class="aligncenter" alt="adobe05" src="http://blog.keiji.io/wp-content/uploads/2013/02/adobe05.png" width="461" height="351" /></a>
+  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/adobe05.png"><img class="aligncenter" alt="adobe05" src="https://blog.keiji.io/wp-content/uploads/2013/02/adobe05.png" width="461" height="351" /></a>
 </p>
 
 はじめに、&#8221;**Adobe Creative Cloud**&#8220;にサインインします。
@@ -63,7 +63,7 @@ Illustratorは、Macのトラックパッドではパスを書きづらいので
 そして、&#8221;Creative Cloud メンバーシップ（年間プラン）&#8221;のエントリの右側に、&#8221;**Manage**&#8220;のリンクがありました。
 
 <p style="text-align: center;">
-  <a href="http://blog.keiji.io/wp-content/uploads/2013/02/adobe06.png"><img class="aligncenter" alt="adobe06" src="http://blog.keiji.io/wp-content/uploads/2013/02/adobe06.png" width="457" height="424" /></a>
+  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/adobe06.png"><img class="aligncenter" alt="adobe06" src="https://blog.keiji.io/wp-content/uploads/2013/02/adobe06.png" width="457" height="424" /></a>
 </p>
 
 しかし、リンク先の&#8221;**Manage**&#8220;のページには解約につながる情報はありません。&#8221;請求情報の編集&#8221;は、本当に請求情報を編集するだけです。
@@ -77,7 +77,7 @@ Illustratorは、Macのトラックパッドではパスを書きづらいので
 PhotoshopやIllustrator、何でも良いので起動してHelpから&#8221;deactivate&#8221;を選択すると、ウィザードが立ち上がりました。
 
 <p style="text-align: center;">
-  <a href="http://blog.keiji.io/wp-content/uploads/2013/02/adobe01.png"><img class="aligncenter" alt="adobe01" src="http://blog.keiji.io/wp-content/uploads/2013/02/adobe01.png" width="322" height="260" /></a>
+  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/adobe01.png"><img class="aligncenter" alt="adobe01" src="https://blog.keiji.io/wp-content/uploads/2013/02/adobe01.png" width="322" height="260" /></a>
 </p>
 
 **&#8220;Deactivating application does not alter your subscription. To modify your subscription, visit the Subscription Manager.&#8221;**
@@ -87,7 +87,7 @@ PhotoshopやIllustrator、何でも良いので起動してHelpから&#8221;deac
 &#8220;**Subscription Manager**&#8220;のリンクを、ワクワクしながらクリックすると、
 
 <p style="text-align: center;">
-  <a href="http://blog.keiji.io/wp-content/uploads/2013/02/adobe03.jpg"><img class="aligncenter" alt="adobe03" src="http://blog.keiji.io/wp-content/uploads/2013/02/adobe03.jpg" width="576" height="321" /></a>
+  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/adobe03.jpg"><img class="aligncenter" alt="adobe03" src="https://blog.keiji.io/wp-content/uploads/2013/02/adobe03.jpg" width="576" height="321" /></a>
 </p>
 
 再び&#8221;Adobe Creative Cloud&#8221;の画面が表示されるだけでした。
@@ -103,19 +103,19 @@ PhotoshopやIllustrator、何でも良いので起動してHelpから&#8221;deac
 注文履歴には、このように最初に契約した日を注文日として、１件のレコードが表示されています。
 
 <p style="text-align: center;">
-  <a href="http://blog.keiji.io/wp-content/uploads/2013/02/adobe07.png"><img class="aligncenter" alt="adobe07" src="http://blog.keiji.io/wp-content/uploads/2013/02/adobe07.png" width="569" height="316" /></a>
+  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/adobe07.png"><img class="aligncenter" alt="adobe07" src="https://blog.keiji.io/wp-content/uploads/2013/02/adobe07.png" width="569" height="316" /></a>
 </p>
 
 注文番号がリンクになっていて、そこから注文の詳細を見ることが出来ます。
 
 <p style="text-align: center;">
-  <a href="http://blog.keiji.io/wp-content/uploads/2013/02/adobe08.png"><img class="aligncenter" alt="adobe08" src="http://blog.keiji.io/wp-content/uploads/2013/02/adobe08.png" width="571" height="479" /></a>
+  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/adobe08.png"><img class="aligncenter" alt="adobe08" src="https://blog.keiji.io/wp-content/uploads/2013/02/adobe08.png" width="571" height="479" /></a>
 </p>
 
 上に&#8221;**商品の返品**&#8220;のボタンがありました。ここから「返品」という形で解約するのかも知れません。返品のボタンをクリックすると、しばらく待ったあと、
 
 <p style="text-align: center;">
-  <a href="http://blog.keiji.io/wp-content/uploads/2013/02/adobe09.png"><img class="aligncenter" alt="adobe09" src="http://blog.keiji.io/wp-content/uploads/2013/02/adobe09.png" width="545" height="523" /></a>
+  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/adobe09.png"><img class="aligncenter" alt="adobe09" src="https://blog.keiji.io/wp-content/uploads/2013/02/adobe09.png" width="545" height="523" /></a>
 </p>
 
 「現在、ご返品いただける商品がありません。」と、お断りされてしまいました。
@@ -127,7 +127,7 @@ PhotoshopやIllustrator、何でも良いので起動してHelpから&#8221;deac
 もう一度「良くある質問」を見てみます。
 
 <p style="text-align: center;">
-  <a href="http://blog.keiji.io/wp-content/uploads/2013/02/adobe10.png"><img class="aligncenter" alt="adobe10" src="http://blog.keiji.io/wp-content/uploads/2013/02/adobe10.png" width="650" height="209" /></a>
+  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/adobe10.png"><img class="aligncenter" alt="adobe10" src="https://blog.keiji.io/wp-content/uploads/2013/02/adobe10.png" width="650" height="209" /></a>
 </p>
 
 やはり、年間プランはキャンセルできるようです。そして、ここでも「**マイアカウントページ**」に案内されるのですが、いったいどうしろというのでしょうか。
@@ -143,7 +143,7 @@ Googleなどで&#8221;Adobe Creative Cloud Cancel&#8221;などのキーワード
 &nbsp;
 
 <p style="text-align: center;">
-  <a href="http://blog.keiji.io/wp-content/uploads/2013/02/adobe04.png"><img class="aligncenter" alt="adobe04" src="http://blog.keiji.io/wp-content/uploads/2013/02/adobe04.png" width="567" height="369" /></a>
+  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/adobe04.png"><img class="aligncenter" alt="adobe04" src="https://blog.keiji.io/wp-content/uploads/2013/02/adobe04.png" width="567" height="369" /></a>
 </p>
 
 途方に暮れてリンクをクリックしていると、何かのきっかけで、マイアカウントから、「**ご注文**」のページを開きました。
@@ -153,7 +153,7 @@ Googleなどで&#8221;Adobe Creative Cloud Cancel&#8221;などのキーワード
 そして、
 
 <p style="text-align: center;">
-  <a href="http://blog.keiji.io/wp-content/uploads/2013/02/adobe11.png"><img class="aligncenter" alt="adobe11" src="http://blog.keiji.io/wp-content/uploads/2013/02/adobe11.png" width="576" height="326" /></a>
+  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/adobe11.png"><img class="aligncenter" alt="adobe11" src="https://blog.keiji.io/wp-content/uploads/2013/02/adobe11.png" width="576" height="326" /></a>
 </p>
 
 なんと、ここにも&#8221;**アイテムを返品**&#8220;のリンクがありました。
@@ -161,7 +161,7 @@ Googleなどで&#8221;Adobe Creative Cloud Cancel&#8221;などのキーワード
 しかし、これを実行すると、１月分のみの返品になるんじゃないでしょうか？また、 返品ではなく、解約したいのですが。。。いろいろ思う所はありますが、駄目元でリンクをクリックすると、
 
 <p style="text-align: center;">
-  <a href="http://blog.keiji.io/wp-content/uploads/2013/02/adobe12.png"><img class="aligncenter" alt="adobe12" src="http://blog.keiji.io/wp-content/uploads/2013/02/adobe12.png" width="581" height="615" /></a>
+  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/adobe12.png"><img class="aligncenter" alt="adobe12" src="https://blog.keiji.io/wp-content/uploads/2013/02/adobe12.png" width="581" height="615" /></a>
 </p>
 
 ついに、「Adobe Creative Cloud」の返品ページを見つけ出すことに成功しました。
@@ -185,7 +185,7 @@ Googleなどで&#8221;Adobe Creative Cloud Cancel&#8221;などのキーワード
 そして、&#8221;**内容確認＆次へ**&#8220;をクリックすると、、、
 
 <p style="text-align: center;">
-  <a href="http://blog.keiji.io/wp-content/uploads/2013/02/adobe13.png"><img class="aligncenter" alt="adobe13" src="http://blog.keiji.io/wp-content/uploads/2013/02/adobe13.png" width="544" height="534" /></a>
+  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/adobe13.png"><img class="aligncenter" alt="adobe13" src="https://blog.keiji.io/wp-content/uploads/2013/02/adobe13.png" width="544" height="534" /></a>
 </p>
 
 なんと受付完了に！**内容確認はどうしたんですか！？**
@@ -227,7 +227,7 @@ Adobeさん。去って行く人にはドライです。。。
 </p>
 
 <p style="text-align: center;">
-  <strong>本手順は更新されています。詳しくは<a href="http://blog.keiji.io/2013/02/adobe-creative-cloud_8.html" target="_blank">こちら</a></strong>
+  <strong>本手順は更新されています。詳しくは<a href="https://blog.keiji.io/2013/02/adobe-creative-cloud_8.html" target="_blank">こちら</a></strong>
 </p>
 
 &nbsp;

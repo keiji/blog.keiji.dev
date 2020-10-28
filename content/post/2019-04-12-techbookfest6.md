@@ -2,7 +2,7 @@
 title: 技術書典6でMLOps本「巡りあえないConcourse」を頒布します
 author: Keiji Ariyama
 type: post
-date: 2019-04-12T10:00:10+90:00
+date: 2019-04-12T10:00:10+09:00
 url: /2019/04/techbookfest6.html
 thumbnail: "images/concourse.png"
 categories:

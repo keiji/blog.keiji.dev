@@ -29,7 +29,7 @@ categories:
 
 以下のグラフは、１９７１年から昨年までの仮面ライダーの人数をまとめたグラフです。
 
-[<img class="aligncenter size-medium wp-image-255" alt="Screen Shot 2013-04-01 at 1.25.43 AM" src="http://blog.keiji.io/wp-content/uploads/2013/04/Screen-Shot-2013-04-01-at-1.25.43-AM-300x165.png" width="300" height="165" srcset="https://blog.keiji.io/wp-content/uploads/2013/04/Screen-Shot-2013-04-01-at-1.25.43-AM-300x165.png 300w, https://blog.keiji.io/wp-content/uploads/2013/04/Screen-Shot-2013-04-01-at-1.25.43-AM-1024x566.png 1024w, https://blog.keiji.io/wp-content/uploads/2013/04/Screen-Shot-2013-04-01-at-1.25.43-AM-624x345.png 624w, https://blog.keiji.io/wp-content/uploads/2013/04/Screen-Shot-2013-04-01-at-1.25.43-AM.png 1363w" sizes="(max-width: 300px) 100vw, 300px" />][1]ごらんのように、2000年以降、右肩上がりに推移しています。特に、**2002年の『仮面ライダー龍騎』では、一気に13人の仮面ライダーが加入したことが話題になりました。**
+[<img class="aligncenter size-medium wp-image-255" alt="Screen Shot 2013-04-01 at 1.25.43 AM" src="https://blog.keiji.io/wp-content/uploads/2013/04/Screen-Shot-2013-04-01-at-1.25.43-AM-300x165.png" width="300" height="165" srcset="https://blog.keiji.io/wp-content/uploads/2013/04/Screen-Shot-2013-04-01-at-1.25.43-AM-300x165.png 300w, https://blog.keiji.io/wp-content/uploads/2013/04/Screen-Shot-2013-04-01-at-1.25.43-AM-1024x566.png 1024w, https://blog.keiji.io/wp-content/uploads/2013/04/Screen-Shot-2013-04-01-at-1.25.43-AM-624x345.png 624w, https://blog.keiji.io/wp-content/uploads/2013/04/Screen-Shot-2013-04-01-at-1.25.43-AM.png 1363w" sizes="(max-width: 300px) 100vw, 300px" />][1]ごらんのように、2000年以降、右肩上がりに推移しています。特に、**2002年の『仮面ライダー龍騎』では、一気に13人の仮面ライダーが加入したことが話題になりました。**
 
 その後、加入者数は落ち着いたものの、毎年コンスタントに２〜３人増加しています。
 
@@ -91,4 +91,4 @@ categories:
   <strong><span style="font-size: large;">２０１４年春の新番組</span></strong><br /> <strong><span style="font-size: large;">「仮面ライダー グラス」に、</span></strong><br /> <strong><span style="font-size: large;">ご期待下さい！</span></strong>
 </p>
 
- [1]: http://blog.keiji.io/wp-content/uploads/2013/04/Screen-Shot-2013-04-01-at-1.25.43-AM.png
+ [1]: https://blog.keiji.io/wp-content/uploads/2013/04/Screen-Shot-2013-04-01-at-1.25.43-AM.png

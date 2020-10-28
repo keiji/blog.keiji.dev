@@ -70,7 +70,7 @@ categories:
   </p>
   
   <div>
-    <a href="http://blog.keiji.io/wp-content/uploads/2013/01/Screen-Shot-2013-01-15-at-10.01.18-PM.jpg"><img class="aligncenter  wp-image-86" alt="Screen Shot 2013-01-15 at 10.01.18 PM" src="http://blog.keiji.io/wp-content/uploads/2013/01/Screen-Shot-2013-01-15-at-10.01.18-PM.jpg" width="461" height="293" /></a>
+    <a href="https://blog.keiji.io/wp-content/uploads/2013/01/Screen-Shot-2013-01-15-at-10.01.18-PM.jpg"><img class="aligncenter  wp-image-86" alt="Screen Shot 2013-01-15 at 10.01.18 PM" src="https://blog.keiji.io/wp-content/uploads/2013/01/Screen-Shot-2013-01-15-at-10.01.18-PM.jpg" width="461" height="293" /></a>
   </div>
   
   <p>

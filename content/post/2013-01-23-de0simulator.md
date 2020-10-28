@@ -16,7 +16,7 @@ categories:
   - メモ
 
 ---
-前回の『<a href="http://blog.keiji.io/2013/01/de0.html" target="_blank">DE0メモ</a>』で、
+前回の『<a href="https://blog.keiji.io/2013/01/de0.html" target="_blank">DE0メモ</a>』で、
 
 > その他、シミュレータなどでいろいろ検証したりもあるようですが、僕はまだその段階にありません。
 
@@ -83,7 +83,7 @@ endmodule</pre>
 これをDE0に書き込むと、タクトスイッチ(BUTTON2)を1回押すと、LED0が点灯、もう一度押すと消灯します。**今回、チャタリング防止は組み込んでいません。**
 
 <div>
-  <a href="http://blog.keiji.io/wp-content/uploads/2013/01/Photo-22-01-13-08-20-47-0.jpg"><img class="aligncenter  wp-image-159" alt="Photo-22-01-13-08-20-47-0" src="http://blog.keiji.io/wp-content/uploads/2013/01/Photo-22-01-13-08-20-47-0.jpg" width="576" height="432" /></a>
+  <a href="https://blog.keiji.io/wp-content/uploads/2013/01/Photo-22-01-13-08-20-47-0.jpg"><img class="aligncenter  wp-image-159" alt="Photo-22-01-13-08-20-47-0" src="https://blog.keiji.io/wp-content/uploads/2013/01/Photo-22-01-13-08-20-47-0.jpg" width="576" height="432" /></a>
 </div>
 
 ## ModelSim
@@ -95,7 +95,7 @@ endmodule</pre>
 </div>
 
 <div>
-  <a href="http://blog.keiji.io/wp-content/uploads/2013/01/Parallels-Picture.jpg"><img class="aligncenter  wp-image-160" alt="Parallels Picture" src="http://blog.keiji.io/wp-content/uploads/2013/01/Parallels-Picture.jpg" width="576" height="360" /></a>
+  <a href="https://blog.keiji.io/wp-content/uploads/2013/01/Parallels-Picture.jpg"><img class="aligncenter  wp-image-160" alt="Parallels Picture" src="https://blog.keiji.io/wp-content/uploads/2013/01/Parallels-Picture.jpg" width="576" height="360" /></a>
 </div>
 
 <div>
@@ -163,5 +163,5 @@ btnの初期値を1&#8217;b1に修正して、再度シミュレーションを�
 これで、挙動がおかしいときにも、内部の状態を視覚的に確認することが出来そうです。
 
 <div>
-  <a href="http://blog.keiji.io/wp-content/uploads/2013/01/Screen-Shot-2013-01-23-at-1.12.31-AM.png"><img class="aligncenter  wp-image-161" alt="Screen Shot 2013-01-23 at 1.12.31 AM" src="http://blog.keiji.io/wp-content/uploads/2013/01/Screen-Shot-2013-01-23-at-1.12.31-AM.png" width="545" height="231" /></a>
+  <a href="https://blog.keiji.io/wp-content/uploads/2013/01/Screen-Shot-2013-01-23-at-1.12.31-AM.png"><img class="aligncenter  wp-image-161" alt="Screen Shot 2013-01-23 at 1.12.31 AM" src="https://blog.keiji.io/wp-content/uploads/2013/01/Screen-Shot-2013-01-23-at-1.12.31-AM.png" width="545" height="231" /></a>
 </div>
