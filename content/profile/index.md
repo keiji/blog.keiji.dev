@@ -15,7 +15,7 @@ Android Application Developer. Machine Learning Hobbyist(TensorFlow).
 　最近の興味は、趣味のTensorFlowで画像判別モデル（二値分類・物体検出）を作成すること。
 Androidアプリケーションへ機械学習モデルの組み込んであれこれしています。
 
-{{% img src="images/profile.jpg" %}}
+{{% figure src="images/profile.jpg" %}}
 
 * GitHub: [https://www.github.com/keiji](https://www.github.com/keiji)
 * Speaker Deck: [https://speakerdeck.com/keiji](https://speakerdeck.com/keiji)
