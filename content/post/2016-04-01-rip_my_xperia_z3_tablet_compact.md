@@ -13,7 +13,7 @@ categories:
 　昨年の後半のことでしょうか。Xperia Z3 Tablet Compactを落としてしまい、前面ガラスが破損してしまいました。
 
 <div id="attachment_1155" style="max-width: 2170px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2016/04/IMG_20160330_201258.jpg" rel="attachment wp-att-1155"><img src="https://blog.keiji.io/wp-content/uploads/2016/04/IMG_20160330_201258.jpg" alt="赤枠で囲った部分が破損箇所" width="50%" height="50%" class="size-full wp-image-1155" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_201258.jpg" rel="attachment wp-att-1155"><img src="https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_201258.jpg" alt="赤枠で囲った部分が破損箇所" width="50%" height="50%" class="size-full wp-image-1155" /></a>
   
   <p class="wp-caption-text">
     赤枠で囲った部分が破損箇所
@@ -29,7 +29,7 @@ categories:
 　それが今年に入って「液晶は破損してないのだから、最前面のパネル（デジタイザ）だけ交換すれば修理ができるんじゃね？」そんな色気を出してネットを検索、Xperia Z3 Tablet Comact用のデジタイザを見つけて注文。２週間ほどで到着しました。
 
 <div id="attachment_1161" style="max-width: 2170px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2016/04/IMG_20160330_2004412.jpg" rel="attachment wp-att-1161"><img src="https://blog.keiji.io/wp-content/uploads/2016/04/IMG_20160330_2004412.jpg" alt="取り寄せたデジタイザ。 送料込みで3500円ほど" width="50%" height="50" class="size-full wp-image-1161" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_2004412.jpg" rel="attachment wp-att-1161"><img src="https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_2004412.jpg" alt="取り寄せたデジタイザ。 送料込みで3500円ほど" width="50%" height="50" class="size-full wp-image-1161" /></a>
   
   <p class="wp-caption-text">
     取り寄せたデジタイザ。<br />送料込みで3500円ほど
@@ -47,7 +47,7 @@ categories:
 　結論から言えば、Xperia Z3 Tablet Compactは前面（Front）から分解します。Xperia Z3 Compactのようにバックパネルはないので、後ろをいくら温めても無駄です。
 
 <div id="attachment_1163" style="max-width: 2170px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2016/04/IMG_20160330_2025402.jpg" rel="attachment wp-att-1163"><img src="https://blog.keiji.io/wp-content/uploads/2016/04/IMG_20160330_2025402.jpg" alt="ディスプレイを外したところ。銀色の部品がバックライト" width="50%" height="50%" class="size-full wp-image-1163" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_2025402.jpg" rel="attachment wp-att-1163"><img src="https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_2025402.jpg" alt="ディスプレイを外したところ。銀色の部品がバックライト" width="50%" height="50%" class="size-full wp-image-1163" /></a>
   
   <p class="wp-caption-text">
     ディスプレイを外したところ。銀色の部品がバックライト
@@ -57,7 +57,7 @@ categories:
 　フレキケーブルが90度湾曲しているので、破損にはくれぐれも注意が必要です。
 
 <div id="attachment_1165" style="max-width: 2170px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2016/04/IMG_20160330_202818.jpg" rel="attachment wp-att-1165"><img src="https://blog.keiji.io/wp-content/uploads/2016/04/IMG_20160330_202818.jpg" alt="直角に曲がっている＋切れやすそうな切れ目入りのフレキケーブル" width="50%" height="50%" class="size-full wp-image-1165" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_202818.jpg" rel="attachment wp-att-1165"><img src="https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_202818.jpg" alt="直角に曲がっている＋切れやすそうな切れ目入りのフレキケーブル" width="50%" height="50%" class="size-full wp-image-1165" /></a>
   
   <p class="wp-caption-text">
     直角に曲がっている＋切れやすそうな切れ目入りのフレキケーブル
@@ -69,7 +69,7 @@ categories:
 　僕の場合、バックライトを分離した時点で液晶パネルが破損しました。
 
 <div id="attachment_1164" style="max-width: 2170px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2016/04/IMG_20160330_205054.jpg" rel="attachment wp-att-1164"><img src="https://blog.keiji.io/wp-content/uploads/2016/04/IMG_20160330_205054.jpg" alt="バックライトを剥がした後、液晶をみると細かいひびが……" width="50%" height="50%" class="size-full wp-image-1164" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_205054.jpg" rel="attachment wp-att-1164"><img src="https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_205054.jpg" alt="バックライトを剥がした後、液晶をみると細かいひびが……" width="50%" height="50%" class="size-full wp-image-1164" /></a>
   
   <p class="wp-caption-text">
     バックライトを剥がした後、液晶をみると細かいひびが……

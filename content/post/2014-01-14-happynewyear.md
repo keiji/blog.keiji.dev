@@ -24,13 +24,13 @@ categories:
   <a href="https://i.keiji.io" target="_blank">https://i.keiji.io/</a>
 </div>
 
-<a href="https://blog.keiji.io/wp-content/uploads/2014/01/Screen-Shot-2014-01-13-at-12.38.00-PM.png" target="_blank"><img src="https://blog.keiji.io/wp-content/uploads/2014/01/Screen-Shot-2014-01-13-at-12.38.00-PM-300x239.png" alt="Screen Shot 2014-01-13 at 12.38.00 PM" width="300" height="239" class="aligncenter size-medium wp-image-397" srcset="https://blog.keiji.io/wp-content/uploads/2014/01/Screen-Shot-2014-01-13-at-12.38.00-PM-300x239.png 300w, https://blog.keiji.io/wp-content/uploads/2014/01/Screen-Shot-2014-01-13-at-12.38.00-PM-1024x817.png 1024w, https://blog.keiji.io/wp-content/uploads/2014/01/Screen-Shot-2014-01-13-at-12.38.00-PM-624x498.png 624w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+<a href="https://blog.keiji.dev/wp-content/uploads/2014/01/Screen-Shot-2014-01-13-at-12.38.00-PM.png" target="_blank"><img src="https://blog.keiji.dev/wp-content/uploads/2014/01/Screen-Shot-2014-01-13-at-12.38.00-PM-300x239.png" alt="Screen Shot 2014-01-13 at 12.38.00 PM" width="300" height="239" class="aligncenter size-medium wp-image-397" srcset="https://blog.keiji.dev/wp-content/uploads/2014/01/Screen-Shot-2014-01-13-at-12.38.00-PM-300x239.png 300w, https://blog.keiji.dev/wp-content/uploads/2014/01/Screen-Shot-2014-01-13-at-12.38.00-PM-1024x817.png 1024w, https://blog.keiji.dev/wp-content/uploads/2014/01/Screen-Shot-2014-01-13-at-12.38.00-PM-624x498.png 624w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 
 ## 機能
 
 このシステムは、事前に登録したAmazonの商品を定期的に確認。価格が変動して、かつ所定の金額以下（または以上）になれば、メールで知らせます。
 
-<a href="https://blog.keiji.io/wp-content/uploads/2014/01/Screen-Shot-2014-01-13-at-12.38.48-PM.png" target="_blank"><img src="https://blog.keiji.io/wp-content/uploads/2014/01/Screen-Shot-2014-01-13-at-12.38.48-PM-300x239.png" alt="Screen Shot 2014-01-13 at 12.38.48 PM" width="300" height="239" class="aligncenter size-medium wp-image-395" /></a>
+<a href="https://blog.keiji.dev/wp-content/uploads/2014/01/Screen-Shot-2014-01-13-at-12.38.48-PM.png" target="_blank"><img src="https://blog.keiji.dev/wp-content/uploads/2014/01/Screen-Shot-2014-01-13-at-12.38.48-PM-300x239.png" alt="Screen Shot 2014-01-13 at 12.38.48 PM" width="300" height="239" class="aligncenter size-medium wp-image-395" /></a>
 
 その名の通り、我が家の家族（主に母）に向けて作ったシステムなので、他の人が使うことを想定していませんが、せっかくなので公開します。
 

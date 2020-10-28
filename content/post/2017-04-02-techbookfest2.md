@@ -13,7 +13,7 @@ categories:
 
 「めがねをかけるんだ」では、TensorFlowで超解像を題材にした冊子を頒布いたします。
 
-<img class="aligncenter size-full wp-image-1557" src="https://blog.keiji.io/wp-content/uploads/2017/04/techbookfest2.png" alt="techbookfest2" width="50%" height="50%" />
+<img class="aligncenter size-full wp-image-1557" src="https://blog.keiji.dev/wp-content/uploads/2017/04/techbookfest2.png" alt="techbookfest2" width="50%" height="50%" />
 
 | タイトル | TensorFlowはじめました Super Resolution ー 超解像 |
 |:---- |:--------------------------------------- |
@@ -65,7 +65,7 @@ TensorFlowがオープンソースで公開されるまで「機械学習」に�
 
 ## どんな表紙なの？
 
-<img class="aligncenter size-full wp-image-1557" src="https://blog.keiji.io/wp-content/uploads/2017/04/techbookfest2.png" alt="techbookfest2" width="50%" height="50%" />
+<img class="aligncenter size-full wp-image-1557" src="https://blog.keiji.dev/wp-content/uploads/2017/04/techbookfest2.png" alt="techbookfest2" width="50%" height="50%" />
 
 表紙・裏表紙のイラストは、根雪れい（<a href="https://twitter.com/neyuki_rei/" target="_blank">@neyuki_rei</a>）さんによるものです。
 
@@ -81,7 +81,7 @@ TensorFlowがオープンソースで公開されるまで「機械学習」に�
 
 4月9日（日）に秋葉原UDX、アキバ・スクエアで開催される「技術書典２」に、有山圭二の個人サークル「めがねをかけるんだ」として参加します。配置は『おー１２』です。
 
-<img class="aligncenter size-full wp-image-1558" src="https://blog.keiji.io/wp-content/uploads/2017/04/7e532234bec803f783490593300730f3.png" alt="技術書典2" width="50%" height="50%" />
+<img class="aligncenter size-full wp-image-1558" src="https://blog.keiji.dev/wp-content/uploads/2017/04/7e532234bec803f783490593300730f3.png" alt="技術書典2" width="50%" height="50%" />
 
 有償での頒布となります。
   

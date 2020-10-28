@@ -5,7 +5,7 @@ type: post
 date: 2012-12-25T15:30:00+00:00
 url: /2012/12/android-maker-movement.html
 blogger_blog:
-  - blog.keiji.io
+  - blog.keiji.dev
 blogger_author:
   - Keiji Ariyama
 blogger_permalink:

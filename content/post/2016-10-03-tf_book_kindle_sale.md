@@ -33,7 +33,7 @@ categories:
     ありがとうございます！
     
 
-<img src="https://blog.keiji.io/wp-content/uploads/2016/10/Screen-Shot-2016-10-03-at-11.23.52.png" alt="screen-shot-2016-10-03-at-11-23-52" width="1634" height="594" class="aligncenter size-full wp-image-1412" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/10/Screen-Shot-2016-10-03-at-11.23.52.png" alt="screen-shot-2016-10-03-at-11-23-52" width="1634" height="594" class="aligncenter size-full wp-image-1412" />
 
 「新しくトピックを開始するには、Amazonコミュニティで良い評価を得ている必要があります。」
 
@@ -81,7 +81,7 @@ categories:
 
 とは言え、僕は自分の本のレビューにしか「コメント」は投稿していないので、自著のレビューに対するコメントが[口コミガイドライン][4]のいずれかに違反していたと言うことでほぼ間違いないでしょう。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2016/10/Screen-Shot-2016-10-03-at-13.02.54.png" alt="screen-shot-2016-10-03-at-13-02-54" width="50%" height="50%" class="aligncenter size-full wp-image-1420" />][4]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2016/10/Screen-Shot-2016-10-03-at-13.02.54.png" alt="screen-shot-2016-10-03-at-13-02-54" width="50%" height="50%" class="aligncenter size-full wp-image-1420" />][4]
 
 * * *
 
@@ -109,7 +109,7 @@ Kindle Unlimitedで読むこともできます。
 
 監視リスト入りしているものの、人の目で見て反映している様子ですね。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2016/10/Screen-Shot-2016-10-03-at-13.54.09.png" alt="screen-shot-2016-10-03-at-13-54-09" width="1290" height="310" class="aligncenter size-full wp-image-1430" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/10/Screen-Shot-2016-10-03-at-13.54.09.png" alt="screen-shot-2016-10-03-at-13-54-09" width="1290" height="310" class="aligncenter size-full wp-image-1430" />
 
  [1]: http://amzn.to/2d7nnD5
  [2]: https://www.amazon.co.jp/review/R1AENPRX5QAVD/ref=cm_cr_dp_title?ie=UTF8&ASIN=B01IT509EY&channel=detail-glance&nodeID=2250738051&store=digital-text

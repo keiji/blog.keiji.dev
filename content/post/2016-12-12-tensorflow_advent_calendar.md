@@ -45,7 +45,7 @@ categories:
   
 指定されたURLを開いて認証情報を入力すると、専用サーバーのコントロールパネルが表示されます。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2016/12/console.png" alt="console" width="1091" height="1023" class="aligncenter size-full wp-image-1490" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/12/console.png" alt="console" width="1091" height="1023" class="aligncenter size-full wp-image-1490" />
 
 「`TITANx4`」の文字が頼もしいですね。
   
@@ -375,11 +375,11 @@ TensorFlowで複数のGPUを使うには、コード側を変更する必要が�
   
 192&#215;192のサンプルを処理するモデルを僕の使っている「GeForce GTX960」のメモリ（2GB）に納めるのに苦労しています。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2016/12/faces_and_masks.png" alt="faces_and_masks" width="800" height="400" class="aligncenter size-full wp-image-1488" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/12/faces_and_masks.png" alt="faces_and_masks" width="800" height="400" class="aligncenter size-full wp-image-1488" />
 
 バッチサイズを減らしたりモデルの軽量化を頑張ってようやくメモリに収まっても1ステップにかかる学習の負荷が大きく、学習は遅々として進みません。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2016/12/Screen-Shot-2016-12-12-at-16.18.31.png" alt="screen-shot-2016-12-12-at-16-18-31" width="849" height="424" class="aligncenter size-full wp-image-1489" />][5]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2016/12/Screen-Shot-2016-12-12-at-16.18.31.png" alt="screen-shot-2016-12-12-at-16-18-31" width="849" height="424" class="aligncenter size-full wp-image-1489" />][5]
 
 かれこれ1週間ほど処理を続けていますが……高火力が必要なのは、まさに今なんですよ！
 
@@ -393,4 +393,4 @@ katsugenerationさん、よろしくお願いします。
  [2]: https://www.sakura.ad.jp/koukaryoku/
  [3]: http://amzn.to/2gqWOtz
  [4]: https://drive.google.com/drive/folders/0BwoRjQoZfQUlN1djdkc0M1dGMXM
- [5]: https://blog.keiji.io/wp-content/uploads/2016/12/Screen-Shot-2016-12-12-at-16.18.31.png
+ [5]: https://blog.keiji.dev/wp-content/uploads/2016/12/Screen-Shot-2016-12-12-at-16.18.31.png

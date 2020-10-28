@@ -15,7 +15,7 @@ categories:
 
 「[みんコミ][2]」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
 
 <!--more-->
 
@@ -36,7 +36,7 @@ Twitterとの連係を解除するという操作を期待していたので、�
 さらに怖いのは、前の画面の「Twitterの行」と、退会確認画面の「退会ボタン」が、ディスプレイ上のほとんど同じ場所にあることです。
 
 <div id="attachment_887" style="max-width: 1034px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2015/12/mincomi_adventcal_14.002.jpeg"><img src="https://blog.keiji.io/wp-content/uploads/2015/12/mincomi_adventcal_14.002.jpeg" alt="タップしたのと非常に近い場所に「退会」ボタンが待ち受けている" width="1024" height="768" class="size-full wp-image-887" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2015/12/mincomi_adventcal_14.002.jpeg"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/mincomi_adventcal_14.002.jpeg" alt="タップしたのと非常に近い場所に「退会」ボタンが待ち受けている" width="1024" height="768" class="size-full wp-image-887" /></a>
   
   <p class="wp-caption-text">
     タップしたのと非常に近い場所に「退会」ボタンが待ち受けている
@@ -82,7 +82,7 @@ Twitterとの連係を解除するという操作を期待していたので、�
 
 C89で、「[Android Studio完全移行ガイド][4]」を頒布します。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/c89_farewell_adt.png" alt="c89_farewell_adt" width="50%" height="50%" class="aligncenter size-full wp-image-954" />][5]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/c89_farewell_adt.png" alt="c89_farewell_adt" width="50%" height="50%" class="aligncenter size-full wp-image-954" />][5]
 
 ### どんな内容？
 
@@ -115,7 +115,7 @@ ADTのプロジェクトをAndroid Studioに移行について、準備から実
  [1]: http://qiita.com/advent-calendar/2015/mincomi
  [2]: https://www.mincomi.jp
  [3]: https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&hl=ja
- [4]: https://blog.keiji.io/2015/12/c89.html
- [5]: https://blog.keiji.io/wp-content/uploads/2015/12/c89_farewell_adt.png
+ [4]: https://blog.keiji.dev/2015/12/c89.html
+ [5]: https://blog.keiji.dev/wp-content/uploads/2015/12/c89_farewell_adt.png
  [6]: https://twitter.com/neyuki_rei
  [7]: https://techbooster.github.io/c89/

@@ -15,7 +15,7 @@ categories:
 
 「[みんコミ][2]」のAndroidアプリ（バージョン1.0.2）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
 
 <!--more-->
 
@@ -92,4 +92,4 @@ categories:
  [1]: http://qiita.com/advent-calendar/2015/mincomi
  [2]: https://www.mincomi.jp
  [3]: https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&hl=ja
- [4]: https://blog.keiji.io/2015/12/mincomi-adventcalendar-4.html
+ [4]: https://blog.keiji.dev/2015/12/mincomi-adventcalendar-4.html

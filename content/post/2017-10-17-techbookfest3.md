@@ -13,7 +13,7 @@ categories:
 
 「めがねをかけるんだ」では、TensorFlowで物体検出を題材にした冊子を頒布いたします。
 
-<img class="aligncenter size-full" src="https://blog.keiji.io/wp-content/uploads/2017/10/tfbook3-hyo1.png" alt="tfbook3" width="50%" height="50%" />
+<img class="aligncenter size-full" src="https://blog.keiji.dev/wp-content/uploads/2017/10/tfbook3-hyo1.png" alt="tfbook3" width="50%" height="50%" />
 
 | タイトル | TensorFlowはじめました Object Detection ー 物体検出 |
 |:---- |:---------------------------------------- |
@@ -68,7 +68,7 @@ TensorFlowがオープンソースで公開されるまで「機械学習」に�
 
 ## どんな表紙なの？
 
-<img class="aligncenter size-full wp-image-1557" src="https://blog.keiji.io/wp-content/uploads/2017/10/tfbook3-hyo1.png" alt="tfbook3" width="50%" height="50%" />
+<img class="aligncenter size-full wp-image-1557" src="https://blog.keiji.dev/wp-content/uploads/2017/10/tfbook3-hyo1.png" alt="tfbook3" width="50%" height="50%" />
 
 表紙・裏表紙のイラストは、根雪れい（<a href="https://twitter.com/neyuki_rei/" target="_blank">@neyuki_rei</a>）さんによるものです。
 
@@ -86,7 +86,7 @@ TensorFlowがオープンソースで公開されるまで「機械学習」に�
 
 10月22日（日）に秋葉原UDX、アキバ・スクエアで開催される「技術書典３」に、有山圭二の個人サークル「めがねをかけるんだ」として参加します。配置は『か２２』です。
 
-<a href="https://techbookfest.org/event/tbf03/circle/5686003050217472" target="_blank"><br /> <img class="aligncenter size-full" src="https://blog.keiji.io/wp-content/uploads/2017/10/circlecut.png" alt="技術書典3" width="50%" height="50%" /></a>
+<a href="https://techbookfest.org/event/tbf03/circle/5686003050217472" target="_blank"><br /> <img class="aligncenter size-full" src="https://blog.keiji.dev/wp-content/uploads/2017/10/circlecut.png" alt="技術書典3" width="50%" height="50%" /></a>
 
 有償での頒布となります。
   

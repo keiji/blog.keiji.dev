@@ -19,13 +19,13 @@ categories:
 
 「みんコミ」のAndroidアプリは、「Google Play Store」からインストールできます。さっそくインストールしてみましょう。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][2]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][2]
 
 <!--more-->
 
 インストールの確認画面に表示される権限を見て、まず気になるのが「連絡先」というアクセス権限を要求していることでしょう。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/Screenshot_20151128-145117.png" alt="Screenshot_20151128-145117" width="270" height="480" class="aligncenter size-full wp-image-673" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/Screenshot_20151128-145117.png" alt="Screenshot_20151128-145117" width="270" height="480" class="aligncenter size-full wp-image-673" />][3]
 
 よく見ると「この端末上のアカウントの検索」という補助項目になっているので、連絡帳へのアクセス権限である「READ|WRITE\_CONTACTS」ではなく、端末に登録してあるGoogleアカウントやdocomoアカウントの情報を取得する「GET\_ACCOUNTS」であるとわかります。
 
@@ -41,7 +41,7 @@ categories:
 
 「みんコミ」のアプリは5.x系（Lolipop）向けに作られているので権限はインストール時に付与されますが、後から個別の権限を停止することもできるので、説明が不足しているとユーザーが個別に権限をＯＦＦにしてしまうことも考えられます。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/Screenshot_20151128-213101.png" alt="Screenshot_20151128-213101" width="270" height="480" class="aligncenter size-full wp-image-674" />][4]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/Screenshot_20151128-213101.png" alt="Screenshot_20151128-213101" width="270" height="480" class="aligncenter size-full wp-image-674" />][4]
 
 今回の場合、権限がなぜ必要なのかをきちんとユーザーに説明すれば、安心してインストールできるようになると考えます。
 
@@ -84,5 +84,5 @@ categories:
 
  [1]: http://qiita.com/advent-calendar/2015/mincomi
  [2]: https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&hl=ja
- [3]: https://blog.keiji.io/wp-content/uploads/2015/12/Screenshot_20151128-145117.png
- [4]: https://blog.keiji.io/wp-content/uploads/2015/12/Screenshot_20151128-213101.png
+ [3]: https://blog.keiji.dev/wp-content/uploads/2015/12/Screenshot_20151128-145117.png
+ [4]: https://blog.keiji.dev/wp-content/uploads/2015/12/Screenshot_20151128-213101.png

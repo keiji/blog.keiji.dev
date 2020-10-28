@@ -5,7 +5,7 @@ type: post
 date: 2013-01-15T13:47:00+00:00
 url: /2013/01/aospnobranch.html
 blogger_blog:
-  - blog.keiji.io
+  - blog.keiji.dev
 blogger_author:
   - Keiji Ariyama
 blogger_permalink:
@@ -70,7 +70,7 @@ categories:
   </p>
   
   <div>
-    <a href="https://blog.keiji.io/wp-content/uploads/2013/01/Screen-Shot-2013-01-15-at-10.01.18-PM.jpg"><img class="aligncenter  wp-image-86" alt="Screen Shot 2013-01-15 at 10.01.18 PM" src="https://blog.keiji.io/wp-content/uploads/2013/01/Screen-Shot-2013-01-15-at-10.01.18-PM.jpg" width="461" height="293" /></a>
+    <a href="https://blog.keiji.dev/wp-content/uploads/2013/01/Screen-Shot-2013-01-15-at-10.01.18-PM.jpg"><img class="aligncenter  wp-image-86" alt="Screen Shot 2013-01-15 at 10.01.18 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/01/Screen-Shot-2013-01-15-at-10.01.18-PM.jpg" width="461" height="293" /></a>
   </div>
   
   <p>

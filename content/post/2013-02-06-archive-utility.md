@@ -5,7 +5,7 @@ type: post
 date: 2013-02-06T07:55:00+00:00
 url: /2013/02/archive-utility.html
 blogger_blog:
-  - blog.keiji.io
+  - blog.keiji.dev
 blogger_author:
   - Keiji Ariyama
 blogger_permalink:

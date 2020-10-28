@@ -116,7 +116,7 @@ categories:
 　６月２５日に秋葉原の通運会館で開かれる技術系同人誌オンリーイベント「[技術書典][4]」にて頒布します（今回は有償頒布の予定）。
 
 <div id="attachment_1186" style="max-width: 645px" class="wp-caption aligncenter">
-  <a href="https://techbookfest.org/#A-28" rel="attachment wp-att-1186"><img src="https://blog.keiji.io/wp-content/uploads/2016/05/5690091590647808.png" alt="6/25 技術書典 A-28" width="50%" height="50%" class="size-full wp-image-1186" /></a>
+  <a href="https://techbookfest.org/#A-28" rel="attachment wp-att-1186"><img src="https://blog.keiji.dev/wp-content/uploads/2016/05/5690091590647808.png" alt="6/25 技術書典 A-28" width="50%" height="50%" class="size-full wp-image-1186" /></a>
   
   <p class="wp-caption-text">
     6/25 技術書典 A-28

@@ -14,7 +14,7 @@ categories:
 この記事は「[みんコミ Advent Calendar][1]」の23日目の記事です。
 
 <div id="attachment_1047" style="max-width: 676px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2015/12/R0004978.jpg"><img src="https://blog.keiji.io/wp-content/uploads/2015/12/R0004978.jpg" alt="ebook INITIATIVE japan" width="666" height="408" class="size-full wp-image-1047" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2015/12/R0004978.jpg"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/R0004978.jpg" alt="ebook INITIATIVE japan" width="666" height="408" class="size-full wp-image-1047" /></a>
   
   <p class="wp-caption-text">
     みんコミを運営している ebook INITIATIVE japan
@@ -103,8 +103,8 @@ categories:
 よろしくお願いします。
 
  [1]: http://qiita.com/advent-calendar/2015/mincomi
- [2]: https://blog.keiji.io/2015/12/mincomi-adventcalendar-12.html
+ [2]: https://blog.keiji.dev/2015/12/mincomi-adventcalendar-12.html
  [3]: https://twitter.com/zaki50
  [4]: https://www.google.co.jp/search?q=%E5%A4%9A%E5%88%86%E5%8B%95%E3%81%8F%E3%81%A8%E6%80%9D%E3%81%86%E3%81%8B%E3%82%89%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%97%E3%82%88%E3%81%86%E3%81%9C&biw=1139&bih=971&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjoiJan7e_JAhXB5aYKHWcvDJMQ_AUIBigB
  [5]: https://www.mincomi.jp
- [6]: https://blog.keiji.io/2015/12/c89.html
+ [6]: https://blog.keiji.dev/2015/12/c89.html

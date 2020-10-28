@@ -15,7 +15,7 @@ categories:
 
 「[みんコミ][2]」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
 
 <!--more-->
 
@@ -48,7 +48,7 @@ Bitmapを描画するパフォーマンステストを実行したところ、�
 すると、次のように描画にノイズが入るんですね。再描画時にCanvasがリセットされないのはSurfaceViewの特徴なので、きっとSurfaceViewを使っているのだろうと判断しました。
 
 <div id="attachment_984" style="max-width: 970px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2015/12/surfaceview.png"><img src="https://blog.keiji.io/wp-content/uploads/2015/12/surfaceview.png" alt="東皓司著 「ひとはくん、ひとりぼっち？」 ２話 １ページ" width="960" height="540" class="size-full wp-image-984" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2015/12/surfaceview.png"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/surfaceview.png" alt="東皓司著 「ひとはくん、ひとりぼっち？」 ２話 １ページ" width="960" height="540" class="size-full wp-image-984" /></a>
   
   <p class="wp-caption-text">
     東皓司著 「ひとはくん、ひとりぼっち？」 ２話 １ページ

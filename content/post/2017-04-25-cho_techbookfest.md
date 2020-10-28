@@ -12,7 +12,7 @@ categories:
 
 「めがねをかけるんだ」では、「一度、あきらめてしまった人のためのプログラミング入門」を頒布いたします。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2017/04/cho_techbookfest.jpg" alt="cho_techbookfest" width="50%" height="50%" class="aligncenter size-full wp-image-1576" />][1]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2017/04/cho_techbookfest.jpg" alt="cho_techbookfest" width="50%" height="50%" class="aligncenter size-full wp-image-1576" />][1]
 
 | タイトル | 一度、あきらめてしまった人のためのプログラミング入門 |
 |:---- |:-------------------------- |
@@ -50,6 +50,6 @@ categories:
 
 また、本書は「BookWalkerインディーズ電子書籍」としても頒布する予定です。こちらもよろしくお願いいたします。
 
- [1]: https://blog.keiji.io/wp-content/uploads/2017/04/cho_techbookfest.jpg
+ [1]: https://blog.keiji.dev/wp-content/uploads/2017/04/cho_techbookfest.jpg
  [2]: https://techbookfest.org/event/cho01/circle/4827192663998464
  [3]: https://techbookfest.org/event/cho01/circle/5643137129119744

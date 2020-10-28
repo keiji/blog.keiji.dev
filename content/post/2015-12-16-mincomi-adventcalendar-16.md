@@ -15,7 +15,7 @@ categories:
 
 「[みんコミ][2]」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
 
 <!--more-->
 
@@ -26,7 +26,7 @@ categories:
 以前の記事にも書きましたが、ここで使っている画像素材も解像度が足りていないようです。
 
 <div id="attachment_908" style="max-width: 1204px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2015/12/Lollipop.png"><img src="https://blog.keiji.io/wp-content/uploads/2015/12/Lollipop.png" alt="若杉佳著「まりもな日々」2話 1ページより" width="1194" height="141" class="size-full wp-image-908" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2015/12/Lollipop.png"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/Lollipop.png" alt="若杉佳著「まりもな日々」2話 1ページより" width="1194" height="141" class="size-full wp-image-908" /></a>
   
   <p class="wp-caption-text">
     背景 &#8211; 若杉佳著「まりもな日々」2話 1ページより
@@ -36,7 +36,7 @@ categories:
 また、Nexus 5X（Marshmallow）では下地の四角い画像が表示されず、丸（Thumb）だけが表示されているので、これでページ位置を変えられるのだと理解しづらいように思います。
 
 <div id="attachment_909" style="max-width: 1090px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2015/12/Marshmallow.png"><img src="https://blog.keiji.io/wp-content/uploads/2015/12/Marshmallow.png" alt="若杉佳著「まりもな日々」2話 1ページより" width="1080" height="153" class="size-full wp-image-909" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2015/12/Marshmallow.png"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/Marshmallow.png" alt="若杉佳著「まりもな日々」2話 1ページより" width="1080" height="153" class="size-full wp-image-909" /></a>
   
   <p class="wp-caption-text">
     背景 &#8211; 若杉佳著「まりもな日々」2話 1ページより
@@ -57,7 +57,7 @@ categories:
 </code></pre>
 
 <div id="attachment_913" style="max-width: 1090px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-15-224607.png"><img src="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-15-224607.png" alt="下部にシークバーを追加した" width="50%" height="50%" class="aligncenter size-full wp-image-913" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-15-224607.png"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-15-224607.png" alt="下部にシークバーを追加した" width="50%" height="50%" class="aligncenter size-full wp-image-913" /></a>
   
   <p class="wp-caption-text">
     下部にシークバーを追加した
@@ -111,7 +111,7 @@ categories:
 
 こうすれば、SeekBarの左右の色が反転して表示されます。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-15-232009.png" alt="device-2015-12-15-232009" width="50%" height="50%" class="aligncenter size-full wp-image-914" />][4]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-15-232009.png" alt="device-2015-12-15-232009" width="50%" height="50%" class="aligncenter size-full wp-image-914" />][4]
 
 ただし、これはあくまでも見た目を変えたに過ぎません。つまり「値を示する色」と「地の色（@android:color/darker_gray）」を入れ替えて、右から左に増えているように見えるようにしただけです。
 
@@ -159,5 +159,5 @@ categories:
  [1]: http://qiita.com/advent-calendar/2015/mincomi
  [2]: https://www.mincomi.jp
  [3]: https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&hl=ja
- [4]: https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-15-232009.png
+ [4]: https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-15-232009.png
  [5]: https://github.com/keiji/adventcalendar_2015_mincomi

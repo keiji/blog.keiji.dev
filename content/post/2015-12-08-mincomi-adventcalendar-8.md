@@ -15,7 +15,7 @@ categories:
 
 「[みんコミ][2]」のAndroidアプリ（バージョン1.0.2）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
 
 <!--more-->
 
@@ -26,7 +26,7 @@ categories:
 上下に十分な余白がある作品であれば読めないことはないのですが、昨日紹介した「[うわようじょつよい][4]」の場合は、紙面全体フルに使っているので、どうしても読めないセリフが出てきます。
 
 <div id="attachment_828" style="max-width: 1546px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2015/12/Screenshot_20151114-220943.png"><img src="https://blog.keiji.io/wp-content/uploads/2015/12/Screenshot_20151114-220943.png" alt="派手な看護婦著 「うわようじょつよい」 6pより" width="1536" height="262" class="size-full wp-image-828" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2015/12/Screenshot_20151114-220943.png"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/Screenshot_20151114-220943.png" alt="派手な看護婦著 「うわようじょつよい」 6pより" width="1536" height="262" class="size-full wp-image-828" /></a>
   
   <p class="wp-caption-text">
     派手な看護婦著 「うわようじょつよい」 6pより 上部が切れてセリフが読めない。拡大してスクロールもできない
@@ -37,17 +37,17 @@ categories:
 
 例えば、Ａ４版の大きさを「4:3」と「16:9」の画面サイズにそれぞれ拡大する場合を考えてみましょう。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/aspect_ratio.001.jpeg" alt="aspect_ratio.001" width="1024" height="768" class="aligncenter size-full wp-image-825" />][5]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/aspect_ratio.001.jpeg" alt="aspect_ratio.001" width="1024" height="768" class="aligncenter size-full wp-image-825" />][5]
 
 これを横幅のみを基準に拡大すると、次のようになります。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/aspect_ratio.002.jpeg" alt="aspect_ratio.002" width="1024" height="768" class="aligncenter size-full wp-image-826" />][6]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/aspect_ratio.002.jpeg" alt="aspect_ratio.002" width="1024" height="768" class="aligncenter size-full wp-image-826" />][6]
 
 ごらんのように、4:3のディスプレイでは上下が切れてしまいました（紫色部分）。これがまさに今、アプリの中で起きていることです。
 
 それでは、縦幅を基準に拡大してはどうでしょうか。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/aspect_ratio.003.jpeg" alt="aspect_ratio.003" width="1024" height="768" class="aligncenter size-full wp-image-827" />][7]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/aspect_ratio.003.jpeg" alt="aspect_ratio.003" width="1024" height="768" class="aligncenter size-full wp-image-827" />][7]
 
 今度は16:9のディスプレイで横が切れてしまいました（紫色部分）。
 
@@ -124,7 +124,7 @@ ImageViewは、横幅基準にすると、アスペクト比を保持したま�
  [2]: https://www.mincomi.jp
  [3]: https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&hl=ja
  [4]: https://www.mincomi.jp/title/?title=327720
- [5]: https://blog.keiji.io/wp-content/uploads/2015/12/aspect_ratio.001.jpeg
- [6]: https://blog.keiji.io/wp-content/uploads/2015/12/aspect_ratio.002.jpeg
- [7]: https://blog.keiji.io/wp-content/uploads/2015/12/aspect_ratio.003.jpeg
+ [5]: https://blog.keiji.dev/wp-content/uploads/2015/12/aspect_ratio.001.jpeg
+ [6]: https://blog.keiji.dev/wp-content/uploads/2015/12/aspect_ratio.002.jpeg
+ [7]: https://blog.keiji.dev/wp-content/uploads/2015/12/aspect_ratio.003.jpeg
  [8]: http://stackoverflow.com/questions/12400113/resizing-imageview-to-fit-to-aspect-ratio

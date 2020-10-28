@@ -17,7 +17,7 @@ categories:
 
 「[みんコミ][2]」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
 
 <!--more-->
 
@@ -35,7 +35,7 @@ categories:
 
 サンプル「ズームサンプル(ZoomActivity)」では、起動すると標準のアイコンを画面に表示します。ピンチイン・アウトの操作で拡大縮小するようにプログラムしています。また、拡大縮小の際、二本の指の中間点（Focus）を基に位置を変えています。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-18-200216.png" alt="device-2015-12-18-200216" width="50%" height="50%" class="aligncenter size-full wp-image-973" />][5]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-18-200216.png" alt="device-2015-12-18-200216" width="50%" height="50%" class="aligncenter size-full wp-image-973" />][5]
 
 まず、ScaleGestureDetectorでonScaleジェスチャーを取得します。
   
@@ -170,7 +170,7 @@ categories:
 通常、onScaleから得た拡大率を普通にcanvas.setScaleやRectのwidthやheightに反映すると、左上の原点(0, 0)を基準に拡大します。
 
 <div id="attachment_974" style="max-width: 1034px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2015/12/19th.001.jpeg"><img src="https://blog.keiji.io/wp-content/uploads/2015/12/19th.001.jpeg" alt="通常は左上が原点" width="1024" height="768" class="size-full wp-image-974" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.001.jpeg"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.001.jpeg" alt="通常は左上が原点" width="1024" height="768" class="size-full wp-image-974" /></a>
   
   <p class="wp-caption-text">
     通常は左上が原点
@@ -181,15 +181,15 @@ categories:
   
 （GoogleのサンプルサイトではgetCurrentSpanX()やgetCurrentSpanY()から逐次フォーカスを計算していますが、今回はFocusを使う方法を採用しています）
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/19th.002.jpeg" alt="19th.002" width="1024" height="768" class="aligncenter size-full wp-image-975" />][7]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.002.jpeg" alt="19th.002" width="1024" height="768" class="aligncenter size-full wp-image-975" />][7]
 
 このフォーカス（図の黒丸）を中心にすると、ユーザーにとって自然な拡大・縮小に見えます。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/19th.004.jpeg" alt="19th.004" width="1024" height="768" class="aligncenter size-full wp-image-976" />][8]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.004.jpeg" alt="19th.004" width="1024" height="768" class="aligncenter size-full wp-image-976" />][8]
 
 しかし、フォーカスを基準にただ拡大しても、画像はやはりずれてしまいます。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/19th.003.jpeg" alt="19th.003" width="1024" height="768" class="aligncenter size-full wp-image-977" />][9]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.003.jpeg" alt="19th.003" width="1024" height="768" class="aligncenter size-full wp-image-977" />][9]
 
 拡大・縮小後の大きさと、以前の大きさの差分を取り、フォーカスの量に応じて位置を調整する必要があります。
   
@@ -219,7 +219,7 @@ categories:
     }
 </code></pre>
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/19th.007.jpeg" alt="19th.007" width="1024" height="768" class="aligncenter size-full wp-image-978" />][10]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.007.jpeg" alt="19th.007" width="1024" height="768" class="aligncenter size-full wp-image-978" />][10]
 
 ただし、今回の実装は不完全です。サンプルでは無限に拡大縮小できますし、拡大縮小を繰り返して描画の位置がずれてもまったく補正していません。
 
@@ -260,7 +260,7 @@ categories:
 
 [先ほどのエントリ][11]のとおり、根雪さんに表紙をお願いした「Android Studio 完全移行ガイド」をコミックマーケット89で頒布します。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/c89_farewell_adt.png" alt="c89_farewell_adt" width="50%" height="50%" class="aligncenter size-full wp-image-954" />][12]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/c89_farewell_adt.png" alt="c89_farewell_adt" width="50%" height="50%" class="aligncenter size-full wp-image-954" />][12]
 
 根雪さん。いつも最高の眼鏡っ娘をありがとうございます！
 
@@ -274,11 +274,11 @@ categories:
  [2]: https://www.mincomi.jp
  [3]: https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&hl=ja
  [4]: https://github.com/keiji/adventcalendar_2015_mincomi
- [5]: https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-18-200216.png
- [6]: https://blog.keiji.io/2015/12/mincomi-adventcalendar-18.html
- [7]: https://blog.keiji.io/wp-content/uploads/2015/12/19th.002.jpeg
- [8]: https://blog.keiji.io/wp-content/uploads/2015/12/19th.004.jpeg
- [9]: https://blog.keiji.io/wp-content/uploads/2015/12/19th.003.jpeg
- [10]: https://blog.keiji.io/wp-content/uploads/2015/12/19th.007.jpeg
- [11]: https://blog.keiji.io/2015/12/c89.html
- [12]: https://blog.keiji.io/wp-content/uploads/2015/12/c89_farewell_adt.png
+ [5]: https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-18-200216.png
+ [6]: https://blog.keiji.dev/2015/12/mincomi-adventcalendar-18.html
+ [7]: https://blog.keiji.dev/wp-content/uploads/2015/12/19th.002.jpeg
+ [8]: https://blog.keiji.dev/wp-content/uploads/2015/12/19th.004.jpeg
+ [9]: https://blog.keiji.dev/wp-content/uploads/2015/12/19th.003.jpeg
+ [10]: https://blog.keiji.dev/wp-content/uploads/2015/12/19th.007.jpeg
+ [11]: https://blog.keiji.dev/2015/12/c89.html
+ [12]: https://blog.keiji.dev/wp-content/uploads/2015/12/c89_farewell_adt.png

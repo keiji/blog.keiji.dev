@@ -7,7 +7,7 @@ url: /2015/12/mincomi-adventcalendar-24.html
 enclosure:
   - |
     |
-        https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-23-230647.mp4
+        https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-23-230647.mp4
         1427047
         video/mp4
         
@@ -22,7 +22,7 @@ categories:
 
 「[みんコミ][2]」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
 
 ［2015/12/25追記: サンプルコードのonCreateメソッド内でFragmentを初期化する処理を、Activityの再生時には実行しないように変更してあります（`savedInstanceState`で判定）］
 
@@ -41,7 +41,7 @@ categories:
 作ってみた感想として、ランキング画面の下タブと上タブが同時に現れる部分が少しややこしい印象でした（動画です）。
 
 <div style="width: 360px;" class="wp-video">
-  <video class="wp-video-shortcode" id="video-1068-3" width="360" height="640" preload="metadata" controls="controls"><source type="video/mp4" src="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-23-230647.mp4?_=3" /><a href="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-23-230647.mp4">https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-23-230647.mp4</a></video>
+  <video class="wp-video-shortcode" id="video-1068-3" width="360" height="640" preload="metadata" controls="controls"><source type="video/mp4" src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-23-230647.mp4?_=3" /><a href="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-23-230647.mp4">https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-23-230647.mp4</a></video>
 </div>
 
 スクロール量に応じてToolbar周りを調整するにはNestedScrollViewに入れなければなりませんが、そのままではViewPagerの高さが0になって、きちんと操作できません。
@@ -267,7 +267,7 @@ Activity同様、Fragmentも再生成される場合があります。
  [1]: http://qiita.com/advent-calendar/2015/mincomi
  [2]: https://www.mincomi.jp
  [3]: https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&hl=ja
- [4]: https://blog.keiji.io/2015/12/mincomi-adventcalendar-23.html
+ [4]: https://blog.keiji.dev/2015/12/mincomi-adventcalendar-23.html
  [5]: https://github.com/keiji/adventcalendar_2015_mincomi
- [6]: https://blog.keiji.io/2014/02/about_fragment.html
- [7]: https://blog.keiji.io/2015/12/c89.html
+ [6]: https://blog.keiji.dev/2014/02/about_fragment.html
+ [7]: https://blog.keiji.dev/2015/12/c89.html

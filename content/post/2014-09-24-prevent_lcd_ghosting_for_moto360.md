@@ -12,7 +12,7 @@ categories:
 ---
 Google I/Oのお土産として配布されたMotorolaのAndroid Wear端末「Moto 360」が、先日ようやく届いたんですが。
 
-<a href="https://blog.keiji.io/wp-content/uploads/2014/09/R0002605.jpg" target="_blank"><img src="https://blog.keiji.io/wp-content/uploads/2014/09/R0002605-300x198.jpg" alt="Moto 360" width="300" height="198" class="aligncenter size-medium wp-image-441" srcset="https://blog.keiji.io/wp-content/uploads/2014/09/R0002605-300x198.jpg 300w, https://blog.keiji.io/wp-content/uploads/2014/09/R0002605-1024x678.jpg 1024w, https://blog.keiji.io/wp-content/uploads/2014/09/R0002605-624x413.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+<a href="https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605.jpg" target="_blank"><img src="https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-300x198.jpg" alt="Moto 360" width="300" height="198" class="aligncenter size-medium wp-image-441" srcset="https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-300x198.jpg 300w, https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-1024x678.jpg 1024w, https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-624x413.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 
 このMoto 360、充電中に必ず時計表示になるんだけど、そのせいで液晶が焼き付くという不具合が起きているらしいです。
 
@@ -26,15 +26,15 @@ Google I/Oのお土産として配布されたMotorolaのAndroid Wear端末「Mo
 
 <!--more-->
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2014/09/R0002606-300x198.jpg" alt="インストール&サービス起動後" width="300" height="198" class="aligncenter size-medium wp-image-442" srcset="https://blog.keiji.io/wp-content/uploads/2014/09/R0002606-300x198.jpg 300w, https://blog.keiji.io/wp-content/uploads/2014/09/R0002606-1024x678.jpg 1024w, https://blog.keiji.io/wp-content/uploads/2014/09/R0002606-624x413.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />][1]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2014/09/R0002606-300x198.jpg" alt="インストール&サービス起動後" width="300" height="198" class="aligncenter size-medium wp-image-442" srcset="https://blog.keiji.dev/wp-content/uploads/2014/09/R0002606-300x198.jpg 300w, https://blog.keiji.dev/wp-content/uploads/2014/09/R0002606-1024x678.jpg 1024w, https://blog.keiji.dev/wp-content/uploads/2014/09/R0002606-624x413.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" />][1]
 
-<a href="https://blog.keiji.io/wp-content/uploads/2014/09/GhostBustersForMoto360-20141002.apk_.zip" target="_blank">GhostBustersForMoto360-20141002.apk.zip</a>
+<a href="https://blog.keiji.dev/wp-content/uploads/2014/09/GhostBustersForMoto360-20141002.apk_.zip" target="_blank">GhostBustersForMoto360-20141002.apk.zip</a>
 
 あ、apkはzipで圧縮されています（なに言ってるかわからねーと思うが、あとでWordPressの設定を、.apkを取り扱えるように変更するので、今は我慢してください）
 
 アプリが起動した状態では、充電台に置くと画面がすぐに暗くなり、液晶の焼き付きを防止できます。
 
-<a href="https://blog.keiji.io/wp-content/uploads/2014/09/R0002606.jpg" target="_blank"><img src="https://blog.keiji.io/wp-content/uploads/2014/09/R0002606-300x198.jpg" alt="インストール&#038;サービス起動後" width="300" height="198" class="aligncenter size-medium wp-image-442" srcset="https://blog.keiji.io/wp-content/uploads/2014/09/R0002606-300x198.jpg 300w, https://blog.keiji.io/wp-content/uploads/2014/09/R0002606-1024x678.jpg 1024w, https://blog.keiji.io/wp-content/uploads/2014/09/R0002606-624x413.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" /></a>
+<a href="https://blog.keiji.dev/wp-content/uploads/2014/09/R0002606.jpg" target="_blank"><img src="https://blog.keiji.dev/wp-content/uploads/2014/09/R0002606-300x198.jpg" alt="インストール&#038;サービス起動後" width="300" height="198" class="aligncenter size-medium wp-image-442" srcset="https://blog.keiji.dev/wp-content/uploads/2014/09/R0002606-300x198.jpg 300w, https://blog.keiji.dev/wp-content/uploads/2014/09/R0002606-1024x678.jpg 1024w, https://blog.keiji.dev/wp-content/uploads/2014/09/R0002606-624x413.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" /></a>
 
 難点として、アプリは、コンパニオンとして開発していないので、adb経由でインストールしてなければなりません。Moto 360にはドングルも無く、USBケーブルを接続できないので、Bluetoothデバッグを有効にしたり、電波暗室に移動したりとインストール１つで大騒ぎとなります。
 
@@ -48,4 +48,4 @@ Google I/Oのお土産として配布されたMotorolaのAndroid Wear端末「Mo
 
 <a href="https://github.com/keiji/GhostBustersForMoto360/" target="_blank">keiji/GhostBustersForMoto360</a>
 
- [1]: https://blog.keiji.io/wp-content/uploads/2014/09/R0002606.jpg
+ [1]: https://blog.keiji.dev/wp-content/uploads/2014/09/R0002606.jpg

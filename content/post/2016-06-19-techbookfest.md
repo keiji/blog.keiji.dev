@@ -19,7 +19,7 @@ categories:
 
 「めがねをかけるんだ」では、最近取り組んでいるTensorFlowに関する冊子を頒布いたします。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2016/06/tf-book.png" alt="tf-book" width="50%" height="50%" class="aligncenter size-full wp-image-1281" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/06/tf-book.png" alt="tf-book" width="50%" height="50%" class="aligncenter size-full wp-image-1281" />
 
 | タイトル | TensorFlowはじめました CIFAR-10奮闘記 |
 |:---- |:---------------------------- |
@@ -71,7 +71,7 @@ TensorFlowがオープンソースで公開されるまで「機械学習」に�
 
 ## どんな表紙なの？
 
-<img src="https://blog.keiji.io/wp-content/uploads/2016/06/tf-book.png" alt="tf-book" width="50%" height="50%" class="aligncenter size-full wp-image-1281" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/06/tf-book.png" alt="tf-book" width="50%" height="50%" class="aligncenter size-full wp-image-1281" />
 
 表紙・裏表紙のイラストは、現在、「[みんなのコミック][3]」で<a href="https://www.mincomi.jp/title/?title=328009" target="_blank">「おかあさん(10)と僕。」</a>を連載中の根雪れい（<a href="https://twitter.com/neyuki_rei/" target="_blank">@neyuki_rei</a>）さんによるものです。
 
@@ -81,12 +81,12 @@ TensorFlowがオープンソースで公開されるまで「機械学習」に�
 
 6月25日（土）に秋葉原通運会館で開催される「技術書典」に、有山圭二の個人サークル「めがねをかけるんだ」として参加します。配置は『Ａ−２８』です。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2016/06/techbookfest201606-cut.png" alt="techbookfest201606-cut" width="318" height="452" class="aligncenter size-full wp-image-1303" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/06/techbookfest201606-cut.png" alt="techbookfest201606-cut" width="318" height="452" class="aligncenter size-full wp-image-1303" />
 
 今回は有償での頒布となります。
   
 また、部数が限られていますので、売り切れの際はご容赦ください。
 
- [1]: https://blog.keiji.io/2016/07/remark_techbookfest.html
- [2]: https://blog.keiji.io/2016/07/tensorflow_book_ird.html
+ [1]: https://blog.keiji.dev/2016/07/remark_techbookfest.html
+ [2]: https://blog.keiji.dev/2016/07/tensorflow_book_ird.html
  [3]: https://www.mincomi.jp/

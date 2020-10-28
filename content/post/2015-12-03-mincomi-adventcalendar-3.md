@@ -13,7 +13,7 @@ categories:
 
 本記事で話題にする「[みんコミ][2]」のAndroidアプリは、「Google Play Store」からインストールできます。さっそくインストールしてみましょう。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
 
 ※ なお、本記事は「バージョン1.0.1」を元に執筆しています。
 
@@ -25,7 +25,7 @@ categories:
 
 そして、その下方に配置されているページ・インジケータ（iOSで言えばUIPageControlといえばわかりやすいのでしょうか）が、画像の解像度が足りていないのでしょうか、円形ではなく菱形に表示され、ジャギーが見えているのが気になりました。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/page_control.png" alt="page_control" width="240" height="73" class="aligncenter size-full wp-image-723" />][4]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/page_control.png" alt="page_control" width="240" height="73" class="aligncenter size-full wp-image-723" />][4]
 
 このような単純な素材であれば、画像ではなく[Shape Drawable][5]で作成してしまうのが良いと思います。
 
@@ -81,7 +81,7 @@ categories:
 
 [https://github.com/keiji/adventcalendar\_2015\_mincomi][6]
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-01-154732.png" alt="device-2015-12-01-154732" width="180" height="320" class="aligncenter size-full wp-image-725" />][7]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-01-154732.png" alt="device-2015-12-01-154732" width="180" height="320" class="aligncenter size-full wp-image-725" />][7]
 
     「有山圭二」は「みんなのコミック」及び運営の「株式会社イーブックイニシアティブジャパン」とは一切関係がありません。
     また、本アドベントカレンダーの内容はあくまで参加者個人の見解です。
@@ -119,7 +119,7 @@ categories:
  [1]: http://qiita.com/advent-calendar/2015/mincomi
  [2]: https://www.mincomi.jp
  [3]: https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&hl=ja
- [4]: https://blog.keiji.io/wp-content/uploads/2015/12/page_control.png
+ [4]: https://blog.keiji.dev/wp-content/uploads/2015/12/page_control.png
  [5]: http://developer.android.com/intl/ja/guide/topics/resources/drawable-resource.html#Shape
  [6]: https://github.com/keiji/adventcalendar_2015_mincomi
- [7]: https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-01-154732.png
+ [7]: https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-01-154732.png

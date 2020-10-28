@@ -5,7 +5,7 @@ type: post
 date: 2013-02-08T10:07:00+00:00
 url: /2013/02/adobe-creative-cloud_8.html
 blogger_blog:
-  - blog.keiji.io
+  - blog.keiji.dev
 blogger_author:
   - Keiji Ariyama
 blogger_permalink:
@@ -14,7 +14,7 @@ categories:
   - メモ
 
 ---
-前回、<a href="https://blog.keiji.io/2013/02/adobe-creative-cloud.html" target="_blank">Adobe Creative Cloud 年間プラン解約 最短ルート攻略</a>を公開した直後に、アドビカスタマーサポートからメールが届きました。
+前回、<a href="https://blog.keiji.dev/2013/02/adobe-creative-cloud.html" target="_blank">Adobe Creative Cloud 年間プラン解約 最短ルート攻略</a>を公開した直後に、アドビカスタマーサポートからメールが届きました。
 
 <blockquote style="border: solid 1px #333333;">
   <div style="text-align: left;">
@@ -124,7 +124,7 @@ categories:
 ** **あと、キャンセルするにカスタマーサービスに<span style="text-decoration: underline;">電話</span>ということだったのですが、**
 
 <p style="text-align: center;">
-  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/adobe10.png"><img class="aligncenter  wp-image-69" alt="adobe10" src="https://blog.keiji.io/wp-content/uploads/2013/02/adobe10.png" width="542" height="174" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/adobe10.png"><img class="aligncenter  wp-image-69" alt="adobe10" src="https://blog.keiji.dev/wp-content/uploads/2013/02/adobe10.png" width="542" height="174" /></a>
 </p>
 
 **ここに記載のある、<a href="http://helpx.adobe.com/support.html" target="_blank">アドビカスタマーサービス</a>のリンクをクリックすると、僕の環境だとAdobeの英語サイトに飛ばされて、キャンセルを受け付ける電話番号なんてどこにも掲載されていないように思えるんですが、僕の気のせいでしょうか。**

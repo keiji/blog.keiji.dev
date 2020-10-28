@@ -7,13 +7,13 @@ url: /2015/12/mincomi-adventcalendar-22.html
 enclosure:
   - |
     |
-        https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-21-205953.mp4
+        https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-205953.mp4
         828189
         video/mp4
         
   - |
     |
-        https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-21-213530.mp4
+        https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-213530.mp4
         1492389
         video/mp4
         
@@ -28,7 +28,7 @@ categories:
 
 「[みんコミ][2]」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
 
 <!--more-->
 
@@ -43,7 +43,7 @@ iOSでは一般的なこのナビゲーションですが、Androidでは下タ�
 Androidの場合、下端にはナビゲーションバーがあるので、誤操作の原因になりやすいというのが理由だと僕は考えています。
 
 <div id="attachment_1028" style="max-width: 730px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-21-223002.png"><img src="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-21-223002.png" alt="ナビゲーションバー" width="360" height="47" class="size-full wp-image-1028" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-223002.png"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-223002.png" alt="ナビゲーションバー" width="360" height="47" class="size-full wp-image-1028" /></a>
   
   <p class="wp-caption-text">
     ナビゲーションバー
@@ -65,9 +65,9 @@ Androidでは、上部に表示されている「ActionBar(ToolBar)」を使い�
 折衷案として、コンテンツを一番上に置いたまま上タブを実現するUIを作ってみました（動画です）。
 
 <div style="width: 360px;" class="wp-video">
-  <!--[if lt IE 9]><![endif]--><video class="wp-video-shortcode" id="video-738-1" width="360" height="640" preload="metadata" controls="controls"><source type="video/mp4" src="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-21-205953.mp4?_=1" />
+  <!--[if lt IE 9]><![endif]--><video class="wp-video-shortcode" id="video-738-1" width="360" height="640" preload="metadata" controls="controls"><source type="video/mp4" src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-205953.mp4?_=1" />
   
-  <a href="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-21-205953.mp4">https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-21-205953.mp4</a></video>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-205953.mp4">https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-205953.mp4</a></video>
 </div>
 
 [Design Support Library][5]を使っていて、最初はバナーが表示されていますが、下にスクロールすると視差効果（パララックス）とともにバナーが隠れていきます。
@@ -169,7 +169,7 @@ Androidでは、上部に表示されている「ActionBar(ToolBar)」を使い�
 また、下タブを選択した上で、今度はアクションバー(ToolBar)を残すというUIも試しに作成しました。
 
 <div style="width: 360px;" class="wp-video">
-  <video class="wp-video-shortcode" id="video-738-2" width="360" height="640" preload="metadata" controls="controls"><source type="video/mp4" src="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-21-213530.mp4?_=2" /><a href="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-21-213530.mp4">https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-21-213530.mp4</a></video>
+  <video class="wp-video-shortcode" id="video-738-2" width="360" height="640" preload="metadata" controls="controls"><source type="video/mp4" src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-213530.mp4?_=2" /><a href="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-213530.mp4">https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-21-213530.mp4</a></video>
 </div>
 
 同じくDesign Support Libraryを使っています。

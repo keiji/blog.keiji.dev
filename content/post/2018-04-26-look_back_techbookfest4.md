@@ -12,7 +12,7 @@ categories:
 ---
 　4月22日、秋葉原UDX アキバ・スクエアにて開催された「<a href="https://techbookfest.org/event/tbf04/circle/21060002" target="_blank">技術書典4</a>」に、サークル「めがねをかけるんだ」として参加してきました。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2018/04/IMG_20180422_103336.jpg" alt="" width="390" height="520" class="aligncenter size-full wp-image-1696" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2018/04/IMG_20180422_103336.jpg" alt="" width="390" height="520" class="aligncenter size-full wp-image-1696" />
 
 　この記事は「技術書典4」の振り返りの記事になります。
 
@@ -24,7 +24,7 @@ categories:
 
 　一冊目は、筆者の知る（体験した）商業出版に関わるあれこれを詰め込んだ「本当はおそろしい商業出版！？」、二冊目はTensorFlowを使ったML Ops本「茶色いトイプーは食べ物じゃないっ！」です。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2018/04/IMG_20180426_133630.jpg" alt="" width="390" height="520" class="aligncenter size-full wp-image-1700" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2018/04/IMG_20180426_133630.jpg" alt="" width="390" height="520" class="aligncenter size-full wp-image-1700" />
 
 　実は、技術書典４に申し込む直前まで「本当はおそろしい商業出版！？」だけでいこうと思っていました。今回、書きたいものがそれだったということが理由です。
 
@@ -69,7 +69,7 @@ categories:
 
 　対応ＯＳと縦書き日本語への親和性を考えて、今回はegword Universal 2で執筆しました。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2018/04/Screen-Shot-2018-04-26-at-12.56.22.png" alt="" width="808" height="487" class="aligncenter size-full wp-image-1703" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2018/04/Screen-Shot-2018-04-26-at-12.56.22.png" alt="" width="808" height="487" class="aligncenter size-full wp-image-1703" />
 
 ### 執筆した感想
 
@@ -123,7 +123,7 @@ categories:
 
 　挑戦したのは「茶色いトイプーは食べ物じゃないっ！」の方です。「笑顔でない眼鏡っ娘」と言う、いってみればネガティブな表情の表紙イラストは、これまでお願いしたことがありませんでした。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2018/04/76e3081c96d22431ff3554bf7affdafe.jpg" alt="" width="50%" height="50%" class="aligncenter size-full wp-image-1659" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2018/04/76e3081c96d22431ff3554bf7affdafe.jpg" alt="" width="50%" height="50%" class="aligncenter size-full wp-image-1659" />
 
 　ただ、ぼく自身、たまには眼鏡っ娘に叱られてみたいという気持ちもあるので、**きっとどこかに需要があるだろう**と思い、発注内容を維持という決定をしました。
 
@@ -133,7 +133,7 @@ categories:
 
 　結論から言えば、頒布予定数は完売し「めがねをかけるんだ」では過去最大の売上高となりました。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2018/04/IMG_20180422_103336.jpg" alt="" width="390" height="520" class="aligncenter size-full wp-image-1696" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2018/04/IMG_20180422_103336.jpg" alt="" width="390" height="520" class="aligncenter size-full wp-image-1696" />
 
 　眼鏡っ娘絵をオフィスの床に敷き詰めて寝転がることは叶いませんでした（持って帰ってきた本はありますが、献本の上を転がってはいけないと思うので我慢します）。
 
@@ -157,7 +157,7 @@ categories:
 
 　それでもぼくは「本当はおそろしい商業出版！？」が書きたかった！
 
-<img src="https://blog.keiji.io/wp-content/uploads/2018/04/shogyo.png" alt="" width="50%" height="50%" class="aligncenter size-full wp-image-1674" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2018/04/shogyo.png" alt="" width="50%" height="50%" class="aligncenter size-full wp-image-1674" />
 
 ### 電子書籍化のお知らせ
 

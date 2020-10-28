@@ -32,5 +32,5 @@ categories:
 
 みんなが少しずつでいいので寛容さをもつと、世界はもっと幸せになると思います。
 
- [1]: https://blog.keiji.io/2015/04/iq145.html
- [2]: https://blog.keiji.io/2017/01/demodori.html
+ [1]: https://blog.keiji.dev/2015/04/iq145.html
+ [2]: https://blog.keiji.dev/2017/01/demodori.html

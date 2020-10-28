@@ -13,7 +13,7 @@ categories:
 
 「[技術書典2][1]」で頒布した「TensorFlowはじめました Super Resolution − 超解像」は現在、[Amazonほかにて販売中です][2]。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2017/06/18675290_1470970782954084_694244058_o.jpg" alt="18675290_1470970782954084_694244058_o" width="50%" height="50%" class="aligncenter size-full wp-image-1589" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2017/06/18675290_1470970782954084_694244058_o.jpg" alt="18675290_1470970782954084_694244058_o" width="50%" height="50%" class="aligncenter size-full wp-image-1589" />
 
 | タイトル | TensorFlowはじめました2 Super Resolution − 超解像 |
 |:---- |:---------------------------------------- |
@@ -59,7 +59,7 @@ POD(Print On Demand)または電子書籍での販売になります。一般書
 
  [1]: https://techbookfest.org/event/tbf02
  [2]: http://amzn.to/2rDJwm4
- [3]: https://blog.keiji.io/2016/07/tensorflow_book_ird.html
+ [3]: https://blog.keiji.dev/2016/07/tensorflow_book_ird.html
  [4]: https://books.google.co.jp/books/about/TensorFlow%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%92_%E6%A9%9F%E6%A2%B0.html?id=egMlDwAAQBAJ&redir_esc=y
  [5]: https://bookstore.yahoo.co.jp/shoshi-779055/
  [6]: https://itunes.apple.com/jp/book/tensorflow%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F2-%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92%E3%81%A7%E8%B6%85%E8%A7%A3%E5%83%8F-super-resolution/id1240582039?mt=11

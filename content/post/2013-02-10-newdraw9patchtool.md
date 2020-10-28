@@ -5,7 +5,7 @@ type: post
 date: 2013-02-10T08:22:00+00:00
 url: /2013/02/newdraw9patchtool.html
 blogger_blog:
-  - blog.keiji.io
+  - blog.keiji.dev
 blogger_author:
   - Keiji Ariyama
 blogger_permalink:
@@ -27,7 +27,7 @@ Android SDKに同梱されている&#8221;**Draw 9-patch Tool**&#8220;を、SWT�
 </div>
 
 <div>
-  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg"><img class="wp-image-53 aligncenter" alt="Screen Shot 2013-02-10 at 3.43.04 PM" src="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg" width="442" height="260" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg"><img class="wp-image-53 aligncenter" alt="Screen Shot 2013-02-10 at 3.43.04 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.04-PM.jpg" width="442" height="260" /></a>
 </div>
 
 これまでは、Facebook/Twitter/Google+で、知り合い向けに公開していたのですが、もう少し公開範囲を広げることにしました。
@@ -49,7 +49,7 @@ Eclipseの再起動後、パッケージエクスプローラーから、pngフ�
 <table cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td>
-      <a href="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg"><img class="wp-image-60 aligncenter" alt="Screen Shot 2013-02-10 at 4.00.32 PM" src="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg" width="450" height="273" /></a>
+      <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg"><img class="wp-image-60 aligncenter" alt="Screen Shot 2013-02-10 at 4.00.32 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM.jpg" width="450" height="273" /></a>
     </td>
   </tr>
   
@@ -69,7 +69,7 @@ Eclipseの再起動後、パッケージエクスプローラーから、pngフ�
 しかし、小さな画像を拡大して表示するときに、全体を引き延ばすと、画像自体がぼやけてしまいます。
 
 <div>
-  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.53.34-PM.png"><img class="aligncenter  wp-image-61" alt="Screen Shot 2013-02-10 at 3.53.34 PM" src="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.53.34-PM.png" width="139" height="316" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.53.34-PM.png"><img class="aligncenter  wp-image-61" alt="Screen Shot 2013-02-10 at 3.53.34 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.53.34-PM.png" width="139" height="316" /></a>
 </div>
 
 そのため、引き延ばす範囲をあらかじめ設定しておくと、Androidは、指定した範囲を引き延ばして表示します。
@@ -77,7 +77,7 @@ Eclipseの再起動後、パッケージエクスプローラーから、pngフ�
 この、引き延ばす範囲を指定する作業を「パッチを当てる」と、言い、&#8221;Draw 9-patch Tool&#8221;はそのためにあります。
 
 <div>
-  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.47.17-PM.jpg"><img class="aligncenter  wp-image-62" alt="Screen Shot 2013-02-10 at 3.47.17 PM" src="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.47.17-PM.jpg" width="346" height="203" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.47.17-PM.jpg"><img class="aligncenter  wp-image-62" alt="Screen Shot 2013-02-10 at 3.47.17 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.47.17-PM.jpg" width="346" height="203" /></a>
 </div>
 
 また、画像の上に文字を表示する場合など、どの部分に文字を載せたいのか（パディング）を設定することも出来ます（右側青色部分）。
@@ -91,7 +91,7 @@ Eclipseの再起動後、パッケージエクスプローラーから、pngフ�
 現在、Android SDKに同梱のDraw 9-patchツールは、スタンドアローンのアプリケーションとして動作します。
 
 <div>
-  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.48.51-PM.jpg"><img class="aligncenter  wp-image-63" alt="Screen Shot 2013-02-10 at 3.48.51 PM" src="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.48.51-PM.jpg" width="346" height="203" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.48.51-PM.jpg"><img class="aligncenter  wp-image-63" alt="Screen Shot 2013-02-10 at 3.48.51 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.48.51-PM.jpg" width="346" height="203" /></a>
 </div>
 
 AWT&Swingベースで開発されており、現在のEclipseプラグイン&#8221;ADT(Android Development Tools)&#8221;には取り込まれていません。そのため、開発者は、Eclipseだけで作業を完結することが出来ませんでした。
@@ -101,7 +101,7 @@ AWT&Swingベースで開発されており、現在のEclipseプラグイン&#82
 <table cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td>
-      <a href="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.34.01-PM.jpg"><img class="aligncenter  wp-image-64" alt="Screen Shot 2013-02-10 at 3.34.01 PM" src="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.34.01-PM.jpg" width="346" height="203" /></a>
+      <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.34.01-PM.jpg"><img class="aligncenter  wp-image-64" alt="Screen Shot 2013-02-10 at 3.34.01 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.34.01-PM.jpg" width="346" height="203" /></a>
     </td>
   </tr>
   
@@ -125,7 +125,7 @@ Google I/Oで、開発ツールの担当であるTor Norbyeと、Xavier Ducrohet
 今回、新しい&#8221;Draw 9-patch Tool&#8221;は、SWT(Standard Widget Toolkit)ベースで開発しています。
 
 <div>
-  <a href="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.54-PM.png"><img class="aligncenter  wp-image-65" alt="Screen Shot 2013-02-10 at 3.43.54 PM" src="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.54-PM.png" width="346" height="202" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.54-PM.png"><img class="aligncenter  wp-image-65" alt="Screen Shot 2013-02-10 at 3.43.54 PM" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-3.43.54-PM.png" width="346" height="202" /></a>
 </div>
 
 これまで と同様、スタンドアローンで動作するのに加えて、SWTベースなので、Eclipseのプラグインにも比較的容易に移植できました。
@@ -133,7 +133,7 @@ Google I/Oで、開発ツールの担当であるTor Norbyeと、Xavier Ducrohet
 <table cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td>
-      <a href="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM-1.jpg"><img class="aligncenter  wp-image-66" alt="Screen Shot 2013-02-10 at 4.00.32 PM (1)" src="https://blog.keiji.io/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM-1.jpg" width="346" height="210" /></a>
+      <a href="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM-1.jpg"><img class="aligncenter  wp-image-66" alt="Screen Shot 2013-02-10 at 4.00.32 PM (1)" src="https://blog.keiji.dev/wp-content/uploads/2013/02/Screen-Shot-2013-02-10-at-4.00.32-PM-1.jpg" width="346" height="210" /></a>
     </td>
   </tr>
   

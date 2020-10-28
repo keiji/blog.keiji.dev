@@ -117,7 +117,7 @@ TensorFlowにはさまざまなAPIが用意されています。
 
 https://www.tensorflow.org/serving/setup
 
-<img src="https://blog.keiji.io/wp-content/uploads/2017/12/Screen-Shot-2017-12-13-at-8.49.08.png" alt="Screen Shot 2017-12-13 at 8.49.08" width="1706" height="372" class="aligncenter size-full wp-image-1645" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2017/12/Screen-Shot-2017-12-13-at-8.49.08.png" alt="Screen Shot 2017-12-13 at 8.49.08" width="1706" height="372" class="aligncenter size-full wp-image-1645" />
 
 apt-getでTensorFlow Serving　Serverをインストールして、TensorFlow Serving向けにモデルを出力したりといろいろした後に、pipでPython用のクライアントAPIをインストールしようとしたら「バージョンが違うよ」と表示されるのは、あまりにも残酷な仕打ちです。
 

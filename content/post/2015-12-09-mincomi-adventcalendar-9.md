@@ -15,7 +15,7 @@ categories:
 
 「[みんコミ][2]」のAndroidアプリ（バージョン1.0.2）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
 
 <!--more-->
 
@@ -30,7 +30,7 @@ categories:
 その際に、作品ページへのリンクも投稿されているのですが、Android端末でそれらのリンクをタップして開くWeb版の「みんコミ」は、AndroidやiOSのブラウザからは見られないように制限されています。
 
 <div id="attachment_852" style="max-width: 1090px" class="wp-caption alignnone">
-  <a href="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-07-220923.png"><img src="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-07-220923.png" alt="数秒後にGoogle Play Storeへリダイレクトされる" width="25%" height="25%" class="size-full wp-image-852" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-07-220923.png"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-07-220923.png" alt="数秒後にGoogle Play Storeへリダイレクトされる" width="25%" height="25%" class="size-full wp-image-852" /></a>
   
   <p class="wp-caption-text">
     数秒後にGoogle Play Storeへリダイレクトされる
@@ -126,15 +126,15 @@ Intentに関する情報はAndroidManifest.xmlに記載します。
 
 すると、次のように起動するアプリの選択画面が表示されます。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-07-225455.png" alt="device-2015-12-07-225455" width="50%" height="50%" class="aligncenter size-full wp-image-844" />][5]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-07-225455.png" alt="device-2015-12-07-225455" width="50%" height="50%" class="aligncenter size-full wp-image-844" />][5]
 
 ここで「タイトルページ」を選択すると、サンプルアプリが起動します。
   
 画面にはtitleIdやauthorIdとしてクリックしたリンクの最後にある数字が表示されます。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-07-225106.png" alt="device-2015-12-07-225106" width="25%" height="25%" class="wp-image-845"  style="float:left; margin-right: 16px;" />][6]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-07-225106.png" alt="device-2015-12-07-225106" width="25%" height="25%" class="wp-image-845"  style="float:left; margin-right: 16px;" />][6]
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-07-225040.png" alt="device-2015-12-07-225040" width="25%" height="25%" class="alignnone wp-image-846" />][7]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-07-225040.png" alt="device-2015-12-07-225040" width="25%" height="25%" class="alignnone wp-image-846" />][7]
 
 ### Intentの処理
 
@@ -228,8 +228,8 @@ Intentに関する情報はAndroidManifest.xmlに記載します。
  [2]: https://www.mincomi.jp
  [3]: https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&hl=ja
  [4]: https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F?src=hash
- [5]: https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-07-225455.png
- [6]: https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-07-225106.png
- [7]: https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-07-225040.png
+ [5]: https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-07-225455.png
+ [6]: https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-07-225106.png
+ [7]: https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-07-225040.png
  [8]: https://github.com/keiji/adventcalendar_2015_mincomi
  [9]: https://twitter.com/mayumiasugawa

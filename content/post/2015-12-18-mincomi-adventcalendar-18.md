@@ -35,7 +35,7 @@ categories:
 
 「[みんコミ][2]」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
 
 <!--more-->
 
@@ -57,7 +57,7 @@ categories:
 
 サンプル「スクロールサンプル(ScrollerActivity)」では、赤い■をフリックすると移動するようにプログラムしています。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-18-004150.png" alt="device-2015-12-18-004150" width="50%" height="50%" class="aligncenter size-full wp-image-940" />][5]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-18-004150.png" alt="device-2015-12-18-004150" width="50%" height="50%" class="aligncenter size-full wp-image-940" />][5]
 
 まず、GestureDetectorでflingジェスチャーを取得します。
   
@@ -296,4 +296,4 @@ categories:
  [2]: https://www.mincomi.jp
  [3]: https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&hl=ja
  [4]: https://github.com/keiji/adventcalendar_2015_mincomi
- [5]: https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-18-004150.png
+ [5]: https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-18-004150.png

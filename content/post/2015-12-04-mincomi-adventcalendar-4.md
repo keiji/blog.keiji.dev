@@ -15,7 +15,7 @@ categories:
 
 アプリは、「Google Play Store」からインストールできます。さっそくインストールしてみましょう。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
 
 <!--more-->
 
@@ -23,7 +23,7 @@ categories:
 
 コミックビューアーの画面で右上の歯車のマークをタップすると設定画面が開きます。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-02-172255.png" alt="device-2015-12-02-172255" width="50%" height="50%" class="aligncenter size-full wp-image-755" />][4]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-02-172255.png" alt="device-2015-12-02-172255" width="50%" height="50%" class="aligncenter size-full wp-image-755" />][4]
 
 ここにある「回転防止ロック」というテキストは「回転をロックする」のか「回転を防止する機能をロックする」のか、わかりにくいと僕は感じました。
 
@@ -31,7 +31,7 @@ categories:
   
 「キャンセルをキャンセルする」同様、「防止をロック」という重ね言葉の結果を、少なくとも僕は直感的に想起できません。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-02-210010.png" alt="device-2015-12-02-210010" width="25%" height="25%" class="aligncenter size-full wp-image-762" />][5]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-02-210010.png" alt="device-2015-12-02-210010" width="25%" height="25%" class="aligncenter size-full wp-image-762" />][5]
 
 こう言う場合のテキストは「画面の自動回転」とした方がよいと思います。
   
@@ -97,5 +97,5 @@ categories:
  [1]: http://qiita.com/advent-calendar/2015/mincomi
  [2]: https://www.mincomi.jp
  [3]: https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&hl=ja
- [4]: https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-02-172255.png
- [5]: https://blog.keiji.io/wp-content/uploads/2015/12/device-2015-12-02-210010.png
+ [4]: https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-02-172255.png
+ [5]: https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-02-210010.png

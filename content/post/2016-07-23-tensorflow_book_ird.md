@@ -12,7 +12,7 @@ categories:
 先月25日の「[技術書典][1]」で頒布した「TensorFlowはじめました」は現在、[Amazonにて予約を受付けています][2]。
 
 <div id="attachment_1351" style="max-width: 1361px" class="wp-caption aligncenter">
-  <a href="http://www.amazon.co.jp/gp/product/4802090889/ref=as_li_ss_il?ie=UTF8&#038;camp=247&#038;creative=7399&#038;creativeASIN=4802090889&#038;linkCode=as2&#038;tag=keijiariyama-22"><img src="https://blog.keiji.io/wp-content/uploads/2016/07/13692115_1158315580886274_420079092_o.jpg" alt="Next Publishing版表紙" width="50%" height="50%" class="aligncenter size-full wp-image-1351" /></a>
+  <a href="http://www.amazon.co.jp/gp/product/4802090889/ref=as_li_ss_il?ie=UTF8&#038;camp=247&#038;creative=7399&#038;creativeASIN=4802090889&#038;linkCode=as2&#038;tag=keijiariyama-22"><img src="https://blog.keiji.dev/wp-content/uploads/2016/07/13692115_1158315580886274_420079092_o.jpg" alt="Next Publishing版表紙" width="50%" height="50%" class="aligncenter size-full wp-image-1351" /></a>
   
   <p class="wp-caption-text">
     有山 圭二 の TensorFlowはじめました　実践！最新Googleマシンラーニング (NextPublishing) を Amazon でチェック！

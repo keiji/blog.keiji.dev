@@ -50,7 +50,7 @@ categories:
 開発者ツールからログを見ると、次のようなエラーが出ていました。
 
 <div id="attachment_932" style="max-width: 1107px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2015/12/Screen-Shot-2015-12-16-at-23.28.05.png"><img src="https://blog.keiji.io/wp-content/uploads/2015/12/Screen-Shot-2015-12-16-at-23.28.05.png" alt="faceIconURLのパラメーターがないのでバリデーションにかかっている" width="1097" height="242" class="size-full wp-image-932" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2015/12/Screen-Shot-2015-12-16-at-23.28.05.png"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/Screen-Shot-2015-12-16-at-23.28.05.png" alt="faceIconURLのパラメーターがないのでバリデーションにかかっている" width="1097" height="242" class="size-full wp-image-932" /></a>
   
   <p class="wp-caption-text">
     faceIconURLのパラメーターがないのでバリデーションにかかっている
@@ -65,7 +65,7 @@ categories:
 
 ちなみにこのバリデーション。エラーが起きた場合は通常、次のように該当箇所にエラーが表示されます。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/Screen-Shot-2015-12-16-at-23.25.05.png" alt="Screen Shot 2015-12-16 at 23.25.05" width="1345" height="138" class="aligncenter size-full wp-image-933" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/Screen-Shot-2015-12-16-at-23.25.05.png" alt="Screen Shot 2015-12-16 at 23.25.05" width="1345" height="138" class="aligncenter size-full wp-image-933" />][3]
 
 しかし今回の場合、faceIconUrlに該当する入力項目が画面上に存在しないので、ただ確認画面が表示されないだけに見えてしまうのだと思います。
 
@@ -106,5 +106,5 @@ categories:
 
  [1]: http://qiita.com/advent-calendar/2015/mincomi
  [2]: https://www.mincomi.jp/
- [3]: https://blog.keiji.io/wp-content/uploads/2015/12/Screen-Shot-2015-12-16-at-23.25.05.png
+ [3]: https://blog.keiji.dev/wp-content/uploads/2015/12/Screen-Shot-2015-12-16-at-23.25.05.png
  [4]: https://www.mincomi.jp

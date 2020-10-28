@@ -114,4 +114,4 @@ FragmentにいちいちListenerを作るのは、めんどくさいように見�
 
 PS. 他にもいろいろ落とし穴を避ける方法を指摘してもらったのですが、記事がどんどん長くなるので割愛します。Fragmentには落とし穴がいっぱいだけど、今回挙げたのはそれ以前の問題と言うことで。
 
- [1]: https://blog.keiji.io/2015/12/mincomi-adventcalendar-24.html
+ [1]: https://blog.keiji.dev/2015/12/mincomi-adventcalendar-24.html

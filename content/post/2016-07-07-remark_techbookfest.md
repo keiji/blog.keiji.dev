@@ -17,7 +17,7 @@ categories:
 
 技術書典で頒布した「TensorFlowはじめました」について、このたび、インプレスR&D社さんからPOD(Print On Demand)と電子書籍（リフロー）として販売できる運びとなりました。
 
-<img class="aligncenter size-full wp-image-1319" src="https://blog.keiji.io/wp-content/uploads/2016/07/tensorflow_ird.jpg" alt="tensorflow_ird" width="50%" height="50%" />
+<img class="aligncenter size-full wp-image-1319" src="https://blog.keiji.dev/wp-content/uploads/2016/07/tensorflow_ird.jpg" alt="tensorflow_ird" width="50%" height="50%" />
 
 | タイトル | TensorFlowはじめました 実践！最新Googleマシンラーニング |
 |:---- |:------------------------------------ |
@@ -50,7 +50,7 @@ POD(Print On Demand)または電子書籍での販売になります。一般書
 
 TensorFlow本を出すと決めたのは、サークルカットの応募〆切当日。タイトルも方向性も決まっておらず、「TensorFlow本」としか記述していないことからも、当時の考えのなさが伝わってきますね。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2016/06/techbookfest201606-cut.png" alt="techbookfest201606-cut" width="318" height="452" class="aligncenter size-full wp-image-1303" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/06/techbookfest201606-cut.png" alt="techbookfest201606-cut" width="318" height="452" class="aligncenter size-full wp-image-1303" />
 
 ## スケジュールについて
 
@@ -86,7 +86,7 @@ TensorFlow本を出すと決めたのは、サークルカットの応募〆切�
 
 本当にありがとうございました！！<del>（このまま眼鏡っ娘をどんどん増やしたい。まるでプリキュアのように）</del>
 
-<img src="https://blog.keiji.io/wp-content/uploads/2016/06/tf-book.png" alt="tf-book" width="50%" height="50%" class="aligncenter size-full wp-image-1281" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/06/tf-book.png" alt="tf-book" width="50%" height="50%" class="aligncenter size-full wp-image-1281" />
 
 ## 技術書典当日
 
@@ -140,7 +140,7 @@ TensorFlow本を出すと決めたのは、サークルカットの応募〆切�
   </p>
 </blockquote>
 
- [1]: https://blog.keiji.io/2016/07/tensorflow_book_ird.html
+ [1]: https://blog.keiji.dev/2016/07/tensorflow_book_ird.html
  [2]: https://techbookfest.github.io/
  [3]: http://inayama.hatenadiary.jp/entry/2016/06/26/082443
  [4]: http://www.kabuku.co.jp/

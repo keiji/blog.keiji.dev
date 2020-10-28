@@ -87,11 +87,11 @@ categories:
 
 　「[みんコミ][2]」のAndroidアプリは、Google Playからインストールできます（執筆時点の最新バージョンは1.0.3です）。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][11]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][11]
 
 　また、iOS版のアプリは、iTunes App Atoreからアプリからインストールできます（執筆時点の最新バージョンは1.0.1です）。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/available-on-the-app-store-1345130940.jpg" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][12]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/available-on-the-app-store-1345130940.jpg" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][12]
 
 　それでは、最後までお読みいただいた皆さん、本当にありがとうございました。
 
@@ -106,11 +106,11 @@ categories:
 
  [1]: http://qiita.com/advent-calendar/2015/mincomi
  [2]: https://www.mincomi.jp
- [3]: https://blog.keiji.io/2015/12/mincomi-adventcalendar-23.html
- [4]: https://blog.keiji.io/2015/12/mincomi-adventcalendar-20.html
- [5]: https://blog.keiji.io/2015/12/mincomi-adventcalendar-18.html
- [6]: https://blog.keiji.io/2015/12/mincomi-adventcalendar-19.html
- [7]: https://blog.keiji.io/2015/12/mincomi-adventcalendar-21.html
+ [3]: https://blog.keiji.dev/2015/12/mincomi-adventcalendar-23.html
+ [4]: https://blog.keiji.dev/2015/12/mincomi-adventcalendar-20.html
+ [5]: https://blog.keiji.dev/2015/12/mincomi-adventcalendar-18.html
+ [6]: https://blog.keiji.dev/2015/12/mincomi-adventcalendar-19.html
+ [7]: https://blog.keiji.dev/2015/12/mincomi-adventcalendar-21.html
  [8]: https://github.com/keiji/adventcalendar_2015_mincomi
  [9]: https://twitter.com/neyuki_rei
  [10]: https://www.mincomi.jp/title/?title=343057

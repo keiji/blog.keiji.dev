@@ -34,7 +34,7 @@ categories:
 
 GitHub: <https://github.com/keiji/region_cropper>
 
-<img src="https://blog.keiji.io/wp-content/uploads/2016/09/set_region.png" alt="set_region" width="2048" height="1580" class="aligncenter size-full wp-image-1383" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/09/set_region.png" alt="set_region" width="2048" height="1580" class="aligncenter size-full wp-image-1383" />
 
 GUIのフレームワークに、使い慣れたSwingではなくJava FXを使いました。
   
@@ -63,7 +63,7 @@ Binary(Zip): <https://github.com/keiji/region_cropper>
 
 ### 処理するディレクトリの選択（Select Directory）
 
-<img src="https://blog.keiji.io/wp-content/uploads/2016/09/select_directory.png" alt="select_directory" width="1424" height="896" class="aligncenter size-full wp-image-1382" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/09/select_directory.png" alt="select_directory" width="1424" height="896" class="aligncenter size-full wp-image-1382" />
 
 ### 領域の追加（Add)
 
@@ -73,11 +73,11 @@ Binary(Zip): <https://github.com/keiji/region_cropper>
 
 現在選択中の領域は赤枠で示されます。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2016/09/set_region.png" alt="set_region" width="2048" height="1580" class="aligncenter size-full wp-image-1383" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/09/set_region.png" alt="set_region" width="2048" height="1580" class="aligncenter size-full wp-image-1383" />
 
 スペース（Space）キーを押すと、選択中の領域以外の場所がグレーアウトされます。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2016/09/focus_region.png" alt="focus_region" width="2048" height="1580" class="aligncenter size-full wp-image-1384" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/09/focus_region.png" alt="focus_region" width="2048" height="1580" class="aligncenter size-full wp-image-1384" />
 
 | キー            | 動作                         |
 |:------------- |:-------------------------- |
@@ -105,7 +105,7 @@ Shift を押すと、変化量が小さくなり微調整できます。
   
 追加した領域のラベルは、標準で 1 が設定されています。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2016/09/set_label.png" alt="set_label" width="2048" height="1580" class="aligncenter size-full wp-image-1387" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/09/set_label.png" alt="set_label" width="2048" height="1580" class="aligncenter size-full wp-image-1387" />
 
 また、ラベル 0 は負例として特別な意味を持ちます。
   
@@ -115,7 +115,7 @@ Shift を押すと、変化量が小さくなり微調整できます。
 
 領域の切り出しには「Quick crop」と「Crop to&#8230;」の２つの方法があります。
 
-<img src="https://blog.keiji.io/wp-content/uploads/2016/09/menu_crop.png" alt="menu_crop" width="639" height="327" class="aligncenter size-full wp-image-1386" />
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/09/menu_crop.png" alt="menu_crop" width="639" height="327" class="aligncenter size-full wp-image-1386" />
 
 「Quick crop」を選択すると、設定している領域を、処理中の画像と同じディレクトリに切り出します。
   

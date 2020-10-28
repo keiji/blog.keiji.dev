@@ -210,7 +210,7 @@ categories:
 　そして勾配消失は、変更した`local3`でも`local4`でもなく、畳み込み層`conv2`で起きていました。
 
 <div id="attachment_1234" style="max-width: 1512px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.io/wp-content/uploads/2016/05/Screen-Shot-2016-05-16-at-03.28.57.png" rel="attachment wp-att-1234"><img src="https://blog.keiji.io/wp-content/uploads/2016/05/Screen-Shot-2016-05-16-at-03.28.57.png" alt="Gradients（勾配）が消失している" width="1502" height="858" class="size-full wp-image-1234" /></a>
+  <a href="https://blog.keiji.dev/wp-content/uploads/2016/05/Screen-Shot-2016-05-16-at-03.28.57.png" rel="attachment wp-att-1234"><img src="https://blog.keiji.dev/wp-content/uploads/2016/05/Screen-Shot-2016-05-16-at-03.28.57.png" alt="Gradients（勾配）が消失している" width="1502" height="858" class="size-full wp-image-1234" /></a>
   
   <p class="wp-caption-text">
     Gradients（勾配）が消失している
@@ -287,7 +287,7 @@ categories:
 　６月２５日に秋葉原の通運会館で開かれる技術系同人誌オンリーイベント「[技術書典][1]」にて頒布します（今回は有償頒布の予定）。
 
 <div id="attachment_1186" style="max-width: 645px" class="wp-caption aligncenter">
-  <a href="https://techbookfest.org/#A-28" rel="attachment wp-att-1186"><img src="https://blog.keiji.io/wp-content/uploads/2016/05/5690091590647808.png" alt="6/25 技術書典 A-28" width="50%" height="50%" class="size-full wp-image-1186" /></a>
+  <a href="https://techbookfest.org/#A-28" rel="attachment wp-att-1186"><img src="https://blog.keiji.dev/wp-content/uploads/2016/05/5690091590647808.png" alt="6/25 技術書典 A-28" width="50%" height="50%" class="size-full wp-image-1186" /></a>
   
   <p class="wp-caption-text">
     6/25 技術書典 A-28

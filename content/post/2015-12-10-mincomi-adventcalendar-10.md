@@ -25,7 +25,7 @@ HTTPだとリンク元ＵＲＬ（リファラー）がとれないし、HTTPS�
 
 一番気になっているのは「お問い合わせフォーム」もHTTPでアクセスできるということですね。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/Screen-Shot-2015-12-08-at-00.08.20.png" alt="Screen Shot 2015-12-08 at 00.08.20" width="333" height="100" class="alignnone size-full wp-image-864" />][4]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/Screen-Shot-2015-12-08-at-00.08.20.png" alt="Screen Shot 2015-12-08 at 00.08.20" width="333" height="100" class="alignnone size-full wp-image-864" />][4]
 
 もしかするとフォームの投稿先はきちんと保護された通信に切り替えているのかもしれませんが（未確認）、表口をHTTPにしておく理由が思い浮かばないので、使っていて不安がありますね……
 
@@ -84,7 +84,7 @@ HTTPだとリンク元ＵＲＬ（リファラー）がとれないし、HTTPS�
 
  [1]: http://qiita.com/advent-calendar/2015/mincomi
  [2]: https://www.mincomi.jp/
- [3]: https://blog.keiji.io/2015/11/lets-encrypt.html
- [4]: https://blog.keiji.io/wp-content/uploads/2015/12/Screen-Shot-2015-12-08-at-00.08.20.png
+ [3]: https://blog.keiji.dev/2015/11/lets-encrypt.html
+ [4]: https://blog.keiji.dev/wp-content/uploads/2015/12/Screen-Shot-2015-12-08-at-00.08.20.png
  [5]: https://www.mincomi.jp
  [6]: https://sites.google.com/site/jagkagawa/project-updates/20151212youshanguiershiniyoruandroidstudiomianqianghui

@@ -13,7 +13,7 @@ categories:
 
 「[みんコミ][2]」のAndroidアプリ（バージョン1.0.1）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
 
 <!--more-->
 
@@ -25,9 +25,9 @@ categories:
 
 <http://developer.android.com/intl/ja/guide/topics/ui/settings.html>
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/mincomi_pref1.png" alt="mincomi_pref1" width="25%" height="25%" style="float:left;" />][4]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/mincomi_pref1.png" alt="mincomi_pref1" width="25%" height="25%" style="float:left;" />][4]
 
-[<img src="https://blog.keiji.io/wp-content/uploads/2015/12/mincomi_pref2.png" alt="mincomi_pref2" width="25%" height="25%" />][5]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/mincomi_pref2.png" alt="mincomi_pref2" width="25%" height="25%" />][5]
 
 メニューの初期画面「pref_general.xml」は次の通りです。
 
@@ -194,6 +194,6 @@ Huluなどでも視聴中の番組は、まずトップ画面に出てきます�
  [1]: http://qiita.com/advent-calendar/2015/mincomi
  [2]: https://www.mincomi.jp
  [3]: https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&hl=ja
- [4]: https://blog.keiji.io/wp-content/uploads/2015/12/mincomi_pref1.png
- [5]: https://blog.keiji.io/wp-content/uploads/2015/12/mincomi_pref2.png
+ [4]: https://blog.keiji.dev/wp-content/uploads/2015/12/mincomi_pref1.png
+ [5]: https://blog.keiji.dev/wp-content/uploads/2015/12/mincomi_pref2.png
  [6]: https://github.com/keiji/adventcalendar_2015_mincomi
