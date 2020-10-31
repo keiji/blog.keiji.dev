@@ -1,3 +1,9 @@
 [submodule "themes/hugo_theme_beg"]
 	path = themes/hugo_theme_beg
 	url = https://github.com/dim0627/hugo_theme_beg.git
+[submodule "harbor"]
+	path = harbor
+	url = https://github.com/matsuyoshi30/harbor.git
+[submodule "themes/harbor"]
+	path = themes/harbor
+	url = https://github.com/matsuyoshi30/harbor.git

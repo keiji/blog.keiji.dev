@@ -8,18 +8,31 @@ languageCode = "ja"
 author = "Keiji ARIYAMA"
 copyright = "Keiji ARIYAMA All rights reserved."
 googleanalytics = "UA-62351683-1"
-theme = "hugo_theme_beg"
+theme = "harbor"
+enableInlineShortcodes = true
+
+[params.logo]
+  url = "logo.png" # static/images/icon.png
+  alt = "Logo"
 
 [params]
-  logo = "/images/logo.jpg"
   dateformat = "2006-01-02"
   typesquareCode = "ZwBLIZTRHGg="
   custom_css = ["css/default.css", "css/typesquare.css"]
 
-[[menu.main]]
-    name = "Profile"
-    weight = 1
-    url = "/profile/"
+[[params.nav]]
+  identifier = "profile"
+  name = "Profile"
+  icon = "fas fa-user fa-lg"
+  url = "/profile/"
+  weight = 1
+
+[[params.nav]]
+  identifier = "licenses"
+  name = "Licenses"
+  icon = "fab fa-osi fa-lg"
+  url = "/licenses/"
+  weight = 1
 
 [markup.goldmark.renderer]
 unsafe= true
