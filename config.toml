@@ -7,7 +7,7 @@ hasCJKLanguage = true
 languageCode = "ja"
 author = "Keiji ARIYAMA"
 copyright = "Keiji ARIYAMA All rights reserved."
-googleanalytics = "UA-62351683-1"
+googleAnalytics = "UA-62351683-1"
 theme = "harbor"
 enableInlineShortcodes = true
 
