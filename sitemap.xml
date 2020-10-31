@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blog.keiji.dev/licenses/</loc>
+    <lastmod>2020-11-01T00:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.keiji.dev/categories/</loc>
     <lastmod>2020-10-31T15:00:10+09:00</lastmod>
   </url>

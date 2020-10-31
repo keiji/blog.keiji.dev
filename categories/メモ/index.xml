@@ -1,253 +1,212 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>メモ on めがねをかけるんだ</title>
-    <link>https://blog.keiji.dev/categories/%E3%83%A1%E3%83%A2/</link>
-    <description>Recent content in メモ on めがねをかけるんだ</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <copyright>Keiji ARIYAMA All rights reserved.</copyright>
-    <lastBuildDate>Sat, 21 Oct 2017 02:40:22 +0000</lastBuildDate><atom:link href="https://blog.keiji.dev/categories/%E3%83%A1%E3%83%A2/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>「ソーシャルアプリプラットフォーム構築技法」を２章まで読んだ</title>
-      <link>https://blog.keiji.dev/2017/10/yoichiro.html</link>
-      <pubDate>Sat, 21 Oct 2017 02:40:22 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2017/10/yoichiro.html</guid>
-      <description>&lt;p&gt;　田中洋一郎さんの「&lt;a href=&#34;https://www.amazon.co.jp/dp/4774193321/&#34;&gt;ソーシャルアプリプラットフォーム構築技法&lt;/a&gt;」の見本誌をいただきました。&lt;/p&gt;
-&lt;p&gt;　感想は全部読み終えてからと思ったのですが、かなり内容の濃い本なので全部読み終えるにはずいぶんかかりそうで、２章まで読み終えた段階でエントリにしておきます。&lt;/p&gt;
-&lt;iframe style=&#34;width:120px;height:240px;&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; src=&#34;//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&amp;#038;bc1=000000&amp;#038;IS2=1&amp;#038;bg1=FFFFFF&amp;#038;fc1=000000&amp;#038;lc1=0000FF&amp;#038;t=keijiariyama-22&amp;#038;o=9&amp;#038;p=8&amp;#038;l=as4&amp;#038;m=amazon&amp;#038;f=ifr&amp;#038;ref=as_ss_li_til&amp;#038;asins=4774193321&amp;#038;linkId=9624f1b0e164f799fbe511d2772ee2ee&#34;&gt;&lt;/iframe&gt;</description>
-    </item>
-    
-    <item>
-      <title>Anaconda3 for macでdlibがインストールできない</title>
-      <link>https://blog.keiji.dev/2017/02/install_failed_dlib_with_anaconda3-for-mac.html</link>
-      <pubDate>Mon, 06 Feb 2017 12:46:19 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2017/02/install_failed_dlib_with_anaconda3-for-mac.html</guid>
-      <description>&lt;ul&gt;
-&lt;li&gt;macOS Sierra – 10.12.3&lt;/li&gt;
-&lt;li&gt;Anaconda3 for OS X Python 3.6 version – 4.3.0&lt;/li&gt;
-&lt;li&gt;Boost – 1.63.0&lt;/li&gt;
-&lt;li&gt;dlib – 19.1.0&lt;/li&gt;
+	<channel>
+		<title>メモ on めがねをかけるんだ</title>
+		<link>https://blog.keiji.dev/categories/%E3%83%A1%E3%83%A2/</link>
+		<description>Recent content in メモ </description>
+		<generator>Hugo -- gohugo.io</generator>
+		
+  		<language>ja</language>
+		
+		<managingEditor>Page(/categories/メモ)</managingEditor>
+    	
+  		<lastBuildDate>Sat, 21 Oct 2017 02:40:22 +0000</lastBuildDate>
+		
+		<atom:link href="/categories/%E3%83%A1%E3%83%A2/" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>本当はおそろしい商業出版2020</title>
+			<link>https://blog.keiji.dev/2020/10/androidbook2020.html</link>
+			<pubDate>Sat, 31 Oct 2020 15:00:10 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2020/10/androidbook2020.html</guid>
+			<description>&lt;p&gt;　最近、「商業出版って本当にいいの？」みたいな言説を見かけるようになりました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;同人誌の商業化はいいぞ &lt;a href=&#34;https://note.com/oyakata2438/n/nc4a9f21b4289&#34;&gt;https://note.com/oyakata2438/n/nc4a9f21b4289&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;著者が出版契約で知るべき7つの項目 &lt;a href=&#34;https://note.com/techbookfest/n/nfdc47831072d&#34;&gt;https://note.com/techbookfest/n/nfdc47831072d&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;技術同人誌を、技術の泉シリーズで商業化する&lt;br /&gt; &lt;a href=&#34;https://zenn.dev/erukiti/articles/writing-commercial&#34;&gt;https://zenn.dev/erukiti/articles/writing-commercial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;商業出版にメリットはないのか？&lt;br /&gt; &lt;a href=&#34;https://note.com/oyakata2438/n/n8813602ce4f5&#34;&gt;https://note.com/oyakata2438/n/n8813602ce4f5&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;　MacBook Proを新規セットアップ中、&lt;code&gt;pip&lt;/code&gt;で&lt;code&gt;dlib&lt;/code&gt;をインストールするときにエラーが発生した。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>壊れかけのXperia Z3 Tablet Compactに止めを刺した話</title>
-      <link>https://blog.keiji.dev/2016/04/rip_my_xperia_z3_tablet_compact.html</link>
-      <pubDate>Fri, 01 Apr 2016 07:20:15 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2016/04/rip_my_xperia_z3_tablet_compact.html</guid>
-      <description>&lt;p&gt;　昨年の後半のことでしょうか。Xperia Z3 Tablet Compactを落としてしまい、前面ガラスが破損してしまいました。&lt;/p&gt;
-&lt;div id=&#34;attachment_1155&#34; style=&#34;max-width: 2170px&#34; class=&#34;wp-caption aligncenter&#34;&gt;
-  &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_201258.jpg&#34; rel=&#34;attachment wp-att-1155&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2016/04/IMG_20160330_201258.jpg&#34; alt=&#34;赤枠で囲った部分が破損箇所&#34; width=&#34;50%&#34; height=&#34;50%&#34; class=&#34;size-full wp-image-1155&#34; /&gt;&lt;/a&gt;
-  &lt;p class=&#34;wp-caption-text&#34;&gt;
-    赤枠で囲った部分が破損箇所
-  &lt;/p&gt;
-&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Circle CIで新しいバージョンのbuildToolsが見えなかった話</title>
-      <link>https://blog.keiji.dev/2015/11/update_build_tools_version.html</link>
-      <pubDate>Wed, 25 Nov 2015 08:34:21 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2015/11/update_build_tools_version.html</guid>
-      <description>Circle CIでビルドしているプロジェクトのBuildToolsのバージョンを23.0.2にしたところ、android update sdkに、「そんなバージョン</description>
-    </item>
-    
-    <item>
-      <title>Let’s EncryptでHTTPS化したけれど</title>
-      <link>https://blog.keiji.dev/2015/11/lets-encrypt.html</link>
-      <pubDate>Thu, 12 Nov 2015 05:50:15 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2015/11/lets-encrypt.html</guid>
-      <description>Let’s Encryptのクローズドベータ。このドメインでもインビテーションをもらっていたのでさっそくHTTPS化したわけですが、HTTPS</description>
-    </item>
-    
-    <item>
-      <title>Moto 360 のディスプレイ焼き付きを防ぐアプリを作った話</title>
-      <link>https://blog.keiji.dev/2014/09/prevent_lcd_ghosting_for_moto360.html</link>
-      <pubDate>Wed, 24 Sep 2014 13:43:47 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2014/09/prevent_lcd_ghosting_for_moto360.html</guid>
-      <description>&lt;p&gt;Google I/Oのお土産として配布されたMotorolaのAndroid Wear端末「Moto 360」が、先日ようやく届いたんですが。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605.jpg&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-300x198.jpg&#34; alt=&#34;Moto 360&#34; width=&#34;300&#34; height=&#34;198&#34; class=&#34;aligncenter size-medium wp-image-441&#34; srcset=&#34;https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-300x198.jpg 300w, https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-1024x678.jpg 1024w, https://blog.keiji.dev/wp-content/uploads/2014/09/R0002605-624x413.jpg 624w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;このMoto 360、充電中に必ず時計表示になるんだけど、そのせいで液晶が焼き付くという不具合が起きているらしいです。&lt;/p&gt;
-&lt;p&gt;一部のMoto 360で充電中画像のディスプレイへの焼き付きが発生している模様&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;http://juggly.cn/archives/128552.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://juggly.cn/archives/128552.html&#34;&gt;http://juggly.cn/archives/128552.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;「充電中の画面が焼き付くなら、電源を落として充電すれば良いじゃない？」と、思ったのですが、電源OFFの状態でも充電台に置くと自動的に起動して、問題になっている充電中の表示をするという鬼のような仕様です。&lt;/p&gt;
-&lt;p&gt;しょうが無いので、充電中に強制的に表示をOFF（黒画面）にするというアプリを作りました。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Fragment使う人に最低限、知っておいて欲しいこと</title>
-      <link>https://blog.keiji.dev/2014/02/about_fragment.html</link>
-      <pubDate>Tue, 04 Feb 2014 09:32:17 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2014/02/about_fragment.html</guid>
-      <description>&lt;hr&gt;
-&lt;p&gt;※ 2015/12/24追記: この記事は古くなっています。最新の情報は&lt;a href=&#34;https://blog.keiji.dev/2015/12/mincomi-adventcalendar-24.html&#34;&gt;こちら&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;code&gt;Fragment&lt;/code&gt;は、使いこなすと深い概念です。僕自身、使いこなせているとは言えません。&lt;/p&gt;
-&lt;p&gt;ただ、昔なら&lt;code&gt;Activity&lt;/code&gt;だけで乗り切れていたのですが、最近ではAndroidのプロジェクトを作成すると標準で&lt;code&gt;Fragment&lt;/code&gt;を使ったコードが生成されますし、避けて通ることは難しくなっています。&lt;/p&gt;
-&lt;p&gt;そしてやっかいなことに、&lt;code&gt;Fragment&lt;/code&gt;は使いこなすまで恩恵がわかりにくいばかりか、ちょっと変な使い方をすると保守性が急降下します。&lt;/p&gt;
-&lt;p&gt;「&lt;code&gt;Fragment&lt;/code&gt;よくわからないな」と、僕と同じ考えをお持ちの皆さん、&lt;code&gt;Fragment&lt;/code&gt;を使いこなせるようになるまでの間は、最低限、無難な使い方をしましょう。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>TypeSquareのクラウドフォント</title>
-      <link>https://blog.keiji.dev/2013/05/typesquare.html</link>
-      <pubDate>Thu, 09 May 2013 06:26:13 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2013/05/typesquare.html</guid>
-      <description>&lt;p&gt;モリサワ社が提供している&lt;a href=&#34;https://typesquare.com&#34;&gt;クラウドフォント&lt;/a&gt;を導入しました。今、皆さんが見ているこの文字は、クラウドフォントが出力した字体です。&lt;/p&gt;
-&lt;p&gt;クラウドフォントを導入するきっかけは&lt;a href=&#34;http://www.c-lis.co.jp&#34;&gt;会社のサイト&lt;/a&gt;。何年か前に作成して以来、ほとんど放置していたのだけど、Google I/Oの前に思い切って更新することにしました。&lt;/p&gt;
-&lt;p&gt;新しいサイトのデザインは、標準テンプレートのデザインほぼそのままで、内容も最小限です。&lt;/p&gt;
-&lt;p&gt;あまりにも貧相なので、何か出来ないものかと考えていたところに、TypeSquareが&lt;a href=&#34;http://typesquare.com/news/view/VEOS0kf0fcE=&#34;&gt;クラウドフォント0円キャンペーン&lt;/a&gt;をしていたので、渡りに船とばかりに申し込んだというわけです。&lt;/p&gt;
-&lt;p&gt;このクラウドフォント、今回初めて導入してみたのですが、想像以上に簡単だったので、利用手順を紹介します。面白そうと思ったら是非使ってみて下さい。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>VPNの”切断中”が終わらない</title>
-      <link>https://blog.keiji.dev/2013/02/forever-vpn-disconnecting.html</link>
-      <pubDate>Mon, 18 Feb 2013 14:55:39 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2013/02/forever-vpn-disconnecting.html</guid>
-      <description>MacのVPN接続で、切断時にいつまでも”Disconnecting”が表示され続ける現象の解決策。 sudo killall -9 pppd Macでトラブルに遭遇したら、と</description>
-    </item>
-    
-    <item>
-      <title>完結: Adobe Creative Cloud 年間プラン解約 最短ルート攻略</title>
-      <link>https://blog.keiji.dev/2013/02/adobe-creative-cloud_8.html</link>
-      <pubDate>Fri, 08 Feb 2013 10:07:00 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2013/02/adobe-creative-cloud_8.html</guid>
-      <description>&lt;p&gt;前回、&lt;a href=&#34;https://blog.keiji.dev/2013/02/adobe-creative-cloud.html&#34; target=&#34;_blank&#34;&gt;Adobe Creative Cloud 年間プラン解約 最短ルート攻略&lt;/a&gt;を公開した直後に、アドビカスタマーサポートからメールが届きました。&lt;/p&gt;
-&lt;blockquote style=&#34;border: solid 1px #333333;&#34;&gt;
-  &lt;div style=&#34;text-align: left;&#34;&gt;
-    &lt;span style=&#34;font-size: xx-small;&#34;&gt;アドビカスタマーサポート&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div style=&#34;text-align: left;&#34;&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;span style=&#34;font-size: xx-small;&#34;&gt;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;　担当者からの回答　&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8211;&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;div&gt;
-    &lt;span style=&#34;font-size: xx-small;&#34;&gt;日頃より、弊社製品をご利用くださいまして誠にありがとうございます。&lt;/span&gt;
-  &lt;/div&gt;
-  &lt;p&gt;
-    &lt;span style=&#34;font-size: xx-small;&#34;&gt;ご依頼いただいた返金につきまして、以下にご案内いたします。&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; このたびご依頼いただいた注文番号は、「xxxxxxxxxxxxxJP」の1月分の&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; お支払いの注文番号となります。&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; 大変恐れ入りますが、ご契約開始より30日以上経過しているご契約に&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; つきましては、返金対応ができかねます。&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; なにとぞ、ご了承くださいますようお願いいたします。&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; なお、解約は可能でございますが、「年間プラン」のため、違約金として&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; 残り期間に課される50％のご請求が発生いたします。&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; 【サブスクリプション利用条件】&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; &lt;a href=&#34;http://www.adobe.com/jp/misc/subscription_terms.html&#34;&gt;http://www.adobe.com/jp/misc/subscription_terms.html&lt;/a&gt;&lt;/span&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;span style=&#34;font-size: xx-small;&#34;&gt;上記をご確認いただいたうえで解約を希望される場合は、下記の窓口まで&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; お問い合わせくださいますようお願いいたします。&lt;/span&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;span style=&#34;font-size: xx-small;&#34;&gt;＜アドビ カスタマーサービス＞&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; TEL&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; 営業時間 9:30～20:00（土・日・祝日および弊社指定休日を除く）&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; お手数をおかけいたしますが、なにとぞよろしくお願いいたします。&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; アドビシステムズ&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; カスタマーサポートポータル&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; カスタマーサービス Web ケース担当&lt;/span&gt;&lt;br /&gt; &lt;span style=&#34;font-size: xx-small;&#34;&gt; &amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&lt;/span&gt;
-  &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-&lt;/div&gt;
-&lt;p style=&#34;text-align: center;&#34;&gt;
-  &lt;strong&gt;&lt;span style=&#34;font-size: large;&#34;&gt;結局、電話かい！！ &lt;/span&gt;&lt;/strong&gt;
-&lt;/p&gt;
-&lt;p&gt;と、さすがにツッコミを入れずにはいられませんでした。&lt;/p&gt;
-&lt;p&gt;しかし幸い、８時を過ぎていなかったので電話をして、今回の件について、いろいろ聞いてみました。&lt;/p&gt;
-&lt;div&gt;
-  以下、会話内容の要約です。
-&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>Adobe Creative Cloud 年間プラン解約 最短ルート攻略</title>
-      <link>https://blog.keiji.dev/2013/02/adobe-creative-cloud.html</link>
-      <pubDate>Fri, 08 Feb 2013 08:28:00 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2013/02/adobe-creative-cloud.html</guid>
-      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
-&lt;p&gt;昨年５月から”Adobe Creative Cloud”を契約していたのですが、月に１，２回しか使うこともなく９ヶ月が過ぎようとしています。&lt;/p&gt;
-&lt;p&gt;使っているのは、PhotoshopとIllustrator、あとAdobe Acrobatなんですが、使い道と言えば、Photoshopは、せいぜい&lt;strong&gt;画像にモザイクをかける程度&lt;/strong&gt;です。&lt;/p&gt;
-&lt;p&gt;Illustratorは、Macのトラックパッドではパスを書きづらいので次第に使わなくなりました。Acrobatは、最近はReaderでも注釈がつけられるようになったので、そちらで用が足りています。&lt;/p&gt;
-&lt;p&gt;正直、月額５０００円を支払うだけの価値はないなぁと思っていたので、思いたって解約することにしました。&lt;/p&gt;
-&lt;p&gt;年間契約なので、残りの期間の半額をキャンセル料として支払うことになります。僕の場合は残り４ヶ月なので、１月５０００円、４月分の半額で１万円です。&lt;/p&gt;
-&lt;p&gt;少々もったいないですが、このまま忘れてしまって次の一年に入ってしまうと、１１ヶ月分のキャンセル料を払うことにもなりかねません。&lt;/p&gt;
-&lt;p&gt;以上のことから、今回、解約に踏み切ったのですが、想像以上に手間取りました。&lt;/p&gt;
-&lt;p&gt;よくGREEなどの退会が難しいという話がありますが、この”Adobe Creative Cloud”も同様で、迷路のようなページ構成で、いつまで経っても解約手続きに辿り着けません。&lt;/p&gt;
-&lt;p&gt;そもそも「キャンセル」や「解約」という用語が、ページ中になく、必要な情報が十分に提供されていないように思います。&lt;/p&gt;
-&lt;p&gt;それでもなんとか、紆余曲折を経て、解約にこぎつけた（？）ので、その道筋を記録に残しておきます。&lt;/p&gt;
-&lt;p&gt;そろそろ”Adobe Creative Cloud”登場から一年、年間契約している人には更新時期がやってきます。&lt;/p&gt;
-&lt;p&gt;この記録が、僕の後に続く人たちの道標になれば幸いです。&lt;/p&gt;
-&lt;p style=&#34;text-align: center;&#34;&gt;
-  &lt;del&gt;&amp;#8220;Adobe Creative Cloud 年間プラン解約 最短ルート&amp;#8221;は一番下へ&lt;/del&gt;
-&lt;/p&gt;
-&lt;p style=&#34;text-align: center;&#34;&gt;
-  &lt;span style=&#34;font-size: large;&#34;&gt;&lt;strong&gt;&lt;a href=&#34;https://blog.keiji.dev/2013/02/adobe-creative-cloud_8.html&#34; target=&#34;_blank&#34;&gt;この記事には続報があります&lt;/a&gt;&lt;/strong&gt;&lt;/span&gt;
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Archive Utilityがフリーズ</title>
-      <link>https://blog.keiji.dev/2013/02/archive-utility.html</link>
-      <pubDate>Wed, 06 Feb 2013 07:55:00 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2013/02/archive-utility.html</guid>
-      <description>Macのアーカイブユーティリティで、ZIPを展開しようとすると無応答になってしまう現象の解決策。 sudo killall -KILL appleeventsd 月に何度も遭遇する不具合ではないけど</description>
-    </item>
-    
-    <item>
-      <title>DE0メモ – シミュレーター(ModelSim)</title>
-      <link>https://blog.keiji.dev/2013/01/de0simulator.html</link>
-      <pubDate>Tue, 22 Jan 2013 16:31:00 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2013/01/de0simulator.html</guid>
-      <description>&lt;p&gt;前回の『&lt;a href=&#34;https://blog.keiji.dev/2013/01/de0.html&#34; target=&#34;_blank&#34;&gt;DE0メモ&lt;/a&gt;』で、&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;その他、シミュレータなどでいろいろ検証したりもあるようですが、僕はまだその段階にありません。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;と、書いたのですが、&lt;/p&gt;
-&lt;p&gt;**「普通はシミュレータの方が先だよ」**との意見を戴きました。&lt;/p&gt;
-&lt;p&gt;また、DE0を使って実験をしていると、なんだかよくわからない挙動をするときがあるんですね。そういう時に中をひょいと覗けないのは、思いのほか辛いものです。&lt;/p&gt;
-&lt;p&gt;さらに、DE0を持ち歩いているわけではないので、ちょっと試したいときにはシミュレーターが使えれば、ある程度の実験は出来るでしょう。&lt;/p&gt;
-&lt;p&gt;そんなわけで、使ってみました。シミュレーター。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>AOSPで１度投稿したパッチを修正する（nobranch編）</title>
-      <link>https://blog.keiji.dev/2013/01/aospnobranch.html</link>
-      <pubDate>Tue, 15 Jan 2013 13:47:00 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2013/01/aospnobranch.html</guid>
-      <description>&lt;p&gt;この連休で&lt;a href=&#34;https://android-review.googlesource.com/#/&#34; target=&#34;_blank&#34;&gt;Android Open Source Project&lt;/a&gt;にいくつかパッチを投稿したのですが、そのときに、ちょっと詰まったのでメモ。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>DE0メモ</title>
-      <link>https://blog.keiji.dev/2013/01/de0.html</link>
-      <pubDate>Tue, 08 Jan 2013 10:16:00 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2013/01/de0.html</guid>
-      <description>&lt;div&gt;
-  FPGAボードのDE0をちょこちょこ触ったメモ。
-&lt;/div&gt;
-&lt;div&gt;
-&lt;/div&gt;
-&lt;div&gt;
-  &lt;a href=&#34;https://blog.keiji.dev/wp-content/uploads/2013/01/734246_10200296379321712_433891549_n.jpg&#34;&gt;&lt;img class=&#34;aligncenter  wp-image-91&#34; alt=&#34;734246_10200296379321712_433891549_n&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2013/01/734246_10200296379321712_433891549_n.jpg&#34; width=&#34;403&#34; height=&#34;302&#34; /&gt;&lt;/a&gt;
-&lt;/div&gt;</description>
-    </item>
-    
-    <item>
-      <title>正月に読んだ本とか</title>
-      <link>https://blog.keiji.dev/2013/01/blog-post_5212.html</link>
-      <pubDate>Fri, 04 Jan 2013 18:19:00 +0000</pubDate>
-      
-      <guid>https://blog.keiji.dev/2013/01/blog-post_5212.html</guid>
-      <description>&lt;p&gt;正月の３日間、本を読んだり、DVDばかり見て過ごしたまとめ。&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;　上から下に時系列で記事が並んでいます。後半2つ（ツリー下）は、アンサーエントリーになっているとか（「同人誌の商業化はいいぞ」と「著者が出版契約で知るべき7つの項目」のエントリーにはリファレンスがなく、同じ時期に出た別々のエントリーと言う認識）。&lt;/p&gt;
+&lt;p&gt;　技術書の商業出版に関してはずいぶん前に「&lt;a href=&#34;https://bookwalker.jp/dea8b77689-0a5b-4bd5-a0ba-c4c73636bc8b/&#34;&gt;本当はおそろしい商業出版!?&lt;/a&gt;」という同人誌にまとめたことがあり「書きたいことはあの本にみんな書いた」感があったのですが、ここに来て盛り上がっていることを知り、改めて筆を取った次第です。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</title>
+			<link>https://blog.keiji.dev/2020/08/mangaview.html</link>
+			<pubDate>Tue, 25 Aug 2020 15:00:10 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2020/08/mangaview.html</guid>
+			<description>7月末でメインにしていた仕事の一角が終了したので、8月以降はそれなりに暇になりました。 次の仕事を探そうにも新型コロナウイルスでリモートワーク</description>
+		</item>
+      	
+		<item>
+			<title>ELEGOO MARSの出力精度の改善</title>
+			<link>https://blog.keiji.dev/2020/01/elegoo-mars_presision.html</link>
+			<pubDate>Sat, 04 Jan 2020 18:00:10 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2020/01/elegoo-mars_presision.html</guid>
+			<description>&lt;p&gt;　あけましておめでとうございます。御社の原稿、いまがんばって書いてます！&lt;/p&gt;
+&lt;p&gt;　さて、昨年末のことになりますが、光造形３Dプリンター「ELEGOO MARS」を購入しました。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/mars/mars_z-axis-12.jpg&#34; alt=&#34;ELEGOO MARS&#34;&gt;&lt;/p&gt;
+&lt;p&gt;　ぼくは物作りの仕事をしているわけではないのですが、前々から3Dプリンターには憧れていて、ちょっと壊れた部品を自分でモデリングして出力できたら格好いいだろうなとか考えていました（Daddy Cool!）。&lt;/p&gt;
+&lt;p&gt;「ELEGOO MARS」は、ぼくの手に入れたはじめての3Dプリンタです。&lt;/p&gt;
+&lt;p&gt;「ELEGOO MARS」を買ってからは&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1201721035004841985&#34;&gt;サンプルデータの出力に失敗したり&lt;/a&gt;、&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1201722040887234560&#34;&gt;出力に失敗してFEPフィルムを傷めてしまったり&lt;/a&gt;、&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1202101585280548864&#34;&gt;サンプルデータの出力に成功したり&lt;/a&gt;、&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1208651347089690624&#34;&gt;FUSION 360でモデリングした漏斗をひたすら出力したり&lt;/a&gt;していたのですが、いくつか出力していくうちに、出力されるものの高さが、設計よりも低くなるとこに&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1206886901094875142&#34;&gt;気づきました&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;　出力した造形物を観察すると、だいたいボトムレイヤー（ベースに張り付けるために露光時間を長くする強固なレイヤー）より上の数層が広がったり潰れたりして、高さが失われているようです。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/mars/mars_z-axis-8.jpg&#34; alt=&#34;ELEGOO MARS&#34;&gt;&lt;/p&gt;
+&lt;p&gt;　一番お手軽な解決策はスライサーで出力物を持ち上げてサポートを付けることで潰れる部分に出力物が重ならないようにすることでしょう。
+実際、Twitterでもクリエイト工房（&lt;a href=&#34;https://twitter.com/create_works&#34;&gt;@create_works&lt;/a&gt;）さんから同様の&lt;a href=&#34;https://twitter.com/create_works/status/1207265472833474560&#34;&gt;アドバイス&lt;/a&gt;をもらいました。&lt;/p&gt;
+&lt;p&gt;　そうは言っても、3Dプリンターをこれと言った目的もなく買ってしまった僕です。手段を目的にするのは当然の流れです。
+解決のためにいろいろやって、ようやくある程度の精度を出せるようになったので、同じ現象で悩んでいる人のためにブログに知見をまとめておきます。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>技術書典6でMLOps本「巡りあえないConcourse」を頒布します</title>
+			<link>https://blog.keiji.dev/2019/04/techbookfest6.html</link>
+			<pubDate>Fri, 12 Apr 2019 10:00:10 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2019/04/techbookfest6.html</guid>
+			<description>&lt;p&gt;　4月14日、池袋サンシャインシティにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf06/circle/38380004&#34;&gt;技術書典6&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。&lt;/p&gt;
+&lt;p&gt;　「めがねをかけるんだ」では、TensorFlowを使って3年間ひとりで取り組んできた「MLOps」を題材にした冊子を頒布いたします。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/concourse.png&#34; alt=&#34;tfbook6&#34; title=&#34;巡りあえないConcourse&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;巡りあえないConcourse&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;B5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;52p（本文墨刷）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1,000円&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+		</item>
+      	
+		<item>
+			<title>Gehirn RS2 Plusに引っ越しした</title>
+			<link>https://blog.keiji.dev/2018/12/move_to_gehirn_rs2_plus.html</link>
+			<pubDate>Mon, 31 Dec 2018 00:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2018/12/move_to_gehirn_rs2_plus.html</guid>
+			<description>&lt;p&gt;　タイトルの通り、このブログを含めたいくつかのサイトを&lt;a href=&#34;https://www.gehirn.jp/rs2plus/&#34;&gt;Gehirn RS2 Plus&lt;/a&gt;に引っ越しました。同時にStatic Site Generator（静的サイトジェネレーター) &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;を使って静的サイト化しています。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>いまNN API（TensorFlow Lite）は使えるのか</title>
+			<link>https://blog.keiji.dev/2018/12/tensorflow-advent_calendar.html</link>
+			<pubDate>Mon, 24 Dec 2018 05:30:34 +0000</pubDate>
+			<guid>https://blog.keiji.dev/2018/12/tensorflow-advent_calendar.html</guid>
+			<description>&lt;p&gt;　この記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2018/tensorflow&#34;&gt;TensorFlow Advent Calendar 2018&lt;/a&gt;の24日目の記事です。&lt;/p&gt;
+&lt;p&gt;　23日目の記事は、AtuNukaさんによる「&lt;a href=&#34;https://qiita.com/AtuNuka/items/6966efeddceb96012819&#34;&gt;Design Documentから見たTensorFlow 2.0の変更点&lt;/a&gt;」でした。&lt;/p&gt;
+&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;　あいかわらず趣味でTensorFlowを使っていて、最近はAndroidで動作させるTensorFlow Liteまわりを重点的に取り組んでいます。&lt;/p&gt;
+&lt;p&gt;　アドベントカレンダーの22日目の記事、足立氏（カブク社）による「&lt;a href=&#34;https://www.kabuku.co.jp/developers/how-is-tflite-useful&#34;&gt;いまMLKitカスタムモデル（TF Lite）は使えるのか&lt;/a&gt;」に書かれているように、TensorFlowのモデルをAndroid端末で動かすことに関しては「使える」レベルになってきていると筆者も思います。&lt;/p&gt;
+&lt;p&gt;　そこで今日は、TensorFlow LiteのモデルをAndroidアプリに組み込んで動作させるとき、NN APIを使うように設定すると「動かない」という話をします。&lt;/p&gt;
+&lt;p&gt;「使えるレベルになってきている」と、言った直後にこんなことを言ってごめんね。&lt;/p&gt;
+&lt;p&gt;　でも、本当です。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>技術書典4に参加してきました</title>
+			<link>https://blog.keiji.dev/2018/04/look_back_techbookfest4.html</link>
+			<pubDate>Thu, 26 Apr 2018 05:11:06 +0000</pubDate>
+			<guid>https://blog.keiji.dev/2018/04/look_back_techbookfest4.html</guid>
+			<description>&lt;p&gt;　4月22日、秋葉原UDX アキバ・スクエアにて開催された「&lt;a href=&#34;https://techbookfest.org/event/tbf04/circle/21060002&#34; target=&#34;_blank&#34;&gt;技術書典4&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加してきました。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2018/04/IMG_20180422_103336.jpg&#34; alt=&#34;&#34; width=&#34;390&#34; height=&#34;520&#34; class=&#34;aligncenter size-full wp-image-1696&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;　この記事は「技術書典4」の振り返りの記事になります。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>技術書典4で「本当はおそろしい商業出版！？」を頒布します</title>
+			<link>https://blog.keiji.dev/2018/04/techbookfest4-2.html</link>
+			<pubDate>Wed, 18 Apr 2018 10:55:23 +0000</pubDate>
+			<guid>https://blog.keiji.dev/2018/04/techbookfest4-2.html</guid>
+			<description>&lt;p&gt;4月22日、秋葉原UDX アキバ・スクエアにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf04/circle/21060002&#34; target=&#34;_blank&#34;&gt;技術書典4&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。&lt;/p&gt;
+&lt;p&gt;「めがねをかけるんだ」では、筆者が技術書の商業出版に関わる中で経験した様々なエピソードを通じて、知見や反省点をまとめた本「本当はおそろしい商業出版！？」を頒布します。&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#34;aligncenter size-full&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2018/04/shogyo.png&#34; alt=&#34;tfbook4&#34;  width=&#34;50%&#34; height=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;本当はおそろしい商業出版！？&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;B6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;44p（本文墨刷）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1,000円&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+		</item>
+      	
+		<item>
+			<title>技術書典4でML Ops（TensorFlow）の本を頒布します</title>
+			<link>https://blog.keiji.dev/2018/04/techbookfest4-1.html</link>
+			<pubDate>Wed, 18 Apr 2018 10:35:10 +0000</pubDate>
+			<guid>https://blog.keiji.dev/2018/04/techbookfest4-1.html</guid>
+			<description>&lt;p&gt;4月22日、秋葉原UDX アキバ・スクエアにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf04/circle/21060002&#34; target=&#34;_blank&#34;&gt;技術書典4&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。&lt;/p&gt;
+&lt;p&gt;「めがねをかけるんだ」では、TensorFlowを使って2年間ひとりで取り組んできた「ML Ops」の活動記録を題材にした冊子を頒布いたします。&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#34;aligncenter size-full&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2018/04/76e3081c96d22431ff3554bf7affdafe.jpg&#34; alt=&#34;tfbook4&#34;  width=&#34;50%&#34; height=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;茶色いトイプーは食べ物じゃないっ！&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;B5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;52p（本文墨刷）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1,000円&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+		</item>
+      	
+		<item>
+			<title>機械学習のモデルを試せるサイトを作った話</title>
+			<link>https://blog.keiji.dev/2019/01/meganeco_playground.html</link>
+			<pubDate>Thu, 11 Jan 2018 00:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2019/01/meganeco_playground.html</guid>
+			<description>三年前から個人的に構築している趣味の画像収集システム「MeganeCo」で利用している機械学習モデルを試せるサイトを公開しました。 MeganeCo Playground 画像を</description>
+		</item>
+      	
+	</channel>
 </rss>
