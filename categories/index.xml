@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Keiji ARIYAMA All rights reserved.</copyright>
-    <lastBuildDate>Tue, 25 Aug 2020 15:00:10 +0900</lastBuildDate><atom:link href="https://blog.keiji.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Oct 2020 15:00:10 +0900</lastBuildDate><atom:link href="https://blog.keiji.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>執筆</title>
+      <link>https://blog.keiji.dev/categories/%E5%9F%B7%E7%AD%86/</link>
+      <pubDate>Sat, 31 Oct 2020 15:00:10 +0900</pubDate>
+      
+      <guid>https://blog.keiji.dev/categories/%E5%9F%B7%E7%AD%86/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Android</title>
       <link>https://blog.keiji.dev/categories/android/</link>

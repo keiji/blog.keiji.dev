@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Keiji ARIYAMA All rights reserved.</copyright>
-    <lastBuildDate>Tue, 25 Aug 2020 15:00:10 +0900</lastBuildDate><atom:link href="https://blog.keiji.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Oct 2020 15:00:10 +0900</lastBuildDate><atom:link href="https://blog.keiji.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>本当はおそろしい商業出版2020</title>
+      <link>https://blog.keiji.dev/2020/10/androidbook2020.html</link>
+      <pubDate>Sat, 31 Oct 2020 15:00:10 +0900</pubDate>
+      
+      <guid>https://blog.keiji.dev/2020/10/androidbook2020.html</guid>
+      <description>&lt;p&gt;　最近、「商業出版って本当にいいの？」みたいな言説を見かけるようになりました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;同人誌の商業化はいいぞ &lt;a href=&#34;https://note.com/oyakata2438/n/nc4a9f21b4289&#34;&gt;https://note.com/oyakata2438/n/nc4a9f21b4289&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;著者が出版契約で知るべき7つの項目 &lt;a href=&#34;https://note.com/techbookfest/n/nfdc47831072d&#34;&gt;https://note.com/techbookfest/n/nfdc47831072d&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;技術同人誌を、技術の泉シリーズで商業化する&lt;br /&gt; &lt;a href=&#34;https://zenn.dev/erukiti/articles/writing-commercial&#34;&gt;https://zenn.dev/erukiti/articles/writing-commercial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;商業出版にメリットはないのか？&lt;br /&gt; &lt;a href=&#34;https://note.com/oyakata2438/n/n8813602ce4f5&#34;&gt;https://note.com/oyakata2438/n/n8813602ce4f5&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;　上から下に時系列で記事が並んでいます。後半2つ（ツリー下）は、アンサーエントリーになっているとか（「同人誌の商業化はいいぞ」と「著者が出版契約で知るべき7つの項目」のエントリーにはリファレンスがなく、同じ時期に出た別々のエントリーと言う認識）。&lt;/p&gt;
+&lt;p&gt;　技術書の商業出版に関してはずいぶん前に「&lt;a href=&#34;https://bookwalker.jp/dea8b77689-0a5b-4bd5-a0ba-c4c73636bc8b/&#34;&gt;本当はおそろしい商業出版!?&lt;/a&gt;」という同人誌にまとめたことがあり「書きたいことはあの本にみんな書いた」感があったのですが、ここに来て盛り上がっていることを知り、改めて筆を取った次第です。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</title>
       <link>https://blog.keiji.dev/2020/08/mangaview.html</link>
