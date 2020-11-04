@@ -59,9 +59,9 @@ categories:
 　管理画面へのサインインに2FA（Two-factor authentication: 2要素認証）が必須だったり、データベースのパスワードが表示されるのは作成時の一度きり（変更のみ可）だったり。
 「安全に運用するならこうあるべき」というメッセージが感じられて、使っていて勉強になります。
 
-{{% figure src="images/gehirn-signin.png" %}}
+{{% figure src="/images/gehirn-signin.png" %}}
 
-{{% figure src="images/gehirn-db_password.png" %}}
+{{% figure src="/images/gehirn-db_password.png" %}}
 
 
 ## 苦労した点
@@ -76,18 +76,18 @@ categories:
 
 　もともとRS2 Plusの標準設定では、サーバー証明書は管理画面に入力する必要があります。サーバーで受けとってもローカルで受けとっても、その先で必要な操作（管理画面への入力）は同じです。
 
-{{% figure src="images/rs2_plus_tls_certificate_file.png" %}}
+{{% figure src="/images/rs2_plus_tls_certificate_file.png" %}}
 
 　とは言え、管理画面への入力作業は自動化が難しいので、３ヶ月毎の`renew`に一抹の不安が残ります。
 
 　Let's Encryptのサポートについては、11月に大阪で開催された[イベント](https://connpass.com/event/105611/)で質問したところ「ゲヒルン株式会社は認証局でもあるので、ゲヒルンが証明書を発行していくことも考えている」という話があったので、今後に期待しています。
 
-{{% figure src="images/gehirn_ca.png" %}}
+{{% figure src="/images/gehirn_ca.png" %}}
 
 ### 8265 バリデーションエラー
 　Let's Encryptから取得した証明書を管理画面に入力すると、確定時に「 **8265 バリデーションエラー** 」と表示されて設定できない現象に遭遇しました。
 
-{{% figure src="images/8265_validation_error.png" %}}
+{{% figure src="/images/8265_validation_error.png" %}}
 
 　結論から言うと、Let's Encryptで取得した秘密鍵は、そのままではRS2 Plusの管理画面に貼り付けることができません。次のコマンドで変換する必要があります。
 
