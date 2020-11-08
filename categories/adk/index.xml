@@ -18,7 +18,7 @@
 			<link>https://blog.keiji.dev/2020/11/mangaview-now-stable.html</link>
 			<pubDate>Sun, 08 Nov 2020 15:00:10 +0900</pubDate>
 			<guid>https://blog.keiji.dev/2020/11/mangaview-now-stable.html</guid>
-			<description>&lt;p&gt;　&lt;a href=&#34;https://blog.keiji.dev/2020/08/mangaview.html&#34;&gt;今年の夏から作っていた&lt;/a&gt;漫画ビューアー用のカスタムビュー「MangaView」、ついに1.0.0リリースすることができました。&lt;/p&gt;
+			<description>&lt;p&gt;　&lt;a href=&#34;https://blog.keiji.dev/2020/08/mangaview.html&#34;&gt;今年の夏から作っていた&lt;/a&gt;漫画ビューアー用のカスタムビュー「MangaView」、ついに安定版となる1.0.0をリリースすることができました。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/keiji/mangaview&#34;&gt;https://github.com/keiji/mangaview&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;　これまでAndroidアプリはいくつもGoogle Playで公開してきたし、ライブラリを作る仕事はいくつも手がけてきたけれど、公開するライブラリを手がけたのははじめて。パッケージングからBintrayでの配信、jcenterでの公開まで、とても良い勉強になったと思います。&lt;/p&gt;</description>
 		</item>
