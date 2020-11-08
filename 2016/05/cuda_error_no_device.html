@@ -27,7 +27,17 @@
 
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.78.1" />
+<meta name="generator" content="Hugo 0.78.1" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="TensorFlowでGPUが使えない"/>
+<meta name="twitter:description" content="あわせて読みたい
+
+TensorFlow on DockerでGPUを使えるようにする方法 | 株式会社カブク
+NVIDIA Dockerで簡単にGPU対応のTensorFlow入りコンテナを作る方法 | muo-notes
+
+概要
+　GPUマシンでTensorFlowを実行する際、CUDAもcuDNNも正常にセットアップできているのに、TensorFlowがGPUを認識しない（CUDA_ERROR_NO_DEVICEやNo GPU devices available on machine.が表示される）場合、正しいディスプレイカード・ドライバがインストールされていない可能性があります。
+　筆者の環境では、既存のドライバーをアンインストール（sudo apt-get remove &ndash;purge nvidia*）して、NVIDIAのサイトからドライバーをダウンロード・インストールすることでGPUを認識するようになりました。"/>
+
   </head>
   <body>
     

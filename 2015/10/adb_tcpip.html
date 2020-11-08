@@ -27,7 +27,18 @@
 
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.78.1" />
+<meta name="generator" content="Hugo 0.78.1" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Nexus 5Xが届いた今こそ adb tcpip が見直されるべき"/>
+<meta name="twitter:description" content="今朝、Nexus 5Xが届きました。指紋センサー搭載の憎いやつです。
+
+で、このNexus 5X。接続端子がUSB Type Cなんです（Nexus 6Pもですが）。
+つまり、これまで使っていたMicro USBケーブルは使えません。
+さらにNexus 5Xの場合、Type Cのケーブルしか同梱されていないのでAmazonで事前にType C-Aのケーブルを購入したりしていたわけです。
+そうは言ってもUSB Type Cは、まだまだ特殊なケーブル。何本も持ち歩くわけにはいきません。
+そこで昔懐かしのネットワーク経由のadb接続をすることにしました。
+ネットワーク経由で接続すれば、端末にUSBケーブルを繋ぐのはデバッグを始めるタイミングに限定できるのでいちいち取り出す必要がなくなります。また、複数人数で開発するときにケーブルを何本も用意しなくてもすみます（もちろん再起動したら同じ作業をする必要がありますが……）。
+ハッカソンなどのイベントでケーブルを忘れたときにも便利ですね！"/>
+
   </head>
   <body>
     
