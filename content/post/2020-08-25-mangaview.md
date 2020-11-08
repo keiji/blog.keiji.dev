@@ -4,12 +4,30 @@ author: Keiji Ariyama
 type: post
 date: 2020-08-25T15:00:10+09:00
 url: /2020/08/mangaview.html
-thumbnail: "images/mangaview1.gif"
+images:
+- /images/mangaview/mangaview1.gif
+description: 漫画ビューアー用のカスタムビュー「MangaView」をオープンソースで公開しました。
 categories:
   - 習作
   - Android
 
 ---
+
+　漫画ビューアー用のカスタムビュー「MangaView」をオープンソースで公開しました。
+
+ * MangaView - An ImageView for reading manga(comics) for Android.
+     * https://github.com/keiji/mangaview
+
+　MangaViewを使えば、複数枚の画像（ページ）を並べて表示して、ピンチイン・ピンチアウトで拡大率を変えたり、スワイプでスクロールしたりできます。
+
+![mangaview1](/images/mangaview/mangaview1.gif)
+
+　また一画面に見開きで表示可能なので、横画面の時だけ見開き表示。といった使い方もできます。
+
+![mangaview1](/images/mangaview/mangaview2.gif)
+
+<!--more-->
+
 　7月末でメインにしていた仕事の一角が終了したので、8月以降はそれなりに暇になりました。
 
 　次の仕事を探そうにも新型コロナウイルスでリモートワークのこの時期、ほいほいと東京に行ける状況ではありません。
@@ -26,18 +44,7 @@ categories:
 
 　ならばぼくが、いい感じに動くビューアーを作って、すべての会社がそれを使えるようにオープンソースで公開すればいいじゃないか。
 
-　そう考えたぼくが、夏休みの自由研究という位置づけで今回開発したのが、Android用の漫画ビューアー「MangaView」です。
-
- * MangaView - An ImageView for reading manga(comics) for Android.
-     * https://github.com/keiji/mangaview
-
-　MangaViewを使えば、ピンチイン・ピンチアウトでページの拡大率を変えたり、スワイプでスクロールしたり基本的な操作ができます。
-
-![mangaview1](/images/mangaview/mangaview1.gif)
-
-　また一画面に見開きで表示可能なので、横画面の時だけ見開き表示。などの使い方もできます。
-
-![mangaview1](/images/mangaview/mangaview2.gif)
+　そう考えたぼくが、夏休みの自由研究という位置づけで今回開発したのが「MangaView」です。
 
 ----
 

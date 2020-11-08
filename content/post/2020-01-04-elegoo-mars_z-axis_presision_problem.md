@@ -15,6 +15,8 @@ categories:
 
 ![ELEGOO MARS](/images/mars/mars_z-axis-12.jpg)
 
+<!--more-->
+
 　ぼくは物作りの仕事をしているわけではないのですが、前々から3Dプリンターには憧れていて、ちょっと壊れた部品を自分でモデリングして出力できたら格好いいだろうなとか考えていました（Daddy Cool!）。
 
 「ELEGOO MARS」は、ぼくの手に入れたはじめての3Dプリンタです。

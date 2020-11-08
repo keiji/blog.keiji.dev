@@ -4,6 +4,9 @@ author: Keiji Ariyama
 type: post
 date: 2018-04-18T10:35:10+00:00
 url: /2018/04/techbookfest4-1.html
+description: 4月22日、秋葉原UDX アキバ・スクエアにて開催される「技術書典4」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。
+images:
+- /wp-content/uploads/2018/04/76e3081c96d22431ff3554bf7affdafe.jpg
 categories:
   - TensorFlow
   - イベント

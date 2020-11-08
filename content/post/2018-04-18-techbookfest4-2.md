@@ -4,6 +4,9 @@ author: Keiji Ariyama
 type: post
 date: 2018-04-18T10:55:23+00:00
 url: /2018/04/techbookfest4-2.html
+description: 4月22日、秋葉原UDX アキバ・スクエアにて開催される「技術書典4」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。
+images:
+- /wp-content/uploads/2018/04/shogyo.png
 categories:
   - イベント
   - 雑記
