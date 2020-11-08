@@ -27,7 +27,22 @@
 
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.78.1" /><meta name="twitter:card" content="summary" />
+<meta name="generator" content="Hugo 0.78.1" /><meta property="og:title" content="【WIP】TensorFlowのExerciseをがんばっている" />
+<meta property="og:description" content="　僕はいま、Google I/O 2016参加で渡米するにあたり、時差ボケ予防のために徹夜でこの記事を書いています。
+概要（忙しい人向け）
+　TensorFlowのチュートリアルにある課題（エクササイズ）に挑戦した。Softmaxの適用については比較的簡単だったが、Fully connected層をLocally connected層に変える課題については難航し、解決していない。
+　Locally connected層は、重み共有をしない畳み込み層である（cuda-convnet）。
+そこで、チュートリアルのモデルのFully connected層をConvolution層に置き換えたところ、学習が正常に行われなくなった。
+　TensorBoardを通じてモデルの状態を確認したところ、conv2層で勾配消失が起きていることがわかった。さらに調査を続けると、conv2層のweightsの初期値がcuda-convnetに記載されている値と異なっており、修正することで正常に学習できるようになった（数値の食い違いが意図的なものかは不明だが、修正をPull Requestしている）。
+　「重み共有（Shared weights/Tied weights）」をしないというLocally connectedの条件をTensorFlowでどのように実現するかは現時点でわかっていない。depthwise_conv2dについて検討したが、上手くいかないと判断している（出力フィルタの枚数を減らすことができないため）。
+　エクササイズについては、今後も調査を続けていく。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.keiji.dev/2016/05/wip_trying_cifar10_exercise.html" />
+<meta property="article:published_time" content="2016-05-15T20:15:23+00:00" />
+<meta property="article:modified_time" content="2016-05-15T20:15:23+00:00" />
+
+
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="【WIP】TensorFlowのExerciseをがんばっている"/>
 <meta name="twitter:description" content="　僕はいま、Google I/O 2016参加で渡米するにあたり、時差ボケ予防のために徹夜でこの記事を書いています。

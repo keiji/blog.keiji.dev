@@ -27,7 +27,20 @@
 
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.78.1" /><meta name="twitter:card" content="summary" />
+<meta name="generator" content="Hugo 0.78.1" /><meta property="og:title" content="「さくらの高火力」でTensorFlow" />
+<meta property="og:description" content="このエントリは「TensorFlow Advent Calendar」の12日目の記事です。
+これまで僕は、モデルの訓練には「GeForce GTX960」を積んだデスクトップマシンを使ってきました。
+この「GeForce GTX960」は、GPUだけあってちゃんと使えばCPUより格段に速いのですが、最高の性能というわけではありません。
+機械学習に取り組む中で、科学技術計算などを行う汎用目的(General Purpose)GPUや、複数のGPUで計算を並列化する「マルチGPU」に憧れがないと言えば嘘になります。
+しかし、GPUの１枚の価格や電気代、排熱の処理を考えると現実的でないと言う結論に落ち着いていました。
+今回、さくらインターネットの高火力コンピューティングが試用できたので、やってみたことをまとめます。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.keiji.dev/2016/12/tensorflow_advent_calendar.html" />
+<meta property="article:published_time" content="2016-12-12T06:53:45+00:00" />
+<meta property="article:modified_time" content="2016-12-12T06:53:45+00:00" />
+
+
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="「さくらの高火力」でTensorFlow"/>
 <meta name="twitter:description" content="このエントリは「TensorFlow Advent Calendar」の12日目の記事です。

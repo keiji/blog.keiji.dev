@@ -27,7 +27,29 @@
 
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.78.1" /><meta name="twitter:card" content="summary" />
+<meta name="generator" content="Hugo 0.78.1" /><meta property="og:title" content="矩形切り出しツール「Region Cropper」を公開しました" />
+<meta property="og:description" content="時間を見つけてはTensorFlow関係のあれこれをちまちま続けています。
+先日は「なにわTECH道」で、TensorFlowを使ったイラスト顔検出について発表しました。
+データセットの作成
+これまで、機械学習に使う画像（データセット）の作成にはMacの「プレビュー」を使っていました。
+１枚ずつ画像を読み込んでクロッピング（トリミング）していたのですが、１枚の画像に複数の顔があるときや、あとで領域を微調整（特に領域を拡大）したいときが面倒でした。
+良さそうなツールがないか、少しばかり探してみたのですが、僕の思い描くような操作性のものがありませんでした。
+なければ作れば良い。
+そんなわけで、自分で画像の切り出しツールツール「Region Cropper」を開発しました。
+１人で使うのももったいないので、GitHubで公開します。
+Region Cropper
+GitHub: https://github.com/keiji/region_cropper
+
+GUIのフレームワークに、使い慣れたSwingではなくJava FXを使いました。
+そのため、Java 8のUpdate40以降でしかきちんと動きません。
+以下、Region CropperのREADME.mdから。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.keiji.dev/2016/09/about_region_cropper.html" />
+<meta property="article:published_time" content="2016-09-15T07:17:36+00:00" />
+<meta property="article:modified_time" content="2016-09-15T07:17:36+00:00" />
+
+
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="矩形切り出しツール「Region Cropper」を公開しました"/>
 <meta name="twitter:description" content="時間を見つけてはTensorFlow関係のあれこれをちまちま続けています。
