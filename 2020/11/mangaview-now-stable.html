@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+<title>MangaView 1.0.0をリリースしました</title>
+
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-62351683-1');
+  </script>
+  
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="alternate" type="application/rss+xml" href="https://blog.keiji.dev/index.xml" title="めがねをかけるんだ">
+
+<link id="dark-mode-theme" rel="stylesheet" href="https://blog.keiji.dev/css/dark.css" />
+<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
+
+
+<script src="https://blog.keiji.dev/js/bundle.js"></script>
+<script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
+<meta name="generator" content="Hugo 0.78.1" />
+  </head>
+  <body>
+    
+  
+
+
+
+
+  <header>
+    <nav class="navbar">
+  <div class="nav">
+    
+      <a href="https://blog.keiji.dev/" class="nav-logo">
+      <img src="https://blog.keiji.dev/images/logo.png"
+           width=""
+           height=""
+           alt="Logo">
+      </a>
+    
+
+    <ul class="nav-links">
+      
+        
+          <li><a href="https://blog.keiji.dev/profile/" name="Profile"><i class="fas fa-user fa-lg"></i></a></li>
+        
+      
+        
+          <li><a href="https://blog.keiji.dev/licenses/" name="Licenses"><i class="fab fa-osi fa-lg"></i></a></li>
+        
+      
+    </ul>
+  </div>
+</nav>
+
+    <div class="intro-header">
+      <div class="container">
+        <div class="post-heading">
+          
+            <h1>MangaView 1.0.0をリリースしました</h1>
+          
+          
+            <span class="meta-post">
+  <i class="fa fa-calendar-alt"></i>&nbsp;2020-11-08
+  
+    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    
+      <a href="https://blog.keiji.dev//categories/%E7%BF%92%E4%BD%9C/">習作</a>&nbsp;
+    
+      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+    
+  
+</span>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+  <div class="container" role="main">
+    <article class="article" class="blog-post">
+      
+    <p>　<a href="https://blog.keiji.dev/2020/08/mangaview.html">今年の夏から作っていた</a>漫画ビューアー用のカスタムビュー「MangaView」、ついに1.0.0リリースすることができました。</p>
+<p><a href="https://github.com/keiji/mangaview">https://github.com/keiji/mangaview</a></p>
+<p>　これまでAndroidアプリはいくつもGoogle Playで公開してきたし、ライブラリを作る仕事はいくつも手がけてきたけれど、公開するライブラリを手がけたのははじめて。パッケージングからBintrayでの配信、jcenterでの公開まで、とても良い勉強になったと思います。</p>
+<p>ちなみにBintrayは、最初Premiumアカウントで登録していたことに気づかず、トライアル期間の満了でライブラリのデータが消えてしまい、OSSアカウントで登録し直すというトラブルもありました。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ん？　bintrayのアカウントが消えてる？？？<a href="https://t.co/L2hy4U1y7W">https://t.co/L2hy4U1y7W</a></p>&mdash; Keiji ARIYAMA (Rated KG) (@keiji_ariyama) <a href="https://twitter.com/keiji_ariyama/status/1323788223269593088?ref_src=twsrc%5Etfw">November 4, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Bintrayのアカウントが消えたのでどうしてかと思ってたんだけど、&quot;Sign In&quot;からGitHubをクリックするとURLに”enterprise”って入っていて、どうやらプレミアム版のアカウントに誘導されている。僕の場合お金を払わなかったのでアカウントが消えた。</p>&mdash; Keiji ARIYAMA (Rated KG) (@keiji_ariyama) <a href="https://twitter.com/keiji_ariyama/status/1323790982232432642?ref_src=twsrc%5Etfw">November 4, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Bintrayのアカウント作る時は入り口から <a href="https://t.co/DqkFcLsXEO">https://t.co/DqkFcLsXEO</a> を使わないとダメなのか……あとでブログでも書こう</p>&mdash; Keiji ARIYAMA (Rated KG) (@keiji_ariyama) <a href="https://twitter.com/keiji_ariyama/status/1323791234792525824?ref_src=twsrc%5Etfw">November 4, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>　MangaView 1.0.0では、MangaViewをRecyclerViewやViewPager2に入れることができるようにしています。</p>
+<p><img src="https://github.com/keiji/mangaview/blob/gallery/with_viewpager2.gif?raw=true" alt="mangaview1"></p>
+<p>　ギリギリまで迷ったのですが、やはり漫画コンテンツと連続して既存のViewを表示したいという需要は大きいようです。漫画を読み終わった流れで「いいね」ボタンを表示したり、SNSでのシェアにつないだりする目的での利用を想定しています。</p>
+
+
+      
+    </article>
+    
+    
+      
+      
+</div>
+
+    <footer>
+  
+
+  <div class="container">
+    <p class="credits copyright">
+      <a href="https://blog.keiji.dev/about"></a>
+      &nbsp;&copy;
+      2020
+      
+      &nbsp;/&nbsp;
+      <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
+      
+      &nbsp;&ndash;&nbsp;
+      <i class="fas fa-moon" id="dark-mode-toggle"></i>
+
+    <p class="credits theme-by">
+      Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
+      Theme
+      <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
+    </p>
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>

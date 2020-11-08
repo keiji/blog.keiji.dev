@@ -14,6 +14,16 @@
 		<atom:link href="/categories/tensorflow/" rel="self" type="application/rss+xml" />
 		
 		<item>
+			<title>MangaView 1.0.0をリリースしました</title>
+			<link>https://blog.keiji.dev/2020/11/mangaview-now-stable.html</link>
+			<pubDate>Sun, 08 Nov 2020 15:00:10 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2020/11/mangaview-now-stable.html</guid>
+			<description>&lt;p&gt;　&lt;a href=&#34;https://blog.keiji.dev/2020/08/mangaview.html&#34;&gt;今年の夏から作っていた&lt;/a&gt;漫画ビューアー用のカスタムビュー「MangaView」、ついに1.0.0リリースすることができました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/keiji/mangaview&#34;&gt;https://github.com/keiji/mangaview&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;　これまでAndroidアプリはいくつもGoogle Playで公開してきたし、ライブラリを作る仕事はいくつも手がけてきたけれど、公開するライブラリを手がけたのははじめて。パッケージングからBintrayでの配信、jcenterでの公開まで、とても良い勉強になったと思います。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
 			<title>本当はおそろしい商業出版2020</title>
 			<link>https://blog.keiji.dev/2020/10/androidbook2020.html</link>
 			<pubDate>Sat, 31 Oct 2020 15:00:10 +0900</pubDate>
@@ -198,14 +208,6 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>
-		</item>
-      	
-		<item>
-			<title>機械学習のモデルを試せるサイトを作った話</title>
-			<link>https://blog.keiji.dev/2019/01/meganeco_playground.html</link>
-			<pubDate>Thu, 11 Jan 2018 00:00:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2019/01/meganeco_playground.html</guid>
-			<description>三年前から個人的に構築している趣味の画像収集システム「MeganeCo」で利用している機械学習モデルを試せるサイトを公開しました。 MeganeCo Playground 画像を</description>
 		</item>
       	
 	</channel>

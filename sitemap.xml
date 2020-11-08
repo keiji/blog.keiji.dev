@@ -3,23 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://blog.keiji.dev/licenses/</loc>
-    <lastmod>2020-11-01T00:00:00+09:00</lastmod>
+    <loc>https://blog.keiji.dev/categories/android/</loc>
+    <lastmod>2020-11-08T15:00:10+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.keiji.dev/categories/</loc>
-    <lastmod>2020-10-31T15:00:10+09:00</lastmod>
+    <lastmod>2020-11-08T15:00:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.keiji.dev/2020/11/mangaview-now-stable.html</loc>
+    <lastmod>2020-11-08T15:00:10+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.keiji.dev/post/</loc>
-    <lastmod>2020-10-31T15:00:10+09:00</lastmod>
+    <lastmod>2020-11-08T15:00:10+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.keiji.dev/</loc>
-    <lastmod>2020-10-31T15:00:10+09:00</lastmod>
+    <lastmod>2020-11-08T15:00:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/</loc>
+    <lastmod>2020-11-08T15:00:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.keiji.dev/licenses/</loc>
+    <lastmod>2020-11-01T00:00:00+09:00</lastmod>
   </url>
   
   <url>
@@ -33,17 +48,7 @@
   </url>
   
   <url>
-    <loc>https://blog.keiji.dev/categories/android/</loc>
-    <lastmod>2020-08-25T15:00:10+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.keiji.dev/2020/08/mangaview.html</loc>
-    <lastmod>2020-08-25T15:00:10+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/</loc>
     <lastmod>2020-08-25T15:00:10+09:00</lastmod>
   </url>
   
