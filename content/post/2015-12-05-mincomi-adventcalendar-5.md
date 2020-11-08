@@ -6,7 +6,7 @@ date: 2015-12-04T15:00:00+00:00
 url: /2015/12/mincomi-adventcalendar-5.html
 categories:
   - Android
-  - 雑記
+  - みんコミ Advent Calendar
 
 ---
 この記事は「[みんコミ Advent Calendar][1]」の５日目の記事です。

@@ -6,9 +6,17 @@ date: 2015-11-30T15:00:36+00:00
 url: /2015/12/mincomi-adventcalendar-1.html
 categories:
   - Android
-  - 雑記
+  - みんコミ Advent Calendar
 
 ---
+
+----
+2020/11/09 追記:
+みんコミAdvent Calendarその他の知見を元に、漫画表示用カスタムビュー「MangaView」を公開しました。
+
+ * https://github.com/keiji/mangaview
+----
+
 * * *
 
 2015/12/01 14:48: Fix typo.

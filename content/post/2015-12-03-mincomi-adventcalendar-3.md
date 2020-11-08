@@ -6,7 +6,7 @@ date: 2015-12-02T15:00:00+00:00
 url: /2015/12/mincomi-adventcalendar-3.html
 categories:
   - Android
-  - 雑記
+  - みんコミ Advent Calendar
 
 ---
 「[みんコミ Advent Calendar][1]」３日目を担当する有山圭二です。 ３日目はアプリに表示する画像素材についてです。

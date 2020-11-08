@@ -13,7 +13,7 @@ enclosure:
         
 categories:
   - Android
-  - 雑記
+  - みんコミ Advent Calendar
 
 ---
 ## はじめに

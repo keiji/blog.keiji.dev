@@ -6,9 +6,17 @@ date: 2015-12-20T15:35:37+00:00
 url: /2015/12/mincomi-adventcalendar-21.html
 categories:
   - Android
-  - 雑記
+  - みんコミ Advent Calendar
 
 ---
+
+----
+2020/11/09 追記:
+みんコミAdvent Calendarその他の知見を元に、漫画表示用カスタムビュー「MangaView」を公開しました。
+
+ * https://github.com/keiji/mangaview
+----
+
 ［12/22追記: `requestDisallowInterceptTouchEvent`のハンドリングについては、onTouchEvent内で処理するより、`onScroll`メソッド内で処理する方が適切だと考えています］
 
 ## はじめに

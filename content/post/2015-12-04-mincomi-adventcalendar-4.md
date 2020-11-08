@@ -6,7 +6,7 @@ date: 2015-12-03T15:00:01+00:00
 url: /2015/12/mincomi-adventcalendar-4.html
 categories:
   - Android
-  - 雑記
+  - みんコミ Advent Calendar
 
 ---
 「[みんコミ Advent Calendar][1]」４日目を担当する有山圭二です。
