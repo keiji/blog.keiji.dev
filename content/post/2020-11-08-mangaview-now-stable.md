@@ -6,7 +6,7 @@ date: 2020-11-08T15:00:10+09:00
 url: /2020/11/mangaview-now-stable.html
 description: 　今年の夏から作っていた漫画ビューアー用のカスタムビュー「MangaView」、ついに安定版となる1.0.0をリリースすることができました。
 images:
-- https://github.com/keiji/mangaview/blob/gallery/with_viewpager2.gif?raw=true
+- /images/mangaview/mangaview3.gif
 categories:
   - 習作
   - Android
@@ -31,6 +31,6 @@ https://github.com/keiji/mangaview
 
 　MangaView 1.0.0では、MangaViewをRecyclerViewやViewPager2に入れることができるようにしています。
 
-![mangaview1](https://github.com/keiji/mangaview/blob/gallery/with_viewpager2.gif?raw=true)
+![mangaview3](/images/mangaview/mangaview3.gif)
 
 　ギリギリまで迷ったのですが、やはり漫画コンテンツと連続して既存のViewを表示したいという需要は大きいようです。漫画を読み終わった流れで「いいね」ボタンを表示したり、SNSでのシェアにつないだりする目的での利用を想定しています。
