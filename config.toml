@@ -14,11 +14,13 @@ enableInlineShortcodes = true
 [params.logo]
   url = "logo.png" # static/images/icon.png
   alt = "Logo"
+  title = "めがねをかけるんだ"
+  description = "Don't take your glasses off."
 
 [params]
   dateformat = "2006-01-02"
   typesquareCode = "ZwBLIZTRHGg="
-  custom_css = ["css/default.css", "css/typesquare.css"]
+  custom_css = ["css/default.css"]
 
 [[params.nav]]
   identifier = "profile"
