@@ -10,7 +10,7 @@ categories:
 
 ---
 
-　[今年の夏から作っていた](/2020/08/mangaview.html)漫画ビューアー用のカスタムビュー「MangaView」、ついに1.0.0リリースすることができました。
+　[今年の夏から作っていた](/2020/08/mangaview.html)漫画ビューアー用のカスタムビュー「MangaView」、ついに安定版となる1.0.0をリリースすることができました。
 
 https://github.com/keiji/mangaview
 
