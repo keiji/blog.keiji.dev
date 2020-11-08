@@ -18,7 +18,6 @@ enableInlineShortcodes = true
 
 [params]
   dateformat = "2006-01-02"
-  typesquareCode = "ZwBLIZTRHGg="
   custom_css = ["css/default.css"]
   description = "Don't take your glasses off."
   images = ["/images/logo.png"]
