@@ -5,6 +5,8 @@ type: post
 date: 2020-11-08T15:00:10+09:00
 url: /2020/11/mangaview-now-stable.html
 description: 　今年の夏から作っていた漫画ビューアー用のカスタムビュー「MangaView」、ついに安定版となる1.0.0をリリースすることができました。
+images:
+- https://github.com/keiji/mangaview/blob/gallery/with_viewpager2.gif?raw=true
 categories:
   - 習作
   - Android
