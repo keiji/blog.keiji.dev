@@ -45,7 +45,18 @@
 			<link>https://blog.keiji.dev/2020/08/mangaview.html</link>
 			<pubDate>Tue, 25 Aug 2020 15:00:10 +0900</pubDate>
 			<guid>https://blog.keiji.dev/2020/08/mangaview.html</guid>
-			<description>7月末でメインにしていた仕事の一角が終了したので、8月以降はそれなりに暇になりました。 次の仕事を探そうにも新型コロナウイルスでリモートワーク</description>
+			<description>&lt;p&gt;　漫画ビューアー用のカスタムビュー「MangaView」をオープンソースで公開しました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MangaView - An ImageView for reading manga(comics) for Android.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/keiji/mangaview&#34;&gt;https://github.com/keiji/mangaview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;　MangaViewを使えば、複数枚の画像（ページ）を並べて表示して、ピンチイン・ピンチアウトで拡大率を変えたり、スワイプでスクロールしたりできます。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/mangaview/mangaview1.gif&#34; alt=&#34;mangaview1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;　また一画面に見開きで表示可能なので、横画面の時だけ見開き表示。といった使い方もできます。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/mangaview/mangaview2.gif&#34; alt=&#34;mangaview1&#34;&gt;&lt;/p&gt;</description>
 		</item>
       	
 		<item>
@@ -55,16 +66,7 @@
 			<guid>https://blog.keiji.dev/2020/01/elegoo-mars_presision.html</guid>
 			<description>&lt;p&gt;　あけましておめでとうございます。御社の原稿、いまがんばって書いてます！&lt;/p&gt;
 &lt;p&gt;　さて、昨年末のことになりますが、光造形３Dプリンター「ELEGOO MARS」を購入しました。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/mars/mars_z-axis-12.jpg&#34; alt=&#34;ELEGOO MARS&#34;&gt;&lt;/p&gt;
-&lt;p&gt;　ぼくは物作りの仕事をしているわけではないのですが、前々から3Dプリンターには憧れていて、ちょっと壊れた部品を自分でモデリングして出力できたら格好いいだろうなとか考えていました（Daddy Cool!）。&lt;/p&gt;
-&lt;p&gt;「ELEGOO MARS」は、ぼくの手に入れたはじめての3Dプリンタです。&lt;/p&gt;
-&lt;p&gt;「ELEGOO MARS」を買ってからは&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1201721035004841985&#34;&gt;サンプルデータの出力に失敗したり&lt;/a&gt;、&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1201722040887234560&#34;&gt;出力に失敗してFEPフィルムを傷めてしまったり&lt;/a&gt;、&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1202101585280548864&#34;&gt;サンプルデータの出力に成功したり&lt;/a&gt;、&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1208651347089690624&#34;&gt;FUSION 360でモデリングした漏斗をひたすら出力したり&lt;/a&gt;していたのですが、いくつか出力していくうちに、出力されるものの高さが、設計よりも低くなるとこに&lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1206886901094875142&#34;&gt;気づきました&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;　出力した造形物を観察すると、だいたいボトムレイヤー（ベースに張り付けるために露光時間を長くする強固なレイヤー）より上の数層が広がったり潰れたりして、高さが失われているようです。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/mars/mars_z-axis-8.jpg&#34; alt=&#34;ELEGOO MARS&#34;&gt;&lt;/p&gt;
-&lt;p&gt;　一番お手軽な解決策はスライサーで出力物を持ち上げてサポートを付けることで潰れる部分に出力物が重ならないようにすることでしょう。
-実際、Twitterでもクリエイト工房（&lt;a href=&#34;https://twitter.com/create_works&#34;&gt;@create_works&lt;/a&gt;）さんから同様の&lt;a href=&#34;https://twitter.com/create_works/status/1207265472833474560&#34;&gt;アドバイス&lt;/a&gt;をもらいました。&lt;/p&gt;
-&lt;p&gt;　そうは言っても、3Dプリンターをこれと言った目的もなく買ってしまった僕です。手段を目的にするのは当然の流れです。
-解決のためにいろいろやって、ようやくある程度の精度を出せるようになったので、同じ現象で悩んでいる人のためにブログに知見をまとめておきます。&lt;/p&gt;</description>
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/mars/mars_z-axis-12.jpg&#34; alt=&#34;ELEGOO MARS&#34;&gt;&lt;/p&gt;</description>
 		</item>
       	
 		<item>
@@ -108,7 +110,12 @@
 			<link>https://blog.keiji.dev/2018/12/move_to_gehirn_rs2_plus.html</link>
 			<pubDate>Mon, 31 Dec 2018 00:00:00 +0900</pubDate>
 			<guid>https://blog.keiji.dev/2018/12/move_to_gehirn_rs2_plus.html</guid>
-			<description>&lt;p&gt;　タイトルの通り、このブログを含めたいくつかのサイトを&lt;a href=&#34;https://www.gehirn.jp/rs2plus/&#34;&gt;Gehirn RS2 Plus&lt;/a&gt;に引っ越しました。同時にStatic Site Generator（静的サイトジェネレーター) &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;を使って静的サイト化しています。&lt;/p&gt;</description>
+			<description>&lt;p&gt;　タイトルの通り、このブログを含めたいくつかのサイトを&lt;a href=&#34;https://www.gehirn.jp/rs2plus/&#34;&gt;Gehirn RS2 Plus&lt;/a&gt;に引っ越しました。同時にStatic Site Generator（静的サイトジェネレーター) &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;を使って静的サイト化しています。&lt;/p&gt;
+&lt;p&gt;　これまでは、「さくらのVPS」にインストールしたWordPress上で管理していました。
+さくらのVPSを使うと、システムのすべてを自分で管理することになり、セキュリティアップデートなどのメンテナンスもすべて自分でやる必要がありました（もちろん、それは利点でもあります）。&lt;/p&gt;
+&lt;p&gt;　加えてWordPressは、最初にセットアップして以降、数度の更新を経て、初期にインストールしたプラグインが動いたり動かなかったりしていました。最初の頃にがんばってカスタムしたテーマも、今ではどこをどう変えたのか覚えていませんでした。&lt;/p&gt;
+&lt;h2 id=&#34;gehirn-rs2-plusとは&#34;&gt;Gehirn RS2 Plusとは&lt;/h2&gt;
+&lt;p&gt;　Gehirn RS2 Plus（以下、「RS2 Plus」）は、ゲヒルン株式会社が運営するホスティングサービスです。&lt;/p&gt;</description>
 		</item>
       	
 		<item>
