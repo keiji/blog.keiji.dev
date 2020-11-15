@@ -13,6 +13,8 @@ categories:
 
 　23日目の記事は、AtuNukaさんによる「[Design Documentから見たTensorFlow 2.0の変更点][2]」でした。
 
+<!--more-->
+
 ## はじめに
 
 　あいかわらず趣味でTensorFlowを使っていて、最近はAndroidで動作させるTensorFlow Liteまわりを重点的に取り組んでいます。
@@ -24,7 +26,6 @@ categories:
 「使えるレベルになってきている」と、言った直後にこんなことを言ってごめんね。
 
 　でも、本当です。
-<!--more-->
 ## TL;DR
 
 　TensorFlow LiteのモデルをAndroidアプリに組み込むには、TensorFlow Liteそのものの制約に加えて、量子化済みモデルの制約。そしてNN APIの制約の「３つの制約」を最大公約数的にクリアする必要がある。

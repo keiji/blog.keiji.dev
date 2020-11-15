@@ -11,6 +11,8 @@ categories:
 ---
 
 ----
+**[「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。](https://twitter.com/mincomi_jp/status/1057847395889737730)**
+
 2020/11/09 追記:
 みんコミAdvent Calendarその他の知見を元に、漫画表示用カスタムビュー「MangaView」を公開しました。
 
@@ -96,11 +98,11 @@ categories:
 
 　「[みんコミ][2]」のAndroidアプリは、Google Playからインストールできます（執筆時点の最新バージョンは1.0.3です）。
 
-[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][11]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][11]（公開終了しています）
 
 　また、iOS版のアプリは、iTunes App Atoreからアプリからインストールできます（執筆時点の最新バージョンは1.0.1です）。
 
-[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/available-on-the-app-store-1345130940.jpg" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][12]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/available-on-the-app-store-1345130940.jpg" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][12]（公開終了しています）
 
 　それでは、最後までお読みいただいた皆さん、本当にありがとうございました。
 

@@ -9,7 +9,7 @@ categories:
   - 雑記
 
 ---
-## この投稿は、[TensorFlow Advent Calendar][1]の12日目の記事です。
+**この投稿は、[TensorFlow Advent Calendar][1]の12日目の記事です。**
 
 みなさん。TensorFlow使ってますか？
   

@@ -9,6 +9,10 @@ categories:
   - みんコミ Advent Calendar
 
 ---
+----
+**[「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。](https://twitter.com/mincomi_jp/status/1057847395889737730)**
+----
+
 ## はじめに
 
 この記事は「[みんコミ Advent Calendar][1]」の１３日目の記事です。
@@ -17,7 +21,7 @@ categories:
 
 ［12月13日追記］ベースにしたバージョンは1.0.3です。お詫びして訂正します。
 
-[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" />][3]（公開終了しています）
 
 <!--more-->
 

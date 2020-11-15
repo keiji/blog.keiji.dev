@@ -9,6 +9,10 @@ categories:
   - みんコミ Advent Calendar
 
 ---
+----
+**[「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。](https://twitter.com/mincomi_jp/status/1057847395889737730)**
+----
+
 ## はじめに
 
 この記事は「[みんコミ Advent Calendar][1]」の１０日目の記事です。
@@ -25,7 +29,7 @@ HTTPだとリンク元ＵＲＬ（リファラー）がとれないし、HTTPS�
 
 一番気になっているのは「お問い合わせフォーム」もHTTPでアクセスできるということですね。
 
-[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/Screen-Shot-2015-12-08-at-00.08.20.png" alt="Screen Shot 2015-12-08 at 00.08.20" width="333" height="100" class="alignnone size-full wp-image-864" />][4]
+[<img src="https://blog.keiji.dev/wp-content/uploads/2015/12/Screen-Shot-2015-12-08-at-00.08.20.png" alt="Screen Shot 2015-12-08 at 00.08.20" width="333" height="100" class="alignnone size-full wp-image-864" />][4]（公開終了しています）
 
 もしかするとフォームの投稿先はきちんと保護された通信に切り替えているのかもしれませんが（未確認）、表口をHTTPにしておく理由が思い浮かばないので、使っていて不安がありますね……
 

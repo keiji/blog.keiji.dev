@@ -15,6 +15,8 @@ categories:
 
 　TensorFlowのチュートリアルにある課題（エクササイズ）に挑戦した。Softmaxの適用については比較的簡単だったが、Fully connected層をLocally connected層に変える課題については難航し、解決していない。
 
+<!--more-->
+
 　Locally connected層は、重み共有をしない畳み込み層である（<a href="https://code.google.com/p/cuda-convnet/wiki/LayerParams#Locally-connected_layer_with_unshared_weights" target="_blank">cuda-convnet</a>）。
   
 そこで、チュートリアルのモデルのFully connected層をConvolution層に置き換えたところ、学習が正常に行われなくなった。

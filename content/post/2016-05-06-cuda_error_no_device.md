@@ -8,12 +8,6 @@ categories:
   - TensorFlow
 
 ---
-## あわせて読みたい
-
-  * [TensorFlow on DockerでGPUを使えるようにする方法 | 株式会社カブク][1]
-  * [NVIDIA Dockerで簡単にGPU対応のTensorFlow入りコンテナを作る方法 | muo-notes][2]
-
-## 概要
 
 　GPUマシンでTensorFlowを実行する際、CUDAもcuDNNも正常にセットアップできているのに、TensorFlowがGPUを認識しない（`CUDA_ERROR_NO_DEVICE`や`No GPU devices available on machine.`が表示される）場合、正しいディスプレイカード・ドライバがインストールされていない可能性があります。
 
@@ -21,7 +15,12 @@ categories:
 
 <!--more-->
 
-### 環境
+## あわせて読みたい
+
+  * [TensorFlow on DockerでGPUを使えるようにする方法 | 株式会社カブク][1]
+  * [NVIDIA Dockerで簡単にGPU対応のTensorFlow入りコンテナを作る方法 | muo-notes][2]
+
+## 環境
 
   * ビデオカード GeForce GTX 960
   * OS Ubuntu 14.10 
@@ -29,13 +28,13 @@ categories:
       * cuDNN 7
       * TensorFlow 0.8.0
 
-### 発生した問題
+## 発生した問題
 
   * TensorFlowの起動直後に<tt>failed call to cuInit: CUDA_ERROR_NO_DEVICE</tt>と<tt>No GPU devices available on machine.</tt>が表示され、CPUでしか演算ができない
   * <tt>nvidia-smi</tt>を実行すると&#8221;No devices were found&#8221;になる
   * <tt>/usr/local/cuda/samples/1_Utilities/deviceQuery</tt>を実行すると<tt>38</tt>で失敗する
 
-### （筆者の環境での）解決法
+## （筆者の環境での）解決法
 
 　まず既存のドライバをアンインストールします。
 

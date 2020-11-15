@@ -10,11 +10,18 @@ categories:
   - 雑記
 
 ---
+----
+**2020年11月15日追記:** 「Region Cropper」は非推奨となりました。Javaの実行環境に「Java FX」が標準で含まれなくなったため、導入のハードルが上がったことが非推奨とした原因です。
+
+代替として「[MRDB-web-client](https://keiji.github.io/mrdb-web-client/)」の利用を検討してください。
+
+----
+
 時間を見つけてはTensorFlow関係のあれこれをちまちま続けています。
 
 先日は「[なにわTECH道][1]」で、TensorFlowを使ったイラスト顔検出について発表しました。
 
-
+<!--more-->
 
 ## データセットの作成
 
@@ -42,34 +49,30 @@ GUIのフレームワークに、使い慣れたSwingではなくJava FXを使�
 
 以下、Region CropperのREADME.mdから。
 
-<!--more-->
+## Region Cropper
 
-* * *
-
-# Region Cropper
-
-## Requirements
+### Requirements
 
   * Java > 1.8.0_40
 
-## Download
+### Download
 
 Binary(Zip): <https://github.com/keiji/region_cropper>
 
-## 使い方（Usage）
+### 使い方（Usage）
 
     $ java -jar region_cropper_main.jar
     
 
-### 処理するディレクトリの選択（Select Directory）
+#### 処理するディレクトリの選択（Select Directory）
 
 <img src="https://blog.keiji.dev/wp-content/uploads/2016/09/select_directory.png" alt="select_directory" width="1424" height="896" class="aligncenter size-full wp-image-1382" />
 
-### 領域の追加（Add)
+#### 領域の追加（Add)
 
 ドラッグ&ドロップで領域を設定します。
 
-### 領域の選択（Select)
+#### 領域の選択（Select)
 
 現在選択中の領域は赤枠で示されます。
 
@@ -88,7 +91,7 @@ Binary(Zip): <https://github.com/keiji/region_cropper>
 | End           | 次のファイルを表示                  |
 | Home          | 前のファイルを表示                  |
 
-### 領域の編集（Edit）
+#### 領域の編集（Edit）
 
 | キー                             | 動作              |
 |:------------------------------ |:--------------- |
@@ -99,7 +102,7 @@ Binary(Zip): <https://github.com/keiji/region_cropper>
 
 Shift を押すと、変化量が小さくなり微調整できます。
 
-### ラベルの設定（Label）
+#### ラベルの設定（Label）
 
 数字キーの「0〜9」を押すと、選択した領域にラベルを設定します。
   
@@ -111,7 +114,7 @@ Shift を押すと、変化量が小さくなり微調整できます。
   
 負例に設定した領域は、編集や削除ができません。
 
-### 領域の切り出し（Crop）
+#### 領域の切り出し（Crop）
 
 領域の切り出しには「Quick crop」と「Crop to&#8230;」の２つの方法があります。
 
