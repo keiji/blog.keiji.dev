@@ -31,14 +31,8 @@
 
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.78.1" /><meta property="og:title" content="TensorFlowでGPUが使えない" />
-<meta property="og:description" content="あわせて読みたい
-
-TensorFlow on DockerでGPUを使えるようにする方法 | 株式会社カブク
-NVIDIA Dockerで簡単にGPU対応のTensorFlow入りコンテナを作る方法 | muo-notes
-
-概要
-　GPUマシンでTensorFlowを実行する際、CUDAもcuDNNも正常にセットアップできているのに、TensorFlowがGPUを認識しない（CUDA_ERROR_NO_DEVICEやNo GPU devices available on machine.が表示される）場合、正しいディスプレイカード・ドライバがインストールされていない可能性があります。
+<meta name="generator" content="Hugo 0.78.2" /><meta property="og:title" content="TensorFlowでGPUが使えない" />
+<meta property="og:description" content="　GPUマシンでTensorFlowを実行する際、CUDAもcuDNNも正常にセットアップできているのに、TensorFlowがGPUを認識しない（CUDA_ERROR_NO_DEVICEやNo GPU devices available on machine.が表示される）場合、正しいディスプレイカード・ドライバがインストールされていない可能性があります。
 　筆者の環境では、既存のドライバーをアンインストール（sudo apt-get remove &ndash;purge nvidia*）して、NVIDIAのサイトからドライバーをダウンロード・インストールすることでGPUを認識するようになりました。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.keiji.dev/2016/05/cuda_error_no_device.html" />
@@ -51,13 +45,7 @@ NVIDIA Dockerで簡単にGPU対応のTensorFlow入りコンテナを作る方法
 <meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
 
 <meta name="twitter:title" content="TensorFlowでGPUが使えない"/>
-<meta name="twitter:description" content="あわせて読みたい
-
-TensorFlow on DockerでGPUを使えるようにする方法 | 株式会社カブク
-NVIDIA Dockerで簡単にGPU対応のTensorFlow入りコンテナを作る方法 | muo-notes
-
-概要
-　GPUマシンでTensorFlowを実行する際、CUDAもcuDNNも正常にセットアップできているのに、TensorFlowがGPUを認識しない（CUDA_ERROR_NO_DEVICEやNo GPU devices available on machine.が表示される）場合、正しいディスプレイカード・ドライバがインストールされていない可能性があります。
+<meta name="twitter:description" content="　GPUマシンでTensorFlowを実行する際、CUDAもcuDNNも正常にセットアップできているのに、TensorFlowがGPUを認識しない（CUDA_ERROR_NO_DEVICEやNo GPU devices available on machine.が表示される）場合、正しいディスプレイカード・ドライバがインストールされていない可能性があります。
 　筆者の環境では、既存のドライバーをアンインストール（sudo apt-get remove &ndash;purge nvidia*）して、NVIDIAのサイトからドライバーをダウンロード・インストールすることでGPUを認識するようになりました。"/>
 
   </head>
@@ -122,15 +110,14 @@ NVIDIA Dockerで簡単にGPU対応のTensorFlow入りコンテナを作る方法
   <div class="container" role="main">
     <article class="article" class="blog-post">
       
-    <h2 id="あわせて読みたい">あわせて読みたい</h2>
+    <p>　GPUマシンでTensorFlowを実行する際、CUDAもcuDNNも正常にセットアップできているのに、TensorFlowがGPUを認識しない（<code>CUDA_ERROR_NO_DEVICE</code>や<code>No GPU devices available on machine.</code>が表示される）場合、正しいディスプレイカード・ドライバがインストールされていない可能性があります。</p>
+<p>　筆者の環境では、既存のドライバーをアンインストール（<tt>sudo apt-get remove &ndash;purge nvidia*</tt>）して、<a href="http://www.nvidia.co.jp/Download/index.aspx?lang=jp" target="_blank">NVIDIAのサイト</a>からドライバーをダウンロード・インストールすることでGPUを認識するようになりました。</p>
+<h2 id="あわせて読みたい">あわせて読みたい</h2>
 <ul>
 <li><a href="http://www.kabuku.co.jp/developers/errors-with-tensorflow-on-gpu">TensorFlow on DockerでGPUを使えるようにする方法 | 株式会社カブク</a></li>
 <li><a href="http://www.muo.jp/2016/05/nvidia-docker-tensorflow.html">NVIDIA Dockerで簡単にGPU対応のTensorFlow入りコンテナを作る方法 | muo-notes</a></li>
 </ul>
-<h2 id="概要">概要</h2>
-<p>　GPUマシンでTensorFlowを実行する際、CUDAもcuDNNも正常にセットアップできているのに、TensorFlowがGPUを認識しない（<code>CUDA_ERROR_NO_DEVICE</code>や<code>No GPU devices available on machine.</code>が表示される）場合、正しいディスプレイカード・ドライバがインストールされていない可能性があります。</p>
-<p>　筆者の環境では、既存のドライバーをアンインストール（<tt>sudo apt-get remove &ndash;purge nvidia*</tt>）して、<a href="http://www.nvidia.co.jp/Download/index.aspx?lang=jp" target="_blank">NVIDIAのサイト</a>からドライバーをダウンロード・インストールすることでGPUを認識するようになりました。</p>
-<h3 id="環境">環境</h3>
+<h2 id="環境">環境</h2>
 <ul>
 <li>ビデオカード GeForce GTX 960</li>
 <li>OS Ubuntu 14.10
@@ -141,13 +128,13 @@ NVIDIA Dockerで簡単にGPU対応のTensorFlow入りコンテナを作る方法
 </ul>
 </li>
 </ul>
-<h3 id="発生した問題">発生した問題</h3>
+<h2 id="発生した問題">発生した問題</h2>
 <ul>
 <li>TensorFlowの起動直後に<tt>failed call to cuInit: CUDA_ERROR_NO_DEVICE</tt>と<tt>No GPU devices available on machine.</tt>が表示され、CPUでしか演算ができない</li>
 <li><tt>nvidia-smi</tt>を実行すると”No devices were found”になる</li>
 <li><tt>/usr/local/cuda/samples/1_Utilities/deviceQuery</tt>を実行すると<tt>38</tt>で失敗する</li>
 </ul>
-<h3 id="筆者の環境での解決法">（筆者の環境での）解決法</h3>
+<h2 id="筆者の環境での解決法">（筆者の環境での）解決法</h2>
 <p>　まず既存のドライバをアンインストールします。</p>
 <pre><code>$ sudo apt-get remove --purge nvidia*
 </code></pre>

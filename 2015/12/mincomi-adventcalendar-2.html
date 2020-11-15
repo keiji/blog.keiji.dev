@@ -31,13 +31,15 @@
 
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.78.1" /><meta property="og:title" content="アプリのパーミッション 〜 M comes after L" />
+<meta name="generator" content="Hugo 0.78.2" /><meta property="og:title" content="アプリのパーミッション 〜 M comes after L" />
 <meta property="og:description" content="
+「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。
+
 ※ 2015/12/24追記: バージョン1.0.3で、GET_ACCOUNTSパーミッションが取り除かれているのを確認しました。
 
 「みんコミ Advent Calendar」２日目を担当する有山圭二です。 ２日目の今日は、アプリのパーミッションについて解説します。
 「みんコミ」のAndroidアプリは、「Google Play Store」からインストールできます。さっそくインストールしてみましょう。
-" />
+（公開終了しています）" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-2.html" />
 <meta property="og:image" content="https://blog.keiji.dev/images/logo.png"/>
@@ -50,11 +52,13 @@
 
 <meta name="twitter:title" content="アプリのパーミッション 〜 M comes after L"/>
 <meta name="twitter:description" content="
+「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。
+
 ※ 2015/12/24追記: バージョン1.0.3で、GET_ACCOUNTSパーミッションが取り除かれているのを確認しました。
 
 「みんコミ Advent Calendar」２日目を担当する有山圭二です。 ２日目の今日は、アプリのパーミッションについて解説します。
 「みんコミ」のAndroidアプリは、「Google Play Store」からインストールできます。さっそくインストールしてみましょう。
-"/>
+（公開終了しています）"/>
 
   </head>
   <body>
@@ -121,11 +125,13 @@
     <article class="article" class="blog-post">
       
     <hr>
+<h2 id="みんなのコミックは2018年10月31日を持ちまして更新を終了いたしましたhttpstwittercommincomi_jpstatus1057847395889737730"><strong><a href="https://twitter.com/mincomi_jp/status/1057847395889737730">「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。</a></strong></h2>
+<hr>
 <p>※ 2015/12/24追記: バージョン1.0.3で、GET_ACCOUNTSパーミッションが取り除かれているのを確認しました。</p>
 <hr>
 <p>「<a href="http://qiita.com/advent-calendar/2015/mincomi">みんコミ Advent Calendar</a>」２日目を担当する有山圭二です。 ２日目の今日は、アプリのパーミッションについて解説します。</p>
 <p>「みんコミ」のAndroidアプリは、「Google Play Store」からインストールできます。さっそくインストールしてみましょう。</p>
-<p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" /></a></p>
+<p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" /></a>（公開終了しています）</p>
 <p>インストールの確認画面に表示される権限を見て、まず気になるのが「連絡先」というアクセス権限を要求していることでしょう。</p>
 <p><a href="https://blog.keiji.dev/wp-content/uploads/2015/12/Screenshot_20151128-145117.png"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/Screenshot_20151128-145117.png" alt="Screenshot_20151128-145117" width="270" height="480" class="aligncenter size-full wp-image-673" /></a></p>
 <p>よく見ると「この端末上のアカウントの検索」という補助項目になっているので、連絡帳へのアクセス権限である「READ|WRITE_CONTACTS」ではなく、端末に登録してあるGoogleアカウントやdocomoアカウントの情報を取得する「GET_ACCOUNTS」であるとわかります。</p>

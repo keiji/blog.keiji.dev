@@ -31,7 +31,7 @@
 
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.78.1" /><meta property="og:title" content="TensorFlow" />
+<meta name="generator" content="Hugo 0.78.2" /><meta property="og:title" content="TensorFlow" />
 <meta property="og:description" content="Don&#39;t take your glasses off." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.keiji.dev/categories/tensorflow/" />
@@ -106,21 +106,12 @@
   </a>
   <div class="post-entry">
     
-      <p><p>時間を見つけてはTensorFlow関係のあれこれをちまちま続けています。</p>
-<p>先日は「<a href="https://www.pasonatech.co.jp/skill_up/event/naniwa_tech.jsp">なにわTECH道</a>」で、TensorFlowを使ったイラスト顔検出について発表しました。</p>
-<h2 id="データセットの作成">データセットの作成</h2>
-<p>これまで、機械学習に使う画像（データセット）の作成にはMacの「プレビュー」を使っていました。</p>
-<p>１枚ずつ画像を読み込んでクロッピング（トリミング）していたのですが、１枚の画像に複数の顔があるときや、あとで領域を微調整（特に領域を拡大）したいときが面倒でした。</p>
-<p>良さそうなツールがないか、少しばかり探してみたのですが、僕の思い描くような操作性のものがありませんでした。</p>
-<p>なければ作れば良い。</p>
-<p>そんなわけで、自分で画像の切り出しツールツール「Region Cropper」を開発しました。</p>
-<p>１人で使うのももったいないので、GitHubで公開します。</p>
-<h2 id="region-cropper">Region Cropper</h2>
-<p>GitHub: <a href="https://github.com/keiji/region_cropper">https://github.com/keiji/region_cropper</a></p>
-<p><img src="https://blog.keiji.dev/wp-content/uploads/2016/09/set_region.png" alt="set_region" width="2048" height="1580" class="aligncenter size-full wp-image-1383" /></p>
-<p>GUIのフレームワークに、使い慣れたSwingではなくJava FXを使いました。</p>
-<p>そのため、Java 8のUpdate40以降でしかきちんと動きません。</p>
-<p>以下、Region CropperのREADME.mdから。</p></p>
+      <p><hr>
+<p><strong>2020年11月15日追記:</strong> 「Region Cropper」は非推奨となりました。Javaの実行環境に「Java FX」が標準で含まれなくなったため、導入のハードルが上がったことが非推奨とした原因です。</p>
+<p>代替として「<a href="https://keiji.github.io/mrdb-web-client/">MRDB-web-client</a>」の利用を検討してください。</p>
+<hr>
+<p>時間を見つけてはTensorFlow関係のあれこれをちまちま続けています。</p>
+<p>先日は「<a href="https://www.pasonatech.co.jp/skill_up/event/naniwa_tech.jsp">なにわTECH道</a>」で、TensorFlowを使ったイラスト顔検出について発表しました。</p></p>
         <a href="https://blog.keiji.dev/2016/09/about_region_cropper.html" class="post-read-more">Read More</a>
     
   </div>
@@ -337,12 +328,7 @@
     
       <p><p>　僕はいま、<a href="https://events.google.com/io2016/" target="_blank">Google I/O 2016</a>参加で渡米するにあたり、時差ボケ予防のために徹夜でこの記事を書いています。</p>
 <h3 id="概要忙しい人向け">概要（忙しい人向け）</h3>
-<p>　TensorFlowのチュートリアルにある課題（エクササイズ）に挑戦した。Softmaxの適用については比較的簡単だったが、Fully connected層をLocally connected層に変える課題については難航し、解決していない。</p>
-<p>　Locally connected層は、重み共有をしない畳み込み層である（<a href="https://code.google.com/p/cuda-convnet/wiki/LayerParams#Locally-connected_layer_with_unshared_weights" target="_blank">cuda-convnet</a>）。</p>
-<p>そこで、チュートリアルのモデルのFully connected層をConvolution層に置き換えたところ、学習が正常に行われなくなった。</p>
-<p>　TensorBoardを通じてモデルの状態を確認したところ、conv2層で勾配消失が起きていることがわかった。さらに調査を続けると、conv2層のweightsの初期値がcuda-convnetに記載されている値と異なっており、修正することで正常に学習できるようになった（数値の食い違いが意図的なものかは不明だが、修正を<a href="https://github.com/tensorflow/tensorflow/pull/2374" target="_blank">Pull Request</a>している）。</p>
-<p>　「重み共有（Shared weights/Tied weights）」をしないというLocally connectedの条件をTensorFlowでどのように実現するかは現時点でわかっていない。<code>depthwise_conv2d</code>について検討したが、上手くいかないと判断している（出力フィルタの枚数を減らすことができないため）。</p>
-<p>　エクササイズについては、今後も調査を続けていく。</p></p>
+<p>　TensorFlowのチュートリアルにある課題（エクササイズ）に挑戦した。Softmaxの適用については比較的簡単だったが、Fully connected層をLocally connected層に変える課題については難航し、解決していない。</p></p>
         <a href="https://blog.keiji.dev/2016/05/wip_trying_cifar10_exercise.html" class="post-read-more">Read More</a>
     
   </div>
@@ -370,13 +356,7 @@
   </a>
   <div class="post-entry">
     
-      <p><h2 id="あわせて読みたい">あわせて読みたい</h2>
-<ul>
-<li><a href="http://www.kabuku.co.jp/developers/errors-with-tensorflow-on-gpu">TensorFlow on DockerでGPUを使えるようにする方法 | 株式会社カブク</a></li>
-<li><a href="http://www.muo.jp/2016/05/nvidia-docker-tensorflow.html">NVIDIA Dockerで簡単にGPU対応のTensorFlow入りコンテナを作る方法 | muo-notes</a></li>
-</ul>
-<h2 id="概要">概要</h2>
-<p>　GPUマシンでTensorFlowを実行する際、CUDAもcuDNNも正常にセットアップできているのに、TensorFlowがGPUを認識しない（<code>CUDA_ERROR_NO_DEVICE</code>や<code>No GPU devices available on machine.</code>が表示される）場合、正しいディスプレイカード・ドライバがインストールされていない可能性があります。</p>
+      <p><p>　GPUマシンでTensorFlowを実行する際、CUDAもcuDNNも正常にセットアップできているのに、TensorFlowがGPUを認識しない（<code>CUDA_ERROR_NO_DEVICE</code>や<code>No GPU devices available on machine.</code>が表示される）場合、正しいディスプレイカード・ドライバがインストールされていない可能性があります。</p>
 <p>　筆者の環境では、既存のドライバーをアンインストール（<tt>sudo apt-get remove &ndash;purge nvidia*</tt>）して、<a href="http://www.nvidia.co.jp/Download/index.aspx?lang=jp" target="_blank">NVIDIAのサイト</a>からドライバーをダウンロード・インストールすることでGPUを認識するようになりました。</p></p>
         <a href="https://blog.keiji.dev/2016/05/cuda_error_no_device.html" class="post-read-more">Read More</a>
     

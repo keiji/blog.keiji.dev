@@ -31,8 +31,9 @@
 
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.78.1" /><meta property="og:title" content="ScaleGestureとScroll" />
+<meta name="generator" content="Hugo 0.78.2" /><meta property="og:title" content="ScaleGestureとScroll" />
 <meta property="og:description" content="
+「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。
 2020/11/09 追記:
 みんコミAdvent Calendarその他の知見を元に、漫画表示用カスタムビュー「MangaView」を公開しました。
 
@@ -43,7 +44,7 @@ https://github.com/keiji/mangaview
 はじめに
 この記事は「みんコミ Advent Calendar」の21日目の記事です。
 「みんコミ」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
-" />
+（公開終了しています）" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-21.html" />
 <meta property="og:image" content="https://blog.keiji.dev/images/logo.png"/>
@@ -56,6 +57,7 @@ https://github.com/keiji/mangaview
 
 <meta name="twitter:title" content="ScaleGestureとScroll"/>
 <meta name="twitter:description" content="
+「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。
 2020/11/09 追記:
 みんコミAdvent Calendarその他の知見を元に、漫画表示用カスタムビュー「MangaView」を公開しました。
 
@@ -66,7 +68,7 @@ https://github.com/keiji/mangaview
 はじめに
 この記事は「みんコミ Advent Calendar」の21日目の記事です。
 「みんコミ」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
-"/>
+（公開終了しています）"/>
 
   </head>
   <body>
@@ -133,6 +135,7 @@ https://github.com/keiji/mangaview
     <article class="article" class="blog-post">
       
     <hr>
+<p><strong><a href="https://twitter.com/mincomi_jp/status/1057847395889737730">「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。</a></strong></p>
 <p>2020/11/09 追記:
 みんコミAdvent Calendarその他の知見を元に、漫画表示用カスタムビュー「MangaView」を公開しました。</p>
 <ul>
@@ -143,7 +146,7 @@ https://github.com/keiji/mangaview
 <h2 id="はじめに">はじめに</h2>
 <p>この記事は「<a href="http://qiita.com/advent-calendar/2015/mincomi">みんコミ Advent Calendar</a>」の21日目の記事です。</p>
 <p>「<a href="https://www.mincomi.jp">みんコミ</a>」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。</p>
-<p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" /></a></p>
+<p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" /></a>（公開終了しています）</p>
 <hr>
 <p>「みんコミ」アプリのコミックビューアーのピンチイン・アウトをしたときの拡大縮小については<a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-19.html">前の記事</a>で述べましたが、今回はピンチイン・アウトをした後の挙動についてです。</p>
 <p>現在のコミックビューアーは、ピンチイン・アウトをした後、ディスプレイから指を放すと、スクロールが一気に跳ぶことがあります（Scrollerを使った滑らかな移動ではなく、一瞬でスクロール値が変わる感じです）。</p>

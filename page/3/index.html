@@ -31,7 +31,7 @@
 
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.78.1" /><meta property="og:title" content="めがねをかけるんだ" />
+<meta name="generator" content="Hugo 0.78.2" /><meta property="og:title" content="めがねをかけるんだ" />
 <meta property="og:description" content="Don&#39;t take your glasses off." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.keiji.dev/" />
@@ -149,18 +149,7 @@
 <li>相手を否定しない</li>
 <li>具体性がなく批判するレビューにはアクションを起こさない</li>
 </ul>
-<p>初心者向けの本で「これではプログラムは理解できない」と言う指摘には、あらためて本のコンセプトを説明することもありますし、「授業で使いました」と言うレビューに返信をしたりもしています。</p>
-<h3 id="新しくトピックを開始するには">新しくトピックを開始するには、</h3>
-<p>ある日、読者の方から「コードを転記するときにミスをしやすい」という<a href="https://www.amazon.co.jp/review/R1AENPRX5QAVD/ref=cm_cr_dp_title?ie=UTF8&amp;ASIN=B01IT509EY&amp;channel=detail-glance&amp;nodeID=2250738051&amp;store=digital-text">指摘</a>をいただきました。</p>
-<p>確認すると、指摘のあった部分はコードの途中で改ページがあり、さらにインデントのレベルが変わっている（Pythonコードなのでインデントを間違うのは深刻）ので、確かに間違いそうです。</p>
-<p>せっかく教えてもらったのだから、きちんと報告しようと次のコメントを投稿したときのことです。</p>
-<pre><code>ご指摘のページを確認しました。
-ページの切れ目でインデントが変わっているので、確かに間違えますね……次版から改善します。
-ありがとうございます！
-</code></pre>
-<p><img src="https://blog.keiji.dev/wp-content/uploads/2016/10/Screen-Shot-2016-10-03-at-11.23.52.png" alt="screen-shot-2016-10-03-at-11-23-52" width="1634" height="594" class="aligncenter size-full wp-image-1412" /></p>
-<p>「新しくトピックを開始するには、Amazonコミュニティで良い評価を得ている必要があります。」</p>
-<p><a href="https://www.amazon.co.jp/gp/pdp/profile/A1THFNLOBETJP6">僕のこれまでしてきたレビュー</a>を確認した限り、コミュニティでの評価はそれほど悪いとは思えません。システムの不具合かな？ 実に不思議なこともあるものだとAmazonに問合せをしました。</p></p>
+<p>初心者向けの本で「これではプログラムは理解できない」と言う指摘には、あらためて本のコンセプトを説明することもありますし、「授業で使いました」と言うレビューに返信をしたりもしています。</p></p>
         <a href="https://blog.keiji.dev/2016/10/tf_book_kindle_sale.html" class="post-read-more">Read More</a>
     
   </div>
@@ -186,7 +175,11 @@
   </a>
   <div class="post-entry">
     
-      <p>苛立ち、腹を立てて「こんなのはダメだ」と言いたくなったとき。僕はそれらを批判し、否定するネガティブなエントリを投稿する前に、「自分ならこうす</p>
+      <p><p>苛立ち、腹を立てて「こんなのはダメだ」と言いたくなったとき。僕はそれらを批判し、否定するネガティブなエントリを投稿する前に、「自分ならこうする」と言い換えることにしています（稀に、エンタメまで昇華できるように努力してみることもあります。<a href="https://blog.keiji.dev/2015/04/iq145.html">これ</a>とか、<a href="https://blog.keiji.dev/2017/01/demodori.html">これ</a>）。</p>
+<p>たとえばですが、</p>
+<p>「僕は誤字や脱字に無頓着な人間を信用できない」</p>
+<p>「僕は自分を信頼してもらうために、自分が書く文章には誤字脱字がないように特に気をつけています」</p>
+<p>言っていることは同じでも、印象は全然違いますよね。</p></p>
         <a href="https://blog.keiji.dev/2016/09/brilliant_but_cruel.html" class="post-read-more">Read More</a>
     
   </div>
@@ -212,21 +205,12 @@
   </a>
   <div class="post-entry">
     
-      <p><p>時間を見つけてはTensorFlow関係のあれこれをちまちま続けています。</p>
-<p>先日は「<a href="https://www.pasonatech.co.jp/skill_up/event/naniwa_tech.jsp">なにわTECH道</a>」で、TensorFlowを使ったイラスト顔検出について発表しました。</p>
-<h2 id="データセットの作成">データセットの作成</h2>
-<p>これまで、機械学習に使う画像（データセット）の作成にはMacの「プレビュー」を使っていました。</p>
-<p>１枚ずつ画像を読み込んでクロッピング（トリミング）していたのですが、１枚の画像に複数の顔があるときや、あとで領域を微調整（特に領域を拡大）したいときが面倒でした。</p>
-<p>良さそうなツールがないか、少しばかり探してみたのですが、僕の思い描くような操作性のものがありませんでした。</p>
-<p>なければ作れば良い。</p>
-<p>そんなわけで、自分で画像の切り出しツールツール「Region Cropper」を開発しました。</p>
-<p>１人で使うのももったいないので、GitHubで公開します。</p>
-<h2 id="region-cropper">Region Cropper</h2>
-<p>GitHub: <a href="https://github.com/keiji/region_cropper">https://github.com/keiji/region_cropper</a></p>
-<p><img src="https://blog.keiji.dev/wp-content/uploads/2016/09/set_region.png" alt="set_region" width="2048" height="1580" class="aligncenter size-full wp-image-1383" /></p>
-<p>GUIのフレームワークに、使い慣れたSwingではなくJava FXを使いました。</p>
-<p>そのため、Java 8のUpdate40以降でしかきちんと動きません。</p>
-<p>以下、Region CropperのREADME.mdから。</p></p>
+      <p><hr>
+<p><strong>2020年11月15日追記:</strong> 「Region Cropper」は非推奨となりました。Javaの実行環境に「Java FX」が標準で含まれなくなったため、導入のハードルが上がったことが非推奨とした原因です。</p>
+<p>代替として「<a href="https://keiji.github.io/mrdb-web-client/">MRDB-web-client</a>」の利用を検討してください。</p>
+<hr>
+<p>時間を見つけてはTensorFlow関係のあれこれをちまちま続けています。</p>
+<p>先日は「<a href="https://www.pasonatech.co.jp/skill_up/event/naniwa_tech.jsp">なにわTECH道</a>」で、TensorFlowを使ったイラスト顔検出について発表しました。</p></p>
         <a href="https://blog.keiji.dev/2016/09/about_region_cropper.html" class="post-read-more">Read More</a>
     
   </div>
@@ -443,12 +427,7 @@
     
       <p><p>　僕はいま、<a href="https://events.google.com/io2016/" target="_blank">Google I/O 2016</a>参加で渡米するにあたり、時差ボケ予防のために徹夜でこの記事を書いています。</p>
 <h3 id="概要忙しい人向け">概要（忙しい人向け）</h3>
-<p>　TensorFlowのチュートリアルにある課題（エクササイズ）に挑戦した。Softmaxの適用については比較的簡単だったが、Fully connected層をLocally connected層に変える課題については難航し、解決していない。</p>
-<p>　Locally connected層は、重み共有をしない畳み込み層である（<a href="https://code.google.com/p/cuda-convnet/wiki/LayerParams#Locally-connected_layer_with_unshared_weights" target="_blank">cuda-convnet</a>）。</p>
-<p>そこで、チュートリアルのモデルのFully connected層をConvolution層に置き換えたところ、学習が正常に行われなくなった。</p>
-<p>　TensorBoardを通じてモデルの状態を確認したところ、conv2層で勾配消失が起きていることがわかった。さらに調査を続けると、conv2層のweightsの初期値がcuda-convnetに記載されている値と異なっており、修正することで正常に学習できるようになった（数値の食い違いが意図的なものかは不明だが、修正を<a href="https://github.com/tensorflow/tensorflow/pull/2374" target="_blank">Pull Request</a>している）。</p>
-<p>　「重み共有（Shared weights/Tied weights）」をしないというLocally connectedの条件をTensorFlowでどのように実現するかは現時点でわかっていない。<code>depthwise_conv2d</code>について検討したが、上手くいかないと判断している（出力フィルタの枚数を減らすことができないため）。</p>
-<p>　エクササイズについては、今後も調査を続けていく。</p></p>
+<p>　TensorFlowのチュートリアルにある課題（エクササイズ）に挑戦した。Softmaxの適用については比較的簡単だったが、Fully connected層をLocally connected層に変える課題については難航し、解決していない。</p></p>
         <a href="https://blog.keiji.dev/2016/05/wip_trying_cifar10_exercise.html" class="post-read-more">Read More</a>
     
   </div>
@@ -476,13 +455,7 @@
   </a>
   <div class="post-entry">
     
-      <p><h2 id="あわせて読みたい">あわせて読みたい</h2>
-<ul>
-<li><a href="http://www.kabuku.co.jp/developers/errors-with-tensorflow-on-gpu">TensorFlow on DockerでGPUを使えるようにする方法 | 株式会社カブク</a></li>
-<li><a href="http://www.muo.jp/2016/05/nvidia-docker-tensorflow.html">NVIDIA Dockerで簡単にGPU対応のTensorFlow入りコンテナを作る方法 | muo-notes</a></li>
-</ul>
-<h2 id="概要">概要</h2>
-<p>　GPUマシンでTensorFlowを実行する際、CUDAもcuDNNも正常にセットアップできているのに、TensorFlowがGPUを認識しない（<code>CUDA_ERROR_NO_DEVICE</code>や<code>No GPU devices available on machine.</code>が表示される）場合、正しいディスプレイカード・ドライバがインストールされていない可能性があります。</p>
+      <p><p>　GPUマシンでTensorFlowを実行する際、CUDAもcuDNNも正常にセットアップできているのに、TensorFlowがGPUを認識しない（<code>CUDA_ERROR_NO_DEVICE</code>や<code>No GPU devices available on machine.</code>が表示される）場合、正しいディスプレイカード・ドライバがインストールされていない可能性があります。</p>
 <p>　筆者の環境では、既存のドライバーをアンインストール（<tt>sudo apt-get remove &ndash;purge nvidia*</tt>）して、<a href="http://www.nvidia.co.jp/Download/index.aspx?lang=jp" target="_blank">NVIDIAのサイト</a>からドライバーをダウンロード・インストールすることでGPUを認識するようになりました。</p></p>
         <a href="https://blog.keiji.dev/2016/05/cuda_error_no_device.html" class="post-read-more">Read More</a>
     

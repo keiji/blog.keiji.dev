@@ -115,9 +115,7 @@
 			<description>&lt;p&gt;　タイトルの通り、このブログを含めたいくつかのサイトを&lt;a href=&#34;https://www.gehirn.jp/rs2plus/&#34;&gt;Gehirn RS2 Plus&lt;/a&gt;に引っ越しました。同時にStatic Site Generator（静的サイトジェネレーター) &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;を使って静的サイト化しています。&lt;/p&gt;
 &lt;p&gt;　これまでは、「さくらのVPS」にインストールしたWordPress上で管理していました。
 さくらのVPSを使うと、システムのすべてを自分で管理することになり、セキュリティアップデートなどのメンテナンスもすべて自分でやる必要がありました（もちろん、それは利点でもあります）。&lt;/p&gt;
-&lt;p&gt;　加えてWordPressは、最初にセットアップして以降、数度の更新を経て、初期にインストールしたプラグインが動いたり動かなかったりしていました。最初の頃にがんばってカスタムしたテーマも、今ではどこをどう変えたのか覚えていませんでした。&lt;/p&gt;
-&lt;h2 id=&#34;gehirn-rs2-plusとは&#34;&gt;Gehirn RS2 Plusとは&lt;/h2&gt;
-&lt;p&gt;　Gehirn RS2 Plus（以下、「RS2 Plus」）は、ゲヒルン株式会社が運営するホスティングサービスです。&lt;/p&gt;</description>
+&lt;p&gt;　加えてWordPressは、最初にセットアップして以降、数度の更新を経て、初期にインストールしたプラグインが動いたり動かなかったりしていました。最初の頃にがんばってカスタムしたテーマも、今ではどこをどう変えたのか覚えていませんでした。&lt;/p&gt;</description>
 		</item>
       	
 		<item>
@@ -126,13 +124,7 @@
 			<pubDate>Mon, 24 Dec 2018 05:30:34 +0000</pubDate>
 			<guid>https://blog.keiji.dev/2018/12/tensorflow-advent_calendar.html</guid>
 			<description>&lt;p&gt;　この記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2018/tensorflow&#34;&gt;TensorFlow Advent Calendar 2018&lt;/a&gt;の24日目の記事です。&lt;/p&gt;
-&lt;p&gt;　23日目の記事は、AtuNukaさんによる「&lt;a href=&#34;https://qiita.com/AtuNuka/items/6966efeddceb96012819&#34;&gt;Design Documentから見たTensorFlow 2.0の変更点&lt;/a&gt;」でした。&lt;/p&gt;
-&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
-&lt;p&gt;　あいかわらず趣味でTensorFlowを使っていて、最近はAndroidで動作させるTensorFlow Liteまわりを重点的に取り組んでいます。&lt;/p&gt;
-&lt;p&gt;　アドベントカレンダーの22日目の記事、足立氏（カブク社）による「&lt;a href=&#34;https://www.kabuku.co.jp/developers/how-is-tflite-useful&#34;&gt;いまMLKitカスタムモデル（TF Lite）は使えるのか&lt;/a&gt;」に書かれているように、TensorFlowのモデルをAndroid端末で動かすことに関しては「使える」レベルになってきていると筆者も思います。&lt;/p&gt;
-&lt;p&gt;　そこで今日は、TensorFlow LiteのモデルをAndroidアプリに組み込んで動作させるとき、NN APIを使うように設定すると「動かない」という話をします。&lt;/p&gt;
-&lt;p&gt;「使えるレベルになってきている」と、言った直後にこんなことを言ってごめんね。&lt;/p&gt;
-&lt;p&gt;　でも、本当です。&lt;/p&gt;</description>
+&lt;p&gt;　23日目の記事は、AtuNukaさんによる「&lt;a href=&#34;https://qiita.com/AtuNuka/items/6966efeddceb96012819&#34;&gt;Design Documentから見たTensorFlow 2.0の変更点&lt;/a&gt;」でした。&lt;/p&gt;</description>
 		</item>
       	
 		<item>

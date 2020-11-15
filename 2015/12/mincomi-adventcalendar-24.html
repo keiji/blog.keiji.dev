@@ -31,11 +31,13 @@
 
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.78.1" /><meta property="og:title" content="続: Fragment使う人に最低限、知っておいて欲しいこと" />
-<meta property="og:description" content="はじめに
+<meta name="generator" content="Hugo 0.78.2" /><meta property="og:title" content="続: Fragment使う人に最低限、知っておいて欲しいこと" />
+<meta property="og:description" content="
+「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。
+はじめに
 この記事は「みんコミ Advent Calendar」の24日目の記事です。
 「みんコミ」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
-
+（公開終了しています）
 ［2015/12/25追記: サンプルコードのonCreateメソッド内でFragmentを初期化する処理を、Activityの再生時には実行しないように変更してあります（savedInstanceStateで判定）］" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-24.html" />
@@ -48,10 +50,12 @@
 <meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
 
 <meta name="twitter:title" content="続: Fragment使う人に最低限、知っておいて欲しいこと"/>
-<meta name="twitter:description" content="はじめに
+<meta name="twitter:description" content="
+「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。
+はじめに
 この記事は「みんコミ Advent Calendar」の24日目の記事です。
 「みんコミ」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
-
+（公開終了しています）
 ［2015/12/25追記: サンプルコードのonCreateメソッド内でFragmentを初期化する処理を、Activityの再生時には実行しないように変更してあります（savedInstanceStateで判定）］"/>
 
   </head>
@@ -118,10 +122,12 @@
   <div class="container" role="main">
     <article class="article" class="blog-post">
       
-    <h2 id="はじめに">はじめに</h2>
+    <hr>
+<h2 id="みんなのコミックは2018年10月31日を持ちまして更新を終了いたしましたhttpstwittercommincomi_jpstatus1057847395889737730"><strong><a href="https://twitter.com/mincomi_jp/status/1057847395889737730">「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。</a></strong></h2>
+<h2 id="はじめに">はじめに</h2>
 <p>この記事は「<a href="http://qiita.com/advent-calendar/2015/mincomi">みんコミ Advent Calendar</a>」の24日目の記事です。</p>
 <p>「<a href="https://www.mincomi.jp">みんコミ</a>」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。</p>
-<p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" /></a></p>
+<p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" /></a>（公開終了しています）</p>
 <p>［2015/12/25追記: サンプルコードのonCreateメソッド内でFragmentを初期化する処理を、Activityの再生時には実行しないように変更してあります（<code>savedInstanceState</code>で判定）］</p>
 <hr>
 <p>現在の「みんコミ」アプリでは画面の遷移には<code>Acrivity</code>が使われていて、<code>Fragment</code>は使われていない様子です。</p>
