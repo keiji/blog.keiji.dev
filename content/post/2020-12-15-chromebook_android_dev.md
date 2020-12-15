@@ -56,6 +56,6 @@ connected to [ChromebookのIPアドレス]:5555
 
 ----
 
-　実際に使ってみて、使い勝手はなかなか良いと思いました。液晶もきれいでタッチパネルの精度も良好です。少し重いのが玉に瑕ですが、Androidタブレット不遇の時代にChromebookという選択肢は十分に有りだと思います。付属のキーボードが日本語というのが不満なので、時間ができたら英語キーボードが取り寄せられるかやってみようと思います。
+　実際に使ってみて、使い勝手はなかなか良いと思いました。液晶もきれいでタッチパネルの精度も良好です。少し重いのが玉に瑕ですが、Androidタブレット不遇の時代にChromebookという選択肢は十分に有りだと思います。付属のキーボードが日本語というのが不満なので、時間ができたら英語キーボードが取り寄せられるかやってみます。
 
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=keijiariyama-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08G4MS4PF&linkId=ecdd3761899c6480090d50dbcffc1162"></iframe>
+<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//rcm-fe.amazon-adsystem.com/e/cm?lt1=_blank&bc1=000000&IS2=1&bg1=FFFFFF&fc1=000000&lc1=0000FF&t=keijiariyama-22&language=ja_JP&o=9&p=8&l=as4&m=amazon&f=ifr&ref=as_ss_li_til&asins=B08CCWGJDY&linkId=25d7ebff0a600f37ce654c7a6d2eff0f"></iframe>
