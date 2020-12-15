@@ -9,10 +9,19 @@
 		
 		<managingEditor>Page(/post)</managingEditor>
     	
-  		<lastBuildDate>Sun, 08 Nov 2020 15:00:10 +0900</lastBuildDate>
+  		<lastBuildDate>Tue, 15 Dec 2020 10:00:00 +0900</lastBuildDate>
 		
 		<atom:link href="/post/" rel="self" type="application/rss+xml" />
 		
+		<item>
+			<title>Chromebook（Lenovo IdeaPad Duet）でAndroidアプリ開発</title>
+			<link>https://blog.keiji.dev/2020/12/android_app_development_on_chromebook.html</link>
+			<pubDate>Tue, 15 Dec 2020 10:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2020/12/android_app_development_on_chromebook.html</guid>
+			<description>&lt;p&gt;　アプリ開発の仕事で比較的画面が大きい端末に対応する必要があり、いい感じのAndroidタブレットが見当たらなかったので、最近はAndroidアプリも普通に動く「Chromebook」を購入しました。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/androiddev_on_chromebook/my_new_gear.jpg&#34; alt=&#34;My new gear&amp;hellip;&#34;&gt;&lt;/p&gt;</description>
+		</item>
+      	
 		<item>
 			<title>MangaView 1.0.0をリリースしました</title>
 			<link>https://blog.keiji.dev/2020/11/mangaview-now-stable.html</link>
@@ -160,42 +169,6 @@
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;44p（本文墨刷）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;1,000円&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;</description>
-		</item>
-      	
-		<item>
-			<title>技術書典4でML Ops（TensorFlow）の本を頒布します</title>
-			<link>https://blog.keiji.dev/2018/04/techbookfest4-1.html</link>
-			<pubDate>Wed, 18 Apr 2018 10:35:10 +0000</pubDate>
-			<guid>https://blog.keiji.dev/2018/04/techbookfest4-1.html</guid>
-			<description>&lt;p&gt;4月22日、秋葉原UDX アキバ・スクエアにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf04/circle/21060002&#34; target=&#34;_blank&#34;&gt;技術書典4&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。&lt;/p&gt;
-&lt;p&gt;「めがねをかけるんだ」では、TensorFlowを使って2年間ひとりで取り組んできた「ML Ops」の活動記録を題材にした冊子を頒布いたします。&lt;/p&gt;
-&lt;p&gt;&lt;img class=&#34;aligncenter size-full&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2018/04/76e3081c96d22431ff3554bf7affdafe.jpg&#34; alt=&#34;tfbook4&#34;  width=&#34;50%&#34; height=&#34;50%&#34; /&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;茶色いトイプーは食べ物じゃないっ！&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;B5&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;52p（本文墨刷）&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;

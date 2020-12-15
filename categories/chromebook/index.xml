@@ -1,0 +1,186 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Chromebook on めがねをかけるんだ</title>
+		<link>https://blog.keiji.dev/categories/chromebook/</link>
+		<description>Recent content in Chromebook </description>
+		<generator>Hugo -- gohugo.io</generator>
+		
+  		<language>ja</language>
+		
+		<managingEditor>Page(/categories/chromebook)</managingEditor>
+    	
+  		<lastBuildDate>Tue, 15 Dec 2020 10:00:00 +0900</lastBuildDate>
+		
+		<atom:link href="/categories/chromebook/" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Chromebook（Lenovo IdeaPad Duet）でAndroidアプリ開発</title>
+			<link>https://blog.keiji.dev/2020/12/android_app_development_on_chromebook.html</link>
+			<pubDate>Tue, 15 Dec 2020 10:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2020/12/android_app_development_on_chromebook.html</guid>
+			<description>&lt;p&gt;　アプリ開発の仕事で比較的画面が大きい端末に対応する必要があり、いい感じのAndroidタブレットが見当たらなかったので、最近はAndroidアプリも普通に動く「Chromebook」を購入しました。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/androiddev_on_chromebook/my_new_gear.jpg&#34; alt=&#34;My new gear&amp;hellip;&#34;&gt;&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>MangaView 1.0.0をリリースしました</title>
+			<link>https://blog.keiji.dev/2020/11/mangaview-now-stable.html</link>
+			<pubDate>Sun, 08 Nov 2020 15:00:10 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2020/11/mangaview-now-stable.html</guid>
+			<description>&lt;p&gt;　&lt;a href=&#34;https://blog.keiji.dev/2020/08/mangaview.html&#34;&gt;今年の夏から作っていた&lt;/a&gt;漫画ビューアー用のカスタムビュー「MangaView」、ついに安定版となる1.0.0をリリースすることができました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/keiji/mangaview&#34;&gt;https://github.com/keiji/mangaview&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;　これまでAndroidアプリはいくつもGoogle Playで公開してきたし、ライブラリを作る仕事はいくつも手がけてきたけれど、公開するライブラリを手がけたのははじめて。パッケージングからBintrayでの配信、jcenterでの公開まで、とても良い勉強になったと思います。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>本当はおそろしい商業出版2020</title>
+			<link>https://blog.keiji.dev/2020/10/androidbook2020.html</link>
+			<pubDate>Sat, 31 Oct 2020 15:00:10 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2020/10/androidbook2020.html</guid>
+			<description>&lt;p&gt;　最近、「商業出版って本当にいいの？」みたいな言説を見かけるようになりました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;同人誌の商業化はいいぞ &lt;a href=&#34;https://note.com/oyakata2438/n/nc4a9f21b4289&#34;&gt;https://note.com/oyakata2438/n/nc4a9f21b4289&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;著者が出版契約で知るべき7つの項目 &lt;a href=&#34;https://note.com/techbookfest/n/nfdc47831072d&#34;&gt;https://note.com/techbookfest/n/nfdc47831072d&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;技術同人誌を、技術の泉シリーズで商業化する&lt;br /&gt; &lt;a href=&#34;https://zenn.dev/erukiti/articles/writing-commercial&#34;&gt;https://zenn.dev/erukiti/articles/writing-commercial&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;商業出版にメリットはないのか？&lt;br /&gt; &lt;a href=&#34;https://note.com/oyakata2438/n/n8813602ce4f5&#34;&gt;https://note.com/oyakata2438/n/n8813602ce4f5&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;　上から下に時系列で記事が並んでいます。後半2つ（ツリー下）は、アンサーエントリーになっているとか（「同人誌の商業化はいいぞ」と「著者が出版契約で知るべき7つの項目」のエントリーにはリファレンスがなく、同じ時期に出た別々のエントリーと言う認識）。&lt;/p&gt;
+&lt;p&gt;　技術書の商業出版に関してはずいぶん前に「&lt;a href=&#34;https://bookwalker.jp/dea8b77689-0a5b-4bd5-a0ba-c4c73636bc8b/&#34;&gt;本当はおそろしい商業出版!?&lt;/a&gt;」という同人誌にまとめたことがあり「書きたいことはあの本にみんな書いた」感があったのですが、ここに来て盛り上がっていることを知り、改めて筆を取った次第です。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</title>
+			<link>https://blog.keiji.dev/2020/08/mangaview.html</link>
+			<pubDate>Tue, 25 Aug 2020 15:00:10 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2020/08/mangaview.html</guid>
+			<description>&lt;p&gt;　漫画ビューアー用のカスタムビュー「MangaView」をオープンソースで公開しました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MangaView - An ImageView for reading manga(comics) for Android.
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/keiji/mangaview&#34;&gt;https://github.com/keiji/mangaview&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;　MangaViewを使えば、複数枚の画像（ページ）を並べて表示して、ピンチイン・ピンチアウトで拡大率を変えたり、スワイプでスクロールしたりできます。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/mangaview/mangaview1.gif&#34; alt=&#34;mangaview1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;　また一画面に見開きで表示可能なので、横画面の時だけ見開き表示。といった使い方もできます。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/mangaview/mangaview2.gif&#34; alt=&#34;mangaview1&#34;&gt;&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>ELEGOO MARSの出力精度の改善</title>
+			<link>https://blog.keiji.dev/2020/01/elegoo-mars_presision.html</link>
+			<pubDate>Sat, 04 Jan 2020 18:00:10 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2020/01/elegoo-mars_presision.html</guid>
+			<description>&lt;p&gt;　あけましておめでとうございます。御社の原稿、いまがんばって書いてます！&lt;/p&gt;
+&lt;p&gt;　さて、昨年末のことになりますが、光造形３Dプリンター「ELEGOO MARS」を購入しました。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/mars/mars_z-axis-12.jpg&#34; alt=&#34;ELEGOO MARS&#34;&gt;&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>技術書典6でMLOps本「巡りあえないConcourse」を頒布します</title>
+			<link>https://blog.keiji.dev/2019/04/techbookfest6.html</link>
+			<pubDate>Fri, 12 Apr 2019 10:00:10 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2019/04/techbookfest6.html</guid>
+			<description>&lt;p&gt;　4月14日、池袋サンシャインシティにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf06/circle/38380004&#34;&gt;技術書典6&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。&lt;/p&gt;
+&lt;p&gt;　「めがねをかけるんだ」では、TensorFlowを使って3年間ひとりで取り組んできた「MLOps」を題材にした冊子を頒布いたします。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/concourse.png&#34; alt=&#34;tfbook6&#34; title=&#34;巡りあえないConcourse&#34;&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;巡りあえないConcourse&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;B5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;52p（本文墨刷）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1,000円&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+		</item>
+      	
+		<item>
+			<title>Gehirn RS2 Plusに引っ越しした</title>
+			<link>https://blog.keiji.dev/2018/12/move_to_gehirn_rs2_plus.html</link>
+			<pubDate>Mon, 31 Dec 2018 00:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2018/12/move_to_gehirn_rs2_plus.html</guid>
+			<description>&lt;p&gt;　タイトルの通り、このブログを含めたいくつかのサイトを&lt;a href=&#34;https://www.gehirn.jp/rs2plus/&#34;&gt;Gehirn RS2 Plus&lt;/a&gt;に引っ越しました。同時にStatic Site Generator（静的サイトジェネレーター) &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;を使って静的サイト化しています。&lt;/p&gt;
+&lt;p&gt;　これまでは、「さくらのVPS」にインストールしたWordPress上で管理していました。
+さくらのVPSを使うと、システムのすべてを自分で管理することになり、セキュリティアップデートなどのメンテナンスもすべて自分でやる必要がありました（もちろん、それは利点でもあります）。&lt;/p&gt;
+&lt;p&gt;　加えてWordPressは、最初にセットアップして以降、数度の更新を経て、初期にインストールしたプラグインが動いたり動かなかったりしていました。最初の頃にがんばってカスタムしたテーマも、今ではどこをどう変えたのか覚えていませんでした。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>いまNN API（TensorFlow Lite）は使えるのか</title>
+			<link>https://blog.keiji.dev/2018/12/tensorflow-advent_calendar.html</link>
+			<pubDate>Mon, 24 Dec 2018 05:30:34 +0000</pubDate>
+			<guid>https://blog.keiji.dev/2018/12/tensorflow-advent_calendar.html</guid>
+			<description>&lt;p&gt;　この記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2018/tensorflow&#34;&gt;TensorFlow Advent Calendar 2018&lt;/a&gt;の24日目の記事です。&lt;/p&gt;
+&lt;p&gt;　23日目の記事は、AtuNukaさんによる「&lt;a href=&#34;https://qiita.com/AtuNuka/items/6966efeddceb96012819&#34;&gt;Design Documentから見たTensorFlow 2.0の変更点&lt;/a&gt;」でした。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>技術書典4に参加してきました</title>
+			<link>https://blog.keiji.dev/2018/04/look_back_techbookfest4.html</link>
+			<pubDate>Thu, 26 Apr 2018 05:11:06 +0000</pubDate>
+			<guid>https://blog.keiji.dev/2018/04/look_back_techbookfest4.html</guid>
+			<description>&lt;p&gt;　4月22日、秋葉原UDX アキバ・スクエアにて開催された「&lt;a href=&#34;https://techbookfest.org/event/tbf04/circle/21060002&#34; target=&#34;_blank&#34;&gt;技術書典4&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加してきました。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2018/04/IMG_20180422_103336.jpg&#34; alt=&#34;&#34; width=&#34;390&#34; height=&#34;520&#34; class=&#34;aligncenter size-full wp-image-1696&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;　この記事は「技術書典4」の振り返りの記事になります。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>技術書典4で「本当はおそろしい商業出版！？」を頒布します</title>
+			<link>https://blog.keiji.dev/2018/04/techbookfest4-2.html</link>
+			<pubDate>Wed, 18 Apr 2018 10:55:23 +0000</pubDate>
+			<guid>https://blog.keiji.dev/2018/04/techbookfest4-2.html</guid>
+			<description>&lt;p&gt;4月22日、秋葉原UDX アキバ・スクエアにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf04/circle/21060002&#34; target=&#34;_blank&#34;&gt;技術書典4&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。&lt;/p&gt;
+&lt;p&gt;「めがねをかけるんだ」では、筆者が技術書の商業出版に関わる中で経験した様々なエピソードを通じて、知見や反省点をまとめた本「本当はおそろしい商業出版！？」を頒布します。&lt;/p&gt;
+&lt;p&gt;&lt;img class=&#34;aligncenter size-full&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2018/04/shogyo.png&#34; alt=&#34;tfbook4&#34;  width=&#34;50%&#34; height=&#34;50%&#34; /&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;本当はおそろしい商業出版！？&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;B6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;44p（本文墨刷）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1,000円&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description>
+		</item>
+      	
+	</channel>
+</rss>
