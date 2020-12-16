@@ -128,8 +128,8 @@ Linux（ベータ版）の有効化、Androidアプリの開発（ADBデバッ�
 <li><a href="https://developer.android.com/topic/arc/development-environment?hl=ja">Chrome OSデバイス - 開発環境の準備</a></li>
 </ul>
 <p>　筆者の実務的にはChrome OS上でAndroidアプリ開発が完結するということはないので、外部のPCからテスト端末（Chromebook）にapkをインストールする方法として「<a href="https://developer.android.com/topic/arc/development-environment?hl=ja#deploy_from_another_device">Chrome OSデバイス - 別のデバイスからデプロイする</a>」を参考に設定しました。</p>
-<p>　ドキュメントを読みながら「Lenovo IdeaPad Duet Chromebook」を設定した結論ですが、まずはじめに <strong>「USB経由での接続（デバッグ）」は諦めて「ネットワーク経由での接続」で運用しましょう。</strong></p>
-<p>　ネットワーク経由での接続についても「Androidアプリの開発」を有効にしたら、外部PCからChromebookのIPアドレスに対して、いきなり<code>adb connect</code>して問題ありません（外部のPCを信頼するか尋ねるダイアログが表示される）。</p>
+<p>　結論から言うと <strong>「USB経由での接続（デバッグ）」は諦めて「ネットワーク経由での接続」で運用しましょう。</strong></p>
+<p>　また、ネットワーク経由での接続についても「Androidアプリの開発」を有効にしたら、外部PCからChromebookのIPアドレスに対して、いきなり<code>adb connect</code>して問題ありません（外部のPCを信頼するか尋ねるダイアログが表示される）。</p>
 <pre><code>$ adb connect [ChromebookのIPアドレス]
 connected to [ChromebookのIPアドレス]:5555
 </code></pre><p>　<code>shell</code> <code>crossystem</code> <code>dev_features_ssh</code>と、ドキュメントにはいろいろ手順が書いてありますが、手順通りに作業しようとしても、筆者の環境には<code>crosssystem</code>がなく、そもそも<code>shell</code>の時点でシステムがなかったりします。ドキュメントが古いのかと思って英語版を見てみましたが、内容に大きな違いはなさそうです。</p>
