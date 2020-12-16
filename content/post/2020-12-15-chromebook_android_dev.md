@@ -39,9 +39,9 @@ Linux（ベータ版）の有効化、Androidアプリの開発（ADBデバッ�
 
 　筆者の実務的にはChrome OS上でAndroidアプリ開発が完結するということはないので、外部のPCからテスト端末（Chromebook）にapkをインストールする方法として「[Chrome OSデバイス - 別のデバイスからデプロイする](https://developer.android.com/topic/arc/development-environment?hl=ja#deploy_from_another_device)」を参考に設定しました。
 
-　ドキュメントを読みながら「Lenovo IdeaPad Duet Chromebook」を設定した結論ですが、まずはじめに **「USB経由での接続（デバッグ）」は諦めて「ネットワーク経由での接続」で運用しましょう。**
+　結論から言うと **「USB経由での接続（デバッグ）」は諦めて「ネットワーク経由での接続」で運用しましょう。**
 
-　ネットワーク経由での接続についても「Androidアプリの開発」を有効にしたら、外部PCからChromebookのIPアドレスに対して、いきなり`adb connect`して問題ありません（外部のPCを信頼するか尋ねるダイアログが表示される）。
+　また、ネットワーク経由での接続についても「Androidアプリの開発」を有効にしたら、外部PCからChromebookのIPアドレスに対して、いきなり`adb connect`して問題ありません（外部のPCを信頼するか尋ねるダイアログが表示される）。
 
 ```
 $ adb connect [ChromebookのIPアドレス]
