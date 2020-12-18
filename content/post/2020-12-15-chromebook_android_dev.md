@@ -66,3 +66,7 @@ connected to [ChromebookのIPアドレス]:5555
  * Lenovo Duet -- be careful with the keyboard, it's hard to replace<br>https://www.reddit.com/r/chromeos/comments/htlel4/lenovo_duet_be_careful_with_the_keyboard_its_hard/
 
 　どうしようかな……
+
+### 追記2（2020/12/18）
+
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">Lenovo, 時間ができたからサポートセンターに問い合わせたんだけど、サポート体験はあまり良くはなかった。<br>あと、IdeaPad Duetのキーボードは本当に部品として販売していない。壊れた時はサポート（スマートセンター）に連絡して。こっちではわからないってことだった。<a href="https://t.co/f4gQMQcqXy">https://t.co/f4gQMQcqXy</a></p>&mdash; ARIYAMA Keiji (@keiji_ariyama) <a href="https://twitter.com/keiji_ariyama/status/1339812702890254338?ref_src=twsrc%5Etfw">December 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
