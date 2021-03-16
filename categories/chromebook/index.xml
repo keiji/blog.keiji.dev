@@ -14,6 +14,16 @@
 		<atom:link href="/categories/chromebook/" rel="self" type="application/rss+xml" />
 		
 		<item>
+			<title>COCOAに関わることになりました</title>
+			<link>https://blog.keiji.dev/2021/03/cocoa.html</link>
+			<pubDate>Tue, 16 Mar 2021 10:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2021/03/cocoa.html</guid>
+			<description>&lt;p&gt;　接触確認アプリ「COCOA」について以前ツイートしました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;繰り返しになるけど、COCOAのAndroid版をネイティブで作り直したいので、誰か知ってる人につないで欲しい。&lt;/p&gt;&amp;mdash; ARIYAMA Keiji (@keiji_ariyama) &lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1356905017412706308?ref_src=twsrc%5Etfw&#34;&gt;February 3, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;　ツイートした後もGitHubのCOCOAのリポジトリに&lt;a href=&#34;https://github.com/cocoa-mhlw/cocoa/issues/21#issuecomment-780502093&#34;&gt;コメント&lt;/a&gt;したり、知り合いに「COCOAやりたい」「COCOAやりたい」と言い続けたりした結果、このたび厚生労働省の技術参与として正式にCOCOAに携わることになりました。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
 			<title>Chromebook（Lenovo IdeaPad Duet）でAndroidアプリ開発</title>
 			<link>https://blog.keiji.dev/2020/12/android_app_development_on_chromebook.html</link>
 			<pubDate>Tue, 15 Dec 2020 10:00:00 +0900</pubDate>
@@ -144,42 +154,6 @@
 			<description>&lt;p&gt;　4月22日、秋葉原UDX アキバ・スクエアにて開催された「&lt;a href=&#34;https://techbookfest.org/event/tbf04/circle/21060002&#34; target=&#34;_blank&#34;&gt;技術書典4&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加してきました。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2018/04/IMG_20180422_103336.jpg&#34; alt=&#34;&#34; width=&#34;390&#34; height=&#34;520&#34; class=&#34;aligncenter size-full wp-image-1696&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;　この記事は「技術書典4」の振り返りの記事になります。&lt;/p&gt;</description>
-		</item>
-      	
-		<item>
-			<title>技術書典4で「本当はおそろしい商業出版！？」を頒布します</title>
-			<link>https://blog.keiji.dev/2018/04/techbookfest4-2.html</link>
-			<pubDate>Wed, 18 Apr 2018 10:55:23 +0000</pubDate>
-			<guid>https://blog.keiji.dev/2018/04/techbookfest4-2.html</guid>
-			<description>&lt;p&gt;4月22日、秋葉原UDX アキバ・スクエアにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf04/circle/21060002&#34; target=&#34;_blank&#34;&gt;技術書典4&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。&lt;/p&gt;
-&lt;p&gt;「めがねをかけるんだ」では、筆者が技術書の商業出版に関わる中で経験した様々なエピソードを通じて、知見や反省点をまとめた本「本当はおそろしい商業出版！？」を頒布します。&lt;/p&gt;
-&lt;p&gt;&lt;img class=&#34;aligncenter size-full&#34; src=&#34;https://blog.keiji.dev/wp-content/uploads/2018/04/shogyo.png&#34; alt=&#34;tfbook4&#34;  width=&#34;50%&#34; height=&#34;50%&#34; /&gt;&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;本当はおそろしい商業出版！？&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;B6&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;44p（本文墨刷）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;1,000円&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;</description>
 		</item>
       	
 	</channel>
