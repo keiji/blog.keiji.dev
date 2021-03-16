@@ -6,6 +6,7 @@ h2 {
 	margin-top: 3em;
 }
 .article p + p {
+	line-break: strict;
 	text-align: left;
 	font-size: 1em;
 	line-height: 1.9;
