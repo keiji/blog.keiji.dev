@@ -1,17 +1,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Posts on めがねをかけるんだ</title>
-		<link>https://blog.keiji.dev/post/</link>
-		<description>Recent content in Posts </description>
+		<title>COCOA on めがねをかけるんだ</title>
+		<link>https://blog.keiji.dev/categories/cocoa/</link>
+		<description>Recent content in COCOA </description>
 		<generator>Hugo -- gohugo.io</generator>
 		
   		<language>ja</language>
 		
-		<managingEditor>Page(/post)</managingEditor>
+		<managingEditor>Page(/categories/cocoa)</managingEditor>
     	
   		<lastBuildDate>Sat, 20 Mar 2021 17:30:00 +0900</lastBuildDate>
 		
-		<atom:link href="/post/" rel="self" type="application/rss+xml" />
+		<atom:link href="/categories/cocoa/" rel="self" type="application/rss+xml" />
 		
 		<item>
 			<title>アプリのアップデート時にAlarmManagerがキャンセルされなくなっていた</title>

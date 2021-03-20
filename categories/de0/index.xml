@@ -14,6 +14,17 @@
 		<atom:link href="/categories/de0/" rel="self" type="application/rss+xml" />
 		
 		<item>
+			<title>アプリのアップデート時にAlarmManagerがキャンセルされなくなっていた</title>
+			<link>https://blog.keiji.dev/2021/03/alarmmanager_evolution.html</link>
+			<pubDate>Sat, 20 Mar 2021 17:30:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2021/03/alarmmanager_evolution.html</guid>
+			<description>&lt;p&gt;　16日から公式にCOCOAのコラボレーターになってIssueやPRの対応をメインに活動しています。&lt;/p&gt;
+&lt;p&gt;　&lt;a href=&#34;https://blog.keiji.dev/2021/03/cocoa.html&#34;&gt;先日の記事&lt;/a&gt;に関ついて、たくさんの方から激励の言葉をいただきました。ありがとうございます。
+厚生労働省技術参与の着任から10日、コラボレーター就任から5日が経ちました。Twitterを普段しないエゴサをしたりしますと、やはりぼくの至らぬ点についてお叱りを受けていることも目に入ったりして反省しきりの日々です。&lt;/p&gt;
+&lt;p&gt;　今後も鋭意改善に努めて参りますので、何卒よろしくお願いいたします。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
 			<title>COCOAに関わることになりました</title>
 			<link>https://blog.keiji.dev/2021/03/cocoa.html</link>
 			<pubDate>Tue, 16 Mar 2021 10:00:00 +0900</pubDate>
@@ -144,16 +155,6 @@
 			<guid>https://blog.keiji.dev/2018/12/tensorflow-advent_calendar.html</guid>
 			<description>&lt;p&gt;　この記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2018/tensorflow&#34;&gt;TensorFlow Advent Calendar 2018&lt;/a&gt;の24日目の記事です。&lt;/p&gt;
 &lt;p&gt;　23日目の記事は、AtuNukaさんによる「&lt;a href=&#34;https://qiita.com/AtuNuka/items/6966efeddceb96012819&#34;&gt;Design Documentから見たTensorFlow 2.0の変更点&lt;/a&gt;」でした。&lt;/p&gt;</description>
-		</item>
-      	
-		<item>
-			<title>技術書典4に参加してきました</title>
-			<link>https://blog.keiji.dev/2018/04/look_back_techbookfest4.html</link>
-			<pubDate>Thu, 26 Apr 2018 05:11:06 +0000</pubDate>
-			<guid>https://blog.keiji.dev/2018/04/look_back_techbookfest4.html</guid>
-			<description>&lt;p&gt;　4月22日、秋葉原UDX アキバ・スクエアにて開催された「&lt;a href=&#34;https://techbookfest.org/event/tbf04/circle/21060002&#34; target=&#34;_blank&#34;&gt;技術書典4&lt;/a&gt;」に、サークル「めがねをかけるんだ」として参加してきました。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/wp-content/uploads/2018/04/IMG_20180422_103336.jpg&#34; alt=&#34;&#34; width=&#34;390&#34; height=&#34;520&#34; class=&#34;aligncenter size-full wp-image-1696&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;　この記事は「技術書典4」の振り返りの記事になります。&lt;/p&gt;</description>
 		</item>
       	
 	</channel>

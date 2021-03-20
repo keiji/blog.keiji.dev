@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+<title>アプリのアップデート時にAlarmManagerがキャンセルされなくなっていた</title>
+
+<meta name="description" content="Don&#39;t take your glasses off." />
+
+
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-62351683-1');
+  </script>
+  
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="alternate" type="application/rss+xml" href="https://blog.keiji.dev/index.xml" title="めがねをかけるんだ">
+
+<link id="dark-mode-theme" rel="stylesheet" href="https://blog.keiji.dev/css/dark.css" />
+<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
+
+<link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
+
+
+<script src="https://blog.keiji.dev/js/bundle.js"></script>
+<script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
+<meta name="generator" content="Hugo 0.81.0" /><meta property="og:title" content="アプリのアップデート時にAlarmManagerがキャンセルされなくなっていた" />
+<meta property="og:description" content="Android 2.2以降はアプリのアップデート時にAlarmManagerがキャンセルされなくなっている" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.keiji.dev/2021/03/alarmmanager_evolution.html" /><meta property="og:image" content="https://blog.keiji.dev/images/logo.png"/><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-03-20T17:30:00&#43;09:00" />
+<meta property="article:modified_time" content="2021-03-20T17:30:00&#43;09:00" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
+
+<meta name="twitter:title" content="アプリのアップデート時にAlarmManagerがキャンセルされなくなっていた"/>
+<meta name="twitter:description" content="Android 2.2以降はアプリのアップデート時にAlarmManagerがキャンセルされなくなっている"/>
+
+  </head>
+  <body>
+    
+  
+
+
+
+
+  <header>
+    <nav class="navbar">
+  <div class="nav">
+    
+      <a href="https://blog.keiji.dev/" class="nav-logo">
+      <img src="https://blog.keiji.dev/images/logo.png"
+           width=""
+           height=""
+           alt="Logo">
+      </a>
+    
+
+    <ul class="nav-links">
+      
+        
+          <li><a href="https://blog.keiji.dev/profile/" name="Profile"><i class="fas fa-user fa-lg"></i></a></li>
+        
+      
+        
+          <li><a href="https://blog.keiji.dev/licenses/" name="Licenses"><i class="fab fa-osi fa-lg"></i></a></li>
+        
+      
+    </ul>
+  </div>
+</nav>
+
+    <div class="intro-header">
+      <div class="container">
+        <div class="post-heading">
+          
+            <h1>アプリのアップデート時にAlarmManagerがキャンセルされなくなっていた</h1>
+          
+          
+            <span class="meta-post">
+  <i class="fa fa-calendar-alt"></i>&nbsp;2021-03-20
+  
+    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    
+      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+    
+      <a href="https://blog.keiji.dev//categories/cocoa/">COCOA</a>&nbsp;
+    
+      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+    
+  
+</span>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+  <div class="container" role="main">
+    <article class="article" class="blog-post">
+      
+    <p>　16日から公式にCOCOAのコラボレーターになってIssueやPRの対応をメインに活動しています。</p>
+<p>　<a href="https://blog.keiji.dev/2021/03/cocoa.html">先日の記事</a>に関ついて、たくさんの方から激励の言葉をいただきました。ありがとうございます。
+厚生労働省技術参与の着任から10日、コラボレーター就任から5日が経ちました。Twitterを普段しないエゴサをしたりしますと、やはりぼくの至らぬ点についてお叱りを受けていることも目に入ったりして反省しきりの日々です。</p>
+<p>　今後も鋭意改善に努めて参りますので、何卒よろしくお願いいたします。</p>
+<p>さて、今日はCOCOAに投稿されたIssueの中でぼくが特に勉強になったものを紹介します（すべてのIssueが勉強になっていますよ念のため）。</p>
+<ul>
+<li>Android 版でアプリアップデート後にログのローテートが正しく行われるか検証が必要
+<ul>
+<li><a href="https://github.com/cocoa-mhlw/cocoa/issues/62">https://github.com/cocoa-mhlw/cocoa/issues/62</a></li>
+</ul>
+</li>
+</ul>
+<p>　ログのローテーションをAlarmManagerで実行しているのですが、AlarmManagerはいくつかのタイミングでキャンセルされるはず。再起動時は<code>BOOT_COMPLETED</code>で処置しているけど、アプリのアップデート時は大丈夫？　と言う内容になります。投稿者は<a href="https://twitter.com/zipperpull">@zipperpull</a>さんです。いつもありがとうございます。</p>
+<p>　検証とか必要なことは全部<a href="https://github.com/cocoa-mhlw/cocoa/issues/62#issuecomment-803267473">Issueのコメント</a>に書いたので、詳しくはそっちを見てください。</p>
+<p>　大事なのは、ぼく自身「AlarmManagerに設定したジョブはアプリのアップデートでキャンセルされる」と覚えていたことです。</p>
+<p>　実際、この課題を検索すると「キャンセルされる」ことを裏付ける情報が見つかり、いくつかの対応策が提案されています。
+　しかし、実際にコードで検証してみるとキャンセルされず、さらに調べるとAndroid 2.2以降では挙動が変わっているという情報が見つかりました。</p>
+<p>　Android 2.2といえばリリースは2010年です。普段「ぼくはAndroidなら輝けるんだ」とかいっておきながら、この件に関してぼくの知識は10年以上も知識が更新されていなかったことになります。</p>
+<p>　反省すると同時に、意外なところで知識を新しくできた喜びを感じています。</p>
+<p>追伸：「いや、キャンセルされるぞ」って情報があったら教えてください。よろしくお願いいたします。</p>
+
+
+      
+    </article>
+    
+    
+      
+      
+</div>
+
+    <footer>
+  
+
+  <div class="container">
+    <p class="credits copyright">
+      <a href="https://blog.keiji.dev/about"></a>
+      &nbsp;&copy;
+      2021
+      
+      &nbsp;/&nbsp;
+      <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
+      
+      &nbsp;&ndash;&nbsp;
+      <i class="fas fa-moon" id="dark-mode-toggle"></i>
+
+    <p class="credits theme-by">
+      Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
+      Theme
+      <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
+    </p>
+    </p>
+  </div>
+</footer>
+
+  </body>
+</html>
