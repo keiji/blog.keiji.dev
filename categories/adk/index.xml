@@ -14,6 +14,14 @@
 		<atom:link href="/categories/adk/" rel="self" type="application/rss+xml" />
 		
 		<item>
+			<title>Android Bazaar and Conference 2021 Springサポートページ</title>
+			<link>https://blog.keiji.dev/2021/06/abc2021s/</link>
+			<pubDate>Sun, 20 Jun 2021 00:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2021/06/abc2021s/</guid>
+			<description>Android Bazaar and Conference 2021 Springの発表に関するサポートを行うページです。</description>
+		</item>
+      	
+		<item>
 			<title>アプリのアップデート時にAlarmManagerがキャンセルされなくなっていた</title>
 			<link>https://blog.keiji.dev/2021/03/alarmmanager_evolution.html</link>
 			<pubDate>Sat, 20 Mar 2021 17:30:00 +0900</pubDate>
@@ -146,15 +154,6 @@
 &lt;p&gt;　これまでは、「さくらのVPS」にインストールしたWordPress上で管理していました。
 さくらのVPSを使うと、システムのすべてを自分で管理することになり、セキュリティアップデートなどのメンテナンスもすべて自分でやる必要がありました（もちろん、それは利点でもあります）。&lt;/p&gt;
 &lt;p&gt;　加えてWordPressは、最初にセットアップして以降、数度の更新を経て、初期にインストールしたプラグインが動いたり動かなかったりしていました。最初の頃にがんばってカスタムしたテーマも、今ではどこをどう変えたのか覚えていませんでした。&lt;/p&gt;</description>
-		</item>
-      	
-		<item>
-			<title>いまNN API（TensorFlow Lite）は使えるのか</title>
-			<link>https://blog.keiji.dev/2018/12/tensorflow-advent_calendar.html</link>
-			<pubDate>Mon, 24 Dec 2018 05:30:34 +0000</pubDate>
-			<guid>https://blog.keiji.dev/2018/12/tensorflow-advent_calendar.html</guid>
-			<description>&lt;p&gt;　この記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2018/tensorflow&#34;&gt;TensorFlow Advent Calendar 2018&lt;/a&gt;の24日目の記事です。&lt;/p&gt;
-&lt;p&gt;　23日目の記事は、AtuNukaさんによる「&lt;a href=&#34;https://qiita.com/AtuNuka/items/6966efeddceb96012819&#34;&gt;Design Documentから見たTensorFlow 2.0の変更点&lt;/a&gt;」でした。&lt;/p&gt;</description>
 		</item>
       	
 	</channel>
