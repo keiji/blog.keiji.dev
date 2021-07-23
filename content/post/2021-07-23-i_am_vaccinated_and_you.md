@@ -5,6 +5,8 @@ type: post
 date: 2021-07-23T10:00:00+09:00
 url: /2021/07/i_am_vaccinated_and_you.html
 description: COVID-19 モデルナワクチン副反応の記録
+images:
+- /images/i_am_vaccinated_and_you/original_50eb40cc-428f-4461-bce8-a08534fdae75_PXL_20210720_085217623.jpg
 categories:
   - 雑記
 
