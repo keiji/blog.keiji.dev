@@ -9,10 +9,20 @@
 		
 		<managingEditor>Page(/categories)</managingEditor>
     	
-  		<lastBuildDate>Sun, 20 Jun 2021 00:00:00 +0900</lastBuildDate>
+  		<lastBuildDate>Fri, 23 Jul 2021 10:00:00 +0900</lastBuildDate>
 		
 		<atom:link href="/categories/" rel="self" type="application/rss+xml" />
 		
+		<item>
+			<title>COVID-19 モデルナワクチン副反応の記録</title>
+			<link>https://blog.keiji.dev/2021/07/i_am_vaccinated_and_you.html</link>
+			<pubDate>Fri, 23 Jul 2021 10:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2021/07/i_am_vaccinated_and_you.html</guid>
+			<description>&lt;p&gt;　筆者は、COVID-19ワクチンの接種を受けました。
+本エントリーは、接種を受けて経験した副反応の記録です。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/i_am_vaccinated_and_you/original_50eb40cc-428f-4461-bce8-a08534fdae75_PXL_20210720_085217623.jpg&#34; alt=&#34;モデルナ筋注。大阪府大規模接種センターにて。1回目接種6月19日、2回目接種7月20日&#34;&gt;&lt;/p&gt;</description>
+		</item>
+      	
 		<item>
 			<title>Android Bazaar and Conference 2021 Springサポートページ</title>
 			<link>https://blog.keiji.dev/2021/06/abc2021s/</link>
@@ -143,17 +153,6 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description>
-		</item>
-      	
-		<item>
-			<title>Gehirn RS2 Plusに引っ越しした</title>
-			<link>https://blog.keiji.dev/2018/12/move_to_gehirn_rs2_plus.html</link>
-			<pubDate>Mon, 31 Dec 2018 00:00:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2018/12/move_to_gehirn_rs2_plus.html</guid>
-			<description>&lt;p&gt;　タイトルの通り、このブログを含めたいくつかのサイトを&lt;a href=&#34;https://www.gehirn.jp/rs2plus/&#34;&gt;Gehirn RS2 Plus&lt;/a&gt;に引っ越しました。同時にStatic Site Generator（静的サイトジェネレーター) &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;を使って静的サイト化しています。&lt;/p&gt;
-&lt;p&gt;　これまでは、「さくらのVPS」にインストールしたWordPress上で管理していました。
-さくらのVPSを使うと、システムのすべてを自分で管理することになり、セキュリティアップデートなどのメンテナンスもすべて自分でやる必要がありました（もちろん、それは利点でもあります）。&lt;/p&gt;
-&lt;p&gt;　加えてWordPressは、最初にセットアップして以降、数度の更新を経て、初期にインストールしたプラグインが動いたり動かなかったりしていました。最初の頃にがんばってカスタムしたテーマも、今ではどこをどう変えたのか覚えていませんでした。&lt;/p&gt;</description>
 		</item>
       	
 	</channel>
