@@ -31,7 +31,7 @@ categories:
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">無意識で腕を上げようとすると、身体が「あかんでぇ」って言って止めてくる感じ。</p>&mdash; ARIYAMA Keiji@二回目接種済 (@keiji_ariyama) <a href="https://twitter.com/keiji_ariyama/status/1406557309816381444?ref_src=twsrc%5Etfw">June 20, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## 2回目接種
-　2回目の接種では、軽い腕の痛み加えて、発熱、発熱に伴う悪寒と身体の震え、頭痛、倦怠感、関節痛などの副反応がありました。
+　2回目の接種では、軽い腕の痛みに加えて、発熱、発熱に伴う悪寒と身体の震え、頭痛、倦怠感、関節痛などの副反応がありました。
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ありがとうございました。 <a href="https://t.co/rQDXG63Cej">pic.twitter.com/rQDXG63Cej</a></p>&mdash; ARIYAMA Keiji@二回目接種済 (@keiji_ariyama) <a href="https://twitter.com/keiji_ariyama/status/1417409353242464260?ref_src=twsrc%5Etfw">July 20, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
@@ -80,7 +80,7 @@ categories:
 
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ワクチン接種したときに「みんなのためにありがとう」と言われた話。今回、副反応を経験して意味がわかった気がする。</p>&mdash; ARIYAMA Keiji@二回目接種済 (@keiji_ariyama) <a href="https://twitter.com/keiji_ariyama/status/1418010975777656834?ref_src=twsrc%5Etfw">July 22, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-　リスクが低くても、無症状であっても、自分の周囲のハイリスクな人たちを守るために接種を受けるのが良いと考えています。
+　リスクが低くても、自分の周囲のハイリスクな人たちを守るために接種を受けるのが良いと考えています。
 筆者は、もし3回目（ブースター接種）が必要になれば、そちらも接種を受けるつもりです。
 
 　もしこのブログを読んでいる人でCOVID-19ワクチン接種の機会があり、医師からストップがかかっていないなら、ぜひ接種を検討してください。
