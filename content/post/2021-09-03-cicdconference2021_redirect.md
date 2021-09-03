@@ -4,7 +4,7 @@ author: Keiji Ariyama
 type: post
 date: 2021-09-03T00:00:00+09:00
 url: /2021/06/ci-cd-conference-2021
-description: CI/CD Conference 2021 Spring発表内容のサポートページ
+description: CI/CD Conference 2021発表内容のサポートページ
 categories:
   - COCOA
   - イベント
