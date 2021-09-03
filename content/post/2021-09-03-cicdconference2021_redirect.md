@@ -1,5 +1,5 @@
 ---
-title: CI/CD Conference 2021サポートページ
+title: CI/CD Conference 2021サポートページ（訂正）
 author: Keiji Ariyama
 type: post
 hidden: true
