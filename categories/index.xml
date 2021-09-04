@@ -9,10 +9,18 @@
 		
 		<managingEditor>Page(/categories)</managingEditor>
     	
-  		<lastBuildDate>Fri, 03 Sep 2021 00:00:00 +0900</lastBuildDate>
+  		<lastBuildDate>Sat, 04 Sep 2021 00:00:00 +0900</lastBuildDate>
 		
 		<atom:link href="/categories/" rel="self" type="application/rss+xml" />
 		
+		<item>
+			<title>デジタル庁に入庁しました</title>
+			<link>https://blog.keiji.dev/2021/09/digital_agency/</link>
+			<pubDate>Sat, 04 Sep 2021 00:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2021/09/digital_agency/</guid>
+			<description>9月1日付で発足したデジタル庁にAndroidエンジニアとして入庁しました。引き続き接触確認アプリ「COCOA」を担当します。 ぼくは大阪に住</description>
+		</item>
+      	
 		<item>
 			<title>CI/CD Conference 2021サポートページ</title>
 			<link>https://blog.keiji.dev/2021/09/ci-cd-conference-2021/</link>
@@ -104,25 +112,6 @@
 &lt;/ul&gt;
 &lt;p&gt;　上から下に時系列で記事が並んでいます。後半2つ（ツリー下）は、アンサーエントリーになっているとか（「同人誌の商業化はいいぞ」と「著者が出版契約で知るべき7つの項目」のエントリーにはリファレンスがなく、同じ時期に出た別々のエントリーと言う認識）。&lt;/p&gt;
 &lt;p&gt;　技術書の商業出版に関してはずいぶん前に「&lt;a href=&#34;https://bookwalker.jp/dea8b77689-0a5b-4bd5-a0ba-c4c73636bc8b/&#34;&gt;本当はおそろしい商業出版!?&lt;/a&gt;」という同人誌にまとめたことがあり「書きたいことはあの本にみんな書いた」感があったのですが、ここに来て盛り上がっていることを知り、改めて筆を取った次第です。&lt;/p&gt;</description>
-		</item>
-      	
-		<item>
-			<title>漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</title>
-			<link>https://blog.keiji.dev/2020/08/mangaview.html</link>
-			<pubDate>Tue, 25 Aug 2020 15:00:10 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2020/08/mangaview.html</guid>
-			<description>&lt;p&gt;　漫画ビューアー用のカスタムビュー「MangaView」をオープンソースで公開しました。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;MangaView - An ImageView for reading manga(comics) for Android.
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/keiji/mangaview&#34;&gt;https://github.com/keiji/mangaview&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;　MangaViewを使えば、複数枚の画像（ページ）を並べて表示して、ピンチイン・ピンチアウトで拡大率を変えたり、スワイプでスクロールしたりできます。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/mangaview/mangaview1.gif&#34; alt=&#34;mangaview1&#34;&gt;&lt;/p&gt;
-&lt;p&gt;　また一画面に見開きで表示可能なので、横画面の時だけ見開き表示。といった使い方もできます。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/mangaview/mangaview2.gif&#34; alt=&#34;mangaview1&#34;&gt;&lt;/p&gt;</description>
 		</item>
       	
 	</channel>

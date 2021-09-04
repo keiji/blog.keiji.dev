@@ -31,7 +31,7 @@
 
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.87.0" /><meta property="og:title" content="Chromebook（Lenovo IdeaPad Duet）でAndroidアプリ開発" />
+<meta name="generator" content="Hugo 0.88.0" /><meta property="og:title" content="Chromebook（Lenovo IdeaPad Duet）でAndroidアプリ開発" />
 <meta property="og:description" content="「Lenovo IdeaPad Duet」でAndroidアプリ開発するときは、`adb connect`するのが一番早いという話。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.keiji.dev/2020/12/android_app_development_on_chromebook.html" /><meta property="og:image" content="https://blog.keiji.dev/images/androiddev_on_chromebook/my_new_gear.jpg" /><meta property="article:section" content="post" />
@@ -130,7 +130,7 @@ Linux（ベータ版）の有効化、Androidアプリの開発（ADBデバッ�
 <p>　筆者の実務的にはChrome OS上でAndroidアプリ開発が完結するということはないので、外部のPCからテスト端末（Chromebook）にapkをインストールする方法として「<a href="https://developer.android.com/topic/arc/development-environment?hl=ja#deploy_from_another_device">Chrome OSデバイス - 別のデバイスからデプロイする</a>」を参考に設定しました。</p>
 <p>　結論から言うと <strong>「USB経由での接続（デバッグ）」は諦めて「ネットワーク経由での接続」で運用しましょう。</strong></p>
 <p>　また、ネットワーク経由での接続についても「Androidアプリの開発」を有効にしたら、外部PCからChromebookのIPアドレスに対して、いきなり<code>adb connect</code>して問題ありません（外部のPCを信頼するか尋ねるダイアログが表示される）。</p>
-<pre><code>$ adb connect [ChromebookのIPアドレス]
+<pre tabindex="0"><code>$ adb connect [ChromebookのIPアドレス]
 connected to [ChromebookのIPアドレス]:5555
 </code></pre><p>　<code>shell</code> <code>crossystem</code> <code>dev_features_ssh</code>と、ドキュメントにはいろいろ手順が書いてありますが、手順通りに作業しようとしても、筆者の環境には<code>crosssystem</code>がなく、そもそも<code>shell</code>の時点でシステムがなかったりします。ドキュメントが古いのかと思って英語版を見てみましたが、内容に大きな違いはなさそうです。</p>
 <p>　adbを通じて接続するとAndroid Studioは「Lenovo IdeaPad Duet Chromebook」を「Google kukui」として認識します。</p>
