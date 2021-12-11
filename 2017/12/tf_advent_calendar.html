@@ -31,7 +31,7 @@
 
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.88.0" /><meta property="og:title" content="ココが辛いよ！ TensorFlow" />
+<meta name="generator" content="Hugo 0.90.0" /><meta property="og:title" content="ココが辛いよ！ TensorFlow" />
 <meta property="og:description" content="この投稿は、TensorFlow Advent Calendarの12日目の記事です。
 みなさん。TensorFlow使ってますか？
 ぼくはと言えば、気がつけば毎日なにがしかのTensorFlowのコードを書いています。
@@ -194,7 +194,7 @@ TensorFlowが発表されてからすぐに使い始めて早二年、さまざ�
 <p>直近の事例では、TensorFlow ServingのPython APIがPython 2向けにしか提供されていないということがありました。</p>
 <p>なぜPython 2の方が優先されて実装されるのかより、Python 2しか対応していないなら、それならそうとドキュメントに書いておいて欲しいわけです。</p>
 <p><a href="https://www.tensorflow.org/serving/setup">https://www.tensorflow.org/serving/setup</a></p>
-<p><img src="https://blog.keiji.dev/wp-content/uploads/2017/12/Screen-Shot-2017-12-13-at-8.49.08.png" alt="Screen Shot 2017-12-13 at 8.49.08" width="1706" height="372" class="aligncenter size-full wp-image-1645" /></p>
+<img src="https://blog.keiji.dev/wp-content/uploads/2017/12/Screen-Shot-2017-12-13-at-8.49.08.png" alt="Screen Shot 2017-12-13 at 8.49.08" width="1706" height="372" class="aligncenter size-full wp-image-1645" />
 <p>apt-getでTensorFlow Serving　Serverをインストールして、TensorFlow Serving向けにモデルを出力したりといろいろした後に、pipでPython用のクライアントAPIをインストールしようとしたら「バージョンが違うよ」と表示されるのは、あまりにも残酷な仕打ちです。</p>
 <p>そんなわけで、PRを送ってみるなどしました。</p>
 <p><a href="https://github.com/tensorflow/serving/pull/685">https://github.com/tensorflow/serving/pull/685</a></p>

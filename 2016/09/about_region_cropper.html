@@ -31,7 +31,7 @@
 
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.88.0" /><meta property="og:title" content="矩形切り出しツール「Region Cropper」を公開しました" />
+<meta name="generator" content="Hugo 0.90.0" /><meta property="og:title" content="矩形切り出しツール「Region Cropper」を公開しました" />
 <meta property="og:description" content="
 2020年11月15日追記: 「Region Cropper」は非推奨となりました。Javaの実行環境に「Java FX」が標準で含まれなくなったため、導入のハードルが上がったことが非推奨とした原因です。
 代替として「MRDB-web-client」の利用を検討してください。
@@ -137,7 +137,7 @@
 <p>１人で使うのももったいないので、GitHubで公開します。</p>
 <h2 id="region-cropper">Region Cropper</h2>
 <p>GitHub: <a href="https://github.com/keiji/region_cropper">https://github.com/keiji/region_cropper</a></p>
-<p><img src="https://blog.keiji.dev/wp-content/uploads/2016/09/set_region.png" alt="set_region" width="2048" height="1580" class="aligncenter size-full wp-image-1383" /></p>
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/09/set_region.png" alt="set_region" width="2048" height="1580" class="aligncenter size-full wp-image-1383" />
 <p>GUIのフレームワークに、使い慣れたSwingではなくJava FXを使いました。</p>
 <p>そのため、Java 8のUpdate40以降でしかきちんと動きません。</p>
 <p>以下、Region CropperのREADME.mdから。</p>
@@ -152,14 +152,14 @@
 <pre><code>$ java -jar region_cropper_main.jar
 </code></pre>
 <h4 id="処理するディレクトリの選択select-directory">処理するディレクトリの選択（Select Directory）</h4>
-<p><img src="https://blog.keiji.dev/wp-content/uploads/2016/09/select_directory.png" alt="select_directory" width="1424" height="896" class="aligncenter size-full wp-image-1382" /></p>
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/09/select_directory.png" alt="select_directory" width="1424" height="896" class="aligncenter size-full wp-image-1382" />
 <h4 id="領域の追加add">領域の追加（Add)</h4>
 <p>ドラッグ&amp;ドロップで領域を設定します。</p>
 <h4 id="領域の選択select">領域の選択（Select)</h4>
 <p>現在選択中の領域は赤枠で示されます。</p>
-<p><img src="https://blog.keiji.dev/wp-content/uploads/2016/09/set_region.png" alt="set_region" width="2048" height="1580" class="aligncenter size-full wp-image-1383" /></p>
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/09/set_region.png" alt="set_region" width="2048" height="1580" class="aligncenter size-full wp-image-1383" />
 <p>スペース（Space）キーを押すと、選択中の領域以外の場所がグレーアウトされます。</p>
-<p><img src="https://blog.keiji.dev/wp-content/uploads/2016/09/focus_region.png" alt="focus_region" width="2048" height="1580" class="aligncenter size-full wp-image-1384" /></p>
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/09/focus_region.png" alt="focus_region" width="2048" height="1580" class="aligncenter size-full wp-image-1384" />
 <table>
 <thead>
 <tr>
@@ -225,12 +225,12 @@
 <h4 id="ラベルの設定label">ラベルの設定（Label）</h4>
 <p>数字キーの「0〜9」を押すと、選択した領域にラベルを設定します。</p>
 <p>追加した領域のラベルは、標準で 1 が設定されています。</p>
-<p><img src="https://blog.keiji.dev/wp-content/uploads/2016/09/set_label.png" alt="set_label" width="2048" height="1580" class="aligncenter size-full wp-image-1387" /></p>
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/09/set_label.png" alt="set_label" width="2048" height="1580" class="aligncenter size-full wp-image-1387" />
 <p>また、ラベル 0 は負例として特別な意味を持ちます。</p>
 <p>負例に設定した領域は、編集や削除ができません。</p>
 <h4 id="領域の切り出しcrop">領域の切り出し（Crop）</h4>
 <p>領域の切り出しには「Quick crop」と「Crop to…」の２つの方法があります。</p>
-<p><img src="https://blog.keiji.dev/wp-content/uploads/2016/09/menu_crop.png" alt="menu_crop" width="639" height="327" class="aligncenter size-full wp-image-1386" /></p>
+<img src="https://blog.keiji.dev/wp-content/uploads/2016/09/menu_crop.png" alt="menu_crop" width="639" height="327" class="aligncenter size-full wp-image-1386" />
 <p>「Quick crop」を選択すると、設定している領域を、処理中の画像と同じディレクトリに切り出します。</p>
 <p>出力先のディレクトリを設定したい場合は「Crop to…」を選択します。</p>
 <pre><code>[出力先のディレクトリ]/label-[ラベル]/[画像名]-[領域番号].png
