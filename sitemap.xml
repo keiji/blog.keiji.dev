@@ -3,21 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.keiji.dev/categories/</loc>
-    <lastmod>2021-09-04T00:00:00+09:00</lastmod>
+    <lastmod>2022-07-28T00:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.keiji.dev/post/</loc>
+    <lastmod>2022-07-28T00:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.keiji.dev/categories/thinkpad/</loc>
+    <lastmod>2022-07-28T00:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.keiji.dev/2022/07/welcomeback_thinkpad/</loc>
+    <lastmod>2022-07-28T00:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.keiji.dev/</loc>
+    <lastmod>2022-07-28T00:00:00+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/</loc>
+    <lastmod>2022-07-28T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.keiji.dev/categories/cocoa/</loc>
     <lastmod>2021-09-04T00:00:00+09:00</lastmod>
   </url><url>
-    <loc>https://blog.keiji.dev/post/</loc>
-    <lastmod>2021-09-04T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.keiji.dev/</loc>
-    <lastmod>2021-09-04T00:00:00+09:00</lastmod>
-  </url><url>
     <loc>https://blog.keiji.dev/2021/09/digital_agency/</loc>
-    <lastmod>2021-09-04T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/</loc>
     <lastmod>2021-09-04T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.keiji.dev/2021/09/ci-cd-conference-2021/</loc>
@@ -164,10 +170,10 @@
     <loc>https://blog.keiji.dev/2016/03/abc-2016-spring.html</loc>
     <lastmod>2016-03-13T18:21:58+00:00</lastmod>
   </url><url>
-    <loc>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-25.html</loc>
+    <loc>https://blog.keiji.dev/categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/</loc>
     <lastmod>2015-12-24T15:00:33+00:00</lastmod>
   </url><url>
-    <loc>https://blog.keiji.dev/categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/</loc>
+    <loc>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-25.html</loc>
     <lastmod>2015-12-24T15:00:33+00:00</lastmod>
   </url><url>
     <loc>https://blog.keiji.dev/2015/12/mincomi-adventcalendar-24.html</loc>

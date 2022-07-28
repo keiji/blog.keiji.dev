@@ -1,0 +1,126 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>ThinkPad on めがねをかけるんだ</title>
+		<link>https://blog.keiji.dev/categories/thinkpad/</link>
+		<description>Recent content in ThinkPad </description>
+		<generator>Hugo -- gohugo.io</generator>
+		
+  		<language>ja</language>
+		
+		<managingEditor>Page(/categories/thinkpad)</managingEditor>
+    	
+  		<lastBuildDate>Thu, 28 Jul 2022 00:00:00 +0900</lastBuildDate>
+		
+		<atom:link href="/categories/thinkpad/" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>おかえりThinkPad</title>
+			<link>https://blog.keiji.dev/2022/07/welcomeback_thinkpad/</link>
+			<pubDate>Thu, 28 Jul 2022 00:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2022/07/welcomeback_thinkpad/</guid>
+			<description>&lt;p&gt;　ぼくは有山圭二。ThinkPadユーザーだった。&lt;/p&gt;
+&lt;p&gt;　初恋のコンピューターは「ThinkPad 230Cs」。中学時代のぼくのそばにはずっと230Csがあった。&lt;/p&gt;
+&lt;p&gt;　230Cs以降もノートPCはずっとThinkPad。といっても、新型が出るたびに手に入れるようなことはできない。当時のPCは非常に高価で一台買ったら数年使うのが普通の時代だ。
+アルバイトをして購入した「i 1124」は個人ユーザー向けの廉価なモデルだった。大学を卒業して自分の会社を作ってしばらくは中古の「X31」を使っていた。&lt;/p&gt;
+&lt;p&gt;　2007年11月、Androidが発表された。翌年のGoogle I/Oの後、日本Androidの会が設立された。各地で開かれる勉強会に、ぼくは 「X61」と一緒に参加していた。
+&amp;ldquo;All applications are created equal.&amp;ldquo;を掲げるAndroidのアプリを開発するのにMacを使う選択肢を、当時のぼくは持ち合わせていなかった。&lt;/p&gt;
+&lt;p&gt;　そんなぼくがThinkPadユーザーでなくなるきっかけは、ThinkPadのLenovoへの移籍でもIBMロゴの完全廃止でもなく、ThinkPadの構成からタッチパッドが外せなくなったことだった。&lt;/p&gt;
+&lt;p&gt;　ThinkPadにはすでに「トラックポイント」という入力インターフェースがある。機能の重複するものがなぜ必要なのか。&lt;/p&gt;
+&lt;p&gt;　ぼくがこう言うと「タッチパッドは無効化すればいいよ」という人もいたけれど、自分が使わないもの、無効化するものがついていることをぼくは許容できなかった。&lt;/p&gt;
+&lt;p&gt;　ThinkPadがなくなった隙間を埋めてくれたのがMacBook Airだった。
+ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボディと、取り替えできないバッテリーが新鮮だった。難しいことを考えなくてもそれなりに使えるmacOS、キーボードとトラックパッドというシンプルさが、ぼくが使い続ける理由になった。&lt;/p&gt;
+&lt;p&gt;　ThinkPadに未練がなかったと言えば嘘になる。
+街中で、訪問先のオフィスで、参加した勉強会で、あの黒いシルエットがあると知らず知らず目で追っていたし、漫画「&lt;a href=&#34;https://amzn.to/3cFTYU9&#34;&gt;王様達のヴァイキング&lt;/a&gt;」で、主人公の愛機としてX41が登場したときは素直にうれしかった。&lt;/p&gt;
+&lt;p&gt;　また、MacBook Proとの関係がずっと順調だったわけでもない。
+一度はペシャペシャした打ち心地になってしまったバタフライキーボードや、タッチバーの存在に我慢ならなくなってThinkPadに戻ろうとしたこともある。
+そのときは、とてもつらい経験をして「ThinkPadは嫌いだ」と言うまでに、ぼくのThinkPadへの印象は悪化した。5年ほど前のことだ。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.keiji.dev/2017/01/demodori.html&#34;&gt;さよならMac&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;　そんなぼくが、ふたたびThinkPadユーザーになった。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>デジタル庁に入庁しました</title>
+			<link>https://blog.keiji.dev/2021/09/digital_agency/</link>
+			<pubDate>Sat, 04 Sep 2021 00:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2021/09/digital_agency/</guid>
+			<description>9月1日付で発足したデジタル庁にAndroidエンジニアとして入庁しました。引き続き接触確認アプリ「COCOA」を担当します。 ぼくは大阪に住</description>
+		</item>
+      	
+		<item>
+			<title>CI/CD Conference 2021サポートページ</title>
+			<link>https://blog.keiji.dev/2021/09/ci-cd-conference-2021/</link>
+			<pubDate>Fri, 03 Sep 2021 00:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2021/09/ci-cd-conference-2021/</guid>
+			<description>&lt;p&gt;&lt;a href=&#34;https://event.cloudnativedays.jp/cicd2021&#34;&gt;CI/CD Conference 2021 by CloudNative Days&lt;/a&gt;の発表 接触確認アプリ「COCOA」 OSSモバイルアプリのCI整備の難しさ に関するサポートページです。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>CI/CD Conference 2021サポートページ（訂正）</title>
+			<link>https://blog.keiji.dev/2021/06/ci-cd-conference-2021/</link>
+			<pubDate>Fri, 03 Sep 2021 00:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2021/06/ci-cd-conference-2021/</guid>
+			<description>発表動画に記載のサポートページURLに誤りがありました。 正しいURLは次の通りです。 https://blog.keiji.dev/2021/09/ci-cd-conference-2021</description>
+		</item>
+      	
+		<item>
+			<title>COVID-19 モデルナワクチン副反応の記録</title>
+			<link>https://blog.keiji.dev/2021/07/i_am_vaccinated_and_you.html</link>
+			<pubDate>Fri, 23 Jul 2021 10:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2021/07/i_am_vaccinated_and_you.html</guid>
+			<description>&lt;p&gt;　筆者は、COVID-19ワクチンの接種を受けました。
+本エントリーは、接種を受けて経験した副反応の記録です。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/i_am_vaccinated_and_you/original_50eb40cc-428f-4461-bce8-a08534fdae75_PXL_20210720_085217623.jpg&#34; alt=&#34;モデルナ筋注。大阪府大規模接種センターにて。1回目接種6月19日、2回目接種7月20日&#34;&gt;&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>Android Bazaar and Conference 2021 Springサポートページ</title>
+			<link>https://blog.keiji.dev/2021/06/abc2021s/</link>
+			<pubDate>Sun, 20 Jun 2021 00:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2021/06/abc2021s/</guid>
+			<description>Android Bazaar and Conference 2021 Springの発表「接触確認API ExposureWindow modeへの対応に向けた検討について」に関するサポートページです。 発表資料</description>
+		</item>
+      	
+		<item>
+			<title>アプリのアップデート時にAlarmManagerがキャンセルされなくなっていた</title>
+			<link>https://blog.keiji.dev/2021/03/alarmmanager_evolution.html</link>
+			<pubDate>Sat, 20 Mar 2021 17:30:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2021/03/alarmmanager_evolution.html</guid>
+			<description>&lt;p&gt;　16日からCOCOAのコラボレーターになってIssueやPRの対応をしています。&lt;/p&gt;
+&lt;p&gt;　&lt;a href=&#34;https://blog.keiji.dev/2021/03/cocoa.html&#34;&gt;先日の記事&lt;/a&gt;について、たくさんの方から激励の言葉をいただきました。ありがとうございます。
+厚生労働省技術参与の着任から10日、コラボレーターになってから5日が経ちました。Twitterで普段しないエゴサをしたりしますと、やはりぼくの至らぬ点についてお叱りを受けていることも目に入ったりして反省しきりの日々です。&lt;/p&gt;
+&lt;p&gt;　今後も鋭意改善に努めて参りますので、何卒よろしくお願いいたします。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>COCOAに関わることになりました</title>
+			<link>https://blog.keiji.dev/2021/03/cocoa.html</link>
+			<pubDate>Tue, 16 Mar 2021 10:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2021/03/cocoa.html</guid>
+			<description>&lt;p&gt;　接触確認アプリ「COCOA」について以前ツイートしました。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;繰り返しになるけど、COCOAのAndroid版をネイティブで作り直したいので、誰か知ってる人につないで欲しい。&lt;/p&gt;&amp;mdash; ARIYAMA Keiji (@keiji_ariyama) &lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1356905017412706308?ref_src=twsrc%5Etfw&#34;&gt;February 3, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;　ツイートした後もGitHubのCOCOAのリポジトリに&lt;a href=&#34;https://github.com/cocoa-mhlw/cocoa/issues/21#issuecomment-780502093&#34;&gt;コメント&lt;/a&gt;したり、知り合いに「COCOAやりたい」「COCOAやりたい」と言い続けたりした結果、このたび厚生労働省の技術参与として正式にCOCOAに携わることになりました。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>Chromebook（Lenovo IdeaPad Duet）でAndroidアプリ開発</title>
+			<link>https://blog.keiji.dev/2020/12/android_app_development_on_chromebook.html</link>
+			<pubDate>Tue, 15 Dec 2020 10:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2020/12/android_app_development_on_chromebook.html</guid>
+			<description>&lt;p&gt;　アプリ開発の仕事で比較的画面が大きい端末に対応する必要があり、いい感じのAndroidタブレットが見当たらなかったので、最近はAndroidアプリも普通に動く「Chromebook」を購入しました。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/androiddev_on_chromebook/my_new_gear.jpg&#34; alt=&#34;My new gear&amp;amp;hellip;&#34;&gt;&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
+			<title>MangaView 1.0.0をリリースしました</title>
+			<link>https://blog.keiji.dev/2020/11/mangaview-now-stable.html</link>
+			<pubDate>Sun, 08 Nov 2020 15:00:10 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2020/11/mangaview-now-stable.html</guid>
+			<description>&lt;p&gt;　&lt;a href=&#34;https://blog.keiji.dev/2020/08/mangaview.html&#34;&gt;今年の夏から作っていた&lt;/a&gt;漫画ビューアー用のカスタムビュー「MangaView」、ついに安定版となる1.0.0をリリースすることができました。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/keiji/mangaview&#34;&gt;https://github.com/keiji/mangaview&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;　これまでAndroidアプリはいくつもGoogle Playで公開してきたし、ライブラリを作る仕事はいくつも手がけてきたけれど、公開するライブラリを手がけたのははじめて。パッケージングからBintrayでの配信、jcenterでの公開まで、とても良い勉強になったと思います。&lt;/p&gt;</description>
+		</item>
+      	
+	</channel>
+</rss>
