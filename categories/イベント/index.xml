@@ -14,6 +14,14 @@
 		<atom:link href="/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/" rel="self" type="application/rss+xml" />
 		
 		<item>
+			<title>お知らせ</title>
+			<link>https://blog.keiji.dev/2022/08/cocoa/</link>
+			<pubDate>Mon, 01 Aug 2022 00:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2022/08/cocoa/</guid>
+			<description>これまで有山は「厚生労働省の技術参与」と「デジタル庁のエンジニア」それぞれの役割でCOCOAに携わってきました。 このたびデジタル庁のエンジニ</description>
+		</item>
+      	
+		<item>
 			<title>おかえりThinkPad</title>
 			<link>https://blog.keiji.dev/2022/07/welcomeback_thinkpad/</link>
 			<pubDate>Thu, 28 Jul 2022 00:00:00 +0900</pubDate>
@@ -110,16 +118,6 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
 			<guid>https://blog.keiji.dev/2020/12/android_app_development_on_chromebook.html</guid>
 			<description>&lt;p&gt;　アプリ開発の仕事で比較的画面が大きい端末に対応する必要があり、いい感じのAndroidタブレットが見当たらなかったので、最近はAndroidアプリも普通に動く「Chromebook」を購入しました。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/androiddev_on_chromebook/my_new_gear.jpg&#34; alt=&#34;My new gear&amp;amp;hellip;&#34;&gt;&lt;/p&gt;</description>
-		</item>
-      	
-		<item>
-			<title>MangaView 1.0.0をリリースしました</title>
-			<link>https://blog.keiji.dev/2020/11/mangaview-now-stable.html</link>
-			<pubDate>Sun, 08 Nov 2020 15:00:10 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2020/11/mangaview-now-stable.html</guid>
-			<description>&lt;p&gt;　&lt;a href=&#34;https://blog.keiji.dev/2020/08/mangaview.html&#34;&gt;今年の夏から作っていた&lt;/a&gt;漫画ビューアー用のカスタムビュー「MangaView」、ついに安定版となる1.0.0をリリースすることができました。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/keiji/mangaview&#34;&gt;https://github.com/keiji/mangaview&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;　これまでAndroidアプリはいくつもGoogle Playで公開してきたし、ライブラリを作る仕事はいくつも手がけてきたけれど、公開するライブラリを手がけたのははじめて。パッケージングからBintrayでの配信、jcenterでの公開まで、とても良い勉強になったと思います。&lt;/p&gt;</description>
 		</item>
       	
 	</channel>
