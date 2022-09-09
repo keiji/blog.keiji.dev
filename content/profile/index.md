@@ -21,3 +21,5 @@ Androidアプリケーションへ機械学習モデルの組み込んであれ�
 * Speaker Deck: [https://speakerdeck.com/keiji](https://speakerdeck.com/keiji)
 * Facebook: [https://www.facebook.com/keiji.ariyama](https://www.facebook.com/keiji.ariyama)
 * Twitter: N/A
+
+[PGP Public Key](https://blog.keiji.dev/keiji_ariyama.pub) (Fingerprint: 1272 1F00 DD06 172C 0F62 835B A0EC D139 7CEB 71D9)
