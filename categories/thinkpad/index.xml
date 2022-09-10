@@ -14,6 +14,52 @@
 		<atom:link href="/categories/thinkpad/" rel="self" type="application/rss+xml" />
 		
 		<item>
+			<title>技術書典13で「コロナ禍のめがねをかけるんだ」を頒布します</title>
+			<link>https://blog.keiji.dev/2022/09/techbookfest13.html</link>
+			<pubDate>Sat, 10 Sep 2022 10:00:10 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2022/09/techbookfest13.html</guid>
+			<description>&lt;p&gt;　9月11日（日）、池袋サンシャインシティにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf13&#34;&gt;技術書典13&lt;/a&gt;」に、サークル「&lt;a href=&#34;https://techbookfest.org/organization/5173176170446848&#34;&gt;めがねをかけるんだ&lt;/a&gt;」として参加させていただくことになりました。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;コロナ禍のめがねをかけるんだ&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;B5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;16p（本文墨刷）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;300円（会場価格）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;目次&#34;&gt;目次&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;はじめに&lt;/li&gt;
+&lt;li&gt;Gitのコミットに署名を付けるようになった話&lt;/li&gt;
+&lt;li&gt;30億のデバイスで動くJava&lt;/li&gt;
+&lt;li&gt;スマートカードを手に入れる&lt;/li&gt;
+&lt;li&gt;Java Card Appletを開発しよう&lt;/li&gt;
+&lt;li&gt;遊び道具としては難しい&lt;/li&gt;
+&lt;li&gt;OpenPGP Card Applet&lt;/li&gt;
+&lt;li&gt;おわりに&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;　本文サンプルは&lt;a href=&#34;https://techbookfest.org/product/viaWpAsxCX0pyyKZM5CEBK?productVariantID=ihrw7XZAHgw7qpEFPcTFDp&#34;&gt;こちら&lt;/a&gt;&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
 			<title>お知らせ</title>
 			<link>https://blog.keiji.dev/2022/08/cocoa/</link>
 			<pubDate>Mon, 01 Aug 2022 00:00:00 +0900</pubDate>
@@ -109,15 +155,6 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
 			<description>&lt;p&gt;　接触確認アプリ「COCOA」について以前ツイートしました。&lt;/p&gt;
 &lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;繰り返しになるけど、COCOAのAndroid版をネイティブで作り直したいので、誰か知ってる人につないで欲しい。&lt;/p&gt;&amp;mdash; ARIYAMA Keiji (@keiji_ariyama) &lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1356905017412706308?ref_src=twsrc%5Etfw&#34;&gt;February 3, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 &lt;p&gt;　ツイートした後もGitHubのCOCOAのリポジトリに&lt;a href=&#34;https://github.com/cocoa-mhlw/cocoa/issues/21#issuecomment-780502093&#34;&gt;コメント&lt;/a&gt;したり、知り合いに「COCOAやりたい」「COCOAやりたい」と言い続けたりした結果、このたび厚生労働省の技術参与として正式にCOCOAに携わることになりました。&lt;/p&gt;</description>
-		</item>
-      	
-		<item>
-			<title>Chromebook（Lenovo IdeaPad Duet）でAndroidアプリ開発</title>
-			<link>https://blog.keiji.dev/2020/12/android_app_development_on_chromebook.html</link>
-			<pubDate>Tue, 15 Dec 2020 10:00:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2020/12/android_app_development_on_chromebook.html</guid>
-			<description>&lt;p&gt;　アプリ開発の仕事で比較的画面が大きい端末に対応する必要があり、いい感じのAndroidタブレットが見当たらなかったので、最近はAndroidアプリも普通に動く「Chromebook」を購入しました。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/androiddev_on_chromebook/my_new_gear.jpg&#34; alt=&#34;My new gear&amp;amp;hellip;&#34;&gt;&lt;/p&gt;</description>
 		</item>
       	
 	</channel>
