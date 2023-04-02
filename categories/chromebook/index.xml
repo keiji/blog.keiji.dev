@@ -14,6 +14,14 @@
 		<atom:link href="/categories/chromebook/" rel="self" type="application/rss+xml" />
 		
 		<item>
+			<title>ThinkPadのスリープが2度目から失敗するようになった</title>
+			<link>https://blog.keiji.dev/2023/04/heading.html</link>
+			<pubDate>Sun, 02 Apr 2023 16:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2023/04/heading.html</guid>
+			<description>2023年3月31日付けで、厚生労働省の技術参与を辞任しました。 COCOAも正式に終了して、これ以上することもありません（GitHubへの書</description>
+		</item>
+      	
+		<item>
 			<title>技術書典13で「コロナ禍のめがねをかけるんだ」を頒布します</title>
 			<link>https://blog.keiji.dev/2022/09/techbookfest13.html</link>
 			<pubDate>Sat, 10 Sep 2022 10:00:10 +0900</pubDate>
@@ -145,16 +153,6 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
 &lt;p&gt;　&lt;a href=&#34;https://blog.keiji.dev/2021/03/cocoa.html&#34;&gt;先日の記事&lt;/a&gt;について、たくさんの方から激励の言葉をいただきました。ありがとうございます。
 厚生労働省技術参与の着任から10日、コラボレーターになってから5日が経ちました。Twitterで普段しないエゴサをしたりしますと、やはりぼくの至らぬ点についてお叱りを受けていることも目に入ったりして反省しきりの日々です。&lt;/p&gt;
 &lt;p&gt;　今後も鋭意改善に努めて参りますので、何卒よろしくお願いいたします。&lt;/p&gt;</description>
-		</item>
-      	
-		<item>
-			<title>COCOAに関わることになりました</title>
-			<link>https://blog.keiji.dev/2021/03/cocoa.html</link>
-			<pubDate>Tue, 16 Mar 2021 10:00:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2021/03/cocoa.html</guid>
-			<description>&lt;p&gt;　接触確認アプリ「COCOA」について以前ツイートしました。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;繰り返しになるけど、COCOAのAndroid版をネイティブで作り直したいので、誰か知ってる人につないで欲しい。&lt;/p&gt;&amp;mdash; ARIYAMA Keiji (@keiji_ariyama) &lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1356905017412706308?ref_src=twsrc%5Etfw&#34;&gt;February 3, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;p&gt;　ツイートした後もGitHubのCOCOAのリポジトリに&lt;a href=&#34;https://github.com/cocoa-mhlw/cocoa/issues/21#issuecomment-780502093&#34;&gt;コメント&lt;/a&gt;したり、知り合いに「COCOAやりたい」「COCOAやりたい」と言い続けたりした結果、このたび厚生労働省の技術参与として正式にCOCOAに携わることになりました。&lt;/p&gt;</description>
 		</item>
       	
 	</channel>
