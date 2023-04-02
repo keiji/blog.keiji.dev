@@ -3,7 +3,7 @@ title: ThinkPadのスリープが2度目から失敗するようになった
 author: Keiji Ariyama
 type: post
 date: 2023-04-02T16:00:00+09:00
-url: /2023/04/heading.html
+url: /2023/04/thinkpad_not_wake_up_after_second_suspend.html
 categories:
   - 雑記
 ---
