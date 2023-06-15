@@ -1,5 +1,5 @@
 ---
-title: git push -forceで履歴は消えないと言う話
+title: git push --forceで履歴は消えないと言う話
 author: Keiji Ariyama
 type: post
 date: 2023-06-15T15:45:00+09:00
@@ -9,7 +9,7 @@ categories:
 
 ---
 
-　GitのForce push（`git push -force`）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
+　GitのForce push（`git push --force`）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
 筆者も過去に一度だけmasterブランチに向けてForce pushをしてしまい、平謝りをした経験があります。
 
 　一方、最近知ったのですが、Gitリポジトリに本来入れてはいけない情報を入れたときの対応策としてForce pushすれば履歴は消えると考えている人もいるようです。
