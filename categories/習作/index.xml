@@ -14,6 +14,23 @@
 		<atom:link href="/categories/%E7%BF%92%E4%BD%9C/" rel="self" type="application/rss+xml" />
 		
 		<item>
+			<title>git push -forceで履歴は消えないと言う話</title>
+			<link>https://blog.keiji.dev/2023/06/git_push_force_do_not_delete_commit.html</link>
+			<pubDate>Thu, 15 Jun 2023 15:45:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2023/06/git_push_force_do_not_delete_commit.html</guid>
+			<description>&lt;p&gt;　GitのForce push（&lt;code&gt;git push -force&lt;/code&gt;）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
+筆者も過去に一度だけmasterブランチに向けてForce pushをしてしまい、平謝りをした経験があります。&lt;/p&gt;
+&lt;p&gt;　一方、最近知ったのですが、Gitリポジトリに本来入れてはいけない情報を入れたときの対応策としてForce pushすれば履歴は消えると考えている人もいるようです。&lt;/p&gt;
+&lt;p&gt;　これについては、言葉で説明するよりやってみた方が早そうなので、実際に試してた結果を共有します。
+もしお近くで「Force pushで消える、いや消えない」と言った議論を聞いたときには、そっとこの記事と、次の記事を見せてあげてください。&lt;/p&gt;
+&lt;p&gt;GitHub上のsensitive dataを削除するための手順と道のり - Merpay Advent Calendar 2021
+&lt;a href=&#34;https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/&#34;&gt;https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;　また、この記事について誤りや修正すべき点などがあれば、是非ご指摘いただければと思います。
+最近はBlueskyにいます（Twitterはやっていません）。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://staging.bsky.app/profile/keiji.bsky.social&#34;&gt;https://staging.bsky.app/profile/keiji.bsky.social&lt;/a&gt;&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
 			<title>ThinkPadのスリープが2度目から失敗するようになった</title>
 			<link>https://blog.keiji.dev/2023/04/thinkpad_not_wake_up_after_second_suspend.html</link>
 			<pubDate>Sun, 02 Apr 2023 16:00:00 +0900</pubDate>
@@ -142,17 +159,6 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
 			<pubDate>Sun, 20 Jun 2021 00:00:00 +0900</pubDate>
 			<guid>https://blog.keiji.dev/2021/06/abc2021s/</guid>
 			<description>Android Bazaar and Conference 2021 Springの発表「接触確認API ExposureWindow modeへの対応に向けた検討について」に関するサポートページです。 発表資料</description>
-		</item>
-      	
-		<item>
-			<title>アプリのアップデート時にAlarmManagerがキャンセルされなくなっていた</title>
-			<link>https://blog.keiji.dev/2021/03/alarmmanager_evolution.html</link>
-			<pubDate>Sat, 20 Mar 2021 17:30:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2021/03/alarmmanager_evolution.html</guid>
-			<description>&lt;p&gt;　16日からCOCOAのコラボレーターになってIssueやPRの対応をしています。&lt;/p&gt;
-&lt;p&gt;　&lt;a href=&#34;https://blog.keiji.dev/2021/03/cocoa.html&#34;&gt;先日の記事&lt;/a&gt;について、たくさんの方から激励の言葉をいただきました。ありがとうございます。
-厚生労働省技術参与の着任から10日、コラボレーターになってから5日が経ちました。Twitterで普段しないエゴサをしたりしますと、やはりぼくの至らぬ点についてお叱りを受けていることも目に入ったりして反省しきりの日々です。&lt;/p&gt;
-&lt;p&gt;　今後も鋭意改善に努めて参りますので、何卒よろしくお願いいたします。&lt;/p&gt;</description>
 		</item>
       	
 	</channel>
