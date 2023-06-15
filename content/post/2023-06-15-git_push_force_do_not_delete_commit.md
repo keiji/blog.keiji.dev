@@ -184,7 +184,7 @@ To /Users/keiji_ariyama/forcepushtest/mygreatrepository
  + f01a8e4...10bf7e9 master -> master (forced update)
 ```
 
-これで、リポジトリ`mygreaterepository`の履歴は強制的に書き換わり、masterの先頭は`f01a8e4beb6eba37a5ee451c9c589964cc85e6fd`で示されるコミットになりました。
+これで、リポジトリ`mygreaterepository`の履歴は強制的に書き換わり、masterの先頭は`10bf7e96a13e5b1f154499129a5149509e21e7f0`で示されるコミットになりました。
 
 ### リポジトリの状態を確認する（repo3）
 
