@@ -14,11 +14,11 @@
 		<atom:link href="/categories/arduino/" rel="self" type="application/rss+xml" />
 		
 		<item>
-			<title>git push -forceで履歴は消えないと言う話</title>
+			<title>git push --forceで履歴は消えないと言う話</title>
 			<link>https://blog.keiji.dev/2023/06/git_push_force_do_not_delete_commit.html</link>
 			<pubDate>Thu, 15 Jun 2023 15:45:00 +0900</pubDate>
 			<guid>https://blog.keiji.dev/2023/06/git_push_force_do_not_delete_commit.html</guid>
-			<description>&lt;p&gt;　GitのForce push（&lt;code&gt;git push -force&lt;/code&gt;）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
+			<description>&lt;p&gt;　GitのForce push（&lt;code&gt;git push --force&lt;/code&gt;）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
 筆者も過去に一度だけmasterブランチに向けてForce pushをしてしまい、平謝りをした経験があります。&lt;/p&gt;
 &lt;p&gt;　一方、最近知ったのですが、Gitリポジトリに本来入れてはいけない情報を入れたときの対応策としてForce pushすれば履歴は消えると考えている人もいるようです。&lt;/p&gt;
 &lt;p&gt;　これについては、言葉で説明するよりやってみた方が早そうなので、実際に試してた結果を共有します。

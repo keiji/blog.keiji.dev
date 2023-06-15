@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-<title>git push -forceで履歴は消えないと言う話</title>
+<title>git push --forceで履歴は消えないと言う話</title>
 
 <meta name="description" content="Don&#39;t take your glasses off." />
 
@@ -31,8 +31,8 @@
 
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.111.3"><meta property="og:title" content="git push -forceで履歴は消えないと言う話" />
-<meta property="og:description" content="　GitのForce push（git push -force）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
+<meta name="generator" content="Hugo 0.111.3"><meta property="og:title" content="git push --forceで履歴は消えないと言う話" />
+<meta property="og:description" content="　GitのForce push（git push --force）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
 筆者も過去に一度だけmasterブランチに向けてForce pushをしてしまい、平謝りをした経験があります。
 　一方、最近知ったのですが、Gitリポジトリに本来入れてはいけない情報を入れたときの対応策としてForce pushすれば履歴は消えると考えている人もいるようです。
 　これについては、言葉で説明するよりやってみた方が早そうなので、実際に試してた結果を共有します。
@@ -51,8 +51,8 @@ https://staging.bsky.app/profile/keiji.bsky.social" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
 
-<meta name="twitter:title" content="git push -forceで履歴は消えないと言う話"/>
-<meta name="twitter:description" content="　GitのForce push（git push -force）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
+<meta name="twitter:title" content="git push --forceで履歴は消えないと言う話"/>
+<meta name="twitter:description" content="　GitのForce push（git push --force）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
 筆者も過去に一度だけmasterブランチに向けてForce pushをしてしまい、平謝りをした経験があります。
 　一方、最近知ったのですが、Gitリポジトリに本来入れてはいけない情報を入れたときの対応策としてForce pushすれば履歴は消えると考えている人もいるようです。
 　これについては、言葉で説明するよりやってみた方が早そうなので、実際に試してた結果を共有します。
@@ -101,7 +101,7 @@ https://staging.bsky.app/profile/keiji.bsky.social"/>
       <div class="container">
         <div class="post-heading">
           
-            <h1>git push -forceで履歴は消えないと言う話</h1>
+            <h1>git push --forceで履歴は消えないと言う話</h1>
           
           
             <span class="meta-post">
@@ -125,7 +125,7 @@ https://staging.bsky.app/profile/keiji.bsky.social"/>
   <div class="container" role="main">
     <article class="article" class="blog-post">
       
-    <p>　GitのForce push（<code>git push -force</code>）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
+    <p>　GitのForce push（<code>git push --force</code>）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
 筆者も過去に一度だけmasterブランチに向けてForce pushをしてしまい、平謝りをした経験があります。</p>
 <p>　一方、最近知ったのですが、Gitリポジトリに本来入れてはいけない情報を入れたときの対応策としてForce pushすれば履歴は消えると考えている人もいるようです。</p>
 <p>　これについては、言葉で説明するよりやってみた方が早そうなので、実際に試してた結果を共有します。
