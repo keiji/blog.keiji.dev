@@ -31,13 +31,13 @@ https://staging.bsky.app/profile/keiji.bsky.social
 
 実験は、次のステップで行いました。
 
- * リモートリポジトリを作成・cloneする
+ * リポジトリを作成・cloneする
  * 履歴を作成する（repo1）
  * 履歴を作成する（repo2）
  * リポジトリの状態を確認する（repo3）
  * 消えた履歴を復元する（repo3）
 
-### リモートリポジトリを作成・cloneする
+### リポジトリを作成・cloneする
 
 　まず、ローカルにGitのリポジトリ`mygreatrepository`を作ります。
 
@@ -57,7 +57,7 @@ hint: 	git branch -m <name>
 Initialized empty Git repository in /Users/keiji_ariyama/forcepushtest/mygreatrepository/
 ```
 
-オプションに`--bare`を付けたので、`mygreatrepository`はリモートリポジトリです。
+サーバー上のリポジトリを再現するためにオプション`--bare`を付けています。
 
 ```
 $ ls mygreatrepository
