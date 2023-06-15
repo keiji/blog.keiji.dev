@@ -138,13 +138,13 @@ https://staging.bsky.app/profile/keiji.bsky.social"/>
 <h2 id="実験">実験</h2>
 <p>実験は、次のステップで行いました。</p>
 <ul>
-<li>リモートリポジトリを作成・cloneする</li>
+<li>リポジトリを作成・cloneする</li>
 <li>履歴を作成する（repo1）</li>
 <li>履歴を作成する（repo2）</li>
 <li>リポジトリの状態を確認する（repo3）</li>
 <li>消えた履歴を復元する（repo3）</li>
 </ul>
-<h3 id="リモートリポジトリを作成cloneする">リモートリポジトリを作成・cloneする</h3>
+<h3 id="リポジトリを作成cloneする">リポジトリを作成・cloneする</h3>
 <p>　まず、ローカルにGitのリポジトリ<code>mygreatrepository</code>を作ります。</p>
 <pre tabindex="0"><code>$ cd forcepushtest
 $ git init --bare mygreatrepository
@@ -159,7 +159,7 @@ hint: &#39;development&#39;. The just-created branch can be renamed via this com
 hint:
 hint: 	git branch -m &lt;name&gt;
 Initialized empty Git repository in /Users/keiji_ariyama/forcepushtest/mygreatrepository/
-</code></pre><p>オプションに<code>--bare</code>を付けたので、<code>mygreatrepository</code>はリモートリポジトリです。</p>
+</code></pre><p>サーバー上のリポジトリを再現するためにオプション<code>--bare</code>を付けています。</p>
 <pre tabindex="0"><code>$ ls mygreatrepository
 HEAD		description	info		refs
 config		hooks		objects
