@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://blog.keiji.dev/profile/</loc>
+    <lastmod>2023-08-30T00:00:00+09:00</lastmod>
+  </url><url>
     <loc>https://blog.keiji.dev/categories/</loc>
     <lastmod>2023-06-15T15:45:00+09:00</lastmod>
   </url><url>
@@ -100,9 +103,6 @@
   </url><url>
     <loc>https://blog.keiji.dev/2018/12/move_to_gehirn_rs2_plus.html</loc>
     <lastmod>2018-12-31T00:00:00+09:00</lastmod>
-  </url><url>
-    <loc>https://blog.keiji.dev/profile/</loc>
-    <lastmod>2018-12-30T00:00:00+09:00</lastmod>
   </url><url>
     <loc>https://blog.keiji.dev/2018/12/tensorflow-advent_calendar.html</loc>
     <lastmod>2018-12-24T05:30:34+00:00</lastmod>
