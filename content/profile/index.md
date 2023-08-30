@@ -1,19 +1,20 @@
 ---
 title: プロフィール
 author: Keiji ARIYAMA
-date: 2018-12-30T00:00:00+09:00
+date: 2023-08-30T00:00:00+09:00
 excludeinlist: true
 ---
 
 ## 有山　圭二（Keiji ARIYAMA）
 
-Android Application Developer. Machine Learning Hobbyist(TensorFlow).
+Android Application Developer.
 
-　大阪のソフトウェア開発会社「[有限会社シーリス](https://www.c-lis.co.jp)」の代表。
-著書として「TensorFlow活用ガイド（共著・６章担当、技術評論社刊）」「TensorFlowはじめましたシリーズ（インプレスR&D社刊）」「作って学ぶAndroidアプリ開発［Kotlin対応］（技術評論社刊）」など。
+大阪のソフトウェア開発会社「有限会社シーリス」の代表。 2007年11月、Androidの発表直後から現在に至るまでAndroidアプリ開発の取り組みを続けている。
 
-　最近の興味は、趣味のTensorFlowで画像判別モデル（二値分類・物体検出）を作成すること。
-Androidアプリケーションへ機械学習モデルの組み込んであれこれしています。
+趣味のTensorFlowで画像判別モデルを作成とAndroidアプリケーションへの機械学習モデルの組み込みは、生成系モデルの台頭によりトーンダウン。
+
+最近はAndroidKeyStore等を用いた暗号処理の実装と、スマートカード（Java Card OS）の実装。
+さらにNFC関連機能からスマートカードとの連携。スマートフォン自体がカードとして振る舞うHCE（Host-based Card Emulation）にフォーカスしている。
 
 {{% figure src="/images/profile.jpg" %}}
 
@@ -22,4 +23,4 @@ Androidアプリケーションへ機械学習モデルの組み込んであれ�
 * Facebook: [https://www.facebook.com/keiji.ariyama](https://www.facebook.com/keiji.ariyama)
 * Twitter: N/A
 
-[PGP Public Key](https://blog.keiji.dev/keiji_ariyama.pub) (Fingerprint: 1272 1F00 DD06 172C 0F62 835B A0EC D139 7CEB 71D9)
+[PGP Public Key](https://blog.keiji.dev/keiji_ariyama.pub) (Fingerprint: 3934 5A39 64E1 126F 460C 77A9 30A7 78FE 1687 5687)
