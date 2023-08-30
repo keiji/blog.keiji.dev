@@ -13,7 +13,7 @@ Android Application Developer.
 
 趣味のTensorFlowで画像判別モデルを作成とAndroidアプリケーションへの機械学習モデルの組み込みは、生成系モデルの台頭によりトーンダウン。
 
-最近はAndroidKeyStore等を用いた暗号処理の実装と、スマートカード（Java Card OS）の実装。
+最近はAndroidKeyStore等を用いた暗号処理、スマートカード（Java Card OS）の実装。
 さらにNFC関連機能からスマートカードとの連携。スマートフォン自体がカードとして振る舞うHCE（Host-based Card Emulation）にフォーカスしている。
 
 {{% figure src="/images/profile.jpg" %}}
