@@ -13,6 +13,8 @@ categories:
 
 11月12日（日）、池袋サンシャインシティにて開催される「[技術書典15](https://techbookfest.org/event/tbf15)」に、サークル「[めがねをかけるんだ](https://techbookfest.org/organization/5173176170446848)」として参加させていただくことになりました。
 
+サークル配置は「さ17」。
+
 新刊は「AndroidKeyStoreと過ごした400日」です。
 
 | タイトル | AndroidKeyStoreと過ごした400日 |
@@ -22,7 +24,7 @@ categories:
 | 頒布価格 | 500円（会場価格）            |
 | 発行   | 個人サークル「めがねをかけるんだ」 |
 
-　本文サンプルおよび電子版販売ページは[こちら](https://techbookfest.org/product/cUVLF5TvwkhQU2t4K72RVj)
+本文サンプルおよび電子版販売ページは[こちら](https://techbookfest.org/product/cUVLF5TvwkhQU2t4K72RVj)
 
 <!--more-->
 ----
@@ -288,6 +290,8 @@ Ed25519（と、X25519）、今後の用途の広がりに期待をしていま�
 
 11月12日（日）、池袋サンシャインシティにて開催される「[技術書典15](https://techbookfest.org/event/tbf15)」に、サークル「[めがねをかけるんだ](https://techbookfest.org/organization/5173176170446848)」として参加させていただくことになりました。
 
+サークル配置は「さ17」。
+
 新刊は「AndroidKeyStoreと過ごした400日」です。
 
 | タイトル | AndroidKeyStoreと過ごした400日 |
@@ -297,7 +301,7 @@ Ed25519（と、X25519）、今後の用途の広がりに期待をしていま�
 | 頒布価格 | 500円（会場価格）            |
 | 発行   | 個人サークル「めがねをかけるんだ」 |
 
-　本文サンプルおよび電子版販売ページは[こちら](https://techbookfest.org/product/cUVLF5TvwkhQU2t4K72RVj)
+本文サンプルおよび電子版販売ページは[こちら](https://techbookfest.org/product/cUVLF5TvwkhQU2t4K72RVj)
 
 オフライン会場にも参加しますが、持ち込みは電子版だけなので、電子版を売るのとOpenPGP Cardアプリケーション「[Bocchi](https://keiji.github.io/bocchi-docs/)」の実演。あとは、参加者の皆さんとお話できるくらいの気持ちで行きます。
 
