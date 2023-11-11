@@ -14,6 +14,43 @@
 		<atom:link href="/categories/chromebook/" rel="self" type="application/rss+xml" />
 		
 		<item>
+			<title>Android 12がEd25519にサイレントで対応していた件</title>
+			<link>https://blog.keiji.dev/2023/11/techbookfest15.html</link>
+			<pubDate>Sat, 11 Nov 2023 19:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2023/11/techbookfest15.html</guid>
+			<description>&lt;p&gt;まずは宣伝です。&lt;/p&gt;
+&lt;p&gt;11月12日（日）、池袋サンシャインシティにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf15&#34;&gt;技術書典15&lt;/a&gt;」に、サークル「&lt;a href=&#34;https://techbookfest.org/organization/5173176170446848&#34;&gt;めがねをかけるんだ&lt;/a&gt;」として参加させていただくことになりました。&lt;/p&gt;
+&lt;p&gt;新刊は「AndroidKeyStoreと過ごした400日」です。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;AndroidKeyStoreと過ごした400日&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;B5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;32p（電子版）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;500円（会場価格）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;　本文サンプルおよび電子版販売ページは&lt;a href=&#34;https://techbookfest.org/product/cUVLF5TvwkhQU2t4K72RVj&#34;&gt;こちら&lt;/a&gt;&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
 			<title>git push --forceで履歴は消えないと言う話</title>
 			<link>https://blog.keiji.dev/2023/06/git_push_force_do_not_delete_commit.html</link>
 			<pubDate>Thu, 15 Jun 2023 15:45:00 +0900</pubDate>
@@ -151,14 +188,6 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
 			<description>&lt;p&gt;　筆者は、COVID-19ワクチンの接種を受けました。
 本エントリーは、接種を受けて経験した副反応の記録です。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/i_am_vaccinated_and_you/original_50eb40cc-428f-4461-bce8-a08534fdae75_PXL_20210720_085217623.jpg&#34; alt=&#34;モデルナ筋注。大阪府大規模接種センターにて。1回目接種6月19日、2回目接種7月20日&#34;&gt;&lt;/p&gt;</description>
-		</item>
-      	
-		<item>
-			<title>Android Bazaar and Conference 2021 Springサポートページ</title>
-			<link>https://blog.keiji.dev/2021/06/abc2021s/</link>
-			<pubDate>Sun, 20 Jun 2021 00:00:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2021/06/abc2021s/</guid>
-			<description>Android Bazaar and Conference 2021 Springの発表「接触確認API ExposureWindow modeへの対応に向けた検討について」に関するサポートページです。 発表資料</description>
 		</item>
       	
 	</channel>
