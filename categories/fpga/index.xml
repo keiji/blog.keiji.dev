@@ -18,7 +18,13 @@
 			<link>https://blog.keiji.dev/2023/11/techbookfest15.html</link>
 			<pubDate>Sat, 11 Nov 2023 19:00:00 +0900</pubDate>
 			<guid>https://blog.keiji.dev/2023/11/techbookfest15.html</guid>
-			<description>&lt;p&gt;まずは宣伝です。&lt;/p&gt;
+			<description>&lt;p&gt;訂正
+記事の公開当初、&amp;ldquo;Ed25519対応はAndroid 12以降に含まれる&amp;quot;と記述していましたが、正しくは&amp;quot;Ed25519対応はAndroid 13以降に含まれる&amp;quot;です。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;AndroidKeyStoreEdECPublicKey.java&lt;/code&gt;は、Android 12のリリースブランチには存在せず、Android 13のリリースブランチから存在しています。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java&#34;&gt;https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cs.android.com/android/platform/superproject/+/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java&#34;&gt;https://cs.android.com/android/platform/superproject/+/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;まずは宣伝です。&lt;/p&gt;
 &lt;p&gt;11月12日（日）、池袋サンシャインシティにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf15&#34;&gt;技術書典15&lt;/a&gt;」に、サークル「&lt;a href=&#34;https://techbookfest.org/organization/5173176170446848&#34;&gt;めがねをかけるんだ&lt;/a&gt;」として参加させていただくことになりました。&lt;/p&gt;
 &lt;p&gt;サークル配置は「さ17」。&lt;/p&gt;
 &lt;p&gt;新刊は「AndroidKeyStoreと過ごした400日」です。&lt;/p&gt;

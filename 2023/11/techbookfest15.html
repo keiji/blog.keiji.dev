@@ -32,7 +32,13 @@
 <script src="https://blog.keiji.dev/js/bundle.js"></script>
 <script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
 <meta name="generator" content="Hugo 0.111.3"><meta property="og:title" content="AndroidKeyStoreがEd25519に（サイレントで）対応していた件" />
-<meta property="og:description" content="まずは宣伝です。
+<meta property="og:description" content="訂正
+記事の公開当初、&ldquo;Ed25519対応はAndroid 12以降に含まれる&quot;と記述していましたが、正しくは&quot;Ed25519対応はAndroid 13以降に含まれる&quot;です。
+AndroidKeyStoreEdECPublicKey.javaは、Android 12のリリースブランチには存在せず、Android 13のリリースブランチから存在しています。
+https://cs.android.com/android/platform/superproject/&#43;/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
+https://cs.android.com/android/platform/superproject/&#43;/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
+
+まずは宣伝です。
 11月12日（日）、池袋サンシャインシティにて開催される「技術書典15」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。
 サークル配置は「さ17」。
 新刊は「AndroidKeyStoreと過ごした400日」です。
@@ -73,7 +79,13 @@ B5
 <meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
 
 <meta name="twitter:title" content="AndroidKeyStoreがEd25519に（サイレントで）対応していた件"/>
-<meta name="twitter:description" content="まずは宣伝です。
+<meta name="twitter:description" content="訂正
+記事の公開当初、&ldquo;Ed25519対応はAndroid 12以降に含まれる&quot;と記述していましたが、正しくは&quot;Ed25519対応はAndroid 13以降に含まれる&quot;です。
+AndroidKeyStoreEdECPublicKey.javaは、Android 12のリリースブランチには存在せず、Android 13のリリースブランチから存在しています。
+https://cs.android.com/android/platform/superproject/&#43;/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
+https://cs.android.com/android/platform/superproject/&#43;/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
+
+まずは宣伝です。
 11月12日（日）、池袋サンシャインシティにて開催される「技術書典15」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。
 サークル配置は「さ17」。
 新刊は「AndroidKeyStoreと過ごした400日」です。
@@ -167,7 +179,13 @@ B5
   <div class="container" role="main">
     <article class="article" class="blog-post">
       
-    <p>まずは宣伝です。</p>
+    <p>訂正
+記事の公開当初、&ldquo;Ed25519対応はAndroid 12以降に含まれる&quot;と記述していましたが、正しくは&quot;Ed25519対応はAndroid 13以降に含まれる&quot;です。</p>
+<p><code>AndroidKeyStoreEdECPublicKey.java</code>は、Android 12のリリースブランチには存在せず、Android 13のリリースブランチから存在しています。</p>
+<p><a href="https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java">https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java</a></p>
+<p><a href="https://cs.android.com/android/platform/superproject/+/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java">https://cs.android.com/android/platform/superproject/+/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java</a></p>
+<hr>
+<p>まずは宣伝です。</p>
 <p>11月12日（日）、池袋サンシャインシティにて開催される「<a href="https://techbookfest.org/event/tbf15">技術書典15</a>」に、サークル「<a href="https://techbookfest.org/organization/5173176170446848">めがねをかけるんだ</a>」として参加させていただくことになりました。</p>
 <p>サークル配置は「さ17」。</p>
 <p>新刊は「AndroidKeyStoreと過ごした400日」です。</p>
@@ -289,7 +307,7 @@ class Ed25519KeyTest {
 
         val privateKey: PrivateKey = keyPair.private
 
-        // https://cs.android.com/android/platform/superproject/+/master:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
+        // https://cs.android.com/android/platform/superproject/+/main:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
         val publicKey: PublicKey = keyPair.public
 
         println(&#34;algorithm: ${privateKey.algorithm}&#34;)
@@ -325,10 +343,10 @@ class Ed25519KeyTest {
         println(&#34;signatureBytes: ${signatureBytes.toHex(&#34;:&#34;)}&#34;)
 
         // java.security.InvalidKeyException: No installed provider supports this key: android.security.keystore2.AndroidKeyStoreEdECPublicKey
-        val verifierEd25519 = Signature.getInstance(&#34;Ed25519&#34;).also {
-            it.initVerify(publicKey)
-            it.update(hashBytes)
-        }
+//        val verifierEd25519 = Signature.getInstance(&#34;Ed25519&#34;).also {
+//            it.initVerify(publicKey)
+//            it.update(hashBytes)
+//        }
 
         val encoded = publicKey.encoded
         val publicKeyBytes = encoded.copyOfRange(DER_KEY_PREFIX.size, encoded.size)
@@ -361,7 +379,7 @@ private fun getKeyInfo(privateKey: PrivateKey): KeyInfo {
 </code></pre><h3 id="とりあえず使えるけど">とりあえず使えるけど</h3>
 <p>AndroidKeyStoreでEd25519が使える。個人的には大ニュースなのですが、実際に使ってみると、署名はできても検証ができないなど、かなり急ぎで入れた印象があります。</p>
 <p>AndroidKeyStoreで生成したEd25519の鍵、公開鍵の型は<code>AndroidKeyStoreEdECPublicKey</code>となっています（が、<code>@hide</code>が付いているのでクラス自体は見えない）。</p>
-<p>このクラス名を手がかりに<a href="https://cs.android.com/android/_/android/platform/frameworks/base/+/143fa39384d69d4de7a92ce64b2a7a2ac0ba8728">コミットログ</a>を見たところ、追加されたのは2022年の5月5日、Android 12以降に含まれているようです。</p>
+<p>このクラス名を手がかりに<a href="https://cs.android.com/android/_/android/platform/frameworks/base/+/143fa39384d69d4de7a92ce64b2a7a2ac0ba8728">コミットログ</a>を見たところ、追加されたのは2022年の5月5日、Android <del>12</del> 13以降に含まれているようです。</p>
 <p>秘密鍵（<code>AndroidKeyStoreEdECPrivateKey</code>）は、そのまま<code>Signature</code>を使って署名はできるのですが、公開鍵でverifyしようとするとサポートしていない例外が出ます。どういうことだ。</p>
 <pre tabindex="0"><code>java.security.InvalidKeyException: No installed provider supports this key: android.security.keystore2.AndroidKeyStoreEdECPublicKey
 </code></pre><p>しょうがないので、署名はAndroidKeyStore、検証はBouncyCastleに任せることにしました。</p>
