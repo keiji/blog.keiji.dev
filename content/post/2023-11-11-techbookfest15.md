@@ -9,6 +9,17 @@ categories:
 
 ---
 
+訂正
+記事の公開当初、"Ed25519対応はAndroid 12以降に含まれる"と記述していましたが、正しくは"Ed25519対応はAndroid 13以降に含まれる"です。
+
+`AndroidKeyStoreEdECPublicKey.java`は、Android 12のリリースブランチには存在せず、Android 13のリリースブランチから存在しています。
+
+https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
+
+https://cs.android.com/android/platform/superproject/+/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
+
+----
+
 まずは宣伝です。
 
 11月12日（日）、池袋サンシャインシティにて開催される「[技術書典15](https://techbookfest.org/event/tbf15)」に、サークル「[めがねをかけるんだ](https://techbookfest.org/organization/5173176170446848)」として参加させていただくことになりました。
@@ -131,7 +142,7 @@ class Ed25519KeyTest {
 
         val privateKey: PrivateKey = keyPair.private
 
-        // https://cs.android.com/android/platform/superproject/+/master:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
+        // https://cs.android.com/android/platform/superproject/+/main:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
         val publicKey: PublicKey = keyPair.public
 
         println("algorithm: ${privateKey.algorithm}")
@@ -167,10 +178,10 @@ class Ed25519KeyTest {
         println("signatureBytes: ${signatureBytes.toHex(":")}")
 
         // java.security.InvalidKeyException: No installed provider supports this key: android.security.keystore2.AndroidKeyStoreEdECPublicKey
-        val verifierEd25519 = Signature.getInstance("Ed25519").also {
-            it.initVerify(publicKey)
-            it.update(hashBytes)
-        }
+//        val verifierEd25519 = Signature.getInstance("Ed25519").also {
+//            it.initVerify(publicKey)
+//            it.update(hashBytes)
+//        }
 
         val encoded = publicKey.encoded
         val publicKeyBytes = encoded.copyOfRange(DER_KEY_PREFIX.size, encoded.size)
@@ -207,7 +218,7 @@ AndroidKeyStoreでEd25519が使える。個人的には大ニュースなので�
 
 AndroidKeyStoreで生成したEd25519の鍵、公開鍵の型は`AndroidKeyStoreEdECPublicKey`となっています（が、`@hide`が付いているのでクラス自体は見えない）。
 
-このクラス名を手がかりに[コミットログ](https://cs.android.com/android/_/android/platform/frameworks/base/+/143fa39384d69d4de7a92ce64b2a7a2ac0ba8728)を見たところ、追加されたのは2022年の5月5日、Android 12以降に含まれているようです。
+このクラス名を手がかりに[コミットログ](https://cs.android.com/android/_/android/platform/frameworks/base/+/143fa39384d69d4de7a92ce64b2a7a2ac0ba8728)を見たところ、追加されたのは2022年の5月5日、Android ~~12~~ 13以降に含まれているようです。
 
 秘密鍵（`AndroidKeyStoreEdECPrivateKey`）は、そのまま`Signature`を使って署名はできるのですが、公開鍵でverifyしようとするとサポートしていない例外が出ます。どういうことだ。
 
