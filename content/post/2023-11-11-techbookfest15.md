@@ -48,7 +48,7 @@ java.security.InvalidAlgorithmParameterException: Unsupported EC curve name: meg
 ドキドキしながら`KeyGenParameterSpec.Builder`で`ed25519`の鍵ペアの生成を試みたところ、普通に生成・利用できてしまいました。
 
 ### サンプル（テスト）コード
-AndroidKeyStoreでEd25519署名と検証をするコードがこちらです。
+AndroidKeyStoreでEd25519をつかって署名と検証をするコードがこちらです。
 新刊には入れられなかったのが悔しいので、置いておきます。
 
 ```
