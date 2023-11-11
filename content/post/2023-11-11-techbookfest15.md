@@ -1,5 +1,5 @@
 ---
-title: AndroidKeyStoreがEd25519にサイレントで対応していた件
+title: AndroidKeyStoreがEd25519に（サイレントで）対応していた件
 author: Keiji Ariyama
 type: post
 date: 2023-11-11T19:00:00+09:00
@@ -27,7 +27,7 @@ categories:
 <!--more-->
 ----
 
-## AndroidKeyStoreがEd25519にサイレントで対応していた件
+## AndroidKeyStoreがEd25519に（サイレントで）対応していた件
 本題です。
 
 新刊を泣きながら執筆中
@@ -257,7 +257,7 @@ private fun getKeyInfo(privateKey: PrivateKey): KeyInfo {
 java.security.NoSuchAlgorithmException: no such algorithm: EdDSA for provider AndroidKeyStore
 ```
 
-Security Providerの一覧を取ってみましたが、この中に`Ed25519`がないので、まだ対応していない可能性があります。ドキュメントに記載していないのも、対応が十分ではないからかも知れません。
+Security Providerの一覧を取ってみましたが、この中に`EdDSA`がないので、まだ対応していない可能性があります。ドキュメントに記載していないのも、対応が十分ではないからかも知れません。
 
 ```
 Security Provider Service
