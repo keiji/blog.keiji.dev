@@ -1,5 +1,5 @@
 ---
-title: Android 12がEd25519にサイレントで対応していた件
+title: AndroidKeyStoreがEd25519にサイレントで対応していた件
 author: Keiji Ariyama
 type: post
 date: 2023-11-11T19:00:00+09:00
@@ -27,7 +27,7 @@ categories:
 <!--more-->
 ----
 
-## Android 12でEd25519での署名にサイレントで対応していた件
+## AndroidKeyStoreがEd25519にサイレントで対応していた件
 本題です。
 
 新刊を泣きながら執筆中
