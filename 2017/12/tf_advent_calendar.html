@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
 <title>ココが辛いよ！ TensorFlow</title>
-
-<meta name="description" content="Don&#39;t take your glasses off." />
-
+<meta name="description" 
+      content="Don&#39;t take your glasses off."
+>
 
   
-  
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
-  <script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
+    <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -19,31 +19,16 @@
   
 
 
+
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="alternate" type="application/rss+xml" href="https://blog.keiji.dev/index.xml" title="めがねをかけるんだ">
-
-<link id="dark-mode-theme" rel="stylesheet" href="https://blog.keiji.dev/css/dark.css" />
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-<link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-<script src="https://blog.keiji.dev/js/bundle.js"></script>
-<script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.111.3"><meta property="og:title" content="ココが辛いよ！ TensorFlow" />
-<meta property="og:description" content="この投稿は、TensorFlow Advent Calendarの12日目の記事です。
-みなさん。TensorFlow使ってますか？
-ぼくはと言えば、気がつけば毎日なにがしかのTensorFlowのコードを書いています。
-TensorFlowが発表されてからすぐに使い始めて早二年、さまざまな機械学習向けのフレームワークが登場する中、TensorFlowは高い人気を保っていますね。
-さて今回の記事は、そんな人気のTensorFlowを使っていて、ぼくが「つらい」と感じる（感じた）ことを書きます。
-同じ気持ちの方には共感していただき、「こうすればもっと便利に使えるのに」という方法を知っている方が居られたら是非教えていただきたいと考えています。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.keiji.dev/2017/12/tf_advent_calendar.html" /><meta property="og:image" content="https://blog.keiji.dev/images/logo.png"/><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2017-12-13T00:52:09+00:00" />
-<meta property="article:modified_time" content="2017-12-13T00:52:09+00:00" />
-
-
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  href="https://blog.keiji.dev/index.xml"
+  title="めがねをかけるんだ"
+/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
 
@@ -55,6 +40,52 @@ TensorFlowが発表されてからすぐに使い始めて早二年、さまざ�
 さて今回の記事は、そんな人気のTensorFlowを使っていて、ぼくが「つらい」と感じる（感じた）ことを書きます。
 同じ気持ちの方には共感していただき、「こうすればもっと便利に使えるのに」という方法を知っている方が居られたら是非教えていただきたいと考えています。"/>
 
+
+
+<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
+
+
+
+
+<link
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/styles.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
+
+
+
+<link
+  id="dark-mode-theme"
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/dark.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+<script>
+  var darkTheme = document.getElementById('dark-mode-theme')
+  var storedTheme = localStorage.getItem('dark-mode-storage')
+
+  if (storedTheme === 'dark') {
+    darkTheme.disabled = false
+  } else if (storedTheme === 'light') {
+    darkTheme.disabled = true
+  }
+</script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
   </head>
   <body>
     
@@ -68,22 +99,32 @@ TensorFlowが発表されてからすぐに使い始めて早二年、さまざ�
   <div class="nav">
     
       <a href="https://blog.keiji.dev/" class="nav-logo">
-      <img src="https://blog.keiji.dev/images/logo.png"
-           width=""
-           height=""
-           alt="Logo">
+        <img
+          src="https://blog.keiji.dev/images/logo.png"
+          width=""
+          height=""
+          alt="Logo"
+        />
       </a>
     
 
     <ul class="nav-links">
       
         
-          <li><a href="https://blog.keiji.dev/profile/" name="Profile"><i class="fas fa-user fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/profile/" id="Profile"
+              ><em class="fas fa-user fa-lg"></em
+            ></a>
+          </li>
+          
       
         
-          <li><a href="https://blog.keiji.dev/licenses/" name="Licenses"><i class="fab fa-osi fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
+              ><em class="fab fa-osi fa-lg"></em
+            ></a>
+          </li>
+          
       
     </ul>
   </div>
@@ -93,17 +134,26 @@ TensorFlowが発表されてからすぐに使い始めて早二年、さまざ�
       <div class="container">
         <div class="post-heading">
           
-            <h1>ココが辛いよ！ TensorFlow</h1>
+            <h1>
+              ココが辛いよ！ TensorFlow
+            </h1>
           
           
             <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2017-12-13
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2017-12-13
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/tensorflow/">TensorFlow</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/tensorflow/"
+        >TensorFlow</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
   
 </span>
@@ -113,13 +163,13 @@ TensorFlowが発表されてからすぐに使い始めて早二年、さまざ�
       </div>
     </div>
   </header>
-
+  
 
     
   <div class="container" role="main">
     <article class="article" class="blog-post">
       
-    <p><strong>この投稿は、<a href="https://qiita.com/advent-calendar/2017/tensorflow">TensorFlow Advent Calendar</a>の12日目の記事です。</strong></p>
+  <p><strong>この投稿は、<a href="https://qiita.com/advent-calendar/2017/tensorflow">TensorFlow Advent Calendar</a>の12日目の記事です。</strong></p>
 <p>みなさん。TensorFlow使ってますか？</p>
 <p>ぼくはと言えば、気がつけば毎日なにがしかのTensorFlowのコードを書いています。</p>
 <p>TensorFlowが発表されてからすぐに使い始めて早二年、さまざまな機械学習向けのフレームワークが登場する中、TensorFlowは高い人気を保っていますね。</p>
@@ -203,34 +253,46 @@ TensorFlowが発表されてからすぐに使い始めて早二年、さまざ�
 <p>明日の担当はLewuatheさんです。</p>
 
 
+
+      
+
       
     </article>
     
     
       
-      
-</div>
+
+    
+  </div>
 
     <footer>
   
 
+<div class="social-icons">
+  
+
+  
+</div>
+
+
+  
   <div class="container">
     <p class="credits copyright">
       <a href="https://blog.keiji.dev/about"></a>
       &nbsp;&copy;
       2023
       
-      &nbsp;/&nbsp;
-      <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
+        &nbsp;/&nbsp;
+        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
       
       &nbsp;&ndash;&nbsp;
-      <i class="fas fa-moon" id="dark-mode-toggle"></i>
+      <em class="fas fa-moon" id="dark-mode-toggle"></em>
+    </p>
 
     <p class="credits theme-by">
       Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
       Theme
       <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
     </p>
   </div>
 </footer>

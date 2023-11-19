@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
 <title>習作</title>
-
-<meta name="description" content="Don&#39;t take your glasses off." />
-
+<meta name="description" 
+      content="Don&#39;t take your glasses off."
+>
 
   
-  
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
-  <script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
+    <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -19,30 +19,68 @@
   
 
 
+
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="alternate" type="application/rss+xml" href="https://blog.keiji.dev/index.xml" title="めがねをかけるんだ">
-
-<link id="dark-mode-theme" rel="stylesheet" href="https://blog.keiji.dev/css/dark.css" />
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-<link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-<script src="https://blog.keiji.dev/js/bundle.js"></script>
-<script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.111.3"><meta property="og:title" content="習作" />
-<meta property="og:description" content="Don&#39;t take your glasses off." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/" /><meta property="og:image" content="https://blog.keiji.dev/images/logo.png"/>
-
-
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  href="https://blog.keiji.dev/index.xml"
+  title="めがねをかけるんだ"
+/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
 
 <meta name="twitter:title" content="習作"/>
 <meta name="twitter:description" content="Don&#39;t take your glasses off."/>
 
+
+
+<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
+
+
+
+
+<link
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/styles.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
+
+
+
+<link
+  id="dark-mode-theme"
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/dark.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+<script>
+  var darkTheme = document.getElementById('dark-mode-theme')
+  var storedTheme = localStorage.getItem('dark-mode-storage')
+
+  if (storedTheme === 'dark') {
+    darkTheme.disabled = false
+  } else if (storedTheme === 'light') {
+    darkTheme.disabled = true
+  }
+</script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
   </head>
   <body>
     
@@ -56,22 +94,32 @@
   <div class="nav">
     
       <a href="https://blog.keiji.dev/" class="nav-logo">
-      <img src="https://blog.keiji.dev/images/logo.png"
-           width=""
-           height=""
-           alt="Logo">
+        <img
+          src="https://blog.keiji.dev/images/logo.png"
+          width=""
+          height=""
+          alt="Logo"
+        />
       </a>
     
 
     <ul class="nav-links">
       
         
-          <li><a href="https://blog.keiji.dev/profile/" name="Profile"><i class="fas fa-user fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/profile/" id="Profile"
+              ><em class="fas fa-user fa-lg"></em
+            ></a>
+          </li>
+          
       
         
-          <li><a href="https://blog.keiji.dev/licenses/" name="Licenses"><i class="fab fa-osi fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
+              ><em class="fab fa-osi fa-lg"></em
+            ></a>
+          </li>
+          
       
     </ul>
   </div>
@@ -81,17 +129,19 @@
       <div class="container">
         <div class="categories-heading">
           
-            <h1>習作</h1>
+            <h1>
+              習作
+            </h1>
           
           
         </div>
       </div>
     </div>
   </header>
-
+  
 
     
-<div class="container" role="main">
+  <div class="container" role="main">
     <div class="posts-list">
       
         
@@ -100,27 +150,39 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2020/12/android_app_development_on_chromebook.html">
-      <h2 class="post-title">Chromebook（Lenovo IdeaPad Duet）でAndroidアプリ開発</h2>
+    <h2 class="post-title">Chromebook（Lenovo IdeaPad Duet）でAndroidアプリ開発</h2>
   </a>
   <div class="post-entry">
     
       <p><p>　アプリ開発の仕事で比較的画面が大きい端末に対応する必要があり、いい感じのAndroidタブレットが見当たらなかったので、最近はAndroidアプリも普通に動く「Chromebook」を購入しました。</p>
 <p><img src="https://blog.keiji.dev/images/androiddev_on_chromebook/my_new_gear.jpg" alt="My new gear&amp;hellip;"></p></p>
-        <a href="https://blog.keiji.dev/2020/12/android_app_development_on_chromebook.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2020/12/android_app_development_on_chromebook.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2020-12-15
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2020-12-15
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E7%BF%92%E4%BD%9C/">習作</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/"
+        >習作</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/chromebook/">Chromebook</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/chromebook/"
+        >Chromebook</a
+      >&nbsp;
     
   
 </span>
@@ -131,26 +193,35 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2020/11/mangaview-now-stable.html">
-      <h2 class="post-title">MangaView 1.0.0をリリースしました</h2>
+    <h2 class="post-title">MangaView 1.0.0をリリースしました</h2>
   </a>
   <div class="post-entry">
     
       <p><p>　<a href="https://blog.keiji.dev/2020/08/mangaview.html">今年の夏から作っていた</a>漫画ビューアー用のカスタムビュー「MangaView」、ついに安定版となる1.0.0をリリースすることができました。</p>
 <p><a href="https://github.com/keiji/mangaview">https://github.com/keiji/mangaview</a></p>
 <p>　これまでAndroidアプリはいくつもGoogle Playで公開してきたし、ライブラリを作る仕事はいくつも手がけてきたけれど、公開するライブラリを手がけたのははじめて。パッケージングからBintrayでの配信、jcenterでの公開まで、とても良い勉強になったと思います。</p></p>
-        <a href="https://blog.keiji.dev/2020/11/mangaview-now-stable.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2020/11/mangaview-now-stable.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2020-11-08
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2020-11-08
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E7%BF%92%E4%BD%9C/">習作</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/"
+        >習作</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
   
 </span>
@@ -161,7 +232,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2020/08/mangaview.html">
-      <h2 class="post-title">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</h2>
+    <h2 class="post-title">漫画ビューアー用カスタムビュー「MangaView」をオープンソースで公開した話</h2>
   </a>
   <div class="post-entry">
     
@@ -177,19 +248,28 @@
 <p><img src="https://blog.keiji.dev/images/mangaview/mangaview1.gif" alt="mangaview1"></p>
 <p>　また一画面に見開きで表示可能なので、横画面の時だけ見開き表示。といった使い方もできます。</p>
 <p><img src="https://blog.keiji.dev/images/mangaview/mangaview2.gif" alt="mangaview1"></p></p>
-        <a href="https://blog.keiji.dev/2020/08/mangaview.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2020/08/mangaview.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2020-08-25
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2020-08-25
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E7%BF%92%E4%BD%9C/">習作</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/"
+        >習作</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
   
 </span>
@@ -200,24 +280,30 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2020/01/elegoo-mars_presision.html">
-      <h2 class="post-title">ELEGOO MARSの出力精度の改善</h2>
+    <h2 class="post-title">ELEGOO MARSの出力精度の改善</h2>
   </a>
   <div class="post-entry">
     
       <p><p>　あけましておめでとうございます。御社の原稿、いまがんばって書いてます！</p>
 <p>　さて、昨年末のことになりますが、光造形３Dプリンター「ELEGOO MARS」を購入しました。</p>
 <p><img src="https://blog.keiji.dev/images/mars/mars_z-axis-12.jpg" alt="ELEGOO MARS"></p></p>
-        <a href="https://blog.keiji.dev/2020/01/elegoo-mars_presision.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2020/01/elegoo-mars_presision.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2020-01-04
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2020-01-04
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E7%BF%92%E4%BD%9C/">習作</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/"
+        >習作</a
+      >&nbsp;
     
   
 </span>
@@ -228,7 +314,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2018/12/move_to_gehirn_rs2_plus.html">
-      <h2 class="post-title">Gehirn RS2 Plusに引っ越しした</h2>
+    <h2 class="post-title">Gehirn RS2 Plusに引っ越しした</h2>
   </a>
   <div class="post-entry">
     
@@ -236,17 +322,23 @@
 <p>　これまでは、「さくらのVPS」にインストールしたWordPress上で管理していました。
 さくらのVPSを使うと、システムのすべてを自分で管理することになり、セキュリティアップデートなどのメンテナンスもすべて自分でやる必要がありました（もちろん、それは利点でもあります）。</p>
 <p>　加えてWordPressは、最初にセットアップして以降、数度の更新を経て、初期にインストールしたプラグインが動いたり動かなかったりしていました。最初の頃にがんばってカスタムしたテーマも、今ではどこをどう変えたのか覚えていませんでした。</p></p>
-        <a href="https://blog.keiji.dev/2018/12/move_to_gehirn_rs2_plus.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2018/12/move_to_gehirn_rs2_plus.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2018-12-31
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2018-12-31
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E7%BF%92%E4%BD%9C/">習作</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/"
+        >習作</a
+      >&nbsp;
     
   
 </span>
@@ -257,24 +349,33 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2019/01/meganeco_playground.html">
-      <h2 class="post-title">機械学習のモデルを試せるサイトを作った話</h2>
+    <h2 class="post-title">機械学習のモデルを試せるサイトを作った話</h2>
   </a>
   <div class="post-entry">
     
       <p>三年前から個人的に構築している趣味の画像収集システム「MeganeCo」で利用している機械学習モデルを試せるサイトを公開しました。 MeganeCo Playground 画像を</p>
-        <a href="https://blog.keiji.dev/2019/01/meganeco_playground.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2019/01/meganeco_playground.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2018-01-11
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2018-01-11
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/tensorflow/">TensorFlow</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/tensorflow/"
+        >TensorFlow</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E7%BF%92%E4%BD%9C/">習作</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/"
+        >習作</a
+      >&nbsp;
     
   
 </span>
@@ -285,7 +386,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2017/01/demodori.html">
-      <h2 class="post-title">さよならMac</h2>
+    <h2 class="post-title">さよならMac</h2>
   </a>
   <div class="post-entry">
     
@@ -300,19 +401,28 @@
 <p>　ぼくは、Macが好きだから使っている。</p>
 <p>　いや、好きだった。</p>
 <p>　6年間、ぼくを公私ともに支えてくれたMacと、お別れすることにした。</p></p>
-        <a href="https://blog.keiji.dev/2017/01/demodori.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2017/01/demodori.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2017-01-30
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2017-01-30
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E7%BF%92%E4%BD%9C/">習作</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/"
+        >習作</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
   
 </span>
@@ -323,7 +433,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2016/12/tensorflow_advent_calendar.html">
-      <h2 class="post-title">「さくらの高火力」でTensorFlow</h2>
+    <h2 class="post-title">「さくらの高火力」でTensorFlow</h2>
   </a>
   <div class="post-entry">
     
@@ -333,19 +443,28 @@
 <p>機械学習に取り組む中で、科学技術計算などを行う汎用目的(General Purpose)GPUや、複数のGPUで計算を並列化する「マルチGPU」に憧れがないと言えば嘘になります。</p>
 <p>しかし、GPUの１枚の価格や電気代、排熱の処理を考えると現実的でないと言う結論に落ち着いていました。</p>
 <p>今回、さくらインターネットの<a href="https://www.sakura.ad.jp/koukaryoku/">高火力コンピューティング</a>が試用できたので、やってみたことをまとめます。</p></p>
-        <a href="https://blog.keiji.dev/2016/12/tensorflow_advent_calendar.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2016/12/tensorflow_advent_calendar.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2016-12-12
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2016-12-12
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/tensorflow/">TensorFlow</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/tensorflow/"
+        >TensorFlow</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E7%BF%92%E4%BD%9C/">習作</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/"
+        >習作</a
+      >&nbsp;
     
   
 </span>
@@ -356,7 +475,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2016/09/about_region_cropper.html">
-      <h2 class="post-title">矩形切り出しツール「Region Cropper」を公開しました</h2>
+    <h2 class="post-title">矩形切り出しツール「Region Cropper」を公開しました</h2>
   </a>
   <div class="post-entry">
     
@@ -366,21 +485,33 @@
 <hr>
 <p>時間を見つけてはTensorFlow関係のあれこれをちまちま続けています。</p>
 <p>先日は「<a href="https://www.pasonatech.co.jp/skill_up/event/naniwa_tech.jsp">なにわTECH道</a>」で、TensorFlowを使ったイラスト顔検出について発表しました。</p></p>
-        <a href="https://blog.keiji.dev/2016/09/about_region_cropper.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2016/09/about_region_cropper.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2016-09-15
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2016-09-15
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/tensorflow/">TensorFlow</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/tensorflow/"
+        >TensorFlow</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E7%BF%92%E4%BD%9C/">習作</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/"
+        >習作</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
   
 </span>
@@ -391,26 +522,35 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2016/05/wip_trying_cifar10_exercise.html">
-      <h2 class="post-title">【WIP】TensorFlowのExerciseをがんばっている</h2>
+    <h2 class="post-title">【WIP】TensorFlowのExerciseをがんばっている</h2>
   </a>
   <div class="post-entry">
     
       <p><p>　僕はいま、<a href="https://events.google.com/io2016/" target="_blank">Google I/O 2016</a>参加で渡米するにあたり、時差ボケ予防のために徹夜でこの記事を書いています。</p>
 <h3 id="概要忙しい人向け">概要（忙しい人向け）</h3>
 <p>　TensorFlowのチュートリアルにある課題（エクササイズ）に挑戦した。Softmaxの適用については比較的簡単だったが、Fully connected層をLocally connected層に変える課題については難航し、解決していない。</p></p>
-        <a href="https://blog.keiji.dev/2016/05/wip_trying_cifar10_exercise.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2016/05/wip_trying_cifar10_exercise.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2016-05-15
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2016-05-15
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/tensorflow/">TensorFlow</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/tensorflow/"
+        >TensorFlow</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E7%BF%92%E4%BD%9C/">習作</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/"
+        >習作</a
+      >&nbsp;
     
   
 </span>
@@ -419,39 +559,51 @@
 </article>
 
       
-      </div>
+    </div>
     
-    <ul class="pager">
-      
-      
-        <li class="next">
-          <a href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/page/2/">Older &rarr;</a>
-        </li>
-      
-    </ul>
-  
-</div>
+      <ul class="pager">
+        
+        
+          <li class="next">
+            
+              <a href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/page/2/"
+                >Older &rarr;</a
+              >
+            
+          </li>
+        
+      </ul>
+    
+  </div>
 
     <footer>
   
 
+<div class="social-icons">
+  
+
+  
+</div>
+
+
+  
   <div class="container">
     <p class="credits copyright">
       <a href="https://blog.keiji.dev/about"></a>
       &nbsp;&copy;
       2023
       
-      &nbsp;/&nbsp;
-      <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
+        &nbsp;/&nbsp;
+        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
       
       &nbsp;&ndash;&nbsp;
-      <i class="fas fa-moon" id="dark-mode-toggle"></i>
+      <em class="fas fa-moon" id="dark-mode-toggle"></em>
+    </p>
 
     <p class="credits theme-by">
       Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
       Theme
       <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
     </p>
   </div>
 </footer>

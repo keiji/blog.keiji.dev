@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
 <title>技術書典3でTensorFlowの本を頒布します。</title>
-
-<meta name="description" content="Don&#39;t take your glasses off." />
-
+<meta name="description" 
+      content="Don&#39;t take your glasses off."
+>
 
   
-  
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
-  <script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
+    <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -19,50 +19,16 @@
   
 
 
+
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="alternate" type="application/rss+xml" href="https://blog.keiji.dev/index.xml" title="めがねをかけるんだ">
-
-<link id="dark-mode-theme" rel="stylesheet" href="https://blog.keiji.dev/css/dark.css" />
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-<link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-<script src="https://blog.keiji.dev/js/bundle.js"></script>
-<script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.111.3"><meta property="og:title" content="技術書典3でTensorFlowの本を頒布します。" />
-<meta property="og:description" content="10月22日、秋葉原UDX アキバ・スクエアにて開催される「技術書典３」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。
-「めがねをかけるんだ」では、TensorFlowで物体検出を題材にした冊子を頒布いたします。
-
-
-
-
-タイトル
-TensorFlowはじめました Object Detection ー 物体検出
-
-
-
-
-ページ数
-68p（本文墨刷）
-
-
-頒布価格
-1,000円
-
-
-発行
-個人サークル「めがねをかけるんだ」
-
-
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.keiji.dev/2017/10/techbookfest3.html" /><meta property="og:image" content="https://blog.keiji.dev/images/logo.png"/><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2017-10-17T11:18:06+00:00" />
-<meta property="article:modified_time" content="2017-10-17T11:18:06+00:00" />
-
-
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  href="https://blog.keiji.dev/index.xml"
+  title="めがねをかけるんだ"
+/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
 
@@ -93,6 +59,52 @@ TensorFlowはじめました Object Detection ー 物体検出
 
 "/>
 
+
+
+<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
+
+
+
+
+<link
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/styles.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
+
+
+
+<link
+  id="dark-mode-theme"
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/dark.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+<script>
+  var darkTheme = document.getElementById('dark-mode-theme')
+  var storedTheme = localStorage.getItem('dark-mode-storage')
+
+  if (storedTheme === 'dark') {
+    darkTheme.disabled = false
+  } else if (storedTheme === 'light') {
+    darkTheme.disabled = true
+  }
+</script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
   </head>
   <body>
     
@@ -106,22 +118,32 @@ TensorFlowはじめました Object Detection ー 物体検出
   <div class="nav">
     
       <a href="https://blog.keiji.dev/" class="nav-logo">
-      <img src="https://blog.keiji.dev/images/logo.png"
-           width=""
-           height=""
-           alt="Logo">
+        <img
+          src="https://blog.keiji.dev/images/logo.png"
+          width=""
+          height=""
+          alt="Logo"
+        />
       </a>
     
 
     <ul class="nav-links">
       
         
-          <li><a href="https://blog.keiji.dev/profile/" name="Profile"><i class="fas fa-user fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/profile/" id="Profile"
+              ><em class="fas fa-user fa-lg"></em
+            ></a>
+          </li>
+          
       
         
-          <li><a href="https://blog.keiji.dev/licenses/" name="Licenses"><i class="fab fa-osi fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
+              ><em class="fab fa-osi fa-lg"></em
+            ></a>
+          </li>
+          
       
     </ul>
   </div>
@@ -131,17 +153,26 @@ TensorFlowはじめました Object Detection ー 物体検出
       <div class="container">
         <div class="post-heading">
           
-            <h1>技術書典3でTensorFlowの本を頒布します。</h1>
+            <h1>
+              技術書典3でTensorFlowの本を頒布します。
+            </h1>
           
           
             <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2017-10-17
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2017-10-17
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/tensorflow/">TensorFlow</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/tensorflow/"
+        >TensorFlow</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/">イベント</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/"
+        >イベント</a
+      >&nbsp;
     
   
 </span>
@@ -151,13 +182,13 @@ TensorFlowはじめました Object Detection ー 物体検出
       </div>
     </div>
   </header>
-
+  
 
     
   <div class="container" role="main">
     <article class="article" class="blog-post">
       
-    <p>10月22日、秋葉原UDX アキバ・スクエアにて開催される「<a href="https://techbookfest.org/event/tbf03/circle/5686003050217472" target="_blank">技術書典３</a>」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。</p>
+  <p>10月22日、秋葉原UDX アキバ・スクエアにて開催される「<a href="https://techbookfest.org/event/tbf03/circle/5686003050217472" target="_blank">技術書典３</a>」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。</p>
 <p>「めがねをかけるんだ」では、TensorFlowで物体検出を題材にした冊子を頒布いたします。</p>
 <img class="aligncenter size-full" src="https://blog.keiji.dev/wp-content/uploads/2017/10/tfbook3-hyo1.png" alt="tfbook3" width="50%" height="50%" />
 <table>
@@ -239,34 +270,46 @@ TensorFlowはじめました Object Detection ー 物体検出
 <p>また、部数が限られていますので、売り切れの際はご容赦ください。</p>
 
 
+
+      
+
       
     </article>
     
     
       
-      
-</div>
+
+    
+  </div>
 
     <footer>
   
 
+<div class="social-icons">
+  
+
+  
+</div>
+
+
+  
   <div class="container">
     <p class="credits copyright">
       <a href="https://blog.keiji.dev/about"></a>
       &nbsp;&copy;
       2023
       
-      &nbsp;/&nbsp;
-      <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
+        &nbsp;/&nbsp;
+        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
       
       &nbsp;&ndash;&nbsp;
-      <i class="fas fa-moon" id="dark-mode-toggle"></i>
+      <em class="fas fa-moon" id="dark-mode-toggle"></em>
+    </p>
 
     <p class="credits theme-by">
       Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
       Theme
       <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
     </p>
   </div>
 </footer>

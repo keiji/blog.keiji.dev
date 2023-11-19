@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
 <title>AndroidKeyStoreがEd25519に（サイレントで）対応していた件</title>
-
-<meta name="description" content="Don&#39;t take your glasses off." />
-
+<meta name="description" 
+      content="Don&#39;t take your glasses off."
+>
 
   
-  
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
-  <script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
+    <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -19,62 +19,16 @@
   
 
 
+
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="alternate" type="application/rss+xml" href="https://blog.keiji.dev/index.xml" title="めがねをかけるんだ">
-
-<link id="dark-mode-theme" rel="stylesheet" href="https://blog.keiji.dev/css/dark.css" />
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-<link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-<script src="https://blog.keiji.dev/js/bundle.js"></script>
-<script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.111.3"><meta property="og:title" content="AndroidKeyStoreがEd25519に（サイレントで）対応していた件" />
-<meta property="og:description" content="訂正
-記事の公開当初、&ldquo;Ed25519対応はAndroid 12以降に含まれる&quot;と記述していましたが、正しくは&quot;Ed25519対応はAndroid 13以降に含まれる&quot;です。
-AndroidKeyStoreEdECPublicKey.javaは、Android 12のリリースブランチには存在せず、Android 13のリリースブランチから存在しています。
-https://cs.android.com/android/platform/superproject/&#43;/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
-https://cs.android.com/android/platform/superproject/&#43;/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
-
-まずは宣伝です。
-11月12日（日）、池袋サンシャインシティにて開催される「技術書典15」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。
-サークル配置は「さ17」。
-新刊は「AndroidKeyStoreと過ごした400日」です。
-
-
-
-タイトル
-AndroidKeyStoreと過ごした400日
-
-
-
-
-判型
-B5
-
-
-ページ数
-32p（電子版）
-
-
-頒布価格
-500円（会場価格）
-
-
-発行
-個人サークル「めがねをかけるんだ」
-
-
-
-本文サンプルおよび電子版販売ページはこちら" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.keiji.dev/2023/11/techbookfest15.html" /><meta property="og:image" content="https://blog.keiji.dev/images/logo.png"/><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-11-11T19:00:00+09:00" />
-<meta property="article:modified_time" content="2023-11-11T19:00:00+09:00" />
-
-
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  href="https://blog.keiji.dev/index.xml"
+  title="めがねをかけるんだ"
+/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
 
@@ -117,6 +71,52 @@ B5
 
 本文サンプルおよび電子版販売ページはこちら"/>
 
+
+
+<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
+
+
+
+
+<link
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/styles.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
+
+
+
+<link
+  id="dark-mode-theme"
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/dark.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+<script>
+  var darkTheme = document.getElementById('dark-mode-theme')
+  var storedTheme = localStorage.getItem('dark-mode-storage')
+
+  if (storedTheme === 'dark') {
+    darkTheme.disabled = false
+  } else if (storedTheme === 'light') {
+    darkTheme.disabled = true
+  }
+</script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
   </head>
   <body>
     
@@ -130,22 +130,32 @@ B5
   <div class="nav">
     
       <a href="https://blog.keiji.dev/" class="nav-logo">
-      <img src="https://blog.keiji.dev/images/logo.png"
-           width=""
-           height=""
-           alt="Logo">
+        <img
+          src="https://blog.keiji.dev/images/logo.png"
+          width=""
+          height=""
+          alt="Logo"
+        />
       </a>
     
 
     <ul class="nav-links">
       
         
-          <li><a href="https://blog.keiji.dev/profile/" name="Profile"><i class="fas fa-user fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/profile/" id="Profile"
+              ><em class="fas fa-user fa-lg"></em
+            ></a>
+          </li>
+          
       
         
-          <li><a href="https://blog.keiji.dev/licenses/" name="Licenses"><i class="fab fa-osi fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
+              ><em class="fab fa-osi fa-lg"></em
+            ></a>
+          </li>
+          
       
     </ul>
   </div>
@@ -155,15 +165,21 @@ B5
       <div class="container">
         <div class="post-heading">
           
-            <h1>AndroidKeyStoreがEd25519に（サイレントで）対応していた件</h1>
+            <h1>
+              AndroidKeyStoreがEd25519に（サイレントで）対応していた件
+            </h1>
           
           
             <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2023-11-11
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2023-11-11
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/">イベント</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/"
+        >イベント</a
+      >&nbsp;
     
   
 </span>
@@ -173,13 +189,13 @@ B5
       </div>
     </div>
   </header>
-
+  
 
     
   <div class="container" role="main">
     <article class="article" class="blog-post">
       
-    <p>訂正
+  <p>訂正
 記事の公開当初、&ldquo;Ed25519対応はAndroid 12以降に含まれる&quot;と記述していましたが、正しくは&quot;Ed25519対応はAndroid 13以降に含まれる&quot;です。</p>
 <p><code>AndroidKeyStoreEdECPublicKey.java</code>は、Android 12のリリースブランチには存在せず、Android 13のリリースブランチから存在しています。</p>
 <p><a href="https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java">https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java</a></p>
@@ -463,34 +479,46 @@ className: android.security.keystore2.AndroidKeyStoreKeyFactorySpi
 <p>あ、OpenPGPのお互いの公開鍵に署名をしあうのもやってみたいので、OpenPGPの公開鍵を運用している人はぜひ声をかけてください。</p>
 
 
+
+      
+
       
     </article>
     
     
       
-      
-</div>
+
+    
+  </div>
 
     <footer>
   
 
+<div class="social-icons">
+  
+
+  
+</div>
+
+
+  
   <div class="container">
     <p class="credits copyright">
       <a href="https://blog.keiji.dev/about"></a>
       &nbsp;&copy;
       2023
       
-      &nbsp;/&nbsp;
-      <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
+        &nbsp;/&nbsp;
+        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
       
       &nbsp;&ndash;&nbsp;
-      <i class="fas fa-moon" id="dark-mode-toggle"></i>
+      <em class="fas fa-moon" id="dark-mode-toggle"></em>
+    </p>
 
     <p class="credits theme-by">
       Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
       Theme
       <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
     </p>
   </div>
 </footer>

@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
 <title>Posts</title>
-
-<meta name="description" content="Don&#39;t take your glasses off." />
-
+<meta name="description" 
+      content="Don&#39;t take your glasses off."
+>
 
   
-  
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
-  <script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
+    <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -19,30 +19,68 @@
   
 
 
+
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="alternate" type="application/rss+xml" href="https://blog.keiji.dev/index.xml" title="めがねをかけるんだ">
-
-<link id="dark-mode-theme" rel="stylesheet" href="https://blog.keiji.dev/css/dark.css" />
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-<link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-<script src="https://blog.keiji.dev/js/bundle.js"></script>
-<script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.111.3"><meta property="og:title" content="Posts" />
-<meta property="og:description" content="Don&#39;t take your glasses off." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.keiji.dev/post/" /><meta property="og:image" content="https://blog.keiji.dev/images/logo.png"/>
-
-
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  href="https://blog.keiji.dev/index.xml"
+  title="めがねをかけるんだ"
+/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
 
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="Don&#39;t take your glasses off."/>
 
+
+
+<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
+
+
+
+
+<link
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/styles.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
+
+
+
+<link
+  id="dark-mode-theme"
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/dark.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+<script>
+  var darkTheme = document.getElementById('dark-mode-theme')
+  var storedTheme = localStorage.getItem('dark-mode-storage')
+
+  if (storedTheme === 'dark') {
+    darkTheme.disabled = false
+  } else if (storedTheme === 'light') {
+    darkTheme.disabled = true
+  }
+</script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
   </head>
   <body>
     
@@ -56,22 +94,32 @@
   <div class="nav">
     
       <a href="https://blog.keiji.dev/" class="nav-logo">
-      <img src="https://blog.keiji.dev/images/logo.png"
-           width=""
-           height=""
-           alt="Logo">
+        <img
+          src="https://blog.keiji.dev/images/logo.png"
+          width=""
+          height=""
+          alt="Logo"
+        />
       </a>
     
 
     <ul class="nav-links">
       
         
-          <li><a href="https://blog.keiji.dev/profile/" name="Profile"><i class="fas fa-user fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/profile/" id="Profile"
+              ><em class="fas fa-user fa-lg"></em
+            ></a>
+          </li>
+          
       
         
-          <li><a href="https://blog.keiji.dev/licenses/" name="Licenses"><i class="fab fa-osi fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
+              ><em class="fab fa-osi fa-lg"></em
+            ></a>
+          </li>
+          
       
     </ul>
   </div>
@@ -81,11 +129,14 @@
       <div class="container">
         <div class="post-heading">
           
-            <h1>Posts</h1>
+            <h1>
+              Posts
+            </h1>
           
           
             <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2023-11-11
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2023-11-11
   
 </span>
 
@@ -94,10 +145,10 @@
       </div>
     </div>
   </header>
-
+  
 
     
-<div class="container" role="main">
+  <div class="container" role="main">
     <div class="posts-list">
       
         
@@ -106,26 +157,38 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2013/01/aospnobranch.html">
-      <h2 class="post-title">AOSPで１度投稿したパッチを修正する（nobranch編）</h2>
+    <h2 class="post-title">AOSPで１度投稿したパッチを修正する（nobranch編）</h2>
   </a>
   <div class="post-entry">
     
       <p><p>この連休で<a href="https://android-review.googlesource.com/#/" target="_blank">Android Open Source Project</a>にいくつかパッチを投稿したのですが、そのときに、ちょっと詰まったのでメモ。</p></p>
-        <a href="https://blog.keiji.dev/2013/01/aospnobranch.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2013/01/aospnobranch.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2013-01-15
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2013-01-15
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/aosp/">AOSP</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/aosp/"
+        >AOSP</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%83%A1%E3%83%A2/">メモ</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%83%A1%E3%83%A2/"
+        >メモ</a
+      >&nbsp;
     
   
 </span>
@@ -136,26 +199,38 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2013/01/adk.html">
-      <h2 class="post-title">1/19 ADKハンズオンを開催します</h2>
+    <h2 class="post-title">1/19 ADKハンズオンを開催します</h2>
   </a>
   <div class="post-entry">
     
       <p>1月19日（土）、大阪府門真市にて、Android端末と接続するADK(Accessory Development Kit)のハンズオンを開催します。 ADKと言えば</p>
-        <a href="https://blog.keiji.dev/2013/01/adk.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2013/01/adk.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2013-01-08
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2013-01-08
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/adk/">ADK</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/adk/"
+        >ADK</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/">イベント</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/"
+        >イベント</a
+      >&nbsp;
     
   
 </span>
@@ -166,7 +241,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2013/01/de0.html">
-      <h2 class="post-title">DE0メモ</h2>
+    <h2 class="post-title">DE0メモ</h2>
   </a>
   <div class="post-entry">
     
@@ -178,21 +253,33 @@
 <div>
   <a href="https://blog.keiji.dev/wp-content/uploads/2013/01/734246_10200296379321712_433891549_n.jpg"><img class="aligncenter  wp-image-91" alt="734246_10200296379321712_433891549_n" src="https://blog.keiji.dev/wp-content/uploads/2013/01/734246_10200296379321712_433891549_n.jpg" width="403" height="302" /></a>
 </div></p>
-        <a href="https://blog.keiji.dev/2013/01/de0.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2013/01/de0.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2013-01-08
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2013-01-08
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/de0/">DE0</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/de0/"
+        >DE0</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/fpga/">FPGA</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/fpga/"
+        >FPGA</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%83%A1%E3%83%A2/">メモ</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%83%A1%E3%83%A2/"
+        >メモ</a
+      >&nbsp;
     
   
 </span>
@@ -203,22 +290,28 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2013/01/blog-post_5212.html">
-      <h2 class="post-title">正月に読んだ本とか</h2>
+    <h2 class="post-title">正月に読んだ本とか</h2>
   </a>
   <div class="post-entry">
     
       <p><p>正月の３日間、本を読んだり、DVDばかり見て過ごしたまとめ。</p></p>
-        <a href="https://blog.keiji.dev/2013/01/blog-post_5212.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2013/01/blog-post_5212.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2013-01-04
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2013-01-04
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%83%A1%E3%83%A2/">メモ</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%83%A1%E3%83%A2/"
+        >メモ</a
+      >&nbsp;
     
   
 </span>
@@ -229,7 +322,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2013/01/newyear.html">
-      <h2 class="post-title">謹賀新年</h2>
+    <h2 class="post-title">謹賀新年</h2>
   </a>
   <div class="post-entry">
     
@@ -241,17 +334,23 @@
 </div>
 <div>
 </div></p>
-        <a href="https://blog.keiji.dev/2013/01/newyear.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2013/01/newyear.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2013-01-01
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2013-01-01
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E6%9C%AA%E5%88%86%E9%A1%9E/">未分類</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E6%9C%AA%E5%88%86%E9%A1%9E/"
+        >未分類</a
+      >&nbsp;
     
   
 </span>
@@ -262,7 +361,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2012/12/android.html">
-      <h2 class="post-title">日本Androidの会 関西支部勉強会</h2>
+    <h2 class="post-title">日本Androidの会 関西支部勉強会</h2>
   </a>
   <div class="post-entry">
     
@@ -371,19 +470,28 @@
 <div>
   以下、個人的な感想
 </div></p>
-        <a href="https://blog.keiji.dev/2012/12/android.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2012/12/android.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2012-12-29
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2012-12-29
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/">イベント</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/"
+        >イベント</a
+      >&nbsp;
     
   
 </span>
@@ -394,23 +502,29 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2012/12/android-maker-movement.html">
-      <h2 class="post-title">Androidからの脱出 〜 Maker Movementの危うさと希望</h2>
+    <h2 class="post-title">Androidからの脱出 〜 Maker Movementの危うさと希望</h2>
   </a>
   <div class="post-entry">
     
       <p><p><a href="http://androidadvent.blogspot.jp/" target="_blank">Android Advent Calendar 2012</a> (裏) 12/24担当の@keiji_ariyamaです。</p>
 <p>表は<a href="http://goo.gl/GEvkE" target="_blank">@t_egg</a>さんです。</p></p>
-        <a href="https://blog.keiji.dev/2012/12/android-maker-movement.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2012/12/android-maker-movement.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2012-12-25
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2012-12-25
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
   
 </span>
@@ -419,39 +533,51 @@
 </article>
 
       
-      </div>
+    </div>
     
-    <ul class="pager">
-      
-        <li class="previous">
-          <a href="https://blog.keiji.dev/post/page/10/">&larr; Newer</a>
-        </li>
-      
-      
-    </ul>
-  
-</div>
+      <ul class="pager">
+        
+          <li class="previous">
+            
+              <a href="https://blog.keiji.dev/post/page/10/"
+                >&larr; Newer</a
+              >
+            
+          </li>
+        
+        
+      </ul>
+    
+  </div>
 
     <footer>
   
 
+<div class="social-icons">
+  
+
+  
+</div>
+
+
+  
   <div class="container">
     <p class="credits copyright">
       <a href="https://blog.keiji.dev/about"></a>
       &nbsp;&copy;
       2023
       
-      &nbsp;/&nbsp;
-      <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
+        &nbsp;/&nbsp;
+        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
       
       &nbsp;&ndash;&nbsp;
-      <i class="fas fa-moon" id="dark-mode-toggle"></i>
+      <em class="fas fa-moon" id="dark-mode-toggle"></em>
+    </p>
 
     <p class="credits theme-by">
       Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
       Theme
       <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
     </p>
   </div>
 </footer>

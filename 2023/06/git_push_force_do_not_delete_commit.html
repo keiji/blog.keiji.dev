@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
 <title>git push --forceで履歴は消えないと言う話</title>
-
-<meta name="description" content="Don&#39;t take your glasses off." />
-
+<meta name="description" 
+      content="Don&#39;t take your glasses off."
+>
 
   
-  
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
-  <script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
+    <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -19,35 +19,16 @@
   
 
 
+
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="alternate" type="application/rss+xml" href="https://blog.keiji.dev/index.xml" title="めがねをかけるんだ">
-
-<link id="dark-mode-theme" rel="stylesheet" href="https://blog.keiji.dev/css/dark.css" />
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-<link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-<script src="https://blog.keiji.dev/js/bundle.js"></script>
-<script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.111.3"><meta property="og:title" content="git push --forceで履歴は消えないと言う話" />
-<meta property="og:description" content="　GitのForce push（git push --force）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
-筆者も過去に一度だけmasterブランチに向けてForce pushをしてしまい、平謝りをした経験があります。
-　一方、最近知ったのですが、Gitリポジトリに本来入れてはいけない情報を入れたときの対応策としてForce pushすれば履歴は消えると考えている人もいるようです。
-　これについては、言葉で説明するよりやってみた方が早そうなので、実際に試してた結果を共有します。
-もしお近くで「Force pushで消える、いや消えない」と言った議論を聞いたときには、そっとこの記事と、次の記事を見せてあげてください。
-GitHub上のsensitive dataを削除するための手順と道のり - Merpay Advent Calendar 2021
-https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/
-　また、この記事について誤りや修正すべき点などがあれば、是非ご指摘いただければと思います。
-最近はBlueskyにいます（Twitterはやっていません）。
-https://staging.bsky.app/profile/keiji.bsky.social" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.keiji.dev/2023/06/git_push_force_do_not_delete_commit.html" /><meta property="og:image" content="https://blog.keiji.dev/images/logo.png"/><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-06-15T15:45:00+09:00" />
-<meta property="article:modified_time" content="2023-06-15T15:45:00+09:00" />
-
-
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  href="https://blog.keiji.dev/index.xml"
+  title="めがねをかけるんだ"
+/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
 
@@ -63,6 +44,52 @@ https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from
 最近はBlueskyにいます（Twitterはやっていません）。
 https://staging.bsky.app/profile/keiji.bsky.social"/>
 
+
+
+<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
+
+
+
+
+<link
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/styles.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
+
+
+
+<link
+  id="dark-mode-theme"
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/dark.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+<script>
+  var darkTheme = document.getElementById('dark-mode-theme')
+  var storedTheme = localStorage.getItem('dark-mode-storage')
+
+  if (storedTheme === 'dark') {
+    darkTheme.disabled = false
+  } else if (storedTheme === 'light') {
+    darkTheme.disabled = true
+  }
+</script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
   </head>
   <body>
     
@@ -76,22 +103,32 @@ https://staging.bsky.app/profile/keiji.bsky.social"/>
   <div class="nav">
     
       <a href="https://blog.keiji.dev/" class="nav-logo">
-      <img src="https://blog.keiji.dev/images/logo.png"
-           width=""
-           height=""
-           alt="Logo">
+        <img
+          src="https://blog.keiji.dev/images/logo.png"
+          width=""
+          height=""
+          alt="Logo"
+        />
       </a>
     
 
     <ul class="nav-links">
       
         
-          <li><a href="https://blog.keiji.dev/profile/" name="Profile"><i class="fas fa-user fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/profile/" id="Profile"
+              ><em class="fas fa-user fa-lg"></em
+            ></a>
+          </li>
+          
       
         
-          <li><a href="https://blog.keiji.dev/licenses/" name="Licenses"><i class="fab fa-osi fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
+              ><em class="fab fa-osi fa-lg"></em
+            ></a>
+          </li>
+          
       
     </ul>
   </div>
@@ -101,15 +138,21 @@ https://staging.bsky.app/profile/keiji.bsky.social"/>
       <div class="container">
         <div class="post-heading">
           
-            <h1>git push --forceで履歴は消えないと言う話</h1>
+            <h1>
+              git push --forceで履歴は消えないと言う話
+            </h1>
           
           
             <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2023-06-15
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2023-06-15
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
   
 </span>
@@ -119,13 +162,13 @@ https://staging.bsky.app/profile/keiji.bsky.social"/>
       </div>
     </div>
   </header>
-
+  
 
     
   <div class="container" role="main">
     <article class="article" class="blog-post">
       
-    <p>　GitのForce push（<code>git push --force</code>）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
+  <p>　GitのForce push（<code>git push --force</code>）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
 筆者も過去に一度だけmasterブランチに向けてForce pushをしてしまい、平謝りをした経験があります。</p>
 <p>　一方、最近知ったのですが、Gitリポジトリに本来入れてはいけない情報を入れたときの対応策としてForce pushすれば履歴は消えると考えている人もいるようです。</p>
 <p>　これについては、言葉で説明するよりやってみた方が早そうなので、実際に試してた結果を共有します。
@@ -338,34 +381,46 @@ fatal: remote error: upload-pack: not our ref f01a8e4beb6eba37a5ee451c9c589964cc
 <p>　最後になりましたが、この記事の内容を必要とする人が今後生まれないことを切実に願っています。</p>
 
 
+
+      
+
       
     </article>
     
     
       
-      
-</div>
+
+    
+  </div>
 
     <footer>
   
 
+<div class="social-icons">
+  
+
+  
+</div>
+
+
+  
   <div class="container">
     <p class="credits copyright">
       <a href="https://blog.keiji.dev/about"></a>
       &nbsp;&copy;
       2023
       
-      &nbsp;/&nbsp;
-      <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
+        &nbsp;/&nbsp;
+        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
       
       &nbsp;&ndash;&nbsp;
-      <i class="fas fa-moon" id="dark-mode-toggle"></i>
+      <em class="fas fa-moon" id="dark-mode-toggle"></em>
+    </p>
 
     <p class="credits theme-by">
       Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
       Theme
       <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
     </p>
   </div>
 </footer>

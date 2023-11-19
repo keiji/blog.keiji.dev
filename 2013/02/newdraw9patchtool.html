@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
 <title>新しい&#34;Draw 9-patch Tool&#34;を公開しました。</title>
-
-<meta name="description" content="Don&#39;t take your glasses off." />
-
+<meta name="description" 
+      content="Don&#39;t take your glasses off."
+>
 
   
-  
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
-  <script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
+    <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -19,55 +19,16 @@
   
 
 
+
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="alternate" type="application/rss+xml" href="https://blog.keiji.dev/index.xml" title="めがねをかけるんだ">
-
-<link id="dark-mode-theme" rel="stylesheet" href="https://blog.keiji.dev/css/dark.css" />
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-<link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-<script src="https://blog.keiji.dev/js/bundle.js"></script>
-<script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.111.3"><meta property="og:title" content="新しい&#34;Draw 9-patch Tool&#34;を公開しました。" />
-<meta property="og:description" content="最近、「有山さんはもうMakersの方に行っちゃったんだね。Androidはもうやってないんだよね」「いやいや、もちろんやってますよ。Android」と言う会話があったので。
-Android SDKに同梱されている”Draw 9-patch Tool“を、SWTをベースにリライトして、Eclipseのプラグインにしたので公開します。
-
-  
-    このプラグインを使えば、開発者は、Eclipseの中だけで9-patch画像の作成や編集が出来ます。
-  
-
-
-  
-
-これまでは、Facebook/Twitter/Google&#43;で、知り合い向けに公開していたのですが、もう少し公開範囲を広げることにしました。
-開発してまだ日が浅いので、Windows/Mac/Linuxの違い、Eclipseのバージョンの違いなどによって、不具合がある可能性があります。 不具合を見つけた方は、是非ともフィードバックしてください。
-フィードバックは、Facebook/Twitter/Google&#43;、その他どんな手段でも構いません。宜しくお願いいたします。
-ダウンロード＆利用方法
-draw9patch tool for Eclipse plugin (MD5: 09b952ceea11d9d59984ad5d004b422d)
-https://github.com/keiji/draw9patch2/blob/master/bin/Draw9PatchPlugin.zip
-zipを展開して、pluginsの中の”Draw9PatchEditor_*.jar”を、お使いのEclipseのpluginsディレクトリにコピーして下さい（Eclipseの再起動が必要です）。
-Eclipseの再起動後、パッケージエクスプローラーから、pngファイル(e.g. “res/drawable-hdpi/ic_launcher.png”)をダブルクリックすると、”Draw 9-patch Tool”が起動します。
-
-  
-    
-      
-    
-  
-  
-    
-      この画像中のモザイクは、 Pixelmatorで処理しました。
-    
-  
-" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.keiji.dev/2013/02/newdraw9patchtool.html" /><meta property="og:image" content="https://blog.keiji.dev/images/logo.png"/><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2013-02-10T08:22:00+00:00" />
-<meta property="article:modified_time" content="2013-02-10T08:22:00+00:00" />
-
-
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  href="https://blog.keiji.dev/index.xml"
+  title="めがねをかけるんだ"
+/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
 
@@ -103,6 +64,52 @@ Eclipseの再起動後、パッケージエクスプローラーから、pngフ�
   
 "/>
 
+
+
+<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
+
+
+
+
+<link
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/styles.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
+
+
+
+<link
+  id="dark-mode-theme"
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/dark.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+<script>
+  var darkTheme = document.getElementById('dark-mode-theme')
+  var storedTheme = localStorage.getItem('dark-mode-storage')
+
+  if (storedTheme === 'dark') {
+    darkTheme.disabled = false
+  } else if (storedTheme === 'light') {
+    darkTheme.disabled = true
+  }
+</script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
   </head>
   <body>
     
@@ -116,22 +123,32 @@ Eclipseの再起動後、パッケージエクスプローラーから、pngフ�
   <div class="nav">
     
       <a href="https://blog.keiji.dev/" class="nav-logo">
-      <img src="https://blog.keiji.dev/images/logo.png"
-           width=""
-           height=""
-           alt="Logo">
+        <img
+          src="https://blog.keiji.dev/images/logo.png"
+          width=""
+          height=""
+          alt="Logo"
+        />
       </a>
     
 
     <ul class="nav-links">
       
         
-          <li><a href="https://blog.keiji.dev/profile/" name="Profile"><i class="fas fa-user fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/profile/" id="Profile"
+              ><em class="fas fa-user fa-lg"></em
+            ></a>
+          </li>
+          
       
         
-          <li><a href="https://blog.keiji.dev/licenses/" name="Licenses"><i class="fab fa-osi fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
+              ><em class="fab fa-osi fa-lg"></em
+            ></a>
+          </li>
+          
       
     </ul>
   </div>
@@ -141,19 +158,31 @@ Eclipseの再起動後、パッケージエクスプローラーから、pngフ�
       <div class="container">
         <div class="post-heading">
           
-            <h1>新しい&#34;Draw 9-patch Tool&#34;を公開しました。</h1>
+            <h1>
+              新しい&#34;Draw 9-patch Tool&#34;を公開しました。
+            </h1>
           
           
             <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2013-02-10
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2013-02-10
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/aosp/">AOSP</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/aosp/"
+        >AOSP</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E7%BF%92%E4%BD%9C/">習作</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/"
+        >習作</a
+      >&nbsp;
     
   
 </span>
@@ -163,13 +192,13 @@ Eclipseの再起動後、パッケージエクスプローラーから、pngフ�
       </div>
     </div>
   </header>
-
+  
 
     
   <div class="container" role="main">
     <article class="article" class="blog-post">
       
-    <p>最近、「有山さんはもう<strong>Makers</strong>の方に行っちゃったんだね。Androidはもうやってないんだよね」「いやいや、もちろんやってますよ。<strong>Android</strong>」と言う会話があったので。</p>
+  <p>最近、「有山さんはもう<strong>Makers</strong>の方に行っちゃったんだね。Androidはもうやってないんだよね」「いやいや、もちろんやってますよ。<strong>Android</strong>」と言う会話があったので。</p>
 <p>Android SDKに同梱されている”<strong>Draw 9-patch Tool</strong>“を、SWTをベースにリライトして、Eclipseのプラグインにしたので公開します。</p>
 <div style="text-align: center;">
   <p>
@@ -265,34 +294,46 @@ Eclipseの再起動後、パッケージエクスプローラーから、pngフ�
 </div>
 
 
+
+      
+
       
     </article>
     
     
       
-      
-</div>
+
+    
+  </div>
 
     <footer>
   
 
+<div class="social-icons">
+  
+
+  
+</div>
+
+
+  
   <div class="container">
     <p class="credits copyright">
       <a href="https://blog.keiji.dev/about"></a>
       &nbsp;&copy;
       2023
       
-      &nbsp;/&nbsp;
-      <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
+        &nbsp;/&nbsp;
+        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
       
       &nbsp;&ndash;&nbsp;
-      <i class="fas fa-moon" id="dark-mode-toggle"></i>
+      <em class="fas fa-moon" id="dark-mode-toggle"></em>
+    </p>
 
     <p class="credits theme-by">
       Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
       Theme
       <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
     </p>
   </div>
 </footer>

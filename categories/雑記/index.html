@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
 <title>雑記</title>
-
-<meta name="description" content="Don&#39;t take your glasses off." />
-
+<meta name="description" 
+      content="Don&#39;t take your glasses off."
+>
 
   
-  
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
-  <script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
+    <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -19,30 +19,68 @@
   
 
 
+
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="alternate" type="application/rss+xml" href="https://blog.keiji.dev/index.xml" title="めがねをかけるんだ">
-
-<link id="dark-mode-theme" rel="stylesheet" href="https://blog.keiji.dev/css/dark.css" />
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-<link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-<script src="https://blog.keiji.dev/js/bundle.js"></script>
-<script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.111.3"><meta property="og:title" content="雑記" />
-<meta property="og:description" content="Don&#39;t take your glasses off." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/" /><meta property="og:image" content="https://blog.keiji.dev/images/logo.png"/>
-
-
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  href="https://blog.keiji.dev/index.xml"
+  title="めがねをかけるんだ"
+/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
 
 <meta name="twitter:title" content="雑記"/>
 <meta name="twitter:description" content="Don&#39;t take your glasses off."/>
 
+
+
+<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
+
+
+
+
+<link
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/styles.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
+
+
+
+<link
+  id="dark-mode-theme"
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/dark.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+<script>
+  var darkTheme = document.getElementById('dark-mode-theme')
+  var storedTheme = localStorage.getItem('dark-mode-storage')
+
+  if (storedTheme === 'dark') {
+    darkTheme.disabled = false
+  } else if (storedTheme === 'light') {
+    darkTheme.disabled = true
+  }
+</script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
   </head>
   <body>
     
@@ -56,22 +94,32 @@
   <div class="nav">
     
       <a href="https://blog.keiji.dev/" class="nav-logo">
-      <img src="https://blog.keiji.dev/images/logo.png"
-           width=""
-           height=""
-           alt="Logo">
+        <img
+          src="https://blog.keiji.dev/images/logo.png"
+          width=""
+          height=""
+          alt="Logo"
+        />
       </a>
     
 
     <ul class="nav-links">
       
         
-          <li><a href="https://blog.keiji.dev/profile/" name="Profile"><i class="fas fa-user fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/profile/" id="Profile"
+              ><em class="fas fa-user fa-lg"></em
+            ></a>
+          </li>
+          
       
         
-          <li><a href="https://blog.keiji.dev/licenses/" name="Licenses"><i class="fab fa-osi fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
+              ><em class="fab fa-osi fa-lg"></em
+            ></a>
+          </li>
+          
       
     </ul>
   </div>
@@ -81,17 +129,19 @@
       <div class="container">
         <div class="categories-heading">
           
-            <h1>雑記</h1>
+            <h1>
+              雑記
+            </h1>
           
           
         </div>
       </div>
     </div>
   </header>
-
+  
 
     
-<div class="container" role="main">
+  <div class="container" role="main">
     <div class="posts-list">
       
         
@@ -100,7 +150,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2023/06/git_push_force_do_not_delete_commit.html">
-      <h2 class="post-title">git push --forceで履歴は消えないと言う話</h2>
+    <h2 class="post-title">git push --forceで履歴は消えないと言う話</h2>
   </a>
   <div class="post-entry">
     
@@ -114,17 +164,23 @@
 <p>　また、この記事について誤りや修正すべき点などがあれば、是非ご指摘いただければと思います。
 最近はBlueskyにいます（Twitterはやっていません）。</p>
 <p><a href="https://staging.bsky.app/profile/keiji.bsky.social">https://staging.bsky.app/profile/keiji.bsky.social</a></p></p>
-        <a href="https://blog.keiji.dev/2023/06/git_push_force_do_not_delete_commit.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2023/06/git_push_force_do_not_delete_commit.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2023-06-15
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2023-06-15
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
   
 </span>
@@ -135,22 +191,28 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2023/04/thinkpad_not_wake_up_after_second_suspend.html">
-      <h2 class="post-title">ThinkPadのスリープが2度目から失敗するようになった</h2>
+    <h2 class="post-title">ThinkPadのスリープが2度目から失敗するようになった</h2>
   </a>
   <div class="post-entry">
     
       <p>2023年3月31日付けで、厚生労働省の技術参与を辞任しました。 COCOAも正式に終了して、これ以上することもありません（GitHubへの書</p>
-        <a href="https://blog.keiji.dev/2023/04/thinkpad_not_wake_up_after_second_suspend.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2023/04/thinkpad_not_wake_up_after_second_suspend.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2023-04-02
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2023-04-02
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
   
 </span>
@@ -161,24 +223,33 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2022/08/cocoa/">
-      <h2 class="post-title">お知らせ</h2>
+    <h2 class="post-title">お知らせ</h2>
   </a>
   <div class="post-entry">
     
       <p>これまで有山は「厚生労働省の技術参与」と「デジタル庁のエンジニア」それぞれの役割でCOCOAに携わってきました。 このたびデジタル庁のエンジニ</p>
-        <a href="https://blog.keiji.dev/2022/08/cocoa/" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2022/08/cocoa/" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2022-08-01
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2022-08-01
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/cocoa/">COCOA</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/cocoa/"
+        >COCOA</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
   
 </span>
@@ -189,7 +260,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2022/07/welcomeback_thinkpad/">
-      <h2 class="post-title">おかえりThinkPad</h2>
+    <h2 class="post-title">おかえりThinkPad</h2>
   </a>
   <div class="post-entry">
     
@@ -213,19 +284,28 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
 <li><a href="https://blog.keiji.dev/2017/01/demodori.html">さよならMac</a></li>
 </ul>
 <p>　そんなぼくが、ふたたびThinkPadユーザーになった。</p></p>
-        <a href="https://blog.keiji.dev/2022/07/welcomeback_thinkpad/" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2022/07/welcomeback_thinkpad/" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2022-07-28
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2022-07-28
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/thinkpad/">ThinkPad</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/thinkpad/"
+        >ThinkPad</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
   
 </span>
@@ -236,24 +316,33 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2021/09/digital_agency/">
-      <h2 class="post-title">デジタル庁に入庁しました</h2>
+    <h2 class="post-title">デジタル庁に入庁しました</h2>
   </a>
   <div class="post-entry">
     
       <p>9月1日付で発足したデジタル庁にAndroidエンジニアとして入庁しました。引き続き接触確認アプリ「COCOA」を担当します。 ぼくは大阪に住</p>
-        <a href="https://blog.keiji.dev/2021/09/digital_agency/" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2021/09/digital_agency/" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2021-09-04
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2021-09-04
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/cocoa/">COCOA</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/cocoa/"
+        >COCOA</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
   
 </span>
@@ -264,24 +353,30 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2021/07/i_am_vaccinated_and_you.html">
-      <h2 class="post-title">COVID-19 モデルナワクチン副反応の記録</h2>
+    <h2 class="post-title">COVID-19 モデルナワクチン副反応の記録</h2>
   </a>
   <div class="post-entry">
     
       <p><p>　筆者は、COVID-19ワクチンの接種を受けました。
 本エントリーは、接種を受けて経験した副反応の記録です。</p>
 <p><img src="https://blog.keiji.dev/images/i_am_vaccinated_and_you/original_50eb40cc-428f-4461-bce8-a08534fdae75_PXL_20210720_085217623.jpg" alt="モデルナ筋注。大阪府大規模接種センターにて。1回目接種6月19日、2回目接種7月20日"></p></p>
-        <a href="https://blog.keiji.dev/2021/07/i_am_vaccinated_and_you.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2021/07/i_am_vaccinated_and_you.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2021-07-23
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2021-07-23
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
   
 </span>
@@ -292,7 +387,7 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2021/03/alarmmanager_evolution.html">
-      <h2 class="post-title">アプリのアップデート時にAlarmManagerがキャンセルされなくなっていた</h2>
+    <h2 class="post-title">アプリのアップデート時にAlarmManagerがキャンセルされなくなっていた</h2>
   </a>
   <div class="post-entry">
     
@@ -300,21 +395,33 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
 <p>　<a href="https://blog.keiji.dev/2021/03/cocoa.html">先日の記事</a>について、たくさんの方から激励の言葉をいただきました。ありがとうございます。
 厚生労働省技術参与の着任から10日、コラボレーターになってから5日が経ちました。Twitterで普段しないエゴサをしたりしますと、やはりぼくの至らぬ点についてお叱りを受けていることも目に入ったりして反省しきりの日々です。</p>
 <p>　今後も鋭意改善に努めて参りますので、何卒よろしくお願いいたします。</p></p>
-        <a href="https://blog.keiji.dev/2021/03/alarmmanager_evolution.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2021/03/alarmmanager_evolution.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2021-03-20
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2021-03-20
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/cocoa/">COCOA</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/cocoa/"
+        >COCOA</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
   
 </span>
@@ -325,26 +432,35 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2021/03/cocoa.html">
-      <h2 class="post-title">COCOAに関わることになりました</h2>
+    <h2 class="post-title">COCOAに関わることになりました</h2>
   </a>
   <div class="post-entry">
     
       <p><p>　接触確認アプリ「COCOA」について以前ツイートしました。</p>
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">繰り返しになるけど、COCOAのAndroid版をネイティブで作り直したいので、誰か知ってる人につないで欲しい。</p>&mdash; ARIYAMA Keiji (@keiji_ariyama) <a href="https://twitter.com/keiji_ariyama/status/1356905017412706308?ref_src=twsrc%5Etfw">February 3, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <p>　ツイートした後もGitHubのCOCOAのリポジトリに<a href="https://github.com/cocoa-mhlw/cocoa/issues/21#issuecomment-780502093">コメント</a>したり、知り合いに「COCOAやりたい」「COCOAやりたい」と言い続けたりした結果、このたび厚生労働省の技術参与として正式にCOCOAに携わることになりました。</p></p>
-        <a href="https://blog.keiji.dev/2021/03/cocoa.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2021/03/cocoa.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2021-03-16
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2021-03-16
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/cocoa/">COCOA</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/cocoa/"
+        >COCOA</a
+      >&nbsp;
     
   
 </span>
@@ -355,28 +471,40 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2018/04/look_back_techbookfest4.html">
-      <h2 class="post-title">技術書典4に参加してきました</h2>
+    <h2 class="post-title">技術書典4に参加してきました</h2>
   </a>
   <div class="post-entry">
     
       <p><p>　4月22日、秋葉原UDX アキバ・スクエアにて開催された「<a href="https://techbookfest.org/event/tbf04/circle/21060002" target="_blank">技術書典4</a>」に、サークル「めがねをかけるんだ」として参加してきました。</p>
 <img src="https://blog.keiji.dev/wp-content/uploads/2018/04/IMG_20180422_103336.jpg" alt="" width="390" height="520" class="aligncenter size-full wp-image-1696" />
 <p>　この記事は「技術書典4」の振り返りの記事になります。</p></p>
-        <a href="https://blog.keiji.dev/2018/04/look_back_techbookfest4.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2018/04/look_back_techbookfest4.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2018-04-26
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2018-04-26
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/tensorflow/">TensorFlow</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/tensorflow/"
+        >TensorFlow</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/">イベント</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/"
+        >イベント</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
   
 </span>
@@ -387,7 +515,7 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2018/04/techbookfest4-2.html">
-      <h2 class="post-title">技術書典4で「本当はおそろしい商業出版！？」を頒布します</h2>
+    <h2 class="post-title">技術書典4で「本当はおそろしい商業出版！？」を頒布します</h2>
   </a>
   <div class="post-entry">
     
@@ -420,19 +548,28 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
 </tr>
 </tbody>
 </table></p>
-        <a href="https://blog.keiji.dev/2018/04/techbookfest4-2.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2018/04/techbookfest4-2.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2018-04-18
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2018-04-18
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/">イベント</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/"
+        >イベント</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
   
 </span>
@@ -441,39 +578,51 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
 </article>
 
       
-      </div>
+    </div>
     
-    <ul class="pager">
-      
-      
-        <li class="next">
-          <a href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/page/2/">Older &rarr;</a>
-        </li>
-      
-    </ul>
-  
-</div>
+      <ul class="pager">
+        
+        
+          <li class="next">
+            
+              <a href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/page/2/"
+                >Older &rarr;</a
+              >
+            
+          </li>
+        
+      </ul>
+    
+  </div>
 
     <footer>
   
 
+<div class="social-icons">
+  
+
+  
+</div>
+
+
+  
   <div class="container">
     <p class="credits copyright">
       <a href="https://blog.keiji.dev/about"></a>
       &nbsp;&copy;
       2023
       
-      &nbsp;/&nbsp;
-      <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
+        &nbsp;/&nbsp;
+        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
       
       &nbsp;&ndash;&nbsp;
-      <i class="fas fa-moon" id="dark-mode-toggle"></i>
+      <em class="fas fa-moon" id="dark-mode-toggle"></em>
+    </p>
 
     <p class="credits theme-by">
       Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
       Theme
       <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
     </p>
   </div>
 </footer>

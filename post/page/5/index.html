@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8" />
 <title>Posts</title>
-
-<meta name="description" content="Don&#39;t take your glasses off." />
-
+<meta name="description" 
+      content="Don&#39;t take your glasses off."
+>
 
   
-  
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
-  <script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62351683-1"></script>
+    <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
@@ -19,30 +19,68 @@
   
 
 
+
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="alternate" type="application/rss+xml" href="https://blog.keiji.dev/index.xml" title="めがねをかけるんだ">
-
-<link id="dark-mode-theme" rel="stylesheet" href="https://blog.keiji.dev/css/dark.css" />
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-<link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-<script src="https://blog.keiji.dev/js/bundle.js"></script>
-<script src="https://blog.keiji.dev/js/instantpage.js" type="module" defer></script>
-<meta name="generator" content="Hugo 0.111.3"><meta property="og:title" content="Posts" />
-<meta property="og:description" content="Don&#39;t take your glasses off." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.keiji.dev/post/" /><meta property="og:image" content="https://blog.keiji.dev/images/logo.png"/>
-
-
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  href="https://blog.keiji.dev/index.xml"
+  title="めがねをかけるんだ"
+/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
 
 <meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="Don&#39;t take your glasses off."/>
 
+
+
+<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
+
+
+
+
+<link
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/styles.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
+
+
+
+<link
+  id="dark-mode-theme"
+  crossorigin="anonymous"
+  href="https://blog.keiji.dev/css/dark.min.css"
+  integrity=""
+  rel="preload stylesheet"
+  as="style"
+/>
+
+
+<script>
+  var darkTheme = document.getElementById('dark-mode-theme')
+  var storedTheme = localStorage.getItem('dark-mode-storage')
+
+  if (storedTheme === 'dark') {
+    darkTheme.disabled = false
+  } else if (storedTheme === 'light') {
+    darkTheme.disabled = true
+  }
+</script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
+
+
+<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
   </head>
   <body>
     
@@ -56,22 +94,32 @@
   <div class="nav">
     
       <a href="https://blog.keiji.dev/" class="nav-logo">
-      <img src="https://blog.keiji.dev/images/logo.png"
-           width=""
-           height=""
-           alt="Logo">
+        <img
+          src="https://blog.keiji.dev/images/logo.png"
+          width=""
+          height=""
+          alt="Logo"
+        />
       </a>
     
 
     <ul class="nav-links">
       
         
-          <li><a href="https://blog.keiji.dev/profile/" name="Profile"><i class="fas fa-user fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/profile/" id="Profile"
+              ><em class="fas fa-user fa-lg"></em
+            ></a>
+          </li>
+          
       
         
-          <li><a href="https://blog.keiji.dev/licenses/" name="Licenses"><i class="fab fa-osi fa-lg"></i></a></li>
-        
+          <li>
+            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
+              ><em class="fab fa-osi fa-lg"></em
+            ></a>
+          </li>
+          
       
     </ul>
   </div>
@@ -81,11 +129,14 @@
       <div class="container">
         <div class="post-heading">
           
-            <h1>Posts</h1>
+            <h1>
+              Posts
+            </h1>
           
           
             <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2023-11-11
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2023-11-11
   
 </span>
 
@@ -94,10 +145,10 @@
       </div>
     </div>
   </header>
-
+  
 
     
-<div class="container" role="main">
+  <div class="container" role="main">
     <div class="posts-list">
       
         
@@ -106,7 +157,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2016/06/techbookfest.html">
-      <h2 class="post-title">技術書典でTensorFlowの本を頒布します</h2>
+    <h2 class="post-title">技術書典でTensorFlowの本を頒布します</h2>
   </a>
   <div class="post-entry">
     
@@ -140,21 +191,33 @@
 </tr>
 </tbody>
 </table></p>
-        <a href="https://blog.keiji.dev/2016/06/techbookfest.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2016/06/techbookfest.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2016-06-19
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2016-06-19
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/tensorflow/">TensorFlow</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/tensorflow/"
+        >TensorFlow</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/">イベント</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/"
+        >イベント</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
   
 </span>
@@ -165,26 +228,35 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2016/05/wip_trying_cifar10_exercise.html">
-      <h2 class="post-title">【WIP】TensorFlowのExerciseをがんばっている</h2>
+    <h2 class="post-title">【WIP】TensorFlowのExerciseをがんばっている</h2>
   </a>
   <div class="post-entry">
     
       <p><p>　僕はいま、<a href="https://events.google.com/io2016/" target="_blank">Google I/O 2016</a>参加で渡米するにあたり、時差ボケ予防のために徹夜でこの記事を書いています。</p>
 <h3 id="概要忙しい人向け">概要（忙しい人向け）</h3>
 <p>　TensorFlowのチュートリアルにある課題（エクササイズ）に挑戦した。Softmaxの適用については比較的簡単だったが、Fully connected層をLocally connected層に変える課題については難航し、解決していない。</p></p>
-        <a href="https://blog.keiji.dev/2016/05/wip_trying_cifar10_exercise.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2016/05/wip_trying_cifar10_exercise.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2016-05-15
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2016-05-15
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/tensorflow/">TensorFlow</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/tensorflow/"
+        >TensorFlow</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E7%BF%92%E4%BD%9C/">習作</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/"
+        >習作</a
+      >&nbsp;
     
   
 </span>
@@ -195,23 +267,29 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2016/05/cuda_error_no_device.html">
-      <h2 class="post-title">TensorFlowでGPUが使えない</h2>
+    <h2 class="post-title">TensorFlowでGPUが使えない</h2>
   </a>
   <div class="post-entry">
     
       <p><p>　GPUマシンでTensorFlowを実行する際、CUDAもcuDNNも正常にセットアップできているのに、TensorFlowがGPUを認識しない（<code>CUDA_ERROR_NO_DEVICE</code>や<code>No GPU devices available on machine.</code>が表示される）場合、正しいディスプレイカード・ドライバがインストールされていない可能性があります。</p>
 <p>　筆者の環境では、既存のドライバーをアンインストール（<tt>sudo apt-get remove &ndash;purge nvidia*</tt>）して、<a href="http://www.nvidia.co.jp/Download/index.aspx?lang=jp" target="_blank">NVIDIAのサイト</a>からドライバーをダウンロード・インストールすることでGPUを認識するようになりました。</p></p>
-        <a href="https://blog.keiji.dev/2016/05/cuda_error_no_device.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2016/05/cuda_error_no_device.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2016-05-06
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2016-05-06
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/tensorflow/">TensorFlow</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/tensorflow/"
+        >TensorFlow</a
+      >&nbsp;
     
   
 </span>
@@ -222,7 +300,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2016/04/rip_my_xperia_z3_tablet_compact.html">
-      <h2 class="post-title">壊れかけのXperia Z3 Tablet Compactに止めを刺した話</h2>
+    <h2 class="post-title">壊れかけのXperia Z3 Tablet Compactに止めを刺した話</h2>
   </a>
   <div class="post-entry">
     
@@ -233,21 +311,33 @@
     赤枠で囲った部分が破損箇所
   </p>
 </div></p>
-        <a href="https://blog.keiji.dev/2016/04/rip_my_xperia_z3_tablet_compact.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2016/04/rip_my_xperia_z3_tablet_compact.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2016-04-01
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2016-04-01
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%83%A1%E3%83%A2/">メモ</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%83%A1%E3%83%A2/"
+        >メモ</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
   
 </span>
@@ -258,7 +348,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2016/03/abc-2016-spring.html">
-      <h2 class="post-title">ABC 2016 Springで発表しました</h2>
+    <h2 class="post-title">ABC 2016 Springで発表しました</h2>
   </a>
   <div class="post-entry">
     
@@ -267,23 +357,38 @@
 <p>初めての基調講演、しかもGoogleの佐藤さんとのジョイントセッション。さらに題材が専門外のTensorFlowということで緊張しましたが、なんとかかんとかまとまって、正直、ほっとしています。</p>
 <p>聞きに来てくださった皆様に、改めてお礼を申し上げます。</p>
 <p>講演の内容については、スライドをご覧ください。</p></p>
-        <a href="https://blog.keiji.dev/2016/03/abc-2016-spring.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2016/03/abc-2016-spring.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2016-03-13
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2016-03-13
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/">イベント</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/"
+        >イベント</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E7%BF%92%E4%BD%9C/">習作</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/"
+        >習作</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E9%9B%91%E8%A8%98/">雑記</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
+        >雑記</a
+      >&nbsp;
     
   
 </span>
@@ -294,7 +399,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-25.html">
-      <h2 class="post-title">みんなのコミック</h2>
+    <h2 class="post-title">みんなのコミック</h2>
   </a>
   <div class="post-entry">
     
@@ -313,19 +418,28 @@
 <p>　僕自身、１つのサービスについてこれだけ書くのは初めてのことだったので、新鮮な体験でした。</p>
 <p>　また、<a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-23.html">23日</a>には、「みんコミ」の中の人とお話しする場を持つこともでき（実際にお会いしたのは22日ですが）、ほとんど思いつきで始めたこときっかけで貴重な経験もできました。</p>
 <p>　Advent Calendarをやって本当に良かったです！</p></p>
-        <a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-25.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-25.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2015-12-24
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2015-12-24
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/">みんコミ Advent Calendar</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/"
+        >みんコミ Advent Calendar</a
+      >&nbsp;
     
   
 </span>
@@ -336,7 +450,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-24.html">
-      <h2 class="post-title">続: Fragment使う人に最低限、知っておいて欲しいこと</h2>
+    <h2 class="post-title">続: Fragment使う人に最低限、知っておいて欲しいこと</h2>
   </a>
   <div class="post-entry">
     
@@ -347,19 +461,28 @@
 <p>「<a href="https://www.mincomi.jp">みんコミ</a>」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。</p>
 <p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" /></a>（公開終了しています）</p>
 <p>［2015/12/25追記: サンプルコードのonCreateメソッド内でFragmentを初期化する処理を、Activityの再生時には実行しないように変更してあります（<code>savedInstanceState</code>で判定）］</p></p>
-        <a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-24.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-24.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2015-12-23
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2015-12-23
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/">みんコミ Advent Calendar</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/"
+        >みんコミ Advent Calendar</a
+      >&nbsp;
     
   
 </span>
@@ -370,7 +493,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-23.html">
-      <h2 class="post-title">みんコミに遊びに行ってきました</h2>
+    <h2 class="post-title">みんコミに遊びに行ってきました</h2>
   </a>
   <div class="post-entry">
     
@@ -384,19 +507,28 @@
     みんコミを運営している ebook INITIATIVE japan
   </p>
 </div></p>
-        <a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-23.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-23.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2015-12-22
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2015-12-22
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/">みんコミ Advent Calendar</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/"
+        >みんコミ Advent Calendar</a
+      >&nbsp;
     
   
 </span>
@@ -407,7 +539,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-22.html">
-      <h2 class="post-title">アプリのナビゲーション（下タブについて）</h2>
+    <h2 class="post-title">アプリのナビゲーション（下タブについて）</h2>
   </a>
   <div class="post-entry">
     
@@ -417,19 +549,28 @@
 <p>この記事は「<a href="http://qiita.com/advent-calendar/2015/mincomi">みんコミ Advent Calendar</a>」の22日目の記事です。</p>
 <p>「<a href="https://www.mincomi.jp">みんコミ</a>」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。</p>
 <p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" /></a>（公開終了しています）</p></p>
-        <a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-22.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-22.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2015-12-21
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2015-12-21
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/">みんコミ Advent Calendar</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/"
+        >みんコミ Advent Calendar</a
+      >&nbsp;
     
   
 </span>
@@ -440,7 +581,7 @@
       
         <article class="post-preview">
   <a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-21.html">
-      <h2 class="post-title">ScaleGestureとScroll</h2>
+    <h2 class="post-title">ScaleGestureとScroll</h2>
   </a>
   <div class="post-entry">
     
@@ -457,19 +598,28 @@
 <p>この記事は「<a href="http://qiita.com/advent-calendar/2015/mincomi">みんコミ Advent Calendar</a>」の21日目の記事です。</p>
 <p>「<a href="https://www.mincomi.jp">みんコミ</a>」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。</p>
 <p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" /></a>（公開終了しています）</p></p>
-        <a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-21.html" class="post-read-more">Read More</a>
+      <a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-21.html" class="post-read-more"
+        >Read More</a
+      >
     
   </div>
 
   <div class="postmeta">
     <span class="meta-post">
-  <i class="fa fa-calendar-alt"></i>&nbsp;2015-12-20
+  <em class="fa fa-calendar-alt"></em
+  >&nbsp;2015-12-20
   
-    &nbsp;&nbsp;&nbsp;<i class="fa fa-folder-open"></i>&nbsp;
+    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/android/">Android</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/android/"
+        >Android</a
+      >&nbsp;
     
-      <a href="https://blog.keiji.dev//categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/">みんコミ Advent Calendar</a>&nbsp;
+      <a
+        href="https://blog.keiji.dev/categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/"
+        >みんコミ Advent Calendar</a
+      >&nbsp;
     
   
 </span>
@@ -478,43 +628,59 @@
 </article>
 
       
-      </div>
+    </div>
     
-    <ul class="pager">
-      
-        <li class="previous">
-          <a href="https://blog.keiji.dev/post/page/4/">&larr; Newer</a>
-        </li>
-      
-      
-        <li class="next">
-          <a href="https://blog.keiji.dev/post/page/6/">Older &rarr;</a>
-        </li>
-      
-    </ul>
-  
-</div>
+      <ul class="pager">
+        
+          <li class="previous">
+            
+              <a href="https://blog.keiji.dev/post/page/4/"
+                >&larr; Newer</a
+              >
+            
+          </li>
+        
+        
+          <li class="next">
+            
+              <a href="https://blog.keiji.dev/post/page/6/"
+                >Older &rarr;</a
+              >
+            
+          </li>
+        
+      </ul>
+    
+  </div>
 
     <footer>
   
 
+<div class="social-icons">
+  
+
+  
+</div>
+
+
+  
   <div class="container">
     <p class="credits copyright">
       <a href="https://blog.keiji.dev/about"></a>
       &nbsp;&copy;
       2023
       
-      &nbsp;/&nbsp;
-      <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
+        &nbsp;/&nbsp;
+        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
       
       &nbsp;&ndash;&nbsp;
-      <i class="fas fa-moon" id="dark-mode-toggle"></i>
+      <em class="fas fa-moon" id="dark-mode-toggle"></em>
+    </p>
 
     <p class="credits theme-by">
       Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
       Theme
       <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
     </p>
   </div>
 </footer>
