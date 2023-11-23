@@ -7,7 +7,7 @@ hasCJKLanguage = true
 languageCode = "ja"
 author = "Keiji ARIYAMA"
 copyright = "Keiji ARIYAMA All rights reserved."
-googleAnalytics = "UA-62351683-1"
+googleAnalytics = "G-RTC3ZY943S"
 theme = "harbor"
 enableInlineShortcodes = true
 
@@ -21,6 +21,7 @@ enableInlineShortcodes = true
   customCSS = ["css/default.css"]
   description = "Don't take your glasses off."
   images = ["/images/logo.png"]
+#  enableGoogleAnalytics = true
 
 [[params.nav]]
   identifier = "profile"
