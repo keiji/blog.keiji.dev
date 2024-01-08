@@ -14,6 +14,24 @@
 		<atom:link href="/categories/%E7%BF%92%E4%BD%9C/" rel="self" type="application/rss+xml" />
 		
 		<item>
+			<title>年末年始でホールケーキを食べた</title>
+			<link>https://blog.keiji.dev/2024/01/food_review.html</link>
+			<pubDate>Mon, 08 Jan 2024 15:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2024/01/food_review.html</guid>
+			<description>&lt;p&gt;当初、この記事は1月4日に公開予定でしたが、令和6年1月1日に能登半島地震の発生を受けて公開を延期していたものです。&lt;/p&gt;
+&lt;p&gt;犠牲となられた方々の御冥福をお祈りするとともに、被害を受けられた皆様の安全と1日でも早く平穏な生活に戻られますことを心よりお祈り申し上げます。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
+&lt;p&gt;長期休暇の期間には、家族が妻の実家に帰省して、ぼくは自宅で一人になります。
+その間、近所の洋菓子店でケーキをホールで買って、それを食べながら過ごします。&lt;/p&gt;
+&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;大晦日なので、ちょっと贅沢をしながら好きにコードを書きます。&lt;a href=&#34;https://t.co/JEHGY5AWqf&#34;&gt;https://t.co/JEHGY5AWqf&lt;/a&gt; &lt;a href=&#34;https://t.co/oPUGrCAPW0&#34;&gt;pic.twitter.com/oPUGrCAPW0&lt;/a&gt;&lt;/p&gt;&amp;mdash; Keiji / parody (@keiji_ariyama) &lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1476886691717988352?ref_src=twsrc%5Etfw&#34;&gt;December 31, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+&lt;p&gt;昨年末も実家に帰る予定になっていたので、ケーキを食べるのを楽しみにしていました。&lt;/p&gt;
+&lt;p&gt;いつもと違うのは、お目当てのケーキを注文したことです。例年はお店に立ち寄ったときにホールで販売されているものを買い求めるので、チーズケーキだったりガトーショコラだったりと、いわゆる定番商品でしたが、今回は事前に作ってほしいケーキをお店の人に伝えました。&lt;/p&gt;
+&lt;p&gt;注文ケーキと言うと生クリームやフルーツで豪華にデコレーションされた誕生日ケーキのようなものを想像するかも知れません。
+しかし、ぼくの目当ては違いました。その洋菓子店には、ぼくが「幻のケーキ」と呼んでいるものがあります。&lt;/p&gt;</description>
+		</item>
+      	
+		<item>
 			<title>AndroidKeyStoreがEd25519に（サイレントで）対応していた件</title>
 			<link>https://blog.keiji.dev/2023/11/techbookfest15.html</link>
 			<pubDate>Sat, 11 Nov 2023 19:00:00 +0900</pubDate>
@@ -185,16 +203,6 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
 			<pubDate>Fri, 03 Sep 2021 00:00:00 +0900</pubDate>
 			<guid>https://blog.keiji.dev/2021/06/ci-cd-conference-2021/</guid>
 			<description>発表動画に記載のサポートページURLに誤りがありました。 正しいURLは次の通りです。 https://blog.keiji.dev/2021/09/ci-cd-conference-2021</description>
-		</item>
-      	
-		<item>
-			<title>COVID-19 モデルナワクチン副反応の記録</title>
-			<link>https://blog.keiji.dev/2021/07/i_am_vaccinated_and_you.html</link>
-			<pubDate>Fri, 23 Jul 2021 10:00:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2021/07/i_am_vaccinated_and_you.html</guid>
-			<description>&lt;p&gt;　筆者は、COVID-19ワクチンの接種を受けました。
-本エントリーは、接種を受けて経験した副反応の記録です。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/i_am_vaccinated_and_you/original_50eb40cc-428f-4461-bce8-a08534fdae75_PXL_20210720_085217623.jpg&#34; alt=&#34;モデルナ筋注。大阪府大規模接種センターにて。1回目接種6月19日、2回目接種7月20日&#34;&gt;&lt;/p&gt;</description>
 		</item>
       	
 	</channel>
