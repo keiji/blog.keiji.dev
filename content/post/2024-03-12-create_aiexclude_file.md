@@ -11,6 +11,7 @@ categories:
   - 雑記
   - Android
 draft: false
+---
 
 ## 要約
 Studio Botを完全に有効にしたAndroid Studioでプロジェクトを読み込むと、プロジェクトの内容が外部に送信される可能性があります。
