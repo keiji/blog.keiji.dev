@@ -14,6 +14,23 @@
 		<atom:link href="/categories/%E5%9F%B7%E7%AD%86/" rel="self" type="application/rss+xml" />
 		
 		<item>
+			<title>5年ぶりのGoogle I/O 2024参加で準備した話</title>
+			<link>https://blog.keiji.dev/2024/06/googleio2024.html</link>
+			<pubDate>Sun, 02 Jun 2024 12:00:00 +0900</pubDate>
+			<guid>https://blog.keiji.dev/2024/06/googleio2024.html</guid>
+			<description>&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/googleio2024/io.jpg&#34; alt=&#34;Google I/O 2024&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
+&lt;p&gt;6月15日（土）のDroidKaigi.collect { #9@Osaka }において、10分間のLT枠で発表予定です。Google I/Oの話もするので、興味がある方はぜひ参加してください（プログラムは変更する可能性があります）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DroidKaigi.collect { #9@Osaka }
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://droidkaigi.connpass.com/event/318456/&#34;&gt;https://droidkaigi.connpass.com/event/318456/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+		</item>
+      	
+		<item>
 			<title>Studio Bot用の .aiexclude ファイルを作った話</title>
 			<link>https://blog.keiji.dev/2024/03/create_aiexclude_file.html</link>
 			<pubDate>Tue, 12 Mar 2024 19:00:00 +0900</pubDate>
@@ -194,14 +211,6 @@ ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボデ
 			<pubDate>Sat, 04 Sep 2021 00:00:00 +0900</pubDate>
 			<guid>https://blog.keiji.dev/2021/09/digital_agency/</guid>
 			<description>9月1日付で発足したデジタル庁にAndroidエンジニアとして入庁しました。引き続き接触確認アプリ「COCOA」を担当します。 ぼくは大阪に住</description>
-		</item>
-      	
-		<item>
-			<title>CI/CD Conference 2021サポートページ</title>
-			<link>https://blog.keiji.dev/2021/09/ci-cd-conference-2021/</link>
-			<pubDate>Fri, 03 Sep 2021 00:00:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2021/09/ci-cd-conference-2021/</guid>
-			<description>&lt;p&gt;&lt;a href=&#34;https://event.cloudnativedays.jp/cicd2021&#34;&gt;CI/CD Conference 2021 by CloudNative Days&lt;/a&gt;の発表 接触確認アプリ「COCOA」 OSSモバイルアプリのCI整備の難しさ に関するサポートページです。&lt;/p&gt;</description>
 		</item>
       	
 	</channel>
