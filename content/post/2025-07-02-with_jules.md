@@ -156,9 +156,9 @@ Julesにはいくつかの課題も見られるものの、Googleのベータ版
 
 生成されたコードに「これは自分のコードではないな……」という感覚が残るのは事実ですが、コードを書く楽しみを目的としないのであれば、Julesは目標達成のための強力なツールになり得ると確信しました（そうは言っても、コードを書く楽しみそれ自体は捨てがたいものではありますが）
 
-今回気になった点については、既にJulesチームにフィードバックとして送信済みです。今後のJulesのアップデートに期待しています。
-
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">えーあい使えば８割方は楽できるけど、本当につらいのは残り２割なんですよ。</p>&mdash; ARIYAMA Keiji (@keiji_ariyama) <a href="https://twitter.com/keiji_ariyama/status/1940039780135575868?ref_src=twsrc%5Etfw">July 1, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+今回気になった点については、既にJulesチームにフィードバックとして送信済みです。今後のJulesのアップデートに期待しています。
 
 **開発したアプリとソースコード**
 * [Google Play: Integrity Check Tool](https://play.google.com/store/apps/details?id=dev.keiji.deviceintegrity)
