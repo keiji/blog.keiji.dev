@@ -23,7 +23,7 @@ jobs:
         uses: chabad360/hugo-actions@v2
         with:
           buildPath: ./public
-          hugoVersion: v0.133.0+extended
+          hugoVersion: v0.133.0
           args: --gc --cleanDestinationDir
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
