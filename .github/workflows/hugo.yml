@@ -20,11 +20,11 @@ jobs:
           git submodule init
           git submodule update
       - name: Build Site'
-        uses: chabad360/hugo-actions@v2
+        uses: peaceiris/actions-hugo@v3
         with:
-          buildPath: ./public
-          hugoVersion: extended_0.133.0
-          args: --gc --cleanDestinationDir
+          hugo-version: '0.133.0'
+      - name: Build
+        run: hugo --minify
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
