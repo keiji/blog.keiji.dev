@@ -1,237 +1,17 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-<title>いまNN API（TensorFlow Lite）は使えるのか</title>
-<meta name="description" 
-      content="Don&#39;t take your glasses off."
->
-
-  
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RTC3ZY943S');
-  </script>
-  
-
-
-
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link
-  rel="alternate"
-  type="application/rss+xml"
-  href="https://blog.keiji.dev/index.xml"
-  title="めがねをかけるんだ"
-/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
-
-<meta name="twitter:title" content="いまNN API（TensorFlow Lite）は使えるのか"/>
-<meta name="twitter:description" content="　この記事はTensorFlow Advent Calendar 2018の24日目の記事です。
-　23日目の記事は、AtuNukaさんによる「Design Documentから見たTensorFlow 2.0の変更点」でした。"/>
-
-
-
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-
-
-
-<link
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/styles.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-
-<link
-  id="dark-mode-theme"
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/dark.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-<script>
-  var darkTheme = document.getElementById('dark-mode-theme')
-  var storedTheme = localStorage.getItem('dark-mode-storage')
-
-  if (storedTheme === 'dark') {
-    darkTheme.disabled = false
-  } else if (storedTheme === 'light') {
-    darkTheme.disabled = true
-  }
-</script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
-  </head>
-  <body>
-    
-  
-
-
-
-
-  <header>
-    <nav class="navbar">
-  <div class="nav">
-    
-      <a href="https://blog.keiji.dev/" class="nav-logo">
-        <img
-          src="https://blog.keiji.dev/images/logo.png"
-          width=""
-          height=""
-          alt="Logo"
-        />
-      </a>
-    
-
-    <ul class="nav-links">
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/profile/" id="Profile"
-              ><em class="fas fa-user fa-lg"></em
-            ></a>
-          </li>
-          
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
-              ><em class="fab fa-osi fa-lg"></em
-            ></a>
-          </li>
-          
-      
-    </ul>
-  </div>
-</nav>
-
-    <div class="intro-header">
-      <div class="container">
-        <div class="post-heading">
-          
-            <h1>
-              いまNN API（TensorFlow Lite）は使えるのか
-            </h1>
-          
-          
-            <span class="meta-post">
-  <em class="fa fa-calendar-alt"></em
-  >&nbsp;2018-12-24
-  
-    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/android/"
-        >Android</a
-      >&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/tensorflow/"
-        >TensorFlow</a
-      >&nbsp;
-    
-  
-</span>
-
-          
-        </div>
-      </div>
-    </div>
-  </header>
-  
-
-    
-  <div class="container" role="main">
-    <article class="article" class="blog-post">
-      
-  <p>　この記事は<a href="https://qiita.com/advent-calendar/2018/tensorflow">TensorFlow Advent Calendar 2018</a>の24日目の記事です。</p>
-<p>　23日目の記事は、AtuNukaさんによる「<a href="https://qiita.com/AtuNuka/items/6966efeddceb96012819">Design Documentから見たTensorFlow 2.0の変更点</a>」でした。</p>
-<h2 id="はじめに">はじめに</h2>
-<p>　あいかわらず趣味でTensorFlowを使っていて、最近はAndroidで動作させるTensorFlow Liteまわりを重点的に取り組んでいます。</p>
-<p>　アドベントカレンダーの22日目の記事、足立氏（カブク社）による「<a href="https://www.kabuku.co.jp/developers/how-is-tflite-useful">いまMLKitカスタムモデル（TF Lite）は使えるのか</a>」に書かれているように、TensorFlowのモデルをAndroid端末で動かすことに関しては「使える」レベルになってきていると筆者も思います。</p>
-<p>　そこで今日は、TensorFlow LiteのモデルをAndroidアプリに組み込んで動作させるとき、NN APIを使うように設定すると「動かない」という話をします。</p>
-<p>「使えるレベルになってきている」と、言った直後にこんなことを言ってごめんね。</p>
-<p>　でも、本当です。</p>
-<h2 id="tldr">TL;DR</h2>
-<p>　TensorFlow LiteのモデルをAndroidアプリに組み込むには、TensorFlow Liteそのものの制約に加えて、量子化済みモデルの制約。そしてNN APIの制約の「３つの制約」を最大公約数的にクリアする必要がある。</p>
-<p>　モデルの作成を進め、いざAndroidアプリに組み込もうとしたときに制約に引っかかると、大きな手戻りが発生したり、当初予定されていた性能が出ないなどの問題が起こる可能性がある。</p>
-<p>　それらの問題を防ぐために、モデルを設計して、学習プロセスを開始する前段階で、TensorFlow Liteの量子化モデルへの変換と、NN APIを使ったときに問題なく動作するかを確認するプロセスを設けることを強く推奨する。</p>
-<p>　今後、TensorFlow LiteモデルのAndroidアプリへの組み込みが増えていくに従い、Androidアプリエンジニアと機械学習エンジニアは、より緊密にコミュニケーションをしていく必要があると筆者は考えている。</p>
-<h2 id="nn-apiとは">NN APIとは</h2>
-<p>　NN(Neural Networks) APIは、Android 8.1から追加された、モバイル端末上で機械学習の計算処理を実行するためのAPIです。</p>
-<p>Neural Networks API</p>
-<p><a href="https://developer.android.com/ndk/guides/neuralnetworks/?hl=ja">https://developer.android.com/ndk/guides/neuralnetworks/?hl=ja</a></p>
-<p>　NN APIを通じて機械学習の計算処理をすると、端末に搭載されているGPUや機械学習の演算を専門とするプロセッサ（e.g. Pixel Visual Core）上で実行したり、それらがない場合はCPUにオフロードしたりすることで、高速な実行が期待できます。</p>
-<p>　NN APIは、Cで提供されています。提供されている<a href="https://github.com/googlesamples/android-ndk/tree/master/nn_sample">サンプルアプリ</a>はJNIを使っています。</p>
-<p>　JavaとKotlinでアプリ作ってるマンには厳しい世界です。</p>
-<h2 id="tensorflow-liteとは">TensorFlow Liteとは</h2>
-<p>　TensorFlow Liteは、TensorFlowで作成した機械学習のモデルをモバイル端末や組み込みデバイスで動作させる仕組みです。Google I/O 2017で発表されました。</p>
-<p>TensorFlow Lite</p>
-<p><a href="https://www.tensorflow.org/lite/">https://www.tensorflow.org/lite/</a></p>
-<p>　TensorFlow LiteをAndroidアプリ開発で使うには、<a href="https://bintray.com/google/tensorflow/tensorflow-lite">tensorflow-lite</a>ライブラリを使います。</p>
-<p>　8月にバージョン（<code>1.10.0</code>）を出してから、TensorFlow本体が順調にバージョンアップしているにも関わらずまったく動きを見せず、12月3日に突然、<code>1.11.0</code>と<code>1.12.0（Breaking Changes入り）</code>を同時リリースするという男気あふれるライブラリです。皆さんも是非使ってみてください。</p>
-<h3 id="tensorflow-mobile">TensorFlow Mobile</h3>
-<p>　TensorFlow Liteより前に、TensorFlow Mobileというライブラリも提供されていました。現在も提供されていて、メンテナンスもされているのですが、2019年のはじめにはdeprecated（非推奨）になることがアナウンスされています。</p>
-<p>Optimizing for mobile</p>
-<p><a href="https://www.tensorflow.org/lite/tfmobile/optimizing">https://www.tensorflow.org/lite/tfmobile/optimizing</a></p>
-<p>　 筆者が以前執筆に参加した「TensorFlow活用ガイド」では、AndroidアプリからTensorFlowのモデルを利用するのにTensorFlow Mobileを使っていたので、こちらが完全に死亡宣告を受けた感じです。</p>
-<p><a href="https://www.amazon.co.jp/dp/B07921ZC62/ref=as_li_ss_il?_encoding=UTF8&#038;btkr=1&#038;linkCode=li2&#038;tag=keijiariyama-22&#038;linkId=4a00c5b2fbe48f21047a9b8d25e01e01&#038;language=ja_JP" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&#038;ASIN=B07921ZC62&#038;Format=_SL160_&#038;ID=AsinImage&#038;MarketPlace=JP&#038;ServiceVersion=20070822&#038;WS=1&#038;tag=keijiariyama-22&#038;language=ja_JP" /></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=keijiariyama-22&#038;language=ja_JP&#038;l=li2&#038;o=9&#038;a=B07921ZC62" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
-<p>　まぁ、足が早いものになるであろうことは承知していましたし、評判が良ければ改訂もできるので、皆さん是非買ってください。レビュー平均が1.5とか、逆に珍しいと思います。きっと興味がわいたことでしょう。</p>
-<p>　皆さん是非買ってください。</p>
-<h2 id="tensorflow-lite用のモデル出力">TensorFlow Lite用のモデル出力</h2>
-<p>　TensorFlowで作成したモデルをTensorFlow Liteで動作させるには、TensorFlow Lite用にモデルを出力する必要があります。</p>
-<p>　TensorFlowが出力するデータ形式は<a href="https://developers.google.com/protocol-buffers/">Protocol Buffers</a>が多いのですが、TensorFlow Liteでは<a href="https://google.github.io/flatbuffers/">FlatBuffers</a>が採用されています。</p>
-<p>　これは、FlatBuffersはデータにアクセスする際にパースを必要とせず、メモリのフットプリント（占有容量）が小さいと言う特徴があり、モバイル端末や組み込みデバイスに適しているためです。</p>
-<p>　TensorFlow Liteモデルに変換するには、コマンドラインツールとPython APIが提供されています。</p>
-<p>（ツールには<code>TOCO</code>と<code>tflite_convert</code>がありますが、今後は<code>tflite_convert</code>に統一されていくと聞いてます）</p>
-<p>　コマンドラインツールを使うにせよ、Python APIを使うにせよ、基本的には、モデルとパラメーターを従来形式（Protocol Buffers）で出力した後、TensorFlow Lite用に変換する行程になります。</p>
-<p>　ちなみに<code>TOCO</code>と<code>tflite_convert</code>、そしておそらくPython APIも、Windowsでは動作しませんが、UbuntuとかmacOSではちゃんと動くからなんの問題もない。</p>
-<p>Toco not working on Windows #20975</p>
-<p><a href="https://github.com/tensorflow/tensorflow/issues/20975">https://github.com/tensorflow/tensorflow/issues/20975</a></p>
-<h2 id="nn-apiとtensorflow-lite">NN APIとTensorFlow Lite</h2>
-<p>　前に述べたとおり、Java（Kotlin）ばかりを使っている筆者にはNN APIを使うための処理を全部Cで書くのはハードルが高いのですが、TensorFlow LiteのモデルをAndroidアプリで動かすときにNN APIを使うように指定することで、計算処理をNN APIを使って実行できます。</p>
-<p>　NN APIを使うには、TensorFlow Liteの<code>Interpreter</code>クラスをインスタンス化するときに<code>Options</code>オブジェクトを渡します。</p>
-<pre><code>    TfLiteModel(AssetManager am) throws IOException {
+<!doctype html><html lang=ja><head><meta charset=utf-8><title>いまNN API（TensorFlow Lite）は使えるのか</title>
+<meta name=description content="Don't take your glasses off."><script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-RTC3ZY943S")</script><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate type=application/rss+xml href=https://blog.keiji.dev/index.xml title=めがねをかけるんだ><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.keiji.dev/images/logo.png"><meta name=twitter:title content="いまNN API（TensorFlow Lite）は使えるのか"><meta name=twitter:description content="　この記事はTensorFlow Advent Calendar 2018の24日目の記事です。
+23日目の記事は、AtuNukaさんによる「Design Documentから見たTensorFlow 2.0の変更点」でした。"><link rel=stylesheet href=https://blog.keiji.dev/fontawesome/css/all.min.css><link crossorigin=anonymous href=https://blog.keiji.dev/css/styles.min.css integrity rel="preload stylesheet" as=style><link rel=stylesheet href=https://blog.keiji.dev/css/default.css><link id=dark-mode-theme crossorigin=anonymous href=https://blog.keiji.dev/css/dark.min.css integrity rel="preload stylesheet" as=style><script>var darkTheme=document.getElementById("dark-mode-theme"),storedTheme=localStorage.getItem("dark-mode-storage");storedTheme==="dark"?darkTheme.disabled=!1:storedTheme==="light"&&(darkTheme.disabled=!0)</script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/theme.js integrity></script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/instantpage.min.js integrity></script><meta name=generator content="Hugo 0.133.0"></head><body><header><nav class=navbar><div class=nav><a href=https://blog.keiji.dev/ class=nav-logo><img src=https://blog.keiji.dev/images/logo.png width height alt=Logo></a><ul class=nav-links><li><a href=https://blog.keiji.dev/profile/ id=Profile><em class="fas fa-user fa-lg"></em></a></li><li><a href=https://blog.keiji.dev/licenses/ id=Licenses><em class="fab fa-osi fa-lg"></em></a></li></ul></div></nav><div class=intro-header><div class=container><div class=post-heading><h1>いまNN API（TensorFlow Lite）は使えるのか</h1><span class=meta-post><em class="fa fa-calendar-alt"></em>&nbsp;2018-12-24
+&nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
+<a href=https://blog.keiji.dev/categories/android/>Android</a>&nbsp;
+<a href=https://blog.keiji.dev/categories/tensorflow/>TensorFlow</a>&nbsp;</span></div></div></div></header><div class=container role=main><article class=article class=blog-post><p>　この記事は<a href=https://qiita.com/advent-calendar/2018/tensorflow>TensorFlow Advent Calendar 2018</a>の24日目の記事です。</p><p>　23日目の記事は、AtuNukaさんによる「<a href=https://qiita.com/AtuNuka/items/6966efeddceb96012819>Design Documentから見たTensorFlow 2.0の変更点</a>」でした。</p><h2 id=はじめに>はじめに</h2><p>　あいかわらず趣味でTensorFlowを使っていて、最近はAndroidで動作させるTensorFlow Liteまわりを重点的に取り組んでいます。</p><p>　アドベントカレンダーの22日目の記事、足立氏（カブク社）による「<a href=https://www.kabuku.co.jp/developers/how-is-tflite-useful>いまMLKitカスタムモデル（TF Lite）は使えるのか</a>」に書かれているように、TensorFlowのモデルをAndroid端末で動かすことに関しては「使える」レベルになってきていると筆者も思います。</p><p>　そこで今日は、TensorFlow LiteのモデルをAndroidアプリに組み込んで動作させるとき、NN APIを使うように設定すると「動かない」という話をします。</p><p>「使えるレベルになってきている」と、言った直後にこんなことを言ってごめんね。</p><p>　でも、本当です。</p><h2 id=tldr>TL;DR</h2><p>　TensorFlow LiteのモデルをAndroidアプリに組み込むには、TensorFlow Liteそのものの制約に加えて、量子化済みモデルの制約。そしてNN APIの制約の「３つの制約」を最大公約数的にクリアする必要がある。</p><p>　モデルの作成を進め、いざAndroidアプリに組み込もうとしたときに制約に引っかかると、大きな手戻りが発生したり、当初予定されていた性能が出ないなどの問題が起こる可能性がある。</p><p>　それらの問題を防ぐために、モデルを設計して、学習プロセスを開始する前段階で、TensorFlow Liteの量子化モデルへの変換と、NN APIを使ったときに問題なく動作するかを確認するプロセスを設けることを強く推奨する。</p><p>　今後、TensorFlow LiteモデルのAndroidアプリへの組み込みが増えていくに従い、Androidアプリエンジニアと機械学習エンジニアは、より緊密にコミュニケーションをしていく必要があると筆者は考えている。</p><h2 id=nn-apiとは>NN APIとは</h2><p>　NN(Neural Networks) APIは、Android 8.1から追加された、モバイル端末上で機械学習の計算処理を実行するためのAPIです。</p><p>Neural Networks API</p><p><a href="https://developer.android.com/ndk/guides/neuralnetworks/?hl=ja">https://developer.android.com/ndk/guides/neuralnetworks/?hl=ja</a></p><p>　NN APIを通じて機械学習の計算処理をすると、端末に搭載されているGPUや機械学習の演算を専門とするプロセッサ（e.g. Pixel Visual Core）上で実行したり、それらがない場合はCPUにオフロードしたりすることで、高速な実行が期待できます。</p><p>　NN APIは、Cで提供されています。提供されている<a href=https://github.com/googlesamples/android-ndk/tree/master/nn_sample>サンプルアプリ</a>はJNIを使っています。</p><p>　JavaとKotlinでアプリ作ってるマンには厳しい世界です。</p><h2 id=tensorflow-liteとは>TensorFlow Liteとは</h2><p>　TensorFlow Liteは、TensorFlowで作成した機械学習のモデルをモバイル端末や組み込みデバイスで動作させる仕組みです。Google I/O 2017で発表されました。</p><p>TensorFlow Lite</p><p><a href=https://www.tensorflow.org/lite/>https://www.tensorflow.org/lite/</a></p><p>　TensorFlow LiteをAndroidアプリ開発で使うには、<a href=https://bintray.com/google/tensorflow/tensorflow-lite>tensorflow-lite</a>ライブラリを使います。</p><p>　8月にバージョン（<code>1.10.0</code>）を出してから、TensorFlow本体が順調にバージョンアップしているにも関わらずまったく動きを見せず、12月3日に突然、<code>1.11.0</code>と<code>1.12.0（Breaking Changes入り）</code>を同時リリースするという男気あふれるライブラリです。皆さんも是非使ってみてください。</p><h3 id=tensorflow-mobile>TensorFlow Mobile</h3><p>　TensorFlow Liteより前に、TensorFlow Mobileというライブラリも提供されていました。現在も提供されていて、メンテナンスもされているのですが、2019年のはじめにはdeprecated（非推奨）になることがアナウンスされています。</p><p>Optimizing for mobile</p><p><a href=https://www.tensorflow.org/lite/tfmobile/optimizing>https://www.tensorflow.org/lite/tfmobile/optimizing</a></p><p>　 筆者が以前執筆に参加した「TensorFlow活用ガイド」では、AndroidアプリからTensorFlowのモデルを利用するのにTensorFlow Mobileを使っていたので、こちらが完全に死亡宣告を受けた感じです。</p><p><a href="https://www.amazon.co.jp/dp/B07921ZC62/ref=as_li_ss_il?_encoding=UTF8&#038;btkr=1&#038;linkCode=li2&#038;tag=keijiariyama-22&#038;linkId=4a00c5b2fbe48f21047a9b8d25e01e01&#038;language=ja_JP" target=_blank><img border=0 src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&#038;ASIN=B07921ZC62&#038;Format=_SL160_&#038;ID=AsinImage&#038;MarketPlace=JP&#038;ServiceVersion=20070822&#038;WS=1&#038;tag=keijiariyama-22&#038;language=ja_JP"></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=keijiariyama-22&#038;language=ja_JP&#038;l=li2&#038;o=9&#038;a=B07921ZC62" width=1 height=1 border=0 alt style=border:none!important;margin:0!important></p><p>　まぁ、足が早いものになるであろうことは承知していましたし、評判が良ければ改訂もできるので、皆さん是非買ってください。レビュー平均が1.5とか、逆に珍しいと思います。きっと興味がわいたことでしょう。</p><p>　皆さん是非買ってください。</p><h2 id=tensorflow-lite用のモデル出力>TensorFlow Lite用のモデル出力</h2><p>　TensorFlowで作成したモデルをTensorFlow Liteで動作させるには、TensorFlow Lite用にモデルを出力する必要があります。</p><p>　TensorFlowが出力するデータ形式は<a href=https://developers.google.com/protocol-buffers/>Protocol Buffers</a>が多いのですが、TensorFlow Liteでは<a href=https://google.github.io/flatbuffers/>FlatBuffers</a>が採用されています。</p><p>　これは、FlatBuffersはデータにアクセスする際にパースを必要とせず、メモリのフットプリント（占有容量）が小さいと言う特徴があり、モバイル端末や組み込みデバイスに適しているためです。</p><p>　TensorFlow Liteモデルに変換するには、コマンドラインツールとPython APIが提供されています。</p><p>（ツールには<code>TOCO</code>と<code>tflite_convert</code>がありますが、今後は<code>tflite_convert</code>に統一されていくと聞いてます）</p><p>　コマンドラインツールを使うにせよ、Python APIを使うにせよ、基本的には、モデルとパラメーターを従来形式（Protocol Buffers）で出力した後、TensorFlow Lite用に変換する行程になります。</p><p>　ちなみに<code>TOCO</code>と<code>tflite_convert</code>、そしておそらくPython APIも、Windowsでは動作しませんが、UbuntuとかmacOSではちゃんと動くからなんの問題もない。</p><p>Toco not working on Windows #20975</p><p><a href=https://github.com/tensorflow/tensorflow/issues/20975>https://github.com/tensorflow/tensorflow/issues/20975</a></p><h2 id=nn-apiとtensorflow-lite>NN APIとTensorFlow Lite</h2><p>　前に述べたとおり、Java（Kotlin）ばかりを使っている筆者にはNN APIを使うための処理を全部Cで書くのはハードルが高いのですが、TensorFlow LiteのモデルをAndroidアプリで動かすときにNN APIを使うように指定することで、計算処理をNN APIを使って実行できます。</p><p>　NN APIを使うには、TensorFlow Liteの<code>Interpreter</code>クラスをインスタンス化するときに<code>Options</code>オブジェクトを渡します。</p><pre><code>    TfLiteModel(AssetManager am) throws IOException {
         ByteBuffer byteBuffer = loadModelFile(am);
         Interpreter.Options options = new Interpreter.Options().setUseNNAPI(true);
         tfInterpreter = new Interpreter(byteBuffer, options);
     }
-</code></pre>
-<p>　<code>setUseNNAPI(true)</code>が、NN APIを利用する設定です。</p>
-<p>　で、NN APIを利用したら、それまで普通に使えていたモデルが動かなくなったという話です。</p>
-<h2 id="遭遇した課題">遭遇した課題</h2>
-<p>　GitHubで公開している<a href="https://github.com/keiji/food_gallery_with_tensorflow">food_gallery_with_tensorflow</a>の、<code>tflite_quantize</code>ブランチが、TensorFlow Lite（tflite）の量子化モデルに対応したコードです。</p>
-<p>　このコードをベースに<code>setUseNNAPI(true)</code>を設定して実行すると、モデルの初期化時にエラーになりました。</p>
-<pre><code>E/tflite: NNAPI doesn't support tensors with rank 0 (index 88 name mul/y)
+</code></pre><p>　<code>setUseNNAPI(true)</code>が、NN APIを利用する設定です。</p><p>　で、NN APIを利用したら、それまで普通に使えていたモデルが動かなくなったという話です。</p><h2 id=遭遇した課題>遭遇した課題</h2><p>　GitHubで公開している<a href=https://github.com/keiji/food_gallery_with_tensorflow>food_gallery_with_tensorflow</a>の、<code>tflite_quantize</code>ブランチが、TensorFlow Lite（tflite）の量子化モデルに対応したコードです。</p><p>　このコードをベースに<code>setUseNNAPI(true)</code>を設定して実行すると、モデルの初期化時にエラーになりました。</p><pre><code>E/tflite: NNAPI doesn't support tensors with rank 0 (index 88 name mul/y)
 E/tflite: Returning error since TFLite returned failure nnapi_delegate.cc:745.
 E/tflite: Failed to build graph for NNAPI
-</code></pre>
-<p>　ありがたいことに（本当にありがたいことに）、<code>tensorflow-lite 1.11.0</code>からエラーの内容がきちんと表示されるようになりました。この場合、<code>NN API</code>はrank <code>0</code>のTensorをサポートしていないとエラーが出ています。</p>
-<p>　ランク<code>0</code>のTensorはスカラー型を意味します。</p>
-<h3 id="量子化モデルの制約">量子化モデルの制約</h3>
-<p>　ここで、モデルを出力したPythonスクリプトを見てみます。</p>
-<pre><code>INPUT_CHANNEL = 4
+</code></pre><p>　ありがたいことに（本当にありがたいことに）、<code>tensorflow-lite 1.11.0</code>からエラーの内容がきちんと表示されるようになりました。この場合、<code>NN API</code>はrank <code>0</code>のTensorをサポートしていないとエラーが出ています。</p><p>　ランク<code>0</code>のTensorはスカラー型を意味します。</p><h3 id=量子化モデルの制約>量子化モデルの制約</h3><p>　ここで、モデルを出力したPythonスクリプトを見てみます。</p><pre><code>INPUT_CHANNEL = 4
 
 FLAGS = tf.flags.FLAGS
 tf.flags.DEFINE_string('tag_name', None, &quot;タグ名&quot;)
@@ -278,16 +58,12 @@ def main(args=None):
 
 if __name__ == '__main__':
   tf.app.run()
-</code></pre>
-<p>　<code>Placeholder(name: input)</code>に<code>(1.0 / 255.0)</code>を乗算しています。</p>
-<pre><code>    image_ph = tf.placeholder(
+</code></pre><p>　<code>Placeholder(name: input)</code>に<code>(1.0 / 255.0)</code>を乗算しています。</p><pre><code>    image_ph = tf.placeholder(
       tf.float32,
       [model.IMAGE_SIZE * model.IMAGE_SIZE * INPUT_CHANNEL],
       name='input')
     normalized_image = image_ph * (1.0 / 255.0)
-</code></pre>
-<p>　これは入力画像の値（<code>0-255</code>）を<code>0.0-1.0</code>に正規化する処理です。なぜ素直に<code>image_ph / 255.0</code>としないかというと、TensorFlow Lite形式に変換する際、パラメーターを量子化しようとすると「<code>Div</code>をサポートしていない」エラーが発生するためです。</p>
-<pre><code>$ tflite_convert \
+</code></pre><p>　これは入力画像の値（<code>0-255</code>）を<code>0.0-1.0</code>に正規化する処理です。なぜ素直に<code>image_ph / 255.0</code>としないかというと、TensorFlow Lite形式に変換する際、パラメーターを量子化しようとすると「<code>Div</code>をサポートしていない」エラーが発生するためです。</p><pre><code>$ tflite_convert \
     --graph_def_file food_model_4ch.pb  \
     --output_file food_model_quant_4ch.tflite \
     --inference_type QUANTIZED_UINT8  \
@@ -297,44 +73,20 @@ if __name__ == '__main__':
     --default_ranges_min=-6 --default_ranges_max=6
 （略）
 F tensorflow/contrib/lite/toco/graph_transformations/quantize.cc:474] Unimplemented: this graph contains an operator of type Div for which the quantized form is not yet implemented. Sorry, and patches welcome (that's a relatively fun patch to write, mostly providing the actual quantized arithmetic code for this op).\n&quot;
-</code></pre>
-<p>　量子化モデルでは単純な除算（<code>Div</code>）が使えません（量子化しなければ使えます）。そこで<code>(1.0 / 255.0)</code>の結果を乗算することで、<code>255.0</code>で除算するのと同じ結果にしています。</p>
-<p>　そもそもなんで<code>255.0</code>で除算するのか。<code>tf.image.per_image_standardization</code>という便利なものがあるだろうと思ったあなた。安心してください。</p>
-<p>　TensorFlow Liteの量子化モデルでは<code>tf.image.per_image_standardization</code>は使えません。</p>
-<pre><code> F tensorflow/contrib/lite/toco/graph_transformations/quantize.cc:474] Unimplemented: this graph contains an operator of type ReduceProd for which the quantized form is not yet implemented. Sorry, and patches welcome (that's a relatively fun patch to write, mostly providing the actual quantized arithmetic code for this op).\n&quot;
-</code></pre>
-<p>　あと筆者の知るかぎりでは<code>tf.expand_dims</code>が使えなかったりと、普通に<code>tflite_convert</code>を使っていて問題なく変換できるモデルでも、量子化するときに制約に引っかかるということは珍しくありません。大変ですね。</p>
-<h3 id="nn-apiの制約">NN APIの制約</h3>
-<h4 id="スカラーをサポートしない">スカラーをサポートしない</h4>
-<p>　除算をサポートしていない件については乗算に置き換えて解決しました。しかし今度は値がスカラーなのでNN APIでエラーが発生します。</p>
-<p>また、量子化していないTensorFlow Liteのモデルでも、同様のエラーが発生します。</p>
-<p>（ 厄介なのは、NN APIを使わなければ普通に動いてしまうということです）</p>
-<p>　スカラーをサポートしていないなら、要素数<code>1</code>の配列として計算するように調整します。</p>
-<pre><code>    image_ph = tf.placeholder(
+</code></pre><p>　量子化モデルでは単純な除算（<code>Div</code>）が使えません（量子化しなければ使えます）。そこで<code>(1.0 / 255.0)</code>の結果を乗算することで、<code>255.0</code>で除算するのと同じ結果にしています。</p><p>　そもそもなんで<code>255.0</code>で除算するのか。<code>tf.image.per_image_standardization</code>という便利なものがあるだろうと思ったあなた。安心してください。</p><p>　TensorFlow Liteの量子化モデルでは<code>tf.image.per_image_standardization</code>は使えません。</p><pre><code> F tensorflow/contrib/lite/toco/graph_transformations/quantize.cc:474] Unimplemented: this graph contains an operator of type ReduceProd for which the quantized form is not yet implemented. Sorry, and patches welcome (that's a relatively fun patch to write, mostly providing the actual quantized arithmetic code for this op).\n&quot;
+</code></pre><p>　あと筆者の知るかぎりでは<code>tf.expand_dims</code>が使えなかったりと、普通に<code>tflite_convert</code>を使っていて問題なく変換できるモデルでも、量子化するときに制約に引っかかるということは珍しくありません。大変ですね。</p><h3 id=nn-apiの制約>NN APIの制約</h3><h4 id=スカラーをサポートしない>スカラーをサポートしない</h4><p>　除算をサポートしていない件については乗算に置き換えて解決しました。しかし今度は値がスカラーなのでNN APIでエラーが発生します。</p><p>また、量子化していないTensorFlow Liteのモデルでも、同様のエラーが発生します。</p><p>（ 厄介なのは、NN APIを使わなければ普通に動いてしまうということです）</p><p>　スカラーをサポートしていないなら、要素数<code>1</code>の配列として計算するように調整します。</p><pre><code>    image_ph = tf.placeholder(
       tf.float32,
       [model.IMAGE_SIZE * model.IMAGE_SIZE * INPUT_CHANNEL],
       name='input')
     normalized_image = image_ph * [1 / 255.0]
-</code></pre>
-<h4 id="op-code-45スライス処理をサポートしない">Op code 45（スライス処理）をサポートしない</h4>
-<p>　調整済みのスクリプトでモデルを出力して、さらに変換したTensorFlow Lite形式のモデルを、NN APIを使う設定で実行した結果が次の通りです。</p>
-<pre><code>E/tflite: Op code 45 is currently not delegated to NNAPI
+</code></pre><h4 id=op-code-45スライス処理をサポートしない>Op code 45（スライス処理）をサポートしない</h4><p>　調整済みのスクリプトでモデルを出力して、さらに変換したTensorFlow Lite形式のモデルを、NN APIを使う設定で実行した結果が次の通りです。</p><pre><code>E/tflite: Op code 45 is currently not delegated to NNAPI
 E/tflite: Returning error since TFLite returned failure nnapi_delegate.cc:745.
 E/tflite: Failed to build graph for NNAPI
-</code></pre>
-<p><code>Op code 45</code>は現状は使えないと言ったエラーになりました。<code>Op code 45</code>といわれても、かいもく見当が付きませんね。</p>
-<p>　TensorFlow Liteのオペレーションは、<a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/builtin_ops.h">TensorFlowのGitHubリポジトリ</a>に定義されています。これを見ると<code>45</code>に対応するオペレーション名が<code>kTfLiteBuiltinStridedSlice</code>だとわかります。</p>
-<p>　前述のスクリプトにはスライス処理をしている部分がありました。</p>
-<pre><code>    image = tf.reshape(
+</code></pre><p><code>Op code 45</code>は現状は使えないと言ったエラーになりました。<code>Op code 45</code>といわれても、かいもく見当が付きませんね。</p><p>　TensorFlow Liteのオペレーションは、<a href=https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/builtin_ops.h>TensorFlowのGitHubリポジトリ</a>に定義されています。これを見ると<code>45</code>に対応するオペレーション名が<code>kTfLiteBuiltinStridedSlice</code>だとわかります。</p><p>　前述のスクリプトにはスライス処理をしている部分がありました。</p><pre><code>    image = tf.reshape(
       normalized_image,
       [1, model.IMAGE_SIZE, model.IMAGE_SIZE, INPUT_CHANNEL])
     image = image[:, :, :, :3]
-</code></pre>
-<p>　これは、RGBAの4chの画像のアルファチャンネルを捨てる処理です。</p>
-<p>　もともとAndroidアプリ側で画像を<code>scaledBitmap</code>を使ってモデルの入力に適したサイズに縮小しているのですが、サイズ変更処理後に<code>copyPixelsToBuffer</code>でバイト列を取ると、得られるバイト列が<code>RGBA8888</code>となります。</p>
-<p>　この処理で得られるTensorのShapeは<code>[1, model.IMAGE_SIZE, model.IMAGE_SIZE, 3]</code>。つまり<code>RGB888</code>のデータです（最初の足はミニバッチサイズを表しています）。</p>
-<p>　<a href="https://github.com/googlecodelabs/tensorflow-for-poets-2/blob/master/android/tflite/app/src/main/java/com/example/android/tflitecamerademo/ImageClassifier.java">公式のサンプル</a>では、アプリ側で縦横2重のfor文と、ビットシフトを使ってRGBを取り出しています。</p>
-<pre><code>  /** Writes Image data into a {@code ByteBuffer}. */
+</code></pre><p>　これは、RGBAの4chの画像のアルファチャンネルを捨てる処理です。</p><p>　もともとAndroidアプリ側で画像を<code>scaledBitmap</code>を使ってモデルの入力に適したサイズに縮小しているのですが、サイズ変更処理後に<code>copyPixelsToBuffer</code>でバイト列を取ると、得られるバイト列が<code>RGBA8888</code>となります。</p><p>　この処理で得られるTensorのShapeは<code>[1, model.IMAGE_SIZE, model.IMAGE_SIZE, 3]</code>。つまり<code>RGB888</code>のデータです（最初の足はミニバッチサイズを表しています）。</p><p>　<a href=https://github.com/googlecodelabs/tensorflow-for-poets-2/blob/master/android/tflite/app/src/main/java/com/example/android/tflitecamerademo/ImageClassifier.java>公式のサンプル</a>では、アプリ側で縦横2重のfor文と、ビットシフトを使ってRGBを取り出しています。</p><pre><code>  /** Writes Image data into a {@code ByteBuffer}. */
   private void convertBitmapToByteBuffer(Bitmap bitmap) {
     if (imgData == null) {
       return;
@@ -355,11 +107,7 @@ E/tflite: Failed to build graph for NNAPI
     long endTime = SystemClock.uptimeMillis();
     Log.d(TAG, &quot;Timecost to put values into ByteBuffer: &quot; + Long.toString(endTime - startTime));
   }
-</code></pre>
-<p>　筆者は、以前この処理を見て「モデルにはRGBAで入力して、上述のように内部でアルファチャンネルを捨てればいいのに、なんでこんな無駄なことをするのだろう」と思っていましたし、方々でドヤ顔をして話をしていたりしたのですが、おそらく、NN APIの制約に対応するためにこのような処理にしているのだとわかりました。がっかりだ。</p>
-<p>　そこで、非常に不本意ではありますが、モデルに入力するデータを<code>RGB</code>の3チャンネルと定義して、スライスの処理を取り除きました。</p>
-<p>　また、アプリ側でアルファチャンネルを除去するように調整しました。</p>
-<pre><code>    val inputByteBuffer: ByteBuffer = ByteBuffer
+</code></pre><p>　筆者は、以前この処理を見て「モデルにはRGBAで入力して、上述のように内部でアルファチャンネルを捨てればいいのに、なんでこんな無駄なことをするのだろう」と思っていましたし、方々でドヤ顔をして話をしていたりしたのですが、おそらく、NN APIの制約に対応するためにこのような処理にしているのだとわかりました。がっかりだ。</p><p>　そこで、非常に不本意ではありますが、モデルに入力するデータを<code>RGB</code>の3チャンネルと定義して、スライスの処理を取り除きました。</p><p>　また、アプリ側でアルファチャンネルを除去するように調整しました。</p><pre><code>    val inputByteBuffer: ByteBuffer = ByteBuffer
             .allocateDirect(IMAGE_WIDTH * IMAGE_HEIGHT * 3)
                         .order(ByteOrder.nativeOrder())
     val resultArray = Array(1, { ByteArray(1) })
@@ -381,56 +129,11 @@ E/tflite: Failed to build graph for NNAPI
 
         return resultArray[0][0].toInt().and(0xFF) / 255.0F
     }
-</code></pre>
-<p>　この調整により、無事、NN APIを有効にした状態でモデルが動作するようになりました。</p>
-<h4 id="そのほかの制約">そのほかの制約</h4>
-<p>　NN APIでは、このほかにも<code>tf.tanh</code>など、重要な処理（と、筆者は考えている）をサポートしていなかったりします。</p>
-<p>　ちなみに<code>tf.tanh</code>は、TensorFlow Liteそのものがサポートしていないと記述がありますが、実際にはNN APIを使わなければ動作します。</p>
-<p>TensorFlow Lite &amp; TensorFlow Compatibility Guide</p>
-<p><a href="https://www.tensorflow.org/lite/tf_ops_compatibility#unsupported_operations">https://www.tensorflow.org/lite/tf_ops_compatibility#unsupported_operations</a></p>
-<h2 id="評価">評価</h2>
-<p><a href="https://github.com/keiji/food_gallery_with_tensorflow">food_gallery_with_tensorflow</a>で利用しているTensorFlow Liteの量子化済みモデルを、Essential PH-1、Pixel 2、Pixel 3で動作させて、実行時間を評価しました（搭載しているバージョンは3機種ともAndroid 9.0）。</p>
-<p>　評価プログラムを次に示します。小さなモデルを使っているため、ナノ秒単位で計測しています。</p>
-<pre><code>        val start = Debug.threadCpuTimeNanos()
+</code></pre><p>　この調整により、無事、NN APIを有効にした状態でモデルが動作するようになりました。</p><h4 id=そのほかの制約>そのほかの制約</h4><p>　NN APIでは、このほかにも<code>tf.tanh</code>など、重要な処理（と、筆者は考えている）をサポートしていなかったりします。</p><p>　ちなみに<code>tf.tanh</code>は、TensorFlow Liteそのものがサポートしていないと記述がありますが、実際にはNN APIを使わなければ動作します。</p><p>TensorFlow Lite & TensorFlow Compatibility Guide</p><p><a href=https://www.tensorflow.org/lite/tf_ops_compatibility#unsupported_operations>https://www.tensorflow.org/lite/tf_ops_compatibility#unsupported_operations</a></p><h2 id=評価>評価</h2><p><a href=https://github.com/keiji/food_gallery_with_tensorflow>food_gallery_with_tensorflow</a>で利用しているTensorFlow Liteの量子化済みモデルを、Essential PH-1、Pixel 2、Pixel 3で動作させて、実行時間を評価しました（搭載しているバージョンは3機種ともAndroid 9.0）。</p><p>　評価プログラムを次に示します。小さなモデルを使っているため、ナノ秒単位で計測しています。</p><pre><code>        val start = Debug.threadCpuTimeNanos()
         tfInference.run(inputByteBuffer, resultArray)
         val elapsed = Debug.threadCpuTimeNanos() - start
         Log.d(TAG, elapsed.toString())
-</code></pre>
-<h3 id="評価結果">評価結果</h3>
-<p>　それぞれで推論を11回実行し、初回を除いた（理由は後述）10回分の推論にかかった時間の平均を性能として表に示します。</p>
-<table>
-<thead>
-<tr>
-<th>機種名</th>
-<th>NN APIあり</th>
-<th>NN APIなし</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Essential PH-1</td>
-<td>556,323ns</td>
-<td>185,372,624ns</td>
-</tr>
-<tr>
-<td>Pixel 2</td>
-<td>450,807ns</td>
-<td>187,395,465ns</td>
-</tr>
-<tr>
-<td>Pixel 3</td>
-<td>477,489ns</td>
-<td>129,994,563ns</td>
-</tr>
-</tbody>
-</table>
-<p>　今回、量子化済みのモデルで評価した結果、NN APIを使うと実行時間が大幅に短縮されるという結果になりました。</p>
-<p>　以前、量子化をしていないTensorFlow Liteモデル（<a href="https://github.com/googlecodelabs/tensorflow-for-poets-2">TensorFlow for Poets 2</a>: Inception-v3モデル）を使ってPixel 2で計測したときは、NN APIを使うと逆に遅くなる結果を得たことがあります（<a href="https://booth.pm/ja/items/1043447">Liteな期待が重すぎる！ （茶色いトイプーは食べ物じゃないっ!?）</a>）。</p>
-<p>　今回の結果を見てしまうと、TensorFlow Liteの量子化モデル＋NN API以外の選択は考えられません。</p>
-<p>　なお、Pixel 3がPixel 2より性能が低いという結果になっていますが、実際にはそうではなく、十分な性能のGPUで小さなモデルを動かすときに性能が生かし切れないのと同様のことが起こっているのだと筆者は考えています。</p>
-<h3 id="nn-api初期化のタイミング">NN API初期化のタイミング</h3>
-<p>　NN APIを使った場合、初回の推論に時間がかかります。Essential PH-1で計測した生データを次に示します。</p>
-<pre><code>3189426
+</code></pre><h3 id=評価結果>評価結果</h3><p>　それぞれで推論を11回実行し、初回を除いた（理由は後述）10回分の推論にかかった時間の平均を性能として表に示します。</p><table><thead><tr><th>機種名</th><th>NN APIあり</th><th>NN APIなし</th></tr></thead><tbody><tr><td>Essential PH-1</td><td>556,323ns</td><td>185,372,624ns</td></tr><tr><td>Pixel 2</td><td>450,807ns</td><td>187,395,465ns</td></tr><tr><td>Pixel 3</td><td>477,489ns</td><td>129,994,563ns</td></tr></tbody></table><p>　今回、量子化済みのモデルで評価した結果、NN APIを使うと実行時間が大幅に短縮されるという結果になりました。</p><p>　以前、量子化をしていないTensorFlow Liteモデル（<a href=https://github.com/googlecodelabs/tensorflow-for-poets-2>TensorFlow for Poets 2</a>: Inception-v3モデル）を使ってPixel 2で計測したときは、NN APIを使うと逆に遅くなる結果を得たことがあります（<a href=https://booth.pm/ja/items/1043447>Liteな期待が重すぎる！ （茶色いトイプーは食べ物じゃないっ!?）</a>）。</p><p>　今回の結果を見てしまうと、TensorFlow Liteの量子化モデル＋NN API以外の選択は考えられません。</p><p>　なお、Pixel 3がPixel 2より性能が低いという結果になっていますが、実際にはそうではなく、十分な性能のGPUで小さなモデルを動かすときに性能が生かし切れないのと同様のことが起こっているのだと筆者は考えています。</p><h3 id=nn-api初期化のタイミング>NN API初期化のタイミング</h3><p>　NN APIを使った場合、初回の推論に時間がかかります。Essential PH-1で計測した生データを次に示します。</p><pre><code>3189426
 499012
 396042
 395209
@@ -441,62 +144,11 @@ E/tflite: Failed to build graph for NNAPI
 580572
 887918
 601719
-</code></pre>
-<p>　この結果から、NN APIを使う場合、モデルをロードするタイミングではなく、実際に<code>run</code>するタイミングでグラフを構築していると推測できます。</p>
-<p>　今後のバージョンアップなどで挙動が変わる可能性は多分にありますが、現時点では、ダミーデータなどを使って初回の<code>run</code>を実行しておくことで、初回の実行時間を短縮する手法が考えられるでしょう。</p>
-<h2 id="おわりに-われわれはどうすべきか">おわりに: われわれはどうすべきか</h2>
-<p>　モデルを設計して、学習プロセスを開始する前に、TensorFlow Liteの量子化モデルへの変換と、NN APIを使ったときに問題なく動作するかを確認するプロセスを設けることを強くオススメします。</p>
-<p>　学習を進めて、いざ組み込もうとしたときにいずれかの制約に引っかかれば、前処理やモデルの変更などによる学習プロセスのやり直しなど、大きな手戻りが発生したり、当初予定されていた性能（実行時間）が出ないなどの問題の引き金になる可能性があります。</p>
-<p>　パラメーターは初期値でいいのです。モデルの精度はひとまず問題ではありません。制約をクリアしているか、性能は十分に出るかの評価を優先しましょう。</p>
-<p>　そのためには今後、Androidアプリエンジニアと機械学習エンジニアは、より緊密にコミュニケーションをしていく必要があると筆者は考えています。</p>
-<hr>
-<p>　この記事は<a href="https://qiita.com/advent-calendar/2018/tensorflow">TensorFlow Advent Calendar 2018</a>の24日目の記事です。</p>
-<p>　25日目の記事は「natsutan」さんによる「<a href="http://natsutan.hatenablog.com/entry/2018/12/25/120450">GCPでTPU動かしました</a>」です。</p>
-
-
-
-      
-
-      
-    </article>
-    
-    
-      
-
-    
-  </div>
-
-    <footer>
-  
-
-<div class="social-icons">
-  
-
-  
-</div>
-
-
-  
-  <div class="container">
-    <p class="credits copyright">
-      <a href="https://blog.keiji.dev/about"></a>
-      &nbsp;&copy;
-      2024
-      
-        &nbsp;/&nbsp;
-        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
-      
-      &nbsp;&ndash;&nbsp;
-      <em class="fas fa-moon" id="dark-mode-toggle"></em>
-    </p>
-
-    <p class="credits theme-by">
-      Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
-      Theme
-      <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
-  </div>
-</footer>
-
-  </body>
-</html>
+</code></pre><p>　この結果から、NN APIを使う場合、モデルをロードするタイミングではなく、実際に<code>run</code>するタイミングでグラフを構築していると推測できます。</p><p>　今後のバージョンアップなどで挙動が変わる可能性は多分にありますが、現時点では、ダミーデータなどを使って初回の<code>run</code>を実行しておくことで、初回の実行時間を短縮する手法が考えられるでしょう。</p><h2 id=おわりに-われわれはどうすべきか>おわりに: われわれはどうすべきか</h2><p>　モデルを設計して、学習プロセスを開始する前に、TensorFlow Liteの量子化モデルへの変換と、NN APIを使ったときに問題なく動作するかを確認するプロセスを設けることを強くオススメします。</p><p>　学習を進めて、いざ組み込もうとしたときにいずれかの制約に引っかかれば、前処理やモデルの変更などによる学習プロセスのやり直しなど、大きな手戻りが発生したり、当初予定されていた性能（実行時間）が出ないなどの問題の引き金になる可能性があります。</p><p>　パラメーターは初期値でいいのです。モデルの精度はひとまず問題ではありません。制約をクリアしているか、性能は十分に出るかの評価を優先しましょう。</p><p>　そのためには今後、Androidアプリエンジニアと機械学習エンジニアは、より緊密にコミュニケーションをしていく必要があると筆者は考えています。</p><hr><p>　この記事は<a href=https://qiita.com/advent-calendar/2018/tensorflow>TensorFlow Advent Calendar 2018</a>の24日目の記事です。</p><p>　25日目の記事は「natsutan」さんによる「<a href=http://natsutan.hatenablog.com/entry/2018/12/25/120450>GCPでTPU動かしました</a>」です。</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
+2025
+&nbsp;/&nbsp;
+<a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
+&nbsp;&ndash;&nbsp;
+<em class="fas fa-moon" id=dark-mode-toggle></em></p><p class="credits theme-by">Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
+Theme
+<a href=https://github.com/matsuyoshi30/harbor>Harbor</a></p></div></footer></body></html>

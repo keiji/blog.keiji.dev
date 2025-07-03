@@ -1,194 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-<title>続: Fragment使う人に最低限、知っておいて欲しいこと</title>
-<meta name="description" 
-      content="Don&#39;t take your glasses off."
->
-
-  
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RTC3ZY943S');
-  </script>
-  
-
-
-
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link
-  rel="alternate"
-  type="application/rss+xml"
-  href="https://blog.keiji.dev/index.xml"
-  title="めがねをかけるんだ"
-/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
-
-<meta name="twitter:title" content="続: Fragment使う人に最低限、知っておいて欲しいこと"/>
-<meta name="twitter:description" content="
-「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。
-はじめに
-この記事は「みんコミ Advent Calendar」の24日目の記事です。
+<!doctype html><html lang=ja><head><meta charset=utf-8><title>続: Fragment使う人に最低限、知っておいて欲しいこと</title>
+<meta name=description content="Don't take your glasses off."><script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-RTC3ZY943S")</script><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate type=application/rss+xml href=https://blog.keiji.dev/index.xml title=めがねをかけるんだ><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.keiji.dev/images/logo.png"><meta name=twitter:title content="続: Fragment使う人に最低限、知っておいて欲しいこと"><meta name=twitter:description content=" 「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。 はじめに この記事は「みんコミ Advent Calendar」の24日目の記事です。
 「みんコミ」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
 （公開終了しています）
-［2015/12/25追記: サンプルコードのonCreateメソッド内でFragmentを初期化する処理を、Activityの再生時には実行しないように変更してあります（savedInstanceStateで判定）］"/>
-
-
-
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-
-
-
-<link
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/styles.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-
-<link
-  id="dark-mode-theme"
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/dark.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-<script>
-  var darkTheme = document.getElementById('dark-mode-theme')
-  var storedTheme = localStorage.getItem('dark-mode-storage')
-
-  if (storedTheme === 'dark') {
-    darkTheme.disabled = false
-  } else if (storedTheme === 'light') {
-    darkTheme.disabled = true
-  }
-</script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
-  </head>
-  <body>
-    
-  
-
-
-
-
-  <header>
-    <nav class="navbar">
-  <div class="nav">
-    
-      <a href="https://blog.keiji.dev/" class="nav-logo">
-        <img
-          src="https://blog.keiji.dev/images/logo.png"
-          width=""
-          height=""
-          alt="Logo"
-        />
-      </a>
-    
-
-    <ul class="nav-links">
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/profile/" id="Profile"
-              ><em class="fas fa-user fa-lg"></em
-            ></a>
-          </li>
-          
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
-              ><em class="fab fa-osi fa-lg"></em
-            ></a>
-          </li>
-          
-      
-    </ul>
-  </div>
-</nav>
-
-    <div class="intro-header">
-      <div class="container">
-        <div class="post-heading">
-          
-            <h1>
-              続: Fragment使う人に最低限、知っておいて欲しいこと
-            </h1>
-          
-          
-            <span class="meta-post">
-  <em class="fa fa-calendar-alt"></em
-  >&nbsp;2015-12-23
-  
-    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/android/"
-        >Android</a
-      >&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/"
-        >みんコミ Advent Calendar</a
-      >&nbsp;
-    
-  
-</span>
-
-          
-        </div>
-      </div>
-    </div>
-  </header>
-  
-
-    
-  <div class="container" role="main">
-    <article class="article" class="blog-post">
-      
-  <hr>
-<h2 id="みんなのコミックは2018年10月31日を持ちまして更新を終了いたしましたhttpstwittercommincomi_jpstatus1057847395889737730"><strong><a href="https://twitter.com/mincomi_jp/status/1057847395889737730">「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。</a></strong></h2>
-<h2 id="はじめに">はじめに</h2>
-<p>この記事は「<a href="http://qiita.com/advent-calendar/2015/mincomi">みんコミ Advent Calendar</a>」の24日目の記事です。</p>
-<p>「<a href="https://www.mincomi.jp">みんコミ</a>」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。</p>
-<p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" /></a>（公開終了しています）</p>
-<p>［2015/12/25追記: サンプルコードのonCreateメソッド内でFragmentを初期化する処理を、Activityの再生時には実行しないように変更してあります（<code>savedInstanceState</code>で判定）］</p>
-<hr>
-<p>現在の「みんコミ」アプリでは画面の遷移には<code>Acrivity</code>が使われていて、<code>Fragment</code>は使われていない様子です。</p>
-<p>昨日<a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-23.html">みんコミに遊びに行った</a>ときに聞いた限りでは、画面の遷移を<code>Fragment</code>も使うように切り替えようとしている様子でした。</p>
-<p>試しに下タブバージョンのUIをFragmentの切り替えができるようにしたサンプルコード（MainActivity）を<a href="https://github.com/keiji/adventcalendar_2015_mincomi">GitHub</a>作ったので置いておきます。</p>
-<p><a href="https://github.com/keiji/adventcalendar_2015_mincomi">https://github.com/keiji/adventcalendar_2015_mincomi</a></p>
-<p>作ってみた感想として、ランキング画面の下タブと上タブが同時に現れる部分が少しややこしい印象でした（動画です）。</p>
-<div style="width: 360px;" class="wp-video">
-  <video class="wp-video-shortcode" id="video-1068-3" width="360" height="640" preload="metadata" controls="controls"><source type="video/mp4" src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-23-230647.mp4?_=3" /><a href="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-23-230647.mp4">https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-23-230647.mp4</a></video>
-</div>
-<p>スクロール量に応じてToolbar周りを調整するにはNestedScrollViewに入れなければなりませんが、そのままではViewPagerの高さが0になって、きちんと操作できません。</p>
-<p>NestedScrollViewに<code>android:fillViewport=&quot;true&quot;</code>を設定することで、期待通りに動くようになりました。</p>
-<pre><code class="xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+［2015/12/25追記: サンプルコードのonCreateメソッド内でFragmentを初期化する処理を、Activityの再生時には実行しないように変更してあります（savedInstanceStateで判定）］"><link rel=stylesheet href=https://blog.keiji.dev/fontawesome/css/all.min.css><link crossorigin=anonymous href=https://blog.keiji.dev/css/styles.min.css integrity rel="preload stylesheet" as=style><link rel=stylesheet href=https://blog.keiji.dev/css/default.css><link id=dark-mode-theme crossorigin=anonymous href=https://blog.keiji.dev/css/dark.min.css integrity rel="preload stylesheet" as=style><script>var darkTheme=document.getElementById("dark-mode-theme"),storedTheme=localStorage.getItem("dark-mode-storage");storedTheme==="dark"?darkTheme.disabled=!1:storedTheme==="light"&&(darkTheme.disabled=!0)</script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/theme.js integrity></script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/instantpage.min.js integrity></script><meta name=generator content="Hugo 0.133.0"></head><body><header><nav class=navbar><div class=nav><a href=https://blog.keiji.dev/ class=nav-logo><img src=https://blog.keiji.dev/images/logo.png width height alt=Logo></a><ul class=nav-links><li><a href=https://blog.keiji.dev/profile/ id=Profile><em class="fas fa-user fa-lg"></em></a></li><li><a href=https://blog.keiji.dev/licenses/ id=Licenses><em class="fab fa-osi fa-lg"></em></a></li></ul></div></nav><div class=intro-header><div class=container><div class=post-heading><h1>続: Fragment使う人に最低限、知っておいて欲しいこと</h1><span class=meta-post><em class="fa fa-calendar-alt"></em>&nbsp;2015-12-23
+&nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
+<a href=https://blog.keiji.dev/categories/android/>Android</a>&nbsp;
+<a href=https://blog.keiji.dev/categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/>みんコミ Advent Calendar</a>&nbsp;</span></div></div></div></header><div class=container role=main><article class=article class=blog-post><hr><h2 id=みんなのコミックは2018年10月31日を持ちまして更新を終了いたしましたhttpstwittercommincomi_jpstatus1057847395889737730><strong><a href=https://twitter.com/mincomi_jp/status/1057847395889737730>「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。</a></strong></h2><h2 id=はじめに>はじめに</h2><p>この記事は「<a href=http://qiita.com/advent-calendar/2015/mincomi>みんコミ Advent Calendar</a>」の24日目の記事です。</p><p>「<a href=https://www.mincomi.jp>みんコミ</a>」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。</p><p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src=https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png alt=en_generic_rgb_wo_60 width=172 height=60 class="aligncenter size-full wp-image-672"></a>（公開終了しています）</p><p>［2015/12/25追記: サンプルコードのonCreateメソッド内でFragmentを初期化する処理を、Activityの再生時には実行しないように変更してあります（<code>savedInstanceState</code>で判定）］</p><hr><p>現在の「みんコミ」アプリでは画面の遷移には<code>Acrivity</code>が使われていて、<code>Fragment</code>は使われていない様子です。</p><p>昨日<a href=https://blog.keiji.dev/2015/12/mincomi-adventcalendar-23.html>みんコミに遊びに行った</a>ときに聞いた限りでは、画面の遷移を<code>Fragment</code>も使うように切り替えようとしている様子でした。</p><p>試しに下タブバージョンのUIをFragmentの切り替えができるようにしたサンプルコード（MainActivity）を<a href=https://github.com/keiji/adventcalendar_2015_mincomi>GitHub</a>作ったので置いておきます。</p><p><a href=https://github.com/keiji/adventcalendar_2015_mincomi>https://github.com/keiji/adventcalendar_2015_mincomi</a></p><p>作ってみた感想として、ランキング画面の下タブと上タブが同時に現れる部分が少しややこしい印象でした（動画です）。</p><div style=width:360px class=wp-video><video class=wp-video-shortcode id=video-1068-3 width=360 height=640 preload=metadata controls><source type=video/mp4 src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-23-230647.mp4?_=3"><a href=https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-23-230647.mp4>https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-23-230647.mp4</a></video></div><p>スクロール量に応じてToolbar周りを調整するにはNestedScrollViewに入れなければなりませんが、そのままではViewPagerの高さが0になって、きちんと操作できません。</p><p>NestedScrollViewに<code>android:fillViewport="true"</code>を設定することで、期待通りに動くようになりました。</p><pre><code class=xml>&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;android.support.v4.widget.NestedScrollView
     android:id="@+id/scroll_view"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -214,40 +31,9 @@
     &lt;/RelativeLayout&gt;
 
 &lt;/android.support.v4.widget.NestedScrollView&gt;
-</code></pre>
-<p>あと、下タブにしているとやはりViewPagerを使った作品バナーはホーム画面だけでいいですね……すべてのページ表示されているのは、自分で作っておいて「やり過ぎだな」と思いました……</p>
-<hr>
-<p>さて、Fragmentと聞いて思い出すのがこの記事です。</p>
-<p><a href="https://blog.keiji.dev/2014/02/about_fragment.html">Fragment使う人に最低限、知っておいて欲しいこと</a></p>
-<p>2014年の2月、ぼくはこんなタイトルのブログ記事をアップしました。</p>
-<p>この記事はいまだにアクセス数が多く、検索で「Fragment 使い方」でたどり着く人が多いようです。</p>
-<p><strong>実に申し訳ない限りです。</strong></p>
-<p>記事の内容は不十分で、また今はもう古くなっている部分があります。</p>
-<p>あれから1年と10ヶ月が経ち、現在ぼくがFragmentを使うときに気をつけていることーー「Fragment使う人に最低限、知っておいて欲しいこと」についてまとめていきます。</p>
-<h2 id="fragmentを呼び出しているactivity固有のメソッドメンバ変数を参照してはいけない">Fragmentを呼び出しているActivity固有のメソッド・メンバ変数を参照してはいけない</h2>
-<p>これは今でも重要です。</p>
-<p>呼び出し元を型チェックも無しにキャストしていたら別のActivityで使うことができません。</p>
-<p>呼び出し元をキャストしてメソッドを呼び出すのではなく、面倒でもCallbackを経由してActivity側とのやりとりをしましょう。</p>
-<p>ListenerやCallbackを見れば、そのFragmentがどんな情報をやり取りするのかわかるようにすると、後々の可読性も上がるというのも、今でも使えるTipsです。</p>
-<h2 id="listenercallbackの設定タイミング">Listener/Callbackの設定タイミング</h2>
-<p>Listener/Callbackは、必ず<code>Fragment#onAttach</code>内で設定して下さい。</p>
-<pre><code>Listenerの設定は、Fragment#onAttach(Activity activity)内でactivityをinstanceofし、Listenerが実装されている事が確認されたタイミングがベストです。
+</code></pre><p>あと、下タブにしているとやはりViewPagerを使った作品バナーはホーム画面だけでいいですね……すべてのページ表示されているのは、自分で作っておいて「やり過ぎだな」と思いました……</p><hr><p>さて、Fragmentと聞いて思い出すのがこの記事です。</p><p><a href=https://blog.keiji.dev/2014/02/about_fragment.html>Fragment使う人に最低限、知っておいて欲しいこと</a></p><p>2014年の2月、ぼくはこんなタイトルのブログ記事をアップしました。</p><p>この記事はいまだにアクセス数が多く、検索で「Fragment 使い方」でたどり着く人が多いようです。</p><p><strong>実に申し訳ない限りです。</strong></p><p>記事の内容は不十分で、また今はもう古くなっている部分があります。</p><p>あれから1年と10ヶ月が経ち、現在ぼくがFragmentを使うときに気をつけていることーー「Fragment使う人に最低限、知っておいて欲しいこと」についてまとめていきます。</p><h2 id=fragmentを呼び出しているactivity固有のメソッドメンバ変数を参照してはいけない>Fragmentを呼び出しているActivity固有のメソッド・メンバ変数を参照してはいけない</h2><p>これは今でも重要です。</p><p>呼び出し元を型チェックも無しにキャストしていたら別のActivityで使うことができません。</p><p>呼び出し元をキャストしてメソッドを呼び出すのではなく、面倒でもCallbackを経由してActivity側とのやりとりをしましょう。</p><p>ListenerやCallbackを見れば、そのFragmentがどんな情報をやり取りするのかわかるようにすると、後々の可読性も上がるというのも、今でも使えるTipsです。</p><h2 id=listenercallbackの設定タイミング>Listener/Callbackの設定タイミング</h2><p>Listener/Callbackは、必ず<code>Fragment#onAttach</code>内で設定して下さい。</p><pre><code>Listenerの設定は、Fragment#onAttach(Activity activity)内でactivityをinstanceofし、Listenerが実装されている事が確認されたタイミングがベストです。
 FragmentをロードするActivityから明示的に`setListener`をすることも出来ますが、その場合、Fragmentのライフサイクル、再生成時の挙動には注意してください。再生成時に確実にsetListenerが実行されるようにしなければ、イベントをActivityで受けることが出来ません。
-</code></pre>
-<p>以前はこう書きましたが、<code>setListener</code>のようなメソッドでActivity側から設定しようにも、onAttachと同等のタイミングに該当するライフサイクル・メソッドが存在しません。</p>
-<p>Listener/CallbackはActivityからではなく、Fragment側で受け取るようにして下さい。</p>
-<h3 id="onattachactivity--onattachcontext">onAttach(Activity) → onAttach(Context)</h3>
-<p>以前、FragmentがActivityにattachされるタイミングは<code>onAttach(Activity activity)</code>でしたが、これは<code>onAttach(Context context)</code>に変更になりました（正確には<code>onAttach(Activity activity)</code>はdeprecated-非推奨になりました）。</p>
-<p><code>onAttach(Context context)</code>をオーバーライドしてください。</p>
-<h3 id="support-libraryのfragmentを使う">Support LibraryのFragmentを使う</h3>
-<p>「onAttach(Context context)をオーバーライドしてください」と言ったものの、実は、プラットフォームに組み込まれているFragment（android.app.Fragment）で<code>onAttach(Context context)</code>が使えるのはAPI Level 23からです。</p>
-<p>API Level 22（Lollipop）以前では、これまで通り<code>onAttach(Activity activity)</code>を使う必要があります。</p>
-<p>このようなバージョンの違いを意識してコードを書くのは面倒なので、僕はよほど必要に迫られない限り、Support Libraryに含まれるFragment（<code>android.support.v4.app.Fragment</code>）を使っています。</p>
-<p>Support LibraryのFragmentは、プラットフォームのバージョンアップに合わせて更新されているので、API Level 22以前でも<code>onAttach(Context context)</code>を使うように統一できます。</p>
-<h2 id="fragmentのインスタンス生成はクラスメソッドに任せるのがおすすめ">Fragmentのインスタンス生成はクラスメソッドに任せるのがおすすめ</h2>
-<p>Activity同様、Fragmentも再生成される場合があります。</p>
-<p>再生成時には引数無しのコンストラクタが使われます。引数無しのコンストラクタを用意していなかっったり、Fragmentのパラメーターをコンストラクタの引数を使って与えているとエラーが発生する可能性があります。</p>
-<pre><code class="java">public class HomeFragment extends Fragment {
+</code></pre><p>以前はこう書きましたが、<code>setListener</code>のようなメソッドでActivity側から設定しようにも、onAttachと同等のタイミングに該当するライフサイクル・メソッドが存在しません。</p><p>Listener/CallbackはActivityからではなく、Fragment側で受け取るようにして下さい。</p><h3 id=onattachactivity--onattachcontext>onAttach(Activity) → onAttach(Context)</h3><p>以前、FragmentがActivityにattachされるタイミングは<code>onAttach(Activity activity)</code>でしたが、これは<code>onAttach(Context context)</code>に変更になりました（正確には<code>onAttach(Activity activity)</code>はdeprecated-非推奨になりました）。</p><p><code>onAttach(Context context)</code>をオーバーライドしてください。</p><h3 id=support-libraryのfragmentを使う>Support LibraryのFragmentを使う</h3><p>「onAttach(Context context)をオーバーライドしてください」と言ったものの、実は、プラットフォームに組み込まれているFragment（android.app.Fragment）で<code>onAttach(Context context)</code>が使えるのはAPI Level 23からです。</p><p>API Level 22（Lollipop）以前では、これまで通り<code>onAttach(Activity activity)</code>を使う必要があります。</p><p>このようなバージョンの違いを意識してコードを書くのは面倒なので、僕はよほど必要に迫られない限り、Support Libraryに含まれるFragment（<code>android.support.v4.app.Fragment</code>）を使っています。</p><p>Support LibraryのFragmentは、プラットフォームのバージョンアップに合わせて更新されているので、API Level 22以前でも<code>onAttach(Context context)</code>を使うように統一できます。</p><h2 id=fragmentのインスタンス生成はクラスメソッドに任せるのがおすすめ>Fragmentのインスタンス生成はクラスメソッドに任せるのがおすすめ</h2><p>Activity同様、Fragmentも再生成される場合があります。</p><p>再生成時には引数無しのコンストラクタが使われます。引数無しのコンストラクタを用意していなかっったり、Fragmentのパラメーターをコンストラクタの引数を使って与えているとエラーが発生する可能性があります。</p><pre><code class=java>public class HomeFragment extends Fragment {
 
     private int mProgress;
 
@@ -258,9 +44,7 @@ FragmentをロードするActivityから明示的に`setListener`をすること
 
     // 引数のない空のコンストラクタがない
 }
-</code></pre>
-<p>僕は、Fragmentのインスタンス生成はActivityで行わず、それぞれのFragmentに<code>newInstance</code>メソッドを用意して、そちらに任せるようにしています。</p>
-<pre><code class="java">&lt;br />public class HomeFragment extends Fragment {
+</code></pre><p>僕は、Fragmentのインスタンス生成はActivityで行わず、それぞれのFragmentに<code>newInstance</code>メソッドを用意して、そちらに任せるようにしています。</p><pre><code class=java>&lt;br />public class HomeFragment extends Fragment {
     private static final String KEY_DEFAULT_PROGRESS = "key_default_progress";
 
     public static HomeFragment newInstance(int progress) {
@@ -290,102 +74,14 @@ FragmentをロードするActivityから明示的に`setListener`をすること
         return view;
     }
 }
-</code></pre>
-<p><code>Bundle</code>にパラメーターを設定して、<code>setArguments</code>で設定しておくと、Fragmentの再生成時にパラメータを確実に渡すことができます。</p>
-<p>もちろん<code>Bundle</code>を使ったパラメーターの受け渡しは、Activityなど外側のクラスからもできます。しかし、内部（この場合<code>onCreateView</code>）でどのようなキーやパラメーターの型を意識する必要があります。</p>
-<p><code>newInstance</code>メソッドを用意すれば、引数の型に合った値を設定するだけで、キーに指定するについては意識する必要がないというメリットがあります（オプショナルなパラメーターについてもメソッドのオーバーロードで対応可能です）。</p>
-<hr>
-<p>あらためて、Fragmentのサンプル（MainActivity）を含めたコードを<a href="https://github.com/keiji/adventcalendar_2015_mincomi">GitHub</a>に置いておきます。参考になれば幸いです。</p>
-<p><a href="https://github.com/keiji/adventcalendar_2015_mincomi">https://github.com/keiji/adventcalendar_2015_mincomi</a></p>
-<hr>
-<pre><code>「有山圭二」は「みんなのコミック」及び運営の「株式会社イーブックイニシアティブジャパン」とは一切関係がありません。
+</code></pre><p><code>Bundle</code>にパラメーターを設定して、<code>setArguments</code>で設定しておくと、Fragmentの再生成時にパラメータを確実に渡すことができます。</p><p>もちろん<code>Bundle</code>を使ったパラメーターの受け渡しは、Activityなど外側のクラスからもできます。しかし、内部（この場合<code>onCreateView</code>）でどのようなキーやパラメーターの型を意識する必要があります。</p><p><code>newInstance</code>メソッドを用意すれば、引数の型に合った値を設定するだけで、キーに指定するについては意識する必要がないというメリットがあります（オプショナルなパラメーターについてもメソッドのオーバーロードで対応可能です）。</p><hr><p>あらためて、Fragmentのサンプル（MainActivity）を含めたコードを<a href=https://github.com/keiji/adventcalendar_2015_mincomi>GitHub</a>に置いておきます。参考になれば幸いです。</p><p><a href=https://github.com/keiji/adventcalendar_2015_mincomi>https://github.com/keiji/adventcalendar_2015_mincomi</a></p><hr><pre><code>「有山圭二」は「みんなのコミック」及び運営の「株式会社イーブックイニシアティブジャパン」とは一切関係がありません。
 また、本アドベントカレンダーの内容はあくまで参加者個人の見解です。
 「みんなのコミック」の評価を目的とするものではありませんので、ご了承下さい。
-</code></pre>
-<hr>
-<p><a href="https://www.mincomi.jp">みんコミ</a>には、僕が普段からお世話になっている根雪れい（@neyuki_rei）さんも連載していますね！</p>
-<blockquote class="twitter-tweet" lang="en">
-  <p lang="ja" dir="ltr">
-    おかあさん(10)と僕。という10歳のおかあさんマンガが2話まで読めますよー…読んでくださいませ～　<a href="https://t.co/UfxCfaOYRZ">https://t.co/UfxCfaOYRZ</a> <a href="https://t.co/M7ioKciVZX">pic.twitter.com/M7ioKciVZX</a>
-  </p>
-  <p>
-    &mdash; 根雪れい.おかあさん(10)と僕。連載中 (@neyuki_rei) <a href="https://twitter.com/neyuki_rei/status/678186480552968192">December 19, 2015</a>
-  </p>
-</blockquote>
-<p>根雪さんには、<a href="https://blog.keiji.dev/2015/12/c89.html">コミックマーケット89で頒布する冊子</a>の表紙絵を描いてもらっていますが、次の話は残念ながら来年になるので(ry</p>
-<blockquote class="twitter-tweet" lang="en">
-  <p lang="ja" dir="ltr">
-    【みんコミ連載紹介】若杉佳さんが連載する『まりもな日々』の舞台はなんと女子寮！かわいくてまったりな時間が流れる女子寮ライフを描きます♡　<a href="https://t.co/gKio9ShKkE">https://t.co/gKio9ShKkE</a> <a href="https://t.co/SBV5HQhaFG">pic.twitter.com/SBV5HQhaFG</a>
-  </p>
-  <p>
-    &mdash; みんなのコミック（みんコミ） (@mincomi_jp) <a href="https://twitter.com/mincomi_jp/status/656289783128322048">October 20, 2015</a>
-  </p>
-</blockquote>
-<p>古いアパート「よつば荘」の新しい入居者「まりも」を待っていたのは、個性溢れる４人の女の子たち。これから楽しい生活が始まると思いきや、実はアパートには大きな秘密があって……</p>
-<p>どんな秘密かは、是非作品を見ていただきたいのですが</p>
-<blockquote class="twitter-tweet" lang="en">
-  <p lang="ja" dir="ltr">
-    【本日更新！】若杉佳先生の『まりもな日々』2話更新しました！幽霊が出ないように自力でアパートをなんとかしようとするまりも。でも個性的な住人たちに翻弄されてしまい… <a href="https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F?src=hash">#みんコミ</a> <a href="https://t.co/vDUre3GjjA">https://t.co/vDUre3GjjA</a> <a href="https://t.co/TqIgPk6DZ8">pic.twitter.com/TqIgPk6DZ8</a>
-  </p>
-  <p>
-    &mdash; みんなのコミック（みんコミ） (@mincomi_jp) <a href="https://twitter.com/mincomi_jp/status/676571780425756674">December 15, 2015</a>
-  </p>
-</blockquote>
-<p>……。</p>
-<p>気を取り直していきましょう。</p>
-<p>他作品に比べて登場人物が格段に多いのが特徴です。</p>
-<p>主人公の「まりも」に入居者４人の総勢５人、人間じゃないのを入れると６人です。</p>
-<p>この人数を取り回すのは相当大変だと思いますが、一話からきちんと個性や人間関係を伝えられているのはすごいですね。</p>
-<p>残念ながら眼鏡っ娘の存在は確認できていませんが……今後が楽しみな作品です！</p>
-<hr>
-<p>それでは明日25日の担当は、１年前の自分のコードや設計を見ると、酷すぎて思わず焼き捨てたくなってしまう「有山圭二」さんです。</p>
-<p>次で最後です。</p>
-<p>よろしくお願いします。</p>
-
-
-
-      
-
-      
-    </article>
-    
-    
-      
-
-    
-  </div>
-
-    <footer>
-  
-
-<div class="social-icons">
-  
-
-  
-</div>
-
-
-  
-  <div class="container">
-    <p class="credits copyright">
-      <a href="https://blog.keiji.dev/about"></a>
-      &nbsp;&copy;
-      2024
-      
-        &nbsp;/&nbsp;
-        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
-      
-      &nbsp;&ndash;&nbsp;
-      <em class="fas fa-moon" id="dark-mode-toggle"></em>
-    </p>
-
-    <p class="credits theme-by">
-      Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
-      Theme
-      <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
-  </div>
-</footer>
-
-  </body>
-</html>
+</code></pre><hr><p><a href=https://www.mincomi.jp>みんコミ</a>には、僕が普段からお世話になっている根雪れい（@neyuki_rei）さんも連載していますね！</p><blockquote class=twitter-tweet lang=en><p lang=ja dir=ltr>おかあさん(10)と僕。という10歳のおかあさんマンガが2話まで読めますよー…読んでくださいませ～　<a href=https://t.co/UfxCfaOYRZ>https://t.co/UfxCfaOYRZ</a> <a href=https://t.co/M7ioKciVZX>pic.twitter.com/M7ioKciVZX</a></p><p>&mdash; 根雪れい.おかあさん(10)と僕。連載中 (@neyuki_rei) <a href=https://twitter.com/neyuki_rei/status/678186480552968192>December 19, 2015</a></p></blockquote><p>根雪さんには、<a href=https://blog.keiji.dev/2015/12/c89.html>コミックマーケット89で頒布する冊子</a>の表紙絵を描いてもらっていますが、次の話は残念ながら来年になるので(ry</p><blockquote class=twitter-tweet lang=en><p lang=ja dir=ltr>【みんコミ連載紹介】若杉佳さんが連載する『まりもな日々』の舞台はなんと女子寮！かわいくてまったりな時間が流れる女子寮ライフを描きます♡　<a href=https://t.co/gKio9ShKkE>https://t.co/gKio9ShKkE</a> <a href=https://t.co/SBV5HQhaFG>pic.twitter.com/SBV5HQhaFG</a></p><p>&mdash; みんなのコミック（みんコミ） (@mincomi_jp) <a href=https://twitter.com/mincomi_jp/status/656289783128322048>October 20, 2015</a></p></blockquote><p>古いアパート「よつば荘」の新しい入居者「まりも」を待っていたのは、個性溢れる４人の女の子たち。これから楽しい生活が始まると思いきや、実はアパートには大きな秘密があって……</p><p>どんな秘密かは、是非作品を見ていただきたいのですが</p><blockquote class=twitter-tweet lang=en><p lang=ja dir=ltr>【本日更新！】若杉佳先生の『まりもな日々』2話更新しました！幽霊が出ないように自力でアパートをなんとかしようとするまりも。でも個性的な住人たちに翻弄されてしまい… <a href="https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F?src=hash">#みんコミ</a> <a href=https://t.co/vDUre3GjjA>https://t.co/vDUre3GjjA</a> <a href=https://t.co/TqIgPk6DZ8>pic.twitter.com/TqIgPk6DZ8</a></p><p>&mdash; みんなのコミック（みんコミ） (@mincomi_jp) <a href=https://twitter.com/mincomi_jp/status/676571780425756674>December 15, 2015</a></p></blockquote><p>……。</p><p>気を取り直していきましょう。</p><p>他作品に比べて登場人物が格段に多いのが特徴です。</p><p>主人公の「まりも」に入居者４人の総勢５人、人間じゃないのを入れると６人です。</p><p>この人数を取り回すのは相当大変だと思いますが、一話からきちんと個性や人間関係を伝えられているのはすごいですね。</p><p>残念ながら眼鏡っ娘の存在は確認できていませんが……今後が楽しみな作品です！</p><hr><p>それでは明日25日の担当は、１年前の自分のコードや設計を見ると、酷すぎて思わず焼き捨てたくなってしまう「有山圭二」さんです。</p><p>次で最後です。</p><p>よろしくお願いします。</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
+2025
+&nbsp;/&nbsp;
+<a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
+&nbsp;&ndash;&nbsp;
+<em class="fas fa-moon" id=dark-mode-toggle></em></p><p class="credits theme-by">Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
+Theme
+<a href=https://github.com/matsuyoshi30/harbor>Harbor</a></p></div></footer></body></html>

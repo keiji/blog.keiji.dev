@@ -1,217 +1,125 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>DE0 on めがねをかけるんだ</title>
-		<link>https://blog.keiji.dev/categories/de0/</link>
-		<description>Recent content in DE0 </description>
-		<generator>Hugo -- gohugo.io</generator>
-		
-  		<language>ja</language>
-		
-		<managingEditor>Page(/categories/de0)</managingEditor>
-    	
-  		<lastBuildDate>Tue, 22 Jan 2013 16:31:00 +0000</lastBuildDate>
-		
-		<atom:link href="/categories/de0/" rel="self" type="application/rss+xml" />
-		
-		<item>
-			<title>5年ぶりのGoogle I/O参加でいろいろ準備した話</title>
-			<link>https://blog.keiji.dev/2024/06/googleio.html</link>
-			<pubDate>Sun, 02 Jun 2024 12:00:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2024/06/googleio.html</guid>
-			<description>&lt;p&gt;&lt;img src=&#34;https://blog.keiji.dev/images/googleio2024/io.jpg&#34; alt=&#34;Google I/O 2024&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;tldr&#34;&gt;TL;DR&lt;/h2&gt;
-&lt;p&gt;6月15日（土）のDroidKaigi.collect { #9@Osaka }において、10分間のLT枠で発表予定です。Google I/Oの話もするので、興味がある方はぜひ参加してください（プログラムは変更する可能性があります）。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;DroidKaigi.collect { #9@Osaka }
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://droidkaigi.connpass.com/event/318456/&#34;&gt;https://droidkaigi.connpass.com/event/318456/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</description>
-		</item>
-      	
-		<item>
-			<title>Studio Bot用の .aiexclude ファイルを作った話</title>
-			<link>https://blog.keiji.dev/2024/03/create_aiexclude_file.html</link>
-			<pubDate>Tue, 12 Mar 2024 19:00:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2024/03/create_aiexclude_file.html</guid>
-			<description>要約 Studio Botを完全に有効にしたAndroid Studioでプロジェクトを読み込むと、プロジェクトの内容が外部に送信される可能性があります。 .</description>
-		</item>
-      	
-		<item>
-			<title>年末年始でホールケーキを食べた</title>
-			<link>https://blog.keiji.dev/2024/01/food_review.html</link>
-			<pubDate>Mon, 08 Jan 2024 15:00:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2024/01/food_review.html</guid>
-			<description>&lt;p&gt;令和6年能登半島地震により、犠牲となられた方々の御冥福をお祈りするとともに、被害を受けられた皆様の安全と1日でも早く平穏な生活に戻られますことを心よりお祈り申し上げます。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;
-&lt;p&gt;長期休暇の期間には、家族が妻の実家に帰省して、ぼくは自宅で一人になります。
-その間、近所の洋菓子店でケーキをホールで買って、それを食べながら過ごします。&lt;/p&gt;
-&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;ja&#34; dir=&#34;ltr&#34;&gt;大晦日なので、ちょっと贅沢をしながら好きにコードを書きます。&lt;a href=&#34;https://t.co/JEHGY5AWqf&#34;&gt;https://t.co/JEHGY5AWqf&lt;/a&gt; &lt;a href=&#34;https://t.co/oPUGrCAPW0&#34;&gt;pic.twitter.com/oPUGrCAPW0&lt;/a&gt;&lt;/p&gt;&amp;mdash; Keiji / parody (@keiji_ariyama) &lt;a href=&#34;https://twitter.com/keiji_ariyama/status/1476886691717988352?ref_src=twsrc%5Etfw&#34;&gt;December 31, 2021&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
-&lt;p&gt;昨年末も実家に帰る予定になっていたので、ケーキを食べるのを楽しみにしていました。&lt;/p&gt;
-&lt;p&gt;いつもと違うのは、お目当てのケーキを注文したことです。例年はお店に立ち寄ったときにホールで販売されているものを買い求めるので、チーズケーキだったりガトーショコラだったりと、いわゆる定番商品でしたが、今回は事前に作ってほしいケーキをお店の人に伝えました。&lt;/p&gt;
-&lt;p&gt;注文ケーキと言うと生クリームやフルーツで豪華にデコレーションされた誕生日ケーキのようなものを想像するかも知れません。
-しかし、ぼくの目当ては違いました。その洋菓子店には、ぼくが「幻のケーキ」と呼んでいるものがあります。&lt;/p&gt;</description>
-		</item>
-      	
-		<item>
-			<title>AndroidKeyStoreがEd25519に（サイレントで）対応していた件</title>
-			<link>https://blog.keiji.dev/2023/11/techbookfest15.html</link>
-			<pubDate>Sat, 11 Nov 2023 19:00:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2023/11/techbookfest15.html</guid>
-			<description>&lt;p&gt;訂正
-記事の公開当初、&amp;ldquo;Ed25519対応はAndroid 12以降に含まれる&amp;quot;と記述していましたが、正しくは&amp;quot;Ed25519対応はAndroid 13以降に含まれる&amp;quot;です。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;AndroidKeyStoreEdECPublicKey.java&lt;/code&gt;は、Android 12のリリースブランチには存在せず、Android 13のリリースブランチから存在しています。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java&#34;&gt;https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://cs.android.com/android/platform/superproject/+/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java&#34;&gt;https://cs.android.com/android/platform/superproject/+/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;まずは宣伝です。&lt;/p&gt;
-&lt;p&gt;11月12日（日）、池袋サンシャインシティにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf15&#34;&gt;技術書典15&lt;/a&gt;」に、サークル「&lt;a href=&#34;https://techbookfest.org/organization/5173176170446848&#34;&gt;めがねをかけるんだ&lt;/a&gt;」として参加させていただくことになりました。&lt;/p&gt;
-&lt;p&gt;サークル配置は「さ17」。&lt;/p&gt;
-&lt;p&gt;新刊は「AndroidKeyStoreと過ごした400日」です。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;AndroidKeyStoreと過ごした400日&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;B5&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;32p（電子版）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;500円（会場価格）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;本文サンプルおよび電子版販売ページは&lt;a href=&#34;https://techbookfest.org/product/cUVLF5TvwkhQU2t4K72RVj&#34;&gt;こちら&lt;/a&gt;&lt;/p&gt;</description>
-		</item>
-      	
-		<item>
-			<title>git push --forceで履歴は消えないと言う話</title>
-			<link>https://blog.keiji.dev/2023/06/git_push_force_do_not_delete_commit.html</link>
-			<pubDate>Thu, 15 Jun 2023 15:45:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2023/06/git_push_force_do_not_delete_commit.html</guid>
-			<description>&lt;p&gt;　GitのForce push（&lt;code&gt;git push --force&lt;/code&gt;）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
-筆者も過去に一度だけmasterブランチに向けてForce pushをしてしまい、平謝りをした経験があります。&lt;/p&gt;
-&lt;p&gt;　一方、最近知ったのですが、Gitリポジトリに本来入れてはいけない情報を入れたときの対応策としてForce pushすれば履歴は消えると考えている人もいるようです。&lt;/p&gt;
-&lt;p&gt;　これについては、言葉で説明するよりやってみた方が早そうなので、実際に試してた結果を共有します。
-もしお近くで「Force pushで消える、いや消えない」と言った議論を聞いたときには、そっとこの記事と、次の記事を見せてあげてください。&lt;/p&gt;
-&lt;p&gt;GitHub上のsensitive dataを削除するための手順と道のり - Merpay Advent Calendar 2021
-&lt;a href=&#34;https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/&#34;&gt;https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;　また、この記事について誤りや修正すべき点などがあれば、是非ご指摘いただければと思います。
-最近はBlueskyにいます（Twitterはやっていません）。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://staging.bsky.app/profile/keiji.bsky.social&#34;&gt;https://staging.bsky.app/profile/keiji.bsky.social&lt;/a&gt;&lt;/p&gt;</description>
-		</item>
-      	
-		<item>
-			<title>ThinkPadのスリープが2度目から失敗するようになった</title>
-			<link>https://blog.keiji.dev/2023/04/thinkpad_not_wake_up_after_second_suspend.html</link>
-			<pubDate>Sun, 02 Apr 2023 16:00:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2023/04/thinkpad_not_wake_up_after_second_suspend.html</guid>
-			<description>2023年3月31日付けで、厚生労働省の技術参与を辞任しました。 COCOAも正式に終了して、これ以上することもありません（GitHubへの書</description>
-		</item>
-      	
-		<item>
-			<title>技術書典13で「コロナ禍のめがねをかけるんだ」を頒布します</title>
-			<link>https://blog.keiji.dev/2022/09/techbookfest13.html</link>
-			<pubDate>Sat, 10 Sep 2022 10:00:10 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2022/09/techbookfest13.html</guid>
-			<description>&lt;p&gt;　9月11日（日）、池袋サンシャインシティにて開催される「&lt;a href=&#34;https://techbookfest.org/event/tbf13&#34;&gt;技術書典13&lt;/a&gt;」に、サークル「&lt;a href=&#34;https://techbookfest.org/organization/5173176170446848&#34;&gt;めがねをかけるんだ&lt;/a&gt;」として参加させていただくことになりました。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;タイトル&lt;/th&gt;
-&lt;th style=&#34;text-align:left&#34;&gt;コロナ禍のめがねをかけるんだ&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;判型&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;B5&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;ページ数&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;16p（本文墨刷）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;頒布価格&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;300円（会場価格）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;発行&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;個人サークル「めがねをかけるんだ」&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;目次&#34;&gt;目次&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;はじめに&lt;/li&gt;
-&lt;li&gt;Gitのコミットに署名を付けるようになった話&lt;/li&gt;
-&lt;li&gt;30億のデバイスで動くJava&lt;/li&gt;
-&lt;li&gt;スマートカードを手に入れる&lt;/li&gt;
-&lt;li&gt;Java Card Appletを開発しよう&lt;/li&gt;
-&lt;li&gt;遊び道具としては難しい&lt;/li&gt;
-&lt;li&gt;OpenPGP Card Applet&lt;/li&gt;
-&lt;li&gt;おわりに&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;　本文サンプルは&lt;a href=&#34;https://techbookfest.org/product/viaWpAsxCX0pyyKZM5CEBK?productVariantID=ihrw7XZAHgw7qpEFPcTFDp&#34;&gt;こちら&lt;/a&gt;&lt;/p&gt;</description>
-		</item>
-      	
-		<item>
-			<title>お知らせ</title>
-			<link>https://blog.keiji.dev/2022/08/cocoa/</link>
-			<pubDate>Mon, 01 Aug 2022 00:00:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2022/08/cocoa/</guid>
-			<description>これまで有山は「厚生労働省の技術参与」と「デジタル庁のエンジニア」それぞれの役割でCOCOAに携わってきました。 このたびデジタル庁のエンジニ</description>
-		</item>
-      	
-		<item>
-			<title>おかえりThinkPad</title>
-			<link>https://blog.keiji.dev/2022/07/welcomeback_thinkpad/</link>
-			<pubDate>Thu, 28 Jul 2022 00:00:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2022/07/welcomeback_thinkpad/</guid>
-			<description>&lt;p&gt;　ぼくは有山圭二。ThinkPadユーザーだった。&lt;/p&gt;
-&lt;p&gt;　初恋のコンピューターは「ThinkPad 230Cs」。中学時代のぼくのそばにはずっと230Csがあった。&lt;/p&gt;
-&lt;p&gt;　230Cs以降もノートPCはずっとThinkPad。といっても、新型が出るたびに手に入れるようなことはできない。当時のPCは非常に高価で一台買ったら数年使うのが普通の時代だ。
-アルバイトをして購入した「i 1124」は個人ユーザー向けの廉価なモデルだった。大学を卒業して自分の会社を作ってしばらくは中古の「X31」を使っていた。&lt;/p&gt;
-&lt;p&gt;　2007年11月、Androidが発表された。翌年のGoogle I/Oの後、日本Androidの会が設立された。各地で開かれる勉強会に、ぼくは 「X61」と一緒に参加していた。
-&amp;ldquo;All applications are created equal.&amp;ldquo;を掲げるAndroidのアプリを開発するのにMacを使う選択肢を、当時のぼくは持ち合わせていなかった。&lt;/p&gt;
-&lt;p&gt;　そんなぼくがThinkPadユーザーでなくなるきっかけは、ThinkPadのLenovoへの移籍でもIBMロゴの完全廃止でもなく、ThinkPadの構成からタッチパッドが外せなくなったことだった。&lt;/p&gt;
-&lt;p&gt;　ThinkPadにはすでに「トラックポイント」という入力インターフェースがある。機能の重複するものがなぜ必要なのか。&lt;/p&gt;
-&lt;p&gt;　ぼくがこう言うと「タッチパッドは無効化すればいいよ」という人もいたけれど、自分が使わないもの、無効化するものがついていることをぼくは許容できなかった。&lt;/p&gt;
-&lt;p&gt;　ThinkPadがなくなった隙間を埋めてくれたのがMacBook Airだった。
-ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボディと、取り替えできないバッテリーが新鮮だった。難しいことを考えなくてもそれなりに使えるmacOS、キーボードとトラックパッドというシンプルさが、ぼくが使い続ける理由になった。&lt;/p&gt;
-&lt;p&gt;　ThinkPadに未練がなかったと言えば嘘になる。
-街中で、訪問先のオフィスで、参加した勉強会で、あの黒いシルエットがあると知らず知らず目で追っていたし、漫画「&lt;a href=&#34;https://amzn.to/3cFTYU9&#34;&gt;王様達のヴァイキング&lt;/a&gt;」で、主人公の愛機としてX41が登場したときは素直にうれしかった。&lt;/p&gt;
-&lt;p&gt;　また、MacBook Proとの関係がずっと順調だったわけでもない。
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DE0 on めがねをかけるんだ</title><link>https://blog.keiji.dev/categories/de0/</link><description>Recent content in DE0</description><generator>Hugo -- gohugo.io</generator><language>ja</language><managingEditor>Page(/categories/de0)</managingEditor><lastBuildDate>Tue, 22 Jan 2013 16:31:00 +0000</lastBuildDate><atom:link href="/categories/de0/" rel="self" type="application/rss+xml"/><item><title>「Jules」とアプリを開発した話</title><link>https://blog.keiji.dev/2025/07/with_jules/</link><pubDate>Fri, 04 Jul 2025 08:00:00 +0900</pubDate><guid>https://blog.keiji.dev/2025/07/with_jules/</guid><description>&lt;p>2025年のGoogle I/Oで発表された、&lt;a href="https://jules.google.com/">非同期AIコーディングエージェント「Jules」&lt;/a>。&lt;/p>
+&lt;p>&lt;img src="https://blog.keiji.dev/images/with_jules/jules_logo.jpg" alt="Jules Logo">&lt;/p>
+&lt;p>今回、このJulesを使ってAndroidアプリとサーバーサイド（Python）を開発し、Google Playでの公開まで完了させることができました。&lt;/p>
+&lt;p>結論から言うと、Julesにはいくつかの課題も見られるものの、Googleのベータ版製品であることを考えれば、将来が楽しみなサービスだと感じています。何より、&lt;strong>実際にアプリケーションを一つ、サーバーサイドも含めてリリースまでこぎつけられた&lt;/strong>事実が、そのポテンシャルの高さを示しています。&lt;/p>
+&lt;p>本記事では、開発したアプリの紹介から、Julesを実際に使ってみて感じた良い点、そして「ここは改善してほしい！」と感じた点まで、率直な感想をまとめます。Julesがどんなものか、気になっている方の参考になれば幸いです。&lt;/p></description></item><item><title>5年ぶりのGoogle I/O参加でいろいろ準備した話</title><link>https://blog.keiji.dev/2024/06/googleio.html</link><pubDate>Sun, 02 Jun 2024 12:00:00 +0900</pubDate><guid>https://blog.keiji.dev/2024/06/googleio.html</guid><description>&lt;p>&lt;img src="https://blog.keiji.dev/images/googleio2024/io.jpg" alt="Google I/O 2024">&lt;/p>
+&lt;h2 id="tldr">TL;DR&lt;/h2>
+&lt;p>6月15日（土）のDroidKaigi.collect { #9@Osaka }において、10分間のLT枠で発表予定です。Google I/Oの話もするので、興味がある方はぜひ参加してください（プログラムは変更する可能性があります）。&lt;/p>
+&lt;ul>
+&lt;li>DroidKaigi.collect { #9@Osaka }
+&lt;ul>
+&lt;li>&lt;a href="https://droidkaigi.connpass.com/event/318456/">https://droidkaigi.connpass.com/event/318456/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>Studio Bot用の .aiexclude ファイルを作った話</title><link>https://blog.keiji.dev/2024/03/create_aiexclude_file.html</link><pubDate>Tue, 12 Mar 2024 19:00:00 +0900</pubDate><guid>https://blog.keiji.dev/2024/03/create_aiexclude_file.html</guid><description>要約 Studio Botを完全に有効にしたAndroid Studioでプロジェクトを読み込むと、プロジェクトの内容が外部に送信される可能性があります。 .</description></item><item><title>年末年始でホールケーキを食べた</title><link>https://blog.keiji.dev/2024/01/food_review.html</link><pubDate>Mon, 08 Jan 2024 15:00:00 +0900</pubDate><guid>https://blog.keiji.dev/2024/01/food_review.html</guid><description>&lt;p>令和6年能登半島地震により、犠牲となられた方々の御冥福をお祈りするとともに、被害を受けられた皆様の安全と1日でも早く平穏な生活に戻られますことを心よりお祈り申し上げます。&lt;/p>
+&lt;hr>
+&lt;h2 id="はじめに">はじめに&lt;/h2>
+&lt;p>長期休暇の期間には、家族が妻の実家に帰省して、ぼくは自宅で一人になります。
+その間、近所の洋菓子店でケーキをホールで買って、それを食べながら過ごします。&lt;/p>
+&lt;blockquote class="twitter-tweet">&lt;p lang="ja" dir="ltr">大晦日なので、ちょっと贅沢をしながら好きにコードを書きます。&lt;a href="https://t.co/JEHGY5AWqf">https://t.co/JEHGY5AWqf&lt;/a> &lt;a href="https://t.co/oPUGrCAPW0">pic.twitter.com/oPUGrCAPW0&lt;/a>&lt;/p>&amp;mdash; Keiji / parody (@keiji_ariyama) &lt;a href="https://twitter.com/keiji_ariyama/status/1476886691717988352?ref_src=twsrc%5Etfw">December 31, 2021&lt;/a>&lt;/blockquote> &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8">&lt;/script>
+&lt;p>昨年末も実家に帰る予定になっていたので、ケーキを食べるのを楽しみにしていました。&lt;/p>
+&lt;p>いつもと違うのは、お目当てのケーキを注文したことです。例年はお店に立ち寄ったときにホールで販売されているものを買い求めるので、チーズケーキだったりガトーショコラだったりと、いわゆる定番商品でしたが、今回は事前に作ってほしいケーキをお店の人に伝えました。&lt;/p>
+&lt;p>注文ケーキと言うと生クリームやフルーツで豪華にデコレーションされた誕生日ケーキのようなものを想像するかも知れません。
+しかし、ぼくの目当ては違いました。その洋菓子店には、ぼくが「幻のケーキ」と呼んでいるものがあります。&lt;/p></description></item><item><title>AndroidKeyStoreがEd25519に（サイレントで）対応していた件</title><link>https://blog.keiji.dev/2023/11/techbookfest15.html</link><pubDate>Sat, 11 Nov 2023 19:00:00 +0900</pubDate><guid>https://blog.keiji.dev/2023/11/techbookfest15.html</guid><description>&lt;p>訂正
+記事の公開当初、&amp;ldquo;Ed25519対応はAndroid 12以降に含まれる&amp;quot;と記述していましたが、正しくは&amp;quot;Ed25519対応はAndroid 13以降に含まれる&amp;quot;です。&lt;/p>
+&lt;p>&lt;code>AndroidKeyStoreEdECPublicKey.java&lt;/code>は、Android 12のリリースブランチには存在せず、Android 13のリリースブランチから存在しています。&lt;/p>
+&lt;p>&lt;a href="https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java">https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://cs.android.com/android/platform/superproject/+/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java">https://cs.android.com/android/platform/superproject/+/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java&lt;/a>&lt;/p>
+&lt;hr>
+&lt;p>まずは宣伝です。&lt;/p>
+&lt;p>11月12日（日）、池袋サンシャインシティにて開催される「&lt;a href="https://techbookfest.org/event/tbf15">技術書典15&lt;/a>」に、サークル「&lt;a href="https://techbookfest.org/organization/5173176170446848">めがねをかけるんだ&lt;/a>」として参加させていただくことになりました。&lt;/p>
+&lt;p>サークル配置は「さ17」。&lt;/p>
+&lt;p>新刊は「AndroidKeyStoreと過ごした400日」です。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">タイトル&lt;/th>
+&lt;th style="text-align:left">AndroidKeyStoreと過ごした400日&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">判型&lt;/td>
+&lt;td style="text-align:left">B5&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">ページ数&lt;/td>
+&lt;td style="text-align:left">32p（電子版）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">頒布価格&lt;/td>
+&lt;td style="text-align:left">500円（会場価格）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">発行&lt;/td>
+&lt;td style="text-align:left">個人サークル「めがねをかけるんだ」&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>本文サンプルおよび電子版販売ページは&lt;a href="https://techbookfest.org/product/cUVLF5TvwkhQU2t4K72RVj">こちら&lt;/a>&lt;/p></description></item><item><title>git push --forceで履歴は消えないと言う話</title><link>https://blog.keiji.dev/2023/06/git_push_force_do_not_delete_commit.html</link><pubDate>Thu, 15 Jun 2023 15:45:00 +0900</pubDate><guid>https://blog.keiji.dev/2023/06/git_push_force_do_not_delete_commit.html</guid><description>&lt;p>　GitのForce push（&lt;code>git push --force&lt;/code>）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
+筆者も過去に一度だけmasterブランチに向けてForce pushをしてしまい、平謝りをした経験があります。&lt;/p>
+&lt;p>　一方、最近知ったのですが、Gitリポジトリに本来入れてはいけない情報を入れたときの対応策としてForce pushすれば履歴は消えると考えている人もいるようです。&lt;/p>
+&lt;p>　これについては、言葉で説明するよりやってみた方が早そうなので、実際に試してた結果を共有します。
+もしお近くで「Force pushで消える、いや消えない」と言った議論を聞いたときには、そっとこの記事と、次の記事を見せてあげてください。&lt;/p>
+&lt;p>GitHub上のsensitive dataを削除するための手順と道のり - Merpay Advent Calendar 2021
+&lt;a href="https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/">https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/&lt;/a>&lt;/p>
+&lt;p>　また、この記事について誤りや修正すべき点などがあれば、是非ご指摘いただければと思います。
+最近はBlueskyにいます（Twitterはやっていません）。&lt;/p>
+&lt;p>&lt;a href="https://staging.bsky.app/profile/keiji.bsky.social">https://staging.bsky.app/profile/keiji.bsky.social&lt;/a>&lt;/p></description></item><item><title>ThinkPadのスリープが2度目から失敗するようになった</title><link>https://blog.keiji.dev/2023/04/thinkpad_not_wake_up_after_second_suspend.html</link><pubDate>Sun, 02 Apr 2023 16:00:00 +0900</pubDate><guid>https://blog.keiji.dev/2023/04/thinkpad_not_wake_up_after_second_suspend.html</guid><description>2023年3月31日付けで、厚生労働省の技術参与を辞任しました。 COCOAも正式に終了して、これ以上することもありません（GitHubへの書</description></item><item><title>技術書典13で「コロナ禍のめがねをかけるんだ」を頒布します</title><link>https://blog.keiji.dev/2022/09/techbookfest13.html</link><pubDate>Sat, 10 Sep 2022 10:00:10 +0900</pubDate><guid>https://blog.keiji.dev/2022/09/techbookfest13.html</guid><description>&lt;p>　9月11日（日）、池袋サンシャインシティにて開催される「&lt;a href="https://techbookfest.org/event/tbf13">技術書典13&lt;/a>」に、サークル「&lt;a href="https://techbookfest.org/organization/5173176170446848">めがねをかけるんだ&lt;/a>」として参加させていただくことになりました。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">タイトル&lt;/th>
+&lt;th style="text-align:left">コロナ禍のめがねをかけるんだ&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">判型&lt;/td>
+&lt;td style="text-align:left">B5&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">ページ数&lt;/td>
+&lt;td style="text-align:left">16p（本文墨刷）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">頒布価格&lt;/td>
+&lt;td style="text-align:left">300円（会場価格）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">発行&lt;/td>
+&lt;td style="text-align:left">個人サークル「めがねをかけるんだ」&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="目次">目次&lt;/h2>
+&lt;ul>
+&lt;li>はじめに&lt;/li>
+&lt;li>Gitのコミットに署名を付けるようになった話&lt;/li>
+&lt;li>30億のデバイスで動くJava&lt;/li>
+&lt;li>スマートカードを手に入れる&lt;/li>
+&lt;li>Java Card Appletを開発しよう&lt;/li>
+&lt;li>遊び道具としては難しい&lt;/li>
+&lt;li>OpenPGP Card Applet&lt;/li>
+&lt;li>おわりに&lt;/li>
+&lt;/ul>
+&lt;p>　本文サンプルは&lt;a href="https://techbookfest.org/product/viaWpAsxCX0pyyKZM5CEBK?productVariantID=ihrw7XZAHgw7qpEFPcTFDp">こちら&lt;/a>&lt;/p></description></item><item><title>お知らせ</title><link>https://blog.keiji.dev/2022/08/cocoa/</link><pubDate>Mon, 01 Aug 2022 00:00:00 +0900</pubDate><guid>https://blog.keiji.dev/2022/08/cocoa/</guid><description>これまで有山は「厚生労働省の技術参与」と「デジタル庁のエンジニア」それぞれの役割でCOCOAに携わってきました。 このたびデジタル庁のエンジニ</description></item><item><title>おかえりThinkPad</title><link>https://blog.keiji.dev/2022/07/welcomeback_thinkpad/</link><pubDate>Thu, 28 Jul 2022 00:00:00 +0900</pubDate><guid>https://blog.keiji.dev/2022/07/welcomeback_thinkpad/</guid><description>&lt;p>　ぼくは有山圭二。ThinkPadユーザーだった。&lt;/p>
+&lt;p>　初恋のコンピューターは「ThinkPad 230Cs」。中学時代のぼくのそばにはずっと230Csがあった。&lt;/p>
+&lt;p>　230Cs以降もノートPCはずっとThinkPad。といっても、新型が出るたびに手に入れるようなことはできない。当時のPCは非常に高価で一台買ったら数年使うのが普通の時代だ。
+アルバイトをして購入した「i 1124」は個人ユーザー向けの廉価なモデルだった。大学を卒業して自分の会社を作ってしばらくは中古の「X31」を使っていた。&lt;/p>
+&lt;p>　2007年11月、Androidが発表された。翌年のGoogle I/Oの後、日本Androidの会が設立された。各地で開かれる勉強会に、ぼくは 「X61」と一緒に参加していた。
+&amp;ldquo;All applications are created equal.&amp;ldquo;を掲げるAndroidのアプリを開発するのにMacを使う選択肢を、当時のぼくは持ち合わせていなかった。&lt;/p>
+&lt;p>　そんなぼくがThinkPadユーザーでなくなるきっかけは、ThinkPadのLenovoへの移籍でもIBMロゴの完全廃止でもなく、ThinkPadの構成からタッチパッドが外せなくなったことだった。&lt;/p>
+&lt;p>　ThinkPadにはすでに「トラックポイント」という入力インターフェースがある。機能の重複するものがなぜ必要なのか。&lt;/p>
+&lt;p>　ぼくがこう言うと「タッチパッドは無効化すればいいよ」という人もいたけれど、自分が使わないもの、無効化するものがついていることをぼくは許容できなかった。&lt;/p>
+&lt;p>　ThinkPadがなくなった隙間を埋めてくれたのがMacBook Airだった。
+ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボディと、取り替えできないバッテリーが新鮮だった。難しいことを考えなくてもそれなりに使えるmacOS、キーボードとトラックパッドというシンプルさが、ぼくが使い続ける理由になった。&lt;/p>
+&lt;p>　ThinkPadに未練がなかったと言えば嘘になる。
+街中で、訪問先のオフィスで、参加した勉強会で、あの黒いシルエットがあると知らず知らず目で追っていたし、漫画「&lt;a href="https://amzn.to/3cFTYU9">王様達のヴァイキング&lt;/a>」で、主人公の愛機としてX41が登場したときは素直にうれしかった。&lt;/p>
+&lt;p>　また、MacBook Proとの関係がずっと順調だったわけでもない。
 一度はペシャペシャした打ち心地になってしまったバタフライキーボードや、タッチバーの存在に我慢ならなくなってThinkPadに戻ろうとしたこともある。
-そのときは、とてもつらい経験をして「ThinkPadは嫌いだ」と言うまでに、ぼくのThinkPadへの印象は悪化した。5年ほど前のことだ。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.keiji.dev/2017/01/demodori.html&#34;&gt;さよならMac&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;　そんなぼくが、ふたたびThinkPadユーザーになった。&lt;/p&gt;</description>
-		</item>
-      	
-		<item>
-			<title>デジタル庁に入庁しました</title>
-			<link>https://blog.keiji.dev/2021/09/digital_agency/</link>
-			<pubDate>Sat, 04 Sep 2021 00:00:00 +0900</pubDate>
-			<guid>https://blog.keiji.dev/2021/09/digital_agency/</guid>
-			<description>9月1日付で発足したデジタル庁にAndroidエンジニアとして入庁しました。引き続き接触確認アプリ「COCOA」を担当します。 ぼくは大阪に住</description>
-		</item>
-      	
-	</channel>
-</rss>
+そのときは、とてもつらい経験をして「ThinkPadは嫌いだ」と言うまでに、ぼくのThinkPadへの印象は悪化した。5年ほど前のことだ。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://blog.keiji.dev/2017/01/demodori.html">さよならMac&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>　そんなぼくが、ふたたびThinkPadユーザーになった。&lt;/p></description></item></channel></rss>

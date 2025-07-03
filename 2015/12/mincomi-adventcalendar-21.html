@@ -1,222 +1,21 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-<title>ScaleGestureとScroll</title>
-<meta name="description" 
-      content="Don&#39;t take your glasses off."
->
-
-  
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RTC3ZY943S');
-  </script>
-  
-
-
-
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link
-  rel="alternate"
-  type="application/rss+xml"
-  href="https://blog.keiji.dev/index.xml"
-  title="めがねをかけるんだ"
-/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
-
-<meta name="twitter:title" content="ScaleGestureとScroll"/>
-<meta name="twitter:description" content="
-「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。
-2020/11/09 追記:
-みんコミAdvent Calendarその他の知見を元に、漫画表示用カスタムビュー「MangaView」を公開しました。
-
-https://github.com/keiji/mangaview
-
-
-［12/22追記: requestDisallowInterceptTouchEventのハンドリングについては、onTouchEvent内で処理するより、onScrollメソッド内で処理する方が適切だと考えています］
-はじめに
-この記事は「みんコミ Advent Calendar」の21日目の記事です。
+<!doctype html><html lang=ja><head><meta charset=utf-8><title>ScaleGestureとScroll</title>
+<meta name=description content="Don't take your glasses off."><script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-RTC3ZY943S")</script><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate type=application/rss+xml href=https://blog.keiji.dev/index.xml title=めがねをかけるんだ><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.keiji.dev/images/logo.png"><meta name=twitter:title content="ScaleGestureとScroll"><meta name=twitter:description content=" 「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。
+2020/11/09 追記: みんコミAdvent Calendarその他の知見を元に、漫画表示用カスタムビュー「MangaView」を公開しました。
+https://github.com/keiji/mangaview ［12/22追記: requestDisallowInterceptTouchEventのハンドリングについては、onTouchEvent内で処理するより、onScrollメソッド内で処理する方が適切だと考えています］
+はじめに この記事は「みんコミ Advent Calendar」の21日目の記事です。
 「みんコミ」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
-（公開終了しています）"/>
-
-
-
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-
-
-
-<link
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/styles.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-
-<link
-  id="dark-mode-theme"
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/dark.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-<script>
-  var darkTheme = document.getElementById('dark-mode-theme')
-  var storedTheme = localStorage.getItem('dark-mode-storage')
-
-  if (storedTheme === 'dark') {
-    darkTheme.disabled = false
-  } else if (storedTheme === 'light') {
-    darkTheme.disabled = true
-  }
-</script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
-  </head>
-  <body>
-    
-  
-
-
-
-
-  <header>
-    <nav class="navbar">
-  <div class="nav">
-    
-      <a href="https://blog.keiji.dev/" class="nav-logo">
-        <img
-          src="https://blog.keiji.dev/images/logo.png"
-          width=""
-          height=""
-          alt="Logo"
-        />
-      </a>
-    
-
-    <ul class="nav-links">
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/profile/" id="Profile"
-              ><em class="fas fa-user fa-lg"></em
-            ></a>
-          </li>
-          
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
-              ><em class="fab fa-osi fa-lg"></em
-            ></a>
-          </li>
-          
-      
-    </ul>
-  </div>
-</nav>
-
-    <div class="intro-header">
-      <div class="container">
-        <div class="post-heading">
-          
-            <h1>
-              ScaleGestureとScroll
-            </h1>
-          
-          
-            <span class="meta-post">
-  <em class="fa fa-calendar-alt"></em
-  >&nbsp;2015-12-20
-  
-    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/android/"
-        >Android</a
-      >&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/"
-        >みんコミ Advent Calendar</a
-      >&nbsp;
-    
-  
-</span>
-
-          
-        </div>
-      </div>
-    </div>
-  </header>
-  
-
-    
-  <div class="container" role="main">
-    <article class="article" class="blog-post">
-      
-  <hr>
-<p><strong><a href="https://twitter.com/mincomi_jp/status/1057847395889737730">「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。</a></strong></p>
-<p>2020/11/09 追記:
-みんコミAdvent Calendarその他の知見を元に、漫画表示用カスタムビュー「MangaView」を公開しました。</p>
-<ul>
-<li><a href="https://github.com/keiji/mangaview">https://github.com/keiji/mangaview</a></li>
-</ul>
-<hr>
-<p>［12/22追記: <code>requestDisallowInterceptTouchEvent</code>のハンドリングについては、onTouchEvent内で処理するより、<code>onScroll</code>メソッド内で処理する方が適切だと考えています］</p>
-<h2 id="はじめに">はじめに</h2>
-<p>この記事は「<a href="http://qiita.com/advent-calendar/2015/mincomi">みんコミ Advent Calendar</a>」の21日目の記事です。</p>
-<p>「<a href="https://www.mincomi.jp">みんコミ</a>」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。</p>
-<p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" /></a>（公開終了しています）</p>
-<hr>
-<p>「みんコミ」アプリのコミックビューアーのピンチイン・アウトをしたときの拡大縮小については<a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-19.html">前の記事</a>で述べましたが、今回はピンチイン・アウトをした後の挙動についてです。</p>
-<p>現在のコミックビューアーは、ピンチイン・アウトをした後、ディスプレイから指を放すと、スクロールが一気に跳ぶことがあります（Scrollerを使った滑らかな移動ではなく、一瞬でスクロール値が変わる感じです）。</p>
-<p>再現手順は次の通りです。</p>
-<ul>
-<li>ディスプレイに指Aを触れる</li>
-<li>ディスプレイに指Bを触れる</li>
-<li>ピンチイン・アウトで拡大縮小する</li>
-<li>ディスプレイから指Bを離す</li>
-</ul>
-<p>コードを見ていないのではっきりとしたことは言えないのですが、<code>MotionEvent</code>の<code>getRawX</code>などで絶対座標をとり、<code>mLastTouchPositionX</code>などのフィールドに保持をする仕組みにしているのではないでしょうか。</p>
-<p>続いてonScaleが始まる直前、二本目の「指B」が触れた時点で、フィールドに保持している値が「指B」の座標に書き換わってしまっている。</p>
-<p>そして「指B」を離すと、次にonTouchEventを受け取ったときに「指B」から「指A」に一気に座標が跳び、結果としてディスプレイの表示も跳んだと考えられます。</p>
-<p>それを裏付ける証拠として、前記の手順で指を二本触れた状態から「指A」の方を離すと、スクロールが跳ぶ現象は起きません。また、指Aと指Bの距離が遠いと、ディスプレイに指Bが触れた時点でスクロール量が変わることもあります。</p>
-<p>このようなスクロールイベントも<code>GestureDetector</code>に任せることができます。</p>
-<p>GestureDetectorの使い方は、<a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-18.html">前の記事</a>で触れたので割愛します。</p>
-<p><code>OnGestureListener</code>の<code>onScroll</code>でスクロールイベントを受け取ることができます。得られた値をもとに<code>mDestRect</code>の位置を変えています。</p>
-<p>distanceX、distanceY共に符号の逆転を忘れないで下さい。</p>
-<pre><code class="java">        @Override
+（公開終了しています）"><link rel=stylesheet href=https://blog.keiji.dev/fontawesome/css/all.min.css><link crossorigin=anonymous href=https://blog.keiji.dev/css/styles.min.css integrity rel="preload stylesheet" as=style><link rel=stylesheet href=https://blog.keiji.dev/css/default.css><link id=dark-mode-theme crossorigin=anonymous href=https://blog.keiji.dev/css/dark.min.css integrity rel="preload stylesheet" as=style><script>var darkTheme=document.getElementById("dark-mode-theme"),storedTheme=localStorage.getItem("dark-mode-storage");storedTheme==="dark"?darkTheme.disabled=!1:storedTheme==="light"&&(darkTheme.disabled=!0)</script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/theme.js integrity></script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/instantpage.min.js integrity></script><meta name=generator content="Hugo 0.133.0"></head><body><header><nav class=navbar><div class=nav><a href=https://blog.keiji.dev/ class=nav-logo><img src=https://blog.keiji.dev/images/logo.png width height alt=Logo></a><ul class=nav-links><li><a href=https://blog.keiji.dev/profile/ id=Profile><em class="fas fa-user fa-lg"></em></a></li><li><a href=https://blog.keiji.dev/licenses/ id=Licenses><em class="fab fa-osi fa-lg"></em></a></li></ul></div></nav><div class=intro-header><div class=container><div class=post-heading><h1>ScaleGestureとScroll</h1><span class=meta-post><em class="fa fa-calendar-alt"></em>&nbsp;2015-12-20
+&nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
+<a href=https://blog.keiji.dev/categories/android/>Android</a>&nbsp;
+<a href=https://blog.keiji.dev/categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/>みんコミ Advent Calendar</a>&nbsp;</span></div></div></div></header><div class=container role=main><article class=article class=blog-post><hr><p><strong><a href=https://twitter.com/mincomi_jp/status/1057847395889737730>「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。</a></strong></p><p>2020/11/09 追記:
+みんコミAdvent Calendarその他の知見を元に、漫画表示用カスタムビュー「MangaView」を公開しました。</p><ul><li><a href=https://github.com/keiji/mangaview>https://github.com/keiji/mangaview</a></li></ul><hr><p>［12/22追記: <code>requestDisallowInterceptTouchEvent</code>のハンドリングについては、onTouchEvent内で処理するより、<code>onScroll</code>メソッド内で処理する方が適切だと考えています］</p><h2 id=はじめに>はじめに</h2><p>この記事は「<a href=http://qiita.com/advent-calendar/2015/mincomi>みんコミ Advent Calendar</a>」の21日目の記事です。</p><p>「<a href=https://www.mincomi.jp>みんコミ</a>」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。</p><p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src=https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png alt=en_generic_rgb_wo_60 width=172 height=60 class="aligncenter size-full wp-image-672"></a>（公開終了しています）</p><hr><p>「みんコミ」アプリのコミックビューアーのピンチイン・アウトをしたときの拡大縮小については<a href=https://blog.keiji.dev/2015/12/mincomi-adventcalendar-19.html>前の記事</a>で述べましたが、今回はピンチイン・アウトをした後の挙動についてです。</p><p>現在のコミックビューアーは、ピンチイン・アウトをした後、ディスプレイから指を放すと、スクロールが一気に跳ぶことがあります（Scrollerを使った滑らかな移動ではなく、一瞬でスクロール値が変わる感じです）。</p><p>再現手順は次の通りです。</p><ul><li>ディスプレイに指Aを触れる</li><li>ディスプレイに指Bを触れる</li><li>ピンチイン・アウトで拡大縮小する</li><li>ディスプレイから指Bを離す</li></ul><p>コードを見ていないのではっきりとしたことは言えないのですが、<code>MotionEvent</code>の<code>getRawX</code>などで絶対座標をとり、<code>mLastTouchPositionX</code>などのフィールドに保持をする仕組みにしているのではないでしょうか。</p><p>続いてonScaleが始まる直前、二本目の「指B」が触れた時点で、フィールドに保持している値が「指B」の座標に書き換わってしまっている。</p><p>そして「指B」を離すと、次にonTouchEventを受け取ったときに「指B」から「指A」に一気に座標が跳び、結果としてディスプレイの表示も跳んだと考えられます。</p><p>それを裏付ける証拠として、前記の手順で指を二本触れた状態から「指A」の方を離すと、スクロールが跳ぶ現象は起きません。また、指Aと指Bの距離が遠いと、ディスプレイに指Bが触れた時点でスクロール量が変わることもあります。</p><p>このようなスクロールイベントも<code>GestureDetector</code>に任せることができます。</p><p>GestureDetectorの使い方は、<a href=https://blog.keiji.dev/2015/12/mincomi-adventcalendar-18.html>前の記事</a>で触れたので割愛します。</p><p><code>OnGestureListener</code>の<code>onScroll</code>でスクロールイベントを受け取ることができます。得られた値をもとに<code>mDestRect</code>の位置を変えています。</p><p>distanceX、distanceY共に符号の逆転を忘れないで下さい。</p><pre><code class=java>        @Override
         public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
             mDestRect.offset(-distanceX, -distanceY);
             invalidate();
 
             return true;
         }
-</code></pre>
-<p>また、ViewPagerにイベントを渡す、渡さないの判断をしたい場合、<code>onScroll</code>メソッド内部でスクロールの可否を判定した後、結果をtrue/falseで返すことで、onTouchEvent内で受け取って処理することができます。</p>
-<pre><code class="java">    @Override
+</code></pre><p>また、ViewPagerにイベントを渡す、渡さないの判断をしたい場合、<code>onScroll</code>メソッド内部でスクロールの可否を判定した後、結果をtrue/falseで返すことで、onTouchEvent内で受け取って処理することができます。</p><pre><code class=java>    @Override
     public boolean onTouchEvent(MotionEvent event) {
         mScroller.forceFinished(true);
 
@@ -226,86 +25,15 @@ https://github.com/keiji/mangaview
 
         return handled | super.onTouchEvent(event);
     }
-</code></pre>
-<p>サンプル（ViewerActivity）を含めたコードを<a href="https://github.com/keiji/adventcalendar_2015_mincomi">GitHub</a>に置いておきます。参考になれば幸いです。</p>
-<p><a href="https://github.com/keiji/adventcalendar_2015_mincomi">https://github.com/keiji/adventcalendar_2015_mincomi</a></p>
-<hr>
-<pre><code>「有山圭二」は「みんなのコミック」及び運営の「株式会社イーブックイニシアティブジャパン」とは一切関係がありません。
+</code></pre><p>サンプル（ViewerActivity）を含めたコードを<a href=https://github.com/keiji/adventcalendar_2015_mincomi>GitHub</a>に置いておきます。参考になれば幸いです。</p><p><a href=https://github.com/keiji/adventcalendar_2015_mincomi>https://github.com/keiji/adventcalendar_2015_mincomi</a></p><hr><pre><code>「有山圭二」は「みんなのコミック」及び運営の「株式会社イーブックイニシアティブジャパン」とは一切関係がありません。
 また、本アドベントカレンダーの内容はあくまで参加者個人の見解です。
 「みんなのコミック」の評価を目的とするものではありませんので、ご了承下さい。
-</code></pre>
-<hr>
-<p><a href="https://www.mincomi.jp">みんコミ</a>といえば、僕が普段からお世話になっている根雪れい（@neyuki_rei）さんも連載していますね！</p>
-<blockquote class="twitter-tweet" lang="en">
-  <p lang="ja" dir="ltr">
-    おかあさん(10)と僕。という10歳のおかあさんマンガが2話まで読めますよー…読んでくださいませ～　<a href="https://t.co/UfxCfaOYRZ">https://t.co/UfxCfaOYRZ</a> <a href="https://t.co/M7ioKciVZX">pic.twitter.com/M7ioKciVZX</a>
-  </p>
-  <p>
-    &mdash; 根雪れい.おかあさん(10)と僕。連載中 (@neyuki_rei) <a href="https://twitter.com/neyuki_rei/status/678186480552968192">December 19, 2015</a>
-  </p>
-</blockquote>
-<p>根雪さんの作品の更新は来年になるので、</p>
-<blockquote class="twitter-tweet" lang="en">
-  <p lang="ja" dir="ltr">
-    西園寺君は今日から庶民 <a href="https://t.co/IuSelfRghD">https://t.co/IuSelfRghD</a> <a href="https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F?src=hash">#みんコミ</a>&#10;描いてます <a href="https://t.co/Oz091CV3fz">pic.twitter.com/Oz091CV3fz</a>
-  </p>
-  <p>
-    &mdash; かやはら (@kaya7hara) <a href="https://twitter.com/kaya7hara/status/669133645026758658">November 24, 2015</a>
-  </p>
-</blockquote>
-<p>お金持ちのセレブリティ「西園寺君」が社会勉強のために庶民的な生活を経験しにやってくるというストーリーなのですが……お父さん、ちょっといきなりすぎやしませんか。</p>
-<p>現金を持ち歩くことも知らない自分の子供に、いきなり庶民の生活をさせるのは、蛙を熱湯に投げ込むようなものだと思います。</p>
-<p>しかし、連載作品は基本的に女性キャラが多く、男性キャラはかなり濃いめなラインナップが揃っている「みんコミ」の中で、「西園寺君」は、ずいぶんとまともな方に見えてしまうのが不思議です（「おかあさん(10)と僕。」の春君は、あの状況で正気を保っていられるのはすごいと思うので除外します）。</p>
-<p>あ、眼鏡っ娘は出ません。が、前髪ぱっつんがメインストリームのようです。</p>
-<p>我らがAndroid開発者界の誇る<a href="https://twitter.com/adakoda">前髪の神</a>の判定を待ちたいところです。</p>
-<hr>
-<p>それでは明日22日の担当は、技術的な内容を書くことより、「みんコミ」の作品の感想を書くときの方がよほどものを考えている「有山圭二」さんです。</p>
-<p>よろしくお願いします。</p>
-
-
-
-      
-
-      
-    </article>
-    
-    
-      
-
-    
-  </div>
-
-    <footer>
-  
-
-<div class="social-icons">
-  
-
-  
-</div>
-
-
-  
-  <div class="container">
-    <p class="credits copyright">
-      <a href="https://blog.keiji.dev/about"></a>
-      &nbsp;&copy;
-      2024
-      
-        &nbsp;/&nbsp;
-        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
-      
-      &nbsp;&ndash;&nbsp;
-      <em class="fas fa-moon" id="dark-mode-toggle"></em>
-    </p>
-
-    <p class="credits theme-by">
-      Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
-      Theme
-      <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
-  </div>
-</footer>
-
-  </body>
-</html>
+</code></pre><hr><p><a href=https://www.mincomi.jp>みんコミ</a>といえば、僕が普段からお世話になっている根雪れい（@neyuki_rei）さんも連載していますね！</p><blockquote class=twitter-tweet lang=en><p lang=ja dir=ltr>おかあさん(10)と僕。という10歳のおかあさんマンガが2話まで読めますよー…読んでくださいませ～　<a href=https://t.co/UfxCfaOYRZ>https://t.co/UfxCfaOYRZ</a> <a href=https://t.co/M7ioKciVZX>pic.twitter.com/M7ioKciVZX</a></p><p>&mdash; 根雪れい.おかあさん(10)と僕。連載中 (@neyuki_rei) <a href=https://twitter.com/neyuki_rei/status/678186480552968192>December 19, 2015</a></p></blockquote><p>根雪さんの作品の更新は来年になるので、</p><blockquote class=twitter-tweet lang=en><p lang=ja dir=ltr>西園寺君は今日から庶民 <a href=https://t.co/IuSelfRghD>https://t.co/IuSelfRghD</a> <a href="https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F?src=hash">#みんコミ</a>
+描いてます <a href=https://t.co/Oz091CV3fz>pic.twitter.com/Oz091CV3fz</a></p><p>&mdash; かやはら (@kaya7hara) <a href=https://twitter.com/kaya7hara/status/669133645026758658>November 24, 2015</a></p></blockquote><p>お金持ちのセレブリティ「西園寺君」が社会勉強のために庶民的な生活を経験しにやってくるというストーリーなのですが……お父さん、ちょっといきなりすぎやしませんか。</p><p>現金を持ち歩くことも知らない自分の子供に、いきなり庶民の生活をさせるのは、蛙を熱湯に投げ込むようなものだと思います。</p><p>しかし、連載作品は基本的に女性キャラが多く、男性キャラはかなり濃いめなラインナップが揃っている「みんコミ」の中で、「西園寺君」は、ずいぶんとまともな方に見えてしまうのが不思議です（「おかあさん(10)と僕。」の春君は、あの状況で正気を保っていられるのはすごいと思うので除外します）。</p><p>あ、眼鏡っ娘は出ません。が、前髪ぱっつんがメインストリームのようです。</p><p>我らがAndroid開発者界の誇る<a href=https://twitter.com/adakoda>前髪の神</a>の判定を待ちたいところです。</p><hr><p>それでは明日22日の担当は、技術的な内容を書くことより、「みんコミ」の作品の感想を書くときの方がよほどものを考えている「有山圭二」さんです。</p><p>よろしくお願いします。</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
+2025
+&nbsp;/&nbsp;
+<a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
+&nbsp;&ndash;&nbsp;
+<em class="fas fa-moon" id=dark-mode-toggle></em></p><p class="credits theme-by">Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
+Theme
+<a href=https://github.com/matsuyoshi30/harbor>Harbor</a></p></div></footer></body></html>

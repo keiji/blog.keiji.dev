@@ -1,207 +1,14 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-<title>ZoomとかFocusとか聞くと眼鏡っ娘しか想起しない</title>
-<meta name="description" 
-      content="Don&#39;t take your glasses off."
->
-
-  
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RTC3ZY943S');
-  </script>
-  
-
-
-
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link
-  rel="alternate"
-  type="application/rss+xml"
-  href="https://blog.keiji.dev/index.xml"
-  title="めがねをかけるんだ"
-/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
-
-<meta name="twitter:title" content="ZoomとかFocusとか聞くと眼鏡っ娘しか想起しない"/>
-<meta name="twitter:description" content="
-
-「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。
-2020/11/09 追記:
-みんコミAdvent Calendarその他の知見を元に、漫画表示用カスタムビュー「MangaView」を公開しました。
-
-https://github.com/keiji/mangaview
-
-
-[12/20追記: ズームサンプルが正常に動作しない不具合を修正しました]
-はじめに
-この記事は「みんコミ Advent Calendar」の19日目の記事です。
+<!doctype html><html lang=ja><head><meta charset=utf-8><title>ZoomとかFocusとか聞くと眼鏡っ娘しか想起しない</title>
+<meta name=description content="Don't take your glasses off."><script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-RTC3ZY943S")</script><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate type=application/rss+xml href=https://blog.keiji.dev/index.xml title=めがねをかけるんだ><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.keiji.dev/images/logo.png"><meta name=twitter:title content="ZoomとかFocusとか聞くと眼鏡っ娘しか想起しない"><meta name=twitter:description content=" 「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。
+2020/11/09 追記: みんコミAdvent Calendarその他の知見を元に、漫画表示用カスタムビュー「MangaView」を公開しました。
+https://github.com/keiji/mangaview [12/20追記: ズームサンプルが正常に動作しない不具合を修正しました]
+はじめに この記事は「みんコミ Advent Calendar」の19日目の記事です。
 「みんコミ」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。
-（公開終了しています）"/>
-
-
-
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-
-
-
-<link
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/styles.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-
-<link
-  id="dark-mode-theme"
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/dark.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-<script>
-  var darkTheme = document.getElementById('dark-mode-theme')
-  var storedTheme = localStorage.getItem('dark-mode-storage')
-
-  if (storedTheme === 'dark') {
-    darkTheme.disabled = false
-  } else if (storedTheme === 'light') {
-    darkTheme.disabled = true
-  }
-</script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
-  </head>
-  <body>
-    
-  
-
-
-
-
-  <header>
-    <nav class="navbar">
-  <div class="nav">
-    
-      <a href="https://blog.keiji.dev/" class="nav-logo">
-        <img
-          src="https://blog.keiji.dev/images/logo.png"
-          width=""
-          height=""
-          alt="Logo"
-        />
-      </a>
-    
-
-    <ul class="nav-links">
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/profile/" id="Profile"
-              ><em class="fas fa-user fa-lg"></em
-            ></a>
-          </li>
-          
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
-              ><em class="fab fa-osi fa-lg"></em
-            ></a>
-          </li>
-          
-      
-    </ul>
-  </div>
-</nav>
-
-    <div class="intro-header">
-      <div class="container">
-        <div class="post-heading">
-          
-            <h1>
-              ZoomとかFocusとか聞くと眼鏡っ娘しか想起しない
-            </h1>
-          
-          
-            <span class="meta-post">
-  <em class="fa fa-calendar-alt"></em
-  >&nbsp;2015-12-18
-  
-    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/android/"
-        >Android</a
-      >&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/"
-        >みんコミ Advent Calendar</a
-      >&nbsp;
-    
-  
-</span>
-
-          
-        </div>
-      </div>
-    </div>
-  </header>
-  
-
-    
-  <div class="container" role="main">
-    <article class="article" class="blog-post">
-      
-  <hr>
-<hr>
-<p><strong><a href="https://twitter.com/mincomi_jp/status/1057847395889737730">「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。</a></strong></p>
-<p>2020/11/09 追記:
-みんコミAdvent Calendarその他の知見を元に、漫画表示用カスタムビュー「MangaView」を公開しました。</p>
-<ul>
-<li><a href="https://github.com/keiji/mangaview">https://github.com/keiji/mangaview</a></li>
-</ul>
-<hr>
-<p>[12/20追記: ズームサンプルが正常に動作しない不具合を修正しました]</p>
-<h2 id="はじめに">はじめに</h2>
-<p>この記事は「<a href="http://qiita.com/advent-calendar/2015/mincomi">みんコミ Advent Calendar</a>」の19日目の記事です。</p>
-<p>「<a href="https://www.mincomi.jp">みんコミ</a>」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。</p>
-<p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png" alt="en_generic_rgb_wo_60" width="172" height="60" class="aligncenter size-full wp-image-672" /></a>（公開終了しています）</p>
-<hr>
-<p>「みんコミ」アプリのコミックビューアーで、拡大縮小したときにピンチイン・アウトの「フォーカス」のハンドリングを調整すると、もっと使いやすくなると思います。</p>
-<p>コードを見ていないのではっきりとしたことは言えませんが、現状のコミックビューアーは、ピンチアウトで拡大操作をしたときに、１番目の指を起点に拡大縮小をしていく挙動になっているように感じました。</p>
-<p><code>ScaleGestureDetector</code>を使って取得した値に基づいて画像を拡大縮小するときに、<code>Focus</code>の値も使って画像の位置を調整すると、自然な拡大ができます。</p>
-<p>サンプルプロジェクトを<a href="https://github.com/keiji/adventcalendar_2015_mincomi">GitHub</a>に置いておきます。</p>
-<p><a href="https://github.com/keiji/adventcalendar_2015_mincomi">https://github.com/keiji/adventcalendar_2015_mincomi</a></p>
-<p>サンプル「ズームサンプル(ZoomActivity)」では、起動すると標準のアイコンを画面に表示します。ピンチイン・アウトの操作で拡大縮小するようにプログラムしています。また、拡大縮小の際、二本の指の中間点（Focus）を基に位置を変えています。</p>
-<p><a href="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-18-200216.png"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-18-200216.png" alt="device-2015-12-18-200216" width="50%" height="50%" class="aligncenter size-full wp-image-973" /></a></p>
-<p>まず、ScaleGestureDetectorでonScaleジェスチャーを取得します。</p>
-<p>使い方は簡単です。ScaleGestureDetectorのインスタンスにonTouchが受け取るMotionEventを渡すだけで、onTouchEventの状況から判定して所定のジェスチャーのコールバックが呼ばれます。</p>
-<pre><code class="java">public class ZoomView extends View {
+（公開終了しています）"><link rel=stylesheet href=https://blog.keiji.dev/fontawesome/css/all.min.css><link crossorigin=anonymous href=https://blog.keiji.dev/css/styles.min.css integrity rel="preload stylesheet" as=style><link rel=stylesheet href=https://blog.keiji.dev/css/default.css><link id=dark-mode-theme crossorigin=anonymous href=https://blog.keiji.dev/css/dark.min.css integrity rel="preload stylesheet" as=style><script>var darkTheme=document.getElementById("dark-mode-theme"),storedTheme=localStorage.getItem("dark-mode-storage");storedTheme==="dark"?darkTheme.disabled=!1:storedTheme==="light"&&(darkTheme.disabled=!0)</script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/theme.js integrity></script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/instantpage.min.js integrity></script><meta name=generator content="Hugo 0.133.0"></head><body><header><nav class=navbar><div class=nav><a href=https://blog.keiji.dev/ class=nav-logo><img src=https://blog.keiji.dev/images/logo.png width height alt=Logo></a><ul class=nav-links><li><a href=https://blog.keiji.dev/profile/ id=Profile><em class="fas fa-user fa-lg"></em></a></li><li><a href=https://blog.keiji.dev/licenses/ id=Licenses><em class="fab fa-osi fa-lg"></em></a></li></ul></div></nav><div class=intro-header><div class=container><div class=post-heading><h1>ZoomとかFocusとか聞くと眼鏡っ娘しか想起しない</h1><span class=meta-post><em class="fa fa-calendar-alt"></em>&nbsp;2015-12-18
+&nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
+<a href=https://blog.keiji.dev/categories/android/>Android</a>&nbsp;
+<a href=https://blog.keiji.dev/categories/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F-advent-calendar/>みんコミ Advent Calendar</a>&nbsp;</span></div></div></div></header><div class=container role=main><article class=article class=blog-post><hr><hr><p><strong><a href=https://twitter.com/mincomi_jp/status/1057847395889737730>「みんなのコミック」は2018年10月31日を持ちまして更新を終了いたしました。</a></strong></p><p>2020/11/09 追記:
+みんコミAdvent Calendarその他の知見を元に、漫画表示用カスタムビュー「MangaView」を公開しました。</p><ul><li><a href=https://github.com/keiji/mangaview>https://github.com/keiji/mangaview</a></li></ul><hr><p>[12/20追記: ズームサンプルが正常に動作しない不具合を修正しました]</p><h2 id=はじめに>はじめに</h2><p>この記事は「<a href=http://qiita.com/advent-calendar/2015/mincomi>みんコミ Advent Calendar</a>」の19日目の記事です。</p><p>「<a href=https://www.mincomi.jp>みんコミ</a>」のAndroidアプリ（バージョン1.0.3）をベースに執筆しています。スクリーンショットは極力控える方針ですので、本記事を読む際には、「Google Play Store」からアプリをインストールしておくことをお勧めします。</p><p><a href="https://play.google.com/store/apps/details?id=jp.ebookjapan.mincomi&amp;hl=ja"><img src=https://blog.keiji.dev/wp-content/uploads/2015/12/en_generic_rgb_wo_60.png alt=en_generic_rgb_wo_60 width=172 height=60 class="aligncenter size-full wp-image-672"></a>（公開終了しています）</p><hr><p>「みんコミ」アプリのコミックビューアーで、拡大縮小したときにピンチイン・アウトの「フォーカス」のハンドリングを調整すると、もっと使いやすくなると思います。</p><p>コードを見ていないのではっきりとしたことは言えませんが、現状のコミックビューアーは、ピンチアウトで拡大操作をしたときに、１番目の指を起点に拡大縮小をしていく挙動になっているように感じました。</p><p><code>ScaleGestureDetector</code>を使って取得した値に基づいて画像を拡大縮小するときに、<code>Focus</code>の値も使って画像の位置を調整すると、自然な拡大ができます。</p><p>サンプルプロジェクトを<a href=https://github.com/keiji/adventcalendar_2015_mincomi>GitHub</a>に置いておきます。</p><p><a href=https://github.com/keiji/adventcalendar_2015_mincomi>https://github.com/keiji/adventcalendar_2015_mincomi</a></p><p>サンプル「ズームサンプル(ZoomActivity)」では、起動すると標準のアイコンを画面に表示します。ピンチイン・アウトの操作で拡大縮小するようにプログラムしています。また、拡大縮小の際、二本の指の中間点（Focus）を基に位置を変えています。</p><p><a href=https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-18-200216.png><img src=https://blog.keiji.dev/wp-content/uploads/2015/12/device-2015-12-18-200216.png alt=device-2015-12-18-200216 width=50% height=50% class="aligncenter size-full wp-image-973"></a></p><p>まず、ScaleGestureDetectorでonScaleジェスチャーを取得します。</p><p>使い方は簡単です。ScaleGestureDetectorのインスタンスにonTouchが受け取るMotionEventを渡すだけで、onTouchEventの状況から判定して所定のジェスチャーのコールバックが呼ばれます。</p><pre><code class=java>public class ZoomView extends View {
     private static final String TAG = ZoomView.class.getSimpleName();
 
     private static final float CIRCLE_RADIUS = 10f;
@@ -319,28 +126,7 @@ https://github.com/keiji/mangaview
         return new RectF(0, 0, width, height);
     }
 }
-</code></pre>
-<p><a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-18.html">Scrollerと同様</a>、ScaleGestureDetectorの各メソッドの戻り値には気をつけて下さい。Android Studioで自動生成するとデフォルトで各メソッドは<code>false</code>を返しますが、そのままではACTION_DOWN以外のイベントを受け取れません（当然、ジェスチャも受け取れません）。</p>
-<p>適宜<code>true</code>を返すようにしましょう。</p>
-<h3 id="解説">解説</h3>
-<p>通常、onScaleから得た拡大率を普通にcanvas.setScaleやRectのwidthやheightに反映すると、左上の原点(0, 0)を基準に拡大します。</p>
-<div id="attachment_974" style="max-width: 1034px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.001.jpeg"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.001.jpeg" alt="通常は左上が原点" width="1024" height="768" class="size-full wp-image-974" /></a>
-  <p class="wp-caption-text">
-    通常は左上が原点
-  </p>
-</div>
-<p>二本指でピンチ操作をするときは、二本の指の中間点を拡大していくという挙動が自然です。この二本の指の中間点の座標を「フォーカス」と呼びます。コードではScaleGestureDetectorのgetFocusX()とgetFocusY()で取得できます。</p>
-<p>（GoogleのサンプルサイトではgetCurrentSpanX()やgetCurrentSpanY()から逐次フォーカスを計算していますが、今回はFocusを使う方法を採用しています）</p>
-<p><a href="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.002.jpeg"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.002.jpeg" alt="19th.002" width="1024" height="768" class="aligncenter size-full wp-image-975" /></a></p>
-<p>このフォーカス（図の黒丸）を中心にすると、ユーザーにとって自然な拡大・縮小に見えます。</p>
-<p><a href="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.004.jpeg"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.004.jpeg" alt="19th.004" width="1024" height="768" class="aligncenter size-full wp-image-976" /></a></p>
-<p>しかし、フォーカスを基準にただ拡大しても、画像はやはりずれてしまいます。</p>
-<p><a href="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.003.jpeg"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.003.jpeg" alt="19th.003" width="1024" height="768" class="aligncenter size-full wp-image-977" /></a></p>
-<p>拡大・縮小後の大きさと、以前の大きさの差分を取り、フォーカスの量に応じて位置を調整する必要があります。</p>
-<p>例えば、中心をフォーカスした状態で拡大すると、サイズが大きくなった量の半分左側に移動して描画することで、拡大してもフォーカスの位置は（見かけ上）変わりません。</p>
-<p>もしフォーカスの位置がずれていた場合、基準となる大きさ（サンプルコードではViewのwidthやheight）に締めるフォーカスの比率を基に、位置を調整する量を計算します。</p>
-<pre><code class="java">    public void setScale(float scale, float focusX, float focusY) {
+</code></pre><p><a href=https://blog.keiji.dev/2015/12/mincomi-adventcalendar-18.html>Scrollerと同様</a>、ScaleGestureDetectorの各メソッドの戻り値には気をつけて下さい。Android Studioで自動生成するとデフォルトで各メソッドは<code>false</code>を返しますが、そのままではACTION_DOWN以外のイベントを受け取れません（当然、ジェスチャも受け取れません）。</p><p>適宜<code>true</code>を返すようにしましょう。</p><h3 id=解説>解説</h3><p>通常、onScaleから得た拡大率を普通にcanvas.setScaleやRectのwidthやheightに反映すると、左上の原点(0, 0)を基準に拡大します。</p><div id=attachment_974 style=max-width:1034px class="wp-caption aligncenter"><a href=https://blog.keiji.dev/wp-content/uploads/2015/12/19th.001.jpeg><img src=https://blog.keiji.dev/wp-content/uploads/2015/12/19th.001.jpeg alt=通常は左上が原点 width=1024 height=768 class="size-full wp-image-974"></a><p class=wp-caption-text>通常は左上が原点</p></div><p>二本指でピンチ操作をするときは、二本の指の中間点を拡大していくという挙動が自然です。この二本の指の中間点の座標を「フォーカス」と呼びます。コードではScaleGestureDetectorのgetFocusX()とgetFocusY()で取得できます。</p><p>（GoogleのサンプルサイトではgetCurrentSpanX()やgetCurrentSpanY()から逐次フォーカスを計算していますが、今回はFocusを使う方法を採用しています）</p><p><a href=https://blog.keiji.dev/wp-content/uploads/2015/12/19th.002.jpeg><img src=https://blog.keiji.dev/wp-content/uploads/2015/12/19th.002.jpeg alt=19th.002 width=1024 height=768 class="aligncenter size-full wp-image-975"></a></p><p>このフォーカス（図の黒丸）を中心にすると、ユーザーにとって自然な拡大・縮小に見えます。</p><p><a href=https://blog.keiji.dev/wp-content/uploads/2015/12/19th.004.jpeg><img src=https://blog.keiji.dev/wp-content/uploads/2015/12/19th.004.jpeg alt=19th.004 width=1024 height=768 class="aligncenter size-full wp-image-976"></a></p><p>しかし、フォーカスを基準にただ拡大しても、画像はやはりずれてしまいます。</p><p><a href=https://blog.keiji.dev/wp-content/uploads/2015/12/19th.003.jpeg><img src=https://blog.keiji.dev/wp-content/uploads/2015/12/19th.003.jpeg alt=19th.003 width=1024 height=768 class="aligncenter size-full wp-image-977"></a></p><p>拡大・縮小後の大きさと、以前の大きさの差分を取り、フォーカスの量に応じて位置を調整する必要があります。</p><p>例えば、中心をフォーカスした状態で拡大すると、サイズが大きくなった量の半分左側に移動して描画することで、拡大してもフォーカスの位置は（見かけ上）変わりません。</p><p>もしフォーカスの位置がずれていた場合、基準となる大きさ（サンプルコードではViewのwidthやheight）に締めるフォーカスの比率を基に、位置を調整する量を計算します。</p><pre><code class=java>    public void setScale(float scale, float focusX, float focusY) {
         mFocusX = focusX;
         mFocusY = focusY;
 
@@ -360,85 +146,14 @@ https://github.com/keiji/mangaview
 
         invalidate();
     }
-</code></pre>
-<p><a href="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.007.jpeg"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/19th.007.jpeg" alt="19th.007" width="1024" height="768" class="aligncenter size-full wp-image-978" /></a></p>
-<p>ただし、今回の実装は不完全です。サンプルでは無限に拡大縮小できますし、拡大縮小を繰り返して描画の位置がずれてもまったく補正していません。</p>
-<p>現実に実装しようとすれば、タッチによるスクロールやFling操作への対応、画像の割り当てや採用する座標系によって調整が必要になります。</p>
-<p>あらためて、実装例を<a href="https://github.com/keiji/adventcalendar_2015_mincomi">GitHub</a>に置いておきます。参考になれば幸いです。</p>
-<p><a href="https://github.com/keiji/adventcalendar_2015_mincomi">https://github.com/keiji/adventcalendar_2015_mincomi</a></p>
-<h3 id="実装参照">実装参照</h3>
-<ul>
-<li><a href="http://developer.android.com/intl/ja/training/gestures/scale.html">http://developer.android.com/intl/ja/training/gestures/scale.html</a></li>
-</ul>
-<hr>
-<pre><code>「有山圭二」は「みんなのコミック」及び運営の「株式会社イーブックイニシアティブジャパン」とは一切関係がありません。
+</code></pre><p><a href=https://blog.keiji.dev/wp-content/uploads/2015/12/19th.007.jpeg><img src=https://blog.keiji.dev/wp-content/uploads/2015/12/19th.007.jpeg alt=19th.007 width=1024 height=768 class="aligncenter size-full wp-image-978"></a></p><p>ただし、今回の実装は不完全です。サンプルでは無限に拡大縮小できますし、拡大縮小を繰り返して描画の位置がずれてもまったく補正していません。</p><p>現実に実装しようとすれば、タッチによるスクロールやFling操作への対応、画像の割り当てや採用する座標系によって調整が必要になります。</p><p>あらためて、実装例を<a href=https://github.com/keiji/adventcalendar_2015_mincomi>GitHub</a>に置いておきます。参考になれば幸いです。</p><p><a href=https://github.com/keiji/adventcalendar_2015_mincomi>https://github.com/keiji/adventcalendar_2015_mincomi</a></p><h3 id=実装参照>実装参照</h3><ul><li><a href=http://developer.android.com/intl/ja/training/gestures/scale.html>http://developer.android.com/intl/ja/training/gestures/scale.html</a></li></ul><hr><pre><code>「有山圭二」は「みんなのコミック」及び運営の「株式会社イーブックイニシアティブジャパン」とは一切関係がありません。
 また、本アドベントカレンダーの内容はあくまで参加者個人の見解です。
 「みんなのコミック」の評価を目的とするものではありませんので、ご了承下さい。
-</code></pre>
-<hr>
-<p><a href="https://www.mincomi.jp">みんコミ</a>といえば、僕が普段からお世話になっている根雪れい（@neyuki_rei）さんも連載していますね！</p>
-<blockquote class="twitter-tweet" lang="ja">
-  <p lang="ja" dir="ltr">
-    10歳になったおかあさんと僕の生活をマンガにしましたよ～。見てくださいね ！　<a href="https://t.co/UfxCfaOYRZ">https://t.co/UfxCfaOYRZ</a>　 <a href="https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F?src=hash">#みんコミ</a> <a href="https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF?src=hash">#みんなのコミック</a> <a href="https://t.co/2nHBnFus4n">pic.twitter.com/2nHBnFus4n</a>
-  </p>
-  <p>
-    — 根雪れい.おかあさん(10)と僕。連載中 (@neyuki_rei)
-  </p>
-  <p>
-    <a href="https://twitter.com/neyuki_rei/status/664369017038110720">2015, 11月 11</a>
-  </p>
-</blockquote>
-<p><a href="https://blog.keiji.dev/2015/12/c89.html">先ほどのエントリ</a>のとおり、根雪さんに表紙をお願いした「Android Studio 完全移行ガイド」をコミックマーケット89で頒布します。</p>
-<p><a href="https://blog.keiji.dev/wp-content/uploads/2015/12/c89_farewell_adt.png"><img src="https://blog.keiji.dev/wp-content/uploads/2015/12/c89_farewell_adt.png" alt="c89_farewell_adt" width="50%" height="50%" class="aligncenter size-full wp-image-954" /></a></p>
-<p>根雪さん。いつも最高の眼鏡っ娘をありがとうございます！</p>
-<hr>
-<p>それでは明日20日の担当は、一日に二度、ブログを更新するだなんてこれまであっただろうかと感慨にふけっている「有山圭二」さんです。</p>
-<p>よろしくお願いします。</p>
-
-
-
-      
-
-      
-    </article>
-    
-    
-      
-
-    
-  </div>
-
-    <footer>
-  
-
-<div class="social-icons">
-  
-
-  
-</div>
-
-
-  
-  <div class="container">
-    <p class="credits copyright">
-      <a href="https://blog.keiji.dev/about"></a>
-      &nbsp;&copy;
-      2024
-      
-        &nbsp;/&nbsp;
-        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
-      
-      &nbsp;&ndash;&nbsp;
-      <em class="fas fa-moon" id="dark-mode-toggle"></em>
-    </p>
-
-    <p class="credits theme-by">
-      Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
-      Theme
-      <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
-  </div>
-</footer>
-
-  </body>
-</html>
+</code></pre><hr><p><a href=https://www.mincomi.jp>みんコミ</a>といえば、僕が普段からお世話になっている根雪れい（@neyuki_rei）さんも連載していますね！</p><blockquote class=twitter-tweet lang=ja><p lang=ja dir=ltr>10歳になったおかあさんと僕の生活をマンガにしましたよ～。見てくださいね ！　<a href=https://t.co/UfxCfaOYRZ>https://t.co/UfxCfaOYRZ</a>　 <a href="https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%82%B3%E3%83%9F?src=hash">#みんコミ</a> <a href="https://twitter.com/hashtag/%E3%81%BF%E3%82%93%E3%81%AA%E3%81%AE%E3%82%B3%E3%83%9F%E3%83%83%E3%82%AF?src=hash">#みんなのコミック</a> <a href=https://t.co/2nHBnFus4n>pic.twitter.com/2nHBnFus4n</a></p><p>— 根雪れい.おかあさん(10)と僕。連載中 (@neyuki_rei)</p><p><a href=https://twitter.com/neyuki_rei/status/664369017038110720>2015, 11月 11</a></p></blockquote><p><a href=https://blog.keiji.dev/2015/12/c89.html>先ほどのエントリ</a>のとおり、根雪さんに表紙をお願いした「Android Studio 完全移行ガイド」をコミックマーケット89で頒布します。</p><p><a href=https://blog.keiji.dev/wp-content/uploads/2015/12/c89_farewell_adt.png><img src=https://blog.keiji.dev/wp-content/uploads/2015/12/c89_farewell_adt.png alt=c89_farewell_adt width=50% height=50% class="aligncenter size-full wp-image-954"></a></p><p>根雪さん。いつも最高の眼鏡っ娘をありがとうございます！</p><hr><p>それでは明日20日の担当は、一日に二度、ブログを更新するだなんてこれまであっただろうかと感慨にふけっている「有山圭二」さんです。</p><p>よろしくお願いします。</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
+2025
+&nbsp;/&nbsp;
+<a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
+&nbsp;&ndash;&nbsp;
+<em class="fas fa-moon" id=dark-mode-toggle></em></p><p class="credits theme-by">Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
+Theme
+<a href=https://github.com/matsuyoshi30/harbor>Harbor</a></p></div></footer></body></html>

@@ -1,186 +1,13 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-<title>ココが辛いよ！ TensorFlow</title>
-<meta name="description" 
-      content="Don&#39;t take your glasses off."
->
-
-  
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RTC3ZY943S');
-  </script>
-  
-
-
-
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link
-  rel="alternate"
-  type="application/rss+xml"
-  href="https://blog.keiji.dev/index.xml"
-  title="めがねをかけるんだ"
-/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
-
-<meta name="twitter:title" content="ココが辛いよ！ TensorFlow"/>
-<meta name="twitter:description" content="この投稿は、TensorFlow Advent Calendarの12日目の記事です。
+<!doctype html><html lang=ja><head><meta charset=utf-8><title>ココが辛いよ！ TensorFlow</title>
+<meta name=description content="Don't take your glasses off."><script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-RTC3ZY943S")</script><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate type=application/rss+xml href=https://blog.keiji.dev/index.xml title=めがねをかけるんだ><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.keiji.dev/images/logo.png"><meta name=twitter:title content="ココが辛いよ！ TensorFlow"><meta name=twitter:description content="この投稿は、TensorFlow Advent Calendarの12日目の記事です。
 みなさん。TensorFlow使ってますか？
 ぼくはと言えば、気がつけば毎日なにがしかのTensorFlowのコードを書いています。
 TensorFlowが発表されてからすぐに使い始めて早二年、さまざまな機械学習向けのフレームワークが登場する中、TensorFlowは高い人気を保っていますね。
 さて今回の記事は、そんな人気のTensorFlowを使っていて、ぼくが「つらい」と感じる（感じた）ことを書きます。
-同じ気持ちの方には共感していただき、「こうすればもっと便利に使えるのに」という方法を知っている方が居られたら是非教えていただきたいと考えています。"/>
-
-
-
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-
-
-
-<link
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/styles.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-
-<link
-  id="dark-mode-theme"
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/dark.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-<script>
-  var darkTheme = document.getElementById('dark-mode-theme')
-  var storedTheme = localStorage.getItem('dark-mode-storage')
-
-  if (storedTheme === 'dark') {
-    darkTheme.disabled = false
-  } else if (storedTheme === 'light') {
-    darkTheme.disabled = true
-  }
-</script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
-  </head>
-  <body>
-    
-  
-
-
-
-
-  <header>
-    <nav class="navbar">
-  <div class="nav">
-    
-      <a href="https://blog.keiji.dev/" class="nav-logo">
-        <img
-          src="https://blog.keiji.dev/images/logo.png"
-          width=""
-          height=""
-          alt="Logo"
-        />
-      </a>
-    
-
-    <ul class="nav-links">
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/profile/" id="Profile"
-              ><em class="fas fa-user fa-lg"></em
-            ></a>
-          </li>
-          
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
-              ><em class="fab fa-osi fa-lg"></em
-            ></a>
-          </li>
-          
-      
-    </ul>
-  </div>
-</nav>
-
-    <div class="intro-header">
-      <div class="container">
-        <div class="post-heading">
-          
-            <h1>
-              ココが辛いよ！ TensorFlow
-            </h1>
-          
-          
-            <span class="meta-post">
-  <em class="fa fa-calendar-alt"></em
-  >&nbsp;2017-12-13
-  
-    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/tensorflow/"
-        >TensorFlow</a
-      >&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
-        >雑記</a
-      >&nbsp;
-    
-  
-</span>
-
-          
-        </div>
-      </div>
-    </div>
-  </header>
-  
-
-    
-  <div class="container" role="main">
-    <article class="article" class="blog-post">
-      
-  <p><strong>この投稿は、<a href="https://qiita.com/advent-calendar/2017/tensorflow">TensorFlow Advent Calendar</a>の12日目の記事です。</strong></p>
-<p>みなさん。TensorFlow使ってますか？</p>
-<p>ぼくはと言えば、気がつけば毎日なにがしかのTensorFlowのコードを書いています。</p>
-<p>TensorFlowが発表されてからすぐに使い始めて早二年、さまざまな機械学習向けのフレームワークが登場する中、TensorFlowは高い人気を保っていますね。</p>
-<p>さて今回の記事は、そんな人気のTensorFlowを使っていて、ぼくが「つらい」と感じる（感じた）ことを書きます。</p>
-<p>同じ気持ちの方には共感していただき、「こうすればもっと便利に使えるのに」という方法を知っている方が居られたら是非教えていただきたいと考えています。</p>
-<h2 id="多すぎる選択肢">多すぎる選択肢</h2>
-<p>TensorFlowにはさまざまなAPIが用意されています。</p>
-<p>たとえば畳み込み層であれば<code>tf.nn.conv2d</code>がもっとも基本的なオペレーションとして挙げることができますが、プリミティブすぎて最近はあまり使っていません。</p>
-<p>他にも<code>tf.layers</code>モジュールの<code>tf.layers.conv2d</code>があります。</p>
-<p><code>tf.layers.conv2d</code>の引数は、つぎの通りです。</p>
-<pre><code class="py">conv2d(
+同じ気持ちの方には共感していただき、「こうすればもっと便利に使えるのに」という方法を知っている方が居られたら是非教えていただきたいと考えています。"><link rel=stylesheet href=https://blog.keiji.dev/fontawesome/css/all.min.css><link crossorigin=anonymous href=https://blog.keiji.dev/css/styles.min.css integrity rel="preload stylesheet" as=style><link rel=stylesheet href=https://blog.keiji.dev/css/default.css><link id=dark-mode-theme crossorigin=anonymous href=https://blog.keiji.dev/css/dark.min.css integrity rel="preload stylesheet" as=style><script>var darkTheme=document.getElementById("dark-mode-theme"),storedTheme=localStorage.getItem("dark-mode-storage");storedTheme==="dark"?darkTheme.disabled=!1:storedTheme==="light"&&(darkTheme.disabled=!0)</script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/theme.js integrity></script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/instantpage.min.js integrity></script><meta name=generator content="Hugo 0.133.0"></head><body><header><nav class=navbar><div class=nav><a href=https://blog.keiji.dev/ class=nav-logo><img src=https://blog.keiji.dev/images/logo.png width height alt=Logo></a><ul class=nav-links><li><a href=https://blog.keiji.dev/profile/ id=Profile><em class="fas fa-user fa-lg"></em></a></li><li><a href=https://blog.keiji.dev/licenses/ id=Licenses><em class="fab fa-osi fa-lg"></em></a></li></ul></div></nav><div class=intro-header><div class=container><div class=post-heading><h1>ココが辛いよ！ TensorFlow</h1><span class=meta-post><em class="fa fa-calendar-alt"></em>&nbsp;2017-12-13
+&nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
+<a href=https://blog.keiji.dev/categories/tensorflow/>TensorFlow</a>&nbsp;
+<a href=https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/>雑記</a>&nbsp;</span></div></div></div></header><div class=container role=main><article class=article class=blog-post><p><strong>この投稿は、<a href=https://qiita.com/advent-calendar/2017/tensorflow>TensorFlow Advent Calendar</a>の12日目の記事です。</strong></p><p>みなさん。TensorFlow使ってますか？</p><p>ぼくはと言えば、気がつけば毎日なにがしかのTensorFlowのコードを書いています。</p><p>TensorFlowが発表されてからすぐに使い始めて早二年、さまざまな機械学習向けのフレームワークが登場する中、TensorFlowは高い人気を保っていますね。</p><p>さて今回の記事は、そんな人気のTensorFlowを使っていて、ぼくが「つらい」と感じる（感じた）ことを書きます。</p><p>同じ気持ちの方には共感していただき、「こうすればもっと便利に使えるのに」という方法を知っている方が居られたら是非教えていただきたいと考えています。</p><h2 id=多すぎる選択肢>多すぎる選択肢</h2><p>TensorFlowにはさまざまなAPIが用意されています。</p><p>たとえば畳み込み層であれば<code>tf.nn.conv2d</code>がもっとも基本的なオペレーションとして挙げることができますが、プリミティブすぎて最近はあまり使っていません。</p><p>他にも<code>tf.layers</code>モジュールの<code>tf.layers.conv2d</code>があります。</p><p><code>tf.layers.conv2d</code>の引数は、つぎの通りです。</p><pre><code class=py>conv2d(
     inputs,
     filters,
     kernel_size,
@@ -201,13 +28,7 @@ TensorFlowが発表されてからすぐに使い始めて早二年、さまざ�
     name=None,
     reuse=None
 )
-</code></pre>
-<p>さらに<code>tf.contrib.layers</code>モジュールにも<code>tf.contrib.layers.conv2d</code>があります。</p>
-<p>結局のところ、どれを使えばいいのでしょう？</p>
-<p><a href="https://www.tensorflow.org/api_docs/python/tf/contrib">tf.contrib</a>は本来は変更されたり、消えるかもしれない。将来的にTensorFlowに取り込まれるかもしれないという実験的なコードという位置づけになっています。</p>
-<p>では、今は安定版である<code>tf.layers.conv2d</code>を使っておいて、将来、contribが外れたときに対応すれば……と思うのですが、<code>tf.contrib.layers.conv2d</code>からcontribを外すと、ただの<code>tf.layers.conv2d</code>になるので、名前が衝突してしまい、既存のコードに影響が出ます。</p>
-<p>現在の<code>tf.contrib.layers.conv2d</code>の引数を見てみましょう。</p>
-<pre><code>conv2d(
+</code></pre><p>さらに<code>tf.contrib.layers</code>モジュールにも<code>tf.contrib.layers.conv2d</code>があります。</p><p>結局のところ、どれを使えばいいのでしょう？</p><p><a href=https://www.tensorflow.org/api_docs/python/tf/contrib>tf.contrib</a>は本来は変更されたり、消えるかもしれない。将来的にTensorFlowに取り込まれるかもしれないという実験的なコードという位置づけになっています。</p><p>では、今は安定版である<code>tf.layers.conv2d</code>を使っておいて、将来、contribが外れたときに対応すれば……と思うのですが、<code>tf.contrib.layers.conv2d</code>からcontribを外すと、ただの<code>tf.layers.conv2d</code>になるので、名前が衝突してしまい、既存のコードに影響が出ます。</p><p>現在の<code>tf.contrib.layers.conv2d</code>の引数を見てみましょう。</p><pre><code>conv2d(
     inputs,
     num_outputs,
     kernel_size,
@@ -228,74 +49,11 @@ TensorFlowが発表されてからすぐに使い始めて早二年、さまざ�
     trainable=True,
     scope=None
 )
-</code></pre>
-<p>活性化関数の指定が<code>activation_fn</code>となっています。これでは<code>contrib</code>が外れた瞬間にbreaking changeが発生しそうです。</p>
-<p>また、活性化関数のデフォルト値も<code>tf.layers.conv2d</code>は<code>None</code>ですが、<code>tf.contrib.layers.conv2d</code>は<code>relu</code>がデフォルトです。</p>
-<p>将来のことを考えると、contribが外れるタイミングで<code>tf.contrib.layers.conv2d</code>の方を現行のAPIに寄せるのが妥当と思います。そうなると今<code>tf.contrib.layers.conv2d</code>を使ったところは書き直す必要が出てますが、<code>contrib</code>は、それがあり得ると説明があるので、しょうがないと言えばしょうがないのでしょう。</p>
-<p>そんなわけで、現時点では<code>tf.contrib.layers.conv2d</code>は怖くて使えないので、<code>tf.layers.conv2d</code>を使っておこうと思っていたら、TensorFlow 1.4.0で<code>tf.layers.Conv2D</code>クラスが追加されていました。</p>
-<p>コンストラクタを見ると引数やデフォルト値は<code>tf.contrib.layers.conv2d</code>に合わせてあるようですが、これは標準のAPIとして提供する必要はあるのでしょうか……？</p>
-<p>このようなことが方々であります。</p>
-<p>全結合層の名前も<code>tf.layers.dense</code>だったり<code>tf.contrib.layers.fully_connected</code>だったりと（こちらは名前が違っているのでまだ救いがありますが）、関わっている人たちが自分が慣れている名前や引数をめいめい追加しているだけなんじゃないかと思えてきます。</p>
-<p>また、TensorFlowは、Python 2系と3系をサポートしています。</p>
-<p>サポートするのは良いのですが、その影響でTensorFlowを利用したサンプルコードがPython 2系に向けたものしか用意されていないときがあります。</p>
-<p><a href="https://github.com/tensorflow/magenta">Project Magenta</a>など先進的な取り組みも、コードを見に行くとPython 2.7系でしか動かないと書かれています。</p>
-<p>個人的には仕事以外でPython 2を使うことはしたくないので「あーあ」と思いながら画面を閉じます。</p>
-<p>直近の事例では、TensorFlow ServingのPython APIがPython 2向けにしか提供されていないということがありました。</p>
-<p>なぜPython 2の方が優先されて実装されるのかより、Python 2しか対応していないなら、それならそうとドキュメントに書いておいて欲しいわけです。</p>
-<p><a href="https://www.tensorflow.org/serving/setup">https://www.tensorflow.org/serving/setup</a></p>
-<img src="https://blog.keiji.dev/wp-content/uploads/2017/12/Screen-Shot-2017-12-13-at-8.49.08.png" alt="Screen Shot 2017-12-13 at 8.49.08" width="1706" height="372" class="aligncenter size-full wp-image-1645" />
-<p>apt-getでTensorFlow Serving　Serverをインストールして、TensorFlow Serving向けにモデルを出力したりといろいろした後に、pipでPython用のクライアントAPIをインストールしようとしたら「バージョンが違うよ」と表示されるのは、あまりにも残酷な仕打ちです。</p>
-<p>そんなわけで、PRを送ってみるなどしました。</p>
-<p><a href="https://github.com/tensorflow/serving/pull/685">https://github.com/tensorflow/serving/pull/685</a></p>
-<p>この一行で救われる原稿があります。</p>
-<hr>
-<p>そんなわけで、<a href="https://qiita.com/advent-calendar/2017/tensorflow">TensorFlow Advent Calendar</a> 12日目の記事は終わりです。</p>
-<p>明日の担当はLewuatheさんです。</p>
-
-
-
-      
-
-      
-    </article>
-    
-    
-      
-
-    
-  </div>
-
-    <footer>
-  
-
-<div class="social-icons">
-  
-
-  
-</div>
-
-
-  
-  <div class="container">
-    <p class="credits copyright">
-      <a href="https://blog.keiji.dev/about"></a>
-      &nbsp;&copy;
-      2024
-      
-        &nbsp;/&nbsp;
-        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
-      
-      &nbsp;&ndash;&nbsp;
-      <em class="fas fa-moon" id="dark-mode-toggle"></em>
-    </p>
-
-    <p class="credits theme-by">
-      Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
-      Theme
-      <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
-  </div>
-</footer>
-
-  </body>
-</html>
+</code></pre><p>活性化関数の指定が<code>activation_fn</code>となっています。これでは<code>contrib</code>が外れた瞬間にbreaking changeが発生しそうです。</p><p>また、活性化関数のデフォルト値も<code>tf.layers.conv2d</code>は<code>None</code>ですが、<code>tf.contrib.layers.conv2d</code>は<code>relu</code>がデフォルトです。</p><p>将来のことを考えると、contribが外れるタイミングで<code>tf.contrib.layers.conv2d</code>の方を現行のAPIに寄せるのが妥当と思います。そうなると今<code>tf.contrib.layers.conv2d</code>を使ったところは書き直す必要が出てますが、<code>contrib</code>は、それがあり得ると説明があるので、しょうがないと言えばしょうがないのでしょう。</p><p>そんなわけで、現時点では<code>tf.contrib.layers.conv2d</code>は怖くて使えないので、<code>tf.layers.conv2d</code>を使っておこうと思っていたら、TensorFlow 1.4.0で<code>tf.layers.Conv2D</code>クラスが追加されていました。</p><p>コンストラクタを見ると引数やデフォルト値は<code>tf.contrib.layers.conv2d</code>に合わせてあるようですが、これは標準のAPIとして提供する必要はあるのでしょうか……？</p><p>このようなことが方々であります。</p><p>全結合層の名前も<code>tf.layers.dense</code>だったり<code>tf.contrib.layers.fully_connected</code>だったりと（こちらは名前が違っているのでまだ救いがありますが）、関わっている人たちが自分が慣れている名前や引数をめいめい追加しているだけなんじゃないかと思えてきます。</p><p>また、TensorFlowは、Python 2系と3系をサポートしています。</p><p>サポートするのは良いのですが、その影響でTensorFlowを利用したサンプルコードがPython 2系に向けたものしか用意されていないときがあります。</p><p><a href=https://github.com/tensorflow/magenta>Project Magenta</a>など先進的な取り組みも、コードを見に行くとPython 2.7系でしか動かないと書かれています。</p><p>個人的には仕事以外でPython 2を使うことはしたくないので「あーあ」と思いながら画面を閉じます。</p><p>直近の事例では、TensorFlow ServingのPython APIがPython 2向けにしか提供されていないということがありました。</p><p>なぜPython 2の方が優先されて実装されるのかより、Python 2しか対応していないなら、それならそうとドキュメントに書いておいて欲しいわけです。</p><p><a href=https://www.tensorflow.org/serving/setup>https://www.tensorflow.org/serving/setup</a></p><img src=https://blog.keiji.dev/wp-content/uploads/2017/12/Screen-Shot-2017-12-13-at-8.49.08.png alt="Screen Shot 2017-12-13 at 8.49.08" width=1706 height=372 class="aligncenter size-full wp-image-1645"><p>apt-getでTensorFlow Serving　Serverをインストールして、TensorFlow Serving向けにモデルを出力したりといろいろした後に、pipでPython用のクライアントAPIをインストールしようとしたら「バージョンが違うよ」と表示されるのは、あまりにも残酷な仕打ちです。</p><p>そんなわけで、PRを送ってみるなどしました。</p><p><a href=https://github.com/tensorflow/serving/pull/685>https://github.com/tensorflow/serving/pull/685</a></p><p>この一行で救われる原稿があります。</p><hr><p>そんなわけで、<a href=https://qiita.com/advent-calendar/2017/tensorflow>TensorFlow Advent Calendar</a> 12日目の記事は終わりです。</p><p>明日の担当はLewuatheさんです。</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
+2025
+&nbsp;/&nbsp;
+<a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
+&nbsp;&ndash;&nbsp;
+<em class="fas fa-moon" id=dark-mode-toggle></em></p><p class="credits theme-by">Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
+Theme
+<a href=https://github.com/matsuyoshi30/harbor>Harbor</a></p></div></footer></body></html>

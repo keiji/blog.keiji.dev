@@ -1,195 +1,16 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-<title>git push --forceで履歴は消えないと言う話</title>
-<meta name="description" 
-      content="Don&#39;t take your glasses off."
->
-
-  
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RTC3ZY943S');
-  </script>
-  
-
-
-
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link
-  rel="alternate"
-  type="application/rss+xml"
-  href="https://blog.keiji.dev/index.xml"
-  title="めがねをかけるんだ"
-/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
-
-<meta name="twitter:title" content="git push --forceで履歴は消えないと言う話"/>
-<meta name="twitter:description" content="　GitのForce push（git push --force）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
-筆者も過去に一度だけmasterブランチに向けてForce pushをしてしまい、平謝りをした経験があります。
-　一方、最近知ったのですが、Gitリポジトリに本来入れてはいけない情報を入れたときの対応策としてForce pushすれば履歴は消えると考えている人もいるようです。
-　これについては、言葉で説明するよりやってみた方が早そうなので、実際に試してた結果を共有します。
-もしお近くで「Force pushで消える、いや消えない」と言った議論を聞いたときには、そっとこの記事と、次の記事を見せてあげてください。
-GitHub上のsensitive dataを削除するための手順と道のり - Merpay Advent Calendar 2021
-https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/
-　また、この記事について誤りや修正すべき点などがあれば、是非ご指摘いただければと思います。
-最近はBlueskyにいます（Twitterはやっていません）。
-https://staging.bsky.app/profile/keiji.bsky.social"/>
-
-
-
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-
-
-
-<link
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/styles.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-
-<link
-  id="dark-mode-theme"
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/dark.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-<script>
-  var darkTheme = document.getElementById('dark-mode-theme')
-  var storedTheme = localStorage.getItem('dark-mode-storage')
-
-  if (storedTheme === 'dark') {
-    darkTheme.disabled = false
-  } else if (storedTheme === 'light') {
-    darkTheme.disabled = true
-  }
-</script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
-  </head>
-  <body>
-    
-  
-
-
-
-
-  <header>
-    <nav class="navbar">
-  <div class="nav">
-    
-      <a href="https://blog.keiji.dev/" class="nav-logo">
-        <img
-          src="https://blog.keiji.dev/images/logo.png"
-          width=""
-          height=""
-          alt="Logo"
-        />
-      </a>
-    
-
-    <ul class="nav-links">
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/profile/" id="Profile"
-              ><em class="fas fa-user fa-lg"></em
-            ></a>
-          </li>
-          
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
-              ><em class="fab fa-osi fa-lg"></em
-            ></a>
-          </li>
-          
-      
-    </ul>
-  </div>
-</nav>
-
-    <div class="intro-header">
-      <div class="container">
-        <div class="post-heading">
-          
-            <h1>
-              git push --forceで履歴は消えないと言う話
-            </h1>
-          
-          
-            <span class="meta-post">
-  <em class="fa fa-calendar-alt"></em
-  >&nbsp;2023-06-15
-  
-    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/"
-        >雑記</a
-      >&nbsp;
-    
-  
-</span>
-
-          
-        </div>
-      </div>
-    </div>
-  </header>
-  
-
-    
-  <div class="container" role="main">
-    <article class="article" class="blog-post">
-      
-  <p>　GitのForce push（<code>git push --force</code>）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
-筆者も過去に一度だけmasterブランチに向けてForce pushをしてしまい、平謝りをした経験があります。</p>
-<p>　一方、最近知ったのですが、Gitリポジトリに本来入れてはいけない情報を入れたときの対応策としてForce pushすれば履歴は消えると考えている人もいるようです。</p>
-<p>　これについては、言葉で説明するよりやってみた方が早そうなので、実際に試してた結果を共有します。
-もしお近くで「Force pushで消える、いや消えない」と言った議論を聞いたときには、そっとこの記事と、次の記事を見せてあげてください。</p>
-<p>GitHub上のsensitive dataを削除するための手順と道のり - Merpay Advent Calendar 2021
-<a href="https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/">https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/</a></p>
-<p>　また、この記事について誤りや修正すべき点などがあれば、是非ご指摘いただければと思います。
-最近はBlueskyにいます（Twitterはやっていません）。</p>
-<p><a href="https://staging.bsky.app/profile/keiji.bsky.social">https://staging.bsky.app/profile/keiji.bsky.social</a></p>
-<h2 id="実験">実験</h2>
-<p>実験は、次のステップで行いました。</p>
-<ul>
-<li>リポジトリを作成・cloneする</li>
-<li>履歴を作成する（repo1）</li>
-<li>履歴を作成する（repo2）</li>
-<li>リポジトリの状態を確認する（repo3）</li>
-<li>消えた履歴を復元する（repo3）</li>
-</ul>
-<h3 id="リポジトリを作成cloneする">リポジトリを作成・cloneする</h3>
-<p>　まず、ローカルにGitのリポジトリ<code>mygreatrepository</code>を作ります。</p>
-<pre tabindex="0"><code>$ cd forcepushtest
+<!doctype html><html lang=ja><head><meta charset=utf-8><title>git push --forceで履歴は消えないと言う話</title>
+<meta name=description content="Don't take your glasses off."><script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-RTC3ZY943S")</script><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate type=application/rss+xml href=https://blog.keiji.dev/index.xml title=めがねをかけるんだ><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.keiji.dev/images/logo.png"><meta name=twitter:title content="git push --forceで履歴は消えないと言う話"><meta name=twitter:description content="　GitのForce push（git push --force）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。 筆者も過去に一度だけmasterブランチに向けてForce pushをしてしまい、平謝りをした経験があります。
+一方、最近知ったのですが、Gitリポジトリに本来入れてはいけない情報を入れたときの対応策としてForce pushすれば履歴は消えると考えている人もいるようです。
+これについては、言葉で説明するよりやってみた方が早そうなので、実際に試してた結果を共有します。 もしお近くで「Force pushで消える、いや消えない」と言った議論を聞いたときには、そっとこの記事と、次の記事を見せてあげてください。
+GitHub上のsensitive dataを削除するための手順と道のり - Merpay Advent Calendar 2021 https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/
+また、この記事について誤りや修正すべき点などがあれば、是非ご指摘いただければと思います。 最近はBlueskyにいます（Twitterはやっていません）。
+https://staging.bsky.app/profile/keiji.bsky.social"><link rel=stylesheet href=https://blog.keiji.dev/fontawesome/css/all.min.css><link crossorigin=anonymous href=https://blog.keiji.dev/css/styles.min.css integrity rel="preload stylesheet" as=style><link rel=stylesheet href=https://blog.keiji.dev/css/default.css><link id=dark-mode-theme crossorigin=anonymous href=https://blog.keiji.dev/css/dark.min.css integrity rel="preload stylesheet" as=style><script>var darkTheme=document.getElementById("dark-mode-theme"),storedTheme=localStorage.getItem("dark-mode-storage");storedTheme==="dark"?darkTheme.disabled=!1:storedTheme==="light"&&(darkTheme.disabled=!0)</script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/theme.js integrity></script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/instantpage.min.js integrity></script><meta name=generator content="Hugo 0.133.0"></head><body><header><nav class=navbar><div class=nav><a href=https://blog.keiji.dev/ class=nav-logo><img src=https://blog.keiji.dev/images/logo.png width height alt=Logo></a><ul class=nav-links><li><a href=https://blog.keiji.dev/profile/ id=Profile><em class="fas fa-user fa-lg"></em></a></li><li><a href=https://blog.keiji.dev/licenses/ id=Licenses><em class="fab fa-osi fa-lg"></em></a></li></ul></div></nav><div class=intro-header><div class=container><div class=post-heading><h1>git push --forceで履歴は消えないと言う話</h1><span class=meta-post><em class="fa fa-calendar-alt"></em>&nbsp;2023-06-15
+&nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
+<a href=https://blog.keiji.dev/categories/%E9%9B%91%E8%A8%98/>雑記</a>&nbsp;</span></div></div></div></header><div class=container role=main><article class=article class=blog-post><p>　GitのForce push（<code>git push --force</code>）と言えば、間違って実行してリポジトリ吹き飛ばしたとか、ミスオペレーションの代名詞として語られることが多い操作です。
+筆者も過去に一度だけmasterブランチに向けてForce pushをしてしまい、平謝りをした経験があります。</p><p>　一方、最近知ったのですが、Gitリポジトリに本来入れてはいけない情報を入れたときの対応策としてForce pushすれば履歴は消えると考えている人もいるようです。</p><p>　これについては、言葉で説明するよりやってみた方が早そうなので、実際に試してた結果を共有します。
+もしお近くで「Force pushで消える、いや消えない」と言った議論を聞いたときには、そっとこの記事と、次の記事を見せてあげてください。</p><p>GitHub上のsensitive dataを削除するための手順と道のり - Merpay Advent Calendar 2021
+<a href=https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/>https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/</a></p><p>　また、この記事について誤りや修正すべき点などがあれば、是非ご指摘いただければと思います。
+最近はBlueskyにいます（Twitterはやっていません）。</p><p><a href=https://staging.bsky.app/profile/keiji.bsky.social>https://staging.bsky.app/profile/keiji.bsky.social</a></p><h2 id=実験>実験</h2><p>実験は、次のステップで行いました。</p><ul><li>リポジトリを作成・cloneする</li><li>履歴を作成する（repo1）</li><li>履歴を作成する（repo2）</li><li>リポジトリの状態を確認する（repo3）</li><li>消えた履歴を復元する（repo3）</li></ul><h3 id=リポジトリを作成cloneする>リポジトリを作成・cloneする</h3><p>　まず、ローカルにGitのリポジトリ<code>mygreatrepository</code>を作ります。</p><pre tabindex=0><code>$ cd forcepushtest
 $ git init --bare mygreatrepository
 hint: Using &#39;master&#39; as the name for the initial branch. This default branch name
 hint: is subject to change. To configure the initial branch name to use in all
@@ -202,12 +23,10 @@ hint: &#39;development&#39;. The just-created branch can be renamed via this com
 hint:
 hint: 	git branch -m &lt;name&gt;
 Initialized empty Git repository in /Users/keiji_ariyama/forcepushtest/mygreatrepository/
-</code></pre><p>サーバー上のリポジトリを再現するためにオプション<code>--bare</code>を付けています。</p>
-<pre tabindex="0"><code>$ ls mygreatrepository
+</code></pre><p>サーバー上のリポジトリを再現するためにオプション<code>--bare</code>を付けています。</p><pre tabindex=0><code>$ ls mygreatrepository
 HEAD		description	info		refs
 config		hooks		objects
-</code></pre><p>　次に、これをcloneします。今回は3つくらい作っておきましょう。</p>
-<pre tabindex="0"><code>$ git clone mygreatrepository repo1
+</code></pre><p>　次に、これをcloneします。今回は3つくらい作っておきましょう。</p><pre tabindex=0><code>$ git clone mygreatrepository repo1
 Cloning into &#39;repo1&#39;...
 warning: You appear to have cloned an empty repository.
 
@@ -218,10 +37,7 @@ warning: You appear to have cloned an empty repository.
 $ git clone mygreatrepository repo3
 Cloning into &#39;repo3&#39;...
 warning: You appear to have cloned an empty repository.
-</code></pre><p>　これで<code>mygreatrepository</code>を参照する3つのディレクトリができました。</p>
-<h3 id="履歴を作成するrepo1">履歴を作成する（repo1）</h3>
-<p>　早速<code>repo1</code>に移動して、ファイルをコミットしていきます。</p>
-<pre tabindex="0"><code>$ cd repo1
+</code></pre><p>　これで<code>mygreatrepository</code>を参照する3つのディレクトリができました。</p><h3 id=履歴を作成するrepo1>履歴を作成する（repo1）</h3><p>　早速<code>repo1</code>に移動して、ファイルをコミットしていきます。</p><pre tabindex=0><code>$ cd repo1
 $ touch README.md
 $ git add README.md
 $ git commit -m &#39;First commit&#39;
@@ -230,8 +46,7 @@ $ git commit -m &#39;First commit&#39;
  create mode 100644 README.md
 $ ls
 README.md
-</code></pre><p>　さらに履歴を作ります。</p>
-<pre tabindex="0"><code>$ echo &#34;# My great repository&#34; &gt; README.md
+</code></pre><p>　さらに履歴を作ります。</p><pre tabindex=0><code>$ echo &#34;# My great repository&#34; &gt; README.md
 $ git add README.md
 $ git commit -m &#39;Update README.md&#39;
  1 file changed, 1 insertion(+)
@@ -247,8 +62,7 @@ Author: ARIYAMA Keiji &lt;keiji.ariyama@gmail.com&gt;
 Date:   Thu Jun 15 14:57:22 2023 +0900
 
     First commit
-</code></pre><p>　この2つのコミットからなる履歴を、originのリポジトリ<code>mygreatrepository</code>にpushします。</p>
-<pre tabindex="0"><code>$ git push origin master
+</code></pre><p>　この2つのコミットからなる履歴を、originのリポジトリ<code>mygreatrepository</code>にpushします。</p><pre tabindex=0><code>$ git push origin master
 Enumerating objects: 6, done.
 Counting objects: 100% (6/6), done.
 Delta compression using up to 10 threads
@@ -257,10 +71,7 @@ Writing objects: 100% (6/6), 820 bytes | 820.00 KiB/s, done.
 Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
 To /Users/keiji_ariyama/forcepushtest/mygreatrepository
  * [new branch]      master -&gt; master
-</code></pre><p>　これでリポジトリのmasterは<code>f01a8e4beb6eba37a5ee451c9c589964cc85e6fd</code>で示されるコミットになりました。</p>
-<h3 id="履歴を作成するrepo2">履歴を作成する（repo2）</h3>
-<p>　続いて、同じリポジトリをcloneした別の場所<code>repo2</code>に移動して、まったく別の履歴を作ります。</p>
-<pre tabindex="0"><code>$ cd ../repo2
+</code></pre><p>　これでリポジトリのmasterは<code>f01a8e4beb6eba37a5ee451c9c589964cc85e6fd</code>で示されるコミットになりました。</p><h3 id=履歴を作成するrepo2>履歴を作成する（repo2）</h3><p>　続いて、同じリポジトリをcloneした別の場所<code>repo2</code>に移動して、まったく別の履歴を作ります。</p><pre tabindex=0><code>$ cd ../repo2
 $ git log
 fatal: your current branch &#39;master&#39; does not have any commits yet
 $ touch HELLO_WORLD.md
@@ -275,8 +86,7 @@ Author: ARIYAMA Keiji &lt;keiji.ariyama@gmail.com&gt;
 Date:   Thu Jun 15 15:03:33 2023 +0900
 
     Create HELLO_WORLD.md
-</code></pre><p>　<code>repo2</code>で新しく作った履歴をpushします。</p>
-<pre tabindex="0"><code>$ git push origin master
+</code></pre><p>　<code>repo2</code>で新しく作った履歴をpushします。</p><pre tabindex=0><code>$ git push origin master
  ! [rejected]        master -&gt; master (fetch first)
 error: failed to push some refs to &#39;/Users/keiji_ariyama/forcepushtest/mygreatrepository&#39;
 hint: Updates were rejected because the remote contains work that you do
@@ -285,18 +95,14 @@ hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., &#39;git pull ...&#39;) before pushing again.
 hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.
 </code></pre><p>　このようにエラーになります。すでに<code>repo1</code>の履歴がpushされているからです。
-そこでみんな大好きForce push（<code>git push --force</code>）を使います。</p>
-<pre tabindex="0"><code>$ git push -f origin master
+そこでみんな大好きForce push（<code>git push --force</code>）を使います。</p><pre tabindex=0><code>$ git push -f origin master
 Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 411 bytes | 411.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 To /Users/keiji_ariyama/forcepushtest/mygreatrepository
  + f01a8e4...10bf7e9 master -&gt; master (forced update)
-</code></pre><p>これで、リポジトリ<code>mygreaterepository</code>の履歴は強制的に書き換わり、masterの先頭は<code>10bf7e96a13e5b1f154499129a5149509e21e7f0</code>で示されるコミットになりました。</p>
-<h3 id="リポジトリの状態を確認するrepo3">リポジトリの状態を確認する（repo3）</h3>
-<p>　リポジトリの状態を確認するため、<code>repo3</code>に移動して<code>pull</code>します。</p>
-<pre tabindex="0"><code>$ ../repo3
+</code></pre><p>これで、リポジトリ<code>mygreaterepository</code>の履歴は強制的に書き換わり、masterの先頭は<code>10bf7e96a13e5b1f154499129a5149509e21e7f0</code>で示されるコミットになりました。</p><h3 id=リポジトリの状態を確認するrepo3>リポジトリの状態を確認する（repo3）</h3><p>　リポジトリの状態を確認するため、<code>repo3</code>に移動して<code>pull</code>します。</p><pre tabindex=0><code>$ ../repo3
 $ git pull origin master
 remote: Enumerating objects: 3, done.
 remote: Counting objects: 100% (3/3), done.
@@ -313,11 +119,8 @@ Author: ARIYAMA Keiji &lt;keiji.ariyama@gmail.com&gt;
 Date:   Thu Jun 15 15:03:33 2023 +0900
 
     Create HELLO_WORLD.md
-</code></pre><p>　期待した状態になっていることが確認できました。</p>
-<h3 id="消えた履歴を復元するrepo3">消えた履歴を復元する（repo3）</h3>
-<p>　さて、この状態だとrepo1に追加した2つのコミット <code>f01a8e4beb6eba37a5ee451c9c589964cc85e6fd</code>と<code>5429edccda1370e2c4b8e8b21f107ea72d26dbed</code>からなる履歴は消えたように見えます。
-しかし、データとしてはしっかり残っていて、コミットハッシュを指定すれば手元にpullして履歴を復元できます。</p>
-<pre tabindex="0"><code>$ git pull origin f01a8e4beb6eba37a5ee451c9c589964cc85e6fd
+</code></pre><p>　期待した状態になっていることが確認できました。</p><h3 id=消えた履歴を復元するrepo3>消えた履歴を復元する（repo3）</h3><p>　さて、この状態だとrepo1に追加した2つのコミット <code>f01a8e4beb6eba37a5ee451c9c589964cc85e6fd</code>と<code>5429edccda1370e2c4b8e8b21f107ea72d26dbed</code>からなる履歴は消えたように見えます。
+しかし、データとしてはしっかり残っていて、コミットハッシュを指定すれば手元にpullして履歴を復元できます。</p><pre tabindex=0><code>$ git pull origin f01a8e4beb6eba37a5ee451c9c589964cc85e6fd
 remote: Enumerating objects: 6, done.
 remote: Counting objects: 100% (6/6), done.
 remote: Compressing objects: 100% (2/2), done.
@@ -352,15 +155,8 @@ Author: ARIYAMA Keiji &lt;keiji.ariyama@gmail.com&gt;
 Date:   Thu Jun 15 14:57:22 2023 +0900
 
     First commit
-</code></pre><h2 id="実験結果">実験結果</h2>
-<p>　以上のことから、リポジトリに新しい履歴をForce pushをしても、コミットのデータは消えずに残っている。Force pushするだけではGitの履歴は消えないことが分かりました。</p>
-<p>　機微なデータを含むコミットを書き換えて、履歴を再構築したものをForce pushすれば、一見消えたように見えますが、内部的にはデータとしては残っていることになります。</p>
-<p>　「コミットハッシュを知られなければ良いだろう」という話もあるかもしれませんが、GitHubだとPull Requestなどそこかしこにハッシュが書いてあります。また、いずれかのコミットメッセージに参考として書いてある可能性もあります。
-　コミットハッシュが知られなければ良いと言う意見を、ぼくは個人的には支持できませんが、そこは、機微データの重要度との兼ね合いで判断していただければと思います。</p>
-<h2 id="履歴の消し方">履歴の消し方</h2>
-<h3 id="gitコマンドでリポジトリに直接アクセスできる場合">Gitコマンドでリポジトリに直接アクセスできる場合</h3>
-<p>　今回のケースでは、リモートリポジトリのディレクトリに直接アクセスできるので、<code>git gc --prune=now</code>することで履歴を消すことができました。</p>
-<pre tabindex="0"><code>$ cd ../mygreatrepository
+</code></pre><h2 id=実験結果>実験結果</h2><p>　以上のことから、リポジトリに新しい履歴をForce pushをしても、コミットのデータは消えずに残っている。Force pushするだけではGitの履歴は消えないことが分かりました。</p><p>　機微なデータを含むコミットを書き換えて、履歴を再構築したものをForce pushすれば、一見消えたように見えますが、内部的にはデータとしては残っていることになります。</p><p>　「コミットハッシュを知られなければ良いだろう」という話もあるかもしれませんが、GitHubだとPull Requestなどそこかしこにハッシュが書いてあります。また、いずれかのコミットメッセージに参考として書いてある可能性もあります。
+　コミットハッシュが知られなければ良いと言う意見を、ぼくは個人的には支持できませんが、そこは、機微データの重要度との兼ね合いで判断していただければと思います。</p><h2 id=履歴の消し方>履歴の消し方</h2><h3 id=gitコマンドでリポジトリに直接アクセスできる場合>Gitコマンドでリポジトリに直接アクセスできる場合</h3><p>　今回のケースでは、リモートリポジトリのディレクトリに直接アクセスできるので、<code>git gc --prune=now</code>することで履歴を消すことができました。</p><pre tabindex=0><code>$ cd ../mygreatrepository
 $ git gc --prune=now
 Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
@@ -371,59 +167,13 @@ $ cd ../repo2
 $ git pull origin f01a8e4beb6eba37a5ee451c9c589964cc85e6fd
 fatal: git upload-pack: not our ref f01a8e4beb6eba37a5ee451c9c589964cc85e6fd
 fatal: remote error: upload-pack: not our ref f01a8e4beb6eba37a5ee451c9c589964cc85e6fd
-</code></pre><h3 id="github等の外部サービスの場合">GitHub等の外部サービスの場合</h3>
-<p>　GitHubやBitbucketと言ったサービスに組み込まれたGitは<code>git gc</code>などが使えないので、サポートに連絡を取って対応を求める必要があるという認識です。
-詳細はお使いのサービスのマニュアルやサポートにお問い合わせください。</p>
-<p>　また再掲になりますが、それについては次の記事に詳しく書いてあるので参考にしてください（これを見ながら、ぼくも手続きをしたことがありますが、情報が消えるまではずっと冷や汗を流していました）。</p>
-<p>GitHub上のsensitive dataを削除するための手順と道のり - Merpay Advent Calendar 2021
-<a href="https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/">https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/</a></p>
-<hr>
-<p>　最後になりましたが、この記事の内容を必要とする人が今後生まれないことを切実に願っています。</p>
-
-
-
-      
-
-      
-    </article>
-    
-    
-      
-
-    
-  </div>
-
-    <footer>
-  
-
-<div class="social-icons">
-  
-
-  
-</div>
-
-
-  
-  <div class="container">
-    <p class="credits copyright">
-      <a href="https://blog.keiji.dev/about"></a>
-      &nbsp;&copy;
-      2024
-      
-        &nbsp;/&nbsp;
-        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
-      
-      &nbsp;&ndash;&nbsp;
-      <em class="fas fa-moon" id="dark-mode-toggle"></em>
-    </p>
-
-    <p class="credits theme-by">
-      Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
-      Theme
-      <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
-  </div>
-</footer>
-
-  </body>
-</html>
+</code></pre><h3 id=github等の外部サービスの場合>GitHub等の外部サービスの場合</h3><p>　GitHubやBitbucketと言ったサービスに組み込まれたGitは<code>git gc</code>などが使えないので、サポートに連絡を取って対応を求める必要があるという認識です。
+詳細はお使いのサービスのマニュアルやサポートにお問い合わせください。</p><p>　また再掲になりますが、それについては次の記事に詳しく書いてあるので参考にしてください（これを見ながら、ぼくも手続きをしたことがありますが、情報が消えるまではずっと冷や汗を流していました）。</p><p>GitHub上のsensitive dataを削除するための手順と道のり - Merpay Advent Calendar 2021
+<a href=https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/>https://engineering.mercari.com/blog/entry/20211207-removing-sensitive-data-from-github/</a></p><hr><p>　最後になりましたが、この記事の内容を必要とする人が今後生まれないことを切実に願っています。</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
+2025
+&nbsp;/&nbsp;
+<a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
+&nbsp;&ndash;&nbsp;
+<em class="fas fa-moon" id=dark-mode-toggle></em></p><p class="credits theme-by">Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
+Theme
+<a href=https://github.com/matsuyoshi30/harbor>Harbor</a></p></div></footer></body></html>

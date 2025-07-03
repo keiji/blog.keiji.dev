@@ -1,252 +1,19 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-<title>AndroidKeyStoreがEd25519に（サイレントで）対応していた件</title>
-<meta name="description" 
-      content="Don&#39;t take your glasses off."
->
-
-  
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RTC3ZY943S');
-  </script>
-  
-
-
-
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link
-  rel="alternate"
-  type="application/rss+xml"
-  href="https://blog.keiji.dev/index.xml"
-  title="めがねをかけるんだ"
-/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
-
-<meta name="twitter:title" content="AndroidKeyStoreがEd25519に（サイレントで）対応していた件"/>
-<meta name="twitter:description" content="訂正
-記事の公開当初、&ldquo;Ed25519対応はAndroid 12以降に含まれる&quot;と記述していましたが、正しくは&quot;Ed25519対応はAndroid 13以降に含まれる&quot;です。
+<!doctype html><html lang=ja><head><meta charset=utf-8><title>AndroidKeyStoreがEd25519に（サイレントで）対応していた件</title>
+<meta name=description content="Don't take your glasses off."><script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-RTC3ZY943S")</script><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate type=application/rss+xml href=https://blog.keiji.dev/index.xml title=めがねをかけるんだ><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.keiji.dev/images/logo.png"><meta name=twitter:title content="AndroidKeyStoreがEd25519に（サイレントで）対応していた件"><meta name=twitter:description content='訂正 記事の公開当初、“Ed25519対応はAndroid 12以降に含まれる"と記述していましたが、正しくは"Ed25519対応はAndroid 13以降に含まれる"です。
 AndroidKeyStoreEdECPublicKey.javaは、Android 12のリリースブランチには存在せず、Android 13のリリースブランチから存在しています。
-https://cs.android.com/android/platform/superproject/&#43;/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
-https://cs.android.com/android/platform/superproject/&#43;/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
-
+https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
+https://cs.android.com/android/platform/superproject/+/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java
 まずは宣伝です。
 11月12日（日）、池袋サンシャインシティにて開催される「技術書典15」に、サークル「めがねをかけるんだ」として参加させていただくことになりました。
 サークル配置は「さ17」。
 新刊は「AndroidKeyStoreと過ごした400日」です。
-
-
-
-タイトル
-AndroidKeyStoreと過ごした400日
-
-
-
-
-判型
-B5
-
-
-ページ数
-32p（電子版）
-
-
-頒布価格
-500円（会場価格）
-
-
-発行
-個人サークル「めがねをかけるんだ」
-
-
-
-本文サンプルおよび電子版販売ページはこちら"/>
-
-
-
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-
-
-
-<link
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/styles.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-
-<link
-  id="dark-mode-theme"
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/dark.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-<script>
-  var darkTheme = document.getElementById('dark-mode-theme')
-  var storedTheme = localStorage.getItem('dark-mode-storage')
-
-  if (storedTheme === 'dark') {
-    darkTheme.disabled = false
-  } else if (storedTheme === 'light') {
-    darkTheme.disabled = true
-  }
-</script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
-  </head>
-  <body>
-    
-  
-
-
-
-
-  <header>
-    <nav class="navbar">
-  <div class="nav">
-    
-      <a href="https://blog.keiji.dev/" class="nav-logo">
-        <img
-          src="https://blog.keiji.dev/images/logo.png"
-          width=""
-          height=""
-          alt="Logo"
-        />
-      </a>
-    
-
-    <ul class="nav-links">
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/profile/" id="Profile"
-              ><em class="fas fa-user fa-lg"></em
-            ></a>
-          </li>
-          
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
-              ><em class="fab fa-osi fa-lg"></em
-            ></a>
-          </li>
-          
-      
-    </ul>
-  </div>
-</nav>
-
-    <div class="intro-header">
-      <div class="container">
-        <div class="post-heading">
-          
-            <h1>
-              AndroidKeyStoreがEd25519に（サイレントで）対応していた件
-            </h1>
-          
-          
-            <span class="meta-post">
-  <em class="fa fa-calendar-alt"></em
-  >&nbsp;2023-11-11
-  
-    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/"
-        >イベント</a
-      >&nbsp;
-    
-  
-</span>
-
-          
-        </div>
-      </div>
-    </div>
-  </header>
-  
-
-    
-  <div class="container" role="main">
-    <article class="article" class="blog-post">
-      
-  <p>訂正
-記事の公開当初、&ldquo;Ed25519対応はAndroid 12以降に含まれる&quot;と記述していましたが、正しくは&quot;Ed25519対応はAndroid 13以降に含まれる&quot;です。</p>
-<p><code>AndroidKeyStoreEdECPublicKey.java</code>は、Android 12のリリースブランチには存在せず、Android 13のリリースブランチから存在しています。</p>
-<p><a href="https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java">https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java</a></p>
-<p><a href="https://cs.android.com/android/platform/superproject/+/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java">https://cs.android.com/android/platform/superproject/+/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java</a></p>
-<hr>
-<p>まずは宣伝です。</p>
-<p>11月12日（日）、池袋サンシャインシティにて開催される「<a href="https://techbookfest.org/event/tbf15">技術書典15</a>」に、サークル「<a href="https://techbookfest.org/organization/5173176170446848">めがねをかけるんだ</a>」として参加させていただくことになりました。</p>
-<p>サークル配置は「さ17」。</p>
-<p>新刊は「AndroidKeyStoreと過ごした400日」です。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">タイトル</th>
-<th style="text-align:left">AndroidKeyStoreと過ごした400日</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">判型</td>
-<td style="text-align:left">B5</td>
-</tr>
-<tr>
-<td style="text-align:left">ページ数</td>
-<td style="text-align:left">32p（電子版）</td>
-</tr>
-<tr>
-<td style="text-align:left">頒布価格</td>
-<td style="text-align:left">500円（会場価格）</td>
-</tr>
-<tr>
-<td style="text-align:left">発行</td>
-<td style="text-align:left">個人サークル「めがねをかけるんだ」</td>
-</tr>
-</tbody>
-</table>
-<p>本文サンプルおよび電子版販売ページは<a href="https://techbookfest.org/product/cUVLF5TvwkhQU2t4K72RVj">こちら</a></p>
-<hr>
-<h2 id="androidkeystoreがed25519にサイレントで対応していた件">AndroidKeyStoreがEd25519に（サイレントで）対応していた件</h2>
-<p>本題です。</p>
-<p>新刊を泣きながら執筆中
-「楕円曲線暗号のパラメーターとか全部文字列で指定しなければならないからつらいよね」みたいなことを書いているところで、ふと有りもしない曲線の名前を指定して鍵生成を試してみたところ、予想通りに例外が発生したのですが、そのメッセージがこちら。</p>
-<pre tabindex="0"><code>java.security.InvalidAlgorithmParameterException: Unsupported EC curve name: meganekko-daisuki. Supported: [ed25519, p-224, p-256, p-384, p-521, prime256v1, secp224r1, secp256r1, secp384r1, secp521r1, x25519]
-</code></pre><p>注目して欲しいのは、サポートしているキーストアの中に<code>ed25519</code>があることです。</p>
-<p>ぼくが知っているAndroidKeyStoreちゃんはEd25519にはまだ対応していなかったはずです。<a href="https://developer.android.com/training/articles/keystore?hl=ja">AndroidKeyStoreのページ（日本語）</a>にも、<a href="https://developer.android.com/reference/java/security/Signature">SignatureのAPIリファレンス（英語）</a>にも、Curve25519に関する記述はありません。</p>
-<p>実際、以前試したときは「Ed25519、知りませんね？」となって、以降、AndroidKeyStoreはCurve25519には対応していないと覚えてきました。</p>
-<p>けれど、エラーメッセージには確かに<code>ed25519</code>の文字があります（<code>x25519</code>も）。</p>
-<p>ドキドキしながら<code>KeyGenParameterSpec.Builder</code>で<code>ed25519</code>の鍵ペアの生成を試みたところ、普通に生成・利用できてしまいました。</p>
-<h3 id="サンプルテストコード">サンプル（テスト）コード</h3>
-<p>AndroidKeyStoreでEd25519をつかって署名と検証をするコードがこちらです。
-新刊には入れられなかったのが悔しいので、置いておきます。</p>
-<pre tabindex="0"><code>package dev.keiji.bocchi.crypto
+タイトル AndroidKeyStoreと過ごした400日 判型 B5 ページ数 32p（電子版） 頒布価格 500円（会場価格） 発行 個人サークル「めがねをかけるんだ」 本文サンプルおよび電子版販売ページはこちら'><link rel=stylesheet href=https://blog.keiji.dev/fontawesome/css/all.min.css><link crossorigin=anonymous href=https://blog.keiji.dev/css/styles.min.css integrity rel="preload stylesheet" as=style><link rel=stylesheet href=https://blog.keiji.dev/css/default.css><link id=dark-mode-theme crossorigin=anonymous href=https://blog.keiji.dev/css/dark.min.css integrity rel="preload stylesheet" as=style><script>var darkTheme=document.getElementById("dark-mode-theme"),storedTheme=localStorage.getItem("dark-mode-storage");storedTheme==="dark"?darkTheme.disabled=!1:storedTheme==="light"&&(darkTheme.disabled=!0)</script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/theme.js integrity></script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/instantpage.min.js integrity></script><meta name=generator content="Hugo 0.133.0"></head><body><header><nav class=navbar><div class=nav><a href=https://blog.keiji.dev/ class=nav-logo><img src=https://blog.keiji.dev/images/logo.png width height alt=Logo></a><ul class=nav-links><li><a href=https://blog.keiji.dev/profile/ id=Profile><em class="fas fa-user fa-lg"></em></a></li><li><a href=https://blog.keiji.dev/licenses/ id=Licenses><em class="fab fa-osi fa-lg"></em></a></li></ul></div></nav><div class=intro-header><div class=container><div class=post-heading><h1>AndroidKeyStoreがEd25519に（サイレントで）対応していた件</h1><span class=meta-post><em class="fa fa-calendar-alt"></em>&nbsp;2023-11-11
+&nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
+<a href=https://blog.keiji.dev/categories/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/>イベント</a>&nbsp;</span></div></div></div></header><div class=container role=main><article class=article class=blog-post><p>訂正
+記事の公開当初、&ldquo;Ed25519対応はAndroid 12以降に含まれる"と記述していましたが、正しくは"Ed25519対応はAndroid 13以降に含まれる"です。</p><p><code>AndroidKeyStoreEdECPublicKey.java</code>は、Android 12のリリースブランチには存在せず、Android 13のリリースブランチから存在しています。</p><p><a href=https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java>https://cs.android.com/android/platform/superproject/+/android12-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java</a></p><p><a href=https://cs.android.com/android/platform/superproject/+/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java>https://cs.android.com/android/platform/superproject/+/android13-release:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java</a></p><hr><p>まずは宣伝です。</p><p>11月12日（日）、池袋サンシャインシティにて開催される「<a href=https://techbookfest.org/event/tbf15>技術書典15</a>」に、サークル「<a href=https://techbookfest.org/organization/5173176170446848>めがねをかけるんだ</a>」として参加させていただくことになりました。</p><p>サークル配置は「さ17」。</p><p>新刊は「AndroidKeyStoreと過ごした400日」です。</p><table><thead><tr><th style=text-align:left>タイトル</th><th style=text-align:left>AndroidKeyStoreと過ごした400日</th></tr></thead><tbody><tr><td style=text-align:left>判型</td><td style=text-align:left>B5</td></tr><tr><td style=text-align:left>ページ数</td><td style=text-align:left>32p（電子版）</td></tr><tr><td style=text-align:left>頒布価格</td><td style=text-align:left>500円（会場価格）</td></tr><tr><td style=text-align:left>発行</td><td style=text-align:left>個人サークル「めがねをかけるんだ」</td></tr></tbody></table><p>本文サンプルおよび電子版販売ページは<a href=https://techbookfest.org/product/cUVLF5TvwkhQU2t4K72RVj>こちら</a></p><hr><h2 id=androidkeystoreがed25519にサイレントで対応していた件>AndroidKeyStoreがEd25519に（サイレントで）対応していた件</h2><p>本題です。</p><p>新刊を泣きながら執筆中
+「楕円曲線暗号のパラメーターとか全部文字列で指定しなければならないからつらいよね」みたいなことを書いているところで、ふと有りもしない曲線の名前を指定して鍵生成を試してみたところ、予想通りに例外が発生したのですが、そのメッセージがこちら。</p><pre tabindex=0><code>java.security.InvalidAlgorithmParameterException: Unsupported EC curve name: meganekko-daisuki. Supported: [ed25519, p-224, p-256, p-384, p-521, prime256v1, secp224r1, secp256r1, secp384r1, secp521r1, x25519]
+</code></pre><p>注目して欲しいのは、サポートしているキーストアの中に<code>ed25519</code>があることです。</p><p>ぼくが知っているAndroidKeyStoreちゃんはEd25519にはまだ対応していなかったはずです。<a href="https://developer.android.com/training/articles/keystore?hl=ja">AndroidKeyStoreのページ（日本語）</a>にも、<a href=https://developer.android.com/reference/java/security/Signature>SignatureのAPIリファレンス（英語）</a>にも、Curve25519に関する記述はありません。</p><p>実際、以前試したときは「Ed25519、知りませんね？」となって、以降、AndroidKeyStoreはCurve25519には対応していないと覚えてきました。</p><p>けれど、エラーメッセージには確かに<code>ed25519</code>の文字があります（<code>x25519</code>も）。</p><p>ドキドキしながら<code>KeyGenParameterSpec.Builder</code>で<code>ed25519</code>の鍵ペアの生成を試みたところ、普通に生成・利用できてしまいました。</p><h3 id=サンプルテストコード>サンプル（テスト）コード</h3><p>AndroidKeyStoreでEd25519をつかって署名と検証をするコードがこちらです。
+新刊には入れられなかったのが悔しいので、置いておきます。</p><pre tabindex=0><code>package dev.keiji.bocchi.crypto
 
 import android.security.keystore.KeyGenParameterSpec
 import android.security.keystore.KeyInfo
@@ -392,17 +159,8 @@ private fun getKeyInfo(privateKey: PrivateKey): KeyInfo {
     val factory = KeyFactory.getInstance(privateKey.algorithm, keyStore.provider)
     return factory.getKeySpec(privateKey, KeyInfo::class.java) as KeyInfo
 }
-</code></pre><h3 id="とりあえず使えるけど">とりあえず使えるけど</h3>
-<p>AndroidKeyStoreでEd25519が使える。個人的には大ニュースなのですが、実際に使ってみると、署名はできても検証ができないなど、かなり急ぎで入れた印象があります。</p>
-<p>AndroidKeyStoreで生成したEd25519の鍵、公開鍵の型は<code>AndroidKeyStoreEdECPublicKey</code>となっています（が、<code>@hide</code>が付いているのでクラス自体は見えない）。</p>
-<p>このクラス名を手がかりに<a href="https://cs.android.com/android/_/android/platform/frameworks/base/+/143fa39384d69d4de7a92ce64b2a7a2ac0ba8728">コミットログ</a>を見たところ、追加されたのは2022年の5月5日、Android <del>12</del> 13以降に含まれているようです。</p>
-<p>秘密鍵（<code>AndroidKeyStoreEdECPrivateKey</code>）は、そのまま<code>Signature</code>を使って署名はできるのですが、公開鍵でverifyしようとするとサポートしていない例外が出ます。どういうことだ。</p>
-<pre tabindex="0"><code>java.security.InvalidKeyException: No installed provider supports this key: android.security.keystore2.AndroidKeyStoreEdECPublicKey
-</code></pre><p>しょうがないので、署名はAndroidKeyStore、検証はBouncyCastleに任せることにしました。</p>
-<h3 id="公開鍵はx509">公開鍵はX.509</h3>
-<p>BouncyCastleはEd25519の公開鍵は32バイトの長さを持つ値を想定しています。</p>
-<p>一方、AndroidKeyStoreで生成したEd25519の公開鍵は「X.509エンコード」と<a href="https://cs.android.com/android/_/android/platform/frameworks/base/+/143fa39384d69d4de7a92ce64b2a7a2ac0ba8728">コミットログ</a>に書いてあるので、<code>encode</code>で取った値はそのままではBouncyCastleでは使えません。</p>
-<pre tabindex="0"><code>Implement support for Ed25519 signing keys in Android Keystore.
+</code></pre><h3 id=とりあえず使えるけど>とりあえず使えるけど</h3><p>AndroidKeyStoreでEd25519が使える。個人的には大ニュースなのですが、実際に使ってみると、署名はできても検証ができないなど、かなり急ぎで入れた印象があります。</p><p>AndroidKeyStoreで生成したEd25519の鍵、公開鍵の型は<code>AndroidKeyStoreEdECPublicKey</code>となっています（が、<code>@hide</code>が付いているのでクラス自体は見えない）。</p><p>このクラス名を手がかりに<a href=https://cs.android.com/android/_/android/platform/frameworks/base/+/143fa39384d69d4de7a92ce64b2a7a2ac0ba8728>コミットログ</a>を見たところ、追加されたのは2022年の5月5日、Android <del>12</del> 13以降に含まれているようです。</p><p>秘密鍵（<code>AndroidKeyStoreEdECPrivateKey</code>）は、そのまま<code>Signature</code>を使って署名はできるのですが、公開鍵でverifyしようとするとサポートしていない例外が出ます。どういうことだ。</p><pre tabindex=0><code>java.security.InvalidKeyException: No installed provider supports this key: android.security.keystore2.AndroidKeyStoreEdECPublicKey
+</code></pre><p>しょうがないので、署名はAndroidKeyStore、検証はBouncyCastleに任せることにしました。</p><h3 id=公開鍵はx509>公開鍵はX.509</h3><p>BouncyCastleはEd25519の公開鍵は32バイトの長さを持つ値を想定しています。</p><p>一方、AndroidKeyStoreで生成したEd25519の公開鍵は「X.509エンコード」と<a href=https://cs.android.com/android/_/android/platform/frameworks/base/+/143fa39384d69d4de7a92ce64b2a7a2ac0ba8728>コミットログ</a>に書いてあるので、<code>encode</code>で取った値はそのままではBouncyCastleでは使えません。</p><pre tabindex=0><code>Implement support for Ed25519 signing keys in Android Keystore.
 Because Conscrypt does not yet handle those keys, the Keystore classes
 implement EdECPublicKey directly and parse the keys.
 
@@ -412,21 +170,16 @@ the oddity and Y point on the curve.
 RFC8032 describes EdDSA signature scheme, particularly Ed25519.
 RFC8410, Section 3, defines the OID for Ed25519 keys (1.3.101.112).
 RFC8410, Section 4, describes the encoding of the public key.
-</code></pre><p>ひとまず、前半を除いて32バイトの値を取り出すことで対応しています（もともとの<a href="https://cs.android.com/android/platform/superproject/+/main:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java">AndroidKeyStoreEdECPublicKey</a>も固定値を連結しているだけのようです）。</p>
-<h3 id="ソフトウェアベースかハードウェアベースかそれが問題だ">ソフトウェアベースかハードウェアベースか。それが問題だ</h3>
-<p>Ed25519の鍵はハードウェアベースなのか。
-StrongBoxを有効にして生成するとエラーになるのでわかりやすいのですが、TEEやSEの中で生成されるかはわかりません。</p>
-<p>確認のためKeyInfoを取ろうと頑張ってみましたが、いまのところ成功していません。</p>
-<pre tabindex="0"><code>private fun getKeyInfo(privateKey: PrivateKey): KeyInfo {
+</code></pre><p>ひとまず、前半を除いて32バイトの値を取り出すことで対応しています（もともとの<a href=https://cs.android.com/android/platform/superproject/+/main:frameworks/base/keystore/java/android/security/keystore2/AndroidKeyStoreEdECPublicKey.java>AndroidKeyStoreEdECPublicKey</a>も固定値を連結しているだけのようです）。</p><h3 id=ソフトウェアベースかハードウェアベースかそれが問題だ>ソフトウェアベースかハードウェアベースか。それが問題だ</h3><p>Ed25519の鍵はハードウェアベースなのか。
+StrongBoxを有効にして生成するとエラーになるのでわかりやすいのですが、TEEやSEの中で生成されるかはわかりません。</p><p>確認のためKeyInfoを取ろうと頑張ってみましたが、いまのところ成功していません。</p><pre tabindex=0><code>private fun getKeyInfo(privateKey: PrivateKey): KeyInfo {
     val keyStore = KeyStore.getInstance(&#34;AndroidKeyStore&#34;).also {
         it.load(null)
     }
     val factory = KeyFactory.getInstance(privateKey.algorithm, keyStore.provider)
     return factory.getKeySpec(privateKey, KeyInfo::class.java) as KeyInfo
 }
-</code></pre><pre tabindex="0"><code>java.security.NoSuchAlgorithmException: no such algorithm: EdDSA for provider AndroidKeyStore
-</code></pre><p>Security Providerの一覧を取ってみましたが、この中に<code>EdDSA</code>がないので、まだ対応していない可能性があります。ドキュメントに記載していないのも、対応が十分ではないからかも知れません。</p>
-<pre tabindex="0"><code>Security Provider Service
+</code></pre><pre tabindex=0><code>java.security.NoSuchAlgorithmException: no such algorithm: EdDSA for provider AndroidKeyStore
+</code></pre><p>Security Providerの一覧を取ってみましたが、この中に<code>EdDSA</code>がないので、まだ対応していない可能性があります。ドキュメントに記載していないのも、対応が十分ではないからかも知れません。</p><pre tabindex=0><code>Security Provider Service
 algorithm: EC
 type: KeyFactory
 className: android.security.keystore2.AndroidKeyStoreKeyFactorySpi
@@ -440,88 +193,11 @@ Security Provider Service
 algorithm: XDH
 type: KeyFactory
 className: android.security.keystore2.AndroidKeyStoreKeyFactorySpi
-</code></pre><p>本記事の執筆現時点ではAndroidKeyStoreがEd25519をハードウェアとソフトウェア、どちらで取り扱っているかは不明です。</p>
-<p>しかしながら、生成した<code>PrivateKey</code>を<code>encode</code>しても<code>null</code>が返ってくるところは確認しており、アプリケーションに秘密鍵が露出しないという点で、これまでのソフトウェアベースの鍵一択の状況よりもセキュリティは上がると考えます。</p>
-<p>Ed25519（と、X25519）、今後の用途の広がりに期待をしています。</p>
-<hr>
-<p>最後に宣伝です。</p>
-<p>11月12日（日）、池袋サンシャインシティにて開催される「<a href="https://techbookfest.org/event/tbf15">技術書典15</a>」に、サークル「<a href="https://techbookfest.org/organization/5173176170446848">めがねをかけるんだ</a>」として参加させていただくことになりました。</p>
-<p>サークル配置は「さ17」。</p>
-<p>新刊は「AndroidKeyStoreと過ごした400日」です。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">タイトル</th>
-<th style="text-align:left">AndroidKeyStoreと過ごした400日</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">判型</td>
-<td style="text-align:left">B5</td>
-</tr>
-<tr>
-<td style="text-align:left">ページ数</td>
-<td style="text-align:left">32p（電子版）</td>
-</tr>
-<tr>
-<td style="text-align:left">頒布価格</td>
-<td style="text-align:left">500円（会場価格）</td>
-</tr>
-<tr>
-<td style="text-align:left">発行</td>
-<td style="text-align:left">個人サークル「めがねをかけるんだ」</td>
-</tr>
-</tbody>
-</table>
-<p>本文サンプルおよび電子版販売ページは<a href="https://techbookfest.org/product/cUVLF5TvwkhQU2t4K72RVj">こちら</a></p>
-<p>オフライン会場にも参加しますが、持ち込みは電子版だけなので、電子版を売るのとOpenPGP Cardアプリケーション「<a href="https://keiji.github.io/bocchi-docs/">Bocchi</a>」の実演。あとは、参加者の皆さんとお話できるくらいの気持ちで行きます。</p>
-<p>あ、OpenPGPのお互いの公開鍵に署名をしあうのもやってみたいので、OpenPGPの公開鍵を運用している人はぜひ声をかけてください。</p>
-
-
-
-      
-
-      
-    </article>
-    
-    
-      
-
-    
-  </div>
-
-    <footer>
-  
-
-<div class="social-icons">
-  
-
-  
-</div>
-
-
-  
-  <div class="container">
-    <p class="credits copyright">
-      <a href="https://blog.keiji.dev/about"></a>
-      &nbsp;&copy;
-      2024
-      
-        &nbsp;/&nbsp;
-        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
-      
-      &nbsp;&ndash;&nbsp;
-      <em class="fas fa-moon" id="dark-mode-toggle"></em>
-    </p>
-
-    <p class="credits theme-by">
-      Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
-      Theme
-      <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
-  </div>
-</footer>
-
-  </body>
-</html>
+</code></pre><p>本記事の執筆現時点ではAndroidKeyStoreがEd25519をハードウェアとソフトウェア、どちらで取り扱っているかは不明です。</p><p>しかしながら、生成した<code>PrivateKey</code>を<code>encode</code>しても<code>null</code>が返ってくるところは確認しており、アプリケーションに秘密鍵が露出しないという点で、これまでのソフトウェアベースの鍵一択の状況よりもセキュリティは上がると考えます。</p><p>Ed25519（と、X25519）、今後の用途の広がりに期待をしています。</p><hr><p>最後に宣伝です。</p><p>11月12日（日）、池袋サンシャインシティにて開催される「<a href=https://techbookfest.org/event/tbf15>技術書典15</a>」に、サークル「<a href=https://techbookfest.org/organization/5173176170446848>めがねをかけるんだ</a>」として参加させていただくことになりました。</p><p>サークル配置は「さ17」。</p><p>新刊は「AndroidKeyStoreと過ごした400日」です。</p><table><thead><tr><th style=text-align:left>タイトル</th><th style=text-align:left>AndroidKeyStoreと過ごした400日</th></tr></thead><tbody><tr><td style=text-align:left>判型</td><td style=text-align:left>B5</td></tr><tr><td style=text-align:left>ページ数</td><td style=text-align:left>32p（電子版）</td></tr><tr><td style=text-align:left>頒布価格</td><td style=text-align:left>500円（会場価格）</td></tr><tr><td style=text-align:left>発行</td><td style=text-align:left>個人サークル「めがねをかけるんだ」</td></tr></tbody></table><p>本文サンプルおよび電子版販売ページは<a href=https://techbookfest.org/product/cUVLF5TvwkhQU2t4K72RVj>こちら</a></p><p>オフライン会場にも参加しますが、持ち込みは電子版だけなので、電子版を売るのとOpenPGP Cardアプリケーション「<a href=https://keiji.github.io/bocchi-docs/>Bocchi</a>」の実演。あとは、参加者の皆さんとお話できるくらいの気持ちで行きます。</p><p>あ、OpenPGPのお互いの公開鍵に署名をしあうのもやってみたいので、OpenPGPの公開鍵を運用している人はぜひ声をかけてください。</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
+2025
+&nbsp;/&nbsp;
+<a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
+&nbsp;&ndash;&nbsp;
+<em class="fas fa-moon" id=dark-mode-toggle></em></p><p class="credits theme-by">Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
+Theme
+<a href=https://github.com/matsuyoshi30/harbor>Harbor</a></p></div></footer></body></html>

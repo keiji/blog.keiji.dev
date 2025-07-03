@@ -1,200 +1,13 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-<title>「さくらの高火力」でTensorFlow</title>
-<meta name="description" 
-      content="Don&#39;t take your glasses off."
->
-
-  
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RTC3ZY943S');
-  </script>
-  
-
-
-
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link
-  rel="alternate"
-  type="application/rss+xml"
-  href="https://blog.keiji.dev/index.xml"
-  title="めがねをかけるんだ"
-/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
-
-<meta name="twitter:title" content="「さくらの高火力」でTensorFlow"/>
-<meta name="twitter:description" content="このエントリは「TensorFlow Advent Calendar」の12日目の記事です。
+<!doctype html><html lang=ja><head><meta charset=utf-8><title>「さくらの高火力」でTensorFlow</title>
+<meta name=description content="Don't take your glasses off."><script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-RTC3ZY943S")</script><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate type=application/rss+xml href=https://blog.keiji.dev/index.xml title=めがねをかけるんだ><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.keiji.dev/images/logo.png"><meta name=twitter:title content="「さくらの高火力」でTensorFlow"><meta name=twitter:description content="このエントリは「TensorFlow Advent Calendar」の12日目の記事です。
 これまで僕は、モデルの訓練には「GeForce GTX960」を積んだデスクトップマシンを使ってきました。
 この「GeForce GTX960」は、GPUだけあってちゃんと使えばCPUより格段に速いのですが、最高の性能というわけではありません。
 機械学習に取り組む中で、科学技術計算などを行う汎用目的(General Purpose)GPUや、複数のGPUで計算を並列化する「マルチGPU」に憧れがないと言えば嘘になります。
 しかし、GPUの１枚の価格や電気代、排熱の処理を考えると現実的でないと言う結論に落ち着いていました。
-今回、さくらインターネットの高火力コンピューティングが試用できたので、やってみたことをまとめます。"/>
-
-
-
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-
-
-
-<link
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/styles.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-
-<link
-  id="dark-mode-theme"
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/dark.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-<script>
-  var darkTheme = document.getElementById('dark-mode-theme')
-  var storedTheme = localStorage.getItem('dark-mode-storage')
-
-  if (storedTheme === 'dark') {
-    darkTheme.disabled = false
-  } else if (storedTheme === 'light') {
-    darkTheme.disabled = true
-  }
-</script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
-  </head>
-  <body>
-    
-  
-
-
-
-
-  <header>
-    <nav class="navbar">
-  <div class="nav">
-    
-      <a href="https://blog.keiji.dev/" class="nav-logo">
-        <img
-          src="https://blog.keiji.dev/images/logo.png"
-          width=""
-          height=""
-          alt="Logo"
-        />
-      </a>
-    
-
-    <ul class="nav-links">
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/profile/" id="Profile"
-              ><em class="fas fa-user fa-lg"></em
-            ></a>
-          </li>
-          
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
-              ><em class="fab fa-osi fa-lg"></em
-            ></a>
-          </li>
-          
-      
-    </ul>
-  </div>
-</nav>
-
-    <div class="intro-header">
-      <div class="container">
-        <div class="post-heading">
-          
-            <h1>
-              「さくらの高火力」でTensorFlow
-            </h1>
-          
-          
-            <span class="meta-post">
-  <em class="fa fa-calendar-alt"></em
-  >&nbsp;2016-12-12
-  
-    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/tensorflow/"
-        >TensorFlow</a
-      >&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/"
-        >習作</a
-      >&nbsp;
-    
-  
-</span>
-
-          
-        </div>
-      </div>
-    </div>
-  </header>
-  
-
-    
-  <div class="container" role="main">
-    <article class="article" class="blog-post">
-      
-  <p>このエントリは「<a href="http://qiita.com/advent-calendar/2016/tensorflow">TensorFlow Advent Calendar</a>」の12日目の記事です。</p>
-<p>これまで僕は、モデルの訓練には「GeForce GTX960」を積んだデスクトップマシンを使ってきました。</p>
-<p>この「GeForce GTX960」は、GPUだけあってちゃんと使えばCPUより格段に速いのですが、最高の性能というわけではありません。</p>
-<p>機械学習に取り組む中で、科学技術計算などを行う汎用目的(General Purpose)GPUや、複数のGPUで計算を並列化する「マルチGPU」に憧れがないと言えば嘘になります。</p>
-<p>しかし、GPUの１枚の価格や電気代、排熱の処理を考えると現実的でないと言う結論に落ち着いていました。</p>
-<p>今回、さくらインターネットの<a href="https://www.sakura.ad.jp/koukaryoku/">高火力コンピューティング</a>が試用できたので、やってみたことをまとめます。</p>
-<hr>
-<p>本レポートは、10月5日から12日までの「高火力コンピューティング」試用期間中の取り組みを元にしています。</p>
-<p>記事の内容が現在の状況（初期状態）とは異なる場合があります。あらかじめご了承ください。</p>
-<p>使用したTensorFlowのバージョンは<code>0.10</code>です。</p>
-<p>また、本エントリに掲載しているのコードは、拙著「<a href="http://amzn.to/2gqWOtz">TensorFlowはじめました</a>」の増補改訂版の第４章の内容に準拠しています。</p>
-<p>コードの全体については、下記URLからダウンロードできます。</p>
-<p><a href="https://drive.google.com/drive/folders/0BwoRjQoZfQUlN1djdkc0M1dGMXM">サンプルコード – train_vgg_adam_minibatch_distort_multi_gpus.py</a></p>
-<hr>
-<h2 id="利用開始">利用開始</h2>
-<p>利用開始日の朝、トライアル用のアカウントの認証情報（「アカウント名」と「パスワード」）が送られてきました。</p>
-<p>指定されたURLを開いて認証情報を入力すると、専用サーバーのコントロールパネルが表示されます。</p>
-<img src="https://blog.keiji.dev/wp-content/uploads/2016/12/console.png" alt="console" width="1091" height="1023" class="aligncenter size-full wp-image-1490" />
-<p>「<code>TITANx4</code>」の文字が頼もしいですね。</p>
-<p>ストレージに480GBのSSDが2基搭載されているので、巨大なデータセットにも十分に対応できそうです。</p>
-<p>初期OSとして「Ubuntu 14.04 (64bit)」がインストールされていました。</p>
-<p>認証情報を通知するメールには「GPUドライバはインストールされていません」とあったのですが、僕の場合は最初からGPUが使える状態になっていました。</p>
-<p>Pythonといくつかのパッケージ、CUDA（7.5）とCuDNN（5.1）、TensorFlow（0.10.0）をインストールすれば準備は完了です。</p>
-<h2 id="学習cifar-10">学習（CIFAR-10）</h2>
-<p>準備ができたので、さっそく学習をしてみます（<code>train_vgg_adam_minibatch_distort_multi_gpus.py</code>）。</p>
-<pre><code>I tensorflow/stream_executor/dso_loader.cc:111] successfully opened CUDA library libcublas.so locally
+今回、さくらインターネットの高火力コンピューティングが試用できたので、やってみたことをまとめます。"><link rel=stylesheet href=https://blog.keiji.dev/fontawesome/css/all.min.css><link crossorigin=anonymous href=https://blog.keiji.dev/css/styles.min.css integrity rel="preload stylesheet" as=style><link rel=stylesheet href=https://blog.keiji.dev/css/default.css><link id=dark-mode-theme crossorigin=anonymous href=https://blog.keiji.dev/css/dark.min.css integrity rel="preload stylesheet" as=style><script>var darkTheme=document.getElementById("dark-mode-theme"),storedTheme=localStorage.getItem("dark-mode-storage");storedTheme==="dark"?darkTheme.disabled=!1:storedTheme==="light"&&(darkTheme.disabled=!0)</script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/theme.js integrity></script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/instantpage.min.js integrity></script><meta name=generator content="Hugo 0.133.0"></head><body><header><nav class=navbar><div class=nav><a href=https://blog.keiji.dev/ class=nav-logo><img src=https://blog.keiji.dev/images/logo.png width height alt=Logo></a><ul class=nav-links><li><a href=https://blog.keiji.dev/profile/ id=Profile><em class="fas fa-user fa-lg"></em></a></li><li><a href=https://blog.keiji.dev/licenses/ id=Licenses><em class="fab fa-osi fa-lg"></em></a></li></ul></div></nav><div class=intro-header><div class=container><div class=post-heading><h1>「さくらの高火力」でTensorFlow</h1><span class=meta-post><em class="fa fa-calendar-alt"></em>&nbsp;2016-12-12
+&nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
+<a href=https://blog.keiji.dev/categories/tensorflow/>TensorFlow</a>&nbsp;
+<a href=https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/>習作</a>&nbsp;</span></div></div></div></header><div class=container role=main><article class=article class=blog-post><p>このエントリは「<a href=http://qiita.com/advent-calendar/2016/tensorflow>TensorFlow Advent Calendar</a>」の12日目の記事です。</p><p>これまで僕は、モデルの訓練には「GeForce GTX960」を積んだデスクトップマシンを使ってきました。</p><p>この「GeForce GTX960」は、GPUだけあってちゃんと使えばCPUより格段に速いのですが、最高の性能というわけではありません。</p><p>機械学習に取り組む中で、科学技術計算などを行う汎用目的(General Purpose)GPUや、複数のGPUで計算を並列化する「マルチGPU」に憧れがないと言えば嘘になります。</p><p>しかし、GPUの１枚の価格や電気代、排熱の処理を考えると現実的でないと言う結論に落ち着いていました。</p><p>今回、さくらインターネットの<a href=https://www.sakura.ad.jp/koukaryoku/>高火力コンピューティング</a>が試用できたので、やってみたことをまとめます。</p><hr><p>本レポートは、10月5日から12日までの「高火力コンピューティング」試用期間中の取り組みを元にしています。</p><p>記事の内容が現在の状況（初期状態）とは異なる場合があります。あらかじめご了承ください。</p><p>使用したTensorFlowのバージョンは<code>0.10</code>です。</p><p>また、本エントリに掲載しているのコードは、拙著「<a href=http://amzn.to/2gqWOtz>TensorFlowはじめました</a>」の増補改訂版の第４章の内容に準拠しています。</p><p>コードの全体については、下記URLからダウンロードできます。</p><p><a href=https://drive.google.com/drive/folders/0BwoRjQoZfQUlN1djdkc0M1dGMXM>サンプルコード – train_vgg_adam_minibatch_distort_multi_gpus.py</a></p><hr><h2 id=利用開始>利用開始</h2><p>利用開始日の朝、トライアル用のアカウントの認証情報（「アカウント名」と「パスワード」）が送られてきました。</p><p>指定されたURLを開いて認証情報を入力すると、専用サーバーのコントロールパネルが表示されます。</p><img src=https://blog.keiji.dev/wp-content/uploads/2016/12/console.png alt=console width=1091 height=1023 class="aligncenter size-full wp-image-1490"><p>「<code>TITANx4</code>」の文字が頼もしいですね。</p><p>ストレージに480GBのSSDが2基搭載されているので、巨大なデータセットにも十分に対応できそうです。</p><p>初期OSとして「Ubuntu 14.04 (64bit)」がインストールされていました。</p><p>認証情報を通知するメールには「GPUドライバはインストールされていません」とあったのですが、僕の場合は最初からGPUが使える状態になっていました。</p><p>Pythonといくつかのパッケージ、CUDA（7.5）とCuDNN（5.1）、TensorFlow（0.10.0）をインストールすれば準備は完了です。</p><h2 id=学習cifar-10>学習（CIFAR-10）</h2><p>準備ができたので、さっそく学習をしてみます（<code>train_vgg_adam_minibatch_distort_multi_gpus.py</code>）。</p><pre><code>I tensorflow/stream_executor/dso_loader.cc:111] successfully opened CUDA library libcublas.so locally
 I tensorflow/stream_executor/dso_loader.cc:111] successfully opened CUDA library libcudnn.so locally
 I tensorflow/stream_executor/dso_loader.cc:111] successfully opened CUDA library libcufft.so locally
 I tensorflow/stream_executor/dso_loader.cc:111] successfully opened CUDA library libcuda.so.1 locally
@@ -226,17 +39,13 @@ major: 5 minor: 2 memoryClockRate (GHz) 1.076
 pciBusID 0000:84:00.0
 Total memory: 11.93GiB
 Free memory: 11.82GiB
-</code></pre>
-<p>使ってみると確かに速いのですが、期待したほどではないという感じでした。</p>
-<pre><code>step 0, loss = 4.67 (4.9 examples/sec; 26.282 sec/batch)
+</code></pre><p>使ってみると確かに速いのですが、期待したほどではないという感じでした。</p><pre><code>step 0, loss = 4.67 (4.9 examples/sec; 26.282 sec/batch)
 step 10, loss = 4.60 (768.2 examples/sec; 0.167 sec/batch)
 step 20, loss = 4.65 (745.9 examples/sec; 0.172 sec/batch)
 step 30, loss = 4.69 (730.8 examples/sec; 0.175 sec/batch)
 step 40, loss = 4.28 (764.6 examples/sec; 0.167 sec/batch)
 step 50, loss = 4.33 (779.0 examples/sec; 0.164 sec/batch)
-</code></pre>
-<p>きちんとしているつもりで実はGPUが働いていなかったということは前にもあったので、<code>nvidia-smi</code>コマンドで確認してみます。</p>
-<pre><code>+-----------------------------------------------------------------------------+
+</code></pre><p>きちんとしているつもりで実はGPUが働いていなかったということは前にもあったので、<code>nvidia-smi</code>コマンドで確認してみます。</p><pre><code>+-----------------------------------------------------------------------------+
 | NVIDIA-SMI 361.93.02              Driver Version: 361.93.02                 |
 |-------------------------------+----------------------+----------------------+
 | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
@@ -254,16 +63,7 @@ step 50, loss = 4.33 (779.0 examples/sec; 0.164 sec/batch)
 |   3  GeForce GTX TIT...  On   | 0000:84:00.0     Off |                  N/A |
 | 22%   30C    P8    15W / 250W |  11607MiB / 12212MiB |      0%      Default |
 +-------------------------------+----------------------+----------------------+
-</code></pre>
-<p>ごらんの通り、GPUが一つしか動作していません。</p>
-<p>TensorFlowで複数のGPUを使うには、コード側を変更する必要があります。</p>
-<h2 id="マルチgpuへの対応">マルチGPUへの対応</h2>
-<p>オリジナルのCIFAR-10チュートリアルの<code>cifar10_multi_gpu_train.py</code>を参考に、マルチGPUで動作するようにコードを変更します。</p>
-<h3 id="勾配の計算">勾配の計算</h3>
-<p><code>tf.device</code>でそれぞれオペレーションを実行するデバイスを指定します。</p>
-<p>サンプルでは引数<code>--num_gpus</code>に指定した数のGPU上で、それぞれ勾配（gradients）の計算を行っています。</p>
-<p>また、それぞれのグラフの名前が重複しないように、<code>tf.name_scope</code>で名前空間を区切っています。</p>
-<pre><code>opt = tf.train.AdamOptimizer(learning_rate=FLAGS.learning_rate)
+</code></pre><p>ごらんの通り、GPUが一つしか動作していません。</p><p>TensorFlowで複数のGPUを使うには、コード側を変更する必要があります。</p><h2 id=マルチgpuへの対応>マルチGPUへの対応</h2><p>オリジナルのCIFAR-10チュートリアルの<code>cifar10_multi_gpu_train.py</code>を参考に、マルチGPUで動作するようにコードを変更します。</p><h3 id=勾配の計算>勾配の計算</h3><p><code>tf.device</code>でそれぞれオペレーションを実行するデバイスを指定します。</p><p>サンプルでは引数<code>--num_gpus</code>に指定した数のGPU上で、それぞれ勾配（gradients）の計算を行っています。</p><p>また、それぞれのグラフの名前が重複しないように、<code>tf.name_scope</code>で名前空間を区切っています。</p><pre><code>opt = tf.train.AdamOptimizer(learning_rate=FLAGS.learning_rate)
 
 reader = Cifar10Reader(filenames)
 record = reader.read()
@@ -297,28 +97,16 @@ for i in range(FLAGS.num_gpus):
 
       grads = opt.compute_gradients(total_loss)
       tower_grads.append(grads)
-</code></pre>
-<p>この段階では実際の計算は行われていません。</p>
-<p><code>tower_grads</code>には、それぞれのGPU（tower）の計算オペレーションが格納されています。</p>
-<h3 id="学習訓練">学習（訓練）</h3>
-<p>最後に、勾配を使って学習を行います。</p>
-<pre><code>  avg_grads = _average_gradients(tower_grads)
+</code></pre><p>この段階では実際の計算は行われていません。</p><p><code>tower_grads</code>には、それぞれのGPU（tower）の計算オペレーションが格納されています。</p><h3 id=学習訓練>学習（訓練）</h3><p>最後に、勾配を使って学習を行います。</p><pre><code>  avg_grads = _average_gradients(tower_grads)
 
   train_op = opt.apply_gradients(avg_grads, global_step=global_step, name='train')
-</code></pre>
-<p>ご覧の通り、それぞれのGPUで計算した勾配を<code>_average_gradients</code>関数に与えています。</p>
-<p>マルチGPUに対応しないコードでは、求めた勾配をそのまま学習に使っていました。</p>
-<pre><code>def _train(total_loss, global_step):
+</code></pre><p>ご覧の通り、それぞれのGPUで計算した勾配を<code>_average_gradients</code>関数に与えています。</p><p>マルチGPUに対応しないコードでは、求めた勾配をそのまま学習に使っていました。</p><pre><code>def _train(total_loss, global_step):
   opt = tf.train.AdamOptimizer(learning_rate=FLAGS.learning_rate)
   grads = opt.compute_gradients(total_loss)
   train_op = opt.apply_gradients(grads, global_step=global_step)
 
   return train_op
-</code></pre>
-<p>これの「勾配を求めて」「学習する」のステップは<code>opt.minimize(total_loss, global_step=global_step)</code>に置き換えることができます。</p>
-<p>しかし、マルチGPUの場合、勾配を求める処理がそれぞれのGPUで行われるので、学習前に平均値を計算します。</p>
-<p><code>_average_gradients</code>は、勾配の平均を計算する計算グラフを追加する関数です。</p>
-<pre><code>def _average_gradients(tower_grads):
+</code></pre><p>これの「勾配を求めて」「学習する」のステップは<code>opt.minimize(total_loss, global_step=global_step)</code>に置き換えることができます。</p><p>しかし、マルチGPUの場合、勾配を求める処理がそれぞれのGPUで行われるので、学習前に平均値を計算します。</p><p><code>_average_gradients</code>は、勾配の平均を計算する計算グラフを追加する関数です。</p><pre><code>def _average_gradients(tower_grads):
   average_grads = []
   for grad_and_vars in zip(*tower_grads):
     grads = []
@@ -335,19 +123,13 @@ for i in range(FLAGS.num_gpus):
     average_grads.append(grad_and_var)
 
   return average_grads
-</code></pre>
-<h3 id="実行">実行</h3>
-<p>マルチGPUに対応したコードを実行すると、次のようになります。</p>
-<pre><code>step 0, loss = 4.68 (17.1 examples/sec; 7.467 sec/batch)
+</code></pre><h3 id=実行>実行</h3><p>マルチGPUに対応したコードを実行すると、次のようになります。</p><pre><code>step 0, loss = 4.68 (17.1 examples/sec; 7.467 sec/batch)
 step 10, loss = 4.62 (2682.6 examples/sec; 0.048 sec/batch)
 step 20, loss = 4.46 (2475.5 examples/sec; 0.052 sec/batch)
 step 30, loss = 4.34 (2452.7 examples/sec; 0.052 sec/batch)
 step 40, loss = 4.36 (2500.2 examples/sec; 0.051 sec/batch)
 step 50, loss = 4.22 (2853.9 examples/sec; 0.045 sec/batch)
-</code></pre>
-<p>処理速度は、単純に約4倍になりました。</p>
-<p><code>nvidia-smi</code>を実行すると、すべてのGPUが動作しているのがわかります。</p>
-<pre><code>+-----------------------------------------------------------------------------+
+</code></pre><p>処理速度は、単純に約4倍になりました。</p><p><code>nvidia-smi</code>を実行すると、すべてのGPUが動作しているのがわかります。</p><pre><code>+-----------------------------------------------------------------------------+
 | NVIDIA-SMI 361.93.02              Driver Version: 361.93.02                 |
 |-------------------------------+----------------------+----------------------+
 | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
@@ -365,14 +147,7 @@ step 50, loss = 4.22 (2853.9 examples/sec; 0.045 sec/batch)
 |   3  GeForce GTX TIT...  On   | 0000:84:00.0     Off |                  N/A |
 | 22%   39C    P2    75W / 250W |  11701MiB / 12212MiB |      8%      Default |
 +-------------------------------+----------------------+----------------------+
-</code></pre>
-<p>すべてのGPUが動作しているのですが、少しばらつきがあります。</p>
-<p>特に0番目のGPUの利用率が高く、他のGPUの利用率が低い気がします。</p>
-<h2 id="インプットパイプラインをgpu側に移動">インプット・パイプラインをGPU側に移動</h2>
-<p>前の変更では、データの読み込み（<code>Cifar10Reader</code>）とミニバッチにまとめる処理（<code>tf.train.batch</code>）についてはGPUを指定しませんでした。</p>
-<p>データの読み込み処理などの「インプットパイプライン」は、0番目のGPUでのみ実行されていて、そのため負荷にばらつきが出ていると考えました。</p>
-<p>そこでインプットパイプラインも、それぞれのGPUで実行するように変更しました。</p>
-<pre><code>opt = tf.train.AdamOptimizer(learning_rate=FLAGS.learning_rate)
+</code></pre><p>すべてのGPUが動作しているのですが、少しばらつきがあります。</p><p>特に0番目のGPUの利用率が高く、他のGPUの利用率が低い気がします。</p><h2 id=インプットパイプラインをgpu側に移動>インプット・パイプラインをGPU側に移動</h2><p>前の変更では、データの読み込み（<code>Cifar10Reader</code>）とミニバッチにまとめる処理（<code>tf.train.batch</code>）についてはGPUを指定しませんでした。</p><p>データの読み込み処理などの「インプットパイプライン」は、0番目のGPUでのみ実行されていて、そのため負荷にばらつきが出ていると考えました。</p><p>そこでインプットパイプラインも、それぞれのGPUで実行するように変更しました。</p><pre><code>opt = tf.train.AdamOptimizer(learning_rate=FLAGS.learning_rate)
 
 tower_grads = []
 for i in range(FLAGS.num_gpus):
@@ -406,10 +181,7 @@ for i in range(FLAGS.num_gpus):
 
       grads = opt.compute_gradients(total_loss)
       tower_grads.append(grads)
-</code></pre>
-<h3 id="実行-1">実行</h3>
-<p>変更後のコードを実行した結果、<code>nvidia-smi</code>の結果は次のようになりました。</p>
-<pre><code>+-----------------------------------------------------------------------------+
+</code></pre><h3 id=実行-1>実行</h3><p>変更後のコードを実行した結果、<code>nvidia-smi</code>の結果は次のようになりました。</p><pre><code>+-----------------------------------------------------------------------------+
 | NVIDIA-SMI 361.93.02              Driver Version: 361.93.02                 |
 |-------------------------------+----------------------+----------------------+
 | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
@@ -427,12 +199,7 @@ for i in range(FLAGS.num_gpus):
 |   3  GeForce GTX TIT...  On   | 0000:84:00.0     Off |                  N/A |
 | 22%   48C    P2    78W / 250W |  11701MiB / 12212MiB |     34%      Default |
 +-------------------------------+----------------------+----------------------+
-</code></pre>
-<p>それぞれのGPUの負荷のばらつきは抑えられ、それに伴ってサンプルの処理速度も上がりました。</p>
-<p>しかし、GPUの利用率100%には到達しませんでした。</p>
-<p>試しにバッチサイズを、それまでの<code>64</code>から<code>128</code>に変更しても、あまり大きな変化はありませんでした。</p>
-<p>これは題材になっているCIFAR-10の画像サイズが32×32と比較的小さく「TITAN X」の処理能力を最大限引き出すほどの負荷を与えられなかったためと考えています。</p>
-<pre><code>+-----------------------------------------------------------------------------+
+</code></pre><p>それぞれのGPUの負荷のばらつきは抑えられ、それに伴ってサンプルの処理速度も上がりました。</p><p>しかし、GPUの利用率100%には到達しませんでした。</p><p>試しにバッチサイズを、それまでの<code>64</code>から<code>128</code>に変更しても、あまり大きな変化はありませんでした。</p><p>これは題材になっているCIFAR-10の画像サイズが32×32と比較的小さく「TITAN X」の処理能力を最大限引き出すほどの負荷を与えられなかったためと考えています。</p><pre><code>+-----------------------------------------------------------------------------+
 | NVIDIA-SMI 361.93.02              Driver Version: 361.93.02                 |
 |-------------------------------+----------------------+----------------------+
 | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
@@ -450,64 +217,11 @@ for i in range(FLAGS.num_gpus):
 |   3  GeForce GTX TIT...  On   | 0000:84:00.0     Off |                  N/A |
 | 22%   48C    P2    74W / 250W |  11701MiB / 12212MiB |     34%      Default |
 +-------------------------------+----------------------+----------------------+
-</code></pre>
-<h2 id="終わりに">終わりに</h2>
-<p>いかがだったでしょうか。</p>
-<p>さくらインターネットの<a href="https://www.sakura.ad.jp/koukaryoku/">高火力コンピューティング</a>、凄さの片鱗こそ見えたものの、僕の力不足で火力を上げることができないまま、試用期間が終わってしまいました。</p>
-<p>ちなみに今は、192×192のイラスト画像から顔領域を示すマスク画像を生成するというモデルを訓練しているのですが、</p>
-<p>192×192のサンプルを処理するモデルを僕の使っている「GeForce GTX960」のメモリ（2GB）に納めるのに苦労しています。</p>
-<img src="https://blog.keiji.dev/wp-content/uploads/2016/12/faces_and_masks.png" alt="faces_and_masks" width="800" height="400" class="aligncenter size-full wp-image-1488" />
-<p>バッチサイズを減らしたりモデルの軽量化を頑張ってようやくメモリに収まっても1ステップにかかる学習の負荷が大きく、学習は遅々として進みません。</p>
-<p><a href="https://blog.keiji.dev/wp-content/uploads/2016/12/Screen-Shot-2016-12-12-at-16.18.31.png"><img src="https://blog.keiji.dev/wp-content/uploads/2016/12/Screen-Shot-2016-12-12-at-16.18.31.png" alt="screen-shot-2016-12-12-at-16-18-31" width="849" height="424" class="aligncenter size-full wp-image-1489" /></a></p>
-<p>かれこれ1週間ほど処理を続けていますが……高火力が必要なのは、まさに今なんですよ！</p>
-<hr>
-<p>「<a href="http://qiita.com/advent-calendar/2016/tensorflow">TensorFlow Advent Calendar</a>」13日目の担当はkatsugenerationさんです。</p>
-<p>katsugenerationさん、よろしくお願いします。</p>
-
-
-
-      
-
-      
-    </article>
-    
-    
-      
-
-    
-  </div>
-
-    <footer>
-  
-
-<div class="social-icons">
-  
-
-  
-</div>
-
-
-  
-  <div class="container">
-    <p class="credits copyright">
-      <a href="https://blog.keiji.dev/about"></a>
-      &nbsp;&copy;
-      2024
-      
-        &nbsp;/&nbsp;
-        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
-      
-      &nbsp;&ndash;&nbsp;
-      <em class="fas fa-moon" id="dark-mode-toggle"></em>
-    </p>
-
-    <p class="credits theme-by">
-      Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
-      Theme
-      <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
-  </div>
-</footer>
-
-  </body>
-</html>
+</code></pre><h2 id=終わりに>終わりに</h2><p>いかがだったでしょうか。</p><p>さくらインターネットの<a href=https://www.sakura.ad.jp/koukaryoku/>高火力コンピューティング</a>、凄さの片鱗こそ見えたものの、僕の力不足で火力を上げることができないまま、試用期間が終わってしまいました。</p><p>ちなみに今は、192×192のイラスト画像から顔領域を示すマスク画像を生成するというモデルを訓練しているのですが、</p><p>192×192のサンプルを処理するモデルを僕の使っている「GeForce GTX960」のメモリ（2GB）に納めるのに苦労しています。</p><img src=https://blog.keiji.dev/wp-content/uploads/2016/12/faces_and_masks.png alt=faces_and_masks width=800 height=400 class="aligncenter size-full wp-image-1488"><p>バッチサイズを減らしたりモデルの軽量化を頑張ってようやくメモリに収まっても1ステップにかかる学習の負荷が大きく、学習は遅々として進みません。</p><p><a href=https://blog.keiji.dev/wp-content/uploads/2016/12/Screen-Shot-2016-12-12-at-16.18.31.png><img src=https://blog.keiji.dev/wp-content/uploads/2016/12/Screen-Shot-2016-12-12-at-16.18.31.png alt=screen-shot-2016-12-12-at-16-18-31 width=849 height=424 class="aligncenter size-full wp-image-1489"></a></p><p>かれこれ1週間ほど処理を続けていますが……高火力が必要なのは、まさに今なんですよ！</p><hr><p>「<a href=http://qiita.com/advent-calendar/2016/tensorflow>TensorFlow Advent Calendar</a>」13日目の担当はkatsugenerationさんです。</p><p>katsugenerationさん、よろしくお願いします。</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
+2025
+&nbsp;/&nbsp;
+<a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
+&nbsp;&ndash;&nbsp;
+<em class="fas fa-moon" id=dark-mode-toggle></em></p><p class="credits theme-by">Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
+Theme
+<a href=https://github.com/matsuyoshi30/harbor>Harbor</a></p></div></footer></body></html>

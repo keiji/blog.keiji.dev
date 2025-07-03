@@ -1,203 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-<title>【WIP】TensorFlowのExerciseをがんばっている</title>
-<meta name="description" 
-      content="Don&#39;t take your glasses off."
->
-
-  
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RTC3ZY943S');
-  </script>
-  
-
-
-
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link
-  rel="alternate"
-  type="application/rss+xml"
-  href="https://blog.keiji.dev/index.xml"
-  title="めがねをかけるんだ"
-/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
-
-<meta name="twitter:title" content="【WIP】TensorFlowのExerciseをがんばっている"/>
-<meta name="twitter:description" content="　僕はいま、Google I/O 2016参加で渡米するにあたり、時差ボケ予防のために徹夜でこの記事を書いています。
-概要（忙しい人向け）
-　TensorFlowのチュートリアルにある課題（エクササイズ）に挑戦した。Softmaxの適用については比較的簡単だったが、Fully connected層をLocally connected層に変える課題については難航し、解決していない。"/>
-
-
-
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-
-
-
-<link
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/styles.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-
-<link
-  id="dark-mode-theme"
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/dark.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-<script>
-  var darkTheme = document.getElementById('dark-mode-theme')
-  var storedTheme = localStorage.getItem('dark-mode-storage')
-
-  if (storedTheme === 'dark') {
-    darkTheme.disabled = false
-  } else if (storedTheme === 'light') {
-    darkTheme.disabled = true
-  }
-</script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
-  </head>
-  <body>
-    
-  
-
-
-
-
-  <header>
-    <nav class="navbar">
-  <div class="nav">
-    
-      <a href="https://blog.keiji.dev/" class="nav-logo">
-        <img
-          src="https://blog.keiji.dev/images/logo.png"
-          width=""
-          height=""
-          alt="Logo"
-        />
-      </a>
-    
-
-    <ul class="nav-links">
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/profile/" id="Profile"
-              ><em class="fas fa-user fa-lg"></em
-            ></a>
-          </li>
-          
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
-              ><em class="fab fa-osi fa-lg"></em
-            ></a>
-          </li>
-          
-      
-    </ul>
-  </div>
-</nav>
-
-    <div class="intro-header">
-      <div class="container">
-        <div class="post-heading">
-          
-            <h1>
-              【WIP】TensorFlowのExerciseをがんばっている
-            </h1>
-          
-          
-            <span class="meta-post">
-  <em class="fa fa-calendar-alt"></em
-  >&nbsp;2016-05-15
-  
-    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/tensorflow/"
-        >TensorFlow</a
-      >&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/"
-        >習作</a
-      >&nbsp;
-    
-  
-</span>
-
-          
-        </div>
-      </div>
-    </div>
-  </header>
-  
-
-    
-  <div class="container" role="main">
-    <article class="article" class="blog-post">
-      
-  <p>　僕はいま、<a href="https://events.google.com/io2016/" target="_blank">Google I/O 2016</a>参加で渡米するにあたり、時差ボケ予防のために徹夜でこの記事を書いています。</p>
-<h3 id="概要忙しい人向け">概要（忙しい人向け）</h3>
-<p>　TensorFlowのチュートリアルにある課題（エクササイズ）に挑戦した。Softmaxの適用については比較的簡単だったが、Fully connected層をLocally connected層に変える課題については難航し、解決していない。</p>
-<p>Locally connected層は、重み共有をしない畳み込み層である（<a href="https://code.google.com/p/cuda-convnet/wiki/LayerParams#Locally-connected_layer_with_unshared_weights" target="_blank">cuda-convnet</a>）。</p>
-<p>そこで、チュートリアルのモデルのFully connected層をConvolution層に置き換えたところ、学習が正常に行われなくなった。</p>
-<p>　TensorBoardを通じてモデルの状態を確認したところ、conv2層で勾配消失が起きていることがわかった。さらに調査を続けると、conv2層のweightsの初期値がcuda-convnetに記載されている値と異なっており、修正することで正常に学習できるようになった（数値の食い違いが意図的なものかは不明だが、修正を<a href="https://github.com/tensorflow/tensorflow/pull/2374" target="_blank">Pull Request</a>している）。</p>
-<p>　「重み共有（Shared weights/Tied weights）」をしないというLocally connectedの条件をTensorFlowでどのように実現するかは現時点でわかっていない。<code>depthwise_conv2d</code>について検討したが、上手くいかないと判断している（出力フィルタの枚数を減らすことができないため）。</p>
-<p>　エクササイズについては、今後も調査を続けていく。</p>
-<!--more-->
-<h3 id="tensorflowのexercise">TensorFlowのExercise</h3>
-<p>「TensorFlowは、Tutorialが充実している」と言われます。</p>
-<p>　僕はTensorFlowから機械学習を始めたので実感はないのですが、僕の周りで他のフレームワークを知っている人の多くは「TensorFlowはチュートリアルが充実している。親切だ」と言っています。</p>
-<p>　そんなTensorFlowチュートリアルには「エクササイズ」と銘が打たれた「課題」があります。</p>
-<p>　世の中ディープラーニング全盛。TensorFlowもかなりの人気の中、検索すると「TensorFlowをインストールしてみた」「チュートリアルをやってみた」そんなブログ記事はよく見るのですが、「エクササイズをやってみた」と言うウェブサイトや記事は見あたりませんでした。</p>
-<p>　もしかするとTensorFlowのサイトのどこをみてもエクササイズの回答が示されていないので、挑戦しても正解か答え合わせができず、「不正確な情報は出せない」と公開していないのかもしれません。</p>
-<p>　それか、『あまりにも簡単にできてしまったので、みんなわかるだろう』と、公開する必要がないと思っている。そういう人も居るのかもしれません。</p>
-<p>　ここに居ます。</p>
-<p>　エクササイズがわからずに苦労している人間が。</p>
-<p>　僕と同じような人も居るかもしれないので、ここに挑戦の記録を残します。まだ未解決の部分もあるので、わかる人は是非教えてください。</p>
-<hr>
-<p>　挑戦したエクササイズは「<a href="https://www.tensorflow.org/versions/r0.8/tutorials/deep_cnn/index.html#convolutional-neural-networks" target="_blank">チュートリアル</a>」の畳み込みニューラルネットワークの構築にあります。</p>
-<p>　チュートリアルの題材は「CIFAR-10」です。</p>
-<h4 id="cifar-10">CIFAR-10</h4>
-<p><a href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank">CIFAR-10</a>（しーふぁー・てん）は、機械学習において一般物体認識（多クラス分類）のベンチマークとして用いられています。</p>
-<p>「airplane」「automobile」「bird」「cat」「deer」「dog」「frog」「horse」「ship」「truck」の10種類の物体が写った小さな画像（32×32ピクセル・RGBカラー）を、訓練データ50,000枚で学習し、テストデータ10,000枚を使って学習速度や正答率を見ます。</p>
-<h3 id="エクササイズ-softmax">エクササイズ Softmax</h3>
-<p>　エクササイズの一つ目は、推論によって導かれるlogitsを「softmax」によって正規化するというものです。</p>
-<pre><code>EXERCISE: The output of inference are un-normalized logits.
+<!doctype html><html lang=ja><head><meta charset=utf-8><title>【WIP】TensorFlowのExerciseをがんばっている</title>
+<meta name=description content="Don't take your glasses off."><script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-RTC3ZY943S")</script><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate type=application/rss+xml href=https://blog.keiji.dev/index.xml title=めがねをかけるんだ><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.keiji.dev/images/logo.png"><meta name=twitter:title content="【WIP】TensorFlowのExerciseをがんばっている"><meta name=twitter:description content="　僕はいま、Google I/O 2016参加で渡米するにあたり、時差ボケ予防のために徹夜でこの記事を書いています。
+概要（忙しい人向け） TensorFlowのチュートリアルにある課題（エクササイズ）に挑戦した。Softmaxの適用については比較的簡単だったが、Fully connected層をLocally connected層に変える課題については難航し、解決していない。"><link rel=stylesheet href=https://blog.keiji.dev/fontawesome/css/all.min.css><link crossorigin=anonymous href=https://blog.keiji.dev/css/styles.min.css integrity rel="preload stylesheet" as=style><link rel=stylesheet href=https://blog.keiji.dev/css/default.css><link id=dark-mode-theme crossorigin=anonymous href=https://blog.keiji.dev/css/dark.min.css integrity rel="preload stylesheet" as=style><script>var darkTheme=document.getElementById("dark-mode-theme"),storedTheme=localStorage.getItem("dark-mode-storage");storedTheme==="dark"?darkTheme.disabled=!1:storedTheme==="light"&&(darkTheme.disabled=!0)</script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/theme.js integrity></script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/instantpage.min.js integrity></script><meta name=generator content="Hugo 0.133.0"></head><body><header><nav class=navbar><div class=nav><a href=https://blog.keiji.dev/ class=nav-logo><img src=https://blog.keiji.dev/images/logo.png width height alt=Logo></a><ul class=nav-links><li><a href=https://blog.keiji.dev/profile/ id=Profile><em class="fas fa-user fa-lg"></em></a></li><li><a href=https://blog.keiji.dev/licenses/ id=Licenses><em class="fab fa-osi fa-lg"></em></a></li></ul></div></nav><div class=intro-header><div class=container><div class=post-heading><h1>【WIP】TensorFlowのExerciseをがんばっている</h1><span class=meta-post><em class="fa fa-calendar-alt"></em>&nbsp;2016-05-15
+&nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
+<a href=https://blog.keiji.dev/categories/tensorflow/>TensorFlow</a>&nbsp;
+<a href=https://blog.keiji.dev/categories/%E7%BF%92%E4%BD%9C/>習作</a>&nbsp;</span></div></div></div></header><div class=container role=main><article class=article class=blog-post><p>　僕はいま、<a href=https://events.google.com/io2016/ target=_blank>Google I/O 2016</a>参加で渡米するにあたり、時差ボケ予防のために徹夜でこの記事を書いています。</p><h3 id=概要忙しい人向け>概要（忙しい人向け）</h3><p>　TensorFlowのチュートリアルにある課題（エクササイズ）に挑戦した。Softmaxの適用については比較的簡単だったが、Fully connected層をLocally connected層に変える課題については難航し、解決していない。</p><p>Locally connected層は、重み共有をしない畳み込み層である（<a href=https://code.google.com/p/cuda-convnet/wiki/LayerParams#Locally-connected_layer_with_unshared_weights target=_blank>cuda-convnet</a>）。</p><p>そこで、チュートリアルのモデルのFully connected層をConvolution層に置き換えたところ、学習が正常に行われなくなった。</p><p>　TensorBoardを通じてモデルの状態を確認したところ、conv2層で勾配消失が起きていることがわかった。さらに調査を続けると、conv2層のweightsの初期値がcuda-convnetに記載されている値と異なっており、修正することで正常に学習できるようになった（数値の食い違いが意図的なものかは不明だが、修正を<a href=https://github.com/tensorflow/tensorflow/pull/2374 target=_blank>Pull Request</a>している）。</p><p>　「重み共有（Shared weights/Tied weights）」をしないというLocally connectedの条件をTensorFlowでどのように実現するかは現時点でわかっていない。<code>depthwise_conv2d</code>について検討したが、上手くいかないと判断している（出力フィルタの枚数を減らすことができないため）。</p><p>　エクササイズについては、今後も調査を続けていく。</p><h3 id=tensorflowのexercise>TensorFlowのExercise</h3><p>「TensorFlowは、Tutorialが充実している」と言われます。</p><p>　僕はTensorFlowから機械学習を始めたので実感はないのですが、僕の周りで他のフレームワークを知っている人の多くは「TensorFlowはチュートリアルが充実している。親切だ」と言っています。</p><p>　そんなTensorFlowチュートリアルには「エクササイズ」と銘が打たれた「課題」があります。</p><p>　世の中ディープラーニング全盛。TensorFlowもかなりの人気の中、検索すると「TensorFlowをインストールしてみた」「チュートリアルをやってみた」そんなブログ記事はよく見るのですが、「エクササイズをやってみた」と言うウェブサイトや記事は見あたりませんでした。</p><p>　もしかするとTensorFlowのサイトのどこをみてもエクササイズの回答が示されていないので、挑戦しても正解か答え合わせができず、「不正確な情報は出せない」と公開していないのかもしれません。</p><p>　それか、『あまりにも簡単にできてしまったので、みんなわかるだろう』と、公開する必要がないと思っている。そういう人も居るのかもしれません。</p><p>　ここに居ます。</p><p>　エクササイズがわからずに苦労している人間が。</p><p>　僕と同じような人も居るかもしれないので、ここに挑戦の記録を残します。まだ未解決の部分もあるので、わかる人は是非教えてください。</p><hr><p>　挑戦したエクササイズは「<a href=https://www.tensorflow.org/versions/r0.8/tutorials/deep_cnn/index.html#convolutional-neural-networks target=_blank>チュートリアル</a>」の畳み込みニューラルネットワークの構築にあります。</p><p>　チュートリアルの題材は「CIFAR-10」です。</p><h4 id=cifar-10>CIFAR-10</h4><p><a href=https://www.cs.toronto.edu/~kriz/cifar.html target=_blank>CIFAR-10</a>（しーふぁー・てん）は、機械学習において一般物体認識（多クラス分類）のベンチマークとして用いられています。</p><p>「airplane」「automobile」「bird」「cat」「deer」「dog」「frog」「horse」「ship」「truck」の10種類の物体が写った小さな画像（32×32ピクセル・RGBカラー）を、訓練データ50,000枚で学習し、テストデータ10,000枚を使って学習速度や正答率を見ます。</p><h3 id=エクササイズ-softmax>エクササイズ Softmax</h3><p>　エクササイズの一つ目は、推論によって導かれるlogitsを「softmax」によって正規化するというものです。</p><pre><code>EXERCISE: The output of inference are un-normalized logits.
 Try editing the network architecture to return normalized predictions using tf.nn.softmax().
-</code></pre>
-<p>　こちらはさほど難しくはありません。出力層で処理した結果を<code>softmax_liner</code>に代入する前に、<code>tf.nn.softmax</code>を挟むだけです。</p>
-<pre><code class="python">  # softmax, i.e. softmax(WX + b)
+</code></pre><p>　こちらはさほど難しくはありません。出力層で処理した結果を<code>softmax_liner</code>に代入する前に、<code>tf.nn.softmax</code>を挟むだけです。</p><pre><code class=python>  # softmax, i.e. softmax(WX + b)
   with tf.variable_scope('softmax_linear') as scope:
     weights = _variable_with_weight_decay('weights', [192, NUM_CLASSES],
                                           stddev=1/192.0, wd=0.0)
@@ -205,25 +13,11 @@ Try editing the network architecture to return normalized predictions using tf.n
                               tf.constant_initializer(0.0))
     softmax_linear = tf.nn.softmax(tf.add(tf.matmul(local4, weights), biases), name=scope.name)
     _activation_summary(softmax_linear)
-</code></pre>
-<p>　しかし、前述の通り回答が公式のどこにも見つからないので、こんな単純なことですら、本当に正解かわからないというのが辛いところです……。</p>
-<hr>
-<h3 id="wipエクササイズ-cuda-convnet">(WIP)エクササイズ cuda-convnet</h3>
-<pre><code>EXERCISE: The model architecture in inference() differs slightly from the CIFAR-10 
+</code></pre><p>　しかし、前述の通り回答が公式のどこにも見つからないので、こんな単純なことですら、本当に正解かわからないというのが辛いところです……。</p><hr><h3 id=wipエクササイズ-cuda-convnet>(WIP)エクササイズ cuda-convnet</h3><pre><code>EXERCISE: The model architecture in inference() differs slightly from the CIFAR-10 
 model specified in cuda-convnet. In particular, the top layers of Alex's original model 
 are locally connected and not fully connected. Try editing the architecture to exactly 
 reproduce the locally connected architecture in the top layer.
-</code></pre>
-<p>　二つ目はかなり悩みました。</p>
-<p>「<code>local3</code>と<code>local4</code>の各層をcuda-convnetに示されている実装に合わせる（Fully-connected層からLocally-connected層にする）」というものですが、一部については理解ができたものの、いまだ解決していない部分があります。</p>
-<h4 id="locally-connected-layerとは">Locally Connected Layerとは</h4>
-<p>　まず「Locally connected」の意味がわかりません。これについては4月13日の「<a href="http://connpass.com/event/27081/" target="_blank">TensorFlow勉強会（３）</a>」でも触れた通りです。</p>
-<p>　そもそもこの二つの層の<code>tf.variable_scope</code>が<code>local3</code>と<code>local4</code>になっているじゃないか。なんでこれが「Fully Connected」なのか。4月時点の僕は本気でそう考えていました。</p>
-<p>　今ならわかります。前の層からの入力を1次元にしたものに<code>weights</code>を<code>matmul</code>しているのだから、これはどう見ても全結合です。本当ににありがとうございました。</p>
-<p>　さて、<code>local3</code>と<code>local4</code>の2層が全結合層であることはわかりました。次はこれをLocally Connectedに置き換える必要があります。</p>
-<p>　最初の疑問「Locally connectedとはどういう意味なのか」に戻ります。</p>
-<p>　その答えは、エクササイズからリンクされている<a href="https://code.google.com/p/cuda-convnet/source/browse/trunk/example-layers/layers-conv-local-11pct.cfg" target="_blank">cuda-convnetの「レイヤー定義」</a>にありました。</p>
-<pre><code>[local3]
+</code></pre><p>　二つ目はかなり悩みました。</p><p>「<code>local3</code>と<code>local4</code>の各層をcuda-convnetに示されている実装に合わせる（Fully-connected層からLocally-connected層にする）」というものですが、一部については理解ができたものの、いまだ解決していない部分があります。</p><h4 id=locally-connected-layerとは>Locally Connected Layerとは</h4><p>　まず「Locally connected」の意味がわかりません。これについては4月13日の「<a href=http://connpass.com/event/27081/ target=_blank>TensorFlow勉強会（３）</a>」でも触れた通りです。</p><p>　そもそもこの二つの層の<code>tf.variable_scope</code>が<code>local3</code>と<code>local4</code>になっているじゃないか。なんでこれが「Fully Connected」なのか。4月時点の僕は本気でそう考えていました。</p><p>　今ならわかります。前の層からの入力を1次元にしたものに<code>weights</code>を<code>matmul</code>しているのだから、これはどう見ても全結合です。本当ににありがとうございました。</p><p>　さて、<code>local3</code>と<code>local4</code>の2層が全結合層であることはわかりました。次はこれをLocally Connectedに置き換える必要があります。</p><p>　最初の疑問「Locally connectedとはどういう意味なのか」に戻ります。</p><p>　その答えは、エクササイズからリンクされている<a href=https://code.google.com/p/cuda-convnet/source/browse/trunk/example-layers/layers-conv-local-11pct.cfg target=_blank>cuda-convnetの「レイヤー定義」</a>にありました。</p><pre><code>[local3]
 type=local
 inputs=pool2
 filters=64
@@ -244,18 +38,11 @@ filterSize=3
 channels=64
 neuron=relu
 initW=0.04
-</code></pre>
-<p>　層のtypeが<code>local</code>になっていますね。ちなみにcuda-convnetでは畳み込み層は<code>conv</code>、全結合層の場合は<code>fc</code>を指定するようです。たったこれだけで各層の定義ができるのか。TensorFlowよりよっぽど楽じゃないかと驚いたのですが、それは置いておくとして。</p>
-<p>　typeに<code>local</code>が指定されていることはわかりました。しかし、<code>local</code>が具体的にどういう意味になるのかがわかりません。同じサイトの「<a href="https://code.google.com/p/cuda-convnet/wiki/LayerParams" target="_blank">LayerParams</a>」を見ると、もう少し具体的に記載があります。</p>
-<pre><code>Locally-connected layer with unshared weights
+</code></pre><p>　層のtypeが<code>local</code>になっていますね。ちなみにcuda-convnetでは畳み込み層は<code>conv</code>、全結合層の場合は<code>fc</code>を指定するようです。たったこれだけで各層の定義ができるのか。TensorFlowよりよっぽど楽じゃないかと驚いたのですが、それは置いておくとして。</p><p>　typeに<code>local</code>が指定されていることはわかりました。しかし、<code>local</code>が具体的にどういう意味になるのかがわかりません。同じサイトの「<a href=https://code.google.com/p/cuda-convnet/wiki/LayerParams target=_blank>LayerParams</a>」を見ると、もう少し具体的に記載があります。</p><pre><code>Locally-connected layer with unshared weights
 This kind of layer is just like a convolutional layer, but without any weight-sharing. 
 That is to say, a different set of filters is applied at every (x, y) location in the 
 input image. Aside from that, it behaves exactly as a convolutional layer.
-</code></pre>
-<p>　要約すると「Locally-connected層は、畳み込み層と同じようなものだけど、重みを共有しないよ」と言うことのようです。</p>
-<h4 id="畳み込み層に置き換える">畳み込み層に置き換える</h4>
-<p>　「畳み込み層と同じようなものなら、まず畳み込み層として実装してみよう」と思いやってみました。</p>
-<pre><code>  # local3
+</code></pre><p>　要約すると「Locally-connected層は、畳み込み層と同じようなものだけど、重みを共有しないよ」と言うことのようです。</p><h4 id=畳み込み層に置き換える>畳み込み層に置き換える</h4><p>　「畳み込み層と同じようなものなら、まず畳み込み層として実装してみよう」と思いやってみました。</p><pre><code>  # local3
   with tf.variable_scope('local3') as scope:
     kernel = _variable_with_weight_decay('weights', shape=[3, 3, 64, 64],
                                          stddev=0.04, wd=0.04)
@@ -290,27 +77,7 @@ input image. Aside from that, it behaves exactly as a convolutional layer.
     _activation_summary(softmax_linear)
 
   return softmax_linear
-</code></pre>
-<p>　前の<code>pool2</code>からの出力を<code>local3</code>と<code>local4</code>で畳み込んで、それを最終的に出力層への入力とします。</p>
-<p>フィルターサイズなどのパラメーターは<a href="https://code.google.com/p/cuda-convnet/source/browse/trunk/example-layers/layers-conv-local-11pct.cfg" target="_blank">cuda-convnetの「レイヤー定義」</a>に合わせました。</p>
-<p>　ちなみに「レイヤー定義」の中には<code>local4</code>の次に全結合層<code>fc</code>がありますが、これはそのまま出力<code>output</code>へ繋げるためのものだと判断し、今回は同じ<code>variable_scope</code>の中に入れてあります。</p>
-<h4 id="実験">実験</h4>
-<p>　このモデルで訓練をしたところ……上手くいきませんでした。</p>
-<p>具体的には、訓練中にLoss率が2.3から下がらなくなり、その後、テストデータで検証すると結果が常に<code>0.1</code>になります。</p>
-<p>　正答率が0.1（10%）ということは、訓練したモデルが常に同じ答え（例えば全部truckと答えるなど）を返している可能性が高く、学習が正常に行われていないということを意味します。</p>
-<p>　Locally-connectedを畳み込み層として実装するアプローチが間違っていたのか。それともどこかでパラメーターを間違えたのか。この時点ではまったくわからず、途方に暮れてしまいました。</p>
-<h4 id="原因-8211-tensorboardを使って">原因 – TensorBoardを使って</h4>
-<p>　学習が上手くいかない原因は、まったく別のところにありました。</p>
-<p>　TensorBoardのHISTOGRAMSでステップごとのモデルの状態を可視化してみると、1,000ステップを超えた辺りで、Gradients（＝勾配）がなくなっていることがわかりました。</p>
-<p>　そして勾配消失は、変更した<code>local3</code>でも<code>local4</code>でもなく、畳み込み層<code>conv2</code>で起きていました。</p>
-<div id="attachment_1234" style="max-width: 1512px" class="wp-caption aligncenter">
-  <a href="https://blog.keiji.dev/wp-content/uploads/2016/05/Screen-Shot-2016-05-16-at-03.28.57.png" rel="attachment wp-att-1234"><img src="https://blog.keiji.dev/wp-content/uploads/2016/05/Screen-Shot-2016-05-16-at-03.28.57.png" alt="Gradients（勾配）が消失している" width="1502" height="858" class="size-full wp-image-1234" /></a>
-  <p class="wp-caption-text">
-    Gradients（勾配）が消失している
-  </p>
-</div>
-<p>　直接の原因が「conv2」にあることがわかったので、パラメータを１つずつ、cuda-convnetと比べて確認します。</p>
-<pre><code>  # conv2
+</code></pre><p>　前の<code>pool2</code>からの出力を<code>local3</code>と<code>local4</code>で畳み込んで、それを最終的に出力層への入力とします。</p><p>フィルターサイズなどのパラメーターは<a href=https://code.google.com/p/cuda-convnet/source/browse/trunk/example-layers/layers-conv-local-11pct.cfg target=_blank>cuda-convnetの「レイヤー定義」</a>に合わせました。</p><p>　ちなみに「レイヤー定義」の中には<code>local4</code>の次に全結合層<code>fc</code>がありますが、これはそのまま出力<code>output</code>へ繋げるためのものだと判断し、今回は同じ<code>variable_scope</code>の中に入れてあります。</p><h4 id=実験>実験</h4><p>　このモデルで訓練をしたところ……上手くいきませんでした。</p><p>具体的には、訓練中にLoss率が2.3から下がらなくなり、その後、テストデータで検証すると結果が常に<code>0.1</code>になります。</p><p>　正答率が0.1（10%）ということは、訓練したモデルが常に同じ答え（例えば全部truckと答えるなど）を返している可能性が高く、学習が正常に行われていないということを意味します。</p><p>　Locally-connectedを畳み込み層として実装するアプローチが間違っていたのか。それともどこかでパラメーターを間違えたのか。この時点ではまったくわからず、途方に暮れてしまいました。</p><h4 id=原因-8211-tensorboardを使って>原因 – TensorBoardを使って</h4><p>　学習が上手くいかない原因は、まったく別のところにありました。</p><p>　TensorBoardのHISTOGRAMSでステップごとのモデルの状態を可視化してみると、1,000ステップを超えた辺りで、Gradients（＝勾配）がなくなっていることがわかりました。</p><p>　そして勾配消失は、変更した<code>local3</code>でも<code>local4</code>でもなく、畳み込み層<code>conv2</code>で起きていました。</p><div id=attachment_1234 style=max-width:1512px class="wp-caption aligncenter"><a href=https://blog.keiji.dev/wp-content/uploads/2016/05/Screen-Shot-2016-05-16-at-03.28.57.png rel="attachment wp-att-1234"><img src=https://blog.keiji.dev/wp-content/uploads/2016/05/Screen-Shot-2016-05-16-at-03.28.57.png alt=Gradients（勾配）が消失している width=1502 height=858 class="size-full wp-image-1234"></a><p class=wp-caption-text>Gradients（勾配）が消失している</p></div><p>　直接の原因が「conv2」にあることがわかったので、パラメータを１つずつ、cuda-convnetと比べて確認します。</p><pre><code>  # conv2
   with tf.variable_scope('conv2') as scope:
     kernel = _variable_with_weight_decay('weights', shape=[5, 5, 64, 64],
                                          stddev=1e-4, wd=0.0)
@@ -333,80 +100,11 @@ neuron=relu
 initW=0.01
 partialSum=8
 sharedBiases=1
-</code></pre>
-<p>　conv2でweightsを生成するときに指定している初期値(標準偏差stddev)が、cuda-convnetには0.01が指定されているのに対して、チュートリアルのコードでは<code>1e-4 = 0.0001</code>になっています。これでは値が小さすぎるのでしょう。</p>
-<p>　conv2のstddevに’1e-2’を設定することで、正常に学習が進むようになりました。</p>
-<hr>
-<h5 id="pull-request">pull request</h5>
-<p>　ちなみに<code>1e-4</code>は前の畳み込み層<code>conv1</code>と同じ値なので、書き間違いの可能性があります（エクササイズに挑戦した人を待ち構える罠として意図的に設定された可能性もありますが……）。</p>
-<p>　TensorFlowはGitHub上で開発されています。せっかくなのでPullRequestを送ってみました。</p>
-<p><a href="https://github.com/tensorflow/tensorflow/pull/2374" target="_blank">Match conv2 weights stddev with cuda-convnet’s layer def.</a></p>
-<hr>
-<h4 id="畳み込み層にした変化">畳み込み層にした変化</h4>
-<p>　local3とlocal4の二層を、Fully connected（全結合）層からConvolutional（畳み込み）層に置き換えることで、それまでは8.5MBあったモデルのサイズが1.4MB程度まで減少しました。これは、全結合層が局所結合の畳み込み層に変わったことでパラメータ数が減少したためと考えられます。</p>
-<p>　しかし、Fully connected層を2層使ったときのような高速な学習（と正答率）、cuda-convnetで紹介されているほどの性能は得られませんでした。</p>
-<h3 id="今後の課題">今後の課題</h3>
-<p>　今回、全結合層を畳み込み層に変えることはできました。しかし、Locally connected層の定義にある「重み共有をしない」について、TensorFlowでどのようにして実現するか現時点でわかっていません。</p>
-<p>　Locally connected層は”重み共有をしない（unshared weights）畳み込み層である”と理解しています。一つの可能性として、TensorFlowの畳み込みに使う命令をconv2dからdepthwise_conv2dに変更することで、チャンネル別に畳み込み処理をする方法があります。</p>
-<p>　しかし、depthwise_conv2dの畳み込み処理後のフィルター数は入力フィルター数のn倍となり、前の層からの入力より増加します。フィルター数が64から32に現象するlocal4では利用できません。</p>
-<p>　別の可能性として、TensorFlowの「畳み込み命令(conv2d)」は、もとより「重み共有（shared weights / tied weights）」をしていないということが考えられるでしょう。その場合「local3」と「local4」については「conv2d」をそのまま用い、それ以前の層「conv1」および「conv2」で重み共有を追加する必要があります。</p>
-<p>　TensorFlowのエクササイズについては、引き続き調査を続けていきたいと考えています。</p>
-<hr>
-<h2 id="技術書典">技術書典</h2>
-<p>　『機械学習は初心者』と言い続けてそろそろ半年になろうとしている僕が、TensorFlowを題材にした同人誌を出します。</p>
-<p>　６月２５日に秋葉原の通運会館で開かれる技術系同人誌オンリーイベント「<a href="https://techbookfest.org/">技術書典</a>」にて頒布します（今回は有償頒布の予定）。</p>
-<div id="attachment_1186" style="max-width: 645px" class="wp-caption aligncenter">
-  <a href="https://techbookfest.org/#A-28" rel="attachment wp-att-1186"><img src="https://blog.keiji.dev/wp-content/uploads/2016/05/5690091590647808.png" alt="6/25 技術書典 A-28" width="50%" height="50%" class="size-full wp-image-1186" /></a>
-  <p class="wp-caption-text">
-    6/25 技術書典 A-28
-  </p>
-</div>
-<p>　技術書典のA-28のブースで僕と握手！</p>
-
-
-
-      
-
-      
-    </article>
-    
-    
-      
-
-    
-  </div>
-
-    <footer>
-  
-
-<div class="social-icons">
-  
-
-  
-</div>
-
-
-  
-  <div class="container">
-    <p class="credits copyright">
-      <a href="https://blog.keiji.dev/about"></a>
-      &nbsp;&copy;
-      2024
-      
-        &nbsp;/&nbsp;
-        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
-      
-      &nbsp;&ndash;&nbsp;
-      <em class="fas fa-moon" id="dark-mode-toggle"></em>
-    </p>
-
-    <p class="credits theme-by">
-      Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
-      Theme
-      <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
-  </div>
-</footer>
-
-  </body>
-</html>
+</code></pre><p>　conv2でweightsを生成するときに指定している初期値(標準偏差stddev)が、cuda-convnetには0.01が指定されているのに対して、チュートリアルのコードでは<code>1e-4 = 0.0001</code>になっています。これでは値が小さすぎるのでしょう。</p><p>　conv2のstddevに’1e-2’を設定することで、正常に学習が進むようになりました。</p><hr><h5 id=pull-request>pull request</h5><p>　ちなみに<code>1e-4</code>は前の畳み込み層<code>conv1</code>と同じ値なので、書き間違いの可能性があります（エクササイズに挑戦した人を待ち構える罠として意図的に設定された可能性もありますが……）。</p><p>　TensorFlowはGitHub上で開発されています。せっかくなのでPullRequestを送ってみました。</p><p><a href=https://github.com/tensorflow/tensorflow/pull/2374 target=_blank>Match conv2 weights stddev with cuda-convnet’s layer def.</a></p><hr><h4 id=畳み込み層にした変化>畳み込み層にした変化</h4><p>　local3とlocal4の二層を、Fully connected（全結合）層からConvolutional（畳み込み）層に置き換えることで、それまでは8.5MBあったモデルのサイズが1.4MB程度まで減少しました。これは、全結合層が局所結合の畳み込み層に変わったことでパラメータ数が減少したためと考えられます。</p><p>　しかし、Fully connected層を2層使ったときのような高速な学習（と正答率）、cuda-convnetで紹介されているほどの性能は得られませんでした。</p><h3 id=今後の課題>今後の課題</h3><p>　今回、全結合層を畳み込み層に変えることはできました。しかし、Locally connected層の定義にある「重み共有をしない」について、TensorFlowでどのようにして実現するか現時点でわかっていません。</p><p>　Locally connected層は”重み共有をしない（unshared weights）畳み込み層である”と理解しています。一つの可能性として、TensorFlowの畳み込みに使う命令をconv2dからdepthwise_conv2dに変更することで、チャンネル別に畳み込み処理をする方法があります。</p><p>　しかし、depthwise_conv2dの畳み込み処理後のフィルター数は入力フィルター数のn倍となり、前の層からの入力より増加します。フィルター数が64から32に現象するlocal4では利用できません。</p><p>　別の可能性として、TensorFlowの「畳み込み命令(conv2d)」は、もとより「重み共有（shared weights / tied weights）」をしていないということが考えられるでしょう。その場合「local3」と「local4」については「conv2d」をそのまま用い、それ以前の層「conv1」および「conv2」で重み共有を追加する必要があります。</p><p>　TensorFlowのエクササイズについては、引き続き調査を続けていきたいと考えています。</p><hr><h2 id=技術書典>技術書典</h2><p>　『機械学習は初心者』と言い続けてそろそろ半年になろうとしている僕が、TensorFlowを題材にした同人誌を出します。</p><p>　６月２５日に秋葉原の通運会館で開かれる技術系同人誌オンリーイベント「<a href=https://techbookfest.org/>技術書典</a>」にて頒布します（今回は有償頒布の予定）。</p><div id=attachment_1186 style=max-width:645px class="wp-caption aligncenter"><a href=https://techbookfest.org/#A-28 rel="attachment wp-att-1186"><img src=https://blog.keiji.dev/wp-content/uploads/2016/05/5690091590647808.png alt="6/25 技術書典 A-28" width=50% height=50% class="size-full wp-image-1186"></a><p class=wp-caption-text>6/25 技術書典 A-28</p></div><p>　技術書典のA-28のブースで僕と握手！</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
+2025
+&nbsp;/&nbsp;
+<a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
+&nbsp;&ndash;&nbsp;
+<em class="fas fa-moon" id=dark-mode-toggle></em></p><p class="credits theme-by">Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
+Theme
+<a href=https://github.com/matsuyoshi30/harbor>Harbor</a></p></div></footer></body></html>

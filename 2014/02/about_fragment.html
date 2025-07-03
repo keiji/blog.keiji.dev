@@ -1,196 +1,19 @@
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8" />
-<title>Fragment使う人に最低限、知っておいて欲しいこと</title>
-<meta name="description" 
-      content="Don&#39;t take your glasses off."
->
-
-  
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RTC3ZY943S');
-  </script>
-  
-
-
-
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link
-  rel="alternate"
-  type="application/rss+xml"
-  href="https://blog.keiji.dev/index.xml"
-  title="めがねをかけるんだ"
-/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://blog.keiji.dev/images/logo.png"/>
-
-<meta name="twitter:title" content="Fragment使う人に最低限、知っておいて欲しいこと"/>
-<meta name="twitter:description" content="
-※ 2015/12/24追記: この記事は古くなっています。最新の情報はこちら
-
+<!doctype html><html lang=ja><head><meta charset=utf-8><title>Fragment使う人に最低限、知っておいて欲しいこと</title>
+<meta name=description content="Don't take your glasses off."><script async src="https://www.googletagmanager.com/gtag/js?id=G-RTC3ZY943S"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-RTC3ZY943S")</script><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=alternate type=application/rss+xml href=https://blog.keiji.dev/index.xml title=めがねをかけるんだ><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.keiji.dev/images/logo.png"><meta name=twitter:title content="Fragment使う人に最低限、知っておいて欲しいこと"><meta name=twitter:description content=" ※ 2015/12/24追記: この記事は古くなっています。最新の情報はこちら
 Fragmentは、使いこなすと深い概念です。僕自身、使いこなせているとは言えません。
 ただ、昔ならActivityだけで乗り切れていたのですが、最近ではAndroidのプロジェクトを作成すると標準でFragmentを使ったコードが生成されますし、避けて通ることは難しくなっています。
 そしてやっかいなことに、Fragmentは使いこなすまで恩恵がわかりにくいばかりか、ちょっと変な使い方をすると保守性が急降下します。
-「Fragmentよくわからないな」と、僕と同じ考えをお持ちの皆さん、Fragmentを使いこなせるようになるまでの間は、最低限、無難な使い方をしましょう。"/>
-
-
-
-<link rel="stylesheet" href="https://blog.keiji.dev/fontawesome/css/all.min.css" />
-
-
-
-
-<link
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/styles.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-  <link rel="stylesheet" href="https://blog.keiji.dev/css/default.css" />
-
-
-
-<link
-  id="dark-mode-theme"
-  crossorigin="anonymous"
-  href="https://blog.keiji.dev/css/dark.min.css"
-  integrity=""
-  rel="preload stylesheet"
-  as="style"
-/>
-
-
-<script>
-  var darkTheme = document.getElementById('dark-mode-theme')
-  var storedTheme = localStorage.getItem('dark-mode-storage')
-
-  if (storedTheme === 'dark') {
-    darkTheme.disabled = false
-  } else if (storedTheme === 'light') {
-    darkTheme.disabled = true
-  }
-</script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/theme.js" integrity=""></script>
-
-
-<script defer crossorigin="anonymous" src="https://blog.keiji.dev/js/instantpage.min.js" integrity=""></script><meta name="generator" content="Hugo 0.111.3">
-  </head>
-  <body>
-    
-  
-
-
-
-
-  <header>
-    <nav class="navbar">
-  <div class="nav">
-    
-      <a href="https://blog.keiji.dev/" class="nav-logo">
-        <img
-          src="https://blog.keiji.dev/images/logo.png"
-          width=""
-          height=""
-          alt="Logo"
-        />
-      </a>
-    
-
-    <ul class="nav-links">
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/profile/" id="Profile"
-              ><em class="fas fa-user fa-lg"></em
-            ></a>
-          </li>
-          
-      
-        
-          <li>
-            <a href="https://blog.keiji.dev/licenses/" id="Licenses"
-              ><em class="fab fa-osi fa-lg"></em
-            ></a>
-          </li>
-          
-      
-    </ul>
-  </div>
-</nav>
-
-    <div class="intro-header">
-      <div class="container">
-        <div class="post-heading">
-          
-            <h1>
-              Fragment使う人に最低限、知っておいて欲しいこと
-            </h1>
-          
-          
-            <span class="meta-post">
-  <em class="fa fa-calendar-alt"></em
-  >&nbsp;2014-02-04
-  
-    &nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/android/"
-        >Android</a
-      >&nbsp;
-    
-      <a
-        href="https://blog.keiji.dev/categories/%E3%83%A1%E3%83%A2/"
-        >メモ</a
-      >&nbsp;
-    
-  
-</span>
-
-          
-        </div>
-      </div>
-    </div>
-  </header>
-  
-
-    
-  <div class="container" role="main">
-    <article class="article" class="blog-post">
-      
-  <hr>
-<p>※ 2015/12/24追記: この記事は古くなっています。最新の情報は<a href="https://blog.keiji.dev/2015/12/mincomi-adventcalendar-24.html">こちら</a></p>
-<hr>
-<p><code>Fragment</code>は、使いこなすと深い概念です。僕自身、使いこなせているとは言えません。</p>
-<p>ただ、昔なら<code>Activity</code>だけで乗り切れていたのですが、最近ではAndroidのプロジェクトを作成すると標準で<code>Fragment</code>を使ったコードが生成されますし、避けて通ることは難しくなっています。</p>
-<p>そしてやっかいなことに、<code>Fragment</code>は使いこなすまで恩恵がわかりにくいばかりか、ちょっと変な使い方をすると保守性が急降下します。</p>
-<p>「<code>Fragment</code>よくわからないな」と、僕と同じ考えをお持ちの皆さん、<code>Fragment</code>を使いこなせるようになるまでの間は、最低限、無難な使い方をしましょう。</p>
-<h2 id="いきなりの結論">いきなりの結論</h2>
-<p><strong>Fragment内部から、そのFragmentを呼び出しているActivity固有のメソッド・メンバ変数を参照してはいけません。</strong></p>
-<pre><code>public class YYYYFragment extends Fragment implements OnClickListener {
+「Fragmentよくわからないな」と、僕と同じ考えをお持ちの皆さん、Fragmentを使いこなせるようになるまでの間は、最低限、無難な使い方をしましょう。"><link rel=stylesheet href=https://blog.keiji.dev/fontawesome/css/all.min.css><link crossorigin=anonymous href=https://blog.keiji.dev/css/styles.min.css integrity rel="preload stylesheet" as=style><link rel=stylesheet href=https://blog.keiji.dev/css/default.css><link id=dark-mode-theme crossorigin=anonymous href=https://blog.keiji.dev/css/dark.min.css integrity rel="preload stylesheet" as=style><script>var darkTheme=document.getElementById("dark-mode-theme"),storedTheme=localStorage.getItem("dark-mode-storage");storedTheme==="dark"?darkTheme.disabled=!1:storedTheme==="light"&&(darkTheme.disabled=!0)</script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/theme.js integrity></script><script defer crossorigin=anonymous src=https://blog.keiji.dev/js/instantpage.min.js integrity></script><meta name=generator content="Hugo 0.133.0"></head><body><header><nav class=navbar><div class=nav><a href=https://blog.keiji.dev/ class=nav-logo><img src=https://blog.keiji.dev/images/logo.png width height alt=Logo></a><ul class=nav-links><li><a href=https://blog.keiji.dev/profile/ id=Profile><em class="fas fa-user fa-lg"></em></a></li><li><a href=https://blog.keiji.dev/licenses/ id=Licenses><em class="fab fa-osi fa-lg"></em></a></li></ul></div></nav><div class=intro-header><div class=container><div class=post-heading><h1>Fragment使う人に最低限、知っておいて欲しいこと</h1><span class=meta-post><em class="fa fa-calendar-alt"></em>&nbsp;2014-02-04
+&nbsp;&nbsp;&nbsp;<em class="fa fa-folder-open"></em>&nbsp;
+<a href=https://blog.keiji.dev/categories/android/>Android</a>&nbsp;
+<a href=https://blog.keiji.dev/categories/%E3%83%A1%E3%83%A2/>メモ</a>&nbsp;</span></div></div></div></header><div class=container role=main><article class=article class=blog-post><hr><p>※ 2015/12/24追記: この記事は古くなっています。最新の情報は<a href=https://blog.keiji.dev/2015/12/mincomi-adventcalendar-24.html>こちら</a></p><hr><p><code>Fragment</code>は、使いこなすと深い概念です。僕自身、使いこなせているとは言えません。</p><p>ただ、昔なら<code>Activity</code>だけで乗り切れていたのですが、最近ではAndroidのプロジェクトを作成すると標準で<code>Fragment</code>を使ったコードが生成されますし、避けて通ることは難しくなっています。</p><p>そしてやっかいなことに、<code>Fragment</code>は使いこなすまで恩恵がわかりにくいばかりか、ちょっと変な使い方をすると保守性が急降下します。</p><p>「<code>Fragment</code>よくわからないな」と、僕と同じ考えをお持ちの皆さん、<code>Fragment</code>を使いこなせるようになるまでの間は、最低限、無難な使い方をしましょう。</p><h2 id=いきなりの結論>いきなりの結論</h2><p><strong>Fragment内部から、そのFragmentを呼び出しているActivity固有のメソッド・メンバ変数を参照してはいけません。</strong></p><pre><code>public class YYYYFragment extends Fragment implements OnClickListener {
 
     public void onClick(View v) {
         XXXXActivity caller = (XXXXActivity) getActivity();
         caller.submit(); // XXXXActivity固有のメソッドを実行
     }
 }
-</code></pre>
-<p><strong><code>instanceof</code>で型チェックもしないでいきなりキャストとか、ダメ！絶対！</strong></p>
-<p>そのActivity以外でロードされると速攻で落ちます。</p>
-<p>こう言う場合、必ず、<code>Listener</code>を介してActivity側で処理しましょう。</p>
-<pre><code>public class XXXXActivity extends FragmentActivity implements YYYYFragment.Listener {
+</code></pre><p><strong><code>instanceof</code>で型チェックもしないでいきなりキャストとか、ダメ！絶対！</strong></p><p>そのActivity以外でロードされると速攻で落ちます。</p><p>こう言う場合、必ず、<code>Listener</code>を介してActivity側で処理しましょう。</p><pre><code>public class XXXXActivity extends FragmentActivity implements YYYYFragment.Listener {
     private void submit() {
         // 処理
     }
@@ -200,9 +23,7 @@ Fragmentは、使いこなすと深い概念です。僕自身、使いこなせ
         submit();
     }
 }
-</code></pre>
-<p>　</p>
-<pre><code>public class YYYYFragment extends Fragment implements OnClickListener {
+</code></pre><p>　</p><pre><code>public class YYYYFragment extends Fragment implements OnClickListener {
     // リスナー
     public interface Listener {
         public void onSubmitClicked();
@@ -219,13 +40,7 @@ Fragmentは、使いこなすと深い概念です。僕自身、使いこなせ
         }
     }
 }
-</code></pre>
-<p>Listenerの設定は、Fragment#onAttach(Activity activity)内でactivityをinstanceofし、Listenerが実装されている事が確認されたタイミングがベストです。</p>
-<p>FragmentをロードするActivityから明示的に<code>setListener</code>をすることも出来ますが、その場合、Fragmentのライフサイクル、再生成時の挙動には注意してください。再生成時に確実にsetListenerが実行されるようにしなければ、イベントをActivityで受けることが出来ません。</p>
-<p><s>もし、万が一、そのFragmentが、将来にわたってそのActivityからしかロードされないことが確定しているのであれば、そのActivityの内部クラスとして定義しましょう。</s></p>
-<p><strong>この場合、PlaceholderFragmentはstaticにしておかないと再生成時にエラーが発生するという指摘を<a href="https://twitter.com/zaki50" target="_blank">zaki50</a>さんから頂きました。ありがとうざきさん！</strong></p>
-<s>
-<pre><code>public class XXXXActivity extends FragmentActivity {
+</code></pre><p>Listenerの設定は、Fragment#onAttach(Activity activity)内でactivityをinstanceofし、Listenerが実装されている事が確認されたタイミングがベストです。</p><p>FragmentをロードするActivityから明示的に<code>setListener</code>をすることも出来ますが、その場合、Fragmentのライフサイクル、再生成時の挙動には注意してください。再生成時に確実にsetListenerが実行されるようにしなければ、イベントをActivityで受けることが出来ません。</p><p><s>もし、万が一、そのFragmentが、将来にわたってそのActivityからしかロードされないことが確定しているのであれば、そのActivityの内部クラスとして定義しましょう。</s></p><p><strong>この場合、PlaceholderFragmentはstaticにしておかないと再生成時にエラーが発生するという指摘を<a href=https://twitter.com/zaki50 target=_blank>zaki50</a>さんから頂きました。ありがとうざきさん！</strong></p><s><pre><code>public class XXXXActivity extends FragmentActivity {
 
     private void submit() {
         // 処理
@@ -238,59 +53,11 @@ Fragmentは、使いこなすと深い概念です。僕自身、使いこなせ
         }
     }
 }
-</code></pre>
-</s>
-<p>FragmentにいちいちListenerを作るのは、めんどくさいように見えても、将来的には得をします。 他の開発者がプログラムを見たときにそのFragmentがどんなイベントをActivityに投げるのか一目瞭然になるからです。</p>
-<p>「自分のコードは自分しか見ないよ」と考えている皆さん。</p>
-<p><strong>3ヶ月前のコードを見直す自分は、他の開発者と同じであることを忘れないでください。</strong></p>
-<p>自戒を込めて。</p>
-<hr>
-<p>PS. 他にもいろいろ落とし穴を避ける方法を指摘してもらったのですが、記事がどんどん長くなるので割愛します。Fragmentには落とし穴がいっぱいだけど、今回挙げたのはそれ以前の問題と言うことで。</p>
-
-
-
-      
-
-      
-    </article>
-    
-    
-      
-
-    
-  </div>
-
-    <footer>
-  
-
-<div class="social-icons">
-  
-
-  
-</div>
-
-
-  
-  <div class="container">
-    <p class="credits copyright">
-      <a href="https://blog.keiji.dev/about"></a>
-      &nbsp;&copy;
-      2024
-      
-        &nbsp;/&nbsp;
-        <a href="https://blog.keiji.dev/">めがねをかけるんだ</a>
-      
-      &nbsp;&ndash;&nbsp;
-      <em class="fas fa-moon" id="dark-mode-toggle"></em>
-    </p>
-
-    <p class="credits theme-by">
-      Powered By <a href="https://gohugo.io">Hugo</a>&nbsp;
-      Theme
-      <a href="https://github.com/matsuyoshi30/harbor">Harbor</a>
-    </p>
-  </div>
-</footer>
-
-  </body>
-</html>
+</code></pre></s><p>FragmentにいちいちListenerを作るのは、めんどくさいように見えても、将来的には得をします。 他の開発者がプログラムを見たときにそのFragmentがどんなイベントをActivityに投げるのか一目瞭然になるからです。</p><p>「自分のコードは自分しか見ないよ」と考えている皆さん。</p><p><strong>3ヶ月前のコードを見直す自分は、他の開発者と同じであることを忘れないでください。</strong></p><p>自戒を込めて。</p><hr><p>PS. 他にもいろいろ落とし穴を避ける方法を指摘してもらったのですが、記事がどんどん長くなるので割愛します。Fragmentには落とし穴がいっぱいだけど、今回挙げたのはそれ以前の問題と言うことで。</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
+2025
+&nbsp;/&nbsp;
+<a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
+&nbsp;&ndash;&nbsp;
+<em class="fas fa-moon" id=dark-mode-toggle></em></p><p class="credits theme-by">Powered By <a href=https://gohugo.io>Hugo</a>&nbsp;
+Theme
+<a href=https://github.com/matsuyoshi30/harbor>Harbor</a></p></div></footer></body></html>
