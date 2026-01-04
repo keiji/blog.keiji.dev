@@ -2,7 +2,7 @@
 title: 'ふりかえり: 技術書典２と超技術書典と'
 author: Keiji Ariyama
 type: post
-date: -001-11-30T00:00:00+00:00
+date: 2017-11-30T00:00:00+00:00
 draft: true
 url: /?p=1583
 categories:
