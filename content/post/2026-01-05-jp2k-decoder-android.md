@@ -14,7 +14,7 @@ categories:
 
 明けましておめでとうございます。2026年もよろしくお願いいたします。
 
-![JPEG画像](/images/jp2k-decoder-android/karin.jpg)
+![今年のケーキです](/images/jp2k-decoder-android/cake.jpg)
 
 さて、年末年始の休みを利用して自由研究をしていました。Android向けのJPEG2000デコーダーライブラリ「jp2k-decoder-android」を作成したので、その技術的なアプローチと、開発プロセスにおけるAI活用についてまとめたいと思います。
 
