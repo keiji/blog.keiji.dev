@@ -4,7 +4,7 @@
 <a href=https://blog.keiji.dev/categories/android/>Android</a>&nbsp;
 <a href=https://blog.keiji.dev/categories/%E3%83%A1%E3%83%A2/>メモ</a>&nbsp;</span></div></div></div></header><div class=container role=main><article class=article class=blog-post><p>Circle CIでビルドしているプロジェクトのBuildToolsのバージョンを<code>23.0.2</code>にしたところ、android update sdkに、「そんなバージョンはない」と言われるようになった。</p><p><code>Error: Ignoring unknown package filter 'build-tools-23.0.2'</code></p><p>原因はandroid update sdkの中にtoolsを含めていなかったという、完全な僕の不注意。</p><pre><code>echo y | android update sdk --no-ui --all --filter tools
 </code></pre><p>を、スクリプトに足して無事解決。</p><p><code>tools</code>を更新しないと見に行かないリポジトリがあるんだね……</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
-2025
+2026
 &nbsp;/&nbsp;
 <a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
 &nbsp;&ndash;&nbsp;

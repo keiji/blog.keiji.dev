@@ -18,7 +18,7 @@ Serial.println(hum);
 digitalWrite(LED_PIN, hum &gt; HUMIDITY_TOP_THRESHOLD ? HIGH : LOW);
 delay(1000);
 }</pre></p></div><p>これをパッケージングして、オフィスの入り口の辺りにおいて光らせれば、外の湿度が一定以上であると解るでしょう。閾値を調整すれば、雨の検知にもそれなりの精度が期待出来るかしれません。</p><p>最終的には、Arduinoはデータをサーバーに送信するだけにして、サーバー側からAndroid端末に通知が出来るようになればスマートでしょう。その際、サーバーとの通信を何で行うかについては検討の余地がありますが。</p><p>直近の一番の課題としては、<strong>湿度センサーをどうやれば安全に窓の外に配置できるのか。</strong></p><p>外の天気を知りたいという性質上、窓の外に配置しないと意味がありません。配線を長く延ばすか、無線で飛ばすか。。。</p><p>また、時間が出来たら、いろいろ試してみます。</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
-2025
+2026
 &nbsp;/&nbsp;
 <a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
 &nbsp;&ndash;&nbsp;

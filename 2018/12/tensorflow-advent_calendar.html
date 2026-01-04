@@ -145,7 +145,7 @@ E/tflite: Failed to build graph for NNAPI
 887918
 601719
 </code></pre><p>　この結果から、NN APIを使う場合、モデルをロードするタイミングではなく、実際に<code>run</code>するタイミングでグラフを構築していると推測できます。</p><p>　今後のバージョンアップなどで挙動が変わる可能性は多分にありますが、現時点では、ダミーデータなどを使って初回の<code>run</code>を実行しておくことで、初回の実行時間を短縮する手法が考えられるでしょう。</p><h2 id=おわりに-われわれはどうすべきか>おわりに: われわれはどうすべきか</h2><p>　モデルを設計して、学習プロセスを開始する前に、TensorFlow Liteの量子化モデルへの変換と、NN APIを使ったときに問題なく動作するかを確認するプロセスを設けることを強くオススメします。</p><p>　学習を進めて、いざ組み込もうとしたときにいずれかの制約に引っかかれば、前処理やモデルの変更などによる学習プロセスのやり直しなど、大きな手戻りが発生したり、当初予定されていた性能（実行時間）が出ないなどの問題の引き金になる可能性があります。</p><p>　パラメーターは初期値でいいのです。モデルの精度はひとまず問題ではありません。制約をクリアしているか、性能は十分に出るかの評価を優先しましょう。</p><p>　そのためには今後、Androidアプリエンジニアと機械学習エンジニアは、より緊密にコミュニケーションをしていく必要があると筆者は考えています。</p><hr><p>　この記事は<a href=https://qiita.com/advent-calendar/2018/tensorflow>TensorFlow Advent Calendar 2018</a>の24日目の記事です。</p><p>　25日目の記事は「natsutan」さんによる「<a href=http://natsutan.hatenablog.com/entry/2018/12/25/120450>GCPでTPU動かしました</a>」です。</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
-2025
+2026
 &nbsp;/&nbsp;
 <a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
 &nbsp;&ndash;&nbsp;

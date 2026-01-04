@@ -1,4 +1,10 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ThinkPad on めがねをかけるんだ</title><link>https://blog.keiji.dev/categories/thinkpad/</link><description>Recent content in ThinkPad</description><generator>Hugo -- gohugo.io</generator><language>ja</language><managingEditor>Page(/categories/thinkpad)</managingEditor><lastBuildDate>Thu, 28 Jul 2022 00:00:00 +0900</lastBuildDate><atom:link href="/categories/thinkpad/" rel="self" type="application/rss+xml"/><item><title>「Jules」とアプリを開発した話</title><link>https://blog.keiji.dev/2025/07/with_jules/</link><pubDate>Fri, 04 Jul 2025 08:00:00 +0900</pubDate><guid>https://blog.keiji.dev/2025/07/with_jules/</guid><description>&lt;p>2025年のGoogle I/Oで発表された、&lt;a href="https://jules.google.com/">非同期AIコーディングエージェント「Jules」&lt;/a>。&lt;/p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ThinkPad on めがねをかけるんだ</title><link>https://blog.keiji.dev/categories/thinkpad/</link><description>Recent content in ThinkPad</description><generator>Hugo -- gohugo.io</generator><language>ja</language><managingEditor>Page(/categories/thinkpad)</managingEditor><lastBuildDate>Thu, 28 Jul 2022 00:00:00 +0900</lastBuildDate><atom:link href="/categories/thinkpad/" rel="self" type="application/rss+xml"/><item><title>AndroidでJPEG2000を安全に扱いたい</title><link>https://blog.keiji.dev/2026/01/jp2k-decoder-android/</link><pubDate>Mon, 05 Jan 2026 02:00:00 +0900</pubDate><guid>https://blog.keiji.dev/2026/01/jp2k-decoder-android/</guid><description>&lt;p>明けましておめでとうございます。2026年もよろしくお願いいたします。&lt;/p>
+&lt;p>&lt;img src="https://blog.keiji.dev/images/jp2k-decoder-android/karin.jpg" alt="JPEG画像">&lt;/p>
+&lt;p>さて、年末年始の休みを利用して自由研究をしていました。Android向けのJPEG2000デコーダーライブラリ「jp2k-decoder-android」を作成したので、その技術的なアプローチと、開発プロセスにおけるAI活用についてまとめたいと思います。&lt;/p>
+&lt;p>成果物はGitHubで公開しています。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/keiji/jp2k-decoder-android">keiji/jp2k-decoder-android - GitHub&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>「Jules」とアプリを開発した話</title><link>https://blog.keiji.dev/2025/07/with_jules/</link><pubDate>Fri, 04 Jul 2025 08:00:00 +0900</pubDate><guid>https://blog.keiji.dev/2025/07/with_jules/</guid><description>&lt;p>2025年のGoogle I/Oで発表された、&lt;a href="https://jules.google.com/">非同期AIコーディングエージェント「Jules」&lt;/a>。&lt;/p>
 &lt;p>&lt;img src="https://blog.keiji.dev/images/with_jules/jules_logo.jpg" alt="Jules Logo">&lt;/p>
 &lt;p>今回、このJulesを使ってAndroidアプリとサーバーサイド（Python）を開発し、Google Playでの公開まで完了させることができました。&lt;/p>
 &lt;p>結論から言うと、Julesにはいくつかの課題も見られるものの、Googleのベータ版製品であることを考えれば、将来が楽しみなサービスだと感じています。何より、&lt;strong>実際にアプリケーションを一つ、サーバーサイドも含めてリリースまでこぎつけられた&lt;/strong>事実が、そのポテンシャルの高さを示しています。&lt;/p>
@@ -103,23 +109,4 @@
 &lt;li>OpenPGP Card Applet&lt;/li>
 &lt;li>おわりに&lt;/li>
 &lt;/ul>
-&lt;p>　本文サンプルは&lt;a href="https://techbookfest.org/product/viaWpAsxCX0pyyKZM5CEBK?productVariantID=ihrw7XZAHgw7qpEFPcTFDp">こちら&lt;/a>&lt;/p></description></item><item><title>お知らせ</title><link>https://blog.keiji.dev/2022/08/cocoa/</link><pubDate>Mon, 01 Aug 2022 00:00:00 +0900</pubDate><guid>https://blog.keiji.dev/2022/08/cocoa/</guid><description>これまで有山は「厚生労働省の技術参与」と「デジタル庁のエンジニア」それぞれの役割でCOCOAに携わってきました。 このたびデジタル庁のエンジニ</description></item><item><title>おかえりThinkPad</title><link>https://blog.keiji.dev/2022/07/welcomeback_thinkpad/</link><pubDate>Thu, 28 Jul 2022 00:00:00 +0900</pubDate><guid>https://blog.keiji.dev/2022/07/welcomeback_thinkpad/</guid><description>&lt;p>　ぼくは有山圭二。ThinkPadユーザーだった。&lt;/p>
-&lt;p>　初恋のコンピューターは「ThinkPad 230Cs」。中学時代のぼくのそばにはずっと230Csがあった。&lt;/p>
-&lt;p>　230Cs以降もノートPCはずっとThinkPad。といっても、新型が出るたびに手に入れるようなことはできない。当時のPCは非常に高価で一台買ったら数年使うのが普通の時代だ。
-アルバイトをして購入した「i 1124」は個人ユーザー向けの廉価なモデルだった。大学を卒業して自分の会社を作ってしばらくは中古の「X31」を使っていた。&lt;/p>
-&lt;p>　2007年11月、Androidが発表された。翌年のGoogle I/Oの後、日本Androidの会が設立された。各地で開かれる勉強会に、ぼくは 「X61」と一緒に参加していた。
-&amp;ldquo;All applications are created equal.&amp;ldquo;を掲げるAndroidのアプリを開発するのにMacを使う選択肢を、当時のぼくは持ち合わせていなかった。&lt;/p>
-&lt;p>　そんなぼくがThinkPadユーザーでなくなるきっかけは、ThinkPadのLenovoへの移籍でもIBMロゴの完全廃止でもなく、ThinkPadの構成からタッチパッドが外せなくなったことだった。&lt;/p>
-&lt;p>　ThinkPadにはすでに「トラックポイント」という入力インターフェースがある。機能の重複するものがなぜ必要なのか。&lt;/p>
-&lt;p>　ぼくがこう言うと「タッチパッドは無効化すればいいよ」という人もいたけれど、自分が使わないもの、無効化するものがついていることをぼくは許容できなかった。&lt;/p>
-&lt;p>　ThinkPadがなくなった隙間を埋めてくれたのがMacBook Airだった。
-ThinkPadとは正反対に簡単に傷ついてしまいそうなアルミボディと、取り替えできないバッテリーが新鮮だった。難しいことを考えなくてもそれなりに使えるmacOS、キーボードとトラックパッドというシンプルさが、ぼくが使い続ける理由になった。&lt;/p>
-&lt;p>　ThinkPadに未練がなかったと言えば嘘になる。
-街中で、訪問先のオフィスで、参加した勉強会で、あの黒いシルエットがあると知らず知らず目で追っていたし、漫画「&lt;a href="https://amzn.to/3cFTYU9">王様達のヴァイキング&lt;/a>」で、主人公の愛機としてX41が登場したときは素直にうれしかった。&lt;/p>
-&lt;p>　また、MacBook Proとの関係がずっと順調だったわけでもない。
-一度はペシャペシャした打ち心地になってしまったバタフライキーボードや、タッチバーの存在に我慢ならなくなってThinkPadに戻ろうとしたこともある。
-そのときは、とてもつらい経験をして「ThinkPadは嫌いだ」と言うまでに、ぼくのThinkPadへの印象は悪化した。5年ほど前のことだ。&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://blog.keiji.dev/2017/01/demodori.html">さよならMac&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>　そんなぼくが、ふたたびThinkPadユーザーになった。&lt;/p></description></item></channel></rss>
+&lt;p>　本文サンプルは&lt;a href="https://techbookfest.org/product/viaWpAsxCX0pyyKZM5CEBK?productVariantID=ihrw7XZAHgw7qpEFPcTFDp">こちら&lt;/a>&lt;/p></description></item><item><title>お知らせ</title><link>https://blog.keiji.dev/2022/08/cocoa/</link><pubDate>Mon, 01 Aug 2022 00:00:00 +0900</pubDate><guid>https://blog.keiji.dev/2022/08/cocoa/</guid><description>これまで有山は「厚生労働省の技術参与」と「デジタル庁のエンジニア」それぞれの役割でCOCOAに携わってきました。 このたびデジタル庁のエンジニ</description></item></channel></rss>

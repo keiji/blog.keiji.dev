@@ -12,7 +12,7 @@
 <a href=https://bugs.launchpad.net/ubuntu/+source/linux-signed-hwe-5.19/+bug/2008774>https://bugs.launchpad.net/ubuntu/+source/linux-signed-hwe-5.19/+bug/2008774</a></p><p>Ryzen CPUのマシンにインストールしたときに発生する不具合のようです。</p><p>直接の原因のパッケージ（<code>linux-headers-generic-hwe</code>）は、セキュリティアップデートに含まれます。
 ぼくはセキュリティアップデートは自動適用にしていました。また、Ubuntuをインストールするときに、インターネットからアップデートを取得して適応するというオプションを有効にしていたため、クリーンインストールでも発生しました。</p><p>原因のパッケージ <code>linux-headers-generic-hwe</code> をダウングレードして、念のためカーネルのバージョンを前のバージョン（<code>5.19.0-21.21</code>）に戻したら解決しました。</p><pre tabindex=0><code>$ sudo apt install linux-headers-generic-hwe-22.04=5.19.0.21.21
 </code></pre><p>今回は緊急的にダウングレードしましたが、パッケージのバージョンは上げていきたいので、今後の対応状況に応じて再度アップグレードを試みるつもりです。</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
-2025
+2026
 &nbsp;/&nbsp;
 <a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
 &nbsp;&ndash;&nbsp;

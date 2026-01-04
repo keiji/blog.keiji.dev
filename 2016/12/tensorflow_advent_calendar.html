@@ -218,7 +218,7 @@ for i in range(FLAGS.num_gpus):
 | 22%   48C    P2    74W / 250W |  11701MiB / 12212MiB |     34%      Default |
 +-------------------------------+----------------------+----------------------+
 </code></pre><h2 id=終わりに>終わりに</h2><p>いかがだったでしょうか。</p><p>さくらインターネットの<a href=https://www.sakura.ad.jp/koukaryoku/>高火力コンピューティング</a>、凄さの片鱗こそ見えたものの、僕の力不足で火力を上げることができないまま、試用期間が終わってしまいました。</p><p>ちなみに今は、192×192のイラスト画像から顔領域を示すマスク画像を生成するというモデルを訓練しているのですが、</p><p>192×192のサンプルを処理するモデルを僕の使っている「GeForce GTX960」のメモリ（2GB）に納めるのに苦労しています。</p><img src=https://blog.keiji.dev/wp-content/uploads/2016/12/faces_and_masks.png alt=faces_and_masks width=800 height=400 class="aligncenter size-full wp-image-1488"><p>バッチサイズを減らしたりモデルの軽量化を頑張ってようやくメモリに収まっても1ステップにかかる学習の負荷が大きく、学習は遅々として進みません。</p><p><a href=https://blog.keiji.dev/wp-content/uploads/2016/12/Screen-Shot-2016-12-12-at-16.18.31.png><img src=https://blog.keiji.dev/wp-content/uploads/2016/12/Screen-Shot-2016-12-12-at-16.18.31.png alt=screen-shot-2016-12-12-at-16-18-31 width=849 height=424 class="aligncenter size-full wp-image-1489"></a></p><p>かれこれ1週間ほど処理を続けていますが……高火力が必要なのは、まさに今なんですよ！</p><hr><p>「<a href=http://qiita.com/advent-calendar/2016/tensorflow>TensorFlow Advent Calendar</a>」13日目の担当はkatsugenerationさんです。</p><p>katsugenerationさん、よろしくお願いします。</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
-2025
+2026
 &nbsp;/&nbsp;
 <a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
 &nbsp;&ndash;&nbsp;

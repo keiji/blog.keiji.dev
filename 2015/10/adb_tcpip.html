@@ -16,7 +16,7 @@ connected to 192.168.170.229:12345
 </code></pre><p>接続の際に、USBケーブルで繋いだのと同様に「このＰＣからのＵＳＢデバッグを許可するか？」を聞いてきます。「OK」を選ぶとadb接続が完了して、デバッグができるようになります。</p><p><a href=https://blog.keiji.dev/wp-content/uploads/2015/10/Screenshot_20151021-123557.png><img src=https://blog.keiji.dev/wp-content/uploads/2015/10/Screenshot_20151021-123557.png alt=Screenshot_20151021-123557 width=270 height=480 class="aligncenter size-full wp-image-575"></a></p><p><strong>もし身に覚えのない状況でこの画面が表示されたら、すぐにキャンセルを押しましょう</strong></p><p>また、接続できない場合はポート番号が合っているか、開発用のＰＣと端末が通信できる状態にあるかを確認して下さい。特にゲストネットワークなどの場合、プライバシーフィルターなどがかかっていて直接通信できない場合があります。</p><p>最後に、再びUSBケーブルでの接続に切り替えるときは<code>adb usb</code>を実行します。</p><pre><code>$ adb usb
 restarting in USB mode
 </code></pre><p>このネットワーク経由のADB接続。最近ではADKやUSBホストを使った場合のデバッグにしか使っていませんでしたが、しばらくは多用することになりそうです。</p><hr><p>昔は、開発者向けオプション（ＵＳＢデバッグ）が有効に設定された端末は、誰でもUSBケーブルを繋いだだけ、ネットワーク経由でadb接続しただけで、デバッグできてしまっていました。</p><p>ネットワーク経由のadbは、ノーガードでローカルネットワークに放り出される感じで不安いっぱいでしたが、今では開発機器のフィンガープリントを表示して「信頼」を確認するので、昔よりは多少は安心して使えるようになりましたね。</p><p>とは言え何が起こるかわからないので、<strong>開発者向けオプション（ＵＳＢデバッグ）はこまめにOFFにしましょう！</strong></p><hr><p>追伸</p><p>Nikkei Linux 2015年12月号（11月7日発売）にAndroid 6.0(Marshmallow)についての記事を書きました。</p><p>記事中で触れるサンプルコードも公開しています。</p><p><a href=https://github.com/keiji/simple-marshmallow-samples>GitHub – Simple Marshmallow Samples</a></p><p>指紋センサー周りも実機で確認しているので興味がある人は是非、手に取ってみて下さい！</p></article></div><footer><div class=social-icons></div><div class=container><p class="credits copyright"><a href=https://blog.keiji.dev/about></a>&nbsp;&copy;
-2025
+2026
 &nbsp;/&nbsp;
 <a href=https://blog.keiji.dev/>めがねをかけるんだ</a>
 &nbsp;&ndash;&nbsp;
