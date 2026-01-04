@@ -1,5 +1,5 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on めがねをかけるんだ</title><link>https://blog.keiji.dev/post/</link><description>Recent content in Posts</description><generator>Hugo -- gohugo.io</generator><language>ja</language><managingEditor>Page(/post)</managingEditor><lastBuildDate>Mon, 05 Jan 2026 02:00:00 +0900</lastBuildDate><atom:link href="/post/" rel="self" type="application/rss+xml"/><item><title>AndroidでJPEG2000を安全に扱いたい</title><link>https://blog.keiji.dev/2026/01/jp2k-decoder-android/</link><pubDate>Mon, 05 Jan 2026 02:00:00 +0900</pubDate><guid>https://blog.keiji.dev/2026/01/jp2k-decoder-android/</guid><description>&lt;p>明けましておめでとうございます。2026年もよろしくお願いいたします。&lt;/p>
-&lt;p>&lt;img src="https://blog.keiji.dev/images/jp2k-decoder-android/karin.jpg" alt="JPEG画像">&lt;/p>
+&lt;p>&lt;img src="https://blog.keiji.dev/images/jp2k-decoder-android/cake.jpg" alt="今年のケーキです">&lt;/p>
 &lt;p>さて、年末年始の休みを利用して自由研究をしていました。Android向けのJPEG2000デコーダーライブラリ「jp2k-decoder-android」を作成したので、その技術的なアプローチと、開発プロセスにおけるAI活用についてまとめたいと思います。&lt;/p>
 &lt;p>成果物はGitHubで公開しています。&lt;/p>
 &lt;ul>
